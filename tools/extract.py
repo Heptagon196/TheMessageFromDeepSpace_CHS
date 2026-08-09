@@ -939,7 +939,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Extract game localization text into an AiNiee cache")
     parser.add_argument("--cache", type=Path, default=PROJECT_DIR / "work" / "cache.json")
     parser.add_argument(
-        "--report", type=Path, default=PROJECT_DIR / "work" / "extraction-report.json"
+        "--report", type=Path, default=PROJECT_DIR / "build" / "extraction-report.json"
     )
     args = parser.parse_args()
 

@@ -178,14 +178,15 @@ TranslationProject/
 ├─ work/
 │  ├─ cache.json
 │  ├─ glossary.locked.json
-│  ├─ user_prompt.md
+│  └─ user_prompt.md
+├─ build/
 │  ├─ extraction-report.json
-│  └─ validation-report.json
-├─ build/package/DeepSpaceChinese/Translations/
-│  ├─ dialogue.json
-│  ├─ titles.json
-│  ├─ ui.json
-│  └─ system.json
+│  ├─ validation-report.json
+│  └─ package/DeepSpaceChinese/Translations/
+│     ├─ dialogue.json
+│     ├─ titles.json
+│     ├─ ui.json
+│     └─ system.json
 └─ tools/
 ```
 
