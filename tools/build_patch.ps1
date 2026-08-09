@@ -26,6 +26,15 @@ if (-not ${env:ProgramFiles(x86)} -or ${env:ProgramFiles(x86)}.Contains('%')) {
     ${env:ProgramFiles(x86)} = Join-Path $env:SystemDrive "Program Files (x86)"
 }
 
+function Assert-NoLiteralSystemDriveArtifact {
+    $invalidPath = Join-Path $projectRoot "%SystemDrive%"
+    if (Test-Path -LiteralPath $invalidPath) {
+        throw "检测到未展开的 %SystemDrive% 目录：$invalidPath。请删除该历史构建残留后重试。"
+    }
+}
+
+Assert-NoLiteralSystemDriveArtifact
+
 $toolEnvironment = Join-Path $projectRoot "build\tool-environment"
 if (-not $env:USERPROFILE -or $env:USERPROFILE.Contains('%') -or
     -not [IO.Path]::IsPathRooted($env:USERPROFILE)) {
@@ -101,3 +110,4 @@ Copy-Item -LiteralPath (Join-Path $projectRoot "vendor\BepInEx\LICENSE") `
     -Destination (Join-Path $contentRoot "Licenses\BepInEx-LGPL-2.1.txt") -Force
 
 Write-Host "补丁目录已生成：$packageRoot"
+Assert-NoLiteralSystemDriveArtifact

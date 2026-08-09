@@ -1,6 +1,5 @@
 # Build outputs and local tool environments
 /build/
-/%SystemDrive%/
 **/bin/
 **/obj/
 **/.vs/
@@ -14,27 +13,6 @@
 # Python caches
 **/__pycache__/
 *.py[cod]
-
-# Local translation-cache backups
-/work/cache.json.bak*
-
-# Regenerable probes, reports, and superseded hotfix artifacts
-/work/asset-probe.json
-/work/ui-probe.json
-/work/extraction-report.json
-/work/validation-report.json
-/work/formal-audit-v*.json
-/work/formal_batches/audit_report_v*.json
-/work/formal_batches/translations_all_*.json
-/work/player_role_migration_report.json
-/work/name_prefix_hotfix.json
-/work/monitor-material-inspection.json
-/work/monitor-shader.json
-/work/monitor-shader.shader
-/work/scene-input-inspection.json
-/work/scene-screen-inspection.json
-/work/tmp-typography-audit.json
-/work/runtime_hotfixes/
 
 # Never commit compiled or packaged binaries
 *.dll

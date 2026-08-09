@@ -132,7 +132,7 @@ def main() -> int:
         default=PROJECT_DIR / "build" / "package" / "DeepSpaceChinese" / "Translations",
     )
     parser.add_argument(
-        "--report", type=Path, default=PROJECT_DIR / "work" / "validation-report.json"
+        "--report", type=Path, default=PROJECT_DIR / "build" / "validation-report.json"
     )
     parser.add_argument("--strict", action="store_true", help="有无效译文时返回非零退出码")
     args = parser.parse_args()
