@@ -1,0 +1,2844 @@
+[
+  {
+    "text_index": 1465903746,
+    "source_text": "Act 0",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[0]",
+      "object_path": "Act View",
+      "field_path": "actSections[0]"
+    }
+  },
+  {
+    "text_index": 1620546621,
+    "source_text": "Act X",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[10]",
+      "object_path": "Act View",
+      "field_path": "actSections[10]"
+    }
+  },
+  {
+    "text_index": 1465096567,
+    "source_text": "Act XI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[11]",
+      "object_path": "Act View",
+      "field_path": "actSections[11]"
+    }
+  },
+  {
+    "text_index": 988972518,
+    "source_text": "Grand Finale",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[12]",
+      "object_path": "Act View",
+      "field_path": "actSections[12]"
+    }
+  },
+  {
+    "text_index": 802046819,
+    "source_text": "Act I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[1]",
+      "object_path": "Act View",
+      "field_path": "actSections[1]"
+    }
+  },
+  {
+    "text_index": 1536553614,
+    "source_text": "Act II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[2]",
+      "object_path": "Act View",
+      "field_path": "actSections[2]"
+    }
+  },
+  {
+    "text_index": 1706089991,
+    "source_text": "Act III",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[3]",
+      "object_path": "Act View",
+      "field_path": "actSections[3]"
+    }
+  },
+  {
+    "text_index": 644749671,
+    "source_text": "Act IV",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[4]",
+      "object_path": "Act View",
+      "field_path": "actSections[4]"
+    }
+  },
+  {
+    "text_index": 1825457294,
+    "source_text": "Act V",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[5]",
+      "object_path": "Act View",
+      "field_path": "actSections[5]"
+    }
+  },
+  {
+    "text_index": 1936216961,
+    "source_text": "Act VI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[6]",
+      "object_path": "Act View",
+      "field_path": "actSections[6]"
+    }
+  },
+  {
+    "text_index": 861982074,
+    "source_text": "Act VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[7]",
+      "object_path": "Act View",
+      "field_path": "actSections[7]"
+    }
+  },
+  {
+    "text_index": 1121863785,
+    "source_text": "Act VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[8]",
+      "object_path": "Act View",
+      "field_path": "actSections[8]"
+    }
+  },
+  {
+    "text_index": 916799997,
+    "source_text": "Act IX",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Act View:component:4:field:actSections[9]",
+      "object_path": "Act View",
+      "field_path": "actSections[9]"
+    }
+  },
+  {
+    "text_index": 636804691,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/0[0]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/0[0]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1841310169,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/0[0]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/0[0]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1857673249,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/0[0]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/0[0]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1514767333,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/10[10]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/10[10]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1749410299,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/10[10]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/10[10]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 147742173,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/10[10]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/10[10]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 2000108727,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/11[11]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/11[11]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1801183936,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/11[11]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/11[11]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 122826936,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/11[11]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/11[11]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1083679395,
+    "source_text": "Return Our Message",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/12 math end[12]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/12 math end[12]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1786073419,
+    "source_text": "ACT II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/12 math end[12]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/12 math end[12]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 314625972,
+    "source_text": "ACT III",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/12 math end[12]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/12 math end[12]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 219633916,
+    "source_text": "Return Our Message",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/13[13]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/13[13]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 489609800,
+    "source_text": "ACT II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/13[13]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/13[13]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 326593587,
+    "source_text": "ACT III",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/13[13]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/13[13]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1862827384,
+    "source_text": "Return Our Message",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/14[14]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/14[14]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1482694012,
+    "source_text": "ACT II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/14[14]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/14[14]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1313098516,
+    "source_text": "ACT III",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/14[14]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/14[14]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 215924862,
+    "source_text": "To See What We Say",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/15 vis end[15]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/15 vis end[15]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1577769816,
+    "source_text": "ACT III",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/15 vis end[15]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/15 vis end[15]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1972491359,
+    "source_text": "ACT IV",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/15 vis end[15]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/15 vis end[15]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1810209151,
+    "source_text": "To See What We Say",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/16[16]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/16[16]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 771502558,
+    "source_text": "ACT II - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/16[16]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/16[16]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 231042953,
+    "source_text": "ACT II - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/16[16]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/16[16]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 460506203,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/17[17]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/17[17]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1084251164,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/17[17]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/17[17]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 408140560,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/17[17]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/17[17]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 493944463,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/18[18]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/18[18]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 2110259939,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/18[18]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/18[18]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1745904,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/18[18]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/18[18]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 446172005,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/19[19]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/19[19]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 630631605,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/19[19]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/19[19]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 878767358,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/19[19]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/19[19]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1951540692,
+    "source_text": "First Contact",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/1[1]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/1[1]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 2118706308,
+    "source_text": "ACT 0",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/1[1]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/1[1]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 894447983,
+    "source_text": "ACT I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/1[1]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/1[1]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1872822165,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/20[20]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/20[20]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 511605458,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/20[20]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/20[20]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 629802632,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/20[20]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/20[20]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1119509457,
+    "source_text": "Our Universal Bonds",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/21 universal bonds end[21]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/21 universal bonds end[21]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 569518556,
+    "source_text": "ACT IV",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/21 universal bonds end[21]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/21 universal bonds end[21]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 173333067,
+    "source_text": "ACT V",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/21 universal bonds end[21]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/21 universal bonds end[21]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1787475589,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/22[22]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/22[22]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 662323017,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/22[22]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/22[22]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1285570905,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/22[22]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/22[22]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1296827291,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/23[23]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/23[23]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 698337339,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/23[23]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/23[23]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1108644260,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/23[23]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/23[23]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1646327503,
+    "source_text": "Where We Are",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/24 space end[24]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/24 space end[24]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1474548008,
+    "source_text": "ACT V",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/24 space end[24]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/24 space end[24]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1450175202,
+    "source_text": "ACT VI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/24 space end[24]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/24 space end[24]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 433104751,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/25[25]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/25[25]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 362071702,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/25[25]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/25[25]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1241312688,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/25[25]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/25[25]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1600064792,
+    "source_text": "Life",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/26 life end[26]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/26 life end[26]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 499857222,
+    "source_text": "ACT VI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/26 life end[26]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/26 life end[26]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 328379613,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/26 life end[26]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/26 life end[26]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1630874386,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/27[27]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/27[27]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1971674587,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/27[27]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/27[27]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1421518032,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/27[27]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/27[27]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1479978019,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/28[28]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/28[28]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1176530936,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/28[28]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/28[28]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 151415971,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/28[28]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/28[28]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1178872573,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/29[29]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/29[29]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 897648229,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/29[29]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/29[29]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1051787401,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/29[29]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/29[29]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1673884046,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/2[2]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/2[2]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 176738751,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/2[2]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/2[2]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 65882214,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/2[2]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/2[2]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 773830526,
+    "source_text": "We Are Not Alone",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/30 we are not alone end[30]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/30 we are not alone end[30]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 468047498,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/30 we are not alone end[30]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/30 we are not alone end[30]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 704308317,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/30 we are not alone end[30]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/30 we are not alone end[30]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1375722763,
+    "source_text": "We Hope We Are Not Alone",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/31[31]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/31[31]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1476931065,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/31[31]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/31[31]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 438435011,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/31[31]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/31[31]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1205683889,
+    "source_text": "We Hope We Are Not Alone",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/32[32]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/32[32]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 15243164,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/32[32]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/32[32]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1146779833,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/32[32]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/32[32]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1283974503,
+    "source_text": "We Hope We Are Not Alone",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/33[33]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/33[33]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1759753477,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/33[33]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/33[33]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1400035135,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/33[33]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/33[33]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 883794815,
+    "source_text": "We Hope We Are Not Alone",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/34[34]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/34[34]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 303177213,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/34[34]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/34[34]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 157681778,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/34[34]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/34[34]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 959230534,
+    "source_text": "We Hope We Are Not Alone",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/35[35]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/35[35]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1511702794,
+    "source_text": "ACT VII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/35[35]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/35[35]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 726907314,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/35[35]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/35[35]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1160534049,
+    "source_text": "Sent with Love",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/36 who we are end[36]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/36 who we are end[36]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 2100421214,
+    "source_text": "ACT VIII",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/36 who we are end[36]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/36 who we are end[36]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1605986738,
+    "source_text": "ACT IX",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/36 who we are end[36]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/36 who we are end[36]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 664765975,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/3[3]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/3[3]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 816239329,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/3[3]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/3[3]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 460011054,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/3[3]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/3[3]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 521683015,
+    "source_text": "Our Species",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/42 our species[42]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/42 our species[42]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1322751202,
+    "source_text": "ACT IX",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/42 our species[42]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/42 our species[42]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1476700714,
+    "source_text": "ACT X",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/42 our species[42]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/42 our species[42]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 2129602778,
+    "source_text": "Our Beliefs",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/47 our beliefs[47]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/47 our beliefs[47]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 887693318,
+    "source_text": "ACT X",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/47 our beliefs[47]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/47 our beliefs[47]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 956497117,
+    "source_text": "ACT XI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/47 our beliefs[47]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/47 our beliefs[47]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1301395010,
+    "source_text": "Our Gift",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/49 our gift end[49]/Chained meeting[0]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/49 our gift end[49]/Chained meeting[0]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 806944367,
+    "source_text": "Act XI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/49 our gift end[49]/Chained meeting[0]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/49 our gift end[49]/Chained meeting[0]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1820447990,
+    "source_text": "Grand Finale",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/49 our gift end[49]/Chained meeting[0]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/49 our gift end[49]/Chained meeting[0]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1431564132,
+    "source_text": "Our Gift",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/49 our gift end[49]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/49 our gift end[49]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 244010068,
+    "source_text": "Act XI",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/49 our gift end[49]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/49 our gift end[49]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 2147433504,
+    "source_text": "Grand Finale",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/49 our gift end[49]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/49 our gift end[49]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1100876591,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/4[4]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/4[4]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 427729481,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/4[4]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/4[4]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 531039516,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/4[4]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/4[4]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 492920933,
+    "source_text": "Parting Words",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/50 grand finale[50]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/50 grand finale[50]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 409443677,
+    "source_text": "Grand Finale",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/50 grand finale[50]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/50 grand finale[50]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 2059739875,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/5[5]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/5[5]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1023298221,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/5[5]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/5[5]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 51227254,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/5[5]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/5[5]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1106905601,
+    "source_text": "Math: Our Common Bond",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/6 end[6]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/6 end[6]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1032048246,
+    "source_text": "ACT I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/6 end[6]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/6 end[6]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 196020580,
+    "source_text": "ACT II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/6 end[6]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/6 end[6]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1091407683,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/7[7]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/7[7]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1391693498,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/7[7]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/7[7]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 2106154783,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/7[7]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/7[7]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 870451869,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/8[8]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/8[8]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1114571362,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/8[8]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/8[8]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 601332898,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/8[8]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/8[8]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 1461250617,
+    "source_text": "ACKNOWLEDGE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/9[9]:component:2:field:progressLogData.actName",
+      "object_path": "Break Watcher/9[9]",
+      "field_path": "progressLogData.actName"
+    }
+  },
+  {
+    "text_index": 1759463631,
+    "source_text": "ACT I - PART I",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/9[9]:component:2:field:progressLogData.actSection",
+      "object_path": "Break Watcher/9[9]",
+      "field_path": "progressLogData.actSection"
+    }
+  },
+  {
+    "text_index": 1374845464,
+    "source_text": "ACT I - PART II",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Break Watcher/9[9]:component:2:field:progressLogData.nextActName",
+      "object_path": "Break Watcher/9[9]",
+      "field_path": "progressLogData.nextActName"
+    }
+  },
+  {
+    "text_index": 458542825,
+    "source_text": "Cannot Compute",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:cannotCompute_s",
+      "object_path": "Calculator Window",
+      "field_path": "cannotCompute_s"
+    }
+  },
+  {
+    "text_index": 1610887659,
+    "source_text": "Well played.",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:dividedByZero_s",
+      "object_path": "Calculator Window",
+      "field_path": "dividedByZero_s"
+    }
+  },
+  {
+    "text_index": 1703221236,
+    "source_text": "Not this computer.",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:eightToSixtyFourPower_s",
+      "object_path": "Calculator Window",
+      "field_path": "eightToSixtyFourPower_s"
+    }
+  },
+  {
+    "text_index": 1072980184,
+    "source_text": "Digit {DYN_0} is outside base ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:invalidBaseDigit_s",
+      "object_path": "Calculator Window",
+      "field_path": "invalidBaseDigit_s"
+    }
+  },
+  {
+    "text_index": 178941046,
+    "source_text": "nope.",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:invalid_s",
+      "object_path": "Calculator Window",
+      "field_path": "invalid_s"
+    }
+  },
+  {
+    "text_index": 292728309,
+    "source_text": "very large.",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:tooLarge_s",
+      "object_path": "Calculator Window",
+      "field_path": "tooLarge_s"
+    }
+  },
+  {
+    "text_index": 1565537541,
+    "source_text": "very small.",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:tooSmall_s",
+      "object_path": "Calculator Window",
+      "field_path": "tooSmall_s"
+    }
+  },
+  {
+    "text_index": 875260417,
+    "source_text": "Cmon man.",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Calculator Window:component:1:field:triedToDivideByZero_s",
+      "object_path": "Calculator Window",
+      "field_path": "triedToDivideByZero_s"
+    }
+  },
+  {
+    "text_index": 58709844,
+    "source_text": "LARGE TRANSMISSION COMPILING",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Console Message:component:3:field:quickCompile_s",
+      "object_path": "Console Message",
+      "field_path": "quickCompile_s"
+    }
+  },
+  {
+    "text_index": 1721695515,
+    "source_text": " demo",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Demo Ender:component:2:field:demoSuffix_s",
+      "object_path": "Demo Ender",
+      "field_path": "demoSuffix_s"
+    }
+  },
+  {
+    "text_index": 516439201,
+    "source_text": "Dr. ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Dialogue Bank:component:1:field:namePrefix_s",
+      "object_path": "Dialogue Bank",
+      "field_path": "namePrefix_s"
+    }
+  },
+  {
+    "text_index": 1250947658,
+    "source_text": "* * * New Log Ready * * *",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Dialogue Objects/New Log Ready Text[4]:component:1:field:newLogReady_s",
+      "object_path": "Dialogue Objects/New Log Ready Text[4]",
+      "field_path": "newLogReady_s"
+    }
+  },
+  {
+    "text_index": 18357809,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}AUTO-LOG ENDED{PART_001}SAVED TO LOG",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:DialogueManager:component:1:field:autoLogEndFrame",
+      "speaker": "AUTO_LOG",
+      "object_path": "DialogueManager",
+      "field_path": "autoLogEndFrame"
+    }
+  },
+  {
+    "text_index": 390110127,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}AUTO-LOG TRANSCRIPT{PART_001}BOOTING ON...{PART_002}[@ @] to skip{PART_003}...",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:DialogueManager:component:1:field:autoLogStartFrame",
+      "speaker": "AUTO_LOG",
+      "object_path": "DialogueManager",
+      "field_path": "autoLogStartFrame"
+    }
+  },
+  {
+    "text_index": 1043832843,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}ENDING AUTO-LOG DUE TO INACTIVITY{PART_001}[Right-Click] OR [Tab] TO ADVANCE DIALOGUES",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:DialogueManager:component:1:field:inactivityExitFrame",
+      "speaker": "AUTO_LOG",
+      "object_path": "DialogueManager",
+      "field_path": "inactivityExitFrame"
+    }
+  },
+  {
+    "text_index": 1171245798,
+    "source_text": "Pilot",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:DialogueManager:component:1:field:pilotProf.speakerName",
+      "object_path": "DialogueManager",
+      "field_path": "pilotProf.speakerName"
+    }
+  },
+  {
+    "text_index": 680077971,
+    "source_text": "Copilot",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:DialogueManager:component:1:field:qopilotProf.speakerName",
+      "object_path": "DialogueManager",
+      "field_path": "qopilotProf.speakerName"
+    }
+  },
+  {
+    "text_index": 641657279,
+    "source_text": "Pasted {DYN_0} from clipboard",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:GlobalPopups:component:1:field:clipboardPaste_s",
+      "object_path": "GlobalPopups",
+      "field_path": "clipboardPaste_s"
+    }
+  },
+  {
+    "text_index": 917473316,
+    "source_text": "Copied {DYN_0} to Clipboard",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:GlobalPopups:component:1:field:clipboard_s",
+      "object_path": "GlobalPopups",
+      "field_path": "clipboard_s"
+    }
+  },
+  {
+    "text_index": 2115077046,
+    "source_text": "Your colleagues have some ideas for what these signals mean...",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Hypotheses Log:component:1:field:haveUnlocked_s",
+      "object_path": "Hypotheses Log",
+      "field_path": "haveUnlocked_s"
+    }
+  },
+  {
+    "text_index": 1442932006,
+    "source_text": "View the hypotheses inside each entry in the dictionary. (Dictionary -> Entry Notes -> Hypotheses)",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Hypotheses Log:component:1:field:viewInDict_s",
+      "object_path": "Hypotheses Log",
+      "field_path": "viewInDict_s"
+    }
+  },
+  {
+    "text_index": 1933827253,
+    "source_text": "Freq #",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Input Oscilloscope:component:3:field:freqIDLabel",
+      "object_path": "Input Oscilloscope",
+      "field_path": "freqIDLabel"
+    }
+  },
+  {
+    "text_index": 1086457890,
+    "source_text": " Hz",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Input Oscilloscope:component:3:field:hertzSuffix",
+      "object_path": "Input Oscilloscope",
+      "field_path": "hertzSuffix"
+    }
+  },
+  {
+    "text_index": 124192017,
+    "source_text": "DATA MISSING",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Log Window:component:1:field:missingDataText",
+      "object_path": "Log Window",
+      "field_path": "missingDataText"
+    }
+  },
+  {
+    "text_index": 1850199858,
+    "source_text": "TRANSMISSION: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Log Window:component:1:field:puzzleEncounteredText",
+      "object_path": "Log Window",
+      "field_path": "puzzleEncounteredText"
+    }
+  },
+  {
+    "text_index": 182507841,
+    "source_text": "MISSION TIME: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Log Window:component:1:field:timeText",
+      "object_path": "Log Window",
+      "field_path": "timeText"
+    }
+  },
+  {
+    "text_index": 183358028,
+    "source_text": "METEOR_OS v{DYN_0} BOOT SEQUENCE ... OK\nCPU @ 4MHz\nMEMORY TEST : 262144\n\nCMOS ... 99%\nRTC CPU TIME SYNC ... OK\nIRQ0 - IRQ8 ... OK\n\n-RUN BAU_CORE_{DYN_0}.MOS \n-RUN DUAL_GUI.MOS ... OK\n-RUN AUTO_LOG.MOS ... OK\n-RUN {PLAYER_NAME}.MOS ... OK\n\n\n\n{DYN_1} {DYN_2} (AKDT) \nTOTAL OPERATION TIME: {DYN_3}",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:MonitorOS:component:1:field:bootupText_s",
+      "object_path": "MonitorOS",
+      "field_path": "bootupText_s"
+    }
+  },
+  {
+    "text_index": 858755080,
+    "source_text": "METEOR_OS v{DYN_0} SHUT DOWN : INIT\nCPU @ 4MHz\n\nCMOS ... 99%\n\n-FREE BAU_CORE_{DYN_0}.MOS \n-FREE DUAL_GUI.MOS ... OK\n-FREE AUTO_LOG.MOS ... OK\n-FREE {PLAYER_NAME}.MOS ... OK\n\n{DYN_1} {DYN_2} (AKDT)\nTOTAL OPERATION TIME: {DYN_3}\n\nDE-ALLOCATING 221033 BYTES ... OK\nMEMORY FREE : 262144\n\n\nSYSTEM OFFLINE",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:MonitorOS:component:1:field:shutdownText_s",
+      "object_path": "MonitorOS",
+      "field_path": "shutdownText_s"
+    }
+  },
+  {
+    "text_index": 2058588159,
+    "source_text": "Dr. ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:drPrefix_s",
+      "object_path": "Name Translator",
+      "field_path": "drPrefix_s"
+    }
+  },
+  {
+    "text_index": 1036615405,
+    "source_text": "[Left-click] to Re-enter Name\n[Right-click] or [Tab] to Continue",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:isThisGood_s",
+      "object_path": "Name Translator",
+      "field_path": "isThisGood_s"
+    }
+  },
+  {
+    "text_index": 87190152,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hey!{PART_001}That's my name!",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[0]",
+      "speaker": "AKERS",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[0]"
+    }
+  },
+  {
+    "text_index": 178707298,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Doug's mine.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[10]",
+      "speaker": "DOPPLER",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[10]"
+    }
+  },
+  {
+    "text_index": 1016263693,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Another Doppler?",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[11]",
+      "speaker": "DOPPLER",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[11]"
+    }
+  },
+  {
+    "text_index": 671395597,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}A certain astronomer calls me that.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[12]",
+      "speaker": "DOPPLER",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[12]"
+    }
+  },
+  {
+    "text_index": 437131914,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}D is reserved for me.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[13]",
+      "speaker": "DOPPLER",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[13]"
+    }
+  },
+  {
+    "text_index": 150657668,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}Why.{PART_001}Why do you want that.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[14]",
+      "speaker": "AUTO_LOG",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[14]"
+    }
+  },
+  {
+    "text_index": 625306824,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}Be more creative.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[15]",
+      "speaker": "AUTO_LOG",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[15]"
+    }
+  },
+  {
+    "text_index": 76854598,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}No.{PART_001}Pick a new name.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[16]",
+      "speaker": "AUTO_LOG",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[16]"
+    }
+  },
+  {
+    "text_index": 880201355,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}No.{PART_001}Pick a new name.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[17]",
+      "speaker": "AUTO_LOG",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[17]"
+    }
+  },
+  {
+    "text_index": 1108785811,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}No.{PART_001}Pick a new name.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[18]",
+      "speaker": "AUTO_LOG",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[18]"
+    }
+  },
+  {
+    "text_index": 708811037,
+    "source_text": "{SPEAKER_AUTO_LOG}{PART_000}No.{PART_001}Pick a new name.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[19]",
+      "speaker": "AUTO_LOG",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[19]"
+    }
+  },
+  {
+    "text_index": 1972108833,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Sorry!{PART_001}Name's taken !!",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[1]",
+      "speaker": "AKERS",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[1]"
+    }
+  },
+  {
+    "text_index": 1771389424,
+    "source_text": "{SPEAKER_AKERS}{PART_000}A for effort.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[2]",
+      "speaker": "AKERS",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[2]"
+    }
+  },
+  {
+    "text_index": 683849849,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Nope.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[3]",
+      "speaker": "BAUTISTA",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[3]"
+    }
+  },
+  {
+    "text_index": 1973834475,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Mmm.{PART_001}Pick another name.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[4]",
+      "speaker": "BAUTISTA",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[4]"
+    }
+  },
+  {
+    "text_index": 1005740531,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Another Carrie?{PART_001}Nice to meet you!",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[6]",
+      "speaker": "COLLINS",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[6]"
+    }
+  },
+  {
+    "text_index": 108331523,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}This could get confusing...",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[7]",
+      "speaker": "COLLINS",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[7]"
+    }
+  },
+  {
+    "text_index": 1278200018,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}C is for Carrie!",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[8]",
+      "speaker": "COLLINS",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[8]"
+    }
+  },
+  {
+    "text_index": 1549524426,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}There can only be one.",
+    "context": {
+      "kind": "component_dialogue_frame",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameIsTakenPrompts[9]",
+      "speaker": "DOPPLER",
+      "object_path": "Name Translator",
+      "field_path": "nameIsTakenPrompts[9]"
+    }
+  },
+  {
+    "text_index": 56249382,
+    "source_text": "--- Mission Translator ---\nWhat is your name?",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Name Translator:component:1:field:nameTranslator_s",
+      "object_path": "Name Translator",
+      "field_path": "nameTranslator_s"
+    }
+  },
+  {
+    "text_index": 1323219033,
+    "source_text": "Freq #",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Output Oscilloscope:component:3:field:freqIDLabel",
+      "object_path": "Output Oscilloscope",
+      "field_path": "freqIDLabel"
+    }
+  },
+  {
+    "text_index": 1603628527,
+    "source_text": " Hz",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Output Oscilloscope:component:3:field:hertzSuffix",
+      "object_path": "Output Oscilloscope",
+      "field_path": "hertzSuffix"
+    }
+  },
+  {
+    "text_index": 353004504,
+    "source_text": "Alan's Journal: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:aLogTitle_s",
+      "object_path": "ProgressLog",
+      "field_path": "aLogTitle_s"
+    }
+  },
+  {
+    "text_index": 435747965,
+    "source_text": " - Complete!!",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:actComplete_s",
+      "object_path": "ProgressLog",
+      "field_path": "actComplete_s"
+    }
+  },
+  {
+    "text_index": 1673330511,
+    "source_text": "Bautista's Log: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:bLogTitle_s",
+      "object_path": "ProgressLog",
+      "field_path": "bLogTitle_s"
+    }
+  },
+  {
+    "text_index": 1773550834,
+    "source_text": "Carrie's Diary: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:cLogTitle_s",
+      "object_path": "ProgressLog",
+      "field_path": "cLogTitle_s"
+    }
+  },
+  {
+    "text_index": 612430672,
+    "source_text": "Doppler's Report: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:dLogTitle_s",
+      "object_path": "ProgressLog",
+      "field_path": "dLogTitle_s"
+    }
+  },
+  {
+    "text_index": 585093933,
+    "source_text": " Begins...",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:nextActStart_s",
+      "object_path": "ProgressLog",
+      "field_path": "nextActStart_s"
+    }
+  },
+  {
+    "text_index": 1340435414,
+    "source_text": "***NO NEW WORDS***",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:noWordsAdded_s",
+      "object_path": "ProgressLog",
+      "field_path": "noWordsAdded_s"
+    }
+  },
+  {
+    "text_index": 2090954114,
+    "source_text": "Zero",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[0]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[0]"
+    }
+  },
+  {
+    "text_index": 1480001132,
+    "source_text": "Ten",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[10]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[10]"
+    }
+  },
+  {
+    "text_index": 1560207765,
+    "source_text": "Eleven",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[11]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[11]"
+    }
+  },
+  {
+    "text_index": 1794883224,
+    "source_text": "Twelve",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[12]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[12]"
+    }
+  },
+  {
+    "text_index": 1820925936,
+    "source_text": "Thirteen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[13]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[13]"
+    }
+  },
+  {
+    "text_index": 699268823,
+    "source_text": "Fourteen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[14]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[14]"
+    }
+  },
+  {
+    "text_index": 2120450233,
+    "source_text": "Fifteen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[15]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[15]"
+    }
+  },
+  {
+    "text_index": 116365163,
+    "source_text": "Sixteen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[16]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[16]"
+    }
+  },
+  {
+    "text_index": 387850916,
+    "source_text": "Seventeen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[17]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[17]"
+    }
+  },
+  {
+    "text_index": 579836646,
+    "source_text": "Eighteen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[18]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[18]"
+    }
+  },
+  {
+    "text_index": 592006227,
+    "source_text": "Nineteen",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[19]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[19]"
+    }
+  },
+  {
+    "text_index": 1424705908,
+    "source_text": "One",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[1]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[1]"
+    }
+  },
+  {
+    "text_index": 388708162,
+    "source_text": "Twenty",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[20]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[20]"
+    }
+  },
+  {
+    "text_index": 1865612212,
+    "source_text": "Twenty-One",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[21]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[21]"
+    }
+  },
+  {
+    "text_index": 344119427,
+    "source_text": "Twenty-Two",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[22]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[22]"
+    }
+  },
+  {
+    "text_index": 1289732844,
+    "source_text": "Twenty-Three",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[23]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[23]"
+    }
+  },
+  {
+    "text_index": 1260037224,
+    "source_text": "Twenty-Four",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[24]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[24]"
+    }
+  },
+  {
+    "text_index": 155898701,
+    "source_text": "Twenty-Five",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[25]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[25]"
+    }
+  },
+  {
+    "text_index": 1639097073,
+    "source_text": "Twenty-Six",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[26]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[26]"
+    }
+  },
+  {
+    "text_index": 803458250,
+    "source_text": "Twenty-Seven",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[27]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[27]"
+    }
+  },
+  {
+    "text_index": 590355944,
+    "source_text": "Twenty-Eight",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[28]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[28]"
+    }
+  },
+  {
+    "text_index": 12240331,
+    "source_text": "Twenty-Nine",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[29]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[29]"
+    }
+  },
+  {
+    "text_index": 69655193,
+    "source_text": "Two",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[2]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[2]"
+    }
+  },
+  {
+    "text_index": 1168256090,
+    "source_text": "Thirty",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[30]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[30]"
+    }
+  },
+  {
+    "text_index": 298040923,
+    "source_text": "Thirty-One",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[31]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[31]"
+    }
+  },
+  {
+    "text_index": 800936066,
+    "source_text": "Thirty-Two",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[32]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[32]"
+    }
+  },
+  {
+    "text_index": 511578612,
+    "source_text": "Thirty-Three",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[33]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[33]"
+    }
+  },
+  {
+    "text_index": 416298003,
+    "source_text": "Thirty-Four",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[34]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[34]"
+    }
+  },
+  {
+    "text_index": 461423351,
+    "source_text": "Thirty-Five",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[35]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[35]"
+    }
+  },
+  {
+    "text_index": 1756118972,
+    "source_text": "Thirty-Six",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[36]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[36]"
+    }
+  },
+  {
+    "text_index": 816011518,
+    "source_text": "Thirty-Seven",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[37]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[37]"
+    }
+  },
+  {
+    "text_index": 1038118354,
+    "source_text": "Thirty-Eight",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[38]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[38]"
+    }
+  },
+  {
+    "text_index": 1240506938,
+    "source_text": "Thirty-Nine",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[39]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[39]"
+    }
+  },
+  {
+    "text_index": 1816658842,
+    "source_text": "Three",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[3]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[3]"
+    }
+  },
+  {
+    "text_index": 56476087,
+    "source_text": "Forty",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[40]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[40]"
+    }
+  },
+  {
+    "text_index": 2034491145,
+    "source_text": "Forty-One",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[41]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[41]"
+    }
+  },
+  {
+    "text_index": 1341530314,
+    "source_text": "Forty-Two",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[42]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[42]"
+    }
+  },
+  {
+    "text_index": 61941718,
+    "source_text": "Forty-Three",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[43]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[43]"
+    }
+  },
+  {
+    "text_index": 598017486,
+    "source_text": "Forty-Four",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[44]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[44]"
+    }
+  },
+  {
+    "text_index": 1731247727,
+    "source_text": "Forty-Five",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[45]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[45]"
+    }
+  },
+  {
+    "text_index": 1719380734,
+    "source_text": "Forty-Six",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[46]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[46]"
+    }
+  },
+  {
+    "text_index": 1030616463,
+    "source_text": "Forty-Seven",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[47]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[47]"
+    }
+  },
+  {
+    "text_index": 350767238,
+    "source_text": "Forty-Eight",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[48]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[48]"
+    }
+  },
+  {
+    "text_index": 1356671349,
+    "source_text": "Forty-Nine",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[49]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[49]"
+    }
+  },
+  {
+    "text_index": 1403734774,
+    "source_text": "Four",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[4]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[4]"
+    }
+  },
+  {
+    "text_index": 1756158816,
+    "source_text": "Fifty",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[50]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[50]"
+    }
+  },
+  {
+    "text_index": 1568451203,
+    "source_text": "Fifty-One",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[51]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[51]"
+    }
+  },
+  {
+    "text_index": 1088169754,
+    "source_text": "Fifty-Two",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[52]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[52]"
+    }
+  },
+  {
+    "text_index": 105709862,
+    "source_text": "Fifty-Three",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[53]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[53]"
+    }
+  },
+  {
+    "text_index": 1982406514,
+    "source_text": "Fifty-Four",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[54]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[54]"
+    }
+  },
+  {
+    "text_index": 1039507801,
+    "source_text": "Fifty-Five",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[55]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[55]"
+    }
+  },
+  {
+    "text_index": 95513825,
+    "source_text": "Fifty-Six",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[56]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[56]"
+    }
+  },
+  {
+    "text_index": 313965995,
+    "source_text": "Fifty-Seven",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[57]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[57]"
+    }
+  },
+  {
+    "text_index": 120074596,
+    "source_text": "Fifty-Eight",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[58]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[58]"
+    }
+  },
+  {
+    "text_index": 1773757657,
+    "source_text": "Fifty-Nine",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[59]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[59]"
+    }
+  },
+  {
+    "text_index": 576140398,
+    "source_text": "Five",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[5]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[5]"
+    }
+  },
+  {
+    "text_index": 588605884,
+    "source_text": "Sixty",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[60]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[60]"
+    }
+  },
+  {
+    "text_index": 1832862896,
+    "source_text": "Six",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[6]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[6]"
+    }
+  },
+  {
+    "text_index": 1239637780,
+    "source_text": "Seven",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[7]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[7]"
+    }
+  },
+  {
+    "text_index": 364376886,
+    "source_text": "Eight",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[8]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[8]"
+    }
+  },
+  {
+    "text_index": 2019970950,
+    "source_text": "Nine",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:numberStrings[9]",
+      "object_path": "ProgressLog",
+      "field_path": "numberStrings[9]"
+    }
+  },
+  {
+    "text_index": 1917769573,
+    "source_text": "WORDS:",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:signalsEncountered_s",
+      "object_path": "ProgressLog",
+      "field_path": "signalsEncountered_s"
+    }
+  },
+  {
+    "text_index": 780362692,
+    "source_text": "Thoughts?",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:tLogNotEmpty_s",
+      "object_path": "ProgressLog",
+      "field_path": "tLogNotEmpty_s"
+    }
+  },
+  {
+    "text_index": 276730158,
+    "source_text": "'s Thoughts: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:tLogTitle_s",
+      "object_path": "ProgressLog",
+      "field_path": "tLogTitle_s"
+    }
+  },
+  {
+    "text_index": 1751123262,
+    "source_text": "TOTAL TRANSMISSIONS:",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:totalTransmissions_s",
+      "object_path": "ProgressLog",
+      "field_path": "totalTransmissions_s"
+    }
+  },
+  {
+    "text_index": 1441253800,
+    "source_text": "TOTAL WORDS:",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:totalWords_s",
+      "object_path": "ProgressLog",
+      "field_path": "totalWords_s"
+    }
+  },
+  {
+    "text_index": 1532910585,
+    "source_text": "Groups Completed:",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:transmissionGroups_s",
+      "object_path": "ProgressLog",
+      "field_path": "transmissionGroups_s"
+    }
+  },
+  {
+    "text_index": 480620566,
+    "source_text": "TRANSMISSIONS:",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:transmissions_s",
+      "object_path": "ProgressLog",
+      "field_path": "transmissions_s"
+    }
+  },
+  {
+    "text_index": 1313985221,
+    "source_text": "Week ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:week_s",
+      "object_path": "ProgressLog",
+      "field_path": "week_s"
+    }
+  },
+  {
+    "text_index": 395053702,
+    "source_text": "WORDS NAMED: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:ProgressLog:component:1:field:wordsNamed_s",
+      "object_path": "ProgressLog",
+      "field_path": "wordsNamed_s"
+    }
+  },
+  {
+    "text_index": 1884784978,
+    "source_text": " = 14.37218841684362 kilograms",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Filogram[23]:component:3:field:suffix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Filogram[23]",
+      "field_path": "suffix"
+    }
+  },
+  {
+    "text_index": 1688924666,
+    "source_text": " = 0.8066 seconds",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Helisec[3]:component:3:field:suffix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Helisec[3]",
+      "field_path": "suffix"
+    }
+  },
+  {
+    "text_index": 436731966,
+    "source_text": "Distance light travels in 1  ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Heter Explanation[12]:component:3:field:prefix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Heter Explanation[12]",
+      "field_path": "prefix"
+    }
+  },
+  {
+    "text_index": 1931154542,
+    "source_text": " = 241,908,530.21 meters",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Heter[9]:component:3:field:suffix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Heter[9]",
+      "field_path": "suffix"
+    }
+  },
+  {
+    "text_index": 1134086585,
+    "source_text": " = ~8.3 Earth masses",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Mega filogram[26]:component:3:field:suffix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Mega filogram[26]",
+      "field_path": "suffix"
+    }
+  },
+  {
+    "text_index": 284461771,
+    "source_text": "Distance light travels in 1/8^9 ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Miniheter Explanation[15]:component:3:field:prefix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Miniheter Explanation[15]",
+      "field_path": "prefix"
+    }
+  },
+  {
+    "text_index": 159131907,
+    "source_text": " = (approx) 1.80236 meters",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Reference Window/Alien Units Page[46]/Area[0]/Miniheter[14]:component:3:field:suffix",
+      "object_path": "Reference Window/Alien Units Page[46]/Area[0]/Miniheter[14]",
+      "field_path": "suffix"
+    }
+  },
+  {
+    "text_index": 231118406,
+    "source_text": "Song Playing: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Soundtrack Title View:component:3:field:nowDisplayingText",
+      "object_path": "Soundtrack Title View",
+      "field_path": "nowDisplayingText"
+    }
+  },
+  {
+    "text_index": 1384155282,
+    "source_text": "SPECTRUM POINT: ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Visual Window/Meteor Bulb Colors[1]:component:2:field:spectrumPoint_s",
+      "object_path": "Visual Window/Meteor Bulb Colors[1]",
+      "field_path": "spectrumPoint_s"
+    }
+  },
+  {
+    "text_index": 1432016560,
+    "source_text": "Week ",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:ControlRoom:Week View:component:4:field:weekPrefix",
+      "object_path": "Week View",
+      "field_path": "weekPrefix"
+    }
+  },
+  {
+    "text_index": 2137925997,
+    "source_text": "Advance dialogue to Continue",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:SpaceshipRoom:Spaceship Sequence:component:1:field:advanceAlienTransmission_s",
+      "object_path": "Spaceship Sequence",
+      "field_path": "advanceAlienTransmission_s"
+    }
+  },
+  {
+    "text_index": 268557881,
+    "source_text": "Press 'Esc' to Submit",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:SpaceshipRoom:Spaceship Sequence:component:1:field:submitPrompt_s",
+      "object_path": "Spaceship Sequence",
+      "field_path": "submitPrompt_s"
+    }
+  },
+  {
+    "text_index": 1316074577,
+    "source_text": "Translator said...",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:SpaceshipRoom:Spaceship Sequence:component:1:field:theTranslatorSaid_s",
+      "object_path": "Spaceship Sequence",
+      "field_path": "theTranslatorSaid_s"
+    }
+  },
+  {
+    "text_index": 221014454,
+    "source_text": "262 years ago...",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:SpaceshipRoom:Spaceship Sequence:component:1:field:yearsAgo_s",
+      "object_path": "Spaceship Sequence",
+      "field_path": "yearsAgo_s"
+    }
+  },
+  {
+    "text_index": 2103936612,
+    "source_text": "NAME SIGNAL",
+    "context": {
+      "kind": "component_string",
+      "stable_key": "system:sharedassets0.assets:Term Logger:component:4:field:promptTxt1",
+      "object_path": "Term Logger",
+      "field_path": "promptTxt1"
+    }
+  }
+]

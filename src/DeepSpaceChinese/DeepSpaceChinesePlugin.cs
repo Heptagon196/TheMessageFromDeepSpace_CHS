@@ -1,0 +1,499 @@
+using System;
+using System.Collections;
+using BepInEx;
+using BepInEx.Logging;
+using HarmonyLib;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace DeepSpaceChinese;
+
+[BepInPlugin(PluginGuid, PluginName, PluginVersion)]
+public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
+{
+    public const string PluginGuid = "hepta.deepspace.chinese";
+    public const string PluginName = "The Message from Deep Space Chinese Patch";
+    public const string PluginVersion = "0.1.42";
+
+    internal static DeepSpaceChinesePlugin Instance { get; private set; }
+    internal ManualLogSource PluginLog => Logger;
+    internal bool CompilerCaseInsensitiveEnabled =>
+        _patchConfig?.Enabled == true && _patchConfig.CompilerCaseInsensitive;
+
+    private PatchConfig _patchConfig;
+    private DialogueFrameCatalog _frameCatalog;
+    private DialogueLocalizer _dialogue;
+    private LogTitleRuntime _logTitles;
+    private UiLocalizer _ui;
+    private DialogueLiveTextRuntime _liveDialogueText;
+    private FontFallback _font;
+    private DialogueLayoutRuntime _dialogueLayout;
+    private PlayerNameRuntime _playerName;
+    private Harmony _harmony;
+    private string _translationDirectory;
+    private string _configPath;
+
+    private void Awake()
+    {
+        Instance = this;
+        string gameRoot = Paths.GameRootPath;
+        string contentRoot = System.IO.Path.Combine(gameRoot, "DeepSpaceChinese");
+        _configPath = System.IO.Path.Combine(gameRoot, "DeepSpaceChinese.ini");
+        _patchConfig = PatchConfig.Load(_configPath, Logger);
+        _translationDirectory = System.IO.Path.Combine(contentRoot, "Translations");
+        TranslationStore store = TranslationStore.Load(_translationDirectory, Logger);
+        _frameCatalog = new DialogueFrameCatalog();
+        _dialogue = new DialogueLocalizer(store, _patchConfig, _frameCatalog, Logger);
+        _logTitles = new LogTitleRuntime(_dialogue, Logger);
+        _ui = new UiLocalizer(store, _patchConfig, _dialogue, _frameCatalog, Logger);
+        _liveDialogueText = new DialogueLiveTextRuntime(_patchConfig, Logger);
+        _font = new FontFallback(_patchConfig, contentRoot, Logger);
+        _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
+        _playerName = new PlayerNameRuntime(_patchConfig, Logger);
+
+        _harmony = new Harmony(PluginGuid);
+        _harmony.PatchAll(typeof(DeepSpaceChinesePlugin).Assembly);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        if (_patchConfig.Enabled)
+        {
+            _font.EnsureLoaded();
+            StartCoroutine(ReapplyNextFrame());
+        }
+        Logger.LogInfo($"汉化补丁 {PluginVersion} 已加载；显示模式 {_patchConfig.DisplayMode}；" +
+                       $"切换键 {_patchConfig.ToggleModeHotkey}；重载键 {_patchConfig.ReloadTranslationsHotkey}。");
+    }
+
+    private void Update()
+    {
+        if (!_patchConfig.Enabled)
+            return;
+        try
+        {
+            if (!_patchConfig.ToggleModeHotkey.Equals(BepInEx.Configuration.KeyboardShortcut.Empty) &&
+                _patchConfig.ToggleModeHotkey.IsDown())
+                ToggleDisplayMode();
+            if (!_patchConfig.ReloadTranslationsHotkey.Equals(BepInEx.Configuration.KeyboardShortcut.Empty) &&
+                _patchConfig.ReloadTranslationsHotkey.IsDown())
+                ReloadTranslations();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"处理汉化快捷键时发生错误：\n{ex}");
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (_patchConfig?.Enabled != true)
+            return;
+        try
+        {
+            _playerName?.UpdateImeCursorPosition();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"更新输入法候选窗位置失败：\n{ex}");
+        }
+    }
+
+    private void ToggleDisplayMode()
+    {
+        _patchConfig.DisplayMode = _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+            ? DisplayMode.OriginalOnly
+            : DisplayMode.TranslationOnly;
+        _font.EnsureLoaded();
+        ApplyProgressLogTitleFonts();
+        _dialogue.ReapplyAll();
+        _liveDialogueText.RefreshAll();
+        _ui.ReapplyAll();
+        _logTitles.RefreshAll();
+        _playerName.ApplyAll();
+        string displayName = _patchConfig.DisplayMode == DisplayMode.TranslationOnly ? "仅译文" : "仅原文";
+        Logger.LogMessage($"汉化显示模式已切换为：{displayName}");
+    }
+
+    private void ReloadTranslations()
+    {
+        _patchConfig.ReloadFontSettings(_configPath, Logger);
+        _patchConfig.ReloadDialogueColorSettings(_configPath, Logger);
+        _patchConfig.ReloadCompatibilitySettings(_configPath, Logger);
+        _dialogueLayout.ReapplySpeakerColors();
+        bool fontReady = _font.ReloadIfChanged(out bool fontReloaded);
+        ApplyProgressLogTitleFonts();
+        TranslationStore replacement = TranslationStore.Load(_translationDirectory, Logger);
+        bool translationsReloaded = replacement.LoadErrors == 0 &&
+                                    replacement.FilesLoaded == 4 && replacement.Count > 0;
+        if (!translationsReloaded)
+        {
+            Logger.LogError($"译文重载失败，继续使用当前译文：成功文件 {replacement.FilesLoaded}/4，" +
+                            $"错误 {replacement.LoadErrors}，有效条目 {replacement.Count}。");
+        }
+        else
+        {
+            _dialogue.ReplaceStore(replacement);
+            _ui.ReplaceStore(replacement);
+        }
+        _dialogue.ReapplyAll();
+        _liveDialogueText.RefreshAll();
+        _ui.ReapplyAll();
+        _logTitles.RefreshAll();
+        _playerName.ApplyAll();
+        if (translationsReloaded)
+            Logger.LogMessage($"译文已重新载入并应用：{replacement.Count} 条；" +
+                              $"中文字体{(fontReloaded ? "已刷新" : fontReady ? "未变化" : "保持原字体")}。");
+        else if (fontReloaded)
+            Logger.LogMessage("译文文件未替换，但中文字体已刷新并重新应用。");
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (!_patchConfig.Enabled)
+            return;
+        _font.EnsureLoaded();
+        StartCoroutine(ReapplyNextFrame());
+    }
+
+    private IEnumerator ReapplyNextFrame()
+    {
+        yield return null;
+        yield return null;
+        _font.EnsureLoaded();
+        ApplyProgressLogTitleFonts();
+        _dialogue.ReapplyAll();
+        _liveDialogueText.RefreshAll();
+        _ui.ReapplyAll();
+        _logTitles.RefreshAll();
+        _playerName.ApplyAll();
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        _harmony?.UnpatchSelf();
+        if (ReferenceEquals(Instance, this))
+            Instance = null;
+    }
+
+    internal void ApplyDialogueBank(DialogueBank bank)
+    {
+        if (_patchConfig?.Enabled == true)
+        {
+            _dialogue.RegisterAndApply(bank);
+            _logTitles.RefreshAll();
+        }
+    }
+
+    internal void ApplyLogEntryTitle(DialogueLogEntry entry, DialogueChunk chunk, LogWindow window)
+    {
+        if (_patchConfig?.Enabled == true)
+            _logTitles?.ApplyEntry(entry, chunk, window);
+    }
+
+    internal void ApplyOpenLogTitle(LogWindow window, DialogueChunk chunk)
+    {
+        if (_patchConfig?.Enabled == true)
+            _logTitles?.ApplyOpenTitle(window, chunk);
+    }
+
+    internal string TranslateTmpText(TMP_Text component, string proposed)
+    {
+        if (_liveDialogueText != null &&
+            _liveDialogueText.TryTranslate(component, proposed, out string dialogueText))
+            return dialogueText;
+        return _ui == null ? proposed : _ui.TranslateIncoming(component, proposed);
+    }
+
+    internal void AdjustDialogueVisibleCharacters(TMP_Text component, ref int value)
+    {
+        _liveDialogueText?.AdjustMaxVisibleCharacters(component, ref value);
+    }
+
+    internal void ApplyPlayerNameUi(NameTranslator namer)
+    {
+        if (_patchConfig?.Enabled == true)
+            _playerName?.Apply(namer);
+    }
+
+    internal void ApplyProgressLogInput(ProgressLog progressLog)
+    {
+        if (_patchConfig?.Enabled == true)
+            _playerName?.ApplyProgressLogInput(progressLog);
+    }
+
+    internal void ApplySharedInput(InputTextDummy dummy)
+    {
+        if (_patchConfig?.Enabled == true)
+            _playerName?.ApplySharedInput(dummy);
+    }
+
+    internal void UpdateImeCursorPosition(TMP_InputField input)
+    {
+        if (_patchConfig?.Enabled != true)
+            return;
+        try
+        {
+            _playerName?.UpdateImeCursorPosition(input);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"在 TMP 绘制后更新输入法候选窗位置失败：\n{ex}");
+        }
+    }
+
+    internal DialogueFrame FitMainDialogue(DialogueManager manager, DialogueFrame frame)
+    {
+        if (_dialogueLayout == null)
+            return frame;
+        if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
+        {
+            DialogueFrame original = _dialogueLayout.FitMain(manager, pair.Original);
+            DialogueFrame translated = _dialogueLayout.FitMain(manager, pair.Translated);
+            _liveDialogueText?.TrackMain(manager, original, translated);
+            return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+                ? translated
+                : original;
+        }
+        return _dialogueLayout.FitMain(manager, frame);
+    }
+
+    internal DialogueFrame FitNonLogDialogue(NonLogDialogueManager manager, DialogueFrame frame)
+    {
+        if (_dialogueLayout == null)
+            return frame;
+        if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
+        {
+            DialogueFrame original = _dialogueLayout.FitNonLog(manager, pair.Original);
+            DialogueFrame translated = _dialogueLayout.FitNonLog(manager, pair.Translated);
+            _liveDialogueText?.TrackNonLog(manager, original, translated);
+            return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+                ? translated
+                : original;
+        }
+        return _dialogueLayout.FitNonLog(manager, frame);
+    }
+
+    internal DialogueFrame PrepareCharacterTypedDialogue(TMP_Text textBox,
+        DialogueFrame frame)
+    {
+        if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
+        {
+            _liveDialogueText?.TrackCharacter(textBox, pair.Original, pair.Translated);
+            return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+                ? pair.Translated
+                : pair.Original;
+        }
+        return frame;
+    }
+
+    internal string PrepareGenericTypedText(TMP_Text label, string proposed)
+    {
+        ApplyProgressLogTitleFont(label);
+        if (_ui != null && _ui.TryResolveSystemLiteralPair(proposed,
+                out string original, out string translated))
+        {
+            _liveDialogueText?.TrackLiteral(label, original, translated);
+            return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+                ? translated
+                : original;
+        }
+        return proposed;
+    }
+
+    private void ApplyProgressLogTitleFonts()
+    {
+        int count = 0;
+        foreach (ProgressLog progressLog in Resources.FindObjectsOfTypeAll<ProgressLog>())
+        {
+            if (progressLog == null)
+                continue;
+            count += ApplyProgressLogTitleFont(progressLog.aLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitleFont(progressLog.bLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitleFont(progressLog.cLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitleFont(progressLog.dLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitleFont(progressLog.tLogTitle) ? 1 : 0;
+        }
+        if (count > 0)
+            Logger.LogInfo($"个人日志标题字体已应用：{count} 项，模式 {_patchConfig.DisplayMode}。");
+    }
+
+    private bool ApplyProgressLogTitleFont(TMP_Text label)
+    {
+        if (label == null || !IsProgressLogTitle(label))
+            return false;
+        return _font.ApplyDirect(label,
+            _patchConfig.DisplayMode == DisplayMode.TranslationOnly);
+    }
+
+    private static bool IsProgressLogTitle(TMP_Text label)
+    {
+        foreach (ProgressLog progressLog in Resources.FindObjectsOfTypeAll<ProgressLog>())
+        {
+            if (progressLog != null &&
+                (ReferenceEquals(label, progressLog.aLogTitle) ||
+                 ReferenceEquals(label, progressLog.bLogTitle) ||
+                 ReferenceEquals(label, progressLog.cLogTitle) ||
+                 ReferenceEquals(label, progressLog.dLogTitle) ||
+                 ReferenceEquals(label, progressLog.tLogTitle)))
+                return true;
+        }
+        return false;
+    }
+}
+
+[HarmonyPatch(typeof(DialogueBank), "SetDataFromLoad")]
+internal static class DialogueBankSetDataPatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(DialogueBank __instance)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.ApplyDialogueBank(__instance);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"应用对白翻译失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(TMP_Text), "set_text")]
+internal static class TmpTextSetterPatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(TMP_Text __instance, ref string value)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+            if (plugin != null)
+                value = plugin.TranslateTmpText(__instance, value);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"应用 UI 翻译失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(TMP_Text), "set_maxVisibleCharacters")]
+internal static class TmpMaxVisibleCharactersPatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(TMP_Text __instance, ref int value)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.AdjustDialogueVisibleCharacters(__instance,
+                ref value);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"换算对白逐字显示进度失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(DialogueManager), "WriteFrameRoutine")]
+internal static class DialogueManagerWriteFramePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(DialogueManager __instance, ref DialogueFrame df)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+            if (plugin != null)
+                df = plugin.FitMainDialogue(__instance, df);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"调整主对白显示失败，将使用原始排版：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(NonLogDialogueManager), "WriteFrameRoutine")]
+internal static class NonLogDialogueManagerWriteFramePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(NonLogDialogueManager __instance, ref DialogueFrame df)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+            if (plugin != null)
+                df = plugin.FitNonLogDialogue(__instance, df);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"调整场景对白显示失败，将使用原始排版：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(DialogueManager), "CharacterDialogueTypeRoutine",
+    new[] { typeof(Speaker), typeof(TMP_Text), typeof(DialogueFrame), typeof(bool) })]
+internal static class DialogueManagerCharacterTypePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(TMP_Text __1, ref DialogueFrame __2)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+            if (plugin != null)
+                __2 = plugin.PrepareCharacterTypedDialogue(__1, __2);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"跟踪个人日志正文语言切换失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(DialogueManager), "GenericTypeRoutine",
+    new[] { typeof(string), typeof(TMP_Text), typeof(bool) })]
+internal static class DialogueManagerGenericTypePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(ref string __0, TMP_Text __1)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+            if (plugin != null)
+                __0 = plugin.PrepareGenericTypedText(__1, __0);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"跟踪逐字标题语言切换失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(DialogueManager), "GenericTypeRoutine",
+    new[] { typeof(string), typeof(TMP_Text), typeof(bool), typeof(float) })]
+internal static class DialogueManagerGenericTimedTypePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(ref string __0, TMP_Text __1)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+            if (plugin != null)
+                __0 = plugin.PrepareGenericTypedText(__1, __0);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"跟踪定时逐字标题语言切换失败：\n{ex}");
+        }
+    }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "text_index": 1808456706,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Bleep bloop.{PART_001}...",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}哔哔啵啵。{PART_001}……"
+  },
+  {
+    "text_index": 661925582,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What?",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+  },
+  {
+    "text_index": 1083905292,
+    "source_text": "{SPEAKER_AKERS}{PART_000}You said something?",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你说什么了？"
+  },
+  {
+    "text_index": 871663667,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}No.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}没有。"
+  },
+  {
+    "text_index": 962624220,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Huh.{PART_001}Okay then...",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}那算了……"
+  },
+  {
+    "text_index": 1709679033,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD16Where's Bautista?",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD16巴蒂斯塔人呢？"
+  },
+  {
+    "text_index": 1518443000,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Being a square,{PART_001}I reckon.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}估计又在什么地方闷头干活吧，{PART_001}我猜。"
+  },
+  {
+    "text_index": 1102709806,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}They count 1, 2, 3, 4, 5, 6, 7, and then 10.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他们数完 1、2、3、4、5、6、7，接下来就是 10。"
+  },
+  {
+    "text_index": 2051639429,
+    "source_text": "{SPEAKER_AKERS}{PART_000}But 10 isn't really \"ten\".{PART_001}$animD19\"10\" represents the value of 8.{PART_002}Annoying.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可这个 10 根本不是“十”。{PART_001}$animD19这里的“10”其实等于 8。{PART_002}真麻烦。"
+  },
+  {
+    "text_index": 4874437,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I don't understand it that well myself,{PART_001}but the implications are what inspire me!",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}其实我也没完全弄懂，{PART_001}可光是想想这意味着什么，我就兴奋！"
+  },
+  {
+    "text_index": 144253570,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD21I'm listening...",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD21我听着呢……"
+  },
+  {
+    "text_index": 1306458735,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Why do the aliens use base-8 to represent numbers?{PART_001}What does that say about their species?",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他们为什么偏偏用八进制记数？{PART_001}这能说明他们是怎样的物种吗？"
+  },
+  {
+    "text_index": 385045044,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Huh.{PART_001}$animD18I'll have to think on that.{PART_002}$animD06Great work, you four.{PART_003}It's been another good week of progress.{PART_004}$animD24Head home.{PART_005}Get some sleep.{PART_006}And that goes for Bautista, too.{PART_007}$animD21Tell him it's an order.",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}嗯。{PART_001}$animD18我得琢磨琢磨。{PART_002}$animD06你们四个干得不错。{PART_003}这周又有不少进展。{PART_004}$animD24都回去吧。{PART_005}好好睡一觉。{PART_006}巴蒂斯塔也一样。{PART_007}$animD21告诉他，这是命令。"
+  },
+  {
+    "text_index": 934571644,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Got it.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}知道了。"
+  },
+  {
+    "text_index": 202222467,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD24I look forward to all the progress!",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD24等着听你们的好消息！"
+  },
+  {
+    "text_index": 1140752624,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And uh,{PART_001}one last thing Dopp.{PART_002}$animD19I've got a request.{PART_003}Your team is investigating the meteorite itself,{PART_004}correct?{PART_005}Do you think you could perchance,{PART_006}take a look at...",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}还有，呃，{PART_001}多普，最后一件事。{PART_002}$animD19我想请你帮个忙。{PART_003}你们团队在研究陨石本身，{PART_004}对吧？{PART_005}那能不能顺便，{PART_006}帮我看看……"
+  },
+  {
+    "text_index": 1259208889,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}He's working on the computer.{PART_001}Programming something.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他在电脑那边。{PART_001}好像又在写什么程序。"
+  },
+  {
+    "text_index": 1121336698,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD05Sounds like him.{PART_001}Anyways, where are we? $animD01{PART_002}It's been our second week of decoding.{PART_003}$animD19We're moving along with this thing?{PART_004}$animD21We learn why they sent this?{PART_005}Do they $animD19have any technology to share?{PART_006}$animD22Tell me you have something.",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD05这倒很像他。{PART_001}好了，我们刚说到哪了？$animD01{PART_002}这已经是破译的第二周。{PART_003}$animD19怎么样，有进展吗？{PART_004}$animD21知道他们为什么送来这东西了吗？{PART_005}有没有$animD19什么技术要教给我们？{PART_006}$animD22总得有点发现吧。"
+  },
+  {
+    "text_index": 1896308677,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Yes sir,{PART_001}we do!{PART_002}Quite a large breakthrough already!",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有，{PART_001}当然有！{PART_002}而且还是个大突破！"
+  },
+  {
+    "text_index": 649906424,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD18I am all ears,{PART_001}Dr. Collins!",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD18我洗耳恭听，{PART_001}柯林斯博士！"
+  },
+  {
+    "text_index": 1642173050,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}We have established how to write numbers!",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们弄清他们怎么写数字了！"
+  },
+  {
+    "text_index": 460028376,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Oh,{PART_001}$animD17that's–{PART_002}$animD06alright.{PART_003}$animD10I'll adjust my expectations moving forward.",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}哦，{PART_001}$animD17这倒是——{PART_002}$animD06也不错。{PART_003}$animD10看来以后得把预期放低点了。"
+  },
+  {
+    "text_index": 1572959385,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}No no!{PART_001}This is much more exciting than you realize!{PART_002}$animD21They format numbers in base-8.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不不！{PART_001}这可比你想的有意思多了！{PART_002}$animD21他们用的是八进制。"
+  },
+  {
+    "text_index": 1352453651,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD02Base-8?",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD02八进制？"
+  },
+  {
+    "text_index": 251411955,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Float?{PART_001}{PLAYER_NAME},{PART_002}help me understand.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}浮点数？{PART_001}{PLAYER_NAME}，{PART_002}你给我讲讲。"
+  },
+  {
+    "text_index": 1310185773,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}As in floating point numbers.{PART_001}The translator impresses me.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}就是浮点数。{PART_001}这位翻译员让我刮目相看。"
+  },
+  {
+    "text_index": 881433658,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well that's rare.{PART_001}How come I never impress you?",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，真稀奇。{PART_001}我怎么从没让你刮目相看过？"
+  },
+  {
+    "text_index": 1313047721,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}I think that is for you to answer.{PART_001}Hehe.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这就得问你自己了。{PART_001}呵呵。"
+  },
+  {
+    "text_index": 1502171177,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Matches with Alan's notes.{PART_001}IHe's a good astronomer.{PART_002}I'd trust him.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}和艾伦的笔记对上了。{PART_001}他是个好天文学家。{PART_002}我信他。"
+  },
+  {
+    "text_index": 1523506737,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Alan's hypothesis agrees,{PART_001}so I trust you're in good hands.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}艾伦的假说也是这么说的，{PART_001}那应该就没问题了。"
+  },
+  {
+    "text_index": 1154869965,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Alan would've loved to see you enter \"Galaxy\".",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}艾伦要是看到你输入“银河系”，肯定会很高兴。"
+  },
+  {
+    "text_index": 1329177708,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I had something a little different,{PART_001}but you match the astronomer's thinking.{PART_002}I'd trust that.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我原本想的不太一样，{PART_001}不过你和天文学家的思路对上了。{PART_002}应该没错。"
+  },
+  {
+    "text_index": 25878393,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I don't know what that is,{PART_001}but that's what Alan left in his hypotheses before he left.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也不知道那是什么，{PART_001}不过艾伦走前在假说里就这么写了。"
+  },
+  {
+    "text_index": 1756498439,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME},{PART_001}I don't know what that is,{PART_002}but I trust you.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME}，{PART_001}我也不知道那是什么，{PART_002}不过我信你。"
+  },
+  {
+    "text_index": 615435726,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Orbit the stars:{PART_001}Planets do that!",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}绕着恒星转——{PART_001}行星本来就是这样运动的！"
+  },
+  {
+    "text_index": 816071909,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Akers would be proud,{PART_001}if he were here.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}埃克斯要是在，{PART_001}也会为你骄傲。"
+  },
+  {
+    "text_index": 281634529,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I have no clue what that means,{PART_001}but I trust it's something astronomical.{PART_002}Alan left it behind in his hypotheses,{PART_003}so you must be on the right track.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我是一点没懂，{PART_001}不过听着像天文学。{PART_002}艾伦在假说里也写了这个，{PART_003}你的方向应该没错。"
+  },
+  {
+    "text_index": 2021576091,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Dr. Doppler,{PART_001}$animD21I have a new favorite word.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}多普勒博士，{PART_001}$animD21我又有了个最喜欢的词！"
+  },
+  {
+    "text_index": 1830131069,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}I assume you're going somewhere with this.",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}你这么说，肯定还有下文吧。"
+  },
+  {
+    "text_index": 1866068964,
+    "source_text": "{SPEAKER_AKERS}{PART_000}So they sent meteors and hoped.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以他们就把陨石发出去，然后碰运气。"
+  },
+  {
+    "text_index": 476097622,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Still,{PART_001}there was a visual transmission many weeks ago that seemed to highlight Earth and Mars in our solar system.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不过，{PART_001}几周前有一段图像传输，似乎特意标出了太阳系里的地球和火星。"
+  },
+  {
+    "text_index": 254362725,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That's probably because they've identified us at goldilocks planets.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可能因为他们把我们这里的行星认作“金发姑娘行星”了吧。"
+  },
+  {
+    "text_index": 951299850,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Goldilocks?",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}金发姑娘？"
+  },
+  {
+    "text_index": 18551822,
+    "source_text": "{SPEAKER_AKERS}{PART_000}We're at the right distance from our star:{PART_001}Not too close,{PART_002}not too far.{PART_003}Not too hot,{PART_004}not too cold.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我们离恒星的距离正合适：{PART_001}不近，{PART_002}不远；{PART_003}不热，{PART_004}也不冷。"
+  },
+  {
+    "text_index": 1658806502,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}262,000...{PART_001}I'm...{PART_002}huh...{PART_003}wow.{PART_004}They're desperate.",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}262,000……{PART_001}我……{PART_002}嗯……{PART_003}天啊。{PART_004}他们一定很绝望。"
+  },
+  {
+    "text_index": 1499251911,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Or persistent.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也可能只是不肯放弃。"
+  },
+  {
+    "text_index": 1470150969,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Or on the brink of destruction.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}也可能已经濒临毁灭。"
+  },
+  {
+    "text_index": 199533405,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Grim.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}够惨的。"
+  },
+  {
+    "text_index": 265356268,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}$animD17I'm going to have to sit with that one for awhile.{PART_001}This,{PART_002}this meteor is already such an unbelievable feat of engineering.{PART_003}They've managed to mass-produce this level of technology.",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD17这事我得慢慢消化。{PART_001}光是这颗陨石，{PART_002}就已经是难以置信的工程奇迹了。{PART_003}他们居然能量产这种级别的技术。"
+  },
+  {
+    "text_index": 894237210,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Wait wait wait.{PART_001}Before you say it,{PART_002}I have a new favorite word,{PART_003}too!",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等等等。{PART_001}你先别说，{PART_002}我也找到了一个最喜欢的新词，{PART_003}真的！"
+  },
+  {
+    "text_index": 985233388,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}180,000 years ago.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}18 万年前。"
+  },
+  {
+    "text_index": 1980997144,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yeah.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对。"
+  },
+  {
+    "text_index": 327569215,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Well is that all for the report?",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}那么，报告就这些？"
+  },
+  {
+    "text_index": 1689838114,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}We believe so.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}应该就这些了。"
+  },
+  {
+    "text_index": 1676355795,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Then if you don't mind,{PART_001}$animD00as I've gotten older,{PART_002}I've come to realize my greatest quality.{PART_003}I used to think it was my work ethic,{PART_004}$animD23or that I was good at helping others.{PART_005}$animD00I do okay in those departments,{PART_006}but I've realized my greatest quality is neither of those.{PART_007}$animD19It's the ability to surround myself with people smarter than me.{PART_008}$animD22Much smarter.{PART_009}$animD19Akers,{PART_010}$animD20Bautista,{PART_011}$animD21Collins,{PART_012}$animD22{PLAYER_NAME}.{PART_013}$animD20If you'll have me,{PART_014}I'd love to sit in on the Translation with you four.{PART_015}I won't be much help and I won't always be around,{PART_016}but selfishly,{PART_017}$animD23I want to understand the message,{PART_018}the message that they're so desperately sharing with us.{PART_019}$animD22Translation team,{PART_020}will you have me?",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}那我就直说了。{PART_001}$animD00年纪越大，{PART_002}我越明白自己最大的优点是什么。{PART_003}以前我觉得是肯下功夫，{PART_004}$animD23或者擅长帮别人。{PART_005}$animD00这两样我做得还算不错，{PART_006}但后来才发现，都不是。{PART_007}$animD19真正的优点，是我很会把比自己聪明的人聚到身边。{PART_008}$animD22比我聪明得多。{PART_009}$animD19埃克斯，{PART_010}$animD20巴蒂斯塔，{PART_011}$animD21柯林斯，{PART_012}$animD22还有{PLAYER_NAME}。{PART_013}$animD20如果各位不介意，{PART_014}我也想加入你们四个的翻译工作。{PART_015}我帮不上多少忙，也不会一直在场，{PART_016}但说句自私的，{PART_017}$animD23我想听懂这则讯息，{PART_018}听懂他们如此迫切地想传给我们的讯息。{PART_019}$animD22翻译小组，{PART_020}愿意让我加入吗？"
+  },
+  {
+    "text_index": 1382134818,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Of course Dr. Doppler.",
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}当然可以，多普勒博士。"
+  },
+  {
+    "text_index": 1685150859,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Welcome to the team!{PART_001}Plus,{PART_002}I've been needing some more personality in the room...{PART_003}Only so much I can do alone.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}欢迎加入！{PART_001}而且，{PART_002}这屋里也该多点有趣的人了……{PART_003}光靠我一个可不够。"
+  },
+  {
+    "text_index": 39885809,
+    "source_text": "{SPEAKER_DOPPLER}{PART_000}Oh right.{PART_001}I'll see what you three have to put up with every week.{PART_002}$animD22And {PLAYER_NAME}?{PART_003}Is it okay if I join in the Translation?{PART_004}...{PART_005}$animD00Thank you.{PART_006}And Bautista?{PART_007}Your thoughts?",
+    "translated_text": "{SPEAKER_DOPPLER}{PART_000}哦，对。{PART_001}这样我就能亲眼看看你们三个每周都得忍受些什么了。{PART_002}$animD22那{PLAYER_NAME}呢？{PART_003}你同意我加入翻译工作吗？{PART_004}……{PART_005}$animD00谢谢。{PART_006}巴蒂斯塔呢？{PART_007}你怎么想？"
+  },
+  {
+    "text_index": 1539494079,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Oh.{PART_001}Sure.",
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}哦。{PART_001}行。"
+  },
+  {
+    "text_index": 750792771,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That's pretty much all he says.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}他基本上就只说这些。"
+  }
+]

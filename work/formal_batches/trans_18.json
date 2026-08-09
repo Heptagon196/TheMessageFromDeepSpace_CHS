@@ -1,0 +1,2558 @@
+[
+  {
+    "text_index": 714783688,
+    "translated_text": "负"
+  },
+  {
+    "text_index": 1345084505,
+    "translated_text": "取反"
+  },
+  {
+    "text_index": 1818088649,
+    "translated_text": "生命"
+  },
+  {
+    "text_index": 229626075,
+    "translated_text": "生命"
+  },
+  {
+    "text_index": 1673455915,
+    "translated_text": "生命"
+  },
+  {
+    "text_index": 122986933,
+    "translated_text": "有机"
+  },
+  {
+    "text_index": 893875474,
+    "translated_text": "碳基"
+  },
+  {
+    "text_index": 1680634325,
+    "translated_text": "含氢"
+  },
+  {
+    "text_index": 1140041246,
+    "translated_text": "氢基"
+  },
+  {
+    "text_index": 1492964015,
+    "translated_text": "有点像"
+  },
+  {
+    "text_index": 1827315131,
+    "translated_text": "无形"
+  },
+  {
+    "text_index": 1493583214,
+    "translated_text": "抽象"
+  },
+  {
+    "text_index": 1448235757,
+    "translated_text": "真实有形"
+  },
+  {
+    "text_index": 375428847,
+    "translated_text": "有形"
+  },
+  {
+    "text_index": 800606361,
+    "translated_text": "具体"
+  },
+  {
+    "text_index": 1495723933,
+    "translated_text": "最最"
+  },
+  {
+    "text_index": 1392358155,
+    "translated_text": "+顶级+"
+  },
+  {
+    "text_index": 2041835065,
+    "translated_text": "绝对"
+  },
+  {
+    "text_index": 1025360215,
+    "translated_text": "非常"
+  },
+  {
+    "text_index": 668400650,
+    "translated_text": "非常"
+  },
+  {
+    "text_index": 389382503,
+    "translated_text": "极端"
+  },
+  {
+    "text_index": 1162830612,
+    "translated_text": "相对较大"
+  },
+  {
+    "text_index": 28046787,
+    "translated_text": "大"
+  },
+  {
+    "text_index": 1863462507,
+    "translated_text": "大"
+  },
+  {
+    "text_index": 1138659357,
+    "translated_text": "相对较小"
+  },
+  {
+    "text_index": 1335315409,
+    "translated_text": "小型"
+  },
+  {
+    "text_index": 1513270048,
+    "translated_text": "小"
+  },
+  {
+    "text_index": 442462227,
+    "translated_text": "全部"
+  },
+  {
+    "text_index": 2022318848,
+    "translated_text": "总计"
+  },
+  {
+    "text_index": 1582422875,
+    "translated_text": "全部"
+  },
+  {
+    "text_index": 1403634684,
+    "translated_text": "东西"
+  },
+  {
+    "text_index": 694358412,
+    "translated_text": "变量"
+  },
+  {
+    "text_index": 629940062,
+    "translated_text": "什么都没有"
+  },
+  {
+    "text_index": 16276395,
+    "translated_text": "空"
+  },
+  {
+    "text_index": 2024556351,
+    "translated_text": "无"
+  },
+  {
+    "text_index": 1951947315,
+    "translated_text": "最小值"
+  },
+  {
+    "text_index": 1446962688,
+    "translated_text": "最小"
+  },
+  {
+    "text_index": 1072991001,
+    "translated_text": "最小值"
+  },
+  {
+    "text_index": 1712266047,
+    "translated_text": "最大值"
+  },
+  {
+    "text_index": 1267037936,
+    "translated_text": "最大"
+  },
+  {
+    "text_index": 841964045,
+    "translated_text": "最大值"
+  },
+  {
+    "text_index": 1690954003,
+    "translated_text": "中位数"
+  },
+  {
+    "text_index": 73014785,
+    "translated_text": "平均数"
+  },
+  {
+    "text_index": 1266678502,
+    "translated_text": "中间值"
+  },
+  {
+    "text_index": 1307670683,
+    "translated_text": "众数"
+  },
+  {
+    "text_index": 1066621990,
+    "translated_text": "众数"
+  },
+  {
+    "text_index": 1872368371,
+    "translated_text": "多数"
+  },
+  {
+    "text_index": 1948590293,
+    "translated_text": "较少"
+  },
+  {
+    "text_index": 36776216,
+    "translated_text": "少见"
+  },
+  {
+    "text_index": 1973240719,
+    "translated_text": "少数"
+  },
+  {
+    "text_index": 552466074,
+    "translated_text": "相似"
+  },
+  {
+    "text_index": 993362482,
+    "translated_text": "接近"
+  },
+  {
+    "text_index": 770835339,
+    "translated_text": "之前"
+  },
+  {
+    "text_index": 251346957,
+    "translated_text": "过去"
+  },
+  {
+    "text_index": 357231995,
+    "translated_text": "之前"
+  },
+  {
+    "text_index": 99816552,
+    "translated_text": "现在"
+  },
+  {
+    "text_index": 1831145298,
+    "translated_text": "当前"
+  },
+  {
+    "text_index": 1184566288,
+    "translated_text": "当前"
+  },
+  {
+    "text_index": 642530965,
+    "translated_text": "之后"
+  },
+  {
+    "text_index": 821222007,
+    "translated_text": "未来"
+  },
+  {
+    "text_index": 1924544647,
+    "translated_text": "即将到来"
+  },
+  {
+    "text_index": 993904086,
+    "translated_text": "填空"
+  },
+  {
+    "text_index": 1953657135,
+    "translated_text": "回答"
+  },
+  {
+    "text_index": 316570201,
+    "translated_text": "在...时"
+  },
+  {
+    "text_index": 2012023565,
+    "translated_text": "何时"
+  },
+  {
+    "text_index": 344637497,
+    "translated_text": "下一个"
+  },
+  {
+    "text_index": 974283608,
+    "translated_text": "连接到"
+  },
+  {
+    "text_index": 1360212910,
+    "translated_text": "知道的"
+  },
+  {
+    "text_index": 966113723,
+    "translated_text": "感知"
+  },
+  {
+    "text_index": 1097940295,
+    "translated_text": "已知"
+  },
+  {
+    "text_index": 1818416616,
+    "translated_text": "不知道的"
+  },
+  {
+    "text_index": 1827117962,
+    "translated_text": "未察觉"
+  },
+  {
+    "text_index": 816676291,
+    "translated_text": "未知"
+  },
+  {
+    "text_index": 98573345,
+    "translated_text": "宇宙"
+  },
+  {
+    "text_index": 1209503162,
+    "translated_text": "万物"
+  },
+  {
+    "text_index": 263534315,
+    "translated_text": "存在"
+  },
+  {
+    "text_index": 120202696,
+    "translated_text": "无穷"
+  },
+  {
+    "text_index": 1147902378,
+    "translated_text": "无穷"
+  },
+  {
+    "text_index": 1758699363,
+    "translated_text": "不可数"
+  },
+  {
+    "text_index": 432066187,
+    "translated_text": "学习"
+  },
+  {
+    "text_index": 82320627,
+    "translated_text": "共存"
+  },
+  {
+    "text_index": 610657304,
+    "translated_text": "追求"
+  },
+  {
+    "text_index": 1939480019,
+    "translated_text": "个体"
+  },
+  {
+    "text_index": 579877235,
+    "translated_text": "个体"
+  },
+  {
+    "text_index": 768253258,
+    "translated_text": "物种成员"
+  },
+  {
+    "text_index": 1051465683,
+    "translated_text": "埃克斯人"
+  },
+  {
+    "text_index": 223243811,
+    "translated_text": "一个人"
+  },
+  {
+    "text_index": 1059387799,
+    "translated_text": "外星朋友"
+  },
+  {
+    "text_index": 1534862559,
+    "translated_text": "人类"
+  },
+  {
+    "text_index": 1644922879,
+    "translated_text": "人"
+  },
+  {
+    "text_index": 1027016464,
+    "translated_text": "人类朋友"
+  },
+  {
+    "text_index": 2122216869,
+    "translated_text": "生成坐标"
+  },
+  {
+    "text_index": 1880283705,
+    "translated_text": "函数"
+  },
+  {
+    "text_index": 2136450229,
+    "translated_text": "绘制变量图"
+  },
+  {
+    "text_index": 1949832725,
+    "translated_text": "物种"
+  },
+  {
+    "text_index": 1391082639,
+    "translated_text": "物种"
+  },
+  {
+    "text_index": 2034289127,
+    "translated_text": "物种"
+  },
+  {
+    "text_index": 2070152984,
+    "translated_text": "出生"
+  },
+  {
+    "text_index": 1870769682,
+    "translated_text": "出生"
+  },
+  {
+    "text_index": 1002036415,
+    "translated_text": "出生"
+  },
+  {
+    "text_index": 1822247773,
+    "translated_text": "死亡"
+  },
+  {
+    "text_index": 1366581293,
+    "translated_text": "死亡"
+  },
+  {
+    "text_index": 1231263029,
+    "translated_text": "度过一生"
+  },
+  {
+    "text_index": 1215348685,
+    "translated_text": "生命"
+  },
+  {
+    "text_index": 1625700629,
+    "translated_text": "一生"
+  },
+  {
+    "text_index": 1186032579,
+    "translated_text": "寿命"
+  },
+  {
+    "text_index": 783205605,
+    "translated_text": "存活时间"
+  },
+  {
+    "text_index": 337727396,
+    "translated_text": "陨石作者"
+  },
+  {
+    "text_index": 939583886,
+    "translated_text": "作者"
+  },
+  {
+    "text_index": 1258714370,
+    "translated_text": "陨石制造者"
+  },
+  {
+    "text_index": 1089694061,
+    "translated_text": "作者的妻子"
+  },
+  {
+    "text_index": 552298954,
+    "translated_text": "共同亲本"
+  },
+  {
+    "text_index": 1993151458,
+    "translated_text": "制造者的伴侣"
+  },
+  {
+    "text_index": 1276303732,
+    "translated_text": "艾伦"
+  },
+  {
+    "text_index": 5381326,
+    "translated_text": "翻译员"
+  },
+  {
+    "text_index": 497218436,
+    "translated_text": "我们五个"
+  },
+  {
+    "text_index": 1060566480,
+    "translated_text": "地球"
+  },
+  {
+    "text_index": 231823366,
+    "translated_text": "目标行星"
+  },
+  {
+    "text_index": 1094951048,
+    "translated_text": "家园"
+  },
+  {
+    "text_index": 1559268295,
+    "translated_text": "埃克斯星"
+  },
+  {
+    "text_index": 902482660,
+    "translated_text": "来源行星"
+  },
+  {
+    "text_index": 528710790,
+    "translated_text": "外星家园"
+  },
+  {
+    "text_index": 16214408,
+    "translated_text": "开始"
+  },
+  {
+    "text_index": 533041421,
+    "translated_text": "包含"
+  },
+  {
+    "text_index": 1096479620,
+    "translated_text": "埃克斯恒星"
+  },
+  {
+    "text_index": 1233005342,
+    "translated_text": "外星恒星"
+  },
+  {
+    "text_index": 233907970,
+    "translated_text": "外星恒星"
+  },
+  {
+    "text_index": 1678192693,
+    "translated_text": "孩子"
+  },
+  {
+    "text_index": 1406892795,
+    "translated_text": "后代"
+  },
+  {
+    "text_index": 2040553413,
+    "translated_text": "孩子"
+  },
+  {
+    "text_index": 426576409,
+    "translated_text": "亲本"
+  },
+  {
+    "text_index": 1463796128,
+    "translated_text": "亲本"
+  },
+  {
+    "text_index": 1907844094,
+    "translated_text": "亲本"
+  },
+  {
+    "text_index": 1867495401,
+    "translated_text": "生孩子"
+  },
+  {
+    "text_index": 160779114,
+    "translated_text": "[词语已屏蔽]"
+  },
+  {
+    "text_index": 237790345,
+    "translated_text": "繁殖"
+  },
+  {
+    "text_index": 1676154141,
+    "translated_text": "做得到"
+  },
+  {
+    "text_index": 434748094,
+    "translated_text": "能"
+  },
+  {
+    "text_index": 1624843626,
+    "translated_text": "能够做到"
+  },
+  {
+    "text_index": 1214388347,
+    "translated_text": "消耗"
+  },
+  {
+    "text_index": 1946538433,
+    "translated_text": "吃"
+  },
+  {
+    "text_index": 2046226944,
+    "translated_text": "吃"
+  },
+  {
+    "text_index": 1563934379,
+    "translated_text": "外星宝宝"
+  },
+  {
+    "text_index": 167718973,
+    "translated_text": "生命阶段 1"
+  },
+  {
+    "text_index": 1678517860,
+    "translated_text": "幼体"
+  },
+  {
+    "text_index": 1545930361,
+    "translated_text": "成年外星人"
+  },
+  {
+    "text_index": 581702357,
+    "translated_text": "生命阶段 2"
+  },
+  {
+    "text_index": 1588981888,
+    "translated_text": "完全成熟"
+  },
+  {
+    "text_index": 1102396021,
+    "translated_text": "结束"
+  },
+  {
+    "text_index": 1647889656,
+    "translated_text": "包含结束"
+  },
+  {
+    "text_index": 1741608905,
+    "translated_text": "老年外星人"
+  },
+  {
+    "text_index": 1785112489,
+    "translated_text": "生命阶段 3"
+  },
+  {
+    "text_index": 2063873709,
+    "translated_text": "老年"
+  },
+  {
+    "text_index": 983529292,
+    "translated_text": "感受"
+  },
+  {
+    "text_index": 31131082,
+    "translated_text": "视角"
+  },
+  {
+    "text_index": 509455511,
+    "translated_text": "尊重"
+  },
+  {
+    "text_index": 676522112,
+    "translated_text": "爱"
+  },
+  {
+    "text_index": 930450596,
+    "translated_text": "应该做"
+  },
+  {
+    "text_index": 1069956365,
+    "translated_text": "好"
+  },
+  {
+    "text_index": 1875703250,
+    "translated_text": "应该避免"
+  },
+  {
+    "text_index": 73464888,
+    "translated_text": "坏"
+  },
+  {
+    "text_index": 100638907,
+    "translated_text": "好"
+  },
+  {
+    "text_index": 1356065615,
+    "translated_text": "快乐"
+  },
+  {
+    "text_index": 857542905,
+    "translated_text": "坏"
+  },
+  {
+    "text_index": 610521425,
+    "translated_text": "悲伤"
+  },
+  {
+    "text_index": 1298315700,
+    "translated_text": "一部分"
+  },
+  {
+    "text_index": 1336098801,
+    "translated_text": "组成部分"
+  },
+  {
+    "text_index": 1831816558,
+    "translated_text": "部分"
+  },
+  {
+    "text_index": 226353315,
+    "translated_text": "完整事物"
+  },
+  {
+    "text_index": 1114663465,
+    "translated_text": "整体"
+  },
+  {
+    "text_index": 1335158988,
+    "translated_text": "全体"
+  },
+  {
+    "text_index": 1199193377,
+    "translated_text": "身体部位"
+  },
+  {
+    "text_index": 199521261,
+    "translated_text": "生物结构"
+  },
+  {
+    "text_index": 1955832870,
+    "translated_text": "器官"
+  },
+  {
+    "text_index": 1778105532,
+    "translated_text": "点"
+  },
+  {
+    "text_index": 942354491,
+    "translated_text": "位置"
+  },
+  {
+    "text_index": 769471117,
+    "translated_text": "光"
+  },
+  {
+    "text_index": 1021947367,
+    "translated_text": "感光器"
+  },
+  {
+    "text_index": 300938677,
+    "translated_text": "观察器"
+  },
+  {
+    "text_index": 1483300105,
+    "translated_text": "眼睛"
+  },
+  {
+    "text_index": 2033828850,
+    "translated_text": "感知"
+  },
+  {
+    "text_index": 2129202842,
+    "translated_text": "获取信息"
+  },
+  {
+    "text_index": 477083068,
+    "translated_text": "看见"
+  },
+  {
+    "text_index": 823688657,
+    "translated_text": "原子振动"
+  },
+  {
+    "text_index": 760786972,
+    "translated_text": "热"
+  },
+  {
+    "text_index": 1479597084,
+    "translated_text": "热量"
+  },
+  {
+    "text_index": 25717032,
+    "translated_text": "冷物质"
+  },
+  {
+    "text_index": 644446341,
+    "translated_text": "岩石"
+  },
+  {
+    "text_index": 411977805,
+    "translated_text": "固体"
+  },
+  {
+    "text_index": 341125959,
+    "translated_text": "中温物质"
+  },
+  {
+    "text_index": 1686152137,
+    "translated_text": "熔融体"
+  },
+  {
+    "text_index": 1242589611,
+    "translated_text": "液体"
+  },
+  {
+    "text_index": 739394908,
+    "translated_text": "热物质"
+  },
+  {
+    "text_index": 1626400390,
+    "translated_text": "无固定形态"
+  },
+  {
+    "text_index": 643094699,
+    "translated_text": "气体"
+  },
+  {
+    "text_index": 851200201,
+    "translated_text": "很久很久以前"
+  },
+  {
+    "text_index": 82599668,
+    "translated_text": "6 亿年前"
+  },
+  {
+    "text_index": 1977317808,
+    "translated_text": "远古"
+  },
+  {
+    "text_index": 195136262,
+    "translated_text": "已包含"
+  },
+  {
+    "text_index": 982248347,
+    "translated_text": "在内"
+  },
+  {
+    "text_index": 1451665437,
+    "translated_text": "内部"
+  },
+  {
+    "text_index": 927799972,
+    "translated_text": "未包含"
+  },
+  {
+    "text_index": 1356449153,
+    "translated_text": "在外"
+  },
+  {
+    "text_index": 869482249,
+    "translated_text": "外部"
+  },
+  {
+    "text_index": 830939795,
+    "translated_text": "直线"
+  },
+  {
+    "text_index": 2110976797,
+    "translated_text": "线段"
+  },
+  {
+    "text_index": 1697059753,
+    "translated_text": "线段"
+  },
+  {
+    "text_index": 2097797322,
+    "translated_text": "面"
+  },
+  {
+    "text_index": 1515977067,
+    "translated_text": "多边形"
+  },
+  {
+    "text_index": 1429855293,
+    "translated_text": "方向"
+  },
+  {
+    "text_index": 1130759418,
+    "translated_text": "大气"
+  },
+  {
+    "text_index": 1745405370,
+    "translated_text": "天空"
+  },
+  {
+    "text_index": 1526074806,
+    "translated_text": "空气"
+  },
+  {
+    "text_index": 181085891,
+    "translated_text": "水体"
+  },
+  {
+    "text_index": 264625524,
+    "translated_text": "大片水域"
+  },
+  {
+    "text_index": 635961530,
+    "translated_text": "水体"
+  },
+  {
+    "text_index": 1914850912,
+    "translated_text": "变化"
+  },
+  {
+    "text_index": 485571580,
+    "translated_text": "转化"
+  },
+  {
+    "text_index": 1988912556,
+    "translated_text": "改变"
+  },
+  {
+    "text_index": 809252768,
+    "translated_text": "附近"
+  },
+  {
+    "text_index": 558929227,
+    "translated_text": "相邻"
+  },
+  {
+    "text_index": 1079694475,
+    "translated_text": "接近"
+  },
+  {
+    "text_index": 495788530,
+    "translated_text": "向阳面"
+  },
+  {
+    "text_index": 866403327,
+    "translated_text": "行星一侧"
+  },
+  {
+    "text_index": 1389260265,
+    "translated_text": "背阳面"
+  },
+  {
+    "text_index": 1835864742,
+    "translated_text": "行星另一侧"
+  },
+  {
+    "text_index": 1843095308,
+    "translated_text": "演化"
+  },
+  {
+    "text_index": 1460339460,
+    "translated_text": "遗传"
+  },
+  {
+    "text_index": 1524180593,
+    "translated_text": "物种形成"
+  },
+  {
+    "text_index": 1875796183,
+    "translated_text": "动物"
+  },
+  {
+    "text_index": 2107903209,
+    "translated_text": "可移动生物"
+  },
+  {
+    "text_index": 1280862113,
+    "translated_text": "动物"
+  },
+  {
+    "text_index": 1280640154,
+    "translated_text": "非动物"
+  },
+  {
+    "text_index": 2121308035,
+    "translated_text": "不可移动生物"
+  },
+  {
+    "text_index": 294013171,
+    "translated_text": "植物"
+  },
+  {
+    "text_index": 1538505971,
+    "translated_text": "多边形"
+  },
+  {
+    "text_index": 515471250,
+    "translated_text": "形状"
+  },
+  {
+    "text_index": 1805639734,
+    "translated_text": "捕食者"
+  },
+  {
+    "text_index": 1833084457,
+    "translated_text": "摄食者"
+  },
+  {
+    "text_index": 1537607508,
+    "translated_text": "异养生物"
+  },
+  {
+    "text_index": 1441812254,
+    "translated_text": "猎物"
+  },
+  {
+    "text_index": 64983636,
+    "translated_text": "被食者"
+  },
+  {
+    "text_index": 185862913,
+    "translated_text": "自养生物"
+  },
+  {
+    "text_index": 946677432,
+    "translated_text": "鱼"
+  },
+  {
+    "text_index": 843516731,
+    "translated_text": "海洋生物"
+  },
+  {
+    "text_index": 2056179174,
+    "translated_text": "水生"
+  },
+  {
+    "text_index": 883058339,
+    "translated_text": "陆地家伙！"
+  },
+  {
+    "text_index": 2023982488,
+    "translated_text": "陆生生物"
+  },
+  {
+    "text_index": 939717913,
+    "translated_text": "陆生"
+  },
+  {
+    "text_index": 738064997,
+    "translated_text": "鱼草"
+  },
+  {
+    "text_index": 1610006610,
+    "translated_text": "固着水生生物"
+  },
+  {
+    "text_index": 1666102267,
+    "translated_text": "海藻？"
+  },
+  {
+    "text_index": 605849918,
+    "translated_text": "双向"
+  },
+  {
+    "text_index": 1712215471,
+    "translated_text": "可交换"
+  },
+  {
+    "text_index": 386942371,
+    "translated_text": "相互"
+  },
+  {
+    "text_index": 1331932226,
+    "translated_text": "正"
+  },
+  {
+    "text_index": 1035148150,
+    "translated_text": "正"
+  },
+  {
+    "text_index": 157268167,
+    "translated_text": "负"
+  },
+  {
+    "text_index": 606695367,
+    "translated_text": "负"
+  },
+  {
+    "text_index": 416134903,
+    "translated_text": "吸引"
+  },
+  {
+    "text_index": 566059643,
+    "translated_text": "吸引"
+  },
+  {
+    "text_index": 1071364867,
+    "translated_text": "吸引"
+  },
+  {
+    "text_index": 1449557003,
+    "translated_text": "推开"
+  },
+  {
+    "text_index": 1734719256,
+    "translated_text": "排斥"
+  },
+  {
+    "text_index": 1611001560,
+    "translated_text": "排斥"
+  },
+  {
+    "text_index": 698069414,
+    "translated_text": "容器"
+  },
+  {
+    "text_index": 1399810627,
+    "translated_text": "结构"
+  },
+  {
+    "text_index": 2098309666,
+    "translated_text": "几何图形"
+  },
+  {
+    "text_index": 76231964,
+    "translated_text": "电磁现象"
+  },
+  {
+    "text_index": 1418208783,
+    "translated_text": "电性"
+  },
+  {
+    "text_index": 2129170760,
+    "translated_text": "电"
+  },
+  {
+    "text_index": 2058973884,
+    "translated_text": "电眼"
+  },
+  {
+    "text_index": 2083615160,
+    "translated_text": "发电器官"
+  },
+  {
+    "text_index": 80888716,
+    "translated_text": "发电器官"
+  },
+  {
+    "text_index": 85907028,
+    "translated_text": "大脑"
+  },
+  {
+    "text_index": 1712652074,
+    "translated_text": "意识"
+  },
+  {
+    "text_index": 1454184701,
+    "translated_text": "大脑"
+  },
+  {
+    "text_index": 1576662764,
+    "translated_text": "有智慧"
+  },
+  {
+    "text_index": 497511769,
+    "translated_text": "聪明"
+  },
+  {
+    "text_index": 731182893,
+    "translated_text": "有智慧"
+  },
+  {
+    "text_index": 121316177,
+    "translated_text": "交流"
+  },
+  {
+    "text_index": 760939674,
+    "translated_text": "共享信息"
+  },
+  {
+    "text_index": 1120739452,
+    "translated_text": "语言"
+  },
+  {
+    "text_index": 386975219,
+    "translated_text": "说话"
+  },
+  {
+    "text_index": 1537255056,
+    "translated_text": "信息交换"
+  },
+  {
+    "text_index": 779590587,
+    "translated_text": "交流"
+  },
+  {
+    "text_index": 213146318,
+    "translated_text": "好奇心"
+  },
+  {
+    "text_index": 782190956,
+    "translated_text": "科学"
+  },
+  {
+    "text_index": 113313240,
+    "translated_text": "求知"
+  },
+  {
+    "text_index": 777296766,
+    "translated_text": "一起做"
+  },
+  {
+    "text_index": 883345822,
+    "translated_text": "协作"
+  },
+  {
+    "text_index": 1087691514,
+    "translated_text": "合作"
+  },
+  {
+    "text_index": 191034920,
+    "translated_text": "整个物种"
+  },
+  {
+    "text_index": 1341875462,
+    "translated_text": "主权"
+  },
+  {
+    "text_index": 334479253,
+    "translated_text": "文明"
+  },
+  {
+    "text_index": 1895953031,
+    "translated_text": "简单知识"
+  },
+  {
+    "text_index": 1063301249,
+    "translated_text": "事实"
+  },
+  {
+    "text_index": 767506828,
+    "translated_text": "事实"
+  },
+  {
+    "text_index": 1695430163,
+    "translated_text": "长度"
+  },
+  {
+    "text_index": 1430553888,
+    "translated_text": "大小"
+  },
+  {
+    "text_index": 998456943,
+    "translated_text": "距离"
+  },
+  {
+    "text_index": 1289701415,
+    "translated_text": "加一"
+  },
+  {
+    "text_index": 988172108,
+    "translated_text": "序列"
+  },
+  {
+    "text_index": 1914041583,
+    "translated_text": "间隔"
+  },
+  {
+    "text_index": 1626429609,
+    "translated_text": "难懂的知识"
+  },
+  {
+    "text_index": 1846575698,
+    "translated_text": "观点"
+  },
+  {
+    "text_index": 1310007811,
+    "translated_text": "信念"
+  },
+  {
+    "text_index": 1525253139,
+    "translated_text": "思考"
+  },
+  {
+    "text_index": 137384890,
+    "translated_text": "认为"
+  },
+  {
+    "text_index": 211217316,
+    "translated_text": "相信"
+  },
+  {
+    "text_index": 1422177986,
+    "translated_text": "集体思想"
+  },
+  {
+    "text_index": 1143426128,
+    "translated_text": "哲学"
+  },
+  {
+    "text_index": 1048560513,
+    "translated_text": "文明信仰"
+  },
+  {
+    "text_index": 1004588201,
+    "translated_text": "信条"
+  },
+  {
+    "text_index": 1159843456,
+    "translated_text": "教义"
+  },
+  {
+    "text_index": 460718616,
+    "translated_text": "美德"
+  },
+  {
+    "text_index": 235792297,
+    "translated_text": "努力活下去"
+  },
+  {
+    "text_index": 1195233985,
+    "translated_text": "珍爱生命"
+  },
+  {
+    "text_index": 893012138,
+    "translated_text": "生命珍贵"
+  },
+  {
+    "text_index": 1593877364,
+    "translated_text": "努力繁殖"
+  },
+  {
+    "text_index": 1219461595,
+    "translated_text": "重视物种延续"
+  },
+  {
+    "text_index": 1092506716,
+    "translated_text": "繁育后代"
+  },
+  {
+    "text_index": 1888803700,
+    "translated_text": "努力行动"
+  },
+  {
+    "text_index": 1561339790,
+    "translated_text": "重视创造"
+  },
+  {
+    "text_index": 547497821,
+    "translated_text": "践行意志"
+  },
+  {
+    "text_index": 880903825,
+    "translated_text": "努力学习"
+  },
+  {
+    "text_index": 270926009,
+    "translated_text": "重视学习"
+  },
+  {
+    "text_index": 1498528635,
+    "translated_text": "科学研究"
+  },
+  {
+    "text_index": 1077316262,
+    "translated_text": "努力分享"
+  },
+  {
+    "text_index": 1649215037,
+    "translated_text": "重视传授"
+  },
+  {
+    "text_index": 1576834586,
+    "translated_text": "分享知识"
+  },
+  {
+    "text_index": 572830151,
+    "translated_text": "信仰体系"
+  },
+  {
+    "text_index": 1787417025,
+    "translated_text": "观点"
+  },
+  {
+    "text_index": 1308155684,
+    "translated_text": "意识形态"
+  },
+  {
+    "text_index": 545522868,
+    "translated_text": "周长"
+  },
+  {
+    "text_index": 575512486,
+    "translated_text": "周长"
+  },
+  {
+    "text_index": 337951216,
+    "translated_text": "边界长度"
+  },
+  {
+    "text_index": 1470387590,
+    "translated_text": "受重视"
+  },
+  {
+    "text_index": 1342345675,
+    "translated_text": "令人愉悦"
+  },
+  {
+    "text_index": 295843857,
+    "translated_text": "喜欢过"
+  },
+  {
+    "text_index": 1281066771,
+    "translated_text": "相处"
+  },
+  {
+    "text_index": 840710504,
+    "translated_text": "结识"
+  },
+  {
+    "text_index": 423102319,
+    "translated_text": "社交"
+  },
+  {
+    "text_index": 1395642806,
+    "translated_text": "伙伴"
+  },
+  {
+    "text_index": 850302609,
+    "translated_text": "朋友"
+  },
+  {
+    "text_index": 808523286,
+    "translated_text": "朋友"
+  },
+  {
+    "text_index": 1992365452,
+    "translated_text": "能力"
+  },
+  {
+    "text_index": 2024915076,
+    "translated_text": "技能"
+  },
+  {
+    "text_index": 1443407550,
+    "translated_text": "本领"
+  },
+  {
+    "text_index": 2020688689,
+    "translated_text": "电流对话"
+  },
+  {
+    "text_index": 496601690,
+    "translated_text": "电通信"
+  },
+  {
+    "text_index": 1798071279,
+    "translated_text": "电信号交流"
+  },
+  {
+    "text_index": 1777425849,
+    "translated_text": "肢体动作"
+  },
+  {
+    "text_index": 1123296759,
+    "translated_text": "视觉交流"
+  },
+  {
+    "text_index": 1519873485,
+    "translated_text": "肢体语言"
+  },
+  {
+    "text_index": 611952329,
+    "translated_text": "陆地爬行"
+  },
+  {
+    "text_index": 714902254,
+    "translated_text": "行走"
+  },
+  {
+    "text_index": 1181447339,
+    "translated_text": "奔跑"
+  },
+  {
+    "text_index": 893884772,
+    "translated_text": "水中爬行"
+  },
+  {
+    "text_index": 78910451,
+    "translated_text": "游泳"
+  },
+  {
+    "text_index": 108948500,
+    "translated_text": "游泳"
+  },
+  {
+    "text_index": 406847534,
+    "translated_text": "面积"
+  },
+  {
+    "text_index": 699559468,
+    "translated_text": "面积"
+  },
+  {
+    "text_index": 986155762,
+    "translated_text": "大小"
+  },
+  {
+    "text_index": 817635001,
+    "translated_text": "空中爬行？？"
+  },
+  {
+    "text_index": 1989399188,
+    "translated_text": "飞行"
+  },
+  {
+    "text_index": 1554955782,
+    "translated_text": "飞行"
+  },
+  {
+    "text_index": 583247543,
+    "translated_text": "运动能力"
+  },
+  {
+    "text_index": 993755119,
+    "translated_text": "身体控制力"
+  },
+  {
+    "text_index": 1580774622,
+    "translated_text": "灵巧性"
+  },
+  {
+    "text_index": 1361458054,
+    "translated_text": "独特"
+  },
+  {
+    "text_index": 787888994,
+    "translated_text": "不同"
+  },
+  {
+    "text_index": 840822156,
+    "translated_text": "多样"
+  },
+  {
+    "text_index": 68728349,
+    "translated_text": "天赋"
+  },
+  {
+    "text_index": 502006608,
+    "translated_text": "热爱"
+  },
+  {
+    "text_index": 100303354,
+    "translated_text": "招牌本领"
+  },
+  {
+    "text_index": 511754359,
+    "translated_text": "发掘技能"
+  },
+  {
+    "text_index": 1354346307,
+    "translated_text": "评判"
+  },
+  {
+    "text_index": 2086336996,
+    "translated_text": "竞争"
+  },
+  {
+    "text_index": 610811422,
+    "translated_text": "美"
+  },
+  {
+    "text_index": 472279929,
+    "translated_text": "偏好"
+  },
+  {
+    "text_index": 1751767341,
+    "translated_text": "表达"
+  },
+  {
+    "text_index": 515167167,
+    "translated_text": "发展专长"
+  },
+  {
+    "text_index": 563147295,
+    "translated_text": "分工？"
+  },
+  {
+    "text_index": 569515672,
+    "translated_text": "适应"
+  },
+  {
+    "text_index": 1670094337,
+    "translated_text": "训练"
+  },
+  {
+    "text_index": 1192071419,
+    "translated_text": "训练"
+  },
+  {
+    "text_index": 2024050669,
+    "translated_text": "适应能力"
+  },
+  {
+    "text_index": 2089234415,
+    "translated_text": "旋转对称"
+  },
+  {
+    "text_index": 1322538960,
+    "translated_text": "厌恶"
+  },
+  {
+    "text_index": 2123210888,
+    "translated_text": "痛苦"
+  },
+  {
+    "text_index": 1362187645,
+    "translated_text": "受苦"
+  },
+  {
+    "text_index": 508299301,
+    "translated_text": "数量"
+  },
+  {
+    "text_index": 112266039,
+    "translated_text": "总量"
+  },
+  {
+    "text_index": 2090359851,
+    "translated_text": "大难临头"
+  },
+  {
+    "text_index": 63494336,
+    "translated_text": "肢体死亡"
+  },
+  {
+    "text_index": 1088684107,
+    "translated_text": "肢体死亡"
+  },
+  {
+    "text_index": 433221376,
+    "translated_text": "早亡"
+  },
+  {
+    "text_index": 2106897696,
+    "translated_text": "身体死亡"
+  },
+  {
+    "text_index": 446667052,
+    "translated_text": "核心死亡"
+  },
+  {
+    "text_index": 1567804533,
+    "translated_text": "拒绝"
+  },
+  {
+    "text_index": 1600683886,
+    "translated_text": "忽视"
+  },
+  {
+    "text_index": 2096389039,
+    "translated_text": "憎恨"
+  },
+  {
+    "text_index": 959855205,
+    "translated_text": "灵魂"
+  },
+  {
+    "text_index": 1359745618,
+    "translated_text": "有意识"
+  },
+  {
+    "text_index": 1261367046,
+    "translated_text": "感受"
+  },
+  {
+    "text_index": 1076670806,
+    "translated_text": "影响"
+  },
+  {
+    "text_index": 1004028341,
+    "translated_text": "巅峰"
+  },
+  {
+    "text_index": 385331489,
+    "translated_text": "天赋"
+  },
+  {
+    "text_index": 1705778969,
+    "translated_text": "限制"
+  },
+  {
+    "text_index": 1521714295,
+    "translated_text": "不足"
+  },
+  {
+    "text_index": 558089942,
+    "translated_text": "障碍"
+  },
+  {
+    "text_index": 1105748221,
+    "translated_text": "东西？？"
+  },
+  {
+    "text_index": 849334013,
+    "translated_text": "信息"
+  },
+  {
+    "text_index": 1320410701,
+    "translated_text": "文字"
+  },
+  {
+    "text_index": 130916168,
+    "translated_text": "技术化"
+  },
+  {
+    "text_index": 492221983,
+    "translated_text": "理解"
+  },
+  {
+    "text_index": 997703494,
+    "translated_text": "掌握"
+  },
+  {
+    "text_index": 471856117,
+    "translated_text": "时空"
+  },
+  {
+    "text_index": 1188839194,
+    "translated_text": "维度"
+  },
+  {
+    "text_index": 273660824,
+    "translated_text": "位置"
+  },
+  {
+    "text_index": 2036979469,
+    "translated_text": "能量"
+  },
+  {
+    "text_index": 1904747201,
+    "translated_text": "能量"
+  },
+  {
+    "text_index": 612521686,
+    "translated_text": "宇宙势能"
+  },
+  {
+    "text_index": 831537218,
+    "translated_text": "差不多"
+  },
+  {
+    "text_index": 992569556,
+    "translated_text": "舍入"
+  },
+  {
+    "text_index": 1012008821,
+    "translated_text": "近似"
+  },
+  {
+    "text_index": 1578174544,
+    "translated_text": "机器人"
+  },
+  {
+    "text_index": 2117072730,
+    "translated_text": "计算机 :-)"
+  },
+  {
+    "text_index": 2082882380,
+    "translated_text": "思考机器"
+  },
+  {
+    "text_index": 78125752,
+    "translated_text": "核聚变装置"
+  },
+  {
+    "text_index": 1107255447,
+    "translated_text": "聚变器"
+  },
+  {
+    "text_index": 838959456,
+    "translated_text": "原子机器"
+  },
+  {
+    "text_index": 906936725,
+    "translated_text": "下次再见"
+  },
+  {
+    "text_index": 795123516,
+    "translated_text": "你好"
+  },
+  {
+    "text_index": 1001924407,
+    "translated_text": "谢谢"
+  },
+  {
+    "text_index": 365973291,
+    "translated_text": "继续"
+  },
+  {
+    "text_index": 334886416,
+    "translated_text": "延续"
+  },
+  {
+    "text_index": 1515960426,
+    "translated_text": "真假"
+  },
+  {
+    "text_index": 1727364744,
+    "translated_text": "命题"
+  },
+  {
+    "text_index": 256131402,
+    "translated_text": "真"
+  },
+  {
+    "text_index": 281339897,
+    "translated_text": "是"
+  },
+  {
+    "text_index": 2100540689,
+    "translated_text": "假"
+  },
+  {
+    "text_index": 471053487,
+    "translated_text": "否"
+  },
+  {
+    "text_index": 1470501810,
+    "translated_text": "反向"
+  },
+  {
+    "text_index": 1600340043,
+    "translated_text": "取反"
+  },
+  {
+    "text_index": 1775353495,
+    "translated_text": "两者都为真"
+  },
+  {
+    "text_index": 1476412088,
+    "translated_text": "且"
+  },
+  {
+    "text_index": 164275779,
+    "translated_text": "相加"
+  },
+  {
+    "text_index": 645175997,
+    "translated_text": "关联"
+  },
+  {
+    "text_index": 69106040,
+    "translated_text": "至少一个为真"
+  },
+  {
+    "text_index": 2026642453,
+    "translated_text": "或"
+  },
+  {
+    "text_index": 2036671637,
+    "translated_text": "或"
+  },
+  {
+    "text_index": 508773793,
+    "translated_text": "不等于"
+  },
+  {
+    "text_index": 1722319465,
+    "translated_text": "大于"
+  },
+  {
+    "text_index": 2055584958,
+    "translated_text": "又是不等于吧"
+  },
+  {
+    "text_index": 1820921550,
+    "translated_text": "小于"
+  },
+  {
+    "text_index": 534177072,
+    "translated_text": "更大"
+  },
+  {
+    "text_index": 1809952232,
+    "translated_text": "面积>"
+  },
+  {
+    "text_index": 1682653702,
+    "translated_text": "大于"
+  },
+  {
+    "text_index": 45526778,
+    "translated_text": "更小"
+  },
+  {
+    "text_index": 947439174,
+    "translated_text": "面积<"
+  },
+  {
+    "text_index": 1855269394,
+    "translated_text": "小于"
+  },
+  {
+    "text_index": 293379271,
+    "translated_text": "所以"
+  },
+  {
+    "text_index": 676839560,
+    "translated_text": "因此"
+  },
+  {
+    "text_index": 2089916702,
+    "translated_text": "如果为真"
+  },
+  {
+    "text_index": 1547358610,
+    "translated_text": "如果"
+  },
+  {
+    "text_index": 785119752,
+    "translated_text": "如果"
+  },
+  {
+    "text_index": 961262460,
+    "translated_text": "在...内"
+  },
+  {
+    "text_index": 655758045,
+    "translated_text": "构造"
+  },
+  {
+    "text_index": 78265129,
+    "translated_text": "生成"
+  },
+  {
+    "text_index": 654937997,
+    "translated_text": "偏移"
+  },
+  {
+    "text_index": 1522756474,
+    "translated_text": "平移"
+  },
+  {
+    "text_index": 713328561,
+    "translated_text": "移动"
+  },
+  {
+    "text_index": 1011316299,
+    "translated_text": "起点"
+  },
+  {
+    "text_index": 445358358,
+    "translated_text": "源"
+  },
+  {
+    "text_index": 1669177015,
+    "translated_text": "从上一项"
+  },
+  {
+    "text_index": 148303755,
+    "translated_text": "计算"
+  },
+  {
+    "text_index": 1171815960,
+    "translated_text": "结果为"
+  },
+  {
+    "text_index": 1317386370,
+    "translated_text": "终点"
+  },
+  {
+    "text_index": 1247722866,
+    "translated_text": "目标"
+  },
+  {
+    "text_index": 332136111,
+    "translated_text": "到上一项"
+  },
+  {
+    "text_index": 1582494525,
+    "translated_text": "频率"
+  },
+  {
+    "text_index": 1777699430,
+    "translated_text": "频率"
+  },
+  {
+    "text_index": 977796250,
+    "translated_text": "词"
+  },
+  {
+    "text_index": 1796022752,
+    "translated_text": "传输"
+  },
+  {
+    "text_index": 1389805097,
+    "translated_text": "信息包"
+  },
+  {
+    "text_index": 280983358,
+    "translated_text": "传输"
+  },
+  {
+    "text_index": 341799158,
+    "translated_text": "陨石"
+  },
+  {
+    "text_index": 4326397,
+    "translated_text": "发射器"
+  },
+  {
+    "text_index": 2093196046,
+    "translated_text": "信标"
+  },
+  {
+    "text_index": 1094569834,
+    "translated_text": "陨石来源"
+  },
+  {
+    "text_index": 1011657552,
+    "translated_text": "通信端 A"
+  },
+  {
+    "text_index": 511531754,
+    "translated_text": "陨石接收方"
+  },
+  {
+    "text_index": 165774295,
+    "translated_text": "通信端 B"
+  },
+  {
+    "text_index": 1585613575,
+    "translated_text": "圆"
+  },
+  {
+    "text_index": 1724075018,
+    "translated_text": "圆"
+  },
+  {
+    "text_index": 695429810,
+    "translated_text": "圆"
+  },
+  {
+    "text_index": 266469372,
+    "translated_text": "圆"
+  },
+  {
+    "text_index": 756605971,
+    "translated_text": "球体"
+  },
+  {
+    "text_index": 1415449478,
+    "translated_text": "球"
+  },
+  {
+    "text_index": 75899359,
+    "translated_text": "X 坐标"
+  },
+  {
+    "text_index": 55874142,
+    "translated_text": "水平"
+  },
+  {
+    "text_index": 1235672933,
+    "translated_text": "宽度"
+  },
+  {
+    "text_index": 1291002006,
+    "translated_text": "Y 坐标"
+  },
+  {
+    "text_index": 176595109,
+    "translated_text": "深度"
+  },
+  {
+    "text_index": 1579713004,
+    "translated_text": "深度"
+  },
+  {
+    "text_index": 778862645,
+    "translated_text": "加上前一项"
+  },
+  {
+    "text_index": 1989261042,
+    "translated_text": "和"
+  },
+  {
+    "text_index": 594939307,
+    "translated_text": "Z 坐标"
+  },
+  {
+    "text_index": 1691088406,
+    "translated_text": "垂直"
+  },
+  {
+    "text_index": 347950318,
+    "translated_text": "高度"
+  },
+  {
+    "text_index": 1919294073,
+    "translated_text": "球体"
+  },
+  {
+    "text_index": 951952010,
+    "translated_text": "可视对象"
+  },
+  {
+    "text_index": 782611033,
+    "translated_text": "绘制的球体"
+  },
+  {
+    "text_index": 1342861504,
+    "translated_text": "图像"
+  },
+  {
+    "text_index": 910218574,
+    "translated_text": "图像帧"
+  },
+  {
+    "text_index": 8719481,
+    "translated_text": "三维图"
+  },
+  {
+    "text_index": 285378806,
+    "translated_text": "颜色"
+  },
+  {
+    "text_index": 1185702446,
+    "translated_text": "色相"
+  },
+  {
+    "text_index": 1727149873,
+    "translated_text": "可见光"
+  },
+  {
+    "text_index": 264966647,
+    "translated_text": "元素"
+  },
+  {
+    "text_index": 994730730,
+    "translated_text": "原子"
+  },
+  {
+    "text_index": 274625927,
+    "translated_text": "个体"
+  },
+  {
+    "text_index": 1084836852,
+    "translated_text": "化合物"
+  },
+  {
+    "text_index": 363001082,
+    "translated_text": "分子"
+  },
+  {
+    "text_index": 190292539,
+    "translated_text": "化学物质"
+  },
+  {
+    "text_index": 172708117,
+    "translated_text": "化学反应"
+  },
+  {
+    "text_index": 1456999680,
+    "translated_text": "反应生成"
+  },
+  {
+    "text_index": 841267871,
+    "translated_text": "又是化学反应"
+  },
+  {
+    "text_index": 1870011839,
+    "translated_text": "转化"
+  },
+  {
+    "text_index": 1685551320,
+    "translated_text": "质子"
+  },
+  {
+    "text_index": 71201662,
+    "translated_text": "乘以前一项"
+  },
+  {
+    "text_index": 184298934,
+    "translated_text": "积"
+  },
+  {
+    "text_index": 1513726650,
+    "translated_text": "中子"
+  },
+  {
+    "text_index": 537783951,
+    "translated_text": "电子"
+  },
+  {
+    "text_index": 245810198,
+    "translated_text": "核素"
+  },
+  {
+    "text_index": 1493191971,
+    "translated_text": "同位素"
+  },
+  {
+    "text_index": 1489331146,
+    "translated_text": "原子变体"
+  },
+  {
+    "text_index": 1786369646,
+    "translated_text": "放射性衰变"
+  },
+  {
+    "text_index": 147650,
+    "translated_text": "减半"
+  },
+  {
+    "text_index": 894715710,
+    "translated_text": "原子分解"
+  },
+  {
+    "text_index": 357611684,
+    "translated_text": "衰变因子？"
+  },
+  {
+    "text_index": 1302417073,
+    "translated_text": "λ"
+  },
+  {
+    "text_index": 1351100109,
+    "translated_text": "变化参数"
+  },
+  {
+    "text_index": 752254690,
+    "translated_text": "速度"
+  },
+  {
+    "text_index": 446755477,
+    "translated_text": "速率"
+  },
+  {
+    "text_index": 1658119935,
+    "translated_text": "速率"
+  },
+  {
+    "text_index": 179355462,
+    "translated_text": "光速"
+  },
+  {
+    "text_index": 71273921,
+    "translated_text": "计量单位"
+  },
+  {
+    "text_index": 1487333159,
+    "translated_text": "测量"
+  },
+  {
+    "text_index": 1897694336,
+    "translated_text": "基准"
+  },
+  {
+    "text_index": 1417725772,
+    "translated_text": "埃克斯秒"
+  },
+  {
+    "text_index": 630065925,
+    "translated_text": "外星秒"
+  },
+  {
+    "text_index": 1914029225,
+    "translated_text": "小时间单位"
+  },
+  {
+    "text_index": 1847191741,
+    "translated_text": "埃克斯年"
+  },
+  {
+    "text_index": 1685366735,
+    "translated_text": "外星年"
+  },
+  {
+    "text_index": 2089970962,
+    "translated_text": "33 天的一年"
+  },
+  {
+    "text_index": 443696176,
+    "translated_text": "减去前一项"
+  },
+  {
+    "text_index": 697179866,
+    "translated_text": "差"
+  },
+  {
+    "text_index": 613077557,
+    "translated_text": "埃克斯月"
+  },
+  {
+    "text_index": 1421436038,
+    "translated_text": "外星月"
+  },
+  {
+    "text_index": 1187966430,
+    "translated_text": "9 天的月周期"
+  },
+  {
+    "text_index": 1229269957,
+    "translated_text": "光埃克斯秒"
+  },
+  {
+    "text_index": 1887292803,
+    "translated_text": "外星米"
+  },
+  {
+    "text_index": 2127083665,
+    "translated_text": "大距离单位"
+  },
+  {
+    "text_index": 890868730,
+    "translated_text": "微型光埃克斯秒"
+  },
+  {
+    "text_index": 1117347041,
+    "translated_text": "外星纳米"
+  },
+  {
+    "text_index": 1911814738,
+    "translated_text": "小距离单位"
+  },
+  {
+    "text_index": 1055048040,
+    "translated_text": "质量"
+  },
+  {
+    "text_index": 348944097,
+    "translated_text": "物质"
+  },
+  {
+    "text_index": 1620273268,
+    "translated_text": "埃克斯磅"
+  },
+  {
+    "text_index": 1737676332,
+    "translated_text": "外星克"
+  },
+  {
+    "text_index": 904256330,
+    "translated_text": "小质量单位"
+  },
+  {
+    "text_index": 1119246369,
+    "translated_text": "兆埃克斯磅"
+  },
+  {
+    "text_index": 1165344431,
+    "translated_text": "外星容克"
+  },
+  {
+    "text_index": 2016324325,
+    "translated_text": "大质量单位"
+  },
+  {
+    "text_index": 2050409513,
+    "translated_text": "或者（不是数学那个）"
+  },
+  {
+    "text_index": 1672576439,
+    "translated_text": "或"
+  },
+  {
+    "text_index": 964851142,
+    "translated_text": "二选一"
+  },
+  {
+    "text_index": 1829259322,
+    "translated_text": "类型"
+  },
+  {
+    "text_index": 1839855911,
+    "translated_text": "词性"
+  },
+  {
+    "text_index": 1228243641,
+    "translated_text": "那个东西"
+  },
+  {
+    "text_index": 102121309,
+    "translated_text": "名词"
+  },
+  {
+    "text_index": 4217540,
+    "translated_text": "做事"
+  },
+  {
+    "text_index": 1108465890,
+    "translated_text": "动词"
+  },
+  {
+    "text_index": 998517161,
+    "translated_text": "除以前一项"
+  },
+  {
+    "text_index": 1084483879,
+    "translated_text": "商"
+  },
+  {
+    "text_index": 1337506012,
+    "translated_text": "形容词"
+  },
+  {
+    "text_index": 218235820,
+    "translated_text": "介词/连词"
+  },
+  {
+    "text_index": 16599022,
+    "translated_text": "施事者"
+  },
+  {
+    "text_index": 1522031202,
+    "translated_text": "施事者"
+  },
+  {
+    "text_index": 820287803,
+    "translated_text": "主语"
+  },
+  {
+    "text_index": 677068447,
+    "translated_text": "受事者"
+  },
+  {
+    "text_index": 1767715003,
+    "translated_text": "受事者"
+  },
+  {
+    "text_index": 1066641160,
+    "translated_text": "宾语"
+  },
+  {
+    "text_index": 1395432590,
+    "translated_text": "做动作"
+  },
+  {
+    "text_index": 298660214,
+    "translated_text": "去"
+  },
+  {
+    "text_index": 259270745,
+    "translated_text": "做"
+  },
+  {
+    "text_index": 1614706008,
+    "translated_text": "目标"
+  },
+  {
+    "text_index": 2099028391,
+    "translated_text": "目标"
+  },
+  {
+    "text_index": 1025130922,
+    "translated_text": "朝向"
+  },
+  {
+    "text_index": 1949745137,
+    "translated_text": "反向"
+  },
+  {
+    "text_index": 1478573112,
+    "translated_text": "相反"
+  },
+  {
+    "text_index": 1916384497,
+    "translated_text": "相反"
+  },
+  {
+    "text_index": 661793060,
+    "translated_text": "摧毁！！"
+  },
+  {
+    "text_index": 1430873238,
+    "translated_text": "破坏"
+  },
+  {
+    "text_index": 659025888,
+    "translated_text": "拆解"
+  },
+  {
+    "text_index": 875091939,
+    "translated_text": "核聚变"
+  },
+  {
+    "text_index": 228514900,
+    "translated_text": "元素融合"
+  },
+  {
+    "text_index": 846864633,
+    "translated_text": "制造原子"
+  },
+  {
+    "text_index": 627674991,
+    "translated_text": "恒星"
+  },
+  {
+    "text_index": 1649016002,
+    "translated_text": "原子制造者"
+  },
+  {
+    "text_index": 576323737,
+    "translated_text": "指数"
+  },
+  {
+    "text_index": 752054864,
+    "translated_text": "幂"
+  },
+  {
+    "text_index": 1343535958,
+    "translated_text": "运动"
+  },
+  {
+    "text_index": 793875083,
+    "translated_text": "平移"
+  },
+  {
+    "text_index": 1387821124,
+    "translated_text": "运动"
+  },
+  {
+    "text_index": 1429791109,
+    "translated_text": "公转"
+  },
+  {
+    "text_index": 806772342,
+    "translated_text": "自转"
+  },
+  {
+    "text_index": 1390359376,
+    "translated_text": "旋转"
+  },
+  {
+    "text_index": 1244807225,
+    "translated_text": "行星"
+  },
+  {
+    "text_index": 1341656133,
+    "translated_text": "绕恒星天体"
+  },
+  {
+    "text_index": 1533509866,
+    "translated_text": "卫星"
+  },
+  {
+    "text_index": 1757793273,
+    "translated_text": "卫星"
+  },
+  {
+    "text_index": 1626570285,
+    "translated_text": "白矮星"
+  },
+  {
+    "text_index": 52806722,
+    "translated_text": "中子星"
+  },
+  {
+    "text_index": 111875793,
+    "translated_text": "[我相信埃克斯]"
+  },
+  {
+    "text_index": 850616667,
+    "translated_text": "黑洞"
+  },
+  {
+    "text_index": 136398302,
+    "translated_text": "星系"
+  },
+  {
+    "text_index": 503040471,
+    "translated_text": "星团"
+  },
+  {
+    "text_index": 78442416,
+    "translated_text": "星系"
+  },
+  {
+    "text_index": 1786194084,
+    "translated_text": "成员"
+  },
+  {
+    "text_index": 89110576,
+    "translated_text": "下义词"
+  },
+  {
+    "text_index": 1743278846,
+    "translated_text": "又是等于？"
+  },
+  {
+    "text_index": 1221329827,
+    "translated_text": "关联"
+  },
+  {
+    "text_index": 1966777309,
+    "translated_text": "是"
+  },
+  {
+    "text_index": 882861149,
+    "translated_text": "十进制/八进制"
+  },
+  {
+    "text_index": 1025884194,
+    "translated_text": "分数"
+  }
+]

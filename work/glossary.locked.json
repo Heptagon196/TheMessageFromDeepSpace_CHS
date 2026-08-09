@@ -1,0 +1,330 @@
+{
+  "format_version": 2,
+  "target_language": "zh-CN",
+  "status": "locked",
+  "characters": [
+    {"canonical": "Alan Akers", "render": "艾伦·埃克斯", "aliases": ["Alan", "Akers", "Dr. Alan Akers", "Dr. Akers"], "gender": "male", "note": "团队成员；日常口吻随意，常用缩略语和玩笑。Akers 按 /ˈeɪkərz/ 音译。"},
+    {"canonical": "Carrie Collins", "render": "凯莉·柯林斯", "aliases": ["Carrie", "Collins", "Dr. Carrie Collins", "Dr. Collins"], "gender": "female", "note": "语言学家；热情、求知欲强，专业内容准确但对白自然。"},
+    {"canonical": "Bryan Bautista", "render": "布莱恩·巴蒂斯塔", "aliases": ["Bryan", "Bautista", "Dr. Bryan Bautista", "Dr. Bautista"], "gender": "male", "note": "程序员兼图形工程师；说话简短、克制、带冷面幽默。"},
+    {"canonical": "Douglass Doppler", "render": "道格拉斯·多普勒", "aliases": ["Douglass", "Doppler", "Dr. Douglass Doppler", "Dr. Doppler"], "gender": "male", "note": "材料科学部门负责人及团队领导者；温和、稳重。注意原文拼作 Douglass（双 s）。"},
+    {"canonical": "Dopp", "render": "多普", "aliases": [], "gender": "unknown", "note": "Doppler 的昵称。"},
+    {"canonical": "Doug", "render": "道格", "aliases": [], "gender": "male", "note": "Douglass Doppler 只允许朋友使用的昵称；与 Dopp“多普”区分。"},
+    {"canonical": "Nozomi", "render": "诺佐米", "aliases": [], "gender": "female", "note": "Carrie 的日本童年好友；原文无汉字写法，采用纯音译。"},
+    {"canonical": "Na’zomi", "render": "纳佐米", "aliases": ["Na'zomi"], "gender": "female", "note": "Akers 对 Nozomi 的错误读法，必须与“诺佐米”区分以保留笑点。"},
+    {"canonical": "John", "render": "约翰", "aliases": [], "gender": "male", "note": "同名者至少有两位：Carrie 的丈夫，以及 Bryan Bautista 的哥哥；不可凭名字把二者合并。"},
+    {"canonical": "Chloe", "render": "克洛伊", "aliases": [], "gender": "female", "note": "Carrie 的孩子。"},
+    {"canonical": "Carter", "render": "卡特", "aliases": [], "gender": "unknown", "note": "Carrie 的孩子。"},
+    {"canonical": "Layla Doppler", "render": "莱拉·多普勒", "aliases": ["Layla"], "gender": "female", "note": "Doppler 家庭相关人物。"},
+    {"canonical": "Bradley Doppler", "render": "布拉德利·多普勒", "aliases": ["Bradley"], "gender": "male", "note": "Doppler 家庭相关人物。"},
+    {"canonical": "Flot Doppler", "render": "弗洛特·多普勒", "aliases": ["Flot"], "gender": "unknown", "note": "Doppler 家庭相关人物。"},
+    {"canonical": "Neil Armstrong", "render": "尼尔·阿姆斯特朗", "aliases": ["Armstrong"], "gender": "male", "note": "历史人物。"},
+    {"canonical": "Buzz Aldrin", "render": "巴兹·奥尔德林", "aliases": ["Aldrin"], "gender": "male", "note": "历史人物。"},
+    {"canonical": "Michael Collins", "render": "迈克尔·柯林斯", "aliases": [], "gender": "male", "note": "阿波罗计划语境中的历史人物；不要与 Carrie Collins 混淆。"},
+    {"canonical": "Wilt Chamberlain", "render": "威尔特·张伯伦", "aliases": ["Chamberlain"], "gender": "male", "note": "历史人物。"},
+    {"canonical": "Bill Russell", "render": "比尔·拉塞尔", "aliases": ["Russell"], "gender": "male", "note": "篮球运动员；与 Wilt Chamberlain 的对比语境。"},
+    {"canonical": "Isaac Newton", "render": "艾萨克·牛顿", "aliases": ["Sir Isaac Newton", "Newton"], "gender": "male", "note": "历史人物；Sir Isaac Newton 在句中可译为“艾萨克·牛顿爵士”。"},
+    {"canonical": "Richard Nixon", "render": "理查德·尼克松", "aliases": ["Nixon"], "gender": "male", "note": "美国总统；Nixon administration 译为“尼克松政府”。"},
+    {"canonical": "John F. Kennedy", "render": "约翰·F·肯尼迪", "aliases": ["President Kennedy", "Kennedy"], "gender": "male", "note": "美国总统；President Kennedy 在句中译为“肯尼迪总统”。"},
+    {"canonical": "Ludwig van Beethoven", "render": "路德维希·范·贝多芬", "aliases": ["Beethoven"], "gender": "male", "note": "作曲家；仅称姓氏时译为“贝多芬”。"},
+    {"canonical": "James Bond", "render": "詹姆斯·邦德", "aliases": ["Bond", "Agent 007"], "gender": "male", "note": "电影角色；Agent 007 译为“007 号特工”。遇到 Chemical Bond 双关时，化学概念 bond 仍译“键”，角色姓氏译“邦德”。"},
+    {"canonical": "George Miller", "render": "乔治·米勒", "aliases": [], "gender": "male", "note": "心理学家；认知容量与神奇数字语境。"},
+    {"canonical": "Stanley Kubrick", "render": "斯坦利·库布里克", "aliases": ["Kubrick"], "gender": "male", "note": "电影导演；仅称姓氏时译为“库布里克”。"},
+    {"canonical": "Ringo Starr", "render": "林戈·斯塔尔", "aliases": ["Ringo"], "gender": "male", "note": "披头士成员；仅称名时译为“林戈”。"},
+    {"canonical": "Beth", "render": "贝丝", "aliases": ["Granny Beth"], "gender": "female", "note": "Akers 的祖母；Granny Beth 译为“贝丝奶奶”。"},
+    {"canonical": "Albert Einstein", "render": "阿尔伯特·爱因斯坦", "aliases": ["Einstein"], "gender": "male", "note": "物理学家；仅称姓氏时译为“爱因斯坦”。"},
+    {"canonical": "Carl Sagan", "render": "卡尔·萨根", "aliases": ["Sagan"], "gender": "male", "note": "原文只称姓氏；天文学家。"},
+    {"canonical": "Stephen Hawking", "render": "斯蒂芬·霍金", "aliases": ["Hawking"], "gender": "male", "note": "原文只称姓氏；物理学家。"},
+    {"canonical": "Jacob Bekenstein", "render": "雅各布·贝肯斯坦", "aliases": ["Bekenstein"], "gender": "male", "note": "物理学家；与 Hawking-Bekenstein radiation 术语保持一致。"},
+    {"canonical": "Kip Thorne", "render": "基普·索恩", "aliases": ["Thorne"], "gender": "male", "note": "原文只称姓氏；物理学家。"},
+    {"canonical": "Frank Drake", "render": "弗兰克·德雷克", "aliases": ["Drake"], "gender": "male", "note": "原文只称姓氏；天文学家。"},
+    {"canonical": "Andrew Fraknoi", "render": "安德鲁·弗拉克诺伊", "aliases": ["Fraknoi"], "gender": "male", "note": "原文只称姓氏；天文学家。"},
+    {"canonical": "Jocelyn Bell", "render": "约瑟琳·贝尔", "aliases": [], "gender": "female", "note": "原文采用 1973 年语境中的 Jocelyn Bell；不擅自扩写后来的完整姓氏 Bell Burnell。"},
+    {"canonical": "Ferdinand Magellan", "render": "费迪南德·麦哲伦", "aliases": ["Magellan"], "gender": "male", "note": "历史人物；仅称姓氏时译为“麦哲伦”。"},
+    {"canonical": "Lewis and Clark", "render": "刘易斯与克拉克", "aliases": ["Lewis & Clark"], "gender": "unknown", "note": "探险搭档，按中文通行称法处理。"},
+    {"canonical": "Charles Darwin", "render": "查尔斯·达尔文", "aliases": ["Darwin"], "gender": "male", "note": "历史人物；仅称姓氏时译为“达尔文”。"},
+    {"canonical": "Johannes Kepler", "render": "约翰内斯·开普勒", "aliases": ["Kepler"], "gender": "male", "note": "历史人物；仅称姓氏时译为“开普勒”。"},
+    {"canonical": "Morris Swadesh", "render": "莫里斯·斯瓦迪士", "aliases": ["Swadesh"], "gender": "male", "note": "语言学家；Swadesh List 译为“斯瓦迪士核心词表”。"},
+    {"canonical": "Theresa", "render": "特蕾莎", "aliases": [], "gender": "female", "note": "Bryan Bautista 的妻子。"},
+    {"canonical": "Charles Fillmore", "render": "查尔斯·菲尔莫尔", "aliases": ["Fillmore"], "gender": "male", "note": "语言学家。"}
+  ],
+  "terms": [
+    {"src": "The Message from Deep Space", "dst": "来自深空的讯息", "category": "title"},
+    {"src": "Meteor", "dst": "陨石", "category": "game_object", "note": "首字母大写时指游戏中的特定陨石。"},
+    {"src": "meteorite", "dst": "陨石", "category": "astronomy"},
+    {"src": "signal", "dst": "信号", "category": "gameplay"},
+    {"src": "transmission", "dst": "传输", "category": "gameplay", "note": "可按句法写成“传输内容”，但不译作“外星语”。"},
+    {"src": "message", "dst": "讯息", "category": "gameplay"},
+    {"src": "response", "dst": "回应", "category": "gameplay"},
+    {"src": "Translator", "dst": "翻译员", "category": "ui_player_role", "note": "仅用于不会动态替换姓名的静态 UI。对白中的 Translator 必须在提取时变成 {PLAYER_NAME}，不得写死为称谓。"},
+    {"src": "translation team", "dst": "翻译小组", "category": "organization"},
+    {"src": "translation", "dst": "翻译工作", "category": "gameplay", "note": "指项目或活动时使用；普通动词按语境译为“翻译”。"},
+    {"src": "dictionary", "dst": "词典", "category": "gameplay"},
+    {"src": "dictionary entry", "dst": "词典条目", "category": "gameplay"},
+    {"src": "entry notes", "dst": "条目注释", "category": "gameplay"},
+    {"src": "hypothesis", "dst": "假说", "category": "gameplay"},
+    {"src": "reference tab", "dst": "参考页签", "category": "ui"},
+    {"src": "reference window", "dst": "参考窗口", "category": "ui"},
+    {"src": "compiler", "dst": "编译器", "category": "ui"},
+    {"src": "console", "dst": "控制台", "category": "ui"},
+    {"src": "Auto-Log", "dst": "自动日志", "category": "ui"},
+    {"src": "journal", "dst": "手记", "category": "log"},
+    {"src": "log", "dst": "日志", "category": "log"},
+    {"src": "diary", "dst": "日记", "category": "log"},
+    {"src": "report", "dst": "报告", "category": "log"},
+    {"src": "mission time", "dst": "任务时间", "category": "ui"},
+    {"src": "puzzle group", "dst": "谜题组", "category": "gameplay"},
+    {"src": "Act", "dst": "幕", "category": "progress_ui", "note": "用于进度日志的章节称呼，例如 Act I 译作“第一幕”；按具体标题调整语序。"},
+    {"src": "base-8", "dst": "八进制", "category": "mathematics"},
+    {"src": "base-10", "dst": "十进制", "category": "mathematics"},
+    {"src": "base conversion", "dst": "进制转换", "category": "mathematics"},
+    {"src": "floating-point number", "dst": "浮点数", "category": "computing"},
+    {"src": "floating-point precision", "dst": "浮点精度", "category": "computing"},
+    {"src": "binary digit", "dst": "二进制位", "category": "computing"},
+    {"src": "rounding", "dst": "舍入", "category": "mathematics"},
+    {"src": "exponent", "dst": "指数", "category": "mathematics"},
+    {"src": "grouping symbol", "dst": "分组符号", "category": "mathematics"},
+    {"src": "unknown value", "dst": "未知值", "category": "mathematics"},
+    {"src": "fractional number", "dst": "分数值", "category": "mathematics"},
+    {"src": "factor", "dst": "因数", "category": "mathematics"},
+    {"src": "prime number", "dst": "质数", "category": "mathematics"},
+    {"src": "equation", "dst": "方程", "category": "mathematics"},
+    {"src": "formula", "dst": "公式", "category": "mathematics"},
+    {"src": "function", "dst": "函数", "category": "mathematics"},
+    {"src": "variable", "dst": "变量", "category": "mathematics"},
+    {"src": "mean", "dst": "平均数", "category": "statistics"},
+    {"src": "median", "dst": "中位数", "category": "statistics"},
+    {"src": "radius", "dst": "半径", "category": "geometry"},
+    {"src": "diameter", "dst": "直径", "category": "geometry"},
+    {"src": "propositional logic", "dst": "命题逻辑", "category": "logic"},
+    {"src": "numerical comparison", "dst": "数值比较", "category": "logic"},
+    {"src": "abstract equality", "dst": "抽象等价", "category": "logic"},
+    {"src": "approximation", "dst": "近似", "category": "mathematics"},
+    {"src": "element", "dst": "元素", "category": "chemistry"},
+    {"src": "periodic table", "dst": "元素周期表", "category": "chemistry"},
+    {"src": "atom", "dst": "原子", "category": "chemistry"},
+    {"src": "nucleus", "dst": "原子核", "category": "physics"},
+    {"src": "proton", "dst": "质子", "category": "physics"},
+    {"src": "neutron", "dst": "中子", "category": "physics"},
+    {"src": "electron", "dst": "电子", "category": "physics"},
+    {"src": "isotope", "dst": "同位素", "category": "chemistry"},
+    {"src": "nuclide", "dst": "核素", "category": "physics"},
+    {"src": "atomic mass", "dst": "原子质量", "category": "chemistry"},
+    {"src": "atomic number", "dst": "原子序数", "category": "chemistry"},
+    {"src": "chemical compound", "dst": "化合物", "category": "chemistry"},
+    {"src": "chemical reaction", "dst": "化学反应", "category": "chemistry"},
+    {"src": "molecule", "dst": "分子", "category": "chemistry"},
+    {"src": "radioactive decay", "dst": "放射性衰变", "category": "physics"},
+    {"src": "half-life", "dst": "半衰期", "category": "physics"},
+    {"src": "abundance", "dst": "丰度", "category": "chemistry"},
+    {"src": "universal abundance", "dst": "宇宙丰度", "category": "chemistry"},
+    {"src": "stable", "dst": "稳定", "category": "chemistry", "note": "周期表的同位素状态标签；Stable: yes/no 译作“稳定：是/否”。"},
+    {"src": "nuclear fusion", "dst": "核聚变", "category": "physics"},
+    {"src": "hydrogen line", "dst": "氢谱线", "category": "astronomy"},
+    {"src": "electromagnetic radiation", "dst": "电磁辐射", "category": "physics"},
+    {"src": "speed of light", "dst": "光速", "category": "physics"},
+    {"src": "light-year", "dst": "光年", "category": "astronomy"},
+    {"src": "orbital period", "dst": "轨道周期", "category": "astronomy"},
+    {"src": "star system", "dst": "恒星系统", "category": "astronomy"},
+    {"src": "Goldilocks planet", "dst": "金发姑娘行星", "category": "astronomy", "note": "利用童话中“不太热也不太冷”的典故；不可简化为普通的宜居行星，否则会破坏紧随其后的问答。"},
+    {"src": "natural satellite", "dst": "天然卫星", "category": "astronomy"},
+    {"src": "tidally locked planet", "dst": "潮汐锁定行星", "category": "astronomy"},
+    {"src": "Milky Way", "dst": "银河系", "category": "astronomy"},
+    {"src": "black hole", "dst": "黑洞", "category": "astronomy"},
+    {"src": "Hawking-Bekenstein radiation", "dst": "霍金—贝肯斯坦辐射", "category": "physics"},
+    {"src": "chondrule", "dst": "球粒", "category": "planetary_science"},
+    {"src": "chondrite", "dst": "球粒陨石", "category": "planetary_science"},
+    {"src": "radio spectroscopy", "dst": "射电光谱学", "category": "astronomy"},
+    {"src": "materials science", "dst": "材料科学", "category": "science"},
+    {"src": "frequency", "dst": "频率", "category": "physics"},
+    {"src": "spectrum", "dst": "光谱", "category": "physics"},
+    {"src": "methane", "dst": "甲烷", "category": "chemistry"},
+    {"src": "ethane", "dst": "乙烷", "category": "chemistry"},
+    {"src": "propane", "dst": "丙烷", "category": "chemistry"},
+    {"src": "alkane", "dst": "烷烃", "category": "chemistry"},
+    {"src": "photosynthesis", "dst": "光合作用", "category": "biology"},
+    {"src": "DNA", "dst": "DNA", "category": "biology", "keep_source": true},
+    {"src": "Hycean", "dst": "海氢行星", "category": "astronomy", "note": "首次说明可写“海氢型行星”。"},
+    {"src": "radial symmetry", "dst": "放射对称", "category": "biology"},
+    {"src": "asexual reproduction", "dst": "无性生殖", "category": "biology"},
+    {"src": "sexual reproduction", "dst": "有性生殖", "category": "biology"},
+    {"src": "life cycle", "dst": "生命周期", "category": "biology"},
+    {"src": "ecology", "dst": "生态学", "category": "biology"},
+    {"src": "evolution", "dst": "演化", "category": "biology"},
+    {"src": "species", "dst": "物种", "category": "biology"},
+    {"src": "offspring", "dst": "后代", "category": "biology"},
+    {"src": "sensory organ", "dst": "感觉器官", "category": "biology"},
+    {"src": "electric organ", "dst": "发电器官", "category": "biology"},
+    {"src": "linguistics", "dst": "语言学", "category": "linguistics"},
+    {"src": "grammar", "dst": "语法", "category": "linguistics"},
+    {"src": "parts of speech", "dst": "词性", "category": "linguistics"},
+    {"src": "sentence construction", "dst": "句子构造", "category": "linguistics"},
+    {"src": "sentence structure", "dst": "句法结构", "category": "linguistics"},
+    {"src": "subject", "dst": "主语", "category": "linguistics"},
+    {"src": "object", "dst": "宾语", "category": "linguistics", "note": "仅限语法语境。"},
+    {"src": "possession syntax", "dst": "所有格句法", "category": "linguistics"},
+    {"src": "superlative", "dst": "最高级", "category": "linguistics"},
+    {"src": "preposition", "dst": "介词", "category": "linguistics"},
+    {"src": "separator", "dst": "分隔符", "category": "linguistics"},
+    {"src": "Earth", "dst": "地球", "category": "astronomy"},
+    {"src": "the Sun", "dst": "太阳", "category": "astronomy"},
+    {"src": "Mars", "dst": "火星", "category": "astronomy"},
+    {"src": "Venus", "dst": "金星", "category": "astronomy"},
+    {"src": "Jupiter", "dst": "木星", "category": "astronomy"},
+    {"src": "Cygnus X-1", "dst": "天鹅座 X-1", "category": "astronomy"},
+    {"src": "Hydrogen", "dst": "氢", "category": "chemistry"},
+    {"src": "Helium", "dst": "氦", "category": "chemistry"},
+    {"src": "Oxygen", "dst": "氧", "category": "chemistry"},
+    {"src": "Carbon", "dst": "碳", "category": "chemistry"},
+    {"src": "Iron", "dst": "铁", "category": "chemistry"},
+    {"src": "Caesium", "dst": "铯", "category": "chemistry"},
+    {"src": "Silicon Carbide", "dst": "碳化硅", "category": "materials_science"},
+    {"src": "fusion crust", "dst": "熔壳", "category": "planetary_science"},
+    {"src": "regmaglypt", "dst": "气印", "category": "planetary_science", "note": "陨石表面的拇指印状凹坑，也称熔蚀坑；本项目统一用“气印”。"},
+    {"src": "allotrope", "dst": "同素异形体", "category": "chemistry"},
+    {"src": "composite material", "dst": "复合材料", "category": "materials_science"},
+    {"src": "transmitter", "dst": "发射器", "category": "radio"},
+    {"src": "radio wave", "dst": "无线电波", "category": "radio"},
+    {"src": "radio astronomy", "dst": "射电天文学", "category": "astronomy"},
+    {"src": "astronomer's note", "dst": "天文学家注", "category": "ui"},
+    {"src": "linguist's note", "dst": "语言学家注", "category": "ui"},
+    {"src": "programmer's note", "dst": "程序员注", "category": "ui"},
+    {"src": "valence electron", "dst": "价电子", "category": "chemistry"},
+    {"src": "neutron star", "dst": "中子星", "category": "astronomy"},
+    {"src": "white dwarf", "dst": "白矮星", "category": "astronomy"},
+    {"src": "stellar nucleosynthesis", "dst": "恒星核合成", "category": "astronomy"},
+    {"src": "Zipf's Law", "dst": "齐普夫定律", "category": "linguistics"},
+    {"src": "Swadesh List", "dst": "斯瓦迪士核心词表", "category": "linguistics"},
+    {"src": "Euler's number", "dst": "欧拉数", "category": "mathematics"},
+    {"src": "Fibonacci sequence", "dst": "斐波那契数列", "category": "mathematics"},
+    {"src": "Pythagorean theorem", "dst": "勾股定理", "category": "mathematics"},
+    {"src": "Translation Room", "dst": "翻译室", "category": "location"},
+    {"src": "Commander", "dst": "指挥官", "category": "role"},
+    {"src": "Pilot", "dst": "驾驶员", "category": "role"},
+    {"src": "Co-Pilot", "dst": "副驾驶员", "category": "role"},
+    {"src": "Principal Investigator", "dst": "首席研究员", "category": "role"},
+    {"src": "American Space Agency", "dst": "美国航天局", "category": "organization", "note": "游戏中的机构名；不要擅自改成 NASA。"},
+    {"src": "Space Agency", "dst": "航天局", "category": "organization"},
+    {"src": "University of Massachusetts", "dst": "马萨诸塞大学", "category": "organization"},
+    {"src": "Boston College", "dst": "波士顿学院", "category": "organization"},
+    {"src": "Los Angeles Philharmonic", "dst": "洛杉矶爱乐乐团", "category": "organization"},
+    {"src": "Misawa Air Base", "dst": "三泽空军基地", "category": "location"},
+    {"src": "Leuschner Observatory", "dst": "洛伊施纳天文台", "category": "location", "note": "无稳定通行中译，按英语发音音译。"},
+    {"src": "Cape Espenberg", "dst": "埃斯彭贝格角", "category": "location", "note": "阿拉斯加地名，按英语发音音译。"},
+    {"src": "Alaska", "dst": "阿拉斯加", "category": "location"},
+    {"src": "Berkeley", "dst": "伯克利", "category": "location"},
+    {"src": "San Francisco", "dst": "旧金山", "category": "location"},
+    {"src": "Japan", "dst": "日本", "category": "location"},
+    {"src": "Watergate Scandal", "dst": "水门事件", "category": "history"},
+    {"src": "Korean Conflict", "dst": "朝鲜战争", "category": "history", "note": "原文委婉写作 Conflict，中文采用通行史名。"},
+    {"src": "Apollo program", "dst": "阿波罗计划", "category": "history"},
+    {"src": "Hot Patties", "dst": "热辣肉饼", "category": "place", "note": "汉堡店名，意译以保留喜剧感。"}
+    ,{"src": "Pacific", "dst": "太平洋", "category": "location"}
+    ,{"src": "Uncle Sam", "dst": "山姆大叔", "category": "history"}
+    ,{"src": "Hello World", "dst": "Hello World", "category": "computing", "keep_source": true, "note": "程序设计固定短语及游戏内传输分组标题，保留英文。"}
+    ,{"src": "Oakfalls Brain Battle", "dst": "奥克福尔斯脑力大战", "category": "event", "note": "1961 年虚构知识竞赛名称。"}
+    ,{"src": "Apollo 11", "dst": "阿波罗 11 号", "category": "history"}
+    ,{"src": "Sputnik", "dst": "斯普特尼克", "category": "history", "note": "苏联人造卫星语境；带编号时按原文保留编号。"}
+    ,{"src": "California", "dst": "加利福尼亚州", "category": "location"}
+    ,{"src": "Chicago", "dst": "芝加哥", "category": "location"}
+    ,{"src": "Florida", "dst": "佛罗里达州", "category": "location"}
+    ,{"src": "Tampa Bay", "dst": "坦帕湾", "category": "location"}
+    ,{"src": "Nobel Prize", "dst": "诺贝尔奖", "category": "award"}
+    ,{"src": "Super Bowl", "dst": "超级碗", "category": "event"}
+    ,{"src": "blinko", "dst": "blinko", "category": "deliberate_nonsense", "keep_source": true, "note": "角色临时编造的无意义名称，保持小写英文以支撑对白。"}
+    ,{"src": "PEMDAS", "dst": "PEMDAS", "category": "mathematics", "keep_source": true, "note": "英语运算顺序助记缩写；首次需要时可补“运算顺序”。"}
+    ,{"src": "Eagle Eye Alan", "dst": "鹰眼艾伦", "category": "nickname"}
+    ,{"src": "Krebs Cycle", "dst": "克雷布斯循环", "category": "biology"}
+    ,{"src": "Dr. Fridge", "dst": "冰箱博士", "category": "nickname", "note": "Akers 给 Bautista 起的反派名，保留冰箱笑点。"}
+    ,{"src": "Captain Obvious", "dst": "废话船长", "category": "nickname", "note": "讽刺对方说了显而易见的话。"}
+    ,{"src": "Morse code", "dst": "莫尔斯电码", "category": "communication"}
+    ,{"src": "Spain", "dst": "西班牙", "category": "location"}
+    ,{"src": "Sweden", "dst": "瑞典", "category": "location"}
+    ,{"src": "Swedes", "dst": "瑞典人", "category": "demonym"}
+    ,{"src": "United States", "dst": "美国", "category": "location"}
+    ,{"src": "Ohio", "dst": "Ohio", "category": "deliberate_mishearing", "keep_source": true, "note": "仅出现于 Collins 把日语 ohayou 误听成 Ohio 的回忆，保留英文以维持误会。"}
+    ,{"src": "Kowaiyo", "dst": "Kowaiyo", "category": "foreign_phrase", "keep_source": true, "note": "Collins 说出的日语短语，保留罗马字以维持情节。"}
+    ,{"src": "Rome", "dst": "罗马", "category": "location", "note": "When in Rome, do as the Romans 整句意译为“入乡随俗”。"}
+    ,{"src": "Romans", "dst": "罗马人", "category": "demonym", "note": "俗语中与 Rome 一起意译为“入乡随俗”。"}
+    ,{"src": "Vietnamese", "dst": "越南语", "category": "language"}
+    ,{"src": "U.S. military", "dst": "美军", "category": "organization"}
+    ,{"src": "Teflon", "dst": "特氟龙", "category": "materials_science"}
+    ,{"src": "Yellowstone", "dst": "黄石公园", "category": "location"}
+    ,{"src": "Yellowstone National Park", "dst": "黄石国家公园", "category": "location"}
+    ,{"src": "Ol' Faithful", "dst": "老忠实泉", "category": "location"}
+    ,{"src": "Antarctic", "dst": "南极", "category": "location"}
+    ,{"src": "Visual", "dst": "图像", "category": "ui", "note": "游戏的图像窗口或页签；Visuals 同样译为“图像”。"}
+    ,{"src": "Visuals", "dst": "图像", "category": "ui", "note": "游戏的图像页签。"}
+    ,{"src": "COMPOUND", "dst": "化合物", "category": "chemistry", "note": "谜题对白中可见的大写英文概念，不是外星信号占位符。"}
+    ,{"src": "Galapagos Islands", "dst": "加拉帕戈斯群岛", "category": "location"}
+    ,{"src": "Arecibo Observatory", "dst": "阿雷西博天文台", "category": "location"}
+    ,{"src": "Puerto Rico", "dst": "波多黎各", "category": "location"}
+    ,{"src": "Hindenburg", "dst": "兴登堡号", "category": "history"}
+    ,{"src": "Brevity Law", "dst": "简洁定律", "category": "linguistics"}
+    ,{"src": "Erid", "dst": "埃里德", "category": "fictional_name", "note": "虚构行星名；与 Eridani 的语音联想需要保留。"}
+    ,{"src": "Eridani", "dst": "埃里达尼", "category": "astronomy", "note": "此处按原文口语称呼音译，以保留与 Erid 的联想。"}
+    ,{"src": "Terra", "dst": "Terra", "category": "etymology", "keep_source": true, "note": "拉丁语词形解释场景，保留拼写后在中文中解释含义。"}
+    ,{"src": "Rost", "dst": "Rost", "category": "etymology", "keep_source": true, "note": "词源讨论中的词根，保留拉丁字母。"}
+    ,{"src": "Platonic solid", "dst": "柏拉图立体", "category": "geometry"}
+    ,{"src": "Neptune", "dst": "海王星", "category": "astronomy"}
+    ,{"src": "Uranus", "dst": "天王星", "category": "astronomy"}
+    ,{"src": "AUNIT", "dst": "AUNIT", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "LIMBUNIT", "dst": "LIMBUNIT", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "BRAINUNIT", "dst": "BRAINUNIT", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "AUTHORMATE", "dst": "AUTHORMATE", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "AUTHORGUY", "dst": "AUTHORGUY", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "ELECTRICSENSOR", "dst": "ELECTRICSENSOR", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "HELISEC", "dst": "HELISEC", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "FILOGRAM", "dst": "FILOGRAM", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "MINIHETER", "dst": "MINIHETER", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "HELIMONTH", "dst": "HELIMONTH", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "HELIYEAR", "dst": "HELIYEAR", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "VOBJ", "dst": "VOBJ", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "VERTIZ", "dst": "VERTIZ", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "HORTHIZ", "dst": "HORTHIZ", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "DEPTHIZ", "dst": "DEPTHIZ", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "LIMBSPEC", "dst": "LIMBSPEC", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "MAKEGOOD", "dst": "MAKEGOOD", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "TEACHGOOD", "dst": "TEACHGOOD", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "ELECTRICSPEAK", "dst": "ELECTRICSPEAK", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "ROTSYMM", "dst": "ROTSYMM", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "ASTAR", "dst": "ASTAR", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "X-ANE", "dst": "X-ANE", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "PREPTO", "dst": "PREPTO", "category": "puzzle_metavariable", "keep_source": true, "note": "这些全大写词是谜题标题中的抽象元变量，不是普通英语正文；保留原样以免提前揭示谜底。"}
+    ,{"src": "HAS", "dst": "HAS", "category": "puzzle_metavariable", "keep_source": true, "note": "仅指全大写谜题关键字；普通英语 has 仍按语境翻译。"}
+    ,{"src": "ENDHAS", "dst": "ENDHAS", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "HETER", "dst": "HETER", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "MFG", "dst": "MFG", "category": "puzzle_metavariable", "keep_source": true}
+    ,{"src": "Filogram", "dst": "Filogram", "category": "alien_unit", "keep_source": true}
+    ,{"src": "Helisec", "dst": "Helisec", "category": "alien_unit", "keep_source": true}
+    ,{"src": "Heter", "dst": "Heter", "category": "alien_unit", "keep_source": true}
+    ,{"src": "Miniheter", "dst": "Miniheter", "category": "alien_unit", "keep_source": true}
+    ,{"src": "Cadengen", "dst": "卡登根", "category": "fictional_element"}
+    ,{"src": "Pineview High School", "dst": "松景高中", "category": "organization"}
+    ,{"src": "Shape Run", "dst": "图形跑酷", "category": "minigame"}
+    ,{"src": "CGoL", "dst": "CGoL", "category": "computing", "keep_source": true, "note": "Conway's Game of Life 的程序缩写；说明文字可写“生命游戏（CGoL）”。"}
+    ,{"src": "Apollo Mission", "dst": "阿波罗任务", "category": "history"}
+    ,{"src": "America", "dst": "美国", "category": "location"}
+    ,{"src": "Persian language", "dst": "波斯语", "category": "language"}
+    ,{"src": "American English", "dst": "美式英语", "category": "language"}
+    ,{"src": "Japanese", "dst": "日语", "category": "language"}
+    ,{"src": "English", "dst": "英语", "category": "language"}
+    ,{"src": "Air Force", "dst": "空军", "category": "organization"}
+    ,{"src": "Ch", "dst": "Ch", "category": "fictional_element_symbol", "keep_source": true, "note": "卡登根的游戏内元素符号，必须保留。"}
+    ,{"src": "Viz", "dst": "Viz", "category": "wordplay", "keep_source": true, "note": "角色把 visual 缩成 viz 的命名笑话；小写 viz 同样保留。"}
+    ,{"src": "viz", "dst": "viz", "category": "wordplay", "keep_source": true}
+    ,{"src": "bongo", "dst": "bongo", "category": "wordplay", "keep_source": true, "note": "词源笑话中需与 bon、bon-go 对照；普通语境仍可译“邦戈鼓”。"}
+    ,{"src": "bon", "dst": "bon", "category": "wordplay", "keep_source": true}
+    ,{"src": "bon-go", "dst": "bon-go", "category": "wordplay", "keep_source": true}
+  ],
+  "non_translate": [
+    {"marker": "{SIG_", "category": "alien_signal_placeholder"},
+    {"marker": "{SIG_N", "category": "alien_signal_placeholder"},
+    {"marker": "{PART_", "category": "dialogue_partition"},
+    {"marker": "{SPEAKER_", "category": "speaker_context"},
+    {"marker": "{PLAYER_NAME}", "category": "runtime_player_name"},
+    {"marker": "{DYN_", "category": "runtime_dynamic_value"},
+    {"marker": "$anim", "category": "animation_command"},
+    {"marker": "SIGNAL_", "category": "runtime_alien_word_id"},
+    {"marker": "DNA", "category": "scientific_abbreviation"}
+  ]
+}

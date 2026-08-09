@@ -1,0 +1,2322 @@
+[
+  {
+    "text_index": 1813531810,
+    "translated_text": "“IDK”是暂定名？"
+  },
+  {
+    "text_index": 1083813321,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以“IDK”是暂定名，用在我们还没弄清新信号含义的时候。明白了。"
+  },
+  {
+    "text_index": 1396734763,
+    "translated_text": "上尖号"
+  },
+  {
+    "text_index": 1486543192,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}嗯。{PART_001}“^”符号。{PART_002}简洁。{PART_003}简洁。{PART_004}简洁。"
+  },
+  {
+    "text_index": 1396470074,
+    "translated_text": "加"
+  },
+  {
+    "text_index": 2139274122,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}加。{PART_001}或者叫“加上前项”？{PART_002}柯林斯，{PART_003}你觉得呢？"
+  },
+  {
+    "text_index": 564939576,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我觉得“加”就很好。{PART_001}陨石似乎是把前面的数字相加，以此写出数学表达式。{PART_002}所以“加上前项”可能有些多余。{PART_003}这只是他们的语法在起作用。"
+  },
+  {
+    "text_index": 66916382,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嗯。{PART_001}懂了。{PART_002}可我脑子就是觉得“加前项”更顺。"
+  },
+  {
+    "text_index": 1806151656,
+    "translated_text": "把信号 -2 记作“加一”"
+  },
+  {
+    "text_index": 1277251969,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}加一。{PART_001}完美。{PART_002}简单明了。"
+  },
+  {
+    "text_index": 1589090704,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}还得看它能不能一直成立。"
+  },
+  {
+    "text_index": 64496476,
+    "translated_text": "加前项"
+  },
+  {
+    "text_index": 987254147,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}很贴切！{PART_001}到目前为止，{SIG_N005}无非就是把前面的数字相加。"
+  },
+  {
+    "text_index": 1991124913,
+    "translated_text": "信号 -12 就是 7？？"
+  },
+  {
+    "text_index": 815091371,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}说得好！{PART_001}这个就是 7，就这么简单。"
+  },
+  {
+    "text_index": 1779043791,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我讨厌这个。"
+  },
+  {
+    "text_index": 370497704,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}啊？{PART_001}凯莉，{PART_002}怎么了？"
+  },
+  {
+    "text_index": 697384953,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我讨厌这个。{PART_001}太死板了。{PART_002}和之前见过的东西都不一样。"
+  },
+  {
+    "text_index": 1089804477,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可是，{PART_001}目前能用，所以我喜欢。"
+  },
+  {
+    "text_index": 992220253,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}还得看它能不能一直成立。"
+  },
+  {
+    "text_index": 42392174,
+    "translated_text": "答案"
+  },
+  {
+    "text_index": 1475619372,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Ans？{PART_001}是“answer”的缩写？{PART_002}哎呀，{PLAYER_NAME}，{PART_003}抓得好！{PART_004}没想到这次你比我还快！"
+  },
+  {
+    "text_index": 1941113383,
+    "translated_text": "星号"
+  },
+  {
+    "text_index": 208511774,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}“*”号。{PART_002}简洁。{PART_003}我赞成。"
+  },
+  {
+    "text_index": 1339876536,
+    "translated_text": "小数"
+  },
+  {
+    "text_index": 390151232,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}小数。{PART_001}完美。"
+  },
+  {
+    "text_index": 896633940,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}严格来说，{PART_001}并不完美。"
+  },
+  {
+    "text_index": 77061428,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+  },
+  {
+    "text_index": 455590044,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}他们的数字系统不用 8 和 9。{PART_001}这不是十进制，{PART_002}而是八进制。"
+  },
+  {
+    "text_index": 1252459890,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}但这就是小数点，{PART_001}不是吗？"
+  },
+  {
+    "text_index": 272039095,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}是。{PART_001}也许该叫八进制点。"
+  },
+  {
+    "text_index": 1375846248,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}随便吧。{PART_001}巴蒂斯塔，{PART_002}就算对你来说，这也太较真了。"
+  },
+  {
+    "text_index": 1939001755,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}别人还用过更难听的词形容我。"
+  },
+  {
+    "text_index": 572268199,
+    "translated_text": "数字结束"
+  },
+  {
+    "text_index": 1361827065,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Endnum，{PART_001}是吧？{PART_002}说得通。"
+  },
+  {
+    "text_index": 170365645,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}目前是。{PART_001}关键就在这里。{PART_002}现在能用，{PART_003}但如果它的用法比这更灵活，我们可以再改。"
+  },
+  {
+    "text_index": 461019740,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这个符号很简洁。"
+  },
+  {
+    "text_index": 577921615,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}“=”号，{PART_001}简单明了，{PART_002}我就喜欢简单的！"
+  },
+  {
+    "text_index": 1299942984,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}真意外。{PART_001}头脑简单的人喜欢简单。"
+  },
+  {
+    "text_index": 615269720,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}抱歉，你刚说什么？{PART_001}我没听清，{PART_002}但怎么听都像在损我。"
+  },
+  {
+    "text_index": 621601285,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}并没有。"
+  },
+  {
+    "text_index": 717682148,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}确实挺毒舌的。"
+  },
+  {
+    "text_index": 896614215,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}多谢你让他老实点，{PART_001}柯林斯。"
+  },
+  {
+    "text_index": 407452829,
+    "translated_text": "等于"
+  },
+  {
+    "text_index": 1416349310,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等于。{PART_001}我喜欢。"
+  },
+  {
+    "text_index": 1877796891,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也喜欢。{PART_001}目前用法一直很一致。"
+  },
+  {
+    "text_index": 221711486,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}想缩短的话，可以直接写成“=”。{PART_001}词典允许使用某些符号。"
+  },
+  {
+    "text_index": 1305841437,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}谢谢你，巴蒂斯塔博士。"
+  },
+  {
+    "text_index": 1554207591,
+    "translated_text": "浮点数"
+  },
+  {
+    "text_index": 1537169827,
+    "translated_text": "乘"
+  },
+  {
+    "text_index": 152043690,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}乘，{PART_001}乘，{PART_002}乘。{PART_003}我觉得不错。"
+  },
+  {
+    "text_index": 1759363006,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我同意。{PART_001}至少现在是。"
+  },
+  {
+    "text_index": 785902677,
+    "translated_text": "八进制"
+  },
+  {
+    "text_index": 1040693909,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}你今天让一个程序员开心了。"
+  },
+  {
+    "text_index": 2108511728,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}八进制，{PART_001}天啊，{PART_002}你们可真够古板的。{PART_003}一个个都是。"
+  },
+  {
+    "text_index": 325541135,
+    "translated_text": "句点"
+  },
+  {
+    "text_index": 1978352377,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}一个“.”符号。"
+  },
+  {
+    "text_index": 1798635309,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}简洁？"
+  },
+  {
+    "text_index": 1478592178,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}简洁。"
+  },
+  {
+    "text_index": 1293220724,
+    "translated_text": "加号"
+  },
+  {
+    "text_index": 474318021,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}一个“+”号。{PART_002}简洁。"
+  },
+  {
+    "text_index": 475746949,
+    "translated_text": "加上"
+  },
+  {
+    "text_index": 1618715634,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}加上，是吧。{PART_001}第一个数加上第二个数。{PART_002}对，{PART_003}我懂了。"
+  },
+  {
+    "text_index": 134344114,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我同意。{PART_001}目前看来很合适。{PART_002}还要看它能不能保持一致。"
+  },
+  {
+    "text_index": 1628645536,
+    "translated_text": "把信号 -2 记作“加一”"
+  },
+  {
+    "text_index": 1923601006,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}{SIG_N002}表示“加一”是有点怪，{PART_001}但只要能用，{PART_002}那就用吧，{PART_003}我觉得。"
+  },
+  {
+    "text_index": 1666418512,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也这么觉得。{PART_001}看看它在其他传输里是否一致吧。"
+  },
+  {
+    "text_index": 2136744822,
+    "translated_text": "点、线段与形状"
+  },
+  {
+    "text_index": 955207989,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}点、{PART_001}线段、{PART_002}还有形状。{PART_003}你觉得陨石是在和我们建立一套几何概念吗？{PART_004}柯林斯，{PART_005}你怎么看？"
+  },
+  {
+    "text_index": 258783384,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这些命名目前都说得通。{PART_001}我会继续翻看之前的传输，检查它们是否一致。"
+  },
+  {
+    "text_index": 1241158783,
+    "translated_text": "点、线与形状"
+  },
+  {
+    "text_index": 1109218284,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}点、{PART_001}线、{PART_002}还有形状。{PART_003}这样一步步推进很自然。"
+  },
+  {
+    "text_index": 145433227,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是的。{PART_001}如果这些定义成立，{PART_002}那我对现在这套词典就很有信心了。"
+  },
+  {
+    "text_index": 1041393124,
+    "translated_text": "幂"
+  },
+  {
+    "text_index": 1855485233,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，巴蒂斯塔，{PART_001}你让我想起一个人。"
+  },
+  {
+    "text_index": 1807293302,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}什么人？"
+  },
+  {
+    "text_index": 1838319825,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}有力量的那个人。"
+  },
+  {
+    "text_index": 398820288,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}什么力量？"
+  },
+  {
+    "text_index": 934295465,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}呼嘟的力量。"
+  },
+  {
+    "text_index": 1148787025,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}谁嘟？"
+  },
+  {
+    "text_index": 682755240,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你嘟！"
+  },
+  {
+    "text_index": 495529621,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嘟什么？"
+  },
+  {
+    "text_index": 1956680713,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}让我想起一个人！"
+  },
+  {
+    "text_index": 847714948,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}什么人？"
+  },
+  {
+    "text_index": 18590944,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}有力量的那个人——"
+  },
+  {
+    "text_index": 787486559,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}好了！{PART_001}别唱了！{PART_002}到此为止。"
+  },
+  {
+    "text_index": 608190199,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}呵呵呵。"
+  },
+  {
+    "text_index": 788964891,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}问号？{PART_001}{PLAYER_NAME}，{PART_002}这只是你还没想出好名字之前拿来凑数的词吗？"
+  },
+  {
+    "text_index": 785960076,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这么一说……"
+  },
+  {
+    "text_index": 1342598801,
+    "translated_text": "跳过"
+  },
+  {
+    "text_index": 1725420378,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}跳过，{PART_001}是吧？"
+  },
+  {
+    "text_index": 1597905151,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也就是跳过前一个信号。{PART_001}这个分析挺有意思。"
+  },
+  {
+    "text_index": 218701642,
+    "translated_text": "下划线"
+  },
+  {
+    "text_index": 1325869627,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1下划线？{PART_001}真讲究！"
+  },
+  {
+    "text_index": 470854821,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animA0它用来分隔单词。{PART_001}$animC3巴蒂斯塔博士不许词典里出现空格，至于为什么我也不清楚，{PART_002}当然，他肯定有充分的理由。"
+  },
+  {
+    "text_index": 2033947100,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animC0解析带空格的词会很麻烦。{PART_001}要是有人输入了 2 个空格，而不是 1 个呢？{PART_002}$animB1编译器就很难照我们的意思解析。"
+  },
+  {
+    "text_index": 595513334,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有道理。"
+  },
+  {
+    "text_index": 614705206,
+    "translated_text": "苹果"
+  },
+  {
+    "text_index": 1240975840,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}先说明一下，{PART_001}我不认为 -2 表示“苹果”。{PART_002}希望这没有把你带偏，{PART_003}{PLAYER_NAME}……"
+  },
+  {
+    "text_index": 566225988,
+    "translated_text": "空间"
+  },
+  {
+    "text_index": 393394166,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}空间？{PART_001}是指外太空？{PART_002}天文学家赞成。"
+  },
+  {
+    "text_index": 204874830,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果你指的是排版里的空格，{PART_001}那语言学家也赞成。"
+  },
+  {
+    "text_index": 1112926838,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}程序员不予置评。"
+  },
+  {
+    "text_index": 663113336,
+    "translated_text": "值"
+  },
+  {
+    "text_index": 132374602,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}值！{PART_001}非常贴切。"
+  },
+  {
+    "text_index": 376898969,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}至少{PART_001}目前是。"
+  },
+  {
+    "text_index": 2071223521,
+    "translated_text": "变量"
+  },
+  {
+    "text_index": 178129684,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Var？"
+  },
+  {
+    "text_index": 941479067,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}就是“变量”的英文缩写。"
+  },
+  {
+    "text_index": 1975020561,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。"
+  },
+  {
+    "text_index": 1963331598,
+    "translated_text": "用 X 表示乘法"
+  },
+  {
+    "text_index": 181549521,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}“X”，{PART_001}简单明了。{PART_002}你是想让它表示乘法吧？"
+  },
+  {
+    "text_index": 644522377,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}三个点……{PART_001}真有悬念！{PART_002}不过挺合适的，{PART_003}我觉得。"
+  },
+  {
+    "text_index": 1936195357,
+    "translated_text": "几何信号"
+  },
+  {
+    "text_index": 2064908795,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}点、{PART_001}线、{PART_002}还有形状。{PART_003}能不能请巴蒂斯塔博士夸句“简洁”？{PART_004}我觉得我们已经找准了。"
+  },
+  {
+    "text_index": 1375323706,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不能。"
+  },
+  {
+    "text_index": 1017331032,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}只有一个字符的信号名，才配叫“简洁”吗？"
+  },
+  {
+    "text_index": 882967011,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}是。"
+  },
+  {
+    "text_index": 1349057164,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}啊，{PART_001}真挑剔啊，巴蒂斯塔。"
+  },
+  {
+    "text_index": 1228470431,
+    "translated_text": "弄反了！是左括号！"
+  },
+  {
+    "text_index": 168238369,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}抱歉打断一下，{PART_001}但我觉得你弄反了。{PART_002}应该是“(”，还是我理解错了？"
+  },
+  {
+    "text_index": 354688751,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你真客气，{PART_001}柯林斯。{PART_002}直接告诉人家搞错了就行！"
+  },
+  {
+    "text_index": 442725538,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}埃克斯！{PART_001}太没礼貌了！"
+  },
+  {
+    "text_index": 861649751,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哎，{PART_001}反正已经写进记录了。{PART_002}来不及了！！"
+  },
+  {
+    "text_index": 1562138092,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}唉。{PART_001}真爱出风头。"
+  },
+  {
+    "text_index": 365877255,
+    "translated_text": "右括号"
+  },
+  {
+    "text_index": 739260958,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}埃克斯博士？{PART_001}你今天安静得反常。"
+  },
+  {
+    "text_index": 375265967,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}没有，{PART_001}我已经说完了！{PART_002}拿“)”当词名也说得通，{PART_003}大概吧！"
+  },
+  {
+    "text_index": 422434683,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}真爱出风头。"
+  },
+  {
+    "text_index": 1112619133,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}说得没错。"
+  },
+  {
+    "text_index": 636889208,
+    "translated_text": "未完"
+  },
+  {
+    "text_index": 2125155250,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}未完？{PART_001}也就是，{PART_002}未完待续？{PART_003}听着真不妙！"
+  },
+  {
+    "text_index": 730777606,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}不。{PART_002}“未完”是说，{PART_003}这里还不是真正的结尾。"
+  },
+  {
+    "text_index": 1371802886,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也就是说，{PART_001}后面还有内容？"
+  },
+  {
+    "text_index": 1647085177,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}可以这么说。"
+  },
+  {
+    "text_index": 263910969,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}还是我的版本更好！"
+  },
+  {
+    "text_index": 1772506829,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}挺简洁。"
+  },
+  {
+    "text_index": 1686271161,
+    "translated_text": "结束包含"
+  },
+  {
+    "text_index": 126710755,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Endhas？{PART_001}也太拗口了吧，{PART_002}不过我觉得能用！"
+  },
+  {
+    "text_index": 1953429872,
+    "translated_text": "几何"
+  },
+  {
+    "text_index": 280848996,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}几何？{PART_001}我喜欢！"
+  },
+  {
+    "text_index": 1359409525,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也喜欢，{PART_001}但有所保留。"
+  },
+  {
+    "text_index": 2081736152,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}有所保留？"
+  },
+  {
+    "text_index": 221787819,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}说不上来哪里不对。{PART_001}我再想想。"
+  },
+  {
+    "text_index": 1872738613,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你这么一说，我反倒不安了！{PART_001}词典要是能得到语言学家的祝福，我才放心！"
+  },
+  {
+    "text_index": 1236378452,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}只要这个词对{PLAYER_NAME}来说合适，{PART_001}而且在传输中用得一致，也符合传输内容，{PART_002}那就很完美。"
+  },
+  {
+    "text_index": 1779253954,
+    "translated_text": "函数"
+  },
+  {
+    "text_index": 2025062720,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}是受语言学家的传输分组启发吗？"
+  },
+  {
+    "text_index": 973779113,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我会在传输中寻找规律。{PART_001}只要它能准确描述某个信号，{PART_002}那就再好不过。"
+  },
+  {
+    "text_index": 1163126183,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，{PART_001}我就很开心！{PART_002}我只是想知道{PLAYER_NAME}怎么想到这条思路的。"
+  },
+  {
+    "text_index": 1898318325,
+    "translated_text": "包含"
+  },
+  {
+    "text_index": 4976661,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}包含？{PART_001}挺拗口，{PART_002}但我喜欢。"
+  },
+  {
+    "text_index": 1345288468,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}至少现在，{PART_001}我也喜欢。{PART_002}看看能不能为 -13 找到更好的名字吧。"
+  },
+  {
+    "text_index": 1442111275,
+    "translated_text": "左括号"
+  },
+  {
+    "text_index": 871125657,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}“(”符号？{PART_001}这又不是词！"
+  },
+  {
+    "text_index": 1375951509,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}一定得是词吗？"
+  },
+  {
+    "text_index": 2146909496,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不，{PART_001}不一定。"
+  },
+  {
+    "text_index": 280386915,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我不同意！{PART_001}我们是在建立一套词汇，{PART_002}不是吗？"
+  },
+  {
+    "text_index": 164721272,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是，{PART_001}但格式、{PART_002}结构、{PART_003}句法——{PART_004}这些都是语言的一部分。{PART_005}如果这个定义成立，{PART_006}那当然再好不过。"
+  },
+  {
+    "text_index": 730287003,
+    "translated_text": "命题"
+  },
+  {
+    "text_index": 2027186996,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}命题。{PART_001}这词听着可真够气派！"
+  },
+  {
+    "text_index": 4420313,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}合适，{PART_001}就行。"
+  },
+  {
+    "text_index": 1938584783,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}谁能，{PART_001}呃，{PART_002}再给你们那位和善的天文学家朋友解释一遍这个词？"
+  },
+  {
+    "text_index": 878883060,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我不认识什么天文学家朋友。"
+  },
+  {
+    "text_index": 46755713,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}别这样！{PART_001}“命题”到底是什么意思？"
+  },
+  {
+    "text_index": 2078380756,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}问{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 562562757,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也是，不过{PART_001}人家好像不太爱说话。"
+  },
+  {
+    "text_index": 2063956588,
+    "translated_text": "假！"
+  },
+  {
+    "text_index": 1179811059,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}假！{PART_001}那些都是假命题！"
+  },
+  {
+    "text_index": 434721653,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯……{PART_001}没错。"
+  },
+  {
+    "text_index": 1399465047,
+    "translated_text": "错误！"
+  },
+  {
+    "text_index": 795845078,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}错误？{PART_001}什么错了？"
+  },
+  {
+    "text_index": 339798279,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}意思就是“错误”。"
+  },
+  {
+    "text_index": 275352125,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}对。"
+  },
+  {
+    "text_index": 1406992695,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不，{PART_001}不对。{PART_002}是“错”。"
+  },
+  {
+    "text_index": 705534899,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好，{PART_001}好，{PART_002}你知道我是什么意思。"
+  },
+  {
+    "text_index": 955268112,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}错误。"
+  },
+  {
+    "text_index": 756190153,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}正确！"
+  },
+  {
+    "text_index": 626967492,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}错误。"
+  },
+  {
+    "text_index": 1002414894,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}好了，你们俩，够了。"
+  },
+  {
+    "text_index": 1234950792,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哈哈哈！"
+  },
+  {
+    "text_index": 1214860916,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}呵呵。"
+  },
+  {
+    "text_index": 1854221792,
+    "translated_text": "真？"
+  },
+  {
+    "text_index": 554135742,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}真！{PART_001}那些都是真命题！"
+  },
+  {
+    "text_index": 367229780,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}假。"
+  },
+  {
+    "text_index": 2066675228,
+    "translated_text": "正确！"
+  },
+  {
+    "text_index": 58798589,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}正确！{PART_001}我看没错！"
+  },
+  {
+    "text_index": 1255860679,
+    "translated_text": "假？"
+  },
+  {
+    "text_index": 1765609386,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}假！{PART_001}那些都是假命题！"
+  },
+  {
+    "text_index": 714985856,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯……"
+  },
+  {
+    "text_index": 1990844879,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦，等等。{PART_001}让我再看看……"
+  },
+  {
+    "text_index": 426717839,
+    "translated_text": "真！"
+  },
+  {
+    "text_index": 1539465763,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}真！{PART_001}那些都是真命题！"
+  },
+  {
+    "text_index": 1923309431,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}简洁。"
+  },
+  {
+    "text_index": 391545739,
+    "translated_text": "与"
+  },
+  {
+    "text_index": 1384117853,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那“与”是什么意思？"
+  },
+  {
+    "text_index": 191012503,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}就是逻辑与。"
+  },
+  {
+    "text_index": 2096822049,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}从没听过。"
+  },
+  {
+    "text_index": 2085907394,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}那你也许可以看看参考页签里的逻辑部分。"
+  },
+  {
+    "text_index": 1957766547,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}说不定真会去！"
+  },
+  {
+    "text_index": 1576752462,
+    "translated_text": "二者都真"
+  },
+  {
+    "text_index": 1299904847,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}二者都真！{PART_001}只有两个都为真时才是真！"
+  },
+  {
+    "text_index": 1008524718,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}能用。"
+  },
+  {
+    "text_index": 1199251653,
+    "translated_text": "取反"
+  },
+  {
+    "text_index": 1235328063,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}取反？"
+  },
+  {
+    "text_index": 330361844,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}就像把一个二进制位翻转。"
+  },
+  {
+    "text_index": 833427352,
+    "translated_text": "非"
+  },
+  {
+    "text_index": 1179939463,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}“非”可以。"
+  },
+  {
+    "text_index": 1626030935,
+    "translated_text": "或"
+  },
+  {
+    "text_index": 1168418134,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}或？"
+  },
+  {
+    "text_index": 1022872664,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}逻辑或。{PART_001}你没看参考页签，对吧。"
+  },
+  {
+    "text_index": 586833078,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}切，{PART_001}什么？{PART_002}不，{PART_003}我当然看了。"
+  },
+  {
+    "text_index": 877104787,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯哼……"
+  },
+  {
+    "text_index": 1905547606,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}，{PART_001}你能给我解释一下吗？"
+  },
+  {
+    "text_index": 1615862775,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}非常简洁。"
+  },
+  {
+    "text_index": 619862704,
+    "translated_text": "更大"
+  },
+  {
+    "text_index": 1298765099,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}更大！{PART_001}我喜欢，{PART_002}可它和{SIG_N032}有什么区别？"
+  },
+  {
+    "text_index": 194669500,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这个没那么像数学了！{PART_001}太好了！！"
+  },
+  {
+    "text_index": 1810641201,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}怎么，{PART_001}你就这么讨厌数学？"
+  },
+  {
+    "text_index": 453025878,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是，{PART_001}但我更喜欢语言！"
+  },
+  {
+    "text_index": 1790703309,
+    "translated_text": "“>”更简洁 :)"
+  },
+  {
+    "text_index": 1296778500,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯！{PART_001}这可比“大于”简洁多了 :)"
+  },
+  {
+    "text_index": 1261360347,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}简洁。"
+  },
+  {
+    "text_index": 775530065,
+    "translated_text": "大于"
+  },
+  {
+    "text_index": 1140561385,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}大于！{PART_001}我喜欢！"
+  },
+  {
+    "text_index": 884274421,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}你什么都喜欢。"
+  },
+  {
+    "text_index": 622007425,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}才没有！{PART_001}再说，{PART_002}你讲得好像这还是坏事。"
+  },
+  {
+    "text_index": 1292226364,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}有时挑剔一点是好事。"
+  },
+  {
+    "text_index": 1434149335,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那，{PART_001}把信号 -32 叫“大于”到底好不好？？"
+  },
+  {
+    "text_index": 211519642,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯……{PART_001}能用。"
+  },
+  {
+    "text_index": 1193195716,
+    "translated_text": "不等于？"
+  },
+  {
+    "text_index": 1545554015,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不等于！{PART_001}选得好！"
+  },
+  {
+    "text_index": 1399577979,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}不。"
+  },
+  {
+    "text_index": 1680965404,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？{PART_001}为什么？{PART_002}明明能用！"
+  },
+  {
+    "text_index": 587328929,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这就像说你的年龄和我的不一样。"
+  },
+  {
+    "text_index": 274231939,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}确实不一样！"
+  },
+  {
+    "text_index": 1764647249,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}但不止如此。{PART_001}我比你年长。"
+  },
+  {
+    "text_index": 1805160162,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好吧，{PART_001}目前能用就行。"
+  },
+  {
+    "text_index": 1232133084,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}但不够具体。{PART_001}我不赞成……"
+  },
+  {
+    "text_index": 1710647503,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}越来越简洁了。"
+  },
+  {
+    "text_index": 1312912114,
+    "translated_text": "小于"
+  },
+  {
+    "text_index": 609682394,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}小于！{PART_001}说起来不太顺口，{PART_002}但我觉得合适！"
+  },
+  {
+    "text_index": 1719454196,
+    "translated_text": "不等于？？"
+  },
+  {
+    "text_index": 1751016833,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不等于！{PART_001}能用。"
+  },
+  {
+    "text_index": 731723085,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}不。{PART_002}不够具体。{PART_003}这话好像已经说过了。"
+  },
+  {
+    "text_index": 2122067419,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，我开始有种似曾相识的感觉了……"
+  },
+  {
+    "text_index": 1317298918,
+    "translated_text": "如果"
+  },
+  {
+    "text_index": 1167688270,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果你认为这能准确表示信号 -37，{PART_001}{PLAYER_NAME}，{PART_002}我支持你的决定。"
+  },
+  {
+    "text_index": 116374083,
+    "translated_text": "所以"
+  },
+  {
+    "text_index": 1857324634,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以？{PART_001}所以什么？"
+  },
+  {
+    "text_index": 1718949885,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以，{PART_001}后面可以接一个结论。"
+  },
+  {
+    "text_index": 1241859157,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这说得通，{PART_001}所以我喜欢！"
+  },
+  {
+    "text_index": 2064074001,
+    "translated_text": "那么"
+  },
+  {
+    "text_index": 826342226,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那么。{PART_001}挺直接的。"
+  },
+  {
+    "text_index": 1639818062,
+    "translated_text": "因此"
+  },
+  {
+    "text_index": 1551342834,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}因此！{PLAYER_NAME}，{PART_001}你现在肯定觉得自己特别有派头！{PART_002}听听这词说起来多顺！"
+  },
+  {
+    "text_index": 286029416,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}埃克斯，{PART_001}我觉得你把“因此”想得太装腔作势了。"
+  },
+  {
+    "text_index": 913820390,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}装腔作势？！{PART_001}好家伙，这下还是你更胜一筹！"
+  },
+  {
+    "text_index": 1951870776,
+    "translated_text": "“从”改为“来源”"
+  },
+  {
+    "text_index": 1644867600,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}好多了！"
+  },
+  {
+    "text_index": 724949593,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}反而更糟！{PART_001}根本没人这么说话，{PART_002}{PLAYER_NAME}！"
+  },
+  {
+    "text_index": 938015466,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}可这是{PLAYER_NAME}自己的选择，{PART_001}当然应该由人家决定。"
+  },
+  {
+    "text_index": 344180602,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}随便吧！{PART_001}你们两个都没劲！"
+  },
+  {
+    "text_index": 124232975,
+    "translated_text": "“来源”改为“从”"
+  },
+  {
+    "text_index": 1811848554,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}！{PART_001}改得好！"
+  },
+  {
+    "text_index": 1001189623,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}唉，{PART_001}“来源”明明比“从”合理多了。"
+  },
+  {
+    "text_index": 841340464,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哪里合理了，凯莉？"
+  },
+  {
+    "text_index": 1925565619,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}语言学！"
+  },
+  {
+    "text_index": 1967403816,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可我们又不全是语言学家！{PART_001}大家都在一起想办法破解它！{PART_002}{PLAYER_NAME}加油！！"
+  },
+  {
+    "text_index": 496568698,
+    "translated_text": "从"
+  },
+  {
+    "text_index": 164698559,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}从。{PART_001}嗯，{PART_002}还得看看之后是不是也能这么用。{PART_003}我个人更想把这个叫“来源”。"
+  },
+  {
+    "text_index": 550566982,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}来源？{PART_001}太傻了。{PART_002}为什么叫来源？"
+  },
+  {
+    "text_index": 1169492566,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也就是说，{PART_001}“来源”前面的事物是某个动作的来源。"
+  },
+  {
+    "text_index": 272916339,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}太绕了。{PART_001}这次我站{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 1842494623,
+    "translated_text": "到！"
+  },
+  {
+    "text_index": 1262605613,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}到！{PART_001}我喜欢！"
+  },
+  {
+    "text_index": 1780220082,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}你什么都喜欢。"
+  },
+  {
+    "text_index": 194072608,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}嘿！{PART_001}多鼓励人总是好事。"
+  },
+  {
+    "text_index": 1890332091,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}鼓励也得挑人。{PART_001}就这样。"
+  },
+  {
+    "text_index": 473955173,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这人可真会泼冷水……"
+  },
+  {
+    "text_index": 860512474,
+    "translated_text": "使"
+  },
+  {
+    "text_index": 284512847,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}说得通。"
+  },
+  {
+    "text_index": 205774787,
+    "translated_text": "在……之内"
+  },
+  {
+    "text_index": 1119680529,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}在……之内，{PART_001}是吧。{PART_002}严格说来没错，{PART_003}但我不确定它有没有抓住这个信号的本义。"
+  },
+  {
+    "text_index": 2087651429,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}又在卖弄语言学术语了！{PART_001}本义？{PART_002}什么意思？"
+  },
+  {
+    "text_index": 1718696763,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}就是核心含义。{PART_001}它用在太多不同语境里，{PART_002}我猜这个词其实只是个很普通的功能词。"
+  },
+  {
+    "text_index": 1427854902,
+    "translated_text": "坐标相加"
+  },
+  {
+    "text_index": 1715470034,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Addcoords？{PART_001}是什么的缩写？"
+  },
+  {
+    "text_index": 353846411,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}坐标相加。"
+  },
+  {
+    "text_index": 109553679,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦————！{PART_001}我早该想到的。"
+  },
+  {
+    "text_index": 1124004787,
+    "translated_text": "移动"
+  },
+  {
+    "text_index": 901901340,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}移动！{PART_001}我喜欢！"
+  },
+  {
+    "text_index": 1869784434,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}太含糊了。"
+  },
+  {
+    "text_index": 1759418659,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你们两个说得都有道理。"
+  },
+  {
+    "text_index": 512926387,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这怎么行？{PART_001}你总得选一边，{PART_002}凯莉。"
+  },
+  {
+    "text_index": 1997261825,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这个嘛。{PART_001}它符合这个词的用法，也确实模糊。{PART_002}还要看以后遇到别的用法时，这个抽象定义还成不成立。{PART_003}{PLAYER_NAME}，{PART_004}选你觉得合理的就好。"
+  },
+  {
+    "text_index": 1251046293,
+    "translated_text": "平移"
+  },
+  {
+    "text_index": 1287714347,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}平移？{PART_001}$animC4抱歉，{PART_002}可我看不出这个信号是在平移什么？"
+  },
+  {
+    "text_index": 597882298,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}数学上的平移。{PART_001}$animB3移动几何图形。"
+  },
+  {
+    "text_index": 1887677928,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}哦，{PART_001}就是移动。{PART_002}$animB0现在懂了。"
+  },
+  {
+    "text_index": 1900651154,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA4啧啧啧，{PART_001}凯莉！{PART_002}你早该知道的！"
+  },
+  {
+    "text_index": 162879476,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC3少来，{PART_001}埃克斯。{PART_002}你刚才想的和我一样，对吧？"
+  },
+  {
+    "text_index": 1157137793,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对……{PART_001}$animA0我也是……"
+  },
+  {
+    "text_index": 2072167609,
+    "translated_text": "从！"
+  },
+  {
+    "text_index": 1678645928,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}从！{PART_001}我喜欢！{PART_002}从一个东西到另一个东西！"
+  },
+  {
+    "text_index": 547312909,
+    "translated_text": "到"
+  },
+  {
+    "text_index": 1946765581,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}到？{PART_001}可它出现在后面。"
+  },
+  {
+    "text_index": 1431478659,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是的，{PART_001}这是陨石语言的又一个特点。{PART_002}他们的介词似乎放在宾语后面。{PART_003}有时让我想起日语语法。"
+  },
+  {
+    "text_index": 1483266842,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}就你知道得多。"
+  },
+  {
+    "text_index": 1265425418,
+    "translated_text": "外星人"
+  },
+  {
+    "text_index": 628561783,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}还真是。{PART_002}你是说，我们正在定义“外星人”。"
+  },
+  {
+    "text_index": 1480869418,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME}，{PART_001}你也许是对的。"
+  },
+  {
+    "text_index": 2113169692,
+    "translated_text": "地球"
+  },
+  {
+    "text_index": 1278701378,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}地球。{PART_001}太阳系的第三颗行星，{PART_002}位于银河系。{PART_003}而现在，{PART_004}成了一则外星讯息的接收者。"
+  },
+  {
+    "text_index": 1208861696,
+    "translated_text": "人类"
+  },
+  {
+    "text_index": 352127206,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}他们说的会不会是……{PART_001}我们？"
+  },
+  {
+    "text_index": 1406202111,
+    "translated_text": "人类"
+  },
+  {
+    "text_index": 314166347,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}人类……{PART_001}是我们吗？"
+  },
+  {
+    "text_index": 1470309081,
+    "translated_text": "媒介即按摩"
+  },
+  {
+    "text_index": 1386134585,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}媒介即按摩！"
+  },
+  {
+    "text_index": 1939424805,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+  },
+  {
+    "text_index": 854185020,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}没什么。{PART_001}我只是……{PART_002}这是个语言学笑话。{PART_003}抱歉。"
+  },
+  {
+    "text_index": 1761318021,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}书呆子。"
+  },
+  {
+    "text_index": 1758484622,
+    "translated_text": "讯息"
+  },
+  {
+    "text_index": 1354728633,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}一则讯息。{PART_001}有意思。{PART_002}非常有意思！"
+  },
+  {
+    "text_index": 1227215822,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}继续说。"
+  },
+  {
+    "text_index": 456526287,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}陨石也许是在谈论自身！{PART_001}再以此为桥梁，{PART_002}就能过渡到更高级的概念！"
+  },
+  {
+    "text_index": 2021935576,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我们和他们少得可怜的共同基础，只有天体物理学和这颗陨石，{PART_001}所以它正利用一切能用的东西来传达意思。"
+  },
+  {
+    "text_index": 1315257325,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}说得好！{PART_001}这条语义上的桥梁正把我们带向数学之外。"
+  },
+  {
+    "text_index": 950220312,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}他们正一点点组织出一则讯息。"
+  },
+  {
+    "text_index": 900356033,
+    "translated_text": "Msg（讯息）"
+  },
+  {
+    "text_index": 1180266295,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，巴蒂斯塔，{PART_001}我觉得{PLAYER_NAME}够资格听你说一句“简洁”了。"
+  },
+  {
+    "text_index": 845728362,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯？{PART_001}不。{PART_002}这事不是说过了吗？{PART_003}多了两个字符。"
+  },
+  {
+    "text_index": 1876026575,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}唉，{PART_001}{PLAYER_NAME}，{PART_002}我尽力了。{PART_003}至少我觉得“简洁”！"
+  },
+  {
+    "text_index": 1164546937,
+    "translated_text": "传输"
+  },
+  {
+    "text_index": 1486924714,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}哦，天啊。{PART_001}你觉得信号 -43 表示“传输”，{PART_002}{PLAYER_NAME}？{PART_003}如果信号 -43 代表每一段传输，{PART_004}那陨石就开始自指了。"
+  },
+  {
+    "text_index": 596449136,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也就是说？"
+  },
+  {
+    "text_index": 1565168230,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}人类和外星人之间，{PART_001}只有 2 个话题能作为对话起点。{PART_002}只有从这里开始，我们才能谈论更高级的内容。"
+  },
+  {
+    "text_index": 1619913112,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这 2 个起点是……？"
+  },
+  {
+    "text_index": 1631799680,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}宇宙常数，{PART_001}以及媒介本身：{PART_002}这颗陨石。"
+  },
+  {
+    "text_index": 2125676485,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}如果他们在建立“传输”这个概念，{PART_001}就会用它来过渡到另一个概念！"
+  },
+  {
+    "text_index": 363464020,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们的推测是这样。"
+  },
+  {
+    "text_index": 2137297966,
+    "translated_text": "陨石"
+  },
+  {
+    "text_index": 714220289,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我的天。{PART_001}{PLAYER_NAME}，{PART_002}你真是太聪明了！{PART_003}终于有人听我说话了！{PART_004}这是陨石，{PART_005}不是流星！"
+  },
+  {
+    "text_index": 1627805748,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}管它呢。{PART_001}日志，{PART_002}关闭。"
+  },
+  {
+    "text_index": 370761651,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿！！{PART_001}等——"
+  },
+  {
+    "text_index": 1983599023,
+    "translated_text": "电脑？"
+  },
+  {
+    "text_index": 1553062053,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}电脑。{PART_001}为什么？"
+  },
+  {
+    "text_index": 851275715,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}因为信号是从电脑里来的。"
+  },
+  {
+    "text_index": 2019402534,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}陨石里的电脑，{PART_001}对。{PART_002}这台电脑，{PART_003}不对。{PART_004}这台电脑只是把信号转换成供人类阅读的文字。"
+  },
+  {
+    "text_index": 1375521785,
+    "translated_text": "流星"
+  },
+  {
+    "text_index": 1349369461,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我的天。{PART_001}{PLAYER_NAME}，{PART_002}你真聪明。"
+  },
+  {
+    "text_index": 1399941700,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不过也没那么聪明。{PART_001}这叫“陨石”，{PART_002}不是流星。"
+  },
+  {
+    "text_index": 631339680,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}真较真。"
+  },
+  {
+    "text_index": 1219136884,
+    "translated_text": "F 是频率的缩写？"
+  },
+  {
+    "text_index": 1691067110,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}……{PART_001}巴蒂斯塔……{PART_002}咳。"
+  },
+  {
+    "text_index": 116552652,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯？"
+  },
+  {
+    "text_index": 335273215,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这个单字符条目，你不想说点什么吗？"
+  },
+  {
+    "text_index": 36239525,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}没什么。{PART_001}F 对我毫无意义。"
+  },
+  {
+    "text_index": 1481903080,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不会吧！！{PART_001}他很气人，{PART_002}对不对，{PART_003}{PLAYER_NAME}？"
+  },
+  {
+    "text_index": 1587304870,
+    "translated_text": "频率缩写"
+  },
+  {
+    "text_index": 1584752821,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}频率的缩写，是吧？{PART_001}简洁！"
+  },
+  {
+    "text_index": 678627289,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不。"
+  },
+  {
+    "text_index": 1982185930,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？{PART_001}为什么这不能算“简洁”？"
+  },
+  {
+    "text_index": 238719275,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}只有长度为 1 个字符的条目才配叫“简洁”。{PART_001}这个有四个。"
+  },
+  {
+    "text_index": 843325599,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这规矩也太怪了！{PART_001}有些词根本没法合理缩成 1 个字符，怎么办？"
+  },
+  {
+    "text_index": 1611442270,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}也许不是每个词都有简洁的写法。"
+  },
+  {
+    "text_index": 412390603,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你和你那些规矩……{PART_001}挑剔的小独裁者。"
+  },
+  {
+    "text_index": 1911406756,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}夸人也要慎重。"
+  },
+  {
+    "text_index": 646046703,
+    "translated_text": "频率"
+  },
+  {
+    "text_index": 290581305,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}频率？"
+  },
+  {
+    "text_index": 1273046512,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也就是说，{PART_001}这个频率偏移对应这个词。{PART_002}我们的词典就是用这种方式把频率和它所指的概念联系起来。"
+  },
+  {
+    "text_index": 1651888215,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不错。{PART_001}天文学家赞成。"
+  },
+  {
+    "text_index": 1302641212,
+    "translated_text": "信号"
+  },
+  {
+    "text_index": 1239389843,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}信号。{PART_001}简单。{PART_002}我喜欢。"
+  },
+  {
+    "text_index": 858824079,
+    "translated_text": "原子"
+  },
+  {
+    "text_index": 199935585,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}原子。"
+  },
+  {
+    "text_index": 652181343,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}找我干什么？"
+  },
+  {
+    "text_index": 2130894129,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是，{PART_001}我说的是“原子”。{PART_002}词典，{PART_003}快看！"
+  },
+  {
+    "text_index": 537916566,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}哦！{PART_002}哦哦哦哦哦！！！{PART_003}呼……{PART_004}如果能和外星人谈论原子，{PART_005}也许我们就能谈论现实世界了。"
+  },
+  {
+    "text_index": 2050717824,
+    "translated_text": "元素？"
+  },
+  {
+    "text_index": 1819569886,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}元素。{PART_001}总觉得哪里不对。"
+  },
+  {
+    "text_index": 725825723,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我觉得很对！"
+  },
+  {
+    "text_index": 1735147081,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我担心的是，他们把{SIG_N056}定义为{SIG_N055} {SIG_N023} 1。{PART_001}这让我觉得，一个{SIG_N056}就是单独一个{SIG_N055}。"
+  },
+  {
+    "text_index": 822655394,
+    "translated_text": "化学反应缩写"
+  },
+  {
+    "text_index": 1805801821,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？{PART_001}这到底是什么意思？"
+  },
+  {
+    "text_index": 730731279,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我猜这是{PLAYER_NAME}把“化学反应”缩在一起造出的混成词。"
+  },
+  {
+    "text_index": 795224120,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}穷人的脚趾？"
+  },
+  {
+    "text_index": 714147514,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}唉……{PART_001}算了……"
+  },
+  {
+    "text_index": 1946279131,
+    "translated_text": "反应"
+  },
+  {
+    "text_index": 1509219799,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}反应。{PART_001}猜得好，{PART_002}{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 1517181745,
+    "translated_text": "化学物质"
+  },
+  {
+    "text_index": 2145328769,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}化学物质！{PART_001}太棒了，{PLAYER_NAME}！{PART_002}如果能和外星人讨论化合物，{PART_003}我们就能更详细地描述彼此的世界。"
+  },
+  {
+    "text_index": 417017743,
+    "translated_text": "化合物"
+  },
+  {
+    "text_index": 85301025,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}化合物？"
+  },
+  {
+    "text_index": 180471890,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我觉得{PLAYER_NAME}指的是化合物！"
+  },
+  {
+    "text_index": 510050689,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}希望外星人也是这个意思。"
+  },
+  {
+    "text_index": 454304862,
+    "translated_text": "分子"
+  },
+  {
+    "text_index": 780706517,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}分子？"
+  },
+  {
+    "text_index": 288105944,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也就是一个化合物分子。{PART_001}我好像明白{PLAYER_NAME}看出了什么。{PART_002}外星人正在按原子构成描述物质。"
+  },
+  {
+    "text_index": 1369184345,
+    "translated_text": "电子"
+  },
+  {
+    "text_index": 1030659042,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}电子，{PART_001}$animA3这是我们目前定义过最小的东西。{PART_002}$animA5可和其他词一样，它也要占用一个频率。"
+  },
+  {
+    "text_index": 1692690937,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这是什么意思？"
+  },
+  {
+    "text_index": 1541935961,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0不知道。{PART_001}我只是觉得听起来很有诗意。{PART_002}$animA4也许我该去当诗人。"
+  },
+  {
+    "text_index": 1210403813,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB2别辞掉你的本职工作。"
+  },
+  {
+    "text_index": 1565546839,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0这就是我的本职工作……"
+  },
+  {
+    "text_index": 2006627485,
+    "translated_text": "原子"
+  },
+  {
+    "text_index": 261842307,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}原子。"
+  },
+  {
+    "text_index": 1421292129,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+  },
+  {
+    "text_index": 1215930562,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是，{PART_001}我说的是“原子”。{PART_002}词典。{PART_003}……{PART_004}埃克斯博士，{PART_005}你听错了。{PART_006}{PLAYER_NAME}把一个信号命名为“原子”。"
+  },
+  {
+    "text_index": 38350743,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}抱歉。{PART_002}我还以为你说的是“艾伦”。"
+  },
+  {
+    "text_index": 1765492716,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}总之，{PART_001}我觉得{PLAYER_NAME}发现了什么……"
+  },
+  {
+    "text_index": 1065469226,
+    "translated_text": "元素"
+  },
+  {
+    "text_index": 1793504031,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}元素？{PART_001}也就是，{PART_002}化学元素？"
+  },
+  {
+    "text_index": 1469030762,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那可不得了！！"
+  },
+  {
+    "text_index": 944559416,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果能讨论元素，{PART_001}交流的大门就会通向一个全新的世界。"
+  },
+  {
+    "text_index": 599254024,
+    "translated_text": "中子"
+  },
+  {
+    "text_index": 51657926,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}中子，{PART_001}不带电的中性粒子。{PART_002}就像巴蒂斯塔。"
+  },
+  {
+    "text_index": 1108334965,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 1415821079,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}正是！"
+  },
+  {
+    "text_index": 1384306422,
+    "translated_text": "Nuetron（中子拼错）"
+  },
+  {
+    "text_index": 76540542,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你把“nuetron”拼错了。"
+  },
+  {
+    "text_index": 598213623,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你也把“mispelled”拼错了。"
+  },
+  {
+    "text_index": 1513682440,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}真麻烦！"
+  },
+  {
+    "text_index": 1094281116,
+    "translated_text": "质子"
+  },
+  {
+    "text_index": 447521298,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哇！{PART_001}质子！{PART_002}希望你是对的！"
+  },
+  {
+    "text_index": 1638658419,
+    "translated_text": "亚原子粒子"
+  },
+  {
+    "text_index": 285442587,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}质子、中子和电子。{PART_001}全齐了！！"
+  },
+  {
+    "text_index": 961378109,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}现在终于明白为什么三个概念都在同一段传输里定义了！"
+  },
+  {
+    "text_index": 1126308317,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}他们是在定义亚原子粒子。{PART_001}一切都说得通了，{PART_002}至少现在是。"
+  },
+  {
+    "text_index": 827207938,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}至少现在是！{PART_001}好了，继续吧。"
+  },
+  {
+    "text_index": 216144400,
+    "translated_text": "圆"
+  },
+  {
+    "text_index": 289253346,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}圆。{PART_001}他们在定义一种特定的形状。{PART_002}很有意思。{PART_003}我敢打赌，我们很快就会知道原因。"
+  },
+  {
+    "text_index": 1433640531,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}又开始打赌了，{PART_001}是吧？"
+  },
+  {
+    "text_index": 743348443,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不了。{PART_001}我早就不赌了。"
+  },
+  {
+    "text_index": 1703590375,
+    "translated_text": "分解"
+  },
+  {
+    "text_index": 1821491771,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}分解，{PART_001}用前缀“de”把“组合”的意思反转过来。"
+  },
+  {
+    "text_index": 477681803,
+    "translated_text": "摧毁"
+  },
+  {
+    "text_index": 1119094087,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}摧毁？{PART_001}好强烈的词！"
+  },
+  {
+    "text_index": 621756347,
+    "translated_text": "聚变"
+  },
+  {
+    "text_index": 1215054678,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}原子在极高压力下结合。{PART_001}恒星核心发生的，{PART_002}就是聚变。"
+  },
+  {
+    "text_index": 1353219059,
+    "translated_text": "银河系"
+  },
+  {
+    "text_index": 1910896875,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}银河系的尺度实在难以想象。"
+  },
+  {
+    "text_index": 398499389,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}连你也这么觉得？{PART_001}你明明那么深入地研究过银河系。"
+  },
+  {
+    "text_index": 81019771,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}研究得越多，{PART_001}反而越觉得难以想象。"
+  },
+  {
+    "text_index": 46174876,
+    "translated_text": "宇宙？"
+  },
+  {
+    "text_index": 565055411,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不对。{PART_001}宇宙太大了。{PART_002}这一定是别的东西。"
+  },
+  {
+    "text_index": 910373300,
+    "translated_text": "卫星"
+  },
+  {
+    "text_index": 667500606,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}还有那个{SIG_N092}围绕{SIG_N093}运行的东西：{PART_001}卫星！"
+  },
+  {
+    "text_index": 1446520976,
+    "translated_text": "中子星"
+  },
+  {
+    "text_index": 774603110,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}中子星。{PART_001}我赞成。{PART_002}得到了天文学家的认可！"
+  },
+  {
+    "text_index": 1269094120,
+    "translated_text": "Nuetronstar（中子星拼错）"
+  },
+  {
+    "text_index": 2035599104,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Neustronstar！{PART_001}我赞成这个。"
+  },
+  {
+    "text_index": 1468665409,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}呃，{PART_001}不好意思，{PART_002}但是……"
+  },
+  {
+    "text_index": 58108122,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}怎么了，凯莉？"
+  },
+  {
+    "text_index": 1049087190,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你拼错了，{PART_001}{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 1465817998,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}真扫兴。"
+  },
+  {
+    "text_index": 489316868,
+    "translated_text": "行星"
+  },
+  {
+    "text_index": 662768530,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}{SIG_N092}围绕{SIG_N090}运行的是什么：{PART_001}行星。"
+  },
+  {
+    "text_index": 1360526774,
+    "translated_text": "恒星"
+  },
+  {
+    "text_index": 871701452,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}真美。{PART_001}恒星。"
+  },
+  {
+    "text_index": 1443515195,
+    "translated_text": "白矮星"
+  },
+  {
+    "text_index": 775315375,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}和我的笔记对上了，{PART_001}{PLAYER_NAME}！{PART_002}继续吧！"
+  },
+  {
+    "text_index": 976251123,
+    "translated_text": "形容词"
+  },
+  {
+    "text_index": 619835501,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}形容词，{PART_001}用于描述的词。{PART_002}词典里又多了一种词性。"
+  },
+  {
+    "text_index": 460241580,
+    "translated_text": "可选项"
+  },
+  {
+    "text_index": 1021474299,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}要列出多种可能，{PART_001}传输会写成：{PART_002}A {SIG_N077} B {SIG_N077} C。{PART_003}这有望成为非常强大的语言工具。"
+  },
+  {
+    "text_index": 1841901710,
+    "translated_text": "选项"
+  },
+  {
+    "text_index": 1859495101,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}选项。{PART_001}比如 A {SIG_N077} B {SIG_N077} C。{PART_002}它就像选项之间的分隔符。{PART_003}很有意思，{PART_004}也很强大。"
+  },
+  {
+    "text_index": 336737768,
+    "translated_text": "或"
+  },
+  {
+    "text_index": 862258659,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这也太乱了。{PART_001}之前信号 -31 是逻辑或。{PART_002}现在又来一个。"
+  },
+  {
+    "text_index": 46806648,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}同意。{PART_001}不过这个“或”对我来说更好理解。"
+  },
+  {
+    "text_index": 1855498879,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这场混乱只能怪人类自己。"
+  },
+  {
+    "text_index": 342656260,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是吗？"
+  },
+  {
+    "text_index": 399846618,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我们拿日常词语给逻辑运算起了名。"
+  },
+  {
+    "text_index": 1811832840,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有道理。"
+  },
+  {
+    "text_index": 2106895865,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这可是他亲口承认的：{PART_001}一个好好的词，就被你们搞逻辑的毁了！"
+  },
+  {
+    "text_index": 507918052,
+    "translated_text": "连词"
+  },
+  {
+    "text_index": 889531688,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}连词。{PART_001}用来连接概念，作为一种词类再贴切不过。"
+  },
+  {
+    "text_index": 828305385,
+    "translated_text": "介词"
+  },
+  {
+    "text_index": 1974285751,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}介词。{PART_001}可用来表达概念之间的空间或时间关系。"
+  },
+  {
+    "text_index": 2086507413,
+    "translated_text": "名词"
+  },
+  {
+    "text_index": 727659655,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}名词！！！！{PART_001}一种词性！{PART_002}太棒了，实在太棒了！！"
+  },
+  {
+    "text_index": 1811025716,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哎呀，{PLAYER_NAME}，{PART_001}下定义还是谨慎点吧。{PART_002}她兴奋得我耳朵都疼了……"
+  },
+  {
+    "text_index": 255431296,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}现在你知道是什么感觉了。"
+  },
+  {
+    "text_index": 707479078,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，你这话是什么意思！！"
+  },
+  {
+    "text_index": 1710675728,
+    "translated_text": "相反"
+  },
+  {
+    "text_index": 396627962,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}“相反”啊。{PART_001}这个词特别有意思。"
+  },
+  {
+    "text_index": 1532476000,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}为什么？"
+  },
+  {
+    "text_index": 802679672,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果外星人在定义“相反”，{PART_001}那我猜他们会用它，{PART_002}去定义一个原本很难定义的词。{PART_003}它迟早会派上用场。{PART_004}这些外星人每一步都有用意。"
+  },
+  {
+    "text_index": 2046874797,
+    "translated_text": "反转"
+  },
+  {
+    "text_index": 1957276342,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}把含义反转？{PART_001}观察得好，{PART_002}{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 1582135426,
+    "translated_text": "动词"
+  },
+  {
+    "text_index": 117515518,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}动词！！！！！！！！！！！{PART_001}我们可以用元语言层面的分类来讨论外星语言了！{PART_002}以后，{PART_003}定义只会变得越来越容易。{PART_004}我们已经有了可以继续搭建的基础——"
+  },
+  {
+    "text_index": 1903677846,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}天啊，巴蒂斯塔，我平时听起来也这样吗？"
+  },
+  {
+    "text_index": 1261558319,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}至少她的分析还算条理清楚。"
+  },
+  {
+    "text_index": 1521168228,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你真狠。"
+  },
+  {
+    "text_index": 385516754,
+    "translated_text": "氦"
+  },
+  {
+    "text_index": 1781932684,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}一个氦单位。"
+  },
+  {
+    "text_index": 299872654,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}基准是氦中某种{SIG_N063}的半衰期！{PART_001}我们有进展了。"
+  },
+  {
+    "text_index": 236072217,
+    "translated_text": "氦秒"
+  },
+  {
+    "text_index": 1704893352,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}Helisec？{PART_001}这到底是个什么氦——"
+  },
+  {
+    "text_index": 1129445689,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}埃克斯，{PART_001}你这话快越界了……！{PART_002}当心点！"
+  },
+  {
+    "text_index": 598550444,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}说真的，{PART_001}heli 到底是什么——哦哦哦哦哦！！！{PART_002}你是说基于氦的“秒”，{PART_003}对吧！！{PART_004}我们有了一个能和外星人通用的时间单位！！"
+  },
+  {
+    "text_index": 1879666527,
+    "translated_text": "秒"
+  },
+  {
+    "text_index": 160328569,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}秒！{PART_001}可怎么知道它和我们的一秒相同？"
+  },
+  {
+    "text_index": 857858167,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我不确定。{PART_001}它似乎是以{SIG_N063} 2 {SIG_N003} 6 为基础的。"
+  },
+  {
+    "text_index": 1151157590,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我去翻翻参考页签。{PART_001}也许能找到什么……"
+  },
+  {
+    "text_index": 1708310920,
+    "translated_text": "时间单位"
+  },
+  {
+    "text_index": 548381939,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}一个时间单位！{PART_001}我的天，{PLAYER_NAME}！{PART_002}太妙了！"
+  },
+  {
+    "text_index": 1437289797,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可它的基准是什么？"
+  },
+  {
+    "text_index": 1692038056,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}和{SIG_N063} 2 {SIG_N003} 6 有关，{PART_001}但我不确定具体是什么关系。"
+  },
+  {
+    "text_index": 2095560971,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我去翻翻参考页签。{PART_001}也许能帮上忙。"
+  },
+  {
+    "text_index": 1532871167,
+    "translated_text": "距离单位"
+  },
+  {
+    "text_index": 1895954821,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}距离单位。{PART_001}等等，{PART_002}我们得想办法把它换算成米。{PART_003}必须弄清这个单位的含义。"
+  },
+  {
+    "text_index": 1906619340,
+    "translated_text": "米"
+  },
+  {
+    "text_index": 1816404876,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}米。{PART_001}也就是距离单位。{PART_002}{PLAYER_NAME}，{PART_003}你也许是对的……{PART_004}但我们得弄清这个单位究竟怎么换算成地球上的米。"
+  },
+  {
+    "text_index": 2043287348,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}什么意思，{PART_001}埃克斯？"
+  },
+  {
+    "text_index": 890757183,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这个单位并不正好等于地球上的一米。{PART_001}它由{SIG_N067}和{SIG_N069}定义。"
+  },
+  {
+    "text_index": 136048975,
+    "translated_text": "光速"
+  },
+  {
+    "text_index": 594454471,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}光速，{PART_001}真正的宇宙常数。"
+  },
+  {
+    "text_index": 244676464,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}整个宇宙都是如此？"
+  },
+  {
+    "text_index": 1130595798,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}它就写在宇宙的基本结构里。{PART_001}真真正正，{PART_002}放之宇宙皆准。"
+  },
+  {
+    "text_index": 2010613244,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}人类和外星人之间又多了一个参照点。{PART_001}我们能讨论的天地还在不断扩大。"
+  },
+  {
+    "text_index": 941788665,
+    "translated_text": "光速"
+  },
+  {
+    "text_index": 735061262,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}光速，{PART_001}又一个宇宙常数。"
+  },
+  {
+    "text_index": 1251028349,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}整个宇宙都一样？"
+  },
+  {
+    "text_index": 1879755047,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}当然。{PART_001}它就写在宇宙的基本结构里。{PART_002}再普适不过了。"
+  },
+  {
+    "text_index": 435503486,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这样人类和外星人就又有了一个共同参照。{PART_001}太好了！！"
+  },
+  {
+    "text_index": 762849277,
+    "translated_text": "质量"
+  },
+  {
+    "text_index": 1800222622,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}质量！{PART_001}他们在测量物质！{PART_002}好好好！{PART_003}太好了太好了太好了！！"
+  },
+  {
+    "text_index": 1367038762,
+    "translated_text": "重量"
+  },
+  {
+    "text_index": 1263402674,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}重量！{PART_001}又多了一种可供比较的物理属性。"
+  },
+  {
+    "text_index": 1260075948,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这个嘛，{PART_001}严格来说是质量，{PART_002}不是重量。{PART_003}重量取决于当地重力，{PART_004}比如地球上的重力，{PART_005}所以不如质量普适。"
+  },
+  {
+    "text_index": 1130407386,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}真较真。"
+  },
+  {
+    "text_index": 1382345292,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}嘿，{PART_001}如果“质量”更普适，{PART_002}那这回我支持这位较真的。"
+  },
+  {
+    "text_index": 140729523,
+    "translated_text": "另一个质量单位"
+  },
+  {
+    "text_index": 656905133,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}又一个含义重复的{SIG_N068}。{PART_001}他们有多个单位，{PART_002}适用于不同的讨论尺度。{PART_003}真有意思。"
+  },
+  {
+    "text_index": 1027504858,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这有什么好稀奇的？{PART_001}我们也有克和千克。{PART_002}人类一直都这么做。"
+  },
+  {
+    "text_index": 2035871149,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这正是最有意思的地方！"
+  },
+  {
+    "text_index": 1031237610,
+    "translated_text": "另一个距离单位"
+  },
+  {
+    "text_index": 906056994,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}又一个距离单位？{PART_001}为什么要两个？{PART_002}感觉多余。"
+  },
+  {
+    "text_index": 1864355021,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这个只有前一个的 1.34 亿分之一。"
+  },
+  {
+    "text_index": 245552385,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以这两个单位分别适用于不同领域。"
+  },
+  {
+    "text_index": 2014908082,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}可这两个领域又分别是什么？"
+  },
+  {
+    "text_index": 264172156,
+    "translated_text": "速率"
+  },
+  {
+    "text_index": 1446087542,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}就像经典的“速率 = 距离 / 时间”方程。{PART_001}找得好，{PLAYER_NAME}！"
+  },
+  {
+    "text_index": 1406013300,
+    "translated_text": "速度"
+  },
+  {
+    "text_index": 2005252270,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我感到一种需要……{PART_001}对速度的需要。"
+  },
+  {
+    "text_index": 1890631580,
+    "translated_text": "时间"
+  },
+  {
+    "text_index": 593449235,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}时间？"
+  },
+  {
+    "text_index": 1013070407,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}时间。{PART_001}{PLAYER_NAME}，{PART_002}你是什么意思？{PART_003}……"
+  },
+  {
+    "text_index": 287227272,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}人家指的是时间这个概念。"
+  },
+  {
+    "text_index": 2138343610,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}时间……{PART_001}在此刻之前已经流逝，在此刻之后也必将继续。"
+  },
+  {
+    "text_index": 1845396621,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}存在的自变量。"
+  },
+  {
+    "text_index": 2092800074,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}物质在空间中的自然演进。"
+  },
+  {
+    "text_index": 1931715910,
+    "translated_text": "测量"
+  },
+  {
+    "text_index": 1451055614,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}测量？"
+  },
+  {
+    "text_index": 1809088785,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME}认为他们是在定义用来衡量物质属性的词！{PART_001}测量单位！！{PART_002}可这是为了什么？{PART_003}我一定得知道。"
+  },
+  {
+    "text_index": 1294536481,
+    "translated_text": "单位"
+  },
+  {
+    "text_index": 842860197,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}单位？"
+  },
+  {
+    "text_index": 2005910243,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}把用来比较的基准抽象定义出来。"
+  },
+  {
+    "text_index": 243190034,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦？{PART_001}总算有什么东西能让你感兴趣了？"
+  },
+  {
+    "text_index": 64639517,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}有。{PART_001}现在没有了。{PART_002}我去编程。"
+  },
+  {
+    "text_index": 1179828639,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}唉，{PART_001}短是短了点，至少还挺有意思。"
+  },
+  {
+    "text_index": 747011104,
+    "translated_text": "之后"
+  },
+  {
+    "text_index": 559837638,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}之后，{PART_001}是吧？{PART_002}等这一切都尘埃落定，{PART_003}不知道我们以后会怎样？"
+  },
+  {
+    "text_index": 798493514,
+    "translated_text": "未来"
+  },
+  {
+    "text_index": 1848677483,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}过去已经发生，{PART_001}现在转瞬即逝。{PART_002}未来是唯一还能被我们改变的东西。{PART_003}所以只能向前走。"
+  },
+  {
+    "text_index": 585482512,
+    "translated_text": "全部"
+  },
+  {
+    "text_index": 1559374178,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}全部。{PART_001}有意思的选择，{PART_002}{PLAYER_NAME}。{PART_003}越看，{PART_004}我越觉得合适。"
+  },
+  {
+    "text_index": 1793114692,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那听起来确实很贴切！{PART_001}选得好，{PLAYER_NAME}！"
+  },
+  {
+    "text_index": 1929490249,
+    "translated_text": "总计"
+  },
+  {
+    "text_index": 1169337292,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}合计，{PART_001}也就是把所有数量都包括进来。{PART_002}现在看来很合适。{PART_003}选得好，{PART_004}{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 1731828063,
+    "translated_text": "当前"
+  },
+  {
+    "text_index": 601698901,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}当前，{PART_001}是吧？{PART_002}你觉得他们说的是现在？{PART_003}还得看看是否合适，{PART_004}不过得等到未来才能知道了。"
+  },
+  {
+    "text_index": 1049859016,
+    "translated_text": "现在"
+  },
+  {
+    "text_index": 321142766,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我们拥有的只有现在。{PART_001}只有在此刻，我们才能作出决定、采取行动。"
+  },
+  {
+    "text_index": 1556634923,
+    "translated_text": "无穷"
+  },
+  {
+    "text_index": 1554173625,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}大得数不清。"
+  }
+]

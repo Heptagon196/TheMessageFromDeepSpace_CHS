@@ -1,0 +1,2562 @@
+[
+  {
+    "text_index": 494040483,
+    "translated_text": "太阳微风"
+  },
+  {
+    "text_index": 700871031,
+    "translated_text": "太阳永不升起之地"
+  },
+  {
+    "text_index": 2062731465,
+    "translated_text": "面积测试"
+  },
+  {
+    "text_index": 98905592,
+    "translated_text": "对角线距离"
+  },
+  {
+    "text_index": 751374333,
+    "translated_text": "距离的正式定义"
+  },
+  {
+    "text_index": 1749786729,
+    "translated_text": "几何点"
+  },
+  {
+    "text_index": 330064878,
+    "translated_text": "HAS／ENDHAS 辨析"
+  },
+  {
+    "text_index": 1300632023,
+    "translated_text": "线段测试"
+  },
+  {
+    "text_index": 1277066804,
+    "translated_text": "点与线"
+  },
+  {
+    "text_index": 1010847771,
+    "translated_text": "八边形"
+  },
+  {
+    "text_index": 1130621115,
+    "translated_text": "周长测试"
+  },
+  {
+    "text_index": 90038217,
+    "translated_text": "点的辨析"
+  },
+  {
+    "text_index": 452549285,
+    "translated_text": "点的组合 2"
+  },
+  {
+    "text_index": 1255590810,
+    "translated_text": "基本距离"
+  },
+  {
+    "text_index": 25160209,
+    "translated_text": "用线构成形状"
+  },
+  {
+    "text_index": 467752477,
+    "translated_text": "形状周长"
+  },
+  {
+    "text_index": 606172295,
+    "translated_text": "三部分答案"
+  },
+  {
+    "text_index": 1987930151,
+    "translated_text": "多部分运算答案"
+  },
+  {
+    "text_index": 1270880040,
+    "translated_text": "非答案变量"
+  },
+  {
+    "text_index": 431488230,
+    "translated_text": "再造一个数"
+  },
+  {
+    "text_index": 117656025,
+    "translated_text": "造出数字"
+  },
+  {
+    "text_index": 2123061694,
+    "translated_text": "用形状构成形状"
+  },
+  {
+    "text_index": 1159368652,
+    "translated_text": "构造"
+  },
+  {
+    "text_index": 1572419307,
+    "translated_text": "起点与终点测试"
+  },
+  {
+    "text_index": 624484294,
+    "translated_text": "终点与起点"
+  },
+  {
+    "text_index": 1509945692,
+    "translated_text": "在结构间移动"
+  },
+  {
+    "text_index": 1493647919,
+    "translated_text": "多重移动"
+  },
+  {
+    "text_index": 518390424,
+    "translated_text": "移动形状"
+  },
+  {
+    "text_index": 360851141,
+    "translated_text": "移动"
+  },
+  {
+    "text_index": 698001485,
+    "translated_text": "移动"
+  },
+  {
+    "text_index": 1686329381,
+    "translated_text": "占位讯息 1"
+  },
+  {
+    "text_index": 303698778,
+    "translated_text": "占位讯息 3"
+  },
+  {
+    "text_index": 80809307,
+    "translated_text": "讯息"
+  },
+  {
+    "text_index": 426571499,
+    "translated_text": "陨石已发送"
+  },
+  {
+    "text_index": 1131851483,
+    "translated_text": "信号"
+  },
+  {
+    "text_index": 1796726088,
+    "translated_text": "哪个信号对应数字"
+  },
+  {
+    "text_index": 838067168,
+    "translated_text": "哪个信号"
+  },
+  {
+    "text_index": 1789481245,
+    "translated_text": "任意空格间隔"
+  },
+  {
+    "text_index": 786892174,
+    "translated_text": "确认"
+  },
+  {
+    "text_index": 1692516704,
+    "translated_text": "双空格"
+  },
+  {
+    "text_index": 907157678,
+    "translated_text": "斐波那契"
+  },
+  {
+    "text_index": 487011116,
+    "translated_text": "跟着做"
+  },
+  {
+    "text_index": 1568678267,
+    "translated_text": "Hello World!"
+  },
+  {
+    "text_index": 342262743,
+    "translated_text": "多位数"
+  },
+  {
+    "text_index": 1739776090,
+    "translated_text": "数列"
+  },
+  {
+    "text_index": 2141776691,
+    "translated_text": "一"
+  },
+  {
+    "text_index": 179885042,
+    "translated_text": "数列"
+  },
+  {
+    "text_index": 695351321,
+    "translated_text": "三位数"
+  },
+  {
+    "text_index": 1591472979,
+    "translated_text": "零"
+  },
+  {
+    "text_index": 1974294002,
+    "translated_text": "加法"
+  },
+  {
+    "text_index": 1996557109,
+    "translated_text": "连续减法"
+  },
+  {
+    "text_index": 707615011,
+    "translated_text": "除法"
+  },
+  {
+    "text_index": 1030960122,
+    "translated_text": "等值分数"
+  },
+  {
+    "text_index": 1697077903,
+    "translated_text": "等于"
+  },
+  {
+    "text_index": 1700795439,
+    "translated_text": "八分之一小数"
+  },
+  {
+    "text_index": 1113510220,
+    "translated_text": "浮点数运算"
+  },
+  {
+    "text_index": 720735738,
+    "translated_text": "分数值"
+  },
+  {
+    "text_index": 1339604674,
+    "translated_text": "更多运算"
+  },
+  {
+    "text_index": 1172022547,
+    "translated_text": "乘法"
+  },
+  {
+    "text_index": 877945363,
+    "translated_text": "负数倒数"
+  },
+  {
+    "text_index": 2136468077,
+    "translated_text": "负数"
+  },
+  {
+    "text_index": 1113446583,
+    "translated_text": "减法"
+  },
+  {
+    "text_index": 460453555,
+    "translated_text": "棘手的浮点数"
+  },
+  {
+    "text_index": 1063356989,
+    "translated_text": "不同斜率"
+  },
+  {
+    "text_index": 803132252,
+    "translated_text": "浮点数直线"
+  },
+  {
+    "text_index": 1182803578,
+    "translated_text": "分组"
+  },
+  {
+    "text_index": 1774748477,
+    "translated_text": "有序数对"
+  },
+  {
+    "text_index": 1753902297,
+    "translated_text": "绘制垂直运动"
+  },
+  {
+    "text_index": 844594495,
+    "translated_text": "与"
+  },
+  {
+    "text_index": 64836947,
+    "translated_text": "代数变量"
+  },
+  {
+    "text_index": 54091532,
+    "translated_text": "答案"
+  },
+  {
+    "text_index": 858314559,
+    "translated_text": "关联多个变量"
+  },
+  {
+    "text_index": 956905285,
+    "translated_text": "未知值"
+  },
+  {
+    "text_index": 1222457568,
+    "translated_text": "多信号答案"
+  },
+  {
+    "text_index": 998291714,
+    "translated_text": "非数字答案"
+  },
+  {
+    "text_index": 1797922338,
+    "translated_text": "反向绘图"
+  },
+  {
+    "text_index": 389903180,
+    "translated_text": "超级答案"
+  },
+  {
+    "text_index": 1938740752,
+    "translated_text": "变量"
+  },
+  {
+    "text_index": 1465104771,
+    "translated_text": "欧拉数"
+  },
+  {
+    "text_index": 526087336,
+    "translated_text": "指数的底"
+  },
+  {
+    "text_index": 1056033875,
+    "translated_text": "外星图表"
+  },
+  {
+    "text_index": 678989035,
+    "translated_text": "毫无头绪？？"
+  },
+  {
+    "text_index": 1435232667,
+    "translated_text": "幂"
+  },
+  {
+    "text_index": 1021421744,
+    "translated_text": "求指数的底"
+  },
+  {
+    "text_index": 715434169,
+    "translated_text": "且"
+  },
+  {
+    "text_index": 1994581976,
+    "translated_text": "计算式真值命题"
+  },
+  {
+    "text_index": 678905088,
+    "translated_text": "几何逻辑"
+  },
+  {
+    "text_index": 1136327576,
+    "translated_text": "“大于”的辨析"
+  },
+  {
+    "text_index": 1567241130,
+    "translated_text": "“如果”的辨析"
+  },
+  {
+    "text_index": 982809620,
+    "translated_text": "小于零"
+  },
+  {
+    "text_index": 694220548,
+    "translated_text": "小于"
+  },
+  {
+    "text_index": 858503532,
+    "translated_text": "逻辑"
+  },
+  {
+    "text_index": 106477700,
+    "translated_text": "既不小也不大"
+  },
+  {
+    "text_index": 1729993523,
+    "translated_text": "数值比较"
+  },
+  {
+    "text_index": 2027628601,
+    "translated_text": "“或”的辨析"
+  },
+  {
+    "text_index": 757729055,
+    "translated_text": "命题逻辑"
+  },
+  {
+    "text_index": 1171212073,
+    "translated_text": "传递性条件"
+  },
+  {
+    "text_index": 1001467858,
+    "translated_text": "真值"
+  },
+  {
+    "text_index": 242186761,
+    "translated_text": "变量推论"
+  },
+  {
+    "text_index": 1374757990,
+    "translated_text": "抽象延续"
+  },
+  {
+    "text_index": 1147270554,
+    "translated_text": "非常规延续"
+  },
+  {
+    "text_index": 1596811186,
+    "translated_text": "数字延续"
+  },
+  {
+    "text_index": 1767276769,
+    "translated_text": "分数舍入"
+  },
+  {
+    "text_index": 1351864862,
+    "translated_text": "浮点数舍入"
+  },
+  {
+    "text_index": 365488991,
+    "translated_text": "舍入"
+  },
+  {
+    "text_index": 1008479640,
+    "translated_text": "计数"
+  },
+  {
+    "text_index": 1625437266,
+    "translated_text": "空结构"
+  },
+  {
+    "text_index": 296925016,
+    "translated_text": "结构的正式定义"
+  },
+  {
+    "text_index": 2141937506,
+    "translated_text": "原子 3"
+  },
+  {
+    "text_index": 1934751843,
+    "translated_text": "原子很小"
+  },
+  {
+    "text_index": 55374323,
+    "translated_text": "更大的原子"
+  },
+  {
+    "text_index": 538900958,
+    "translated_text": "较大与较小的原子"
+  },
+  {
+    "text_index": 113638238,
+    "translated_text": "元素"
+  },
+  {
+    "text_index": 163492538,
+    "translated_text": "元素"
+  },
+  {
+    "text_index": 1183790168,
+    "translated_text": "元素频率"
+  },
+  {
+    "text_index": 162336526,
+    "translated_text": "多个原子"
+  },
+  {
+    "text_index": 700689345,
+    "translated_text": "相同元素，相同大小"
+  },
+  {
+    "text_index": 1711584209,
+    "translated_text": "相同大小的原子"
+  },
+  {
+    "text_index": 1786057651,
+    "translated_text": "外星卫星"
+  },
+  {
+    "text_index": 670243366,
+    "translated_text": "外星行星的轨道周期"
+  },
+  {
+    "text_index": 1673769546,
+    "translated_text": "恒星系统天体"
+  },
+  {
+    "text_index": 1548341429,
+    "translated_text": "卫星"
+  },
+  {
+    "text_index": 448215533,
+    "translated_text": "天然卫星"
+  },
+  {
+    "text_index": 1432147406,
+    "translated_text": "行星"
+  },
+  {
+    "text_index": 1862761067,
+    "translated_text": "呈现地球"
+  },
+  {
+    "text_index": 400252488,
+    "translated_text": "呈现行星"
+  },
+  {
+    "text_index": 585379479,
+    "translated_text": "化学产物"
+  },
+  {
+    "text_index": 1202666366,
+    "translated_text": "化学反应的辨析"
+  },
+  {
+    "text_index": 1784840900,
+    "translated_text": "反应的辨析"
+  },
+  {
+    "text_index": 729004013,
+    "translated_text": "化合物结合会生成什么"
+  },
+  {
+    "text_index": 409552497,
+    "translated_text": "化合物示例"
+  },
+  {
+    "text_index": 287801798,
+    "translated_text": "化合物"
+  },
+  {
+    "text_index": 1761356509,
+    "translated_text": "化学反应"
+  },
+  {
+    "text_index": 2113048447,
+    "translated_text": "元素、原子、化合物与反应"
+  },
+  {
+    "text_index": 1416573612,
+    "translated_text": "前几种稀有气体"
+  },
+  {
+    "text_index": 1576252893,
+    "translated_text": "氦不形成化合物"
+  },
+  {
+    "text_index": 1222110984,
+    "translated_text": "化学产物是什么"
+  },
+  {
+    "text_index": 697206984,
+    "translated_text": "圆周运动"
+  },
+  {
+    "text_index": 1044678209,
+    "translated_text": "绕圆运动"
+  },
+  {
+    "text_index": 269018679,
+    "translated_text": "轨道周期"
+  },
+  {
+    "text_index": 1803866072,
+    "translated_text": "绕转"
+  },
+  {
+    "text_index": 177002286,
+    "translated_text": "转动周期"
+  },
+  {
+    "text_index": 877583098,
+    "translated_text": "深空结构"
+  },
+  {
+    "text_index": 659608256,
+    "translated_text": "星系"
+  },
+  {
+    "text_index": 423969071,
+    "translated_text": "银河系"
+  },
+  {
+    "text_index": 7261520,
+    "translated_text": "中子星"
+  },
+  {
+    "text_index": 1036781858,
+    "translated_text": "恒星毁灭的其他说法"
+  },
+  {
+    "text_index": 1762233933,
+    "translated_text": "呈现中子星"
+  },
+  {
+    "text_index": 133974619,
+    "translated_text": "化学分解"
+  },
+  {
+    "text_index": 746427826,
+    "translated_text": "摧毁"
+  },
+  {
+    "text_index": 1691401032,
+    "translated_text": "摧毁结构"
+  },
+  {
+    "text_index": 46539453,
+    "translated_text": "外星人制造陨石的句子"
+  },
+  {
+    "text_index": 1051888813,
+    "translated_text": "备选占位句 2"
+  },
+  {
+    "text_index": 67016869,
+    "translated_text": "再一种备选说法"
+  },
+  {
+    "text_index": 2082869338,
+    "translated_text": "备选说法"
+  },
+  {
+    "text_index": 107056060,
+    "translated_text": "原子句"
+  },
+  {
+    "text_index": 2051902223,
+    "translated_text": "备选说法辨析"
+  },
+  {
+    "text_index": 429065717,
+    "translated_text": "做"
+  },
+  {
+    "text_index": 1460637718,
+    "translated_text": "施事与受事示例"
+  },
+  {
+    "text_index": 1838608118,
+    "translated_text": "施事与受事"
+  },
+  {
+    "text_index": 1735868139,
+    "translated_text": "陨石制造讯息的句子"
+  },
+  {
+    "text_index": 5955595,
+    "translated_text": "名词与动词"
+  },
+  {
+    "text_index": 288840352,
+    "translated_text": "名词与动词辨析"
+  },
+  {
+    "text_index": 1710396393,
+    "translated_text": "相反命题"
+  },
+  {
+    "text_index": 210220263,
+    "translated_text": "相反"
+  },
+  {
+    "text_index": 2139355928,
+    "translated_text": "PREPTO"
+  },
+  {
+    "text_index": 896749599,
+    "translated_text": "句子构造"
+  },
+  {
+    "text_index": 1070220042,
+    "translated_text": "人类与外星人的距离"
+  },
+  {
+    "text_index": 1350884859,
+    "translated_text": "陨石速度"
+  },
+  {
+    "text_index": 200801007,
+    "translated_text": "陨石信息"
+  },
+  {
+    "text_index": 1910143594,
+    "translated_text": "我们相距遥远"
+  },
+  {
+    "text_index": 899862280,
+    "translated_text": "大范围运动求和"
+  },
+  {
+    "text_index": 1268979718,
+    "translated_text": "求解运动"
+  },
+  {
+    "text_index": 1844288955,
+    "translated_text": "总运动量"
+  },
+  {
+    "text_index": 478388174,
+    "translated_text": "同位素也是原子"
+  },
+  {
+    "text_index": 518434475,
+    "translated_text": "给原子命名"
+  },
+  {
+    "text_index": 1440690111,
+    "translated_text": "质子与中子大小相同"
+  },
+  {
+    "text_index": 616967465,
+    "translated_text": "放射性衰变"
+  },
+  {
+    "text_index": 229662897,
+    "translated_text": "放射性衰变"
+  },
+  {
+    "text_index": 2094813031,
+    "translated_text": "衰变步骤"
+  },
+  {
+    "text_index": 239658799,
+    "translated_text": "亚原子"
+  },
+  {
+    "text_index": 393829796,
+    "translated_text": "亚原子"
+  },
+  {
+    "text_index": 1476667979,
+    "translated_text": "聚变方程"
+  },
+  {
+    "text_index": 1813017002,
+    "translated_text": "聚变"
+  },
+  {
+    "text_index": 875225580,
+    "translated_text": "人类所在的恒星更大"
+  },
+  {
+    "text_index": 145919078,
+    "translated_text": "为外星恒星命名"
+  },
+  {
+    "text_index": 61792430,
+    "translated_text": "简单恒星"
+  },
+  {
+    "text_index": 799573957,
+    "translated_text": "恒星中的元素"
+  },
+  {
+    "text_index": 449725852,
+    "translated_text": "恒星质量"
+  },
+  {
+    "text_index": 1427118708,
+    "translated_text": "恒星"
+  },
+  {
+    "text_index": 985362242,
+    "translated_text": "恒星"
+  },
+  {
+    "text_index": 722470994,
+    "translated_text": "呈现核聚变"
+  },
+  {
+    "text_index": 435248881,
+    "translated_text": "计算速率"
+  },
+  {
+    "text_index": 1479783185,
+    "translated_text": "HELISEC 是时间单位"
+  },
+  {
+    "text_index": 1031946159,
+    "translated_text": "非零起始时间"
+  },
+  {
+    "text_index": 2008645690,
+    "translated_text": "时间点"
+  },
+  {
+    "text_index": 935014707,
+    "translated_text": "位置计算"
+  },
+  {
+    "text_index": 1073236273,
+    "translated_text": "再谈速率"
+  },
+  {
+    "text_index": 80479827,
+    "translated_text": "多方向速度"
+  },
+  {
+    "text_index": 1416098975,
+    "translated_text": "时间维度"
+  },
+  {
+    "text_index": 2025716838,
+    "translated_text": "时间"
+  },
+  {
+    "text_index": 595441100,
+    "translated_text": "HELISEC 是什么"
+  },
+  {
+    "text_index": 727455967,
+    "translated_text": "距离单位"
+  },
+  {
+    "text_index": 579900122,
+    "translated_text": "FILOGRAM"
+  },
+  {
+    "text_index": 721965170,
+    "translated_text": "质量不是体积"
+  },
+  {
+    "text_index": 1252005996,
+    "translated_text": "质量"
+  },
+  {
+    "text_index": 1446182907,
+    "translated_text": "陨石的 MINIHETER"
+  },
+  {
+    "text_index": 455787054,
+    "translated_text": "质量单位"
+  },
+  {
+    "text_index": 464099343,
+    "translated_text": "亚原子质量"
+  },
+  {
+    "text_index": 605740543,
+    "translated_text": "“是”的辨析"
+  },
+  {
+    "text_index": 264011643,
+    "translated_text": "抽象与具体"
+  },
+  {
+    "text_index": 1641921539,
+    "translated_text": "抽象与具体测验"
+  },
+  {
+    "text_index": 1680807268,
+    "translated_text": "具体圆与抽象圆"
+  },
+  {
+    "text_index": 760650379,
+    "translated_text": "近似几何"
+  },
+  {
+    "text_index": 48894222,
+    "translated_text": "近似语言学"
+  },
+  {
+    "text_index": 1363588737,
+    "translated_text": "近似 VOBJ"
+  },
+  {
+    "text_index": 1641802447,
+    "translated_text": "多数等同于"
+  },
+  {
+    "text_index": 71488814,
+    "translated_text": "相对接近“小”"
+  },
+  {
+    "text_index": 973204629,
+    "translated_text": "VOBJ 的多种相似方式"
+  },
+  {
+    "text_index": 950900488,
+    "translated_text": "哪一对几乎相同"
+  },
+  {
+    "text_index": 1991636818,
+    "translated_text": "知识边界"
+  },
+  {
+    "text_index": 1172813634,
+    "translated_text": "圆有无限条边"
+  },
+  {
+    "text_index": 1301987968,
+    "translated_text": "无穷"
+  },
+  {
+    "text_index": 47024067,
+    "translated_text": "信息视角"
+  },
+  {
+    "text_index": 1443746303,
+    "translated_text": "已知元素"
+  },
+  {
+    "text_index": 2035427000,
+    "translated_text": "宇宙"
+  },
+  {
+    "text_index": 1213859851,
+    "translated_text": "细胞呼吸"
+  },
+  {
+    "text_index": 1708814707,
+    "translated_text": "生命的逆过程"
+  },
+  {
+    "text_index": 1783447851,
+    "translated_text": "值得关注的反应"
+  },
+  {
+    "text_index": 1244102504,
+    "translated_text": "光合作用"
+  },
+  {
+    "text_index": 956560818,
+    "translated_text": "外星人是有机生命"
+  },
+  {
+    "text_index": 1150065984,
+    "translated_text": "海氢行星化合物"
+  },
+  {
+    "text_index": 998577732,
+    "translated_text": "有机化合物"
+  },
+  {
+    "text_index": 1458764476,
+    "translated_text": "碳与氢"
+  },
+  {
+    "text_index": 283708711,
+    "translated_text": "所有词性"
+  },
+  {
+    "text_index": 826558574,
+    "translated_text": "连接词与形容词示例"
+  },
+  {
+    "text_index": 19336081,
+    "translated_text": "词性"
+  },
+  {
+    "text_index": 1818640139,
+    "translated_text": "之后"
+  },
+  {
+    "text_index": 1498472895,
+    "translated_text": "当前陨石时间"
+  },
+  {
+    "text_index": 284370756,
+    "translated_text": "当前"
+  },
+  {
+    "text_index": 616632937,
+    "translated_text": "上一题超级占位"
+  },
+  {
+    "text_index": 458792469,
+    "translated_text": "上一道谜题"
+  },
+  {
+    "text_index": 654074364,
+    "translated_text": "时间推进"
+  },
+  {
+    "text_index": 2125582073,
+    "translated_text": "双重子群表示等价"
+  },
+  {
+    "text_index": 335421053,
+    "translated_text": "人类不是外星人"
+  },
+  {
+    "text_index": 561450527,
+    "translated_text": "生命"
+  },
+  {
+    "text_index": 1097377303,
+    "translated_text": "子群链"
+  },
+  {
+    "text_index": 190461657,
+    "translated_text": "“全部”与“无一”相反"
+  },
+  {
+    "text_index": 1094978082,
+    "translated_text": "VOBJ 的平均值"
+  },
+  {
+    "text_index": 673431365,
+    "translated_text": "平均值"
+  },
+  {
+    "text_index": 1957281576,
+    "translated_text": "最大且最亮的 VOBJ"
+  },
+  {
+    "text_index": 1725601418,
+    "translated_text": "最大的 VOBJ"
+  },
+  {
+    "text_index": 1601566970,
+    "translated_text": "最亮的 VOBJ"
+  },
+  {
+    "text_index": 178690397,
+    "translated_text": "什么都不画"
+  },
+  {
+    "text_index": 133647705,
+    "translated_text": "多数超过一半"
+  },
+  {
+    "text_index": 1879143172,
+    "translated_text": "少数"
+  },
+  {
+    "text_index": 2043807442,
+    "translated_text": "“最多”的辨析"
+  },
+  {
+    "text_index": 730362577,
+    "translated_text": "最多"
+  },
+  {
+    "text_index": 363955806,
+    "translated_text": "最高级"
+  },
+  {
+    "text_index": 458882107,
+    "translated_text": "希望"
+  },
+  {
+    "text_index": 846375865,
+    "translated_text": "人类位置未知"
+  },
+  {
+    "text_index": 207768987,
+    "translated_text": "宇宙中的生命"
+  },
+  {
+    "text_index": 1001471111,
+    "translated_text": "原子很小的示例"
+  },
+  {
+    "text_index": 1469136394,
+    "translated_text": "大原子"
+  },
+  {
+    "text_index": 2036094131,
+    "translated_text": "小恒星"
+  },
+  {
+    "text_index": 1921533129,
+    "translated_text": "抽象数量"
+  },
+  {
+    "text_index": 1948092668,
+    "translated_text": "呈现碳原子"
+  },
+  {
+    "text_index": 1126612455,
+    "translated_text": "呈现金刚石"
+  },
+  {
+    "text_index": 1055117877,
+    "translated_text": "呈现乙烷"
+  },
+  {
+    "text_index": 1385558987,
+    "translated_text": "呈现氢原子"
+  },
+  {
+    "text_index": 1338456469,
+    "translated_text": "呈现甲烷"
+  },
+  {
+    "text_index": 1426442878,
+    "translated_text": "呈现 X-ANE"
+  },
+  {
+    "text_index": 2012030213,
+    "translated_text": "1 个 AUNIT 是 9 个个体"
+  },
+  {
+    "text_index": 934769309,
+    "translated_text": "1 到 8"
+  },
+  {
+    "text_index": 953086896,
+    "translated_text": "成年后能够"
+  },
+  {
+    "text_index": 1063571189,
+    "translated_text": "AUNIT 的寿命等于 LIMBUNIT 的寿命"
+  },
+  {
+    "text_index": 153229129,
+    "translated_text": "大脑加肢体组成 AUNIT"
+  },
+  {
+    "text_index": 670483300,
+    "translated_text": "不同的寿命"
+  },
+  {
+    "text_index": 597488958,
+    "translated_text": "绘制 BRAINUNIT"
+  },
+  {
+    "text_index": 1969937542,
+    "translated_text": "绘制 LIMBUNIT"
+  },
+  {
+    "text_index": 1006741103,
+    "translated_text": "个体间差异"
+  },
+  {
+    "text_index": 1923726109,
+    "translated_text": "许多 LIMBUNIT 制作了讯息"
+  },
+  {
+    "text_index": 1406281069,
+    "translated_text": "分离繁殖"
+  },
+  {
+    "text_index": 1352362236,
+    "translated_text": "同步出生"
+  },
+  {
+    "text_index": 1898052029,
+    "translated_text": "AUNIT 年龄段"
+  },
+  {
+    "text_index": 2102597955,
+    "translated_text": "AUNIT 寿命"
+  },
+  {
+    "text_index": 138798114,
+    "translated_text": "外星人的寿命"
+  },
+  {
+    "text_index": 1937173904,
+    "translated_text": "数据集的统计量"
+  },
+  {
+    "text_index": 1621360143,
+    "translated_text": "绘制中年个体"
+  },
+  {
+    "text_index": 126197944,
+    "translated_text": "寿命"
+  },
+  {
+    "text_index": 2007783668,
+    "translated_text": "最小值"
+  },
+  {
+    "text_index": 1459004012,
+    "translated_text": "外星人绝不会杀死人类"
+  },
+  {
+    "text_index": 870803911,
+    "translated_text": "AUTHORMATE 是配偶"
+  },
+  {
+    "text_index": 1145512555,
+    "translated_text": "AUTHORMATE"
+  },
+  {
+    "text_index": 1529968928,
+    "translated_text": "死亡令人悲伤"
+  },
+  {
+    "text_index": 1275219688,
+    "translated_text": "情感"
+  },
+  {
+    "text_index": 507861576,
+    "translated_text": "快乐与悲伤"
+  },
+  {
+    "text_index": 602937136,
+    "translated_text": "人类的死亡同样令人悲伤"
+  },
+  {
+    "text_index": 163921685,
+    "translated_text": "热爱生命"
+  },
+  {
+    "text_index": 159977468,
+    "translated_text": "爱"
+  },
+  {
+    "text_index": 1764903750,
+    "translated_text": "爱"
+  },
+  {
+    "text_index": 1140294811,
+    "translated_text": "我们为何发送陨石"
+  },
+  {
+    "text_index": 1459478497,
+    "translated_text": "两个外星人比一个更大"
+  },
+  {
+    "text_index": 442434510,
+    "translated_text": "两个 AUNIT 构成一个 AUNIT"
+  },
+  {
+    "text_index": 893520648,
+    "translated_text": "外星单位"
+  },
+  {
+    "text_index": 2077042346,
+    "translated_text": "AUNIT 各不相同"
+  },
+  {
+    "text_index": 445735244,
+    "translated_text": "人类和外星人谁更大"
+  },
+  {
+    "text_index": 1783870310,
+    "translated_text": "两种生命形态"
+  },
+  {
+    "text_index": 1026885367,
+    "translated_text": "个体"
+  },
+  {
+    "text_index": 1949925822,
+    "translated_text": "谁离陨石更近"
+  },
+  {
+    "text_index": 1223744985,
+    "translated_text": "外星人口"
+  },
+  {
+    "text_index": 984210012,
+    "translated_text": "外星行星的物种数量"
+  },
+  {
+    "text_index": 496000081,
+    "translated_text": "所有生命都会死亡"
+  },
+  {
+    "text_index": 1704934513,
+    "translated_text": "活着"
+  },
+  {
+    "text_index": 1757381984,
+    "translated_text": "HELIMONTH 图示"
+  },
+  {
+    "text_index": 1168843789,
+    "translated_text": "HELIMONTH"
+  },
+  {
+    "text_index": 694339434,
+    "translated_text": "HELIYEAR 图示"
+  },
+  {
+    "text_index": 508095959,
+    "translated_text": "何时"
+  },
+  {
+    "text_index": 743041413,
+    "translated_text": "所有作者都已死亡"
+  },
+  {
+    "text_index": 1882764763,
+    "translated_text": "AUTHORGUY 正值中年"
+  },
+  {
+    "text_index": 540445348,
+    "translated_text": "绘制作者"
+  },
+  {
+    "text_index": 173619313,
+    "translated_text": "陨石的作者"
+  },
+  {
+    "text_index": 685996576,
+    "translated_text": "找出作者"
+  },
+  {
+    "text_index": 1435384353,
+    "translated_text": "AUTHORGUY 的孩子"
+  },
+  {
+    "text_index": 58589736,
+    "translated_text": "外星后代"
+  },
+  {
+    "text_index": 684506067,
+    "translated_text": "孩子与父母"
+  },
+  {
+    "text_index": 2136157768,
+    "translated_text": "绘制简单 AUNIT"
+  },
+  {
+    "text_index": 1255774669,
+    "translated_text": "我们能生育多个孩子"
+  },
+  {
+    "text_index": 499419535,
+    "translated_text": "出生是好事"
+  },
+  {
+    "text_index": 167047531,
+    "translated_text": "消耗"
+  },
+  {
+    "text_index": 700240757,
+    "translated_text": "转化"
+  },
+  {
+    "text_index": 1507535502,
+    "translated_text": "摧毁陨石是坏事"
+  },
+  {
+    "text_index": 1642117476,
+    "translated_text": "吃掉其他个体"
+  },
+  {
+    "text_index": 1564667447,
+    "translated_text": "杀死生命是坏事"
+  },
+  {
+    "text_index": 1418382127,
+    "translated_text": "谋杀是坏事"
+  },
+  {
+    "text_index": 1048012451,
+    "translated_text": "禁止同类相食"
+  },
+  {
+    "text_index": 381287858,
+    "translated_text": "行星上最大的大脑"
+  },
+  {
+    "text_index": 6494790,
+    "translated_text": "大脑"
+  },
+  {
+    "text_index": 1585520482,
+    "translated_text": "ELECTRICSENSOR 并非普遍存在"
+  },
+  {
+    "text_index": 1714747159,
+    "translated_text": "眼睛并非普遍存在"
+  },
+  {
+    "text_index": 2004002672,
+    "translated_text": "尚不清楚人类是否有眼睛"
+  },
+  {
+    "text_index": 1101299091,
+    "translated_text": "足够聪明才能感知陨石"
+  },
+  {
+    "text_index": 758031369,
+    "translated_text": "发电器官"
+  },
+  {
+    "text_index": 906021775,
+    "translated_text": "呈现与 AUNIT 分离的 ELECTRICSENSOR"
+  },
+  {
+    "text_index": 138863986,
+    "translated_text": "吸引与排斥"
+  },
+  {
+    "text_index": 2116805423,
+    "translated_text": "黑洞的吸引力最强"
+  },
+  {
+    "text_index": 1660599883,
+    "translated_text": "吸引与排斥"
+  },
+  {
+    "text_index": 1940367702,
+    "translated_text": "相互关系辨析"
+  },
+  {
+    "text_index": 1214559209,
+    "translated_text": "双向"
+  },
+  {
+    "text_index": 1983946772,
+    "translated_text": "孩子与父母相似"
+  },
+  {
+    "text_index": 1269373264,
+    "translated_text": "演化造就物种"
+  },
+  {
+    "text_index": 1835451084,
+    "translated_text": "有性生殖是不及物的"
+  },
+  {
+    "text_index": 784172930,
+    "translated_text": "连续变化"
+  },
+  {
+    "text_index": 1878692878,
+    "translated_text": "AUNIT 的起源"
+  },
+  {
+    "text_index": 1846744270,
+    "translated_text": "演化史 10"
+  },
+  {
+    "text_index": 986338367,
+    "translated_text": "演化史 12"
+  },
+  {
+    "text_index": 1283679070,
+    "translated_text": "演化史 2"
+  },
+  {
+    "text_index": 1810242656,
+    "translated_text": "演化史 4"
+  },
+  {
+    "text_index": 919293494,
+    "translated_text": "演化史 6"
+  },
+  {
+    "text_index": 151144153,
+    "translated_text": "演化史 8"
+  },
+  {
+    "text_index": 631654807,
+    "translated_text": "物种史 2"
+  },
+  {
+    "text_index": 1321718335,
+    "translated_text": "八只眼睛"
+  },
+  {
+    "text_index": 2093587748,
+    "translated_text": "颜色是光"
+  },
+  {
+    "text_index": 1026113867,
+    "translated_text": "眼睛"
+  },
+  {
+    "text_index": 546717453,
+    "translated_text": "感知"
+  },
+  {
+    "text_index": 231026258,
+    "translated_text": "呈现 LIMBUNIT 的眼睛"
+  },
+  {
+    "text_index": 1646814922,
+    "translated_text": "物态与密度"
+  },
+  {
+    "text_index": 1984480622,
+    "translated_text": "固态、液态与气态"
+  },
+  {
+    "text_index": 1012122074,
+    "translated_text": "物态测试 2"
+  },
+  {
+    "text_index": 462291392,
+    "translated_text": "呈现固体"
+  },
+  {
+    "text_index": 1928344044,
+    "translated_text": "外部点计数"
+  },
+  {
+    "text_index": 1172996560,
+    "translated_text": "内外几何"
+  },
+  {
+    "text_index": 676547588,
+    "translated_text": "还有其他智慧生命吗"
+  },
+  {
+    "text_index": 1153476920,
+    "translated_text": "智慧"
+  },
+  {
+    "text_index": 834028841,
+    "translated_text": "大多数物种没有智慧"
+  },
+  {
+    "text_index": 1541444669,
+    "translated_text": "交流"
+  },
+  {
+    "text_index": 1616861144,
+    "translated_text": "语言"
+  },
+  {
+    "text_index": 284991927,
+    "translated_text": "科学"
+  },
+  {
+    "text_index": 877807418,
+    "translated_text": "生命改变了大气"
+  },
+  {
+    "text_index": 1932254978,
+    "translated_text": "生命进行产甲烷作用"
+  },
+  {
+    "text_index": 920375456,
+    "translated_text": "甲烷使行星升温"
+  },
+  {
+    "text_index": 1752790769,
+    "translated_text": "产甲烷作用生成甲烷"
+  },
+  {
+    "text_index": 1961684376,
+    "translated_text": "并非所有个体都迁徙了"
+  },
+  {
+    "text_index": 1917181215,
+    "translated_text": "海洋一侧与冰层一侧"
+  },
+  {
+    "text_index": 1280885574,
+    "translated_text": "海洋演化"
+  },
+  {
+    "text_index": 71639840,
+    "translated_text": "海洋中的史前 AUNIT"
+  },
+  {
+    "text_index": 2073464012,
+    "translated_text": "一些 AUNIT 迁徙了"
+  },
+  {
+    "text_index": 151407823,
+    "translated_text": "生命由部分组成"
+  },
+  {
+    "text_index": 1304053302,
+    "translated_text": "部分与整体"
+  },
+  {
+    "text_index": 1876709721,
+    "translated_text": "部分与整体辨析"
+  },
+  {
+    "text_index": 396194274,
+    "translated_text": "大气"
+  },
+  {
+    "text_index": 88861777,
+    "translated_text": "大气的详细组成"
+  },
+  {
+    "text_index": 1745710345,
+    "translated_text": "大气中的氮气"
+  },
+  {
+    "text_index": 1851594459,
+    "translated_text": "行星核心"
+  },
+  {
+    "text_index": 653217216,
+    "translated_text": "行星上的液体"
+  },
+  {
+    "text_index": 1434876742,
+    "translated_text": "行星分层"
+  },
+  {
+    "text_index": 1530161146,
+    "translated_text": "史前"
+  },
+  {
+    "text_index": 1814126388,
+    "translated_text": "接近"
+  },
+  {
+    "text_index": 1414586959,
+    "translated_text": "面"
+  },
+  {
+    "text_index": 43479583,
+    "translated_text": "球体有无限个面"
+  },
+  {
+    "text_index": 221565684,
+    "translated_text": "边／面"
+  },
+  {
+    "text_index": 605768639,
+    "translated_text": "呈现立方体各面"
+  },
+  {
+    "text_index": 639250218,
+    "translated_text": "离恒星越近越热"
+  },
+  {
+    "text_index": 2033274297,
+    "translated_text": "热侧与冷侧的定义"
+  },
+  {
+    "text_index": 24927165,
+    "translated_text": "潮汐锁定的近侧"
+  },
+  {
+    "text_index": 1537523609,
+    "translated_text": "行星朝向"
+  },
+  {
+    "text_index": 1361600800,
+    "translated_text": "大气发生变化"
+  },
+  {
+    "text_index": 1851485810,
+    "translated_text": "改变物态"
+  },
+  {
+    "text_index": 91058521,
+    "translated_text": "恒星改变了大气"
+  },
+  {
+    "text_index": 1290950656,
+    "translated_text": "动物与植物"
+  },
+  {
+    "text_index": 727151318,
+    "translated_text": "珊瑚"
+  },
+  {
+    "text_index": 463338959,
+    "translated_text": "被吃就会死亡"
+  },
+  {
+    "text_index": 296390146,
+    "translated_text": "人类和外星人都是动物"
+  },
+  {
+    "text_index": 1500657368,
+    "translated_text": "动物各不相同"
+  },
+  {
+    "text_index": 236889760,
+    "translated_text": "大小各异"
+  },
+  {
+    "text_index": 1163670572,
+    "translated_text": "多样"
+  },
+  {
+    "text_index": 686937066,
+    "translated_text": "中年 AUNIT 的质量"
+  },
+  {
+    "text_index": 1877232989,
+    "translated_text": "老年 AUNIT 的 VERTIZ"
+  },
+  {
+    "text_index": 1947230622,
+    "translated_text": "大小关系回顾"
+  },
+  {
+    "text_index": 462379790,
+    "translated_text": "年轻 AUNIT 的质量"
+  },
+  {
+    "text_index": 1070550864,
+    "translated_text": "生命如何移动"
+  },
+  {
+    "text_index": 510952909,
+    "translated_text": "无法飞行"
+  },
+  {
+    "text_index": 1341259669,
+    "translated_text": "鱼类擅长游泳"
+  },
+  {
+    "text_index": 70308347,
+    "translated_text": "不擅运动者行走"
+  },
+  {
+    "text_index": 1055055810,
+    "translated_text": "身体能力"
+  },
+  {
+    "text_index": 71511721,
+    "translated_text": "很不擅长运动"
+  },
+  {
+    "text_index": 232566685,
+    "translated_text": "陆生生物擅长行走"
+  },
+  {
+    "text_index": 1448246526,
+    "translated_text": "行走、游泳与飞行"
+  },
+  {
+    "text_index": 726954494,
+    "translated_text": "ELECTRICSENSOR 与眼睛都能感知"
+  },
+  {
+    "text_index": 381938732,
+    "translated_text": "文明需要智慧"
+  },
+  {
+    "text_index": 1261179364,
+    "translated_text": "多名人类共同翻译"
+  },
+  {
+    "text_index": 1978701592,
+    "translated_text": "核心信念 1"
+  },
+  {
+    "text_index": 755329830,
+    "translated_text": "核心信念 3"
+  },
+  {
+    "text_index": 168230318,
+    "translated_text": "核心信念"
+  },
+  {
+    "text_index": 1426499161,
+    "translated_text": "文化"
+  },
+  {
+    "text_index": 159490070,
+    "translated_text": "主要信念"
+  },
+  {
+    "text_index": 140841200,
+    "translated_text": "两个物种因死亡而交织"
+  },
+  {
+    "text_index": 445829570,
+    "translated_text": "有意识"
+  },
+  {
+    "text_index": 536779751,
+    "translated_text": "体验"
+  },
+  {
+    "text_index": 1448591359,
+    "translated_text": "死亡危机与珊瑚死亡"
+  },
+  {
+    "text_index": 790899627,
+    "translated_text": "死亡危机意识形态"
+  },
+  {
+    "text_index": 1756666566,
+    "translated_text": "死亡危机与自我憎恨"
+  },
+  {
+    "text_index": 1065288621,
+    "translated_text": "感受疼痛"
+  },
+  {
+    "text_index": 1222662334,
+    "translated_text": "憎恨"
+  },
+  {
+    "text_index": 1835158389,
+    "translated_text": "内心的憎恨虽坏却存在"
+  },
+  {
+    "text_index": 14836622,
+    "translated_text": "旧信念为何引发死亡危机"
+  },
+  {
+    "text_index": 805566696,
+    "translated_text": "苦难"
+  },
+  {
+    "text_index": 1306366788,
+    "translated_text": "新信念为何引发死亡危机"
+  },
+  {
+    "text_index": 846272838,
+    "translated_text": "AUTHORGUY 的蚀刻画"
+  },
+  {
+    "text_index": 1526775395,
+    "translated_text": "能见到我的孩子"
+  },
+  {
+    "text_index": 1339915916,
+    "translated_text": "多代同堂"
+  },
+  {
+    "text_index": 2099483410,
+    "translated_text": "作者不擅长运动"
+  },
+  {
+    "text_index": 817847507,
+    "translated_text": "个体表达"
+  },
+  {
+    "text_index": 1413059176,
+    "translated_text": "竞技中追求卓越"
+  },
+  {
+    "text_index": 1138996849,
+    "translated_text": "卓越的辨析"
+  },
+  {
+    "text_index": 1977205379,
+    "translated_text": "竞争精神"
+  },
+  {
+    "text_index": 2112053468,
+    "translated_text": "呈现手势艺术"
+  },
+  {
+    "text_index": 187750514,
+    "translated_text": "呈现步行艺术"
+  },
+  {
+    "text_index": 1821627763,
+    "translated_text": "我们欣赏不同形式的卓越"
+  },
+  {
+    "text_index": 1686726813,
+    "translated_text": "事实"
+  },
+  {
+    "text_index": 1493502041,
+    "translated_text": "事实与信念"
+  },
+  {
+    "text_index": 904169716,
+    "translated_text": "LIMBSPEC 的特长"
+  },
+  {
+    "text_index": 1228194368,
+    "translated_text": "LIMBSPEC"
+  },
+  {
+    "text_index": 1457409963,
+    "translated_text": "训练"
+  },
+  {
+    "text_index": 1890037412,
+    "translated_text": "陨石是 MAKEGOOD"
+  },
+  {
+    "text_index": 1784256257,
+    "translated_text": "陨石是 TEACHGOOD"
+  },
+  {
+    "text_index": 699169023,
+    "translated_text": "陨石的道德意义"
+  },
+  {
+    "text_index": 408792845,
+    "translated_text": "近距离与远距离交流"
+  },
+  {
+    "text_index": 1035090958,
+    "translated_text": "ELECTRICSPEAK 在空气中很困难"
+  },
+  {
+    "text_index": 118238250,
+    "translated_text": "交流方式"
+  },
+  {
+    "text_index": 2115016024,
+    "translated_text": "在陆地而非水中"
+  },
+  {
+    "text_index": 1522368578,
+    "translated_text": "两大意识形态"
+  },
+  {
+    "text_index": 190635382,
+    "translated_text": "信念层级"
+  },
+  {
+    "text_index": 660331192,
+    "translated_text": "意识形态代表不同视角"
+  },
+  {
+    "text_index": 408002017,
+    "translated_text": "信念体系"
+  },
+  {
+    "text_index": 1173113228,
+    "translated_text": "三项核心意识形态差异"
+  },
+  {
+    "text_index": 476319772,
+    "translated_text": "ROTSYMM 意识形态"
+  },
+  {
+    "text_index": 198290263,
+    "translated_text": "ASTAR 具有 ROTSYMM"
+  },
+  {
+    "text_index": 112206723,
+    "translated_text": "AUTHORGUY 喜欢语言"
+  },
+  {
+    "text_index": 1636701390,
+    "translated_text": "喜欢过"
+  },
+  {
+    "text_index": 81428569,
+    "translated_text": "更快得到回应"
+  },
+  {
+    "text_index": 1105338704,
+    "translated_text": "希望朋友们还活着"
+  },
+  {
+    "text_index": 408304011,
+    "translated_text": "智慧生命与我们交流"
+  },
+  {
+    "text_index": 604718613,
+    "translated_text": "无质量交流"
+  },
+  {
+    "text_index": 1812896652,
+    "translated_text": "给未来的讯息"
+  },
+  {
+    "text_index": 375567220,
+    "translated_text": "比其他动物更合群"
+  },
+  {
+    "text_index": 9952166,
+    "translated_text": "用光回应"
+  },
+  {
+    "text_index": 323655627,
+    "translated_text": "社交令人愉快"
+  },
+  {
+    "text_index": 1891016949,
+    "translated_text": "社交"
+  },
+  {
+    "text_index": 368738403,
+    "translated_text": "非智慧生命的交流"
+  },
+  {
+    "text_index": 155842022,
+    "translated_text": "非常合群"
+  },
+  {
+    "text_index": 27560445,
+    "translated_text": "AUTHORGUY 与 AUTHORMATE 的意识形态"
+  },
+  {
+    "text_index": 1220305230,
+    "translated_text": "个人信念"
+  },
+  {
+    "text_index": 1803282552,
+    "translated_text": "旧信念为何需要社交"
+  },
+  {
+    "text_index": 2090544981,
+    "translated_text": "关于万物的交流"
+  },
+  {
+    "text_index": 1781040848,
+    "translated_text": "与 AUTHORMATE 交流观点"
+  },
+  {
+    "text_index": 125492472,
+    "translated_text": "总体而言，社交是好事"
+  },
+  {
+    "text_index": 1343926106,
+    "translated_text": "对联结的看法"
+  },
+  {
+    "text_index": 118050980,
+    "translated_text": "新信念为何需要社交"
+  },
+  {
+    "text_index": 1336712971,
+    "translated_text": "抽象限制"
+  },
+  {
+    "text_index": 1848287251,
+    "translated_text": "信息的局限"
+  },
+  {
+    "text_index": 1639201196,
+    "translated_text": "语言用于交流信息"
+  },
+  {
+    "text_index": 441558494,
+    "translated_text": "科学用于获取信息"
+  },
+  {
+    "text_index": 1731278282,
+    "translated_text": "陨石中的计算机"
+  },
+  {
+    "text_index": 611800253,
+    "translated_text": "机器"
+  },
+  {
+    "text_index": 2054118272,
+    "translated_text": "宇宙中的所有信息"
+  },
+  {
+    "text_index": 196055893,
+    "translated_text": "电是能量"
+  },
+  {
+    "text_index": 563594334,
+    "translated_text": "一切行动都需要能量"
+  },
+  {
+    "text_index": 1687875559,
+    "translated_text": "能量"
+  },
+  {
+    "text_index": 371137530,
+    "translated_text": "生命是能量"
+  },
+  {
+    "text_index": 1213929862,
+    "translated_text": "光是可感知的能量"
+  },
+  {
+    "text_index": 716267096,
+    "translated_text": "质量是能量"
+  },
+  {
+    "text_index": 298220555,
+    "translated_text": "反应是能量转移"
+  },
+  {
+    "text_index": 2133947148,
+    "translated_text": "空间维度"
+  },
+  {
+    "text_index": 362166979,
+    "translated_text": "宇宙有三个空间维度"
+  },
+  {
+    "text_index": 9083580,
+    "translated_text": "外星文明的掌握层级"
+  },
+  {
+    "text_index": 1292671349,
+    "translated_text": "核聚变机器"
+  },
+  {
+    "text_index": 1754134744,
+    "translated_text": "外星技术"
+  },
+  {
+    "text_index": 1463601402,
+    "translated_text": "能否掌握空间"
+  },
+  {
+    "text_index": 849523324,
+    "translated_text": "前沿"
+  },
+  {
+    "text_index": 1374593914,
+    "translated_text": "前沿 3"
+  },
+  {
+    "text_index": 1007452447,
+    "translated_text": "掌握原子的示例"
+  },
+  {
+    "text_index": 206110469,
+    "translated_text": "掌握化学的示例"
+  },
+  {
+    "text_index": 1493440899,
+    "translated_text": "掌握合作的示例"
+  },
+  {
+    "text_index": 1490217430,
+    "translated_text": "掌握能量的示例"
+  },
+  {
+    "text_index": 1364800629,
+    "translated_text": "掌握信息的示例"
+  },
+  {
+    "text_index": 1279016628,
+    "translated_text": "掌握语言的示例"
+  },
+  {
+    "text_index": 600322013,
+    "translated_text": "掌握科学思维"
+  },
+  {
+    "text_index": 334427337,
+    "translated_text": "掌握自我"
+  },
+  {
+    "text_index": 1270156692,
+    "translated_text": "掌握空间仍属未知"
+  },
+  {
+    "text_index": 397098167,
+    "translated_text": "掌握空间"
+  },
+  {
+    "text_index": 1198791809,
+    "translated_text": "掌握时间的示例"
+  },
+  {
+    "text_index": 403038283,
+    "translated_text": "人类科技巅峰"
+  },
+  {
+    "text_index": 1119395976,
+    "translated_text": "我们并非无所不知"
+  },
+  {
+    "text_index": 1318496753,
+    "translated_text": "信息限制"
+  },
+  {
+    "text_index": 1765162548,
+    "translated_text": "已掌握"
+  },
+  {
+    "text_index": 1924180589,
+    "translated_text": "掌握层级"
+  },
+  {
+    "text_index": 1305691950,
+    "translated_text": "进步"
+  },
+  {
+    "text_index": 1598498817,
+    "translated_text": "AUTHORGUY 向翻译员问好"
+  },
+  {
+    "text_index": 127277689,
+    "translated_text": "定义问候"
+  },
+  {
+    "text_index": 1971923518,
+    "translated_text": "活在记忆中"
+  },
+  {
+    "text_index": 18591354,
+    "translated_text": "愿有朝一日再相逢"
+  },
+  {
+    "text_index": 224595895,
+    "translated_text": "向远方道别"
+  },
+  {
+    "text_index": 1165644566,
+    "translated_text": "感谢你倾听我们的讯息"
+  },
+  {
+    "text_index": 1902981224,
+    "translated_text": "陨石发来问候"
+  },
+  {
+    "text_index": 88204955,
+    "translated_text": "再算传输总数"
+  },
+  {
+    "text_index": 769917816,
+    "translated_text": "我们说过“你好”"
+  },
+  {
+    "text_index": 1933790374,
+    "translated_text": "满怀爱意"
+  },
+  {
+    "text_index": 1999640452,
+    "translated_text": "临时结尾"
+  },
+  {
+    "text_index": 900921885,
+    "translated_text": "圆的辨析"
+  },
+  {
+    "text_index": 1595938712,
+    "translated_text": "球体的辨析"
+  },
+  {
+    "text_index": 415101577,
+    "translated_text": "球体"
+  },
+  {
+    "text_index": 390695717,
+    "translated_text": "单位圆"
+  },
+  {
+    "text_index": 1861407122,
+    "translated_text": "色彩校准"
+  },
+  {
+    "text_index": 524301078,
+    "translated_text": "陨石屏幕低值校准"
+  },
+  {
+    "text_index": 188830953,
+    "translated_text": "陨石屏幕颜色测试 2"
+  },
+  {
+    "text_index": 1493869189,
+    "translated_text": "陨石屏幕颜色测试 4"
+  },
+  {
+    "text_index": 831882830,
+    "translated_text": "使用颜色"
+  },
+  {
+    "text_index": 329168692,
+    "translated_text": "大球与小球"
+  },
+  {
+    "text_index": 706849177,
+    "translated_text": "绘制球体"
+  },
+  {
+    "text_index": 928513402,
+    "translated_text": "球体绘制立方体"
+  },
+  {
+    "text_index": 374111012,
+    "translated_text": "VOBJ 是绘制出的球体"
+  },
+  {
+    "text_index": 110578130,
+    "translated_text": "立方体维度"
+  },
+  {
+    "text_index": 584675861,
+    "translated_text": "HORTHIZ、DEPTHIZ 与 VERTIZ"
+  },
+  {
+    "text_index": 1903050646,
+    "translated_text": "只有两个维度"
+  },
+  {
+    "text_index": 903957782,
+    "translated_text": "视觉测试 1"
+  },
+  {
+    "text_index": 9883501,
+    "translated_text": "视觉测试 3"
+  },
+  {
+    "text_index": 1327438671,
+    "translated_text": "视觉测试 5"
+  },
+  {
+    "text_index": 1118134996,
+    "translated_text": "视觉测试 8"
+  },
+  {
+    "text_index": 1075471579,
+    "translated_text": "视觉信息"
+  },
+  {
+    "text_index": 1936436372,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 479835718,
+    "translated_text": "铝"
+  },
+  {
+    "text_index": 2109187997,
+    "translated_text": "锑"
+  },
+  {
+    "text_index": 1021698520,
+    "translated_text": "氩"
+  },
+  {
+    "text_index": 2042697549,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 225534167,
+    "translated_text": "分钟"
+  },
+  {
+    "text_index": 1208291798,
+    "translated_text": "砹"
+  },
+  {
+    "text_index": 1126218413,
+    "translated_text": "人工合成"
+  },
+  {
+    "text_index": 2100703231,
+    "translated_text": "钡"
+  },
+  {
+    "text_index": 1476646384,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 539444997,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 124602526,
+    "translated_text": "铋"
+  },
+  {
+    "text_index": 824286623,
+    "translated_text": "溴"
+  },
+  {
+    "text_index": 1610042659,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 1667488361,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 19181219,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 222195414,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 479849309,
+    "translated_text": "钙"
+  },
+  {
+    "text_index": 574491627,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 1875907931,
+    "translated_text": "碳"
+  },
+  {
+    "text_index": 1763183104,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 802613604,
+    "translated_text": "铯"
+  },
+  {
+    "text_index": 1124146525,
+    "translated_text": "铬"
+  },
+  {
+    "text_index": 996787177,
+    "translated_text": "铜"
+  },
+  {
+    "text_index": 473713953,
+    "translated_text": "镝"
+  },
+  {
+    "text_index": 1640133093,
+    "translated_text": "铕"
+  },
+  {
+    "text_index": 1275172211,
+    "translated_text": "毫秒"
+  },
+  {
+    "text_index": 1585764626,
+    "translated_text": "毫秒"
+  },
+  {
+    "text_index": 1449932293,
+    "translated_text": "毫秒"
+  },
+  {
+    "text_index": 1072368094,
+    "translated_text": "钆"
+  },
+  {
+    "text_index": 2112782389,
+    "translated_text": "锗"
+  },
+  {
+    "text_index": 2136043833,
+    "translated_text": "金"
+  },
+  {
+    "text_index": 1075225834,
+    "translated_text": "铪"
+  },
+  {
+    "text_index": 381997900,
+    "translated_text": "氦"
+  },
+  {
+    "text_index": 1209837615,
+    "translated_text": "氢"
+  },
+  {
+    "text_index": 2019500436,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 2084507194,
+    "translated_text": "铱"
+  },
+  {
+    "text_index": 1213013108,
+    "translated_text": "氪"
+  },
+  {
+    "text_index": 1724528000,
+    "translated_text": "铅"
+  },
+  {
+    "text_index": 1876970260,
+    "translated_text": "汞"
+  },
+  {
+    "text_index": 149079906,
+    "translated_text": "氖"
+  },
+  {
+    "text_index": 1205310285,
+    "translated_text": "铌"
+  },
+  {
+    "text_index": 325926501,
+    "translated_text": "氧"
+  },
+  {
+    "text_index": 765558318,
+    "translated_text": "钯"
+  },
+  {
+    "text_index": 386225291,
+    "translated_text": "铂"
+  },
+  {
+    "text_index": 2035865881,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 916995401,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 1912552677,
+    "translated_text": "镨"
+  },
+  {
+    "text_index": 736031328,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 1607757283,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 1535162798,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 2014225422,
+    "translated_text": "人工合成"
+  },
+  {
+    "text_index": 1464038345,
+    "translated_text": "镭"
+  },
+  {
+    "text_index": 2009852297,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 1187811472,
+    "translated_text": "分钟"
+  },
+  {
+    "text_index": 181941105,
+    "translated_text": "铑"
+  },
+  {
+    "text_index": 1414720123,
+    "translated_text": "钌"
+  },
+  {
+    "text_index": 2098203871,
+    "translated_text": "钐"
+  },
+  {
+    "text_index": 1650510603,
+    "translated_text": "硒"
+  },
+  {
+    "text_index": 402968038,
+    "translated_text": "银"
+  },
+  {
+    "text_index": 258907825,
+    "translated_text": "锝"
+  },
+  {
+    "text_index": 1768003174,
+    "translated_text": "人工合成"
+  },
+  {
+    "text_index": 990307571,
+    "translated_text": "铊"
+  },
+  {
+    "text_index": 1218451933,
+    "translated_text": "钍"
+  },
+  {
+    "text_index": 370636501,
+    "translated_text": "钛"
+  },
+  {
+    "text_index": 929457827,
+    "translated_text": "钨"
+  },
+  {
+    "text_index": 2090975557,
+    "translated_text": "年"
+  },
+  {
+    "text_index": 862159210,
+    "translated_text": "氙"
+  },
+  {
+    "text_index": 619934338,
+    "translated_text": "镱"
+  },
+  {
+    "text_index": 1888738039,
+    "translated_text": "锆"
+  }
+]

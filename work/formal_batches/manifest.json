@@ -1,0 +1,205 @@
+{
+  "cache": "../cache.json",
+  "untranslated": 11067,
+  "groups": [
+    {
+      "group": 1,
+      "name": "dialogue_chunks_1_26",
+      "source": "src_01_dialogue_chunks_1_26.json",
+      "translation": "trans_01.json",
+      "newterms": "newterms_01.txt",
+      "count": 589,
+      "category": "dialogue_and_titles",
+      "chunk_start": 1,
+      "chunk_end": 26
+    },
+    {
+      "group": 2,
+      "name": "dialogue_chunks_27_87",
+      "source": "src_02_dialogue_chunks_27_87.json",
+      "translation": "trans_02.json",
+      "newterms": "newterms_02.txt",
+      "count": 581,
+      "category": "dialogue_and_titles",
+      "chunk_start": 27,
+      "chunk_end": 87
+    },
+    {
+      "group": 3,
+      "name": "dialogue_chunks_88_241",
+      "source": "src_03_dialogue_chunks_88_241.json",
+      "translation": "trans_03.json",
+      "newterms": "newterms_03.txt",
+      "count": 580,
+      "category": "dialogue_and_titles",
+      "chunk_start": 88,
+      "chunk_end": 241
+    },
+    {
+      "group": 4,
+      "name": "dialogue_chunks_242_334",
+      "source": "src_04_dialogue_chunks_242_334.json",
+      "translation": "trans_04.json",
+      "newterms": "newterms_04.txt",
+      "count": 585,
+      "category": "dialogue_and_titles",
+      "chunk_start": 242,
+      "chunk_end": 334
+    },
+    {
+      "group": 5,
+      "name": "dialogue_chunks_335_426",
+      "source": "src_05_dialogue_chunks_335_426.json",
+      "translation": "trans_05.json",
+      "newterms": "newterms_05.txt",
+      "count": 583,
+      "category": "dialogue_and_titles",
+      "chunk_start": 335,
+      "chunk_end": 426
+    },
+    {
+      "group": 6,
+      "name": "dialogue_chunks_427_526",
+      "source": "src_06_dialogue_chunks_427_526.json",
+      "translation": "trans_06.json",
+      "newterms": "newterms_06.txt",
+      "count": 581,
+      "category": "dialogue_and_titles",
+      "chunk_start": 427,
+      "chunk_end": 526
+    },
+    {
+      "group": 7,
+      "name": "dialogue_chunks_527_617",
+      "source": "src_07_dialogue_chunks_527_617.json",
+      "translation": "trans_07.json",
+      "newterms": "newterms_07.txt",
+      "count": 593,
+      "category": "dialogue_and_titles",
+      "chunk_start": 527,
+      "chunk_end": 617
+    },
+    {
+      "group": 8,
+      "name": "dialogue_chunks_618_687",
+      "source": "src_08_dialogue_chunks_618_687.json",
+      "translation": "trans_08.json",
+      "newterms": "newterms_08.txt",
+      "count": 585,
+      "category": "dialogue_and_titles",
+      "chunk_start": 618,
+      "chunk_end": 687
+    },
+    {
+      "group": 9,
+      "name": "dialogue_chunks_688_770",
+      "source": "src_09_dialogue_chunks_688_770.json",
+      "translation": "trans_09.json",
+      "newterms": "newterms_09.txt",
+      "count": 578,
+      "category": "dialogue_and_titles",
+      "chunk_start": 688,
+      "chunk_end": 770
+    },
+    {
+      "group": 10,
+      "name": "dialogue_chunks_771_805",
+      "source": "src_10_dialogue_chunks_771_805.json",
+      "translation": "trans_10.json",
+      "newterms": "newterms_10.txt",
+      "count": 589,
+      "category": "dialogue_and_titles",
+      "chunk_start": 771,
+      "chunk_end": 805
+    },
+    {
+      "group": 11,
+      "name": "dialogue_chunks_806_919",
+      "source": "src_11_dialogue_chunks_806_919.json",
+      "translation": "trans_11.json",
+      "newterms": "newterms_11.txt",
+      "count": 568,
+      "category": "dialogue_and_titles",
+      "chunk_start": 806,
+      "chunk_end": 919
+    },
+    {
+      "group": 12,
+      "name": "dialogue_chunks_920_1047",
+      "source": "src_12_dialogue_chunks_920_1047.json",
+      "translation": "trans_12.json",
+      "newterms": "newterms_12.txt",
+      "count": 570,
+      "category": "dialogue_and_titles",
+      "chunk_start": 920,
+      "chunk_end": 1047
+    },
+    {
+      "group": 13,
+      "name": "dialogue_chunks_1048_1136",
+      "source": "src_13_dialogue_chunks_1048_1136.json",
+      "translation": "trans_13.json",
+      "newterms": "newterms_13.txt",
+      "count": 567,
+      "category": "dialogue_and_titles",
+      "chunk_start": 1048,
+      "chunk_end": 1136
+    },
+    {
+      "group": 14,
+      "name": "dialogue_chunks_1137_1236",
+      "source": "src_14_dialogue_chunks_1137_1236.json",
+      "translation": "trans_14.json",
+      "newterms": "newterms_14.txt",
+      "count": 567,
+      "category": "dialogue_and_titles",
+      "chunk_start": 1137,
+      "chunk_end": 1236
+    },
+    {
+      "group": 15,
+      "name": "ui_core",
+      "source": "src_15_ui_core.json",
+      "translation": "trans_15.json",
+      "newterms": "newterms_15.txt",
+      "count": 751,
+      "category": "ui_core"
+    },
+    {
+      "group": 16,
+      "name": "display_values_1",
+      "source": "src_16_display_values_1.json",
+      "translation": "trans_16.json",
+      "newterms": "newterms_16.txt",
+      "count": 640,
+      "category": "display_values"
+    },
+    {
+      "group": 17,
+      "name": "display_values_2",
+      "source": "src_17_display_values_2.json",
+      "translation": "trans_17.json",
+      "newterms": "newterms_17.txt",
+      "count": 639,
+      "category": "display_values"
+    },
+    {
+      "group": 18,
+      "name": "system_hypotheses",
+      "source": "src_18_system_hypotheses.json",
+      "translation": "trans_18.json",
+      "newterms": "newterms_18.txt",
+      "count": 639,
+      "category": "system_hypotheses"
+    },
+    {
+      "group": 19,
+      "name": "system_other",
+      "source": "src_19_system_other.json",
+      "translation": "trans_19.json",
+      "newterms": "newterms_19.txt",
+      "count": 282,
+      "category": "system_other"
+    }
+  ]
+}

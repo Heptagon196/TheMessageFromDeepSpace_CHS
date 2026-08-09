@@ -1,0 +1,6392 @@
+[
+  {
+    "text_index": 2022384660,
+    "source_text": "Double Helixes Intertwined",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1117:field:songTitle",
+      "object_name": "Double Helixes Intertwined",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 261922471,
+    "source_text": "Falling Somewhere",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1118:field:songTitle",
+      "object_name": "Falling Somewhere",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 1904842102,
+    "source_text": "First Contact",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1119:field:songTitle",
+      "object_name": "First Contact",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 162006771,
+    "source_text": "Square Cube Law",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1121:field:songTitle",
+      "object_name": "Square Cube Law",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 1924011342,
+    "source_text": "Starchaser",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1122:field:songTitle",
+      "object_name": "Starchaser",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 981228257,
+    "source_text": "Twinkling",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1123:field:songTitle",
+      "object_name": "Twinkling",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 2004483164,
+    "source_text": "Visual Object",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1124:field:songTitle",
+      "object_name": "Visual Object",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 481037230,
+    "source_text": "Whole Lotta Lonely",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1126:field:songTitle",
+      "object_name": "Whole Lotta Lonely",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 1124837854,
+    "source_text": "Yearning",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:1127:field:songTitle",
+      "object_name": "Yearning",
+      "field_path": "songTitle"
+    }
+  },
+  {
+    "text_index": 1171879749,
+    "source_text": "AREA",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2374:field:title",
+      "object_name": "AREA",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 246013216,
+    "source_text": "BUILD FROM DISTANCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2375:field:title",
+      "object_name": "BUILD FROM DISTANCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 499063012,
+    "source_text": "DIFFERENT SHAPES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2377:field:title",
+      "object_name": "DIFFERENT SHAPES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 855510390,
+    "source_text": "Grouping Symbols",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2380:field:puzzleGroupName",
+      "object_name": "Grouping Symbols",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 2051811078,
+    "source_text": "HAS ENDHAS STORE DATA",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2382:field:title",
+      "object_name": "HAS ENDHAS STORE DATA",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 996443720,
+    "source_text": "HAS ENDHAS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2383:field:title",
+      "object_name": "HAS ENDHAS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1902158242,
+    "source_text": "LINESEG",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2385:field:title",
+      "object_name": "LINESEG",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1920228259,
+    "source_text": "PERIMETER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2389:field:title",
+      "object_name": "PERIMETER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1896224402,
+    "source_text": "POINT COMPOSITION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2392:field:title",
+      "object_name": "POINT COMPOSITION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2077124289,
+    "source_text": "POINT LABEL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2393:field:title",
+      "object_name": "POINT LABEL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1447949282,
+    "source_text": "POINT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2394:field:title",
+      "object_name": "POINT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 161545818,
+    "source_text": "PYTHAGOREAN THEOREM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2396:field:title",
+      "object_name": "PYTHAGOREAN THEOREM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1239115391,
+    "source_text": "SHAPE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2400:field:title",
+      "object_name": "SHAPE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 685958193,
+    "source_text": "SOLVE SHAPE CORNER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2401:field:title",
+      "object_name": "SOLVE SHAPE CORNER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 162588263,
+    "source_text": "Shapes",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2402:field:puzzleGroupName",
+      "object_name": "Shapes",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1575431876,
+    "source_text": "WHICH POINTS MAKE WHICH LINE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2403:field:title",
+      "object_name": "WHICH POINTS MAKE WHICH LINE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1289242073,
+    "source_text": "MEGA MULTI-PART ANS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2405:field:title",
+      "object_name": "MEGA MULTI-PART ANS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1920422786,
+    "source_text": "MULTI-PART ANS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2406:field:title",
+      "object_name": "MULTI-PART ANS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 781229136,
+    "source_text": "Multi-Part Answers",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2408:field:puzzleGroupName",
+      "object_name": "Multi-Part Answers",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 358487997,
+    "source_text": "MAKE SHAPE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2412:field:title",
+      "object_name": "MAKE SHAPE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 519643498,
+    "source_text": "MAKE TEST",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2414:field:title",
+      "object_name": "MAKE TEST",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1881205693,
+    "source_text": "MAKE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2415:field:title",
+      "object_name": "MAKE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 867526019,
+    "source_text": "MULTI-SHAPE CONSTRUCTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2416:field:title",
+      "object_name": "MULTI-SHAPE CONSTRUCTION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 863258606,
+    "source_text": "MOVE 3D SHAPE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2420:field:title",
+      "object_name": "MOVE 3D SHAPE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2050595771,
+    "source_text": "MOVE INFORMATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2422:field:title",
+      "object_name": "MOVE INFORMATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 928516839,
+    "source_text": "MOVE POINT TO CONTAINER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2424:field:title",
+      "object_name": "MOVE POINT TO CONTAINER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 106334151,
+    "source_text": "DUMMY MESSAGE 2",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2429:field:title",
+      "object_name": "DUMMY MESSAGE 2",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1933599360,
+    "source_text": "LIST SIGNALS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2431:field:title",
+      "object_name": "LIST SIGNALS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1412523784,
+    "source_text": "METEOR MAKE MESSAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2433:field:title",
+      "object_name": "METEOR MAKE MESSAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2070931543,
+    "source_text": "METEOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2435:field:title",
+      "object_name": "METEOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1923128447,
+    "source_text": "Message",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2436:field:puzzleGroupName",
+      "object_name": "Message Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1873445698,
+    "source_text": "RECOGNIZE EARLY MESSAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2437:field:title",
+      "object_name": "RECOGNIZE EARLY MESSAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1307638453,
+    "source_text": "RETURN METEOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2438:field:title",
+      "object_name": "RETURN METEOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1342869008,
+    "source_text": "Meteor Signals",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2440:field:puzzleGroupName",
+      "object_name": "Signals",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 970770660,
+    "source_text": "TOTAL TRANSMISSION COUNT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2441:field:title",
+      "object_name": "TOTAL TRANSMISSION COUNT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1522095749,
+    "source_text": "WHICH SIGNAL AGAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2442:field:title",
+      "object_name": "WHICH SIGNAL AGAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 523127217,
+    "source_text": "Base-8",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2447:field:title",
+      "object_name": "Base-8",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1940984630,
+    "source_text": "DESCENDING SPACES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2448:field:title",
+      "object_name": "DESCENDING SPACES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1329439995,
+    "source_text": "DOUBLE SPACE CLARIFY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2449:field:title",
+      "object_name": "DOUBLE SPACE CLARIFY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 214268257,
+    "source_text": "Defining Space Gaps",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2451:field:title",
+      "object_name": "Defining Space Gaps",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1663544316,
+    "source_text": "Format Numbers",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2454:field:puzzleGroupName",
+      "object_name": "Format Numbers",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1231206522,
+    "source_text": "Advanced Arithmetic",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2463:field:title",
+      "object_name": "Advanced Arithmetic",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1581176184,
+    "source_text": "CHAIN ADDITION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2464:field:title",
+      "object_name": "CHAIN ADDITION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1870395944,
+    "source_text": "DIVISION VICTORY LAP",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2466:field:title",
+      "object_name": "DIVISION VICTORY LAP",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 944231792,
+    "source_text": "EQUALS NOT COMPUTE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2468:field:title",
+      "object_name": "EQUALS NOT COMPUTE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 100283382,
+    "source_text": "Equal Expressions",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2470:field:title",
+      "object_name": "Equal Expressions",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 99918345,
+    "source_text": "FLOAT GRAND FINALE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2473:field:title",
+      "object_name": "FLOAT GRAND FINALE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1530655247,
+    "source_text": "FLOAT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2474:field:title",
+      "object_name": "FLOAT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1602604497,
+    "source_text": "MULTIPLY ADD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2477:field:title",
+      "object_name": "MULTIPLY ADD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1065208366,
+    "source_text": "Multiplication to 2 Digits",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2479:field:title",
+      "object_name": "Multiplication to 2 Digits",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 193562076,
+    "source_text": "OPERATION PARTY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2483:field:title",
+      "object_name": "OPERATION PARTY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 168904460,
+    "source_text": "Math Operations",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2484:field:puzzleGroupName",
+      "object_name": "Operations",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 2107595378,
+    "source_text": "SUBTRACTION FLOATS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2486:field:title",
+      "object_name": "SUBTRACTION FLOATS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1314792329,
+    "source_text": "Plot Horizontal Movement",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2492:field:title",
+      "object_name": "Plot Horizontal Movement",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1038038279,
+    "source_text": "Plot a Line",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2494:field:title",
+      "object_name": "Plot a Line",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1294348015,
+    "source_text": "WITH SPACE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2495:field:title",
+      "object_name": "WITH SPACE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 313069129,
+    "source_text": "3 POINT PLOTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2497:field:title",
+      "object_name": "3 POINT PLOTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 907535934,
+    "source_text": "ANS YET AGAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2499:field:title",
+      "object_name": "ANS YET AGAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 894124648,
+    "source_text": "ANS YET AGAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2500:field:title",
+      "object_name": "ANS YET YET AGAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 988376641,
+    "source_text": "ASSOCIATE VARIABLES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2503:field:title",
+      "object_name": "ASSOCIATE VARIABLES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 528630022,
+    "source_text": "CLARIFY ANS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2505:field:title",
+      "object_name": "CLARIFY ANS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1124262457,
+    "source_text": "CLARIFY VAR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2506:field:title",
+      "object_name": "CLARIFY VAR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 566059359,
+    "source_text": "FUNCTION WARMUP",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2507:field:title",
+      "object_name": "FUNCTION WARMUP",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1358844719,
+    "source_text": "Functions",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2508:field:puzzleGroupName",
+      "object_name": "Functions",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1271509002,
+    "source_text": "PLOTS SPELLED OUT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2512:field:title",
+      "object_name": "PLOTS SPELLED OUT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 812393463,
+    "source_text": "PLOTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2513:field:title",
+      "object_name": "PLOTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1518649541,
+    "source_text": "VAR NUM DOES NOT MATTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2515:field:title",
+      "object_name": "VAR NUM DOES NOT MATTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1570650717,
+    "source_text": "EASY QUADRATIC",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2517:field:title",
+      "object_name": "EASY QUADRATIC",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 599189680,
+    "source_text": "EXPONENT BASE TOUGH",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2519:field:title",
+      "object_name": "EXPONENT BASE TOUGH",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 650475907,
+    "source_text": "Exponents",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2521:field:puzzleGroupName",
+      "object_name": "Exponent Graphs",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1388166908,
+    "source_text": "Quadratic Curve",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2525:field:title",
+      "object_name": "Quadratic Curve",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1654885094,
+    "source_text": "Solve for Exponent",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2527:field:title",
+      "object_name": "Solve for Exponent",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1960486378,
+    "source_text": "UNNECESSARY INFO",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2528:field:title",
+      "object_name": "UNNECESSARY INFO",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 593680038,
+    "source_text": "AND CLARIFY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2529:field:title",
+      "object_name": "AND CLARIFY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1599296728,
+    "source_text": "BIGGER SMALLER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2531:field:title",
+      "object_name": "BIGGER SMALLER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1734406505,
+    "source_text": "CONTEXTLESS THEREFORE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2533:field:title",
+      "object_name": "CONTEXTLESS THEREFORE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1373223361,
+    "source_text": "GREATER THAN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2536:field:title",
+      "object_name": "GREATER THAN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1032666630,
+    "source_text": "GREATER, LESSER, OR EQUALS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2537:field:title",
+      "object_name": "GREATER, LESSER, OR EQUALS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1494410886,
+    "source_text": "Geometry Logic",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2538:field:puzzleGroupName",
+      "object_name": "Geometry Logic 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1281653256,
+    "source_text": "IF",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2540:field:title",
+      "object_name": "IF",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2096447133,
+    "source_text": "LESS THAN CLARIFY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2541:field:title",
+      "object_name": "LESS THAN CLARIFY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 246261499,
+    "source_text": "LOGICAL OPERATIONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2544:field:title",
+      "object_name": "LOGICAL OPERATIONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 830995813,
+    "source_text": "NOT CLARIFY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2546:field:title",
+      "object_name": "NOT CLARIFY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2060271529,
+    "source_text": "NOT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2548:field:title",
+      "object_name": "NOT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1471326604,
+    "source_text": "OR VS AND",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2551:field:title",
+      "object_name": "OR VS AND",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1962489468,
+    "source_text": "OR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2552:field:title",
+      "object_name": "OR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 28026919,
+    "source_text": "PRIMITIVE BIGGER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2553:field:title",
+      "object_name": "PRIMITIVE BIGGER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1326179606,
+    "source_text": "PRIMITIVE SMALLER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2554:field:title",
+      "object_name": "PRIMITIVE SMALLER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 823929905,
+    "source_text": "THEREFORE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2556:field:title",
+      "object_name": "THEREFORE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 795784687,
+    "source_text": "TRUTH STATEMENT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2558:field:title",
+      "object_name": "TRUTH STATEMENT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2046640026,
+    "source_text": "PI",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2564:field:title",
+      "object_name": "PI",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 745187691,
+    "source_text": "ROUNDING INTRO",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2567:field:title",
+      "object_name": "ROUNDING INTRO",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1661947413,
+    "source_text": "ROUNDING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2568:field:title",
+      "object_name": "ROUNDING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1512016290,
+    "source_text": "3D SHAPES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2570:field:title",
+      "object_name": "3D SHAPES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1315144819,
+    "source_text": "COUNT STRUCTURES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2571:field:title",
+      "object_name": "COUNT STRUCTURES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 523547501,
+    "source_text": "NON-GEOMETRY STRUCTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2574:field:title",
+      "object_name": "NON-GEOMETRY STRUCTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 320682317,
+    "source_text": "STRUCTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2576:field:title",
+      "object_name": "STRUCTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1999335824,
+    "source_text": "STRUCTURES SELF-CONTAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2577:field:title",
+      "object_name": "STRUCTURES SELF-CONTAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1375902381,
+    "source_text": "Data",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2578:field:puzzleGroupName",
+      "object_name": "Structures",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1736398639,
+    "source_text": "WHAT TYPE OF STRUCTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2579:field:title",
+      "object_name": "WHAT TYPE OF STRUCTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1433699762,
+    "source_text": "SPACE OBJECT QUIZ 4",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2580:field:title",
+      "object_name": "SPACE OBJECT QUIZ 4",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1358807872,
+    "source_text": "2 ATOMS BIGGER THAN 1",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2581:field:title",
+      "object_name": "2 ATOMS BIGGER THAN 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1096124179,
+    "source_text": "ATOM 6",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2583:field:title",
+      "object_name": "ATOM 6",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1094120179,
+    "source_text": "ATOM VISUALIZED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2584:field:title",
+      "object_name": "ATOM VISUALIZED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 296154165,
+    "source_text": "ATOM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2585:field:title",
+      "object_name": "ATOM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1447978064,
+    "source_text": "Atoms",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2587:field:puzzleGroupName",
+      "object_name": "Atoms",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 458825912,
+    "source_text": "ELEMENT GROUPS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2590:field:title",
+      "object_name": "ELEMENT GROUPS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 846903838,
+    "source_text": "2 PLANET SYSTEM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2597:field:title",
+      "object_name": "2 PLANET SYSTEM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 507057029,
+    "source_text": "ALIEN PLANET MASS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2599:field:title",
+      "object_name": "ALIEN PLANET MASS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1541948553,
+    "source_text": "ALIEN PLANET ORBITAL RADIUS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2601:field:title",
+      "object_name": "ALIEN PLANET ORBITAL RADIUS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1256101539,
+    "source_text": "ALIENS PLANET BIGGER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2602:field:title",
+      "object_name": "ALIENS PLANET BIGGER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1525660320,
+    "source_text": "NAME ALIENS PLANET",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2606:field:title",
+      "object_name": "NAME ALIENS PLANET",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 829619243,
+    "source_text": "NAME EARTH PLANET",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2607:field:title",
+      "object_name": "NAME EARTH PLANET",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1043126359,
+    "source_text": "VISUALIZE MOON",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2610:field:title",
+      "object_name": "VISUALIZE MOON",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 987948082,
+    "source_text": "ATOMS MAKE EVERYTHING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2612:field:title",
+      "object_name": "ATOMS MAKE EVERYTHING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 746197953,
+    "source_text": "CHEMICAL ADDITION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2613:field:title",
+      "object_name": "CHEMICAL ADDITION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1646396501,
+    "source_text": "CHEMICAL EQUATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2614:field:title",
+      "object_name": "CHEMICAL EQUATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1861034903,
+    "source_text": "CHEMREACT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2616:field:title",
+      "object_name": "CHEMREACT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1979240985,
+    "source_text": "COMPOUND ADDITION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2620:field:title",
+      "object_name": "COMPOUND ADDITION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 390806185,
+    "source_text": "COMPOUNDS WITH DUPLICATES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2623:field:title",
+      "object_name": "COMPOUNDS WITH DUPLICATES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1224279501,
+    "source_text": "Chemical Compounds",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2625:field:puzzleGroupName",
+      "object_name": "Chemicals",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1661949580,
+    "source_text": "Elemental Properties",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2627:field:puzzleGroupName",
+      "object_name": "Elemental Properties",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 236165731,
+    "source_text": "HELIUM IS NOBLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2629:field:title",
+      "object_name": "HELIUM IS NOBLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 865772326,
+    "source_text": "MORE COMPLEX COMPOUNDS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2631:field:title",
+      "object_name": "MORE COMPLEX COMPOUNDS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 563937429,
+    "source_text": "REACTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2632:field:title",
+      "object_name": "REACTION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 119131301,
+    "source_text": "ROTATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2639:field:title",
+      "object_name": "ROTATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1897723164,
+    "source_text": "BLACKHOLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2640:field:title",
+      "object_name": "BLACKHOLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2113228248,
+    "source_text": "VISUALIZE BLACKHOLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2646:field:title",
+      "object_name": "VISUALIZE BLACKHOLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1797329255,
+    "source_text": "VISUALIZE WHITEDWARF",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2648:field:title",
+      "object_name": "VISUALIZE WHITEDWARF",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 780707555,
+    "source_text": "WHITEDWARF",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2649:field:title",
+      "object_name": "WHITEDWARF",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2026882550,
+    "source_text": "DESTROY DECAY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2652:field:title",
+      "object_name": "DESTROY DECAY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 391700453,
+    "source_text": "DESTROY OPPOSITE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2653:field:title",
+      "object_name": "DESTROY OPPOSITE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 612275988,
+    "source_text": "Break Things",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2655:field:puzzleGroupName",
+      "object_name": "Destroy",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1322689376,
+    "source_text": "ALTERNATIVE DUMMY 1",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2657:field:title",
+      "object_name": "ALTERNATIVE DUMMY 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 410622348,
+    "source_text": "ALTERNATIVE DUMMY 3",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2659:field:title",
+      "object_name": "ALTERNATIVE DUMMY 3",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1222676877,
+    "source_text": "ALTERNATIVE YET YET AGAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2661:field:title",
+      "object_name": "ALTERNATIVE YET YET AGAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 572774685,
+    "source_text": "Alternative",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2664:field:puzzleGroupName",
+      "object_name": "Alternative 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 347385543,
+    "source_text": "DOER-DONETO CLARIFIED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2667:field:title",
+      "object_name": "DOER-DONETO CLARIFIED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1100101160,
+    "source_text": "MATH SENTENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2670:field:title",
+      "object_name": "MATH SENTENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1764560941,
+    "source_text": "NOUN OPPOSITES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2672:field:title",
+      "object_name": "NOUN OPPOSITES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1159790501,
+    "source_text": "NOUN VERB OPPOSITES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2673:field:title",
+      "object_name": "NOUN VERB OPPOSITES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 316665319,
+    "source_text": "NOUN VS VERB FINAL CHECK",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2675:field:title",
+      "object_name": "NOUN VS VERB FINAL CHECK",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1167914139,
+    "source_text": "OPPOSITE NUMBERS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2677:field:title",
+      "object_name": "OPPOSITE NUMBERS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1614764060,
+    "source_text": "Opposite",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2680:field:puzzleGroupName",
+      "object_name": "Opposite 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 105529743,
+    "source_text": "Parts of Speech",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2682:field:puzzleGroupName",
+      "object_name": "Parts of Speech",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 816199623,
+    "source_text": "SHAPE SENTENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2683:field:title",
+      "object_name": "SHAPE SENTENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1866785824,
+    "source_text": "ALIEN METALLICITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2685:field:title",
+      "object_name": "ALIEN METALLICITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 807734740,
+    "source_text": "DISTANCE FROM GALAXY CENTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2686:field:title",
+      "object_name": "DISTANCE FROM GALAXY CENTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 338552008,
+    "source_text": "HOW TO FIND US",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2687:field:title",
+      "object_name": "HOW TO FIND US",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 776956254,
+    "source_text": "How to Find Aliens",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2688:field:puzzleGroupName",
+      "object_name": "How to Find Aliens",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1871530081,
+    "source_text": "DISTANCE FOR DIMENSIONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2690:field:title",
+      "object_name": "DISTANCE FOR DIMENSIONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 312231721,
+    "source_text": "LARGER TIME UNITS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2691:field:title",
+      "object_name": "LARGER TIME UNITS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1272245760,
+    "source_text": "METEOR MASS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2692:field:title",
+      "object_name": "METEOR MASS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 288560822,
+    "source_text": "METEOR SHAPE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2693:field:title",
+      "object_name": "METEOR SHAPE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 65450921,
+    "source_text": "METEOR TRAVEL TIME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2695:field:title",
+      "object_name": "METEOR TRAVEL TIME",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 185201253,
+    "source_text": "MOTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2699:field:title",
+      "object_name": "MOTION 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2116420963,
+    "source_text": "MOTION BY DELTA",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2700:field:title",
+      "object_name": "MOTION BY DELTA",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1039418971,
+    "source_text": "Motion",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2701:field:puzzleGroupName",
+      "object_name": "Motion",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 93660332,
+    "source_text": "2 ISOTOPES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2704:field:title",
+      "object_name": "2 ISOTOPES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 569935340,
+    "source_text": "ATOM MAKE TEST",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2705:field:title",
+      "object_name": "ATOM MAKE TEST",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1446513930,
+    "source_text": "CLARIFY DECAY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2706:field:title",
+      "object_name": "CLARIFY DECAY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1158801919,
+    "source_text": "DIFFERENTIATE PROTONS AND ELECTRONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2707:field:title",
+      "object_name": "DIFFERENTIATE PROTONS AND ELECTRONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1198173242,
+    "source_text": "HALF-LIFE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2708:field:title",
+      "object_name": "HALF-LIFE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1827873278,
+    "source_text": "ISOTOPES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2710:field:title",
+      "object_name": "ISOTOPES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1824641394,
+    "source_text": "SOLVE FOR NEUTRONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2715:field:title",
+      "object_name": "SOLVE FOR NEUTRONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 864146165,
+    "source_text": "SUBATOMIC ATOM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2717:field:title",
+      "object_name": "SUBATOMIC ATOM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2040198406,
+    "source_text": "SUBATOMIC VISUALS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2718:field:title",
+      "object_name": "SUBATOMIC VISUALS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1144308075,
+    "source_text": "VISUALIZE DECAY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2721:field:title",
+      "object_name": "VISUALIZE DECAY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 856780717,
+    "source_text": "VISUALIZE SUBATOMIC",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2722:field:title",
+      "object_name": "VISUALIZE SUBATOMIC",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1990150378,
+    "source_text": "ALIEN STAR SIZE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2723:field:title",
+      "object_name": "ALIEN STAR SIZE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 685539581,
+    "source_text": "ALPHA CAPTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2724:field:title",
+      "object_name": "ALPHA CAPTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1223503177,
+    "source_text": "FUSION CREATES ELEMENTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2725:field:title",
+      "object_name": "FUSION CREATES ELEMENTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1380923417,
+    "source_text": "Nuclear Fusion",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2728:field:puzzleGroupName",
+      "object_name": "Fusion Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 390217169,
+    "source_text": "STAR COUNT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2732:field:title",
+      "object_name": "STAR COUNT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1272501297,
+    "source_text": "CALCULATE MOVE TIME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2738:field:title",
+      "object_name": "CALCULATE MOVE TIME",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 71839741,
+    "source_text": "DIFFERENT HALF LIVES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2740:field:title",
+      "object_name": "DIFFERENT HALF LIVES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1504205057,
+    "source_text": "HELISEC",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2742:field:title",
+      "object_name": "HELISEC",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 124865973,
+    "source_text": "MESSAGE TIME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2743:field:title",
+      "object_name": "MESSAGE TIME",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 664411928,
+    "source_text": "RATE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2748:field:title",
+      "object_name": "RATE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 218867450,
+    "source_text": "SODIUM 25 HALF-LIFE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2749:field:title",
+      "object_name": "SODIUM 25 HALF-LIFE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 573596407,
+    "source_text": "TIME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2751:field:title",
+      "object_name": "TIME 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1229995947,
+    "source_text": "VISUALIZE HE6 DECAY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2754:field:title",
+      "object_name": "VISUALIZE HE6 DECAY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1002673073,
+    "source_text": "HETER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2758:field:title",
+      "object_name": "HETER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 323599813,
+    "source_text": "LIGHTSPEED IS SIGNAL SPEED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2759:field:title",
+      "object_name": "LIGHTSPEED IS SIGNAL SPEED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 66545854,
+    "source_text": "MFG",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2763:field:title",
+      "object_name": "MFG",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2145570085,
+    "source_text": "MINIHETER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2764:field:title",
+      "object_name": "MINIHETER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1203029662,
+    "source_text": "SPEED OF LIGHT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2766:field:title",
+      "object_name": "SPEED OF LIGHT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 40627764,
+    "source_text": "UNIT REVIEW",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2768:field:title",
+      "object_name": "UNIT REVIEW",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1935463081,
+    "source_text": "UNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2769:field:title",
+      "object_name": "UNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 720119812,
+    "source_text": "USE FILOGRAM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2770:field:title",
+      "object_name": "USE FILOGRAM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1201494441,
+    "source_text": "WHO IS HEAVIER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2771:field:title",
+      "object_name": "WHO IS HEAVIER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1273444747,
+    "source_text": "Abstract Equality",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2772:field:puzzleGroupName",
+      "object_name": "Abstract Equality",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1697648391,
+    "source_text": "IS IS CONCRETE OR ABSTRACT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2774:field:title",
+      "object_name": "IS IS CONCRETE OR ABSTRACT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1376354107,
+    "source_text": "IS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2775:field:title",
+      "object_name": "IS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1904968978,
+    "source_text": "ABSTRACT & CONCRETE EXAMPLES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2776:field:title",
+      "object_name": "ABSTRACT & CONCRETE EXAMPLES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 806782620,
+    "source_text": "ABSTRACT CONCRETE QUIZ 2",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2778:field:title",
+      "object_name": "ABSTRACT CONCRETE QUIZ 2",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 499201066,
+    "source_text": "Abstraction",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2780:field:puzzleGroupName",
+      "object_name": "Abstraction",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1404519451,
+    "source_text": "CONCRETE CONTINUED ABSTRACT CONTINUED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2782:field:title",
+      "object_name": "CONCRETE CONTINUED ABSTRACT CONTINUED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 400155958,
+    "source_text": "ALMOST GEOMETRY SIZE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2783:field:title",
+      "object_name": "ALMOST GEOMETRY SIZE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1955485090,
+    "source_text": "ALMOST STRUCTURES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2786:field:title",
+      "object_name": "ALMOST STRUCTURES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2027533268,
+    "source_text": "ALMOST",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2788:field:title",
+      "object_name": "ALMOST",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1856928899,
+    "source_text": "Approximation",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2789:field:puzzleGroupName",
+      "object_name": "Approximation",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1666838875,
+    "source_text": "BIG STRUCTURE LITTLE STRUCTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2790:field:title",
+      "object_name": "BIG STRUCTURE LITTLE STRUCTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 551496926,
+    "source_text": "RELATIVE ALMOST BIG",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2792:field:title",
+      "object_name": "RELATIVE ALMOST BIG",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 962550540,
+    "source_text": "ALIEN LOCATION IS KNOWN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2796:field:title",
+      "object_name": "ALIEN LOCATION IS KNOWN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 412004186,
+    "source_text": "EXPANDING UNIVERSE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2799:field:title",
+      "object_name": "EXPANDING UNIVERSE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 72472157,
+    "source_text": "FINITE UNIVERSE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2800:field:title",
+      "object_name": "FINITE UNIVERSE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 21100090,
+    "source_text": "KNOWN UNKNOWN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2804:field:title",
+      "object_name": "KNOWN UNKNOWN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1620813665,
+    "source_text": "PAST, PRESENT, FUTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2805:field:title",
+      "object_name": "PAST, PRESENT, FUTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 711991800,
+    "source_text": "UNIVERSE GALAXY COUNT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2806:field:title",
+      "object_name": "UNIVERSE GALAXY COUNT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1712494632,
+    "source_text": "HYDROGEN SULFIDE CHEMOSYNTHESIS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2809:field:title",
+      "object_name": "HYDROGEN SULFIDE CHEMOSYNTHESIS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2135645726,
+    "source_text": "LIFE DO BIOLOGICAL REACTIONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2812:field:title",
+      "object_name": "LIFE DO BIOLOGICAL REACTIONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1272046426,
+    "source_text": "Life Reproduces",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2813:field:puzzleGroupName",
+      "object_name": "LIFE REPRODUCES 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1163379241,
+    "source_text": "LIFE REPRODUCES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2814:field:title",
+      "object_name": "LIFE REPRODUCES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 177583025,
+    "source_text": "METHANOGENESIS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2815:field:title",
+      "object_name": "METHANOGENESIS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 151258435,
+    "source_text": "PARENTAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2816:field:title",
+      "object_name": "PARENTAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1160823659,
+    "source_text": "VISUALIZE DNA",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2818:field:title",
+      "object_name": "VISUALIZE DNA",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 924071982,
+    "source_text": "ALIENS ARE HYCEAN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2819:field:title",
+      "object_name": "ALIENS ARE HYCEAN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1144263039,
+    "source_text": "MULTIPLE CARBON IS STILL ORGANIC",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2822:field:title",
+      "object_name": "MULTIPLE CARBON IS STILL ORGANIC",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 547200458,
+    "source_text": "ORGANIC COMPOUNDS BACKWARDS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2823:field:title",
+      "object_name": "ORGANIC COMPOUNDS BACKWARDS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1626842857,
+    "source_text": "ADJECTIVE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2826:field:title",
+      "object_name": "ADJECTIVE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 147378831,
+    "source_text": "LINKWORD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2829:field:title",
+      "object_name": "LINKWORD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1207805688,
+    "source_text": "Parts of Speech",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2831:field:puzzleGroupName",
+      "object_name": "Parts of Speech",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 470889088,
+    "source_text": "SIMPLE PARTS OF SPEECH TEST",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2832:field:title",
+      "object_name": "SIMPLE PARTS OF SPEECH TEST",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1269100964,
+    "source_text": "AFTER PUZZLE DUMMY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2833:field:title",
+      "object_name": "AFTER PUZZLE DUMMY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1183456854,
+    "source_text": "PREV PUZZLE DUMMY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2837:field:title",
+      "object_name": "PREV PUZZLE DUMMY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2099522926,
+    "source_text": "PREVIOUS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2840:field:title",
+      "object_name": "PREVIOUS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1739614746,
+    "source_text": "SEQUENTIAL THEN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2842:field:title",
+      "object_name": "SEQUENTIAL THEN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1732784525,
+    "source_text": "X AGO",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2843:field:title",
+      "object_name": "X AGO",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1872111428,
+    "source_text": "ALL GEOMETRY ISINGROUP STRUCTURE TOGETHER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2844:field:title",
+      "object_name": "ALL GEOMETRY ISINGROUP STRUCTURE TOGETHER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 774152890,
+    "source_text": "DOER ISINGROUP NOUN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2845:field:title",
+      "object_name": "DOER ISINGROUP NOUN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1198078896,
+    "source_text": "DONETO ISINGROUP NOUN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2846:field:title",
+      "object_name": "DONETO ISINGROUP NOUN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1806888853,
+    "source_text": "GEOMETRY ISINGROUP STRUCTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2848:field:title",
+      "object_name": "GEOMETRY ISINGROUP STRUCTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 667304800,
+    "source_text": "ISINGROUP",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2850:field:title",
+      "object_name": "ISINGROUP",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1311315402,
+    "source_text": "Some ? Group",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2852:field:puzzleGroupName",
+      "object_name": "Life 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1384740574,
+    "source_text": "MASS UNIT GROUP",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2853:field:title",
+      "object_name": "MASS UNIT GROUP",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 892526062,
+    "source_text": "SHAPE ISINGROUP NOT CIRCLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2854:field:title",
+      "object_name": "SHAPE ISINGROUP NOT CIRCLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 912462662,
+    "source_text": "Subgrouping",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2856:field:puzzleGroupName",
+      "object_name": "Subgrouping",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1219872240,
+    "source_text": "ALL OR NOTHING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2858:field:puzzleGroupName",
+      "object_name": "ALL OR NONE",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1594346135,
+    "source_text": "ALL PLANETS BIGGER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2859:field:title",
+      "object_name": "ALL PLANETS BIGGER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1726292579,
+    "source_text": "ALL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2860:field:title",
+      "object_name": "ALL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1374160319,
+    "source_text": "BIGGEST AND SMALLEST VOBJ",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2864:field:title",
+      "object_name": "BIGGEST AND SMALLEST VOBJ",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1147490333,
+    "source_text": "BIGGEST PLANET",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2865:field:title",
+      "object_name": "BIGGEST PLANET",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1186419597,
+    "source_text": "Distribution Descriptors",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2869:field:puzzleGroupName",
+      "object_name": "MAJORITY 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 931586179,
+    "source_text": "MAJORITY MODE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2870:field:title",
+      "object_name": "MAJORITY MODE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 808084132,
+    "source_text": "MAJORITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2872:field:title",
+      "object_name": "MAJORITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 348519567,
+    "source_text": "MINORITY CLARIFY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2873:field:title",
+      "object_name": "MINORITY CLARIFY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 117116365,
+    "source_text": "NONE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2877:field:title",
+      "object_name": "NONE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 638840897,
+    "source_text": "SMALL ALIEN STAR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2878:field:title",
+      "object_name": "SMALL ALIEN STAR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1817088052,
+    "source_text": "STAR AND PLANET",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2879:field:title",
+      "object_name": "STAR AND PLANET",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1989081945,
+    "source_text": "SUM OF ALL PLANETS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2880:field:title",
+      "object_name": "SUM OF ALL PLANETS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 673634113,
+    "source_text": "BEFORE THE UNIVERSE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2882:field:title",
+      "object_name": "BEFORE THE UNIVERSE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1802387057,
+    "source_text": "HUMANS ALIENS SIMILARITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2885:field:title",
+      "object_name": "HUMANS ALIENS SIMILARITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1000001604,
+    "source_text": "HUMANS UNKNOWN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2886:field:title",
+      "object_name": "HUMANS UNKNOWN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 181645535,
+    "source_text": "LIFE IN THE UNIVERSE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2887:field:title",
+      "object_name": "LIFE IN THE UNIVERSE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 34667504,
+    "source_text": "MANY METEORS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2889:field:title",
+      "object_name": "MANY METEORS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 575058708,
+    "source_text": "MORE THAN 1 PLANET WITH LIFE CONFIRMED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2890:field:title",
+      "object_name": "MORE THAN 1 PLANET WITH LIFE CONFIRMED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 107433615,
+    "source_text": "ABSTRACT IS VERY ABSTRACT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2891:field:title",
+      "object_name": "ABSTRACT IS VERY ABSTRACT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1547900269,
+    "source_text": "BIG EXAMPLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2894:field:title",
+      "object_name": "BIG EXAMPLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 644751195,
+    "source_text": "BIG SMALL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2895:field:title",
+      "object_name": "BIG SMALL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 465026621,
+    "source_text": "STAR IS BIG EXAMPLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2897:field:title",
+      "object_name": "STAR IS BIG EXAMPLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2062931967,
+    "source_text": "VERY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2898:field:title",
+      "object_name": "VERY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 768292163,
+    "source_text": "VISUALIZE OTHER ATOM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2905:field:title",
+      "object_name": "VISUALIZE OTHER ATOM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1205330292,
+    "source_text": "VISUALIZE PROPANE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2906:field:title",
+      "object_name": "VISUALIZE PROPANE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1633777971,
+    "source_text": "Carbon Compound Visuals",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2908:field:puzzleGroupName",
+      "object_name": "Visualize Organics",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1690015928,
+    "source_text": "2 Lives in 1 ??",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2911:field:puzzleGroupName",
+      "object_name": "2 Species in 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1639312878,
+    "source_text": "BRAINUNIT AND LIMBUNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2915:field:title",
+      "object_name": "BRAIN UNIT AND LIMBUNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 941801378,
+    "source_text": "CAN BE PARENT IS NOT PARENT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2916:field:title",
+      "object_name": "CAN BE PARENT IS NOT PARENT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1859757317,
+    "source_text": "REPRODUCE MEANS ADULT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2922:field:title",
+      "object_name": "REPRODUCE MEANS ADULT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1524895173,
+    "source_text": "SYNCHRONIZED REPRODUCTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2925:field:title",
+      "object_name": "SYNCHRONIZED REPRODUCTION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 708120074,
+    "source_text": "WE ARE 2 SPECIES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2926:field:title",
+      "object_name": "WE ARE 2 SPECIES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2020072602,
+    "source_text": "WHEN LIMB DIE, BRAIN DIE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2927:field:title",
+      "object_name": "WHEN LIMB DIE, BRAIN DIE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1436569024,
+    "source_text": "DRAW BABY AUNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2932:field:title",
+      "object_name": "DRAW BABY AUNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1527588661,
+    "source_text": "DRAW OLD AUNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2934:field:title",
+      "object_name": "DRAW OLD AUNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 714969893,
+    "source_text": "MAXIMUM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2936:field:title",
+      "object_name": "MAXIMUM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1269445022,
+    "source_text": "MINMAX CLARIFY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2938:field:title",
+      "object_name": "MINMAX CLARIFY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 366183940,
+    "source_text": "PHASES OF LIFE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2939:field:title",
+      "object_name": "PHASES OF LIFE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1399208502,
+    "source_text": "AUTHORGUY IN LOVE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2941:field:title",
+      "object_name": "AUTHORGUY IN LOVE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 926300268,
+    "source_text": "CHILD DEATH IS VERY SAD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2944:field:title",
+      "object_name": "CHILD DEATH IS VERY SAD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 30711851,
+    "source_text": "EMOTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2946:field:title",
+      "object_name": "EMOTION 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 634769689,
+    "source_text": "HUMAN DEATH IS SAD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2950:field:title",
+      "object_name": "HUMAN DEATH IS SAD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1294515012,
+    "source_text": "HUMAN HOPE LIVE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2951:field:title",
+      "object_name": "HUMAN HOPE LIVE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1364058627,
+    "source_text": "LOVE HUMANITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2952:field:title",
+      "object_name": "LOVE HUMANITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1100240429,
+    "source_text": "LOVE MATES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2954:field:title",
+      "object_name": "LOVE MATES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1694326514,
+    "source_text": "AUNITS DIFFER IN SIZE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2962:field:title",
+      "object_name": "AUNITS DIFFER IN SIZE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 575042047,
+    "source_text": "DRAW AUNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2963:field:title",
+      "object_name": "DRAW AUNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1462627954,
+    "source_text": "DRAW DIFFERENT AUNITS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2964:field:title",
+      "object_name": "DRAW DIFFERENT AUNITS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1425728062,
+    "source_text": "HUMAN POPULATION UNKNOWN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2965:field:title",
+      "object_name": "HUMAN POPULATION UNKNOWN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 165591751,
+    "source_text": "HUMAN UNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2966:field:title",
+      "object_name": "HUMAN UNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 377431363,
+    "source_text": "INDIVIDUAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2969:field:title",
+      "object_name": "INDIVIDUAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1261576107,
+    "source_text": "BIRTH",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2975:field:title",
+      "object_name": "BIRTH",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1713775751,
+    "source_text": "DIE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2976:field:title",
+      "object_name": "DIE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1759215534,
+    "source_text": "Lifecycle",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2978:field:puzzleGroupName",
+      "object_name": "Lifecycle",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 900478001,
+    "source_text": "SPECIES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2979:field:title",
+      "object_name": "SPECIES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1128419060,
+    "source_text": "HELIMONTH EXPLAINED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2980:field:title",
+      "object_name": "HELIMONTH EXPLAINED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1817767881,
+    "source_text": "HELIYEAR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2984:field:title",
+      "object_name": "HELIYEAR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1459505417,
+    "source_text": "Longer Time Units",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2985:field:puzzleGroupName",
+      "object_name": "Longer Time Units",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1514974764,
+    "source_text": "PLANET ROTATION HELIYEAR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2986:field:title",
+      "object_name": "PLANET ROTATION HELIYEAR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1814754036,
+    "source_text": "TIME UNITS ORDERED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2987:field:title",
+      "object_name": "TIME UNITS ORDERED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 310679558,
+    "source_text": "AUTHOR IS DEAD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2990:field:title",
+      "object_name": "AUTHOR IS DEAD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1850885670,
+    "source_text": "HOPE WE LIVE ON",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2993:field:title",
+      "object_name": "HOPE WE LIVE ON",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 569069739,
+    "source_text": "Meteor Makers",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2995:field:puzzleGroupName",
+      "object_name": "Meteor Makers",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1359933049,
+    "source_text": "NAME THE TRANSLATOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2997:field:title",
+      "object_name": "NAME THE TRANSLATOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1768954631,
+    "source_text": "WE HOPE HUMANS LIVE TOO",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2998:field:title",
+      "object_name": "WE HOPE HUMANS LIVE TOO",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1152542807,
+    "source_text": "ALIEN GESTATION PERIOD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:2999:field:title",
+      "object_name": "ALIEN GESTATION PERIOD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2141607879,
+    "source_text": "ALL ARE CHILD, SOME ARE PARENT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3000:field:title",
+      "object_name": "ALL ARE CHILD, SOME ARE PARENT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 647298117,
+    "source_text": "AUTHORGUY AGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3001:field:title",
+      "object_name": "AUTHORGUY AGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 992644189,
+    "source_text": "AVERAGE CHILD COUNT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3003:field:title",
+      "object_name": "AVERAGE CHILD COUNT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1186151918,
+    "source_text": "DRAW MANY SIMPLE AUNITS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3006:field:title",
+      "object_name": "DRAW MANY SIMPLE AUNITS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1421056033,
+    "source_text": "DRAW MULTIPLE CHILDREN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3007:field:title",
+      "object_name": "DRAW MULTIPLE CHILDREN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1222253695,
+    "source_text": "DRAW SIMPLE PARENTAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3009:field:title",
+      "object_name": "DRAW SIMPLE PARENTAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 843960957,
+    "source_text": "MOST AUNIT ARE PARENTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3010:field:title",
+      "object_name": "MOST AUNIT ARE PARENTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1121169383,
+    "source_text": "MOST LIFE ARE ASEXUAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3011:field:title",
+      "object_name": "MOST LIFE ARE ASEXUAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1636146294,
+    "source_text": "Offspring",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3012:field:puzzleGroupName",
+      "object_name": "Offspring",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 625050974,
+    "source_text": "WE ARE SEXUAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3013:field:title",
+      "object_name": "WE ARE SEXUAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1327032719,
+    "source_text": "GOOD AND BAD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3020:field:title",
+      "object_name": "GOOD AND BAD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1701201260,
+    "source_text": "Simple Morality",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3024:field:puzzleGroupName",
+      "object_name": "Simple Morality",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 78889029,
+    "source_text": "9 BRAIN IS 1",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3025:field:title",
+      "object_name": "9 BRAIN IS 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1909361555,
+    "source_text": "BOTH HUMANS AND ALIENS HAVE BRAINS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3027:field:title",
+      "object_name": "BOTH HUMANS AND ALIENS HAVE BRAINS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 577204784,
+    "source_text": "BRAIN IS NOT UNIVERSAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3028:field:title",
+      "object_name": "BRAIN IS NOT UNIVERSAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1412996743,
+    "source_text": "Emotion Organ",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3030:field:puzzleGroupName",
+      "object_name": "Brain Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1305304688,
+    "source_text": "SMART ENOUGH TO MAKE METEOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3034:field:title",
+      "object_name": "SMART ENOUGH TO MAKE METEOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 572834154,
+    "source_text": "16 INNER ELECTRICSENSORS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3036:field:title",
+      "object_name": "16 INNER ELECTRICSENSORS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1273040534,
+    "source_text": "24 ELECTRICSENSORS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3037:field:title",
+      "object_name": "24 ELECTRICSENSORS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1396359661,
+    "source_text": "ELECTRICSENSOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3038:field:title",
+      "object_name": "ELECTRICSENSOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 360303330,
+    "source_text": "VISUALIZE ELECTRICSENSOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3041:field:title",
+      "object_name": "VISUALIZE ELECTRICSENSOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1124384971,
+    "source_text": "ALL MASS ATTRACT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3042:field:title",
+      "object_name": "ALL MASS ATTRACT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 60693363,
+    "source_text": "ATTRACT REPEL MAGNETICS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3044:field:title",
+      "object_name": "ATTRACT REPEL MAGNETICS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 879415796,
+    "source_text": "AUNIT INNER MUTUALISM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3045:field:title",
+      "object_name": "AUNIT INNER MUTUALISM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 69332411,
+    "source_text": "ELECTRICITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3047:field:title",
+      "object_name": "ELECTRICITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 455626554,
+    "source_text": "MUTUAL VICTORY LAP",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3050:field:title",
+      "object_name": "MUTUAL VICTORY LAP",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1329427246,
+    "source_text": "MUTUAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3051:field:title",
+      "object_name": "MUTUAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1308970302,
+    "source_text": "NEUTRONS ARE NEUTRAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3053:field:title",
+      "object_name": "NEUTRONS ARE NEUTRAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1732223057,
+    "source_text": "POSITIVE AND NEGATIVE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3054:field:title",
+      "object_name": "POSITIVE AND NEGATIVE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1308444785,
+    "source_text": "EVOLUTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3057:field:title",
+      "object_name": "EVOLUTION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 682882378,
+    "source_text": "Evolution",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3058:field:puzzleGroupName",
+      "object_name": "Evolution Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 690417284,
+    "source_text": "NUMERICAL EVOLUTION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3059:field:title",
+      "object_name": "NUMERICAL EVOLUTION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2135331962,
+    "source_text": "SURVIVAL OF THE FITTEST",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3062:field:title",
+      "object_name": "SURVIVAL OF THE FITTEST",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 597800,
+    "source_text": "ADVANCEMENT OF PREHISTORY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3063:field:title",
+      "object_name": "ADVANCEMENT OF PREHISTORY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 275925162,
+    "source_text": "EVOLUTIONARY HISTORY 1",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3065:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 284966752,
+    "source_text": "EVOLUTIONARY HISTORY 11",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3067:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 11",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 625251381,
+    "source_text": "EVOLUTIONARY HISTORY 13",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3069:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 13",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1010965340,
+    "source_text": "EVOLUTIONARY HISTORY 3",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3071:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 3",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 740529512,
+    "source_text": "EVOLUTIONARY HISTORY 5",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3073:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 5",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 792720859,
+    "source_text": "EVOLUTIONARY HISTORY 7",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3075:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 7",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 444632043,
+    "source_text": "EVOLUTIONARY HISTORY 9",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3077:field:title",
+      "object_name": "EVOLUTIONARY HISTORY 9",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1789474673,
+    "source_text": "History of the Species",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3079:field:puzzleGroupName",
+      "object_name": "Evolutionary History",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 484810705,
+    "source_text": "Sensory Organ",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3083:field:puzzleGroupName",
+      "object_name": "Eyes",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1984140229,
+    "source_text": "LIGHT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3084:field:title",
+      "object_name": "LIGHT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1222244785,
+    "source_text": "ORGAN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3085:field:title",
+      "object_name": "ORGAN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 654025071,
+    "source_text": "VISUALIZE EYE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3087:field:title",
+      "object_name": "VISUALIZE EYE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 488175825,
+    "source_text": "ALIENS STATE OF MATTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3089:field:title",
+      "object_name": "ALIENS STATE OF MATTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1954992925,
+    "source_text": "Heat",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3090:field:puzzleGroupName",
+      "object_name": "Heat",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1154749093,
+    "source_text": "STATE OF MATTER TEST 1",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3093:field:title",
+      "object_name": "STATE OF MATTER TEST 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 779881409,
+    "source_text": "STATE OF MATTER TEST 3",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3095:field:title",
+      "object_name": "STATE OF MATTER TEST 3",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1535242149,
+    "source_text": "TEMPERATURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3096:field:title",
+      "object_name": "TEMPERATURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 804532365,
+    "source_text": "VISUALIZE GAS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3097:field:title",
+      "object_name": "VISUALIZE GAS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 199796838,
+    "source_text": "VISUALIZE LIQUID",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3098:field:title",
+      "object_name": "VISUALIZE LIQUID",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1811196820,
+    "source_text": "WHAT IS HOTTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3100:field:title",
+      "object_name": "WHAT IS HOTTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1968043675,
+    "source_text": "COUNT INNER POINTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3101:field:title",
+      "object_name": "COUNT INNER POINTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 308689588,
+    "source_text": "INNER OUTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3104:field:title",
+      "object_name": "INNER OUTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2118654805,
+    "source_text": "Inside & Outside",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3105:field:puzzleGroupName",
+      "object_name": "Inside and Outside",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 45711828,
+    "source_text": "HOPE FOR OTHER INTELLIGENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3106:field:title",
+      "object_name": "HOPE FOR OTHER INTELLIGENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1350502734,
+    "source_text": "INTELLIGENT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3107:field:title",
+      "object_name": "INTELLIGENT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1657759597,
+    "source_text": "ONE DAY LEARN OF HUMAN INTELLIGENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3111:field:title",
+      "object_name": "ONE DAY LEARN OF HUMAN INTELLIGENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 189358356,
+    "source_text": "DEVELOPMENT OF LANGUAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3113:field:title",
+      "object_name": "DEVELOPMENT OF LANGUAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 953090328,
+    "source_text": "LANGUAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3114:field:title",
+      "object_name": "LANGUAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 776932698,
+    "source_text": "SCIENCE FROM US TO YOU",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3116:field:title",
+      "object_name": "SCIENCE FROM US TO YOU",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1377790301,
+    "source_text": "THE ONLY LANGUAGE SPEAKERS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3118:field:title",
+      "object_name": "THE ONLY LANGUAGE SPEAKERS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1192383582,
+    "source_text": "WE COMMUNICATED OUR HOME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3119:field:title",
+      "object_name": "WE COMMUNICATED OUR HOME",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 672534985,
+    "source_text": "LIFE BEGAN IN OCEAN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3120:field:title",
+      "object_name": "LIFE BEGAN IN OCEAN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1001899894,
+    "source_text": "OCEAN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3127:field:title",
+      "object_name": "OCEAN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1747641127,
+    "source_text": "OCEANS BOILED OFF",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3128:field:title",
+      "object_name": "OCEANS BOILED OFF",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1134322030,
+    "source_text": "PART WHOLE AUNIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3134:field:title",
+      "object_name": "PART WHOLE AUNIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 215277025,
+    "source_text": "PART WHOLE CLARIFY 2",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3135:field:title",
+      "object_name": "PART WHOLE CLARIFY 2",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2132251257,
+    "source_text": "Part & Whole",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3137:field:puzzleGroupName",
+      "object_name": "Part Whole",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 791438853,
+    "source_text": "SAME PARTS IS SAME WHOLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3138:field:title",
+      "object_name": "SAME PARTS IS SAME WHOLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 605088616,
+    "source_text": "SUBPARTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3139:field:title",
+      "object_name": "SUBPARTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 190455572,
+    "source_text": "ATMOSPHERES ARE NOT UNIVERSAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3141:field:title",
+      "object_name": "ATMOSPHERES ARE NOT UNIVERSAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 757143950,
+    "source_text": "ATMOSPHERIC MAKEUP METHANE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3143:field:title",
+      "object_name": "ATMOSPHERIC MAKEUP METHANE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 777358243,
+    "source_text": "PLANET ATMOSPHERE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3145:field:title",
+      "object_name": "PLANET ATMOSPHERE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 52511262,
+    "source_text": "Planetary Structure",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3149:field:puzzleGroupName",
+      "object_name": "Planetary Structure",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 775726682,
+    "source_text": "OLD PLANET WAS HOTTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3150:field:title",
+      "object_name": "OLD PLANET WAS HOTTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1131323850,
+    "source_text": "Ancient",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3152:field:puzzleGroupName",
+      "object_name": "Prehistory",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1549171561,
+    "source_text": "CLOSE SIDE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3153:field:title",
+      "object_name": "CLOSE SIDE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1572279045,
+    "source_text": "Near & Far",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3155:field:puzzleGroupName",
+      "object_name": "Close Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 428981152,
+    "source_text": "FAR SIDE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3156:field:title",
+      "object_name": "FAR SIDE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 698088445,
+    "source_text": "VISUALIZE ABSTRACT SIDES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3160:field:title",
+      "object_name": "VISUALIZE ABSTRACT SIDES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1116333270,
+    "source_text": "VISUALIZE CLOSE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3161:field:title",
+      "object_name": "VISUALIZE CLOSE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 329885321,
+    "source_text": "HOT SIDE COLD SIDE IS PERMANENT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3164:field:title",
+      "object_name": "HOT SIDE COLD SIDE IS PERMANENT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 617677240,
+    "source_text": "SIDE CLOSER TO STAR IS HOTTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3166:field:title",
+      "object_name": "SIDE CLOSER TO STAR IS HOTTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 391502173,
+    "source_text": "TIDALLY LOCKED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3168:field:title",
+      "object_name": "TIDALLY LOCKED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 523991832,
+    "source_text": "ATMOSPHERE CHANGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3170:field:title",
+      "object_name": "ATMOSPHERE CHANGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 502201050,
+    "source_text": "CHANGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3173:field:title",
+      "object_name": "CHANGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1319439395,
+    "source_text": "CURRENT ATMOSPHERE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3174:field:title",
+      "object_name": "CURRENT ATMOSPHERE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1938166190,
+    "source_text": "PLANET LIFE CHANGED ATMOSPHERE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3175:field:title",
+      "object_name": "PLANET LIFE CHANGED ATMOSPHERE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 943641206,
+    "source_text": "PREHISTORIC ATMOSPHERE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3176:field:title",
+      "object_name": "PREHISTORIC ATMOSPHERE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1086318875,
+    "source_text": "Transformation",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3178:field:puzzleGroupName",
+      "object_name": "Transformation",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 420488695,
+    "source_text": "ANIMALS CAN CONSUME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3180:field:title",
+      "object_name": "ANIMALS CAN CONSUME",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 776616049,
+    "source_text": "FISH",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3183:field:title",
+      "object_name": "FISH",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1132367804,
+    "source_text": "FOOD CHAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3184:field:title",
+      "object_name": "FOOD CHAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 458418055,
+    "source_text": "PREDATOR AND PREY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3186:field:title",
+      "object_name": "PREDATOR AND PREY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1614508347,
+    "source_text": "PREHISTORIC LIMB AND CORAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3187:field:title",
+      "object_name": "PREHISTORIC LIMB AND CORAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 303810010,
+    "source_text": "Ecology",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3188:field:puzzleGroupName",
+      "object_name": "Types of Creatures",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 656968245,
+    "source_text": "Alien Sizes & Shapes",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3190:field:puzzleGroupName",
+      "object_name": "Alien Sizes and Shapes",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1845345575,
+    "source_text": "DIVERSE SIZE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3191:field:title",
+      "object_name": "DIVERSE SIZE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 526752848,
+    "source_text": "MIDDLEAGE AUNIT VERTIZ",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3195:field:title",
+      "object_name": "MIDDLEAGE AUNIT VERTIZ",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1979060401,
+    "source_text": "OLD AUNIT MASS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3196:field:title",
+      "object_name": "OLD AUNIT MASS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2005005919,
+    "source_text": "YOUNG AUNIT VERTIZ",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3200:field:title",
+      "object_name": "YOUNG AUNIT VERTIZ",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 767091969,
+    "source_text": "ATHLETICS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3201:field:title",
+      "object_name": "ATHLETICS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2144140290,
+    "source_text": "CAN WALK BAD AT SWIMMING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3203:field:title",
+      "object_name": "CAN WALK BAD AT SWIMMING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1626767370,
+    "source_text": "ELECTRICSPEAK RUDE IN WATER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3205:field:title",
+      "object_name": "ELECTRICSPEAK RUDE IN WATER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1971760514,
+    "source_text": "INATHLETIC SWIMMING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3207:field:title",
+      "object_name": "INATHLETIC SWIMMING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2067246197,
+    "source_text": "INTELLECTUALLY CAPABLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3209:field:title",
+      "object_name": "INTELLECTUALLY CAPABLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1581461817,
+    "source_text": "MOVING SPEEDS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3210:field:title",
+      "object_name": "MOVING SPEEDS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1483817260,
+    "source_text": "CAPABLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3215:field:title",
+      "object_name": "CAPABLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 522720556,
+    "source_text": "Capabilities",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3216:field:puzzleGroupName",
+      "object_name": "Capabilities",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1983393167,
+    "source_text": "ELECTRICSPEAK",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3218:field:title",
+      "object_name": "ELECTRICSPEAK",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 756729107,
+    "source_text": "EYE CANNOT MAKE LIGHT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3219:field:title",
+      "object_name": "EYE CANNOT MAKE LIGHT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 589835606,
+    "source_text": "CIVILIZATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3220:field:title",
+      "object_name": "CIVILIZATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1215748117,
+    "source_text": "COMMUNCATION IS COOPERATIVE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3221:field:title",
+      "object_name": "COMMUNICATION IS COOPERATIVE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 282482574,
+    "source_text": "COOPERATE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3222:field:title",
+      "object_name": "COOPERATE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1937530493,
+    "source_text": "Cooperation",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3223:field:puzzleGroupName",
+      "object_name": "Cooperation",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1834611996,
+    "source_text": "COREBELIEF 0",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3226:field:title",
+      "object_name": "COREBELIEF 0",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1398063550,
+    "source_text": "COREBELIEF 2",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3228:field:title",
+      "object_name": "COREBELIEF 2",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1949411857,
+    "source_text": "COREBELIEF 4",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3230:field:title",
+      "object_name": "COREBELIEF 4",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 50652894,
+    "source_text": "Alien Morality",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3232:field:puzzleGroupName",
+      "object_name": "Core Belief Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 119484570,
+    "source_text": "CULTURE OVERLAP",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3233:field:title",
+      "object_name": "CULTURE OVERLAP",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 603359583,
+    "source_text": "Culture",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3235:field:puzzleGroupName",
+      "object_name": "Culture Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 676595738,
+    "source_text": "AUTHORGUY DEATHCRISIS STANCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3238:field:title",
+      "object_name": "AUTHORGUY DEATHCRISIS STANCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 29294058,
+    "source_text": "AUTHORMATE DEATHCRISIS STANCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3239:field:title",
+      "object_name": "AUTHORMATE DEATHCRISIS STANCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 831039505,
+    "source_text": "CONSCIOUSNESS FROM BRAIN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3241:field:title",
+      "object_name": "CONSCIOUSNESS FROM BRAIN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 144438331,
+    "source_text": "CORALDEATH IS TRAGIC",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3242:field:title",
+      "object_name": "CORALDEATH IS TRAGIC",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1579976813,
+    "source_text": "DEATH IS PAINUL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3244:field:title",
+      "object_name": "DEATH IS PAINFUL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 861770334,
+    "source_text": "DEATH SUCKS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3245:field:title",
+      "object_name": "DEATH SUCKS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1534671315,
+    "source_text": "DEATHCRISIS DURATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3247:field:title",
+      "object_name": "DEATHCRISIS DURATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1173521398,
+    "source_text": "DEATHCRISIS IS ASYNC LIFESPANS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3249:field:title",
+      "object_name": "DEATHCRISIS IS ASYNC LIFESPANS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2104194039,
+    "source_text": "Views on Death",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3251:field:puzzleGroupName",
+      "object_name": "Deathcrisis Ideology Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1159509087,
+    "source_text": "FEELPAIN OPPOSITE IS ENJOYED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3252:field:title",
+      "object_name": "FEELPAIN OPPOSITE IS ENJOYED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1846161104,
+    "source_text": "HATING IS BAD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3255:field:title",
+      "object_name": "HATING IS BAD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 613573017,
+    "source_text": "INNER HATE IS BAD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3257:field:title",
+      "object_name": "INNER HATE IS BAD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1224144694,
+    "source_text": "ETCHING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3263:field:title",
+      "object_name": "ETCHING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1932540093,
+    "source_text": "Ripples We Cast",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3264:field:puzzleGroupName",
+      "object_name": "Etching Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1424889629,
+    "source_text": "GENERATIONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3266:field:title",
+      "object_name": "GENERATIONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1820080785,
+    "source_text": "IMMORTAL ETCHING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3267:field:title",
+      "object_name": "IMMORTAL ETCHING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 611357346,
+    "source_text": "MULTIGENERATIONAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3268:field:title",
+      "object_name": "MULTIGENERATIONAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1214470839,
+    "source_text": "ART",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3269:field:title",
+      "object_name": "ART",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1240302141,
+    "source_text": "COMPETE FACTS NOT BELIEFS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3273:field:title",
+      "object_name": "COMPETE FACTS NOT BELIEFS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 315255959,
+    "source_text": "COMPETE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3274:field:title",
+      "object_name": "COMPETE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2030903731,
+    "source_text": "EXCELLENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3276:field:title",
+      "object_name": "EXCELLENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 589233634,
+    "source_text": "Individual Talent",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3277:field:puzzleGroupName",
+      "object_name": "Excellence Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 189590215,
+    "source_text": "FIELDS OF ART",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3278:field:title",
+      "object_name": "FIELDS OF ART",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1262355850,
+    "source_text": "MAKE METEOR IS EXCELLENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3279:field:title",
+      "object_name": "MAKE METEOR IS EXCELLENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 19430633,
+    "source_text": "SPIRIT OF COMPETITION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3280:field:title",
+      "object_name": "SPIRIT OF COMPETITION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1868333508,
+    "source_text": "WE LOVE EXCELLENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3285:field:title",
+      "object_name": "WE LOVE EXCELLENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 344629480,
+    "source_text": "BELIEF",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3286:field:title",
+      "object_name": "BELIEF",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1620690212,
+    "source_text": "BELIEVE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3287:field:title",
+      "object_name": "BELIEVE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 358550040,
+    "source_text": "KNOWN AND UNKNOWN FACTS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3290:field:title",
+      "object_name": "KNOWN AND UNKNOWN FACTS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1065220151,
+    "source_text": "AUTHORGUY TRAINED IN SCIENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3291:field:title",
+      "object_name": "AUTHORGUY TRAINED IN SCIENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1622969917,
+    "source_text": "INTERNAL DIVERSITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3292:field:title",
+      "object_name": "INTERNAL DIVERSITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 677396100,
+    "source_text": "Compartmentalization",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3295:field:puzzleGroupName",
+      "object_name": "Limb Specialization",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1519792103,
+    "source_text": "TRAIN LIMBS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3296:field:title",
+      "object_name": "TRAIN LIMBS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 600649349,
+    "source_text": "VISUALIZE LIMBSPEC",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3298:field:title",
+      "object_name": "VISUALIZE LIMBSPEC",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 934604279,
+    "source_text": "METEOR IS LEARNGOOD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3299:field:title",
+      "object_name": "METEOR IS LEARNGOOD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1966844640,
+    "source_text": "METEOR IS MORALLY GOOD",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3301:field:title",
+      "object_name": "METEOR IS MORALLY GOOD",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1889700829,
+    "source_text": "COMMUNICATE BY ELECTRICSENSOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3304:field:title",
+      "object_name": "COMMUNICATE BY ELECTRICSENSOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1938376460,
+    "source_text": "ELECTRICSENSOR IN WATER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3306:field:title",
+      "object_name": "ELECTRICSENSOR IN WATER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 655526369,
+    "source_text": "GESTURE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3308:field:title",
+      "object_name": "GESTURE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1190401625,
+    "source_text": "IDEOLOGY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3314:field:title",
+      "object_name": "IDEOLOGY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 918558099,
+    "source_text": "OLDBELIEF YOUNGBELIEF",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3315:field:title",
+      "object_name": "OLDBELIEF YOUNGBELIEF",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1757570270,
+    "source_text": "AUTHORGUY ROTSYMM STANCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3318:field:title",
+      "object_name": "AUTHORGUY ROTSYMM STANCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 122826692,
+    "source_text": "AUTHORMATE ROTSYMM STANCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3319:field:title",
+      "object_name": "AUTHORMATE ROTSYMM STANCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1332021644,
+    "source_text": "OLDBELIEF ROTSYMM WHY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3320:field:title",
+      "object_name": "OLDBELIEF ROTSYMM WHY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 275548514,
+    "source_text": "Alien Ethics",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3322:field:puzzleGroupName",
+      "object_name": "Rotsymm Ideologies Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 213115029,
+    "source_text": "YOUNGBELIEF ROTSYMM WHY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3323:field:title",
+      "object_name": "YOUNGBELIEF ROTSYMM WHY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1169118970,
+    "source_text": "APLANET NOT ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3324:field:title",
+      "object_name": "APLANET NOT ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 932188055,
+    "source_text": "AUNIT ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3326:field:title",
+      "object_name": "AUNIT ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 335664191,
+    "source_text": "CUBE ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3327:field:title",
+      "object_name": "CUBE ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1278867835,
+    "source_text": "LIMBSPEC OPPOSITE OF ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3328:field:title",
+      "object_name": "LIMBSPEC OPPOSITE OF ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 420651669,
+    "source_text": "NON ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3329:field:title",
+      "object_name": "NON ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1823296872,
+    "source_text": "ROTSYMM IS NO INNER DIVERSITY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3330:field:title",
+      "object_name": "ROTSYMM IS NO INNER DIVERSITY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 91980388,
+    "source_text": "ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3331:field:title",
+      "object_name": "ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1744870912,
+    "source_text": "Radial Symmetry",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3332:field:puzzleGroupName",
+      "object_name": "Rotsymm Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 2090467849,
+    "source_text": "SPHERE ROTSYMM",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3333:field:title",
+      "object_name": "SPHERE ROTSYMM",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2067260856,
+    "source_text": "AUTHORGUY AND AUTHORMATE IS BEST FRIENDS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3334:field:title",
+      "object_name": "AUTHORGUY AND AUTHORMATE IS BEST FRIENDS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 691009800,
+    "source_text": "AUTHORGUY ENJOYS SCIENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3336:field:title",
+      "object_name": "AUTHORGUY ENJOYS SCIENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 129981883,
+    "source_text": "FRIEND",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3338:field:title",
+      "object_name": "FRIEND",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1029277755,
+    "source_text": "HUMANITY IS FRIEND",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3341:field:title",
+      "object_name": "HUMANITY IS FRIEND",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2001401701,
+    "source_text": "Intelligent Communication",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3343:field:puzzleGroupName",
+      "object_name": "Intelligent Communication",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1586909571,
+    "source_text": "LIFE ENJOYS UNIVERSE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3344:field:title",
+      "object_name": "LIFE ENJOYS UNVIERSE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 874435797,
+    "source_text": "MASS LIMITED BY SPEED OF LIGHT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3345:field:title",
+      "object_name": "MASS LIMITED BY SPEED OF LIGHT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1454011881,
+    "source_text": "SAD IS FRIEND DIE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3350:field:title",
+      "object_name": "SAD IS FRIEND DIE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1889663999,
+    "source_text": "SOCIALIZE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3352:field:title",
+      "object_name": "SOCIALIZE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 594688639,
+    "source_text": "TRANSLATOR AND AUTHORGUY FRIENDS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3354:field:title",
+      "object_name": "TRANSLATOR AND AUTHORGUY FRIENDS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1374611102,
+    "source_text": "SOCIALIZE AUTHORGUY STANCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3361:field:title",
+      "object_name": "SOCIALIZE AUTHORGUY STANCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 275599798,
+    "source_text": "SOCIALIZE BELIEFS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3363:field:title",
+      "object_name": "SOCIALIZE BELIEFS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2134488942,
+    "source_text": "SOCIALIZE IDEOLOGY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3365:field:title",
+      "object_name": "SOCIALIZE IDEOLOGY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 197375821,
+    "source_text": "TOPICS OF DISCUSSION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3367:field:title",
+      "object_name": "TOPICS OF DISCUSSION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1770182502,
+    "source_text": "INFORMATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3371:field:title",
+      "object_name": "INFORMATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 557497034,
+    "source_text": "LIMITING",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3373:field:title",
+      "object_name": "LIMITING",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 158989605,
+    "source_text": "WE TEACH SCIENCE NOW",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3375:field:title",
+      "object_name": "WE TEACH SCIENCE NOW",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1059307789,
+    "source_text": "COMPUTER MAKE FREQUENCY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3377:field:title",
+      "object_name": "COMPUTER MAKE FREQUENCY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 490985644,
+    "source_text": "COMPUTER",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3378:field:title",
+      "object_name": "COMPUTER",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1468538490,
+    "source_text": "ENERGY IS HEAT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3383:field:title",
+      "object_name": "ENERGY IS HEAT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1386678811,
+    "source_text": "ENERGY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3384:field:title",
+      "object_name": "ENERGY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 799772593,
+    "source_text": "MASS ENERGY EQUIVALENCE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3388:field:title",
+      "object_name": "MASS ENERGY EQUIVALENCE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2102021673,
+    "source_text": "STAR DO NUCLEAR FUSION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3392:field:title",
+      "object_name": "STAR DO NUCLEAR FUSION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1385186778,
+    "source_text": "Spatial Dimensions",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3393:field:puzzleGroupName",
+      "object_name": "Spatial Dimensions",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1053836029,
+    "source_text": "ATOMIC FUSION MACHINE IN METEOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3396:field:title",
+      "object_name": "ATOMIC FUSION MACHINE IN METEOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1262194149,
+    "source_text": "FUSIONMACHINE IS LIMITLESS ENERGY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3399:field:title",
+      "object_name": "FUSIONMACHINE IS LIMITLESS ENERGY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 791568801,
+    "source_text": "IS MASTERY OF TIME POSSIBLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3401:field:title",
+      "object_name": "IS MASTERY OF TIME POSSIBLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1897508276,
+    "source_text": "LEVELS OF MASTERY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3402:field:title",
+      "object_name": "LEVELS OF MASTERY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 343576549,
+    "source_text": "Frontiers 2",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3404:field:puzzleGroupName",
+      "object_name": "Levels of Mastery Group 2",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 312050693,
+    "source_text": "MASTER OF ATOMS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3407:field:title",
+      "object_name": "MASTERY OF ATOMS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 461860986,
+    "source_text": "MASTERY OF CHEMISTRY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3409:field:title",
+      "object_name": "MASTERY OF CHEMISTRY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 849782871,
+    "source_text": "MASTERY OF COOPERATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3411:field:title",
+      "object_name": "MASTERY OF COOPERATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1420844239,
+    "source_text": "MASTERY OF ENERGY",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3413:field:title",
+      "object_name": "MASTERY OF ENERGY",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 404671905,
+    "source_text": "MASTERY OF INFORMATION",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3415:field:title",
+      "object_name": "MASTERY OF INFORMATION",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 515851374,
+    "source_text": "MASTERY OF LANGUAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3417:field:title",
+      "object_name": "MASTERY OF LANGUAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2056709655,
+    "source_text": "MASTERY OF SCIENTIFIC THINKING EXAMPLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3418:field:title",
+      "object_name": "MASTERY OF SCIENTIFIC THINKING EXAMPLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 194365519,
+    "source_text": "MASTERY OF SELF EXAMPLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3420:field:title",
+      "object_name": "MASTERY OF SELF EXAMPLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 897730132,
+    "source_text": "MASTERY OF SPACE EXAMPLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3422:field:title",
+      "object_name": "MASTERY OF SPACE EXAMPLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1851457565,
+    "source_text": "MASTERY OF TIME IS UNKNOWN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3426:field:title",
+      "object_name": "MASTERY OF TIME IS UNKNOWN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1213816532,
+    "source_text": "MASTERY OF TIME",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3427:field:title",
+      "object_name": "MASTERY OF TIME",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1468724391,
+    "source_text": "MASTERY IS ALL KNOWN",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3432:field:title",
+      "object_name": "MASTERY IS ALL KNOWN",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 49575500,
+    "source_text": "DEFINING GOODBYE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3436:field:title",
+      "object_name": "DEFINING GOODBYE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 412467500,
+    "source_text": "Hello",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3438:field:puzzleGroupName",
+      "object_name": "Hello Group",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 921779900,
+    "source_text": "NEXT IS FINAL MESSAGE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3441:field:title",
+      "object_name": "NEXT IS FINAL MESSAGE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1118419343,
+    "source_text": "Preparing for the End",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3442:field:puzzleGroupName",
+      "object_name": "Preparing for the End",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1213283975,
+    "source_text": "SAY GOODBYE TO DEPARTED LOVED ONES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3443:field:title",
+      "object_name": "SAY GOODBYE TO DEPARTED LOVED ONES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1146542227,
+    "source_text": "SAY HELLO TO BORN ONES",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3445:field:title",
+      "object_name": "SAY HELLO TO BORN ONES",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1284809983,
+    "source_text": "THANK YOU AND GOODBYE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3447:field:title",
+      "object_name": "THANKYOU AND GOODBYE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1655420762,
+    "source_text": "THANKYOU",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3448:field:title",
+      "object_name": "THANKYOU",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 605631817,
+    "source_text": "TOTAL WORD COUNT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3451:field:title",
+      "object_name": "TOTAL WORD COUNT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1073576961,
+    "source_text": "Thank You",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3452:field:puzzleGroupName",
+      "object_name": "The End",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1058205004,
+    "source_text": "YOU MUST LOVE US",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3455:field:title",
+      "object_name": "YOU MUST LOVE US",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1917554415,
+    "source_text": "BIGGER SPHERE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3457:field:title",
+      "object_name": "BIGGER SPHERE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 690580112,
+    "source_text": "CIRCLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3459:field:title",
+      "object_name": "CIRCLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 2133844133,
+    "source_text": "Circles & Spheres",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3460:field:puzzleGroupName",
+      "object_name": "Circles & Spheres",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 564728372,
+    "source_text": "SPHERE 3",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3461:field:title",
+      "object_name": "SPHERE 3",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1123217,
+    "source_text": "COLOR REQUIRED",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3465:field:title",
+      "object_name": "COLOR REQUIRED",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1779215170,
+    "source_text": "METEOR SCREEN CALIBRATE HIGH",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3467:field:title",
+      "object_name": "METEOR SCREEN CALIBRATE HIGH",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1963717425,
+    "source_text": "METEOR SCREEN COLOR TEST 1",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3469:field:title",
+      "object_name": "METEOR SCREEN COLOR TEST 1",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 233547016,
+    "source_text": "METEOR SCREEN COLOR TEST 3",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3471:field:title",
+      "object_name": "METEOR SCREEN COLOR TEST 3",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 57717253,
+    "source_text": "METEOR SCREEN COLOR TEST 5",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3473:field:title",
+      "object_name": "METEOR SCREEN COLOR TEST 5",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 931167692,
+    "source_text": "COLOR",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3476:field:title",
+      "object_name": "COLOR",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 748612115,
+    "source_text": "Place Spheres",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3478:field:puzzleGroupName",
+      "object_name": "Place Spheres",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 67266770,
+    "source_text": "VOBJ PARAMETERS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3481:field:title",
+      "object_name": "VOBJ PARAMETERS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 293723132,
+    "source_text": "VOBJ",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3482:field:title",
+      "object_name": "VOBJ",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 355514946,
+    "source_text": "SELF PORTRAIT",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3483:field:title",
+      "object_name": "SELF PORTRAIT",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1593307049,
+    "source_text": "Glimpse of an Alien",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3484:field:puzzleGroupName",
+      "object_name": "Self Portrait 1",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 473897080,
+    "source_text": "CIRCLE DIMENSIONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3485:field:title",
+      "object_name": "CIRCLE DIMENSIONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1270835415,
+    "source_text": "SPHERE DIMENSIONS",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3489:field:title",
+      "object_name": "SPHERE DIMENSIONS",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 821029806,
+    "source_text": "Spatial Dimensions",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3490:field:puzzleGroupName",
+      "object_name": "Spatial Dimensions",
+      "field_path": "puzzleGroupName"
+    }
+  },
+  {
+    "text_index": 1772670430,
+    "source_text": "WIDTH HEIGHT RECTANGLE",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3491:field:title",
+      "object_name": "WIDTH HEIGHT RECTANGLE",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1570220462,
+    "source_text": "VISUAL TEST 2",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3493:field:title",
+      "object_name": "VISUAL TEST 2",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1497325751,
+    "source_text": "VISUAL TEST 4",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3495:field:title",
+      "object_name": "VISUAL TEST 4",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 1760106526,
+    "source_text": "VISUAL TEST 6",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3497:field:title",
+      "object_name": "VISUAL TEST 6",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 32009821,
+    "source_text": "VISUAL",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3499:field:title",
+      "object_name": "VISUAL",
+      "field_path": "title"
+    }
+  },
+  {
+    "text_index": 290318263,
+    "source_text": "Actinium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3502:field:elementName",
+      "object_name": "Actinium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 13464719,
+    "source_text": "days",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3502:field:isotopes[1].unit",
+      "object_name": "Actinium",
+      "field_path": "isotopes[1].unit"
+    }
+  },
+  {
+    "text_index": 619308061,
+    "source_text": "hours",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3502:field:isotopes[2].unit",
+      "object_name": "Actinium",
+      "field_path": "isotopes[2].unit"
+    }
+  },
+  {
+    "text_index": 839795448,
+    "source_text": "hours",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3502:field:isotopes[3].unit",
+      "object_name": "Actinium",
+      "field_path": "isotopes[3].unit"
+    }
+  },
+  {
+    "text_index": 1983848670,
+    "source_text": "Arsenic",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3506:field:elementName",
+      "object_name": "Arsenic",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1940761898,
+    "source_text": "seconds",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3507:field:isotopes[0].unit",
+      "object_name": "Astatine",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 640732949,
+    "source_text": "hours",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3507:field:isotopes[1].unit",
+      "object_name": "Astatine",
+      "field_path": "isotopes[1].unit"
+    }
+  },
+  {
+    "text_index": 1816766433,
+    "source_text": "hours",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3507:field:isotopes[2].unit",
+      "object_name": "Astatine",
+      "field_path": "isotopes[2].unit"
+    }
+  },
+  {
+    "text_index": 803997865,
+    "source_text": "billion years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3508:field:isotopes[0].unit",
+      "object_name": "Barium",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 135816852,
+    "source_text": "million years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3508:field:isotopes[3].unit",
+      "object_name": "Barium",
+      "field_path": "isotopes[3].unit"
+    }
+  },
+  {
+    "text_index": 731766043,
+    "source_text": "Beryllium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3509:field:elementName",
+      "object_name": "Beryllium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1288114744,
+    "source_text": "Boron",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3511:field:elementName",
+      "object_name": "Boron",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 567096365,
+    "source_text": "Cadmium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3513:field:elementName",
+      "object_name": "Cadmium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 249369241,
+    "source_text": "Cerium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3516:field:elementName",
+      "object_name": "Cerium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1309011975,
+    "source_text": "Chlorine",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3518:field:elementName",
+      "object_name": "Chlorine",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1277990840,
+    "source_text": "Cobalt",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3520:field:elementName",
+      "object_name": "Cobalt",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1429495891,
+    "source_text": "Erbium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3523:field:elementName",
+      "object_name": "Erbium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 641838701,
+    "source_text": "Fluorine",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3525:field:elementName",
+      "object_name": "Fluorine",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 876882,
+    "source_text": "Francium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3526:field:elementName",
+      "object_name": "Francium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 416979832,
+    "source_text": "Gallium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3528:field:elementName",
+      "object_name": "Gallium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 961483826,
+    "source_text": "seconds",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3532:field:isotopes[3].unit",
+      "object_name": "Helium",
+      "field_path": "isotopes[3].unit"
+    }
+  },
+  {
+    "text_index": 879964678,
+    "source_text": "Holmium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3533:field:elementName",
+      "object_name": "Holmium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1060117384,
+    "source_text": "Indium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3535:field:elementName",
+      "object_name": "Indium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 175974476,
+    "source_text": "Iodine",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3536:field:elementName",
+      "object_name": "Iodine",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 991744137,
+    "source_text": "Iron",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3538:field:elementName",
+      "object_name": "Iron",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1327012030,
+    "source_text": "Lanthanum",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3540:field:elementName",
+      "object_name": "Lanthanum",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 749755116,
+    "source_text": "Lithium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3542:field:elementName",
+      "object_name": "Lithium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 228049350,
+    "source_text": "Lutetium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3543:field:elementName",
+      "object_name": "Lutetium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1246242768,
+    "source_text": "Magnesium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3544:field:elementName",
+      "object_name": "Magnesium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 813520316,
+    "source_text": "Manganese",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3545:field:elementName",
+      "object_name": "Manganese",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 2075638061,
+    "source_text": "Molybdenum",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3547:field:elementName",
+      "object_name": "Molybdenum",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 494538178,
+    "source_text": "Neodymium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3548:field:elementName",
+      "object_name": "Neodymium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1607474376,
+    "source_text": "Nickel",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3550:field:elementName",
+      "object_name": "Nickel",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1621898810,
+    "source_text": "Nitrogen",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3552:field:elementName",
+      "object_name": "Nitrogen",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1011283150,
+    "source_text": "Osmium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3553:field:elementName",
+      "object_name": "Osmium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 2055479805,
+    "source_text": "seconds",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3554:field:isotopes[3].unit",
+      "object_name": "Oxygen",
+      "field_path": "isotopes[3].unit"
+    }
+  },
+  {
+    "text_index": 1447285799,
+    "source_text": "Phosphorus",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3556:field:elementName",
+      "object_name": "Phosphorus",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 578304098,
+    "source_text": "Polonium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3558:field:elementName",
+      "object_name": "Polonium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1935271675,
+    "source_text": "days",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3558:field:isotopes[0].unit",
+      "object_name": "Polonium",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 1931437669,
+    "source_text": "Potassium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3559:field:elementName",
+      "object_name": "Potassium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 2065536767,
+    "source_text": "billion years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3559:field:isotopes[2].unit",
+      "object_name": "Potassium",
+      "field_path": "isotopes[2].unit"
+    }
+  },
+  {
+    "text_index": 186914098,
+    "source_text": "Promethium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3561:field:elementName",
+      "object_name": "Promethium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 564999215,
+    "source_text": "Protactinium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3562:field:elementName",
+      "object_name": "Protactinium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1053481033,
+    "source_text": "thousand years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3562:field:isotopes[0].unit",
+      "object_name": "Protactinium",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 1455066109,
+    "source_text": "days",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3562:field:isotopes[1].unit",
+      "object_name": "Protactinium",
+      "field_path": "isotopes[1].unit"
+    }
+  },
+  {
+    "text_index": 243559492,
+    "source_text": "Radon",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3564:field:elementName",
+      "object_name": "Radon",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1250267544,
+    "source_text": "days",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3564:field:isotopes[0].unit",
+      "object_name": "Radon",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 632129697,
+    "source_text": "seconds",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3564:field:isotopes[2].unit",
+      "object_name": "Radon",
+      "field_path": "isotopes[2].unit"
+    }
+  },
+  {
+    "text_index": 970513558,
+    "source_text": "Rhenium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3565:field:elementName",
+      "object_name": "Rhenium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1961631627,
+    "source_text": "Rubidium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3567:field:elementName",
+      "object_name": "Rubidium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1284573410,
+    "source_text": "Scandium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3570:field:elementName",
+      "object_name": "Scandium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1173085262,
+    "source_text": "Silicon",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3572:field:elementName",
+      "object_name": "Silicon",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 2079136623,
+    "source_text": "Sodium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3574:field:elementName",
+      "object_name": "Sodium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1376903801,
+    "source_text": "hours",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3574:field:isotopes[1].unit",
+      "object_name": "Sodium",
+      "field_path": "isotopes[1].unit"
+    }
+  },
+  {
+    "text_index": 1139759947,
+    "source_text": "seconds",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3574:field:isotopes[2].unit",
+      "object_name": "Sodium",
+      "field_path": "isotopes[2].unit"
+    }
+  },
+  {
+    "text_index": 786004792,
+    "source_text": "Strontium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3575:field:elementName",
+      "object_name": "Strontium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1956339451,
+    "source_text": "Sulfur",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3576:field:elementName",
+      "object_name": "Sulfur",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1500060304,
+    "source_text": "Tantalum",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3577:field:elementName",
+      "object_name": "Tantalum",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 549084018,
+    "source_text": "thousand years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3578:field:isotopes[0].unit",
+      "object_name": "Technetium",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 1056492163,
+    "source_text": "million years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3578:field:isotopes[1].unit",
+      "object_name": "Technetium",
+      "field_path": "isotopes[1].unit"
+    }
+  },
+  {
+    "text_index": 904756108,
+    "source_text": "million years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3578:field:isotopes[2].unit",
+      "object_name": "Technetium",
+      "field_path": "isotopes[2].unit"
+    }
+  },
+  {
+    "text_index": 673781050,
+    "source_text": "Tellurium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3579:field:elementName",
+      "object_name": "Tellurium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 922000559,
+    "source_text": "Terbium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3580:field:elementName",
+      "object_name": "Terbium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 735823439,
+    "source_text": "Thulium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3583:field:elementName",
+      "object_name": "Thulium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1928539340,
+    "source_text": "Tin",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3584:field:elementName",
+      "object_name": "Tin",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 797972222,
+    "source_text": "Uranium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3587:field:elementName",
+      "object_name": "Uranium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 182977215,
+    "source_text": "billion years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3587:field:isotopes[0].unit",
+      "object_name": "Uranium",
+      "field_path": "isotopes[0].unit"
+    }
+  },
+  {
+    "text_index": 472855517,
+    "source_text": "million years",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3587:field:isotopes[1].unit",
+      "object_name": "Uranium",
+      "field_path": "isotopes[1].unit"
+    }
+  },
+  {
+    "text_index": 1426861454,
+    "source_text": "Vanadium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3588:field:elementName",
+      "object_name": "Vanadium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 1766366939,
+    "source_text": "Yttrium",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3591:field:elementName",
+      "object_name": "Yttrium",
+      "field_path": "elementName"
+    }
+  },
+  {
+    "text_index": 790118327,
+    "source_text": "Zinc",
+    "context": {
+      "kind": "display_value",
+      "stable_key": "display:sharedassets0.assets:3592:field:elementName",
+      "object_name": "Zinc",
+      "field_path": "elementName"
+    }
+  }
+]

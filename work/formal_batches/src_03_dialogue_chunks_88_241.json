@@ -1,0 +1,6237 @@
+[
+  {
+    "text_index": 1813531810,
+    "source_text": "IDK is temp?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:88/title",
+      "chunk_id": 88,
+      "chunk_name": "NL_IDK_2"
+    }
+  },
+  {
+    "text_index": 1083813321,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}So \"IDK\" is your temporary name, for when we are still figuring out a new signal's meaning. I see.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:88/frame:0",
+      "chunk_id": 88,
+      "chunk_name": "NL_IDK_2",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1396734763,
+    "source_text": "Up Caret",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:89/title",
+      "chunk_id": 89,
+      "chunk_name": "NL_^"
+    }
+  },
+  {
+    "text_index": 1486543192,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Hmm.{PART_001}The '^' symbol.{PART_002}Clean.{PART_003}Clean.{PART_004}Clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:89/frame:0",
+      "chunk_id": 89,
+      "chunk_name": "NL_^",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1396470074,
+    "source_text": "Add",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:90/title",
+      "chunk_id": 90,
+      "chunk_name": "NL_Add"
+    }
+  },
+  {
+    "text_index": 2139274122,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Add.{PART_001}Or maybe add previous?{PART_002}Collins,{PART_003}what do you figure?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:90/frame:0",
+      "chunk_id": 90,
+      "chunk_name": "NL_Add",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 564939576,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I figure 'add' works just fine.{PART_001}Adding the previous numbers seems to be how the meteor formats mathematical expressions.{PART_002}So add previous may be redundant.{PART_003}Just their grammar at work is all.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:90/frame:1",
+      "chunk_id": 90,
+      "chunk_name": "NL_Add",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 66916382,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hm.{PART_001}I see.{PART_002}Add previous just gels better in my lobes.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:90/frame:2",
+      "chunk_id": 90,
+      "chunk_name": "NL_Add",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1806151656,
+    "source_text": "Signal -2 as Add One",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:91/title",
+      "chunk_id": 91,
+      "chunk_name": "NL_Addone"
+    }
+  },
+  {
+    "text_index": 1277251969,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Add one.{PART_001}Perfect.{PART_002}Nice and simple.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:91/frame:0",
+      "chunk_id": 91,
+      "chunk_name": "NL_Addone",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1589090704,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}We shall see if it holds.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:91/frame:1",
+      "chunk_id": 91,
+      "chunk_name": "NL_Addone",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 64496476,
+    "source_text": "Add Prev",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:92/title",
+      "chunk_id": 92,
+      "chunk_name": "NL_Addprev"
+    }
+  },
+  {
+    "text_index": 987254147,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That fits nicely!{PART_001}So far all we've done with {SIG_N005} is add the previous numbers.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:92/frame:0",
+      "chunk_id": 92,
+      "chunk_name": "NL_Addprev",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1991124913,
+    "source_text": "Signal -12 is just 7??",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:93/title",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7"
+    }
+  },
+  {
+    "text_index": 815091371,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Good call!{PART_001}This one was 7, simple as that.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:93/frame:0",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1779043791,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I hate it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:93/frame:1",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 370497704,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Huh?{PART_001}Carrie,{PART_002}what's wrong?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:93/frame:2",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 697384953,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I hate it.{PART_001}It's too rigid.{PART_002}Unlike anything we've encountered before.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:93/frame:3",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1089804477,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well,{PART_001}it works for now, so I like it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:93/frame:4",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 992220253,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}We'll see if it holds.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:93/frame:5",
+      "chunk_id": 93,
+      "chunk_name": "NL_Ans as 7",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 42392174,
+    "source_text": "Ans",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:94/title",
+      "chunk_id": 94,
+      "chunk_name": "NL_Ans"
+    }
+  },
+  {
+    "text_index": 1475619372,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Ans?{PART_001}As in \"answer?\"{PART_002}Gee {PLAYER_NAME},{PART_003}good catch!{PART_004}I'm surprised you beat me to that one!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:94/frame:0",
+      "chunk_id": 94,
+      "chunk_name": "NL_Ans",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1941113383,
+    "source_text": "Asterisk",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:95/title",
+      "chunk_id": 95,
+      "chunk_name": "NL_Asterisk"
+    }
+  },
+  {
+    "text_index": 208511774,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm.{PART_001}The '*' sign.{PART_002}Clean.{PART_003}I approve.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:95/frame:0",
+      "chunk_id": 95,
+      "chunk_name": "NL_Asterisk",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1339876536,
+    "source_text": "Decimal",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:96/title",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal"
+    }
+  },
+  {
+    "text_index": 390151232,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Decimal.{PART_001}Perfect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:0",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 896633940,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Technically,{PART_001}imperfect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:1",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 77061428,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Pardon?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:2",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 455590044,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Their number system does not use the digits 8 or 9.{PART_001}It is not decimal,{PART_002}but octal.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:3",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1252459890,
+    "source_text": "{SPEAKER_AKERS}{PART_000}But it's a decimal point,{PART_001}ain't it?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:4",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 272039095,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Yes.{PART_001}Maybe an octal point.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:5",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1375846248,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Whatever.{PART_001}This is pedantic,{PART_002}even for you Bautista.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:6",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1939001755,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}I have been called worse.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:96/frame:7",
+      "chunk_id": 96,
+      "chunk_name": "NL_Decimal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 572268199,
+    "source_text": "Endnum",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:97/title",
+      "chunk_id": 97,
+      "chunk_name": "NL_Endnum"
+    }
+  },
+  {
+    "text_index": 1361827065,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Endnum,{PART_001}huh?{PART_002}That checks out.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:97/frame:0",
+      "chunk_id": 97,
+      "chunk_name": "NL_Endnum",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 170365645,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}So far.{PART_001}That's the key.{PART_002}It works for now,{PART_003}but we can revisit it if its use is more flexible than that.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:97/frame:1",
+      "chunk_id": 97,
+      "chunk_name": "NL_Endnum",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 461019740,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Clean symbol use.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:0",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 577921615,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The '=' sign,{PART_001}nice and simple,{PART_002}and I'm a big fan of simple!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:1",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1299942984,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}What a surprise.{PART_001}The simpleton prefers simple.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:2",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 615269720,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Sorry what was that?{PART_001}I didn't catch that,{PART_002}but it sounded sassy.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:3",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 621601285,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}It was not.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:4",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 717682148,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}It was pretty sassy.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:5",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 896614215,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Thanks for keepin' em honest,{PART_001}Collins.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:98/frame:6",
+      "chunk_id": 98,
+      "chunk_name": "NL_Equals Sign",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 407452829,
+    "source_text": "Equals",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:99/title",
+      "chunk_id": 99,
+      "chunk_name": "NL_Equals"
+    }
+  },
+  {
+    "text_index": 1416349310,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Equals.{PART_001}I like it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:99/frame:0",
+      "chunk_id": 99,
+      "chunk_name": "NL_Equals",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1877796891,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}As do I.{PART_001}It's been consistent so far.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:99/frame:1",
+      "chunk_id": 99,
+      "chunk_name": "NL_Equals",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 221711486,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}You could shorten it to just '=' if you desire.{PART_001}Some symbols are permitted in the dictionary.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:99/frame:2",
+      "chunk_id": 99,
+      "chunk_name": "NL_Equals",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1305841437,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Thank you Dr. Bautista.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:99/frame:3",
+      "chunk_id": 99,
+      "chunk_name": "NL_Equals",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1554207591,
+    "source_text": "Float",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:100/title",
+      "chunk_id": 100,
+      "chunk_name": "NL_Float"
+    }
+  },
+  {
+    "text_index": 1537169827,
+    "source_text": "Multiply",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:101/title",
+      "chunk_id": 101,
+      "chunk_name": "NL_Multiply"
+    }
+  },
+  {
+    "text_index": 152043690,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Multiply,{PART_001}multiply,{PART_002}multiply.{PART_003}Looks good to me.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:101/frame:0",
+      "chunk_id": 101,
+      "chunk_name": "NL_Multiply",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1759363006,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I concur.{PART_001}For now.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:101/frame:1",
+      "chunk_id": 101,
+      "chunk_name": "NL_Multiply",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 785902677,
+    "source_text": "Octal",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:102/title",
+      "chunk_id": 102,
+      "chunk_name": "NL_Octal"
+    }
+  },
+  {
+    "text_index": 1040693909,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Mmm.{PART_001}You have made a programmer happy today.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:102/frame:0",
+      "chunk_id": 102,
+      "chunk_name": "NL_Octal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2108511728,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Octal,{PART_001}jeez,{PART_002}what squares you are.{PART_003}The whole lot of you's.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:102/frame:1",
+      "chunk_id": 102,
+      "chunk_name": "NL_Octal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 325541135,
+    "source_text": "Period",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:103/title",
+      "chunk_id": 103,
+      "chunk_name": "NL_Period"
+    }
+  },
+  {
+    "text_index": 1978352377,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm.{PART_001}A '.' symbol.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:103/frame:0",
+      "chunk_id": 103,
+      "chunk_name": "NL_Period",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1798635309,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Clean?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:103/frame:1",
+      "chunk_id": 103,
+      "chunk_name": "NL_Period",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1478592178,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:103/frame:2",
+      "chunk_id": 103,
+      "chunk_name": "NL_Period",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1293220724,
+    "source_text": "Plus Sign",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:104/title",
+      "chunk_id": 104,
+      "chunk_name": "NL_Plus sign"
+    }
+  },
+  {
+    "text_index": 474318021,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm.{PART_001}A '+' sign.{PART_002}Clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:104/frame:0",
+      "chunk_id": 104,
+      "chunk_name": "NL_Plus sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 475746949,
+    "source_text": "Plus",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:105/title",
+      "chunk_id": 105,
+      "chunk_name": "NL_Plus"
+    }
+  },
+  {
+    "text_index": 1618715634,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Plus, huh.{PART_001}First number plus second number.{PART_002}Yeah,{PART_003}I see it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:105/frame:0",
+      "chunk_id": 105,
+      "chunk_name": "NL_Plus",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 134344114,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I agree.{PART_001}It seems to be a good fit for now.{PART_002}We'll see if it remains consistent.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:105/frame:1",
+      "chunk_id": 105,
+      "chunk_name": "NL_Plus",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1628645536,
+    "source_text": "Signal -2 as Plus One",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:106/title",
+      "chunk_id": 106,
+      "chunk_name": "NL_Plusone"
+    }
+  },
+  {
+    "text_index": 1923601006,
+    "source_text": "{SPEAKER_AKERS}{PART_000}It's weird that {SIG_N002} could mean \"plus one\",{PART_001}but if it works,{PART_002}it works,{PART_003}I reckon.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:106/frame:0",
+      "chunk_id": 106,
+      "chunk_name": "NL_Plusone",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1666418512,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I reckon so.{PART_001}Let's see if it's consistent across other transmission.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:106/frame:1",
+      "chunk_id": 106,
+      "chunk_name": "NL_Plusone",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2136744822,
+    "source_text": "Point, Linesegment, & Shape",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:107/title",
+      "chunk_id": 107,
+      "chunk_name": "NL_Point, Line, NL_Point, Linesegment, and shape"
+    }
+  },
+  {
+    "text_index": 955207989,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Point,{PART_001}line segment,{PART_002}and shape.{PART_003}You think the meteorite is establishing some geometry with us?{PART_004}Collins,{PART_005}thoughts?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:107/frame:0",
+      "chunk_id": 107,
+      "chunk_name": "NL_Point, Line, NL_Point, Linesegment, and shape",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 258783384,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}These word names are making sense so far.{PART_001}I'll keep looking through the previous transmission to check for consistency.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:107/frame:1",
+      "chunk_id": 107,
+      "chunk_name": "NL_Point, Line, NL_Point, Linesegment, and shape",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1241158783,
+    "source_text": "Point, Line, & Shape",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:108/title",
+      "chunk_id": 108,
+      "chunk_name": "NL_Point, Line, Shape"
+    }
+  },
+  {
+    "text_index": 1109218284,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Point,{PART_001}line,{PART_002}and shape.{PART_003}Feels like a pretty natural progression.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:108/frame:0",
+      "chunk_id": 108,
+      "chunk_name": "NL_Point, Line, Shape",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 145433227,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Yes.{PART_001}If these definitions hold,{PART_002}I would feel quite confident about the state of our dictionary.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:108/frame:1",
+      "chunk_id": 108,
+      "chunk_name": "NL_Point, Line, Shape",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1041393124,
+    "source_text": "Power",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:109/title",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power"
+    }
+  },
+  {
+    "text_index": 1855485233,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hey Bautista,{PART_001}you remind me of a man.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:0",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1807293302,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}What man?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:1",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1838319825,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The man with the power.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:2",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 398820288,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}What power?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:3",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 934295465,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The power of hoo-doo.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:4",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1148787025,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Who do?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:5",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 682755240,
+    "source_text": "{SPEAKER_AKERS}{PART_000}You do!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:6",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 495529621,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Do what?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:7",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1956680713,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Remind me of a man!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:8",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 847714948,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}What man?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:9",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 18590944,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The man with the powe--",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:10",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 787486559,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Okay!{PART_001}No more!{PART_002}No more.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:11",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 608190199,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hehehe.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:109/frame:12",
+      "chunk_id": 109,
+      "chunk_name": "NL_Power",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 788964891,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Question mark?{PART_001}{PLAYER_NAME},{PART_002}is that just your filler word while you land on a good name for it?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:110/frame:0",
+      "chunk_id": 110,
+      "chunk_name": "NL_Question mark",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 785960076,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Come to think of it...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:110/frame:1",
+      "chunk_id": 110,
+      "chunk_name": "NL_Question mark",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1342598801,
+    "source_text": "Skip",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:111/title",
+      "chunk_id": 111,
+      "chunk_name": "NL_Skip"
+    }
+  },
+  {
+    "text_index": 1725420378,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Skip,{PART_001}huh?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:111/frame:0",
+      "chunk_id": 111,
+      "chunk_name": "NL_Skip",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1597905151,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}As in skipping over the prior signal.{PART_001}Interesting analysis.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:111/frame:1",
+      "chunk_id": 111,
+      "chunk_name": "NL_Skip",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 218701642,
+    "source_text": "Underscore",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:112/title",
+      "chunk_id": 112,
+      "chunk_name": "NL_Space as underscore"
+    }
+  },
+  {
+    "text_index": 1325869627,
+    "source_text": "{SPEAKER_AKERS}{PART_000}$animA1An underscore?{PART_001}How fancy!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:112/frame:0",
+      "chunk_id": 112,
+      "chunk_name": "NL_Space as underscore",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 470854821,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}$animA0It is to separate words.{PART_001}$animC3Dr. Bautista disallowed spaces in the dictionary for some reason,{PART_002}a good reason I'm sure.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:112/frame:1",
+      "chunk_id": 112,
+      "chunk_name": "NL_Space as underscore",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2033947100,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}$animC0Parsing words with spaces would be troublesome.{PART_001}Imagine inputting 2 spaces rather than 1.{PART_002}$animB1The compiler would struggle to parse it as we wished.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:112/frame:2",
+      "chunk_id": 112,
+      "chunk_name": "NL_Space as underscore",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 595513334,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Fair point.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:112/frame:3",
+      "chunk_id": 112,
+      "chunk_name": "NL_Space as underscore",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 614705206,
+    "source_text": "APPLE",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:113/title",
+      "chunk_id": 113,
+      "chunk_name": "NL_SPACE named APPLE"
+    }
+  },
+  {
+    "text_index": 1240975840,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Just to clarify,{PART_001}I don't think -2 represents an \"apple.\"{PART_002}I hope that didn't lead you astray,{PART_003}{PLAYER_NAME}...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:113/frame:0",
+      "chunk_id": 113,
+      "chunk_name": "NL_SPACE named APPLE",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 566225988,
+    "source_text": "Space",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:114/title",
+      "chunk_id": 114,
+      "chunk_name": "NL_Space"
+    }
+  },
+  {
+    "text_index": 393394166,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Space?{PART_001}Like outer space?{PART_002}The astronomer approves.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:114/frame:0",
+      "chunk_id": 114,
+      "chunk_name": "NL_Space",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 204874830,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}And if you mean it to mean space as in formatting,{PART_001}then the linguist approves.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:114/frame:1",
+      "chunk_id": 114,
+      "chunk_name": "NL_Space",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1112926838,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}The programmer passes no judgment.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:114/frame:2",
+      "chunk_id": 114,
+      "chunk_name": "NL_Space",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 663113336,
+    "source_text": "Value",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:115/title",
+      "chunk_id": 115,
+      "chunk_name": "NL_Value"
+    }
+  },
+  {
+    "text_index": 132374602,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Value!{PART_001}That fits perfectly.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:115/frame:0",
+      "chunk_id": 115,
+      "chunk_name": "NL_Value",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 376898969,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}For now,{PART_001}at least.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:115/frame:1",
+      "chunk_id": 115,
+      "chunk_name": "NL_Value",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2071223521,
+    "source_text": "Var",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:116/title",
+      "chunk_id": 116,
+      "chunk_name": "NL_VAR"
+    }
+  },
+  {
+    "text_index": 178129684,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Var?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:116/frame:0",
+      "chunk_id": 116,
+      "chunk_name": "NL_VAR",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 941479067,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}As in variable.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:116/frame:1",
+      "chunk_id": 116,
+      "chunk_name": "NL_VAR",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1975020561,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Huh.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:116/frame:2",
+      "chunk_id": 116,
+      "chunk_name": "NL_VAR",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1963331598,
+    "source_text": "X to multiply",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:117/title",
+      "chunk_id": 117,
+      "chunk_name": "NL_X multiply"
+    }
+  },
+  {
+    "text_index": 181549521,
+    "source_text": "{SPEAKER_AKERS}{PART_000}'X',{PART_001}nice and simple.{PART_002}I take it you mean for multiplication?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:117/frame:0",
+      "chunk_id": 117,
+      "chunk_name": "NL_X multiply",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 644522377,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Dot dot dot...{PART_001}suspenseful!{PART_002}Though it's fitting,{PART_003}i reckon.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:118/frame:0",
+      "chunk_id": 118,
+      "chunk_name": "NL_...",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1936195357,
+    "source_text": "Geometry Signals",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:119/title",
+      "chunk_id": 119,
+      "chunk_name": "NL_All Geometry"
+    }
+  },
+  {
+    "text_index": 2064908795,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Points,{PART_001}lines,{PART_002}and shapes.{PART_003}Can we get a 'clean' from Dr. Bautista for this?{PART_004}I feel like we've nailed it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:119/frame:0",
+      "chunk_id": 119,
+      "chunk_name": "NL_All Geometry",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1375323706,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}No.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:119/frame:1",
+      "chunk_id": 119,
+      "chunk_name": "NL_All Geometry",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1017331032,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Is 'clean' only reserved signals named 1 character long?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:119/frame:2",
+      "chunk_id": 119,
+      "chunk_name": "NL_All Geometry",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 882967011,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Yes.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:119/frame:3",
+      "chunk_id": 119,
+      "chunk_name": "NL_All Geometry",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1349057164,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Ahh,{PART_001}picky Bautista.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:119/frame:4",
+      "chunk_id": 119,
+      "chunk_name": "NL_All Geometry",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1228470431,
+    "source_text": "Oops! Open, not closed!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:120/title",
+      "chunk_id": 120,
+      "chunk_name": "NL_Backwards parentheses"
+    }
+  },
+  {
+    "text_index": 168238369,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Pardon my intrusion,{PART_001}but I believe you have it backwards.{PART_002}It should be '(' or am I mistaken?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:120/frame:0",
+      "chunk_id": 120,
+      "chunk_name": "NL_Backwards parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 354688751,
+    "source_text": "{SPEAKER_AKERS}{PART_000}You're so polite,{PART_001}Collins.{PART_002}Just tell 'em they screwed up!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:120/frame:1",
+      "chunk_id": 120,
+      "chunk_name": "NL_Backwards parentheses",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 442725538,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Akers!{PART_001}So impolite!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:120/frame:2",
+      "chunk_id": 120,
+      "chunk_name": "NL_Backwards parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 861649751,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Eh,{PART_001}it's in the transcript now.{PART_002}Too late!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:120/frame:3",
+      "chunk_id": 120,
+      "chunk_name": "NL_Backwards parentheses",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1562138092,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Ugh.{PART_001}Diva.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:120/frame:4",
+      "chunk_id": 120,
+      "chunk_name": "NL_Backwards parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 365877255,
+    "source_text": "Closed Parentheses",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:121/title",
+      "chunk_id": 121,
+      "chunk_name": "NL_Closed Parentheses"
+    }
+  },
+  {
+    "text_index": 739260958,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Dr. Akers?{PART_001}You're unusually quiet.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:121/frame:0",
+      "chunk_id": 121,
+      "chunk_name": "NL_Closed Parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 375265967,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh no,{PART_001}I've said my piece!{PART_002}A word named ')' makes sense,{PART_003}I guess!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:121/frame:1",
+      "chunk_id": 121,
+      "chunk_name": "NL_Closed Parentheses",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 422434683,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}What a diva.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:121/frame:2",
+      "chunk_id": 121,
+      "chunk_name": "NL_Closed Parentheses",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1112619133,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Got that right.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:121/frame:3",
+      "chunk_id": 121,
+      "chunk_name": "NL_Closed Parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 636889208,
+    "source_text": "Continued",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:122/title",
+      "chunk_id": 122,
+      "chunk_name": "NL_Continued"
+    }
+  },
+  {
+    "text_index": 2125155250,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Continued?{PART_001}As in,{PART_002}to be continued?{PART_003}How ominous!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:122/frame:0",
+      "chunk_id": 122,
+      "chunk_name": "NL_Continued",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 730777606,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Mm.{PART_001}No.{PART_002}Continued,{PART_003}meaning this marks not the true ending.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:122/frame:1",
+      "chunk_id": 122,
+      "chunk_name": "NL_Continued",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1371802886,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}As in,{PART_001}there's more to say?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:122/frame:2",
+      "chunk_id": 122,
+      "chunk_name": "NL_Continued",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1647085177,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Sure.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:122/frame:3",
+      "chunk_id": 122,
+      "chunk_name": "NL_Continued",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 263910969,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh.{PART_001}Well I like my version better!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:122/frame:4",
+      "chunk_id": 122,
+      "chunk_name": "NL_Continued",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1772506829,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Pretty clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:123/frame:0",
+      "chunk_id": 123,
+      "chunk_name": "NL_Count named #",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1686271161,
+    "source_text": "Endhas",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:124/title",
+      "chunk_id": 124,
+      "chunk_name": "NL_Endhas"
+    }
+  },
+  {
+    "text_index": 126710755,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Endhas?{PART_001}Suuuper clunky,{PART_002}but I reckon it works!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:124/frame:0",
+      "chunk_id": 124,
+      "chunk_name": "NL_Endhas",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1953429872,
+    "source_text": "Geometry",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:125/title",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure"
+    }
+  },
+  {
+    "text_index": 280848996,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Geometry?{PART_001}I like it!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:125/frame:0",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1359409525,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I as well,{PART_001}to an extent.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:125/frame:1",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2081736152,
+    "source_text": "{SPEAKER_AKERS}{PART_000}To an extent?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:125/frame:2",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 221787819,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Can't put my finger on it.{PART_001}I'll brainstorm.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:125/frame:3",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1872738613,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well now I'm uneasy!{PART_001}I'd love the linguist's blessing in our dictionary!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:125/frame:4",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1236378452,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}If the word works for {PLAYER_NAME},{PART_001}and is wielded consistently and in accordance with the transmission,{PART_002}then it's perfect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:125/frame:5",
+      "chunk_id": 125,
+      "chunk_name": "NL_Geometry - structure",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1779253954,
+    "source_text": "Function",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:126/title",
+      "chunk_id": 126,
+      "chunk_name": "NL_Graph"
+    }
+  },
+  {
+    "text_index": 2025062720,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Inspired by our linguist's transmission groups?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:126/frame:0",
+      "chunk_id": 126,
+      "chunk_name": "NL_Graph",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 973779113,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I look for patterns in the transmissions.{PART_001}If it accurately describes a signal,{PART_002}then all the merrier.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:126/frame:1",
+      "chunk_id": 126,
+      "chunk_name": "NL_Graph",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1163126183,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hey,{PART_001}I'm merry!{PART_002}Just wondering how our {PLAYER_NAME} got to that line of thinking is all.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:126/frame:2",
+      "chunk_id": 126,
+      "chunk_name": "NL_Graph",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1898318325,
+    "source_text": "Has",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:127/title",
+      "chunk_id": 127,
+      "chunk_name": "NL_Has"
+    }
+  },
+  {
+    "text_index": 4976661,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Has?{PART_001}Clunky,{PART_002}but I like it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:127/frame:0",
+      "chunk_id": 127,
+      "chunk_name": "NL_Has",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1345288468,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}So far,{PART_001}me too.{PART_002}We'll see if we find any better way to name -13.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:127/frame:1",
+      "chunk_id": 127,
+      "chunk_name": "NL_Has",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1442111275,
+    "source_text": "Open Parentheses",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:128/title",
+      "chunk_id": 128,
+      "chunk_name": "NL_Open Parentheses"
+    }
+  },
+  {
+    "text_index": 871125657,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The '(' symbol?{PART_001}That's not a word!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:128/frame:0",
+      "chunk_id": 128,
+      "chunk_name": "NL_Open Parentheses",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1375951509,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Does it have to be?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:128/frame:1",
+      "chunk_id": 128,
+      "chunk_name": "NL_Open Parentheses",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2146909496,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}No,{PART_001}it doesn't.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:128/frame:2",
+      "chunk_id": 128,
+      "chunk_name": "NL_Open Parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 280386915,
+    "source_text": "{SPEAKER_AKERS}{PART_000}I disagree!{PART_001}We're building a vocabulary,{PART_002}are we not?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:128/frame:3",
+      "chunk_id": 128,
+      "chunk_name": "NL_Open Parentheses",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 164721272,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Yes,{PART_001}but formatting,{PART_002}structure,{PART_003}syntax--{PART_004}That's all part of language.{PART_005}If this definition holds,{PART_006}all the merrier.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:128/frame:4",
+      "chunk_id": 128,
+      "chunk_name": "NL_Open Parentheses",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 730287003,
+    "source_text": "Proposition",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:129/title",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition"
+    }
+  },
+  {
+    "text_index": 2027186996,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Proposition.{PART_001}Now ain't that a big-shot word!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:0",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 4420313,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}If it fits,{PART_001}it fits.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:1",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1938584783,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Could someone,{PART_001}uh,{PART_002}reiterate that word for their friendly astronomer pal?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:2",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 878883060,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}I know of no astronomer pals.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:3",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 46755713,
+    "source_text": "{SPEAKER_AKERS}{PART_000}C'mon man!{PART_001}What's proposition mean?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:4",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2078380756,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Ask {PLAYER_NAME}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:5",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 562562757,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yeah,{PART_001}they don't seem much for talkin'.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:129/frame:6",
+      "chunk_id": 129,
+      "chunk_name": "NL_Proposition",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2063956588,
+    "source_text": "False!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:130/title",
+      "chunk_id": 130,
+      "chunk_name": "NL_False named FALSE"
+    }
+  },
+  {
+    "text_index": 1179811059,
+    "source_text": "{SPEAKER_AKERS}{PART_000}False!{PART_001}Those were some false statements!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:130/frame:0",
+      "chunk_id": 130,
+      "chunk_name": "NL_False named FALSE",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 434721653,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmmmm.{PART_001}True.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:130/frame:1",
+      "chunk_id": 130,
+      "chunk_name": "NL_False named FALSE",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1399465047,
+    "source_text": "Incorrect!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:131/title",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT"
+    }
+  },
+  {
+    "text_index": 795845078,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Incorrect?{PART_001}What's incorrect?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:0",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 339798279,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}It means incorrect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:1",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 275352125,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh.{PART_001}Right.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:2",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1406992695,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}No,{PART_001}not right.{PART_002}Incorrect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:3",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 705534899,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yeah,{PART_001}yeah,{PART_002}you knew what I meant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:4",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 955268112,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Incorrect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:5",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 756190153,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Correct!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:6",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 626967492,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Incorrect.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:7",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1002414894,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Alright guys that's enough.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:8",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1234950792,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hahaha!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:9",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1214860916,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hehe.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:131/frame:10",
+      "chunk_id": 131,
+      "chunk_name": "NL_False named INCORRECT",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1854221792,
+    "source_text": "True?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:132/title",
+      "chunk_id": 132,
+      "chunk_name": "NL_False named TRUE"
+    }
+  },
+  {
+    "text_index": 554135742,
+    "source_text": "{SPEAKER_AKERS}{PART_000}True!{PART_001}Those were some true statements!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:132/frame:0",
+      "chunk_id": 132,
+      "chunk_name": "NL_False named TRUE",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 367229780,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}False.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:132/frame:1",
+      "chunk_id": 132,
+      "chunk_name": "NL_False named TRUE",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2066675228,
+    "source_text": "Correct!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:133/title",
+      "chunk_id": 133,
+      "chunk_name": "NL_True named CORRECT"
+    }
+  },
+  {
+    "text_index": 58798589,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Correct!{PART_001}Looks correct to me!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:133/frame:0",
+      "chunk_id": 133,
+      "chunk_name": "NL_True named CORRECT",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1255860679,
+    "source_text": "False?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:134/title",
+      "chunk_id": 134,
+      "chunk_name": "NL_True named FALSE"
+    }
+  },
+  {
+    "text_index": 1765609386,
+    "source_text": "{SPEAKER_AKERS}{PART_000}False!{PART_001}Those were some false statements!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:134/frame:0",
+      "chunk_id": 134,
+      "chunk_name": "NL_True named FALSE",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 714985856,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmmmm.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:134/frame:1",
+      "chunk_id": 134,
+      "chunk_name": "NL_True named FALSE",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1990844879,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh wait.{PART_001}Hold on lemme reexamine...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:134/frame:2",
+      "chunk_id": 134,
+      "chunk_name": "NL_True named FALSE",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 426717839,
+    "source_text": "True!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:135/title",
+      "chunk_id": 135,
+      "chunk_name": "NL_True named TRUE"
+    }
+  },
+  {
+    "text_index": 1539465763,
+    "source_text": "{SPEAKER_AKERS}{PART_000}True!{PART_001}Those are some true statements!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:135/frame:0",
+      "chunk_id": 135,
+      "chunk_name": "NL_True named TRUE",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1923309431,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:136/frame:0",
+      "chunk_id": 136,
+      "chunk_name": "NL_And named &",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 391545739,
+    "source_text": "And",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:137/title",
+      "chunk_id": 137,
+      "chunk_name": "NL_And named AND"
+    }
+  },
+  {
+    "text_index": 1384117853,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And what does 'and' mean?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:137/frame:0",
+      "chunk_id": 137,
+      "chunk_name": "NL_And named AND",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 191012503,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}As in a logical AND.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:137/frame:1",
+      "chunk_id": 137,
+      "chunk_name": "NL_And named AND",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2096822049,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Huh.{PART_001}Never heard of that.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:137/frame:2",
+      "chunk_id": 137,
+      "chunk_name": "NL_And named AND",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2085907394,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Then maybe you could check the reference section under logic.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:137/frame:3",
+      "chunk_id": 137,
+      "chunk_name": "NL_And named AND",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1957766547,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Maybe I will!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:137/frame:4",
+      "chunk_id": 137,
+      "chunk_name": "NL_And named AND",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1576752462,
+    "source_text": "Bothtrue",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:138/title",
+      "chunk_id": 138,
+      "chunk_name": "NL_And named Bothtrue"
+    }
+  },
+  {
+    "text_index": 1299904847,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Both-true!{PART_001}Only true when they're both true!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:138/frame:0",
+      "chunk_id": 138,
+      "chunk_name": "NL_And named Bothtrue",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1008524718,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}It works.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:138/frame:1",
+      "chunk_id": 138,
+      "chunk_name": "NL_And named Bothtrue",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1199251653,
+    "source_text": "Flip",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:139/title",
+      "chunk_id": 139,
+      "chunk_name": "NL_Not named FLIP"
+    }
+  },
+  {
+    "text_index": 1235328063,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Flip?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:139/frame:0",
+      "chunk_id": 139,
+      "chunk_name": "NL_Not named FLIP",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 330361844,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Like flipping a bit.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:139/frame:1",
+      "chunk_id": 139,
+      "chunk_name": "NL_Not named FLIP",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 833427352,
+    "source_text": "Not",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:140/title",
+      "chunk_id": 140,
+      "chunk_name": "NL_Not named NOT"
+    }
+  },
+  {
+    "text_index": 1179939463,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm.{PART_001}Not works.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:140/frame:0",
+      "chunk_id": 140,
+      "chunk_name": "NL_Not named NOT",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1626030935,
+    "source_text": "Or",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:141/title",
+      "chunk_id": 141,
+      "chunk_name": "NL_Or named OR"
+    }
+  },
+  {
+    "text_index": 1168418134,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Or?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:141/frame:0",
+      "chunk_id": 141,
+      "chunk_name": "NL_Or named OR",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1022872664,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Logical OR.{PART_001}You never checked the reference tab, did you.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:141/frame:1",
+      "chunk_id": 141,
+      "chunk_name": "NL_Or named OR",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 586833078,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Pfft,{PART_001}what?{PART_002}No,{PART_003}of course I did.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:141/frame:2",
+      "chunk_id": 141,
+      "chunk_name": "NL_Or named OR",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 877104787,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Mmhmm...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:141/frame:3",
+      "chunk_id": 141,
+      "chunk_name": "NL_Or named OR",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1905547606,
+    "source_text": "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME},{PART_001}do ya think you could explain it for me?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:141/frame:4",
+      "chunk_id": 141,
+      "chunk_name": "NL_Or named OR",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1615862775,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Very clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:142/frame:0",
+      "chunk_id": 142,
+      "chunk_name": "NL_Or named pipe",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 619862704,
+    "source_text": "Bigger",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:143/title",
+      "chunk_id": 143,
+      "chunk_name": "NL_bigger named bigger"
+    }
+  },
+  {
+    "text_index": 1298765099,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Bigger!{PART_001}I like it,{PART_002}but how's it different than {SIG_N032}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:143/frame:0",
+      "chunk_id": 143,
+      "chunk_name": "NL_bigger named bigger",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 194669500,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}This one's less mathematical!{PART_001}Yay!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:143/frame:1",
+      "chunk_id": 143,
+      "chunk_name": "NL_bigger named bigger",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1810641201,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What,{PART_001}you hate math that much?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:143/frame:2",
+      "chunk_id": 143,
+      "chunk_name": "NL_bigger named bigger",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 453025878,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}No,{PART_001}but I love language way more!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:143/frame:3",
+      "chunk_id": 143,
+      "chunk_name": "NL_bigger named bigger",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1790703309,
+    "source_text": "> is cleaner :)",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:144/title",
+      "chunk_id": 144,
+      "chunk_name": "NL_greater changed from greater to greater than sign"
+    }
+  },
+  {
+    "text_index": 1296778500,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm!{PART_001}This is much cleaner than greater :)",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:144/frame:0",
+      "chunk_id": 144,
+      "chunk_name": "NL_greater changed from greater to greater than sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1261360347,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Clean.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:145/frame:0",
+      "chunk_id": 145,
+      "chunk_name": "NL_greater named greater than sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 775530065,
+    "source_text": "Greater",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:146/title",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER"
+    }
+  },
+  {
+    "text_index": 1140561385,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Greater!{PART_001}I like it!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:146/frame:0",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 884274421,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}You like everything.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:146/frame:1",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 622007425,
+    "source_text": "{SPEAKER_AKERS}{PART_000}I do not!{PART_001}Plus,{PART_002}you say that as if it's a bad thing.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:146/frame:2",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1292226364,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm.{PART_001}Being selective is good sometimes.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:146/frame:3",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1434149335,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well,{PART_001}is 'greater' a good choice for signal -32 or not??",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:146/frame:4",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 211519642,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmmm.{PART_001}It works.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:146/frame:5",
+      "chunk_id": 146,
+      "chunk_name": "NL_greater named GREATER",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1193195716,
+    "source_text": "Not equal?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:147/title",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal"
+    }
+  },
+  {
+    "text_index": 1545554015,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Not equal!{PART_001}Nice choice!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:0",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1399577979,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hm.{PART_001}No.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:1",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1680965404,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What?{PART_001}How?{PART_002}It works!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:2",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 587328929,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}It is like saying your age is not the same as mine.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:3",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 274231939,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That is true!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:4",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1764647249,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}But there is more to it than that.{PART_001}I am older.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:5",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1805160162,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well,{PART_001}it works for now.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:6",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1232133084,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}But lacks specificity.{PART_001}Not on-board...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:147/frame:7",
+      "chunk_id": 147,
+      "chunk_name": "NL_greater named notequal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1710647503,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}The cleanliness is increasing.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:148/frame:0",
+      "chunk_id": 148,
+      "chunk_name": "NL_lesser named lesser than sign",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1312912114,
+    "source_text": "Lesser",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:149/title",
+      "chunk_id": 149,
+      "chunk_name": "NL_lesser named lesser"
+    }
+  },
+  {
+    "text_index": 609682394,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Lesser!{PART_001}Doesn't quite roll off the tongue,{PART_002}but I reckon it fits!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:149/frame:0",
+      "chunk_id": 149,
+      "chunk_name": "NL_lesser named lesser",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1719454196,
+    "source_text": "Not equal??",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:150/title",
+      "chunk_id": 150,
+      "chunk_name": "NL_lesser named notequal"
+    }
+  },
+  {
+    "text_index": 1751016833,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Not equal!{PART_001}It works.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:150/frame:0",
+      "chunk_id": 150,
+      "chunk_name": "NL_lesser named notequal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 731723085,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hm.{PART_001}No.{PART_002}Not specific enough.{PART_003}I fear we have been over this.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:150/frame:1",
+      "chunk_id": 150,
+      "chunk_name": "NL_lesser named notequal",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2122067419,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yeah I'm gettin' deja vu...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:150/frame:2",
+      "chunk_id": 150,
+      "chunk_name": "NL_lesser named notequal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1317298918,
+    "source_text": "If",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:151/title",
+      "chunk_id": 151,
+      "chunk_name": "NL_if named if"
+    }
+  },
+  {
+    "text_index": 1167688270,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}If you believe that to be an accurate representation for signal -37,{PART_001}then {PLAYER_NAME},{PART_002}I will support your decision.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:151/frame:0",
+      "chunk_id": 151,
+      "chunk_name": "NL_if named if",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 116374083,
+    "source_text": "So",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:152/title",
+      "chunk_id": 152,
+      "chunk_name": "NL_therefore named so"
+    }
+  },
+  {
+    "text_index": 1857324634,
+    "source_text": "{SPEAKER_AKERS}{PART_000}So?{PART_001}So what?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:152/frame:0",
+      "chunk_id": 152,
+      "chunk_name": "NL_therefore named so",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1718949885,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}So,{PART_001}a conclusion can follow.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:152/frame:1",
+      "chunk_id": 152,
+      "chunk_name": "NL_therefore named so",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1241859157,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That makes sense,{PART_001}so I like it!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:152/frame:2",
+      "chunk_id": 152,
+      "chunk_name": "NL_therefore named so",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2064074001,
+    "source_text": "Then",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:153/title",
+      "chunk_id": 153,
+      "chunk_name": "NL_therefore named then"
+    }
+  },
+  {
+    "text_index": 826342226,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Then.{PART_001}Seems pretty straightforward.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:153/frame:0",
+      "chunk_id": 153,
+      "chunk_name": "NL_therefore named then",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1639818062,
+    "source_text": "Therefore",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:154/title",
+      "chunk_id": 154,
+      "chunk_name": "NL_therefore named therefore"
+    }
+  },
+  {
+    "text_index": 1551342834,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Therefore! {PLAYER_NAME},{PART_001}oh you must feel so fancy!{PART_002}Listen to how it rolls off the tongue!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:154/frame:0",
+      "chunk_id": 154,
+      "chunk_name": "NL_therefore named therefore",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 286029416,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Akers,{PART_001}I think you're overestimating how hifalutin the word \"therefore\" is.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:154/frame:1",
+      "chunk_id": 154,
+      "chunk_name": "NL_therefore named therefore",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 913820390,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hifalutin?!{PART_001}Good golly now you've outdone yourself!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:154/frame:2",
+      "chunk_id": 154,
+      "chunk_name": "NL_therefore named therefore",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1951870776,
+    "source_text": "From -> Source",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:155/title",
+      "chunk_id": 155,
+      "chunk_name": "NL_from changed from from to source"
+    }
+  },
+  {
+    "text_index": 1644867600,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Much better!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:155/frame:0",
+      "chunk_id": 155,
+      "chunk_name": "NL_from changed from from to source",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 724949593,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Much worse!{PART_001}Nobody talks like this,{PART_002}{PLAYER_NAME}!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:155/frame:1",
+      "chunk_id": 155,
+      "chunk_name": "NL_from changed from from to source",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 938015466,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Well they are {PLAYER_NAME},{PART_001}so it is their discretion",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:155/frame:2",
+      "chunk_id": 155,
+      "chunk_name": "NL_from changed from from to source",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 344180602,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Whatever!{PART_001}You both are lame!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:155/frame:3",
+      "chunk_id": 155,
+      "chunk_name": "NL_from changed from from to source",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 124232975,
+    "source_text": "Source -> From",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:156/title",
+      "chunk_id": 156,
+      "chunk_name": "NL_from changed from source to from"
+    }
+  },
+  {
+    "text_index": 1811848554,
+    "source_text": "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}!{PART_001}Good call!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:156/frame:0",
+      "chunk_id": 156,
+      "chunk_name": "NL_from changed from source to from",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1001189623,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Ughh,{PART_001}\"source\" makes so much more sense than \"from.\"",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:156/frame:1",
+      "chunk_id": 156,
+      "chunk_name": "NL_from changed from source to from",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 841340464,
+    "source_text": "{SPEAKER_AKERS}{PART_000}In what world, Carrie?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:156/frame:2",
+      "chunk_id": 156,
+      "chunk_name": "NL_from changed from source to from",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1925565619,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}In linguistics!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:156/frame:3",
+      "chunk_id": 156,
+      "chunk_name": "NL_from changed from source to from",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1967403816,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well we aren't linguists!{PART_001}We're all trying to crack this thing together!{PART_002}Go {PLAYER_NAME}!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:156/frame:4",
+      "chunk_id": 156,
+      "chunk_name": "NL_from changed from source to from",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 496568698,
+    "source_text": "From",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:157/title",
+      "chunk_id": 157,
+      "chunk_name": "NL_from named from"
+    }
+  },
+  {
+    "text_index": 164698559,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}From.{PART_001}Hm,{PART_002}we'll see if this holds consistent.{PART_003}I'm partial to calling this one \"source.\"",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:157/frame:0",
+      "chunk_id": 157,
+      "chunk_name": "NL_from named from",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 550566982,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Source?{PART_001}That's stupid.{PART_002}Why source?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:157/frame:1",
+      "chunk_id": 157,
+      "chunk_name": "NL_from named from",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1169492566,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}As in,{PART_001}whatever precedes \"source\" is the source of some action.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:157/frame:2",
+      "chunk_id": 157,
+      "chunk_name": "NL_from named from",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 272916339,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Too much.{PART_001}I'm with {PLAYER_NAME} on this one.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:157/frame:3",
+      "chunk_id": 157,
+      "chunk_name": "NL_from named from",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1842494623,
+    "source_text": "To!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:158/title",
+      "chunk_id": 158,
+      "chunk_name": "NL_from named to"
+    }
+  },
+  {
+    "text_index": 1262605613,
+    "source_text": "{SPEAKER_AKERS}{PART_000}To!{PART_001}I like it!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:158/frame:0",
+      "chunk_id": 158,
+      "chunk_name": "NL_from named to",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1780220082,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}You like everything.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:158/frame:1",
+      "chunk_id": 158,
+      "chunk_name": "NL_from named to",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 194072608,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Hey!{PART_001}It's good to be supportive.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:158/frame:2",
+      "chunk_id": 158,
+      "chunk_name": "NL_from named to",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1890332091,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Some selection in support would go a long ways.{PART_001}That is all.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:158/frame:3",
+      "chunk_id": 158,
+      "chunk_name": "NL_from named to",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 473955173,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Such a negative nancy, that one...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:158/frame:4",
+      "chunk_id": 158,
+      "chunk_name": "NL_from named to",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 860512474,
+    "source_text": "Make",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:159/title",
+      "chunk_id": 159,
+      "chunk_name": "NL_make named make"
+    }
+  },
+  {
+    "text_index": 284512847,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Makes sense.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:159/frame:0",
+      "chunk_id": 159,
+      "chunk_name": "NL_make named make",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 205774787,
+    "source_text": "Within",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:160/title",
+      "chunk_id": 160,
+      "chunk_name": "NL_make named within"
+    }
+  },
+  {
+    "text_index": 1119680529,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Within,{PART_001}huh.{PART_002}Technically true,{PART_003}though I'm unsure if it captures the essence of this signal.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:160/frame:0",
+      "chunk_id": 160,
+      "chunk_name": "NL_make named within",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2087651429,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Now that's just fancy linguist-talk!{PART_001}The essence?{PART_002}What do you mean?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:160/frame:1",
+      "chunk_id": 160,
+      "chunk_name": "NL_make named within",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1718696763,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}The core meaning.{PART_001}With the wide array of contexts,{PART_002}I suspect this word has more of an ordinary function.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:160/frame:2",
+      "chunk_id": 160,
+      "chunk_name": "NL_make named within",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1427854902,
+    "source_text": "Addcoords",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:161/title",
+      "chunk_id": 161,
+      "chunk_name": "NL_move named addcoords"
+    }
+  },
+  {
+    "text_index": 1715470034,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Addcoords?{PART_001}What's that stand for?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:161/frame:0",
+      "chunk_id": 161,
+      "chunk_name": "NL_move named addcoords",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 353846411,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Add coordinates.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:161/frame:1",
+      "chunk_id": 161,
+      "chunk_name": "NL_move named addcoords",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 109553679,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Ohhhhhhhh!{PART_001}I should've figured that much.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:161/frame:2",
+      "chunk_id": 161,
+      "chunk_name": "NL_move named addcoords",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1124004787,
+    "source_text": "Move",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:162/title",
+      "chunk_id": 162,
+      "chunk_name": "NL_move named move"
+    }
+  },
+  {
+    "text_index": 901901340,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Move!{PART_001}I like it!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:162/frame:0",
+      "chunk_id": 162,
+      "chunk_name": "NL_move named move",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1869784434,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Too vague.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:162/frame:1",
+      "chunk_id": 162,
+      "chunk_name": "NL_move named move",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1759418659,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I agree with both of you.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:162/frame:2",
+      "chunk_id": 162,
+      "chunk_name": "NL_move named move",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 512926387,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Now how's that?{PART_001}You gotta pick a side,{PART_002}Carrie.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:162/frame:3",
+      "chunk_id": 162,
+      "chunk_name": "NL_move named move",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1997261825,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Well.{PART_001}It fits the use of the word and it's vague.{PART_002}We'll have to see if this abstract definition fits its future use cases.{PART_003}{PLAYER_NAME},{PART_004}go with what makes sense to you.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:162/frame:4",
+      "chunk_id": 162,
+      "chunk_name": "NL_move named move",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1251046293,
+    "source_text": "Translate",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:163/title",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate"
+    }
+  },
+  {
+    "text_index": 1287714347,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Translate?{PART_001}$animC4Pardon me,{PART_002}but I fail to see how this signal is translating anything?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:163/frame:0",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 597882298,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Mathematical translation.{PART_001}$animB3Moving geometry.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:163/frame:1",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1887677928,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Oh,{PART_001}as in movement.{PART_002}$animB0I see now.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:163/frame:2",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1900651154,
+    "source_text": "{SPEAKER_AKERS}{PART_000}$animA4Tsk tsk tsk,{PART_001}Carrie!{PART_002}You should've known that!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:163/frame:3",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 162879476,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}$animC3Oh hush,{PART_001}Akers.{PART_002}You were thinking the same as I, weren't you?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:163/frame:4",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1157137793,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yeahh...{PART_001}$animA0I was...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:163/frame:5",
+      "chunk_id": 163,
+      "chunk_name": "NL_move named translate",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2072167609,
+    "source_text": "From!",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:164/title",
+      "chunk_id": 164,
+      "chunk_name": "NL_to named from"
+    }
+  },
+  {
+    "text_index": 1678645928,
+    "source_text": "{SPEAKER_AKERS}{PART_000}From!{PART_001}I like it!{PART_002}From one thing to the other!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:164/frame:0",
+      "chunk_id": 164,
+      "chunk_name": "NL_to named from",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 547312909,
+    "source_text": "To",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:165/title",
+      "chunk_id": 165,
+      "chunk_name": "NL_to named to"
+    }
+  },
+  {
+    "text_index": 1946765581,
+    "source_text": "{SPEAKER_AKERS}{PART_000}To?{PART_001}But it comes after.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:165/frame:0",
+      "chunk_id": 165,
+      "chunk_name": "NL_to named to",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1431478659,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Yes,{PART_001}another quirk of the meteor language.{PART_002}Their prepositions seem to follow the object.{PART_003}Reminds me of Japanese grammar at times.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:165/frame:1",
+      "chunk_id": 165,
+      "chunk_name": "NL_to named to",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1483266842,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Show-off.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:165/frame:2",
+      "chunk_id": 165,
+      "chunk_name": "NL_to named to",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1265425418,
+    "source_text": "Aliens",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:166/title",
+      "chunk_id": 166,
+      "chunk_name": "NL_aliens named aliens"
+    }
+  },
+  {
+    "text_index": 628561783,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh.{PART_001}That's real.{PART_002}You mean we're defining \"aliens.\"",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:166/frame:0",
+      "chunk_id": 166,
+      "chunk_name": "NL_aliens named aliens",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1480869418,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME},{PART_001}you may be right.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:166/frame:1",
+      "chunk_id": 166,
+      "chunk_name": "NL_aliens named aliens",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2113169692,
+    "source_text": "Earth",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:167/title",
+      "chunk_id": 167,
+      "chunk_name": "NL_humans named earth"
+    }
+  },
+  {
+    "text_index": 1278701378,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Earth.{PART_001}The third planet from The Sun,{PART_002}in the Milky Way Galaxy.{PART_003}And now,{PART_004}the recipient of an extraterrestrial message.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:167/frame:0",
+      "chunk_id": 167,
+      "chunk_name": "NL_humans named earth",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1208861696,
+    "source_text": "Humanity",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:168/title",
+      "chunk_id": 168,
+      "chunk_name": "NL_humans named humanity"
+    }
+  },
+  {
+    "text_index": 352127206,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Could they be talking about...{PART_001}us?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:168/frame:0",
+      "chunk_id": 168,
+      "chunk_name": "NL_humans named humanity",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1406202111,
+    "source_text": "Humans",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:169/title",
+      "chunk_id": 169,
+      "chunk_name": "NL_humans named humans"
+    }
+  },
+  {
+    "text_index": 314166347,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Humans...{PART_001}is it us?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:169/frame:0",
+      "chunk_id": 169,
+      "chunk_name": "NL_humans named humans",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1470309081,
+    "source_text": "The medium is the massage",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:170/title",
+      "chunk_id": 170,
+      "chunk_name": "NL_message named massage"
+    }
+  },
+  {
+    "text_index": 1386134585,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}The medium is the massage!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:170/frame:0",
+      "chunk_id": 170,
+      "chunk_name": "NL_message named massage",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1939424805,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:170/frame:1",
+      "chunk_id": 170,
+      "chunk_name": "NL_message named massage",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 854185020,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Oh nothing.{PART_001}I'm just,{PART_002}it's a linguistics joke.{PART_003}Sorry.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:170/frame:2",
+      "chunk_id": 170,
+      "chunk_name": "NL_message named massage",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1761318021,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Nerd.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:170/frame:3",
+      "chunk_id": 170,
+      "chunk_name": "NL_message named massage",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1758484622,
+    "source_text": "Message",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:171/title",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message"
+    }
+  },
+  {
+    "text_index": 1354728633,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}A message.{PART_001}Interesting.{PART_002}Very interesting!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:171/frame:0",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1227215822,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Go on.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:171/frame:1",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 456526287,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}The meteor may be talking about itself!{PART_001}And from there,{PART_002}it may bridge to move advanced concepts!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:171/frame:2",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2021935576,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Since what little common ground we have includes astrophysics and the meteorite,{PART_001}it's using every tool it can to get some point across.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:171/frame:3",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1315257325,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Well said!{PART_001}This bridge of semantics is going somewhere beyond math.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:171/frame:4",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 950220312,
+    "source_text": "{SPEAKER_AKERS}{PART_000}They're building a message.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:171/frame:5",
+      "chunk_id": 171,
+      "chunk_name": "NL_message named message",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 900356033,
+    "source_text": "Msg",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:172/title",
+      "chunk_id": 172,
+      "chunk_name": "NL_message named msg"
+    }
+  },
+  {
+    "text_index": 1180266295,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hey Bautista,{PART_001}I think {PLAYER_NAME}'s earned a \"clean\".",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:172/frame:0",
+      "chunk_id": 172,
+      "chunk_name": "NL_message named msg",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 845728362,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hm?{PART_001}No.{PART_002}Have we not been through this?{PART_003}Two too many characters.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:172/frame:1",
+      "chunk_id": 172,
+      "chunk_name": "NL_message named msg",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1876026575,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Ah,{PART_001}{PLAYER_NAME},{PART_002}I tried.{PART_003}I'll give you a \"clean\" at least!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:172/frame:2",
+      "chunk_id": 172,
+      "chunk_name": "NL_message named msg",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1164546937,
+    "source_text": "Transmission",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:173/title",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission"
+    }
+  },
+  {
+    "text_index": 1486924714,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Oh woah.{PART_001}You think that's what signal -43 represents,{PART_002}{PLAYER_NAME}?{PART_003}If signal -43 represents each transmission,{PART_004}then the meteor is beginning to self-reference.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:0",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 596449136,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Which means?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:1",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1565168230,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Between the humans and aliens,{PART_001}we have 2 starting points for conversation.{PART_002}Only from there can we reach more advanced discussion.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:2",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1619913112,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And those 2 starting points are...?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:3",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1631799680,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Universal constants,{PART_001}and the medium itself:{PART_002}the meteor.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:4",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2125676485,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And if they're establishing the concept of \"transmissions\",{PART_001}then they're going to use that to bridge to some other concept!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:5",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 363464020,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}That's the theory.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:173/frame:6",
+      "chunk_id": 173,
+      "chunk_name": "NL_message named transmission",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2137297966,
+    "source_text": "Meteorite",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:174/title",
+      "chunk_id": 174,
+      "chunk_name": "NL_meteor changed from meteor to meteorite"
+    }
+  },
+  {
+    "text_index": 714220289,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh my goodness.{PART_001}{PLAYER_NAME},{PART_002}you really are brilliant!{PART_003}Finally someone who listened to me!{PART_004}It's a meteorite,{PART_005}not a meteor!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:174/frame:0",
+      "chunk_id": 174,
+      "chunk_name": "NL_meteor changed from meteor to meteorite",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1627805748,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Who cares.{PART_001}Log,{PART_002}turn off.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:174/frame:1",
+      "chunk_id": 174,
+      "chunk_name": "NL_meteor changed from meteor to meteorite",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 370761651,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hey!!{PART_001}Wai--",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:174/frame:2",
+      "chunk_id": 174,
+      "chunk_name": "NL_meteor changed from meteor to meteorite",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1983599023,
+    "source_text": "Computer?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:175/title",
+      "chunk_id": 175,
+      "chunk_name": "NL_meteor named computer"
+    }
+  },
+  {
+    "text_index": 1553062053,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Computer.{PART_001}Why.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:175/frame:0",
+      "chunk_id": 175,
+      "chunk_name": "NL_meteor named computer",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 851275715,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Because the signals are coming from the computer.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:175/frame:1",
+      "chunk_id": 175,
+      "chunk_name": "NL_meteor named computer",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2019402534,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}The computer in the meteor,{PART_001}yes.{PART_002}This computer,{PART_003}no.{PART_004}This computer just converts signals to text for us humans.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:175/frame:2",
+      "chunk_id": 175,
+      "chunk_name": "NL_meteor named computer",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1375521785,
+    "source_text": "Meteor",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:176/title",
+      "chunk_id": 176,
+      "chunk_name": "NL_meteor named meteor"
+    }
+  },
+  {
+    "text_index": 1349369461,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Oh my goodness.{PART_001}{PLAYER_NAME},{PART_002}you're brilliant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:176/frame:0",
+      "chunk_id": 176,
+      "chunk_name": "NL_meteor named meteor",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1399941700,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Though not too brilliant.{PART_001}It's a \"meteorite\",{PART_002}not a meteor.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:176/frame:1",
+      "chunk_id": 176,
+      "chunk_name": "NL_meteor named meteor",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 631339680,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Pedant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:176/frame:2",
+      "chunk_id": 176,
+      "chunk_name": "NL_meteor named meteor",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1219136884,
+    "source_text": "F for freq?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:177/title",
+      "chunk_id": 177,
+      "chunk_name": "NL_signal changed from freq to f"
+    }
+  },
+  {
+    "text_index": 1691067110,
+    "source_text": "{SPEAKER_AKERS}{PART_000}...{PART_001}Bautista...{PART_002}Ahem.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:177/frame:0",
+      "chunk_id": 177,
+      "chunk_name": "NL_signal changed from freq to f",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 116552652,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hm?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:177/frame:1",
+      "chunk_id": 177,
+      "chunk_name": "NL_signal changed from freq to f",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 335273215,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Don't you have something you want to say about this 1-character entry?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:177/frame:2",
+      "chunk_id": 177,
+      "chunk_name": "NL_signal changed from freq to f",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 36239525,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Meh.{PART_001}F means nothing to me.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:177/frame:3",
+      "chunk_id": 177,
+      "chunk_name": "NL_signal changed from freq to f",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1481903080,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh come on!!{PART_001}He's frustrating,{PART_002}isn't he,{PART_003}{PLAYER_NAME}?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:177/frame:4",
+      "chunk_id": 177,
+      "chunk_name": "NL_signal changed from freq to f",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1587304870,
+    "source_text": "Freq",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:178/title",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq"
+    }
+  },
+  {
+    "text_index": 1584752821,
+    "source_text": "{SPEAKER_AKERS}{PART_000}A shorter version of frequency, huh?{PART_001}Clean!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:0",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 678627289,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}No.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:1",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1982185930,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What?{PART_001}How come that doesn't get a \"clean\"?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:2",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 238719275,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}\"Clean\" is reserved for entries 1 character in length.{PART_001}This is four.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:3",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 843325599,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That's a goofy system!{PART_001}What if some words can't realistically be shortened to 1 character?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:4",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1611442270,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Maybe there is no clean way to display every word.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:5",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 412390603,
+    "source_text": "{SPEAKER_AKERS}{PART_000}You and your rules...{PART_001}Picky little dictator.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:6",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1911406756,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}It is good to be selective with praise.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:178/frame:7",
+      "chunk_id": 178,
+      "chunk_name": "NL_signal named freq",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 646046703,
+    "source_text": "Frequency",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:179/title",
+      "chunk_id": 179,
+      "chunk_name": "NL_signal named frequency"
+    }
+  },
+  {
+    "text_index": 290581305,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Frequency?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:179/frame:0",
+      "chunk_id": 179,
+      "chunk_name": "NL_signal named frequency",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1273046512,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}As in,{PART_001}this frequency offset corresponds to this word.{PART_002}It is how our dictionary relates frequencies to a referent concept.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:179/frame:1",
+      "chunk_id": 179,
+      "chunk_name": "NL_signal named frequency",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1651888215,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Neat.{PART_001}The astronomer approves.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:179/frame:2",
+      "chunk_id": 179,
+      "chunk_name": "NL_signal named frequency",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1302641212,
+    "source_text": "Signal",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:180/title",
+      "chunk_id": 180,
+      "chunk_name": "NL_signal named signal"
+    }
+  },
+  {
+    "text_index": 1239389843,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Signal.{PART_001}Simple.{PART_002}I like it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:180/frame:0",
+      "chunk_id": 180,
+      "chunk_name": "NL_signal named signal",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 858824079,
+    "source_text": "Atom",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:181/title",
+      "chunk_id": 181,
+      "chunk_name": "NL_atom named atom"
+    }
+  },
+  {
+    "text_index": 199935585,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Atom.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:181/frame:0",
+      "chunk_id": 181,
+      "chunk_name": "NL_atom named atom",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 652181343,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Whaddya need?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:181/frame:1",
+      "chunk_id": 181,
+      "chunk_name": "NL_atom named atom",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2130894129,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}No,{PART_001}I said 'atom'.{PART_002}The dictionary,{PART_003}look!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:181/frame:2",
+      "chunk_id": 181,
+      "chunk_name": "NL_atom named atom",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 537916566,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh.{PART_001}Oh!{PART_002}Ohohohoohooo!!!{PART_003}Whew...{PART_004}If we can talk about atoms with the aliens,{PART_005}then maybe we can talk about the real world.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:181/frame:3",
+      "chunk_id": 181,
+      "chunk_name": "NL_atom named atom",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2050717824,
+    "source_text": "Element?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:182/title",
+      "chunk_id": 182,
+      "chunk_name": "NL_atom named element"
+    }
+  },
+  {
+    "text_index": 1819569886,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Element.{PART_001}Something about that doesn't sit right with me.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:182/frame:0",
+      "chunk_id": 182,
+      "chunk_name": "NL_atom named element",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 725825723,
+    "source_text": "{SPEAKER_AKERS}{PART_000}It sits right with me!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:182/frame:1",
+      "chunk_id": 182,
+      "chunk_name": "NL_atom named element",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1735147081,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}My concern is that they defined {SIG_N056} as {SIG_N055} {SIG_N023} 1.{PART_001}That makes me think that a {SIG_N056} is a single instance of {SIG_N055}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:182/frame:2",
+      "chunk_id": 182,
+      "chunk_name": "NL_atom named element",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 822655394,
+    "source_text": "Chemreact",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:183/title",
+      "chunk_id": 183,
+      "chunk_name": "NL_chemreact named chemreact"
+    }
+  },
+  {
+    "text_index": 1805801821,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What?{PART_001}What in the blue sky does that mean?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:183/frame:0",
+      "chunk_id": 183,
+      "chunk_name": "NL_chemreact named chemreact",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 730731279,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I imagine it's {PLAYER_NAME}'s portmanteau for a 'chemical reaction'.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:183/frame:1",
+      "chunk_id": 183,
+      "chunk_name": "NL_chemreact named chemreact",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 795224120,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Poor man's toe?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:183/frame:2",
+      "chunk_id": 183,
+      "chunk_name": "NL_chemreact named chemreact",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 714147514,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Sigh...{PART_001}Nevermind...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:183/frame:3",
+      "chunk_id": 183,
+      "chunk_name": "NL_chemreact named chemreact",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1946279131,
+    "source_text": "React",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:184/title",
+      "chunk_id": 184,
+      "chunk_name": "NL_chemreact named react"
+    }
+  },
+  {
+    "text_index": 1509219799,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}React.{PART_001}Good catch,{PART_002}{PLAYER_NAME}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:184/frame:0",
+      "chunk_id": 184,
+      "chunk_name": "NL_chemreact named react",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1517181745,
+    "source_text": "Chemical",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:185/title",
+      "chunk_id": 185,
+      "chunk_name": "NL_compound named chemical"
+    }
+  },
+  {
+    "text_index": 2145328769,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Chemicals!{PART_001}Brilliant work, {PLAYER_NAME}!{PART_002}If we can discuss chemical compounds with the aliens,{PART_003}we can describe our worlds in greater detail.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:185/frame:0",
+      "chunk_id": 185,
+      "chunk_name": "NL_compound named chemical",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 417017743,
+    "source_text": "Compound",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:186/title",
+      "chunk_id": 186,
+      "chunk_name": "NL_compound named compound"
+    }
+  },
+  {
+    "text_index": 85301025,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Compound?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:186/frame:0",
+      "chunk_id": 186,
+      "chunk_name": "NL_compound named compound",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 180471890,
+    "source_text": "{SPEAKER_AKERS}{PART_000}I think {PLAYER_NAME}'s referring to chemical compounds!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:186/frame:1",
+      "chunk_id": 186,
+      "chunk_name": "NL_compound named compound",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 510050689,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}And hopefully that was the aliens' intent.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:186/frame:2",
+      "chunk_id": 186,
+      "chunk_name": "NL_compound named compound",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 454304862,
+    "source_text": "Molecule",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:187/title",
+      "chunk_id": 187,
+      "chunk_name": "NL_compound named molecule"
+    }
+  },
+  {
+    "text_index": 780706517,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Molecule?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:187/frame:0",
+      "chunk_id": 187,
+      "chunk_name": "NL_compound named molecule",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 288105944,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Like one instance of a chemical compound.{PART_001}I think I see what {PLAYER_NAME}'s seeing.{PART_002}The aliens are describing substances by their atomic makeup.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:187/frame:1",
+      "chunk_id": 187,
+      "chunk_name": "NL_compound named molecule",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1369184345,
+    "source_text": "Electron",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:188/title",
+      "chunk_id": 188,
+      "chunk_name": "NL_electron named electron"
+    }
+  },
+  {
+    "text_index": 1030659042,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Electrons,{PART_001}$animA3the smallest thing we've defined so far.{PART_002}$animA5Yet it still takes up a frequency just like every other word.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:188/frame:0",
+      "chunk_id": 188,
+      "chunk_name": "NL_electron named electron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1692690937,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}What does that mean?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:188/frame:1",
+      "chunk_id": 188,
+      "chunk_name": "NL_electron named electron",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1541935961,
+    "source_text": "{SPEAKER_AKERS}{PART_000}$animA0Not sure.{PART_001}I thought it sounded poetic.{PART_002}$animA4Maybe I should be a poet.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:188/frame:2",
+      "chunk_id": 188,
+      "chunk_name": "NL_electron named electron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1210403813,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}$animB2Do not quit your day job.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:188/frame:3",
+      "chunk_id": 188,
+      "chunk_name": "NL_electron named electron",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1565546839,
+    "source_text": "{SPEAKER_AKERS}{PART_000}$animA0This is my day job...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:188/frame:4",
+      "chunk_id": 188,
+      "chunk_name": "NL_electron named electron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2006627485,
+    "source_text": "Atom",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:189/title",
+      "chunk_id": 189,
+      "chunk_name": "NL_element named atom"
+    }
+  },
+  {
+    "text_index": 261842307,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Atom.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:189/frame:0",
+      "chunk_id": 189,
+      "chunk_name": "NL_element named atom",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1421292129,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yes?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:189/frame:1",
+      "chunk_id": 189,
+      "chunk_name": "NL_element named atom",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1215930562,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}No,{PART_001}I said 'atom'.{PART_002}The dictionary.{PART_003}...{PART_004}Dr. Akers,{PART_005}you misheard me.{PART_006}{PLAYER_NAME} named a signal 'Atom'.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:189/frame:2",
+      "chunk_id": 189,
+      "chunk_name": "NL_element named atom",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 38350743,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh.{PART_001}Pardon.{PART_002}I thought you said 'Alan'.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:189/frame:3",
+      "chunk_id": 189,
+      "chunk_name": "NL_element named atom",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1765492716,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Anyways,{PART_001}I think {PLAYER_NAME} is onto something here...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:189/frame:4",
+      "chunk_id": 189,
+      "chunk_name": "NL_element named atom",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1065469226,
+    "source_text": "Element",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:190/title",
+      "chunk_id": 190,
+      "chunk_name": "NL_element named element"
+    }
+  },
+  {
+    "text_index": 1793504031,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Element?{PART_001}As in,{PART_002}an atomic element?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:190/frame:0",
+      "chunk_id": 190,
+      "chunk_name": "NL_element named element",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1469030762,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Now that'd be somethin'!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:190/frame:1",
+      "chunk_id": 190,
+      "chunk_name": "NL_element named element",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 944559416,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}If we can discuss elements,{PART_001}we open a whole new world of communication.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:190/frame:2",
+      "chunk_id": 190,
+      "chunk_name": "NL_element named element",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 599254024,
+    "source_text": "Neutron",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:191/title",
+      "chunk_id": 191,
+      "chunk_name": "NL_neutron named neutron"
+    }
+  },
+  {
+    "text_index": 51657926,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Neutrons,{PART_001}the neutral particle.{PART_002}Like Bautista.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:191/frame:0",
+      "chunk_id": 191,
+      "chunk_name": "NL_neutron named neutron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1108334965,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hm.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:191/frame:1",
+      "chunk_id": 191,
+      "chunk_name": "NL_neutron named neutron",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1415821079,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Exactly!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:191/frame:2",
+      "chunk_id": 191,
+      "chunk_name": "NL_neutron named neutron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1384306422,
+    "source_text": "Nuetron",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:192/title",
+      "chunk_id": 192,
+      "chunk_name": "NL_neutron named nuetron"
+    }
+  },
+  {
+    "text_index": 76540542,
+    "source_text": "{SPEAKER_AKERS}{PART_000}You mispelled nuetron.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:192/frame:0",
+      "chunk_id": 192,
+      "chunk_name": "NL_neutron named nuetron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 598213623,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}You misspelled 'misspelled.'",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:192/frame:1",
+      "chunk_id": 192,
+      "chunk_name": "NL_neutron named nuetron",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1513682440,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh bother!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:192/frame:2",
+      "chunk_id": 192,
+      "chunk_name": "NL_neutron named nuetron",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1094281116,
+    "source_text": "Proton",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:193/title",
+      "chunk_id": 193,
+      "chunk_name": "NL_proton named proton"
+    }
+  },
+  {
+    "text_index": 447521298,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Woah!{PART_001}Protons!{PART_002}I hope you're right!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:193/frame:0",
+      "chunk_id": 193,
+      "chunk_name": "NL_proton named proton",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1638658419,
+    "source_text": "Subatomic Particles",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:194/title",
+      "chunk_id": 194,
+      "chunk_name": "NL_protons neutrons and electrons"
+    }
+  },
+  {
+    "text_index": 285442587,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Protons, Neutrons, and Electrons.{PART_001}We've got 'em all!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:194/frame:0",
+      "chunk_id": 194,
+      "chunk_name": "NL_protons neutrons and electrons",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 961378109,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Now it makes sense why the three were all defined in a single transmission!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:194/frame:1",
+      "chunk_id": 194,
+      "chunk_name": "NL_protons neutrons and electrons",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1126308317,
+    "source_text": "{SPEAKER_AKERS}{PART_000}They were defining subatomic particles.{PART_001}It's all making sense,{PART_002}for now.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:194/frame:2",
+      "chunk_id": 194,
+      "chunk_name": "NL_protons neutrons and electrons",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 827207938,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}For now!{PART_001}Now let's continue.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:194/frame:3",
+      "chunk_id": 194,
+      "chunk_name": "NL_protons neutrons and electrons",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 216144400,
+    "source_text": "Circle",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:196/title",
+      "chunk_id": 196,
+      "chunk_name": "NL_circle named circle"
+    }
+  },
+  {
+    "text_index": 289253346,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Circle.{PART_001}They're defining a specific type of shape.{PART_002}Intriguing.{PART_003}I'd wager we'll soon see why.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:196/frame:0",
+      "chunk_id": 196,
+      "chunk_name": "NL_circle named circle",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1433640531,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Back to wagerin',{PART_001}huh?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:196/frame:1",
+      "chunk_id": 196,
+      "chunk_name": "NL_circle named circle",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 743348443,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Oh no.{PART_001}Those days are behind me.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:196/frame:2",
+      "chunk_id": 196,
+      "chunk_name": "NL_circle named circle",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1703590375,
+    "source_text": "Decompose",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:197/title",
+      "chunk_id": 197,
+      "chunk_name": "NL_destroy named decompose"
+    }
+  },
+  {
+    "text_index": 1821491771,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Decompose,{PART_001}inverting \"compose\" with the prefix \"de\".",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:197/frame:0",
+      "chunk_id": 197,
+      "chunk_name": "NL_destroy named decompose",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 477681803,
+    "source_text": "Destroy",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:198/title",
+      "chunk_id": 198,
+      "chunk_name": "NL_destroy named destroy"
+    }
+  },
+  {
+    "text_index": 1119094087,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Destroy?{PART_001}How intense!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:198/frame:0",
+      "chunk_id": 198,
+      "chunk_name": "NL_destroy named destroy",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 621756347,
+    "source_text": "Fusion",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:199/title",
+      "chunk_id": 199,
+      "chunk_name": "NL_fusion named fusion"
+    }
+  },
+  {
+    "text_index": 1215054678,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Combining atoms under intense pressure.{PART_001}At the core of our stars,{PART_002}fusion.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:199/frame:0",
+      "chunk_id": 199,
+      "chunk_name": "NL_fusion named fusion",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1353219059,
+    "source_text": "Galaxy",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:200/title",
+      "chunk_id": 200,
+      "chunk_name": "NL_galaxy named galaxy"
+    }
+  },
+  {
+    "text_index": 1910896875,
+    "source_text": "{SPEAKER_AKERS}{PART_000}It's hard to fathom the scale of a galaxy.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:200/frame:0",
+      "chunk_id": 200,
+      "chunk_name": "NL_galaxy named galaxy",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 398499389,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Even for you,{PART_001}someone who has studied the Milky Way in such detail?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:200/frame:1",
+      "chunk_id": 200,
+      "chunk_name": "NL_galaxy named galaxy",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 81019771,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The more I study,{PART_001}the more I struggle to fathom it.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:200/frame:2",
+      "chunk_id": 200,
+      "chunk_name": "NL_galaxy named galaxy",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 46174876,
+    "source_text": "Universe?",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:201/title",
+      "chunk_id": 201,
+      "chunk_name": "NL_galaxy named universe"
+    }
+  },
+  {
+    "text_index": 565055411,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Nuh-uh.{PART_001}The universe is much too large.{PART_002}This must be something else.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:201/frame:0",
+      "chunk_id": 201,
+      "chunk_name": "NL_galaxy named universe",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 910373300,
+    "source_text": "Moon",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:202/title",
+      "chunk_id": 202,
+      "chunk_name": "NL_moon named moon"
+    }
+  },
+  {
+    "text_index": 667500606,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And that which {SIG_N092} around {SIG_N093}:{PART_001}a moon!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:202/frame:0",
+      "chunk_id": 202,
+      "chunk_name": "NL_moon named moon",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1446520976,
+    "source_text": "Neutronstar",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:203/title",
+      "chunk_id": 203,
+      "chunk_name": "NL_neutronstar named neutronstar"
+    }
+  },
+  {
+    "text_index": 774603110,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Neutronstar.{PART_001}I'm in agreement.{PART_002}You have the astronomer's approval!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:203/frame:0",
+      "chunk_id": 203,
+      "chunk_name": "NL_neutronstar named neutronstar",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1269094120,
+    "source_text": "Nuetronstar",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:204/title",
+      "chunk_id": 204,
+      "chunk_name": "NL_neutronstar named nuetronstar"
+    }
+  },
+  {
+    "text_index": 2035599104,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Neustronstar!{PART_001}I'm on board with this.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:204/frame:0",
+      "chunk_id": 204,
+      "chunk_name": "NL_neutronstar named nuetronstar",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1468665409,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Um,{PART_001}excuse me,{PART_002}but...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:204/frame:1",
+      "chunk_id": 204,
+      "chunk_name": "NL_neutronstar named nuetronstar",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 58108122,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Yes Carrie?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:204/frame:2",
+      "chunk_id": 204,
+      "chunk_name": "NL_neutronstar named nuetronstar",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1049087190,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}You've misspelled it,{PART_001}{PLAYER_NAME}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:204/frame:3",
+      "chunk_id": 204,
+      "chunk_name": "NL_neutronstar named nuetronstar",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1465817998,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh phooey.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:204/frame:4",
+      "chunk_id": 204,
+      "chunk_name": "NL_neutronstar named nuetronstar",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 489316868,
+    "source_text": "Planet",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:205/title",
+      "chunk_id": 205,
+      "chunk_name": "NL_planet named planet"
+    }
+  },
+  {
+    "text_index": 662768530,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What {SIG_N092} around {SIG_N090}'s:{PART_001}The planets.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:205/frame:0",
+      "chunk_id": 205,
+      "chunk_name": "NL_planet named planet",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1360526774,
+    "source_text": "Star",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:206/title",
+      "chunk_id": 206,
+      "chunk_name": "NL_star named star"
+    }
+  },
+  {
+    "text_index": 871701452,
+    "source_text": "{SPEAKER_AKERS}{PART_000}It's beautiful.{PART_001}The star.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:206/frame:0",
+      "chunk_id": 206,
+      "chunk_name": "NL_star named star",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1443515195,
+    "source_text": "Whitedwarf",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:207/title",
+      "chunk_id": 207,
+      "chunk_name": "NL_whitedwarf named whitedwarf"
+    }
+  },
+  {
+    "text_index": 775315375,
+    "source_text": "{SPEAKER_AKERS}{PART_000}That matches up with my notes,{PART_001}{PLAYER_NAME}!{PART_002}Let's keep movin'!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:207/frame:0",
+      "chunk_id": 207,
+      "chunk_name": "NL_whitedwarf named whitedwarf",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 976251123,
+    "source_text": "Adjective",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:208/title",
+      "chunk_id": 208,
+      "chunk_name": "NL_adjective named adjective"
+    }
+  },
+  {
+    "text_index": 619835501,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Adjectives,{PART_001}descriptor words.{PART_002}Yet another part of speech to add to our dictionary.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:208/frame:0",
+      "chunk_id": 208,
+      "chunk_name": "NL_adjective named adjective",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 460241580,
+    "source_text": "Alternative",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:209/title",
+      "chunk_id": 209,
+      "chunk_name": "NL_alternative named alternative"
+    }
+  },
+  {
+    "text_index": 1021474299,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}For presenting multiple possibilities,{PART_001}the transmissions write:{PART_002}A {SIG_N077} B {SIG_N077} C.{PART_003}This has potential to be quite a powerful linguistic tool.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:209/frame:0",
+      "chunk_id": 209,
+      "chunk_name": "NL_alternative named alternative",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1841901710,
+    "source_text": "Option",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:210/title",
+      "chunk_id": 210,
+      "chunk_name": "NL_alternative named option"
+    }
+  },
+  {
+    "text_index": 1859495101,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Option.{PART_001}As in A {SIG_N077} B {SIG_N077} C.{PART_002}It's like an option separator.{PART_003}Interesting,{PART_004}and powerful.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:210/frame:0",
+      "chunk_id": 210,
+      "chunk_name": "NL_alternative named option",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 336737768,
+    "source_text": "Or",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:211/title",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or"
+    }
+  },
+  {
+    "text_index": 862258659,
+    "source_text": "{SPEAKER_AKERS}{PART_000}This is too confusing.{PART_001}Earlier we had a logical OR in signal -31.{PART_002}Now we have this.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:0",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 46806648,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Agreed.{PART_001}Though this OR makes more sense to me.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:1",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1855498879,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}We only have humanity to blame for this confusion.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:2",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 342656260,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Oh yeah?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:3",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 399846618,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}We named a logical operation after a common word.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:4",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1811832840,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Fair.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:5",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2106895865,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And you heard it from him first,{PART_001}we can blame you logicians for ruining a normal word!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:211/frame:6",
+      "chunk_id": 211,
+      "chunk_name": "NL_alternative named or",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 507918052,
+    "source_text": "Conjunction",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:212/title",
+      "chunk_id": 212,
+      "chunk_name": "NL_linkword named conjunction"
+    }
+  },
+  {
+    "text_index": 889531688,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Conjunctions.{PART_001}Apt as a word class to connect concepts.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:212/frame:0",
+      "chunk_id": 212,
+      "chunk_name": "NL_linkword named conjunction",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 828305385,
+    "source_text": "Preposition",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:213/title",
+      "chunk_id": 213,
+      "chunk_name": "NL_linkword named preposition"
+    }
+  },
+  {
+    "text_index": 1974285751,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Prepositions.{PART_001}Useful for relating concepts in spatial or temporal nature.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:213/frame:0",
+      "chunk_id": 213,
+      "chunk_name": "NL_linkword named preposition",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2086507413,
+    "source_text": "Noun",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:214/title",
+      "chunk_id": 214,
+      "chunk_name": "NL_noun named noun"
+    }
+  },
+  {
+    "text_index": 727659655,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Noun!!!!{PART_001}A part of speech!{PART_002}Marvelous just marvelous!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:214/frame:0",
+      "chunk_id": 214,
+      "chunk_name": "NL_noun named noun",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1811025716,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Gee {PLAYER_NAME},{PART_001}let's be more careful with our definitions.{PART_002}She's hurtin' my ears with her excitement...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:214/frame:1",
+      "chunk_id": 214,
+      "chunk_name": "NL_noun named noun",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 255431296,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Now you know what it is like.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:214/frame:2",
+      "chunk_id": 214,
+      "chunk_name": "NL_noun named noun",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 707479078,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Hey now what's that supposed to mean!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:214/frame:3",
+      "chunk_id": 214,
+      "chunk_name": "NL_noun named noun",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1710675728,
+    "source_text": "Opposite",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:215/title",
+      "chunk_id": 215,
+      "chunk_name": "NL_opposite named opposite"
+    }
+  },
+  {
+    "text_index": 396627962,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Opposite,{PART_001}that's particularly interesting.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:215/frame:0",
+      "chunk_id": 215,
+      "chunk_name": "NL_opposite named opposite",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1532476000,
+    "source_text": "{SPEAKER_AKERS}{PART_000}And why's that?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:215/frame:1",
+      "chunk_id": 215,
+      "chunk_name": "NL_opposite named opposite",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 802679672,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}If the aliens are defining 'opposite',{PART_001}then I theorize they will use it,{PART_002}to define a word that otherwise would be difficult to define.{PART_003}It will come around somehow.{PART_004}These aliens act with purpose.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:215/frame:2",
+      "chunk_id": 215,
+      "chunk_name": "NL_opposite named opposite",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2046874797,
+    "source_text": "Reverse",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:216/title",
+      "chunk_id": 216,
+      "chunk_name": "NL_opposite named reverse"
+    }
+  },
+  {
+    "text_index": 1957276342,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Reversing the meaning?{PART_001}Good observation,{PART_002}{PLAYER_NAME}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:216/frame:0",
+      "chunk_id": 216,
+      "chunk_name": "NL_opposite named reverse",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1582135426,
+    "source_text": "Verb",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:217/title",
+      "chunk_id": 217,
+      "chunk_name": "NL_verb named verb"
+    }
+  },
+  {
+    "text_index": 117515518,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Verb!!!!!!!!!!!{PART_001}We can discuss the alien language in meta-linguistic categories!{PART_002}Moving forward,{PART_003}this will only make definitions easier and easier.{PART_004}We will already have a basis on which we can build---",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:217/frame:0",
+      "chunk_id": 217,
+      "chunk_name": "NL_verb named verb",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1903677846,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Gee is this really what I sound like Bautista?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:217/frame:1",
+      "chunk_id": 217,
+      "chunk_name": "NL_verb named verb",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1261558319,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}At least she has coherent analysis to provide.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:217/frame:2",
+      "chunk_id": 217,
+      "chunk_name": "NL_verb named verb",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1521168228,
+    "source_text": "{SPEAKER_AKERS}{PART_000}You're brutal.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:217/frame:3",
+      "chunk_id": 217,
+      "chunk_name": "NL_verb named verb",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 385516754,
+    "source_text": "Helium",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:218/title",
+      "chunk_id": 218,
+      "chunk_name": "NL_helisec contains helium"
+    }
+  },
+  {
+    "text_index": 1781932684,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}A helium unit.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:218/frame:0",
+      "chunk_id": 218,
+      "chunk_name": "NL_helisec contains helium",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 299872654,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Based on the half-life of a particular {SIG_N063} of helium!{PART_001}We're getting somewhere.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:218/frame:1",
+      "chunk_id": 218,
+      "chunk_name": "NL_helisec contains helium",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 236072217,
+    "source_text": "Helisec",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:219/title",
+      "chunk_id": 219,
+      "chunk_name": "NL_helisec named helisec"
+    }
+  },
+  {
+    "text_index": 1704893352,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Helisec?{PART_001}What the helis-that?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:219/frame:0",
+      "chunk_id": 219,
+      "chunk_name": "NL_helisec named helisec",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1129445689,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Akers,{PART_001}you're toeing the line there...!{PART_002}Watch it!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:219/frame:1",
+      "chunk_id": 219,
+      "chunk_name": "NL_helisec named helisec",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 598550444,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Seriously,{PART_001}what's a heli--- oooooOOOOOOHHH!!!{PART_002}You mean a \"second\",{PART_003}based on helium!!{PART_004}We have a unit of time consistent with the aliens!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:219/frame:2",
+      "chunk_id": 219,
+      "chunk_name": "NL_helisec named helisec",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1879666527,
+    "source_text": "Second",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:220/title",
+      "chunk_id": 220,
+      "chunk_name": "NL_helisec named second"
+    }
+  },
+  {
+    "text_index": 160328569,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The second!{PART_001}Well how do know it's the same as our second?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:220/frame:0",
+      "chunk_id": 220,
+      "chunk_name": "NL_helisec named second",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 857858167,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}I'm not sure.{PART_001}It seems to be based off of {SIG_N063} 2 {SIG_N003} 6.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:220/frame:1",
+      "chunk_id": 220,
+      "chunk_name": "NL_helisec named second",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1151157590,
+    "source_text": "{SPEAKER_AKERS}{PART_000}I'll dig through the reference tab.{PART_001}Maybe something'll pop up...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:220/frame:2",
+      "chunk_id": 220,
+      "chunk_name": "NL_helisec named second",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1708310920,
+    "source_text": "Timeunit",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:221/title",
+      "chunk_id": 221,
+      "chunk_name": "NL_helisec named timeunit"
+    }
+  },
+  {
+    "text_index": 548381939,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}A unit of time!{PART_001}Oh my goodness {PLAYER_NAME}!{PART_002}That's brilliant!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:221/frame:0",
+      "chunk_id": 221,
+      "chunk_name": "NL_helisec named timeunit",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1437289797,
+    "source_text": "{SPEAKER_AKERS}{PART_000}But what is it based off of?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:221/frame:1",
+      "chunk_id": 221,
+      "chunk_name": "NL_helisec named timeunit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1692038056,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Something to do with {SIG_N063} 2 {SIG_N003} 6,{PART_001}though I am unsure how.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:221/frame:2",
+      "chunk_id": 221,
+      "chunk_name": "NL_helisec named timeunit",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 2095560971,
+    "source_text": "{SPEAKER_AKERS}{PART_000}I'll start diggin' through the Reference tab.{PART_001}Maybe it could help.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:221/frame:3",
+      "chunk_id": 221,
+      "chunk_name": "NL_helisec named timeunit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1532871167,
+    "source_text": "Distance Unit",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:222/title",
+      "chunk_id": 222,
+      "chunk_name": "NL_heter named distanceunit"
+    }
+  },
+  {
+    "text_index": 1895954821,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Distance unit.{PART_001}Hold on,{PART_002}we've gotta find a way to convert this to meters.{PART_003}We need to understand what this unit means.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:222/frame:0",
+      "chunk_id": 222,
+      "chunk_name": "NL_heter named distanceunit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1906619340,
+    "source_text": "Meter",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:223/title",
+      "chunk_id": 223,
+      "chunk_name": "NL_heter named meter"
+    }
+  },
+  {
+    "text_index": 1816404876,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The meter.{PART_001}As in a unit of distance.{PART_002}{PLAYER_NAME},{PART_003}you might be right...{PART_004}But we've gotta figure out exactly how this unit converts to Earth meters.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:223/frame:0",
+      "chunk_id": 223,
+      "chunk_name": "NL_heter named meter",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2043287348,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}What does that mean,{PART_001}Akers?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:223/frame:1",
+      "chunk_id": 223,
+      "chunk_name": "NL_heter named meter",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 890757183,
+    "source_text": "{SPEAKER_AKERS}{PART_000}This unit isn't exactly 1 Earth meter as we know it.{PART_001}It's defined by {SIG_N067} and {SIG_N069}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:223/frame:2",
+      "chunk_id": 223,
+      "chunk_name": "NL_heter named meter",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 136048975,
+    "source_text": "Light Speed",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:224/title",
+      "chunk_id": 224,
+      "chunk_name": "NL_lightspeed named lightspeed"
+    }
+  },
+  {
+    "text_index": 594454471,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Light speed,{PART_001}truly a universal constant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:224/frame:0",
+      "chunk_id": 224,
+      "chunk_name": "NL_lightspeed named lightspeed",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 244676464,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Across the entire universe?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:224/frame:1",
+      "chunk_id": 224,
+      "chunk_name": "NL_lightspeed named lightspeed",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1130595798,
+    "source_text": "{SPEAKER_AKERS}{PART_000}It's baked into the fabric of the universe.{PART_001}Truly,{PART_002}universal.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:224/frame:2",
+      "chunk_id": 224,
+      "chunk_name": "NL_lightspeed named lightspeed",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2010613244,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Another point of reference between humanity and the aliens has presented itself.{PART_001}Our universe of discussion continues to expand.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:224/frame:3",
+      "chunk_id": 224,
+      "chunk_name": "NL_lightspeed named lightspeed",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 941788665,
+    "source_text": "Speed of Light",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:225/title",
+      "chunk_id": 225,
+      "chunk_name": "NL_lightspeed named speedoflight"
+    }
+  },
+  {
+    "text_index": 735061262,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The speed of light,{PART_001}another universal constant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:225/frame:0",
+      "chunk_id": 225,
+      "chunk_name": "NL_lightspeed named speedoflight",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1251028349,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Universal?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:225/frame:1",
+      "chunk_id": 225,
+      "chunk_name": "NL_lightspeed named speedoflight",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1879755047,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Oh yeah.{PART_001}It's baked into the fabric of the universe.{PART_002}About as universal as it gets.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:225/frame:2",
+      "chunk_id": 225,
+      "chunk_name": "NL_lightspeed named speedoflight",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 435503486,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Which means it's another point of reference between humanity and the aliens.{PART_001}Excellent!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:225/frame:3",
+      "chunk_id": 225,
+      "chunk_name": "NL_lightspeed named speedoflight",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 762849277,
+    "source_text": "Mass",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:226/title",
+      "chunk_id": 226,
+      "chunk_name": "NL_mass named mass"
+    }
+  },
+  {
+    "text_index": 1800222622,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Mass!{PART_001}They're measuring matter!{PART_002}Good good good!{PART_003}Great great great!!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:226/frame:0",
+      "chunk_id": 226,
+      "chunk_name": "NL_mass named mass",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1367038762,
+    "source_text": "Weight",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:227/title",
+      "chunk_id": 227,
+      "chunk_name": "NL_mass named weight"
+    }
+  },
+  {
+    "text_index": 1263402674,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Weight!{PART_001}More physical attributes to compare.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:227/frame:0",
+      "chunk_id": 227,
+      "chunk_name": "NL_mass named weight",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1260075948,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Well,{PART_001}technically it's mass,{PART_002}not weight.{PART_003}Weight is dependent on gravity,{PART_004}like the Earth,{PART_005}so it's a tad less universal than mass.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:227/frame:1",
+      "chunk_id": 227,
+      "chunk_name": "NL_mass named weight",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1130407386,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Pedant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:227/frame:2",
+      "chunk_id": 227,
+      "chunk_name": "NL_mass named weight",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1382345292,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Hey,{PART_001}if mass makes it more universal,{PART_002}then I'm with the pedant on this one.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:227/frame:3",
+      "chunk_id": 227,
+      "chunk_name": "NL_mass named weight",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 140729523,
+    "source_text": "Another Mass Unit",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:228/title",
+      "chunk_id": 228,
+      "chunk_name": "NL_mfg contains mass"
+    }
+  },
+  {
+    "text_index": 656905133,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Another redundant {SIG_N068}.{PART_001}They have multiple units,{PART_002}scaled for different discussions.{PART_003}Fascinating.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:228/frame:0",
+      "chunk_id": 228,
+      "chunk_name": "NL_mfg contains mass",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1027504858,
+    "source_text": "{SPEAKER_AKERS}{PART_000}What's fascinating 'bout that?{PART_001}We've got grams and kilograms.{PART_002}Humans do it all the time.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:228/frame:1",
+      "chunk_id": 228,
+      "chunk_name": "NL_mfg contains mass",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2035871149,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}And that's what is so fascinating!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:228/frame:2",
+      "chunk_id": 228,
+      "chunk_name": "NL_mfg contains mass",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1031237610,
+    "source_text": "Another Distance Unit",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:229/title",
+      "chunk_id": 229,
+      "chunk_name": "NL_miniheter named distanceunit"
+    }
+  },
+  {
+    "text_index": 906056994,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Another distance unit?{PART_001}Why two?{PART_002}Seems redunant.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:229/frame:0",
+      "chunk_id": 229,
+      "chunk_name": "NL_miniheter named distanceunit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1864355021,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}This one is 134 million times smaller.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:229/frame:1",
+      "chunk_id": 229,
+      "chunk_name": "NL_miniheter named distanceunit",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 245552385,
+    "source_text": "{SPEAKER_AKERS}{PART_000}So each of these units are helpful for different domains.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:229/frame:2",
+      "chunk_id": 229,
+      "chunk_name": "NL_miniheter named distanceunit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2014908082,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}But what would those 2 domains be?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:229/frame:3",
+      "chunk_id": 229,
+      "chunk_name": "NL_miniheter named distanceunit",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 264172156,
+    "source_text": "Rate",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:230/title",
+      "chunk_id": 230,
+      "chunk_name": "NL_rate named rate"
+    }
+  },
+  {
+    "text_index": 1446087542,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Like in the classic \"rate = distance / time\" equation.{PART_001}Good find, {PLAYER_NAME}!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:230/frame:0",
+      "chunk_id": 230,
+      "chunk_name": "NL_rate named rate",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1406013300,
+    "source_text": "Speed",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:231/title",
+      "chunk_id": 231,
+      "chunk_name": "NL_rate named speed"
+    }
+  },
+  {
+    "text_index": 2005252270,
+    "source_text": "{SPEAKER_AKERS}{PART_000}I feel the need...{PART_001}the need for speed.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:231/frame:0",
+      "chunk_id": 231,
+      "chunk_name": "NL_rate named speed",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1890631580,
+    "source_text": "Time",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:232/title",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time"
+    }
+  },
+  {
+    "text_index": 593449235,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Time?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:232/frame:0",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1013070407,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Time.{PART_001}{PLAYER_NAME},{PART_002}what do you mean?{PART_003}...",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:232/frame:1",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 287227272,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}They mean time as a concept.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:232/frame:2",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2138343610,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}Time...{PART_001}That which comes before and inevitably comes after.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:232/frame:3",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1845396621,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}The independent variable of existence.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:232/frame:4",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 2092800074,
+    "source_text": "{SPEAKER_AKERS}{PART_000}The natural progression of matter in space.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:232/frame:5",
+      "chunk_id": 232,
+      "chunk_name": "NL_time named time",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1931715910,
+    "source_text": "Measurement",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:233/title",
+      "chunk_id": 233,
+      "chunk_name": "NL_unit named measurement"
+    }
+  },
+  {
+    "text_index": 1451055614,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Measurement?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:233/frame:0",
+      "chunk_id": 233,
+      "chunk_name": "NL_unit named measurement",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1809088785,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME} thinks they're defining words to measure material properties!{PART_001}Units of measurement!!{PART_002}But what for?{PART_003}I must know.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:233/frame:1",
+      "chunk_id": 233,
+      "chunk_name": "NL_unit named measurement",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1294536481,
+    "source_text": "Unit",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:234/title",
+      "chunk_id": 234,
+      "chunk_name": "NL_unit named unit"
+    }
+  },
+  {
+    "text_index": 842860197,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Unit?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:234/frame:0",
+      "chunk_id": 234,
+      "chunk_name": "NL_unit named unit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 2005910243,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Hmm.{PART_001}Abstractly defining benchmarks for comparison.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:234/frame:1",
+      "chunk_id": 234,
+      "chunk_name": "NL_unit named unit",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 243190034,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Ohh?{PART_001}Somethin' has finally piqued your interest?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:234/frame:2",
+      "chunk_id": 234,
+      "chunk_name": "NL_unit named unit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 64639517,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Yes.{PART_001}But no longer.{PART_002}Back to programming.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:234/frame:3",
+      "chunk_id": 234,
+      "chunk_name": "NL_unit named unit",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1179828639,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Ah,{PART_001}it was fun while it lasted.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:234/frame:4",
+      "chunk_id": 234,
+      "chunk_name": "NL_unit named unit",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 747011104,
+    "source_text": "After",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:235/title",
+      "chunk_id": 235,
+      "chunk_name": "NL_after named after"
+    }
+  },
+  {
+    "text_index": 559837638,
+    "source_text": "{SPEAKER_AKERS}{PART_000}After,{PART_001}huh?{PART_002}When all this is said and done,{PART_003}I wonder what's next for us?",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:235/frame:0",
+      "chunk_id": 235,
+      "chunk_name": "NL_after named after",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 798493514,
+    "source_text": "Future",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:236/title",
+      "chunk_id": 236,
+      "chunk_name": "NL_after named future"
+    }
+  },
+  {
+    "text_index": 1848677483,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}The past has happened,{PART_001}the present is fleeting.{PART_002}The future is the only thing we can affect.{PART_003}So the only way to go is forward.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:236/frame:0",
+      "chunk_id": 236,
+      "chunk_name": "NL_after named future",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 585482512,
+    "source_text": "All",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:237/title",
+      "chunk_id": 237,
+      "chunk_name": "NL_all named all"
+    }
+  },
+  {
+    "text_index": 1559374178,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}All.{PART_001}Interesting choice,{PART_002}{PLAYER_NAME}.{PART_003}The more I look at it,{PART_004}the more it works.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:237/frame:0",
+      "chunk_id": 237,
+      "chunk_name": "NL_all named all",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1793114692,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Then that sounds like a pretty good fit!{PART_001}Nice one {PLAYER_NAME}!",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:237/frame:1",
+      "chunk_id": 237,
+      "chunk_name": "NL_all named all",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1929490249,
+    "source_text": "Total",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:238/title",
+      "chunk_id": 238,
+      "chunk_name": "NL_all named total"
+    }
+  },
+  {
+    "text_index": 1169337292,
+    "source_text": "{SPEAKER_COLLINS}{PART_000}In totality,{PART_001}comprising all quantities.{PART_002}It fits for now.{PART_003}Good choice,{PART_004}{PLAYER_NAME}.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:238/frame:0",
+      "chunk_id": 238,
+      "chunk_name": "NL_all named total",
+      "speaker": "COLLINS"
+    }
+  },
+  {
+    "text_index": 1731828063,
+    "source_text": "Current",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:239/title",
+      "chunk_id": 239,
+      "chunk_name": "NL_current named current"
+    }
+  },
+  {
+    "text_index": 601698901,
+    "source_text": "{SPEAKER_AKERS}{PART_000}Current,{PART_001}huh?{PART_002}You think they're talkin' about now?{PART_003}We'll see if it fits,{PART_004}but we've gotta wait for the future for that.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:239/frame:0",
+      "chunk_id": 239,
+      "chunk_name": "NL_current named current",
+      "speaker": "AKERS"
+    }
+  },
+  {
+    "text_index": 1049859016,
+    "source_text": "Present",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:240/title",
+      "chunk_id": 240,
+      "chunk_name": "NL_current named present"
+    }
+  },
+  {
+    "text_index": 321142766,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}The present is all we have.{PART_001}It is only place we can make decisions and take actions.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:240/frame:0",
+      "chunk_id": 240,
+      "chunk_name": "NL_current named present",
+      "speaker": "BAUTISTA"
+    }
+  },
+  {
+    "text_index": 1556634923,
+    "source_text": "Infinity",
+    "context": {
+      "kind": "dialogue_title",
+      "stable_key": "dialogue:241/title",
+      "chunk_id": 241,
+      "chunk_name": "NL_infinity named infinity"
+    }
+  },
+  {
+    "text_index": 1554173625,
+    "source_text": "{SPEAKER_BAUTISTA}{PART_000}Uncountably large.",
+    "context": {
+      "kind": "dialogue_frame",
+      "stable_key": "dialogue:241/frame:0",
+      "chunk_id": 241,
+      "chunk_name": "NL_infinity named infinity",
+      "speaker": "BAUTISTA"
+    }
+  }
+]

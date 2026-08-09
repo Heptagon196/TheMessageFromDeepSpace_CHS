@@ -1,0 +1,2334 @@
+[
+  {
+    "text_index": 1420891059,
+    "translated_text": "为什么要用陨石外壳？"
+  },
+  {
+    "text_index": 1990757948,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}帮我想想：{PART_001}外星人为什么要把一台电脑埋进一块数千吨重的巨石里发过来？"
+  },
+  {
+    "text_index": 2077402468,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}为了不让它被太空碎片撞坏？"
+  },
+  {
+    "text_index": 1571910957,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不对，{PART_001}太空碎片根本不用担心。{PART_002}星际公路上可没多少车。"
+  },
+  {
+    "text_index": 1175657053,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也许里面有什么东西特别经不起太空环境？"
+  },
+  {
+    "text_index": 527422384,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可那样的话，{PART_001}造个轻型探测器就行了。{PART_002}没道理白白把这么重的东西加速。{PART_003}执行阿波罗任务时，{PART_004}我们连几克重量都要争着省。{PART_005}把这个重达 50 万公斤的庞然大物发射出去，耗费的能量简直难以想象。"
+  },
+  {
+    "text_index": 808422558,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我们听见它了，{PART_001}不是吗？"
+  },
+  {
+    "text_index": 2073005300,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+  },
+  {
+    "text_index": 1774454268,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这就说得通了，{PART_001}巴蒂斯塔。"
+  },
+  {
+    "text_index": 154903847,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么说得通了？"
+  },
+  {
+    "text_index": 327573330,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果我们收到的只是个小小的探测器，会怎么样？"
+  },
+  {
+    "text_index": 1355422099,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}它会掉进海里，然后——哦，{PART_001}我懂了——{PART_002}谁也不知道它来过。{PART_003}可要是一颗陨石，{PART_004}大到足以在海里掀起巨浪，{PART_005}让地震仪报警、砸出陨石坑、震动大地，闹出大动静——"
+  },
+  {
+    "text_index": 1119976418,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们想不注意都难。"
+  },
+  {
+    "text_index": 1829452414,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}为了把讯息送到，多花这点重量也值。"
+  },
+  {
+    "text_index": 270500031,
+    "translated_text": "-3 信号是什么？"
+  },
+  {
+    "text_index": 328043327,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我是说，{PART_001}我懂。{PART_002}我知道我们是怎么解出来的。{PART_003}可我不明白它是什么意思。"
+  },
+  {
+    "text_index": 1497619052,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 901657972,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}柯林斯？{PART_001}有什么分析吗？"
+  },
+  {
+    "text_index": 192658606,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也许过段时间就明白了。"
+  },
+  {
+    "text_index": 1944348111,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}听起来就是没有。"
+  },
+  {
+    "text_index": 2121500684,
+    "translated_text": "词典更新"
+  },
+  {
+    "text_index": 1372174346,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}好了。{PART_001}编译器更新了。"
+  },
+  {
+    "text_index": 2084696628,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}能解释一下吗？"
+  },
+  {
+    "text_index": 232980703,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我们可以给信号命名了。"
+  },
+  {
+    "text_index": 98537435,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}那些小于零的信号？"
+  },
+  {
+    "text_index": 202134460,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}对。{PART_001}低于 0 的都会标记为单词。"
+  },
+  {
+    "text_index": 191405565,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}它们看起来确实不像数字。"
+  },
+  {
+    "text_index": 1778881866,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}也可以输入这些单词，编译器会把它们转换成数值信号。"
+  },
+  {
+    "text_index": 771736540,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等，什么意思？"
+  },
+  {
+    "text_index": 625361298,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也就是说，{PART_001}如果我们把 -2 信号命名为“apple”，{PART_002}再在控制台输入 apple——"
+  },
+  {
+    "text_index": 115890378,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}——它就会转换成频率 -2。{PART_001}懂了！"
+  },
+  {
+    "text_index": 727350677,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}对。"
+  },
+  {
+    "text_index": 234480974,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}谢谢，{PART_001}巴蒂斯塔博士！"
+  },
+  {
+    "text_index": 1885662513,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 2141424475,
+    "translated_text": "词典讲解"
+  },
+  {
+    "text_index": 646408958,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那个词典编译器是怎么用的？{PART_001}能再讲清楚点吗，{PART_002}$animA2免得柯林斯或者{PLAYER_NAME}没听懂——"
+  },
+  {
+    "text_index": 27706165,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我听懂了。{PART_001}{PLAYER_NAME}，{PART_002}你没听懂吗？{PART_003}……{PART_004}$animC5看来也听得很明白。"
+  },
+  {
+    "text_index": 1822964586,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1这些单词是陨石传来的吗？"
+  },
+  {
+    "text_index": 913972616,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是。{PART_001}我猜外星人不会说任何人类语言。{PART_002}$animA5我们只是在接收陨石发来的无线电波，{PART_003}每一道都有不同的频率。{PART_004}等我们发现某个信号在非数值语境中有固定用途时，{PART_005}词典只是帮我们在这边给它下定义。"
+  },
+  {
+    "text_index": 1518328460,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}有道理。{PART_001}很高兴我替大家问清楚了。"
+  },
+  {
+    "text_index": 935481778,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}替大家，{PART_001}没错。"
+  },
+  {
+    "text_index": 1828352091,
+    "translated_text": "巴蒂斯塔在忙别的"
+  },
+  {
+    "text_index": 753773508,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那么，{PART_001}什么时候能用上十进制数字？"
+  },
+  {
+    "text_index": 466210600,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}很快。{PART_001}我得先推送一项更新。"
+  },
+  {
+    "text_index": 573257965,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦！{PART_001}更新里有什么？{PART_002}还是词典的新功能？"
+  },
+  {
+    "text_index": 170926507,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}到时候你就知道了。"
+  },
+  {
+    "text_index": 1368958626,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么时候？"
+  },
+  {
+    "text_index": 277755076,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}很快。"
+  },
+  {
+    "text_index": 261056440,
+    "translated_text": "如果全错了呢？"
+  },
+  {
+    "text_index": 2045676287,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}要是我们全搞错了呢？{PART_001}要是每次给信号命名，{PART_002}用的词都不对呢？"
+  },
+  {
+    "text_index": 904860648,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}怎么才算选错？"
+  },
+  {
+    "text_index": 1311012068,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这还不明显吗？{PART_001}就拿 -5 来说，{PART_002}如果我们不把它叫“加”，{PART_003}或者“加号”，{PART_004}或者意思相近的词，{PART_005}那就是理解错了。{PART_006}之后据此作出的推断也都会错。"
+  },
+  {
+    "text_index": 148216492,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果把 -5 理解成两个数字相乘，那当然会被带偏。{PART_001}可如果我们明白 -5 是两个数字相加，{PART_002}却把它叫作“blinko”呢？{PART_003}这也算错吗？"
+  },
+  {
+    "text_index": 1017798544,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}算，{PART_001}因为“blinko”就是胡言乱语。{PART_002}什么也不是。"
+  },
+  {
+    "text_index": 1327542669,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}那么，{PART_001}如果我们把 -5 命名为“加”，实际却拿它做乘法呢？"
+  },
+  {
+    "text_index": 1846886126,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那才是真真正正地错了，{PART_001}所以每当我们用“加”来定义新词，{PART_002}都会错得，{PART_003}非常，{PART_004}非常离谱。"
+  },
+  {
+    "text_index": 1285077854,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}可我们把它命名为“加”了啊？{PART_001}怎么会错？"
+  },
+  {
+    "text_index": 79805041,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}因为我们的理解错了。"
+  },
+  {
+    "text_index": 654405816,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}正是。{PART_001}我们在乎的是含义。{PART_002}单词想怎么命名都可以，{PART_003}只要理解它的用途，并且始终如一地使用。"
+  },
+  {
+    "text_index": 1202966490,
+    "translated_text": "如果全错了呢？（二）"
+  },
+  {
+    "text_index": 373856929,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}凯莉，{PART_001}假设我在学英语，你问我，那种{PART_002}毛茸茸、四条腿、养在家里的小动物叫什么。"
+  },
+  {
+    "text_index": 1155448772,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}猫？"
+  },
+  {
+    "text_index": 69462333,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我想说的是“狗”。{PART_001}不过没关系。{PART_002}可如果我回答，{PART_003}呃，{PART_004}“麦克风”，{PART_005}那就是错的。{PART_006}对吧？"
+  },
+  {
+    "text_index": 1764562738,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}毫无疑问。"
+  },
+  {
+    "text_index": 662579909,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那为什么轮到我们自己的词典，{PART_001}你就觉得“只要明白他们在说什么，怎么叫都行”？{PART_002}我们翻译的可是一门真正的{PART_003}外语。"
+  },
+  {
+    "text_index": 1776329235,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}可如果你说“麦克风”，我脑海里想到的是狗，{PART_001}那你就没错。{PART_002}这个答案完全成立。"
+  },
+  {
+    "text_index": 613761817,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我的答案对不对，怎么能取决于你的理解？"
+  },
+  {
+    "text_index": 1571664831,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}因为我们用语言表达含义，{PART_001}这样信息才能从一个人传到另一个人。"
+  },
+  {
+    "text_index": 1368078963,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以如果我说“麦克风”时，你知道我指的是“狗”，{PART_001}那我们就算……{PART_002}呃……{PART_003}是在运用语言？"
+  },
+  {
+    "text_index": 539587972,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}对。{PART_001}那我们就是“运用过”语言了。{PART_002}我们已经交流过了。"
+  },
+  {
+    "text_index": 1667869364,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}但这不就说明，我们根本没在学习他们的语言，也就是外星语言吗？{PART_001}我们只是把他们想表达的含义，{PART_002}硬塞进自己的理解框架里。"
+  },
+  {
+    "text_index": 1930772642,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们在翻译他们讯息里的语言，{PART_001}但未必是他们平时使用的语言。"
+  },
+  {
+    "text_index": 572261527,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那我们怎么知道自己的理解对不对？"
+  },
+  {
+    "text_index": 164742586,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}因为要是理解错了，{PART_001}我想我们根本走不到这一步。"
+  },
+  {
+    "text_index": 1568376735,
+    "translated_text": "如果全错了呢？（三）"
+  },
+  {
+    "text_index": 1859195854,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}凯莉，{PART_001}我还是觉得这事不太对劲。{PART_002}如果我们把外星人的讯息用自己的语言表达出来，{PART_003}那就不算在学习外星语言。"
+  },
+  {
+    "text_index": 2088158087,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你为什么觉得那不是他们的语言？"
+  },
+  {
+    "text_index": 2061100430,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}因为他们表示“加”的词肯定和我们不一样，{PART_001}再说他们可能根本不说话，{PART_002}也不写字，或者{PART_003}随便是什么方式。"
+  },
+  {
+    "text_index": 77776126,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}只要能表达相同的思想，语言本质上就是相通的。{PART_001}真正的区别只是运作方式，{PART_002}也就是语言如何表达出来。"
+  },
+  {
+    "text_index": 1462531688,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以现在所有语言都一样了？{PART_001}太荒唐了！{PART_002}我们说的又不是法语！"
+  },
+  {
+    "text_index": 1448238043,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}可如果用法语表达“我们说的不是法语”，传达的含义仍然相同。{PART_001}含义的编码与理解方式不同，{PART_002}但所指的事物不变。{PART_003}这才是翻译工作的关键：{PART_004}为正确的含义配上正确的符号。"
+  },
+  {
+    "text_index": 1107746344,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以法语和英语是一样的？"
+  },
+  {
+    "text_index": 1192710572,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}大体上，是。{PART_001}语法上，{PART_002}不一样；{PART_003}词汇上，{PART_004}不一样；{PART_005}嘴巴怎么动、喉咙怎么振动，才能发出可听范围内的声波，{PART_006}大多也不一样。{PART_007}也许还有少数思想我们无法表达，{PART_008}至少不能表达出法语里同样的细微差别或言外之意。{PART_009}但除此之外，法语能表达的思想，我们也都能表达。"
+  },
+  {
+    "text_index": 1958041044,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}想到我们没在学习他们的语言，你就一点不介意？"
+  },
+  {
+    "text_index": 1670775306,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我说的就是：{PART_001}我们确实在学习他们的语言。{PART_002}表达形式上，{PART_003}不是。{PART_004}语法上，{PART_005}大概也不是。{PART_006}陨石使用的语言很可能经过精心设计，让任何其他物种都更容易理解，{PART_007}剔除了繁琐的语法规则，{PART_008}也不会夹带独特的文化事物或音节文字。"
+  },
+  {
+    "text_index": 1366640672,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}他们把它简化过了。"
+  },
+  {
+    "text_index": 336931350,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我猜是这样。"
+  },
+  {
+    "text_index": 1060286220,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以这不是外星人的语言。"
+  },
+  {
+    "text_index": 525477102,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}从运作方式上说不是，{PART_001}但它依然是他们的语言，{PART_002}也依然是他们的讯息。"
+  },
+  {
+    "text_index": 1676672724,
+    "translated_text": "为什么不用图像？"
+  },
+  {
+    "text_index": 1262872960,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你说，{PART_001}外星人为什么不直接打开投影仪，给我们放电影？{PART_002}用活动画面把一切都告诉我们。"
+  },
+  {
+    "text_index": 1175072894,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他们也许不知道我们能不能看见。"
+  },
+  {
+    "text_index": 594091697,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可我们当然能看见。{PART_001}我们有眼睛。"
+  },
+  {
+    "text_index": 1654868770,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}可他们未必知道。{PART_001}我们不知道他们是否了解我们。{PART_002}甚至不知道他们是否知道我们存在。"
+  },
+  {
+    "text_index": 1747054029,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也是。{PART_001}不过我觉得，外星生命——{PART_002}也就是我们——{PART_003}能看见，应该是个挺稳妥的假设。"
+  },
+  {
+    "text_index": 1629560384,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}地球上有些鱼看不见。"
+  },
+  {
+    "text_index": 68809162,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有道理。"
+  },
+  {
+    "text_index": 601771699,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}而且有些行星的大气层很浓，{PART_001}浓到连光都穿不过去。{PART_002}如果地球常年笼罩在遮住阳光的厚云里，{PART_003}我们也许根本不会演化出眼睛。"
+  },
+  {
+    "text_index": 1782701171,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以他们也许没有眼睛，{PART_001}外星人也许看不见。{PART_002}对他们来说，图像——{PART_003}也就是视觉信息——{PART_004}可能根本不存在。"
+  },
+  {
+    "text_index": 2056082034,
+    "translated_text": "0.01 是 1/8 × 1/8，更恶心了"
+  },
+  {
+    "text_index": 836840556,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，呃，{PART_001}巴蒂斯塔。{PART_002}为了确认你听懂了，{PART_003}能解释一下这段传输是什么意思吗？"
+  },
+  {
+    "text_index": 1190409862,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}还真谢谢你这么体贴，特意照顾我，怕我跟不上。"
+  },
+  {
+    "text_index": 1338563716,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，{PART_001}对，{PART_002}当然。{PART_003}所以，解释呢？"
+  },
+  {
+    "text_index": 1647629366,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}在八进制中，{PART_001}小数点后第一位是八分之一位。{PART_002}再下一位是六十四分之一位。"
+  },
+  {
+    "text_index": 1481587460,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以……{PART_001}六十四分之一位？"
+  },
+  {
+    "text_index": 2009193175,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不是你在帮我理解吗？"
+  },
+  {
+    "text_index": 1228911154,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，{PART_001}对，{PART_002}当然。{PART_003}再下一位就是……{PART_004}呃……"
+  },
+  {
+    "text_index": 1825917687,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}五百一十二分之一位。"
+  },
+  {
+    "text_index": 322482684,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，{PART_001}答对了！"
+  },
+  {
+    "text_index": 1065445582,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。陨石大概希望我们按他们的格式回答，{PART_001}使用八分之一位和六十四分之一位。"
+  },
+  {
+    "text_index": 1637795574,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}是啊，{PART_001}真恶心。{PART_002}我不喜欢这种数字。"
+  },
+  {
+    "text_index": 1262069568,
+    "translated_text": "0.1 不是十分之一，真恶心"
+  },
+  {
+    "text_index": 357720131,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}太离谱了。"
+  },
+  {
+    "text_index": 215737624,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}我们用的是八进制格式。"
+  },
+  {
+    "text_index": 930334040,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可惜确实如此。{PART_001}但这有什么区别？"
+  },
+  {
+    "text_index": 35217691,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我们没有十分位，也没有百分位。"
+  },
+  {
+    "text_index": 1041584016,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}噢——真恶心！呸！我脑子都疼了！"
+  },
+  {
+    "text_index": 731738186,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也头疼，埃克斯。真的。"
+  },
+  {
+    "text_index": 1250347357,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}八进制还真是惊喜不断。"
+  },
+  {
+    "text_index": 1595860678,
+    "translated_text": "-5 信号的作用"
+  },
+  {
+    "text_index": 1853940982,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他们在用例子教我们。"
+  },
+  {
+    "text_index": 1738704648,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么意思？"
+  },
+  {
+    "text_index": 1921675952,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他们在演示新出现的 -5 信号有什么作用。"
+  },
+  {
+    "text_index": 809668829,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}具体是什么作用？"
+  },
+  {
+    "text_index": 155073234,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}还不确定，{PART_001}不过第一个例子把 2、3 和 5 联系在一起。{PART_002}例 1 把 6、1 和 7 联系在一起。{PART_003}至于例 2，{PART_004}答案要由我们自己补上。"
+  },
+  {
+    "text_index": 388747509,
+    "translated_text": "非数值信号"
+  },
+  {
+    "text_index": 246246336,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}又有一个零以下的频率，{PART_001}这次比那个氢东西低 5 外星赫兹。"
+  },
+  {
+    "text_index": 1465937941,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}是氢谱线。"
+  },
+  {
+    "text_index": 773595434,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}好。"
+  },
+  {
+    "text_index": 70069531,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}而且传输里连续出现了两次 -2 信号。{PART_001}这些负信号似乎并不是数字。{PART_002}它们好像各有定义。{PART_003}结合上一次传输和这一次来看，{PART_004}我猜 -2 起到了某种分隔作用。{PART_005}在这里，{PART_006}它把传输分成了三个部分。"
+  },
+  {
+    "text_index": 1207834232,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那 -5 是什么意思？"
+  },
+  {
+    "text_index": 1540018885,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}还不知道。{PART_001}得看{PLAYER_NAME}了。"
+  },
+  {
+    "text_index": 12628533,
+    "translated_text": "何时转换？"
+  },
+  {
+    "text_index": 1932639665,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我搞不懂这里的先后顺序——{PART_001}运算、{PART_002}进制转换。{PART_003}我们什么时候把答案转换成外星数字格式？"
+  },
+  {
+    "text_index": 927478374,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是算出大于 7 的数时，{PART_001}还是全部算完之后？{PART_002}$animC2巴蒂斯塔，{PART_003}我们需要你帮忙。"
+  },
+  {
+    "text_index": 995164412,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}哦。{PART_001}全部算完之后再转。{PART_002}和舍入一样。{PART_003}先算 2 3 {SIG_N005}，{PART_004}再用所得结果和 2 做 {SIG_N006} 运算，{PART_005}然后是 1 {SIG_N005} 和 1 {SIG_N006}。"
+  },
+  {
+    "text_index": 1259673367,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}最后再转换成外星数字。"
+  },
+  {
+    "text_index": 1827102243,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不用 PEMDAS？"
+  },
+  {
+    "text_index": 1519149330,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这里没有规定运算顺序。{PART_001}按出现的先后依次计算就行。"
+  },
+  {
+    "text_index": 371149732,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}明白了。{PART_001}谢谢你，巴蒂斯塔博士。"
+  },
+  {
+    "text_index": 447463482,
+    "translated_text": "连锁表达式"
+  },
+  {
+    "text_index": 2065027350,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA3巴蒂斯塔，{PART_001}柯林斯，{PART_002}有什么想法？"
+  },
+  {
+    "text_index": 1323285214,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC1我明白 {SIG_N002} 是数字之间的分隔符。{PART_001}$animC5可反复出现的 {SIG_N005} 就难住我了。"
+  },
+  {
+    "text_index": 1222155580,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这是个更长的表达式。{PART_001}$animB1像之前一样使用 {SIG_N005} 运算。{PART_002}$animB0把这些值依次串起来。"
+  },
+  {
+    "text_index": 321572845,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1那 {SIG_N004} 呢？{PART_001}$animA3我们就直接无视它？"
+  },
+  {
+    "text_index": 1580559291,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}从前几次传输来看，{PART_001}$animC3{SIG_N004} 不会影响表达式的值。"
+  },
+  {
+    "text_index": 1488196546,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA5所以它就像“加零”之类的东西？"
+  },
+  {
+    "text_index": 1491142699,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}{SIG_N004} 更像是“计算”、{PART_001}“表达式结束”或者“等于”。{PART_002}$animC5最终，{PART_003}还是由{PLAYER_NAME}决定。"
+  },
+  {
+    "text_index": 1568137231,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，巴蒂斯塔，{PART_001}外星数字的 1-0 又是多少？"
+  },
+  {
+    "text_index": 745821202,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}谢了。{PART_001}说不定这回我终于能弄明白了。"
+  },
+  {
+    "text_index": 1058279307,
+    "translated_text": "还需要运算？"
+  },
+  {
+    "text_index": 1749880800,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔，{PART_001}$animC5如果我们在控制台输入“{SIG_N002}”，会怎么样？"
+  },
+  {
+    "text_index": 296268052,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}它会发射频率为 -2 的信号。"
+  },
+  {
+    "text_index": 1081277437,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}陨石也能像处理其他信号一样处理它？"
+  },
+  {
+    "text_index": 273424229,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 706103293,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你觉得陨石在等一个小于零的信号？{PART_001}用来让这段传输完整？"
+  },
+  {
+    "text_index": 337541831,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}只是个想法。{PART_001}试试就知道了。"
+  },
+  {
+    "text_index": 424245032,
+    "translated_text": "提交单词"
+  },
+  {
+    "text_index": 177666438,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我是说，{PART_001}我们到底在找什么？{PART_002}我想输入“是”{PART_003}或者“真”{PART_004}之类的。"
+  },
+  {
+    "text_index": 537201267,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}那样无法编译。{PART_001}只能输入数字或词典条目。"
+  },
+  {
+    "text_index": 1585920948,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}词典条目，{PART_001}对了！{PART_002}我们可以把定义好的单词作为传输中的信号提交！"
+  },
+  {
+    "text_index": 216196079,
+    "translated_text": "减去那一团"
+  },
+  {
+    "text_index": 1011583865,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这题怎么入手？"
+  },
+  {
+    "text_index": 1559516254,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA5等等，{PART_001}让我来答。{PART_002}我想我懂了。{PART_003}我们有两个数字。{PART_004}一个是 5，{PART_005}$animA0另一个就是那团带着 1、2 什么的东西，{PART_006}$animA1我们把整团看成一个数字。{PART_007}用 5 减去这团东西，再把结果发给他们。"
+  },
+  {
+    "text_index": 1470718945,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}听起来合理。"
+  },
+  {
+    "text_index": 6042767,
+    "translated_text": "八分之一位与六十四分之一位"
+  },
+  {
+    "text_index": 1004472085,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}5 除以 4 是 1.25。{PART_001}这有什么问题？"
+  },
+  {
+    "text_index": 408055693,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}只有十进制下是这样。"
+  },
+  {
+    "text_index": 1306242747,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}对。{PART_001}那么，{PART_002}怎么换个更合适的问法？"
+  },
+  {
+    "text_index": 372212763,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}别问商的小数部分有几个十分之一和百分之一。{PART_001}要问有几个八分之一和六十四分之一。"
+  },
+  {
+    "text_index": 626206634,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}唉。{PART_001}好吧。{PART_002}谢谢你，巴蒂斯塔博士。"
+  },
+  {
+    "text_index": 855236259,
+    "translated_text": "没有 8，也没有 9"
+  },
+  {
+    "text_index": 1517450359,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？{PART_001}为什么不行？"
+  },
+  {
+    "text_index": 656321188,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不能有 8。{PART_001}也不能有 9。"
+  },
+  {
+    "text_index": 37605789,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}对。{PART_002}外星人真麻烦。"
+  },
+  {
+    "text_index": 1260168038,
+    "translated_text": "转换为八进制"
+  },
+  {
+    "text_index": 293795560,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哎呀。{PART_001}我还以为答对了。"
+  },
+  {
+    "text_index": 1386412791,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}转换成八进制。"
+  },
+  {
+    "text_index": 1951615744,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}哦，对。{PART_001}我们得跳过 8 和 9。"
+  },
+  {
+    "text_index": 1701501966,
+    "translated_text": "10 居然错了？"
+  },
+  {
+    "text_index": 1286342019,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等，{PART_001}$animA3什么？{PART_002}{PLAYER_NAME}，{PART_003}我还以为你已经完全掌握了！{PART_004}我也觉得 10 没错！"
+  },
+  {
+    "text_index": 1323248085,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}外星数字。{PART_001}$animB4没有表示 8 或 9 的数码。"
+  },
+  {
+    "text_index": 1952266752,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA5真是见鬼！"
+  },
+  {
+    "text_index": 11876946,
+    "translated_text": "不是 5？"
+  },
+  {
+    "text_index": 174834200,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？{PART_001}居然不是 5？？{PART_002}奇怪。"
+  },
+  {
+    "text_index": 352557166,
+    "translated_text": "不能有 8！！"
+  },
+  {
+    "text_index": 715266211,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我就知道不行。{PART_001}8 不存在。{PART_002}$animB4现在外星人讨厌你了，{PART_003}{PLAYER_NAME}。{PART_004}还有你，$animB3埃克斯。"
+  },
+  {
+    "text_index": 114371522,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animB0什么！？{PART_001}不！！{PART_002}别这么说！{PART_003}$animA5我不想被绑架！"
+  },
+  {
+    "text_index": 468706035,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔，{PART_001}别吓他。"
+  },
+  {
+    "text_index": 909823385,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0他在开玩笑，{PART_001}我知道，{PART_002}我知道。"
+  },
+  {
+    "text_index": 1604372524,
+    "translated_text": "八进制数字"
+  },
+  {
+    "text_index": 1848202684,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}陨石处理不了 8。{PART_001}陨石收到了一个 8。{PART_002}现在陨石生气了。"
+  },
+  {
+    "text_index": 1003615871,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我可不想惹陨石生气！{PART_001}那八进制下怎么用 5 减 1.2？"
+  },
+  {
+    "text_index": 145410525,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯……{PART_001}先用十进制来想，{PART_002}把 5 看成 4 加 10 个十分之一。{PART_003}用 4 加 10 个十分之一减去 1 加 2 个十分之一，就剩 3 加 8 个十分之一。"
+  },
+  {
+    "text_index": 1414804185,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好吧……{PART_001}这不就是 5 减 1.2，{PART_002}等于 3.8 吗。"
+  },
+  {
+    "text_index": 260861841,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}现在回到八进制世界。"
+  },
+  {
+    "text_index": 28770883,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}呃……{PART_001}我讨厌八进制世界。"
+  },
+  {
+    "text_index": 919978883,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}把 5 看成 4 加 8 个八分之一。{PART_001}再减去 1 加 2 个八分之一。{PART_002}祝你好运，{PLAYER_NAME}。{PART_003}日志到此结束。"
+  },
+  {
+    "text_index": 1786689237,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等！等——"
+  },
+  {
+    "text_index": 844074042,
+    "translated_text": "40 个信号组成的讯息"
+  },
+  {
+    "text_index": 935786586,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好家伙，{PART_001}我才发现这段讯息可真长！"
+  },
+  {
+    "text_index": 1047613292,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}40 个信号，{PART_001}每个 0.8066 秒。"
+  },
+  {
+    "text_index": 1637624914,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那就是半分钟的信号，{PART_001}对吧？"
+  },
+  {
+    "text_index": 467333940,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}确实很长。"
+  },
+  {
+    "text_index": 1557957531,
+    "translated_text": "7-8 错了"
+  },
+  {
+    "text_index": 466427235,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}7-8 不行。{PART_001}各位，{PART_002}有什么想法？"
+  },
+  {
+    "text_index": 624654790,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果沿用上一次传输的规则，{PART_001}数值信号大于 7 时，就不能再用来表示数码。"
+  },
+  {
+    "text_index": 1459653003,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}啊，对，{PART_001}你说得没错。{PART_002}可接下来是什么？"
+  },
+  {
+    "text_index": 876369213,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不知道。"
+  },
+  {
+    "text_index": 860615314,
+    "translated_text": "8-0 错了"
+  },
+  {
+    "text_index": 1668559073,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}8-0 不行。{PART_001}可我总觉得它应该对。"
+  },
+  {
+    "text_index": 2000942433,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}7-5，{PART_001}7-6，{PART_002}7-7……{PART_003}接下来是什么？"
+  },
+  {
+    "text_index": 1015435793,
+    "translated_text": "7-7 之后是什么？"
+  },
+  {
+    "text_index": 1066481963,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}要表示下一个数，会不会还需要一位新的数码？"
+  },
+  {
+    "text_index": 1201164761,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}很可能。"
+  },
+  {
+    "text_index": 6807281,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等，你是说得多加一位？"
+  },
+  {
+    "text_index": 1062046868,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我觉得他们要我们写出他们数制中的第一个三位数。"
+  },
+  {
+    "text_index": 156735206,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以上次传输里，他们数的是 5、6、7、10。{PART_001}你是说这次也一样，{PART_002}只是换成三位数？"
+  },
+  {
+    "text_index": 1396203006,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我想是的。{PART_001}没有 7，也没有 8，{PART_002}直接从他们的第一个三位数开始。"
+  },
+  {
+    "text_index": 460101858,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5假设增量始终不变。{PART_001}那会是什么样？"
+  },
+  {
+    "text_index": 91005362,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我们从 1、2、3、4，一直数到 7，{PART_001}接着是 8、9、10、11，然后——{PART_002}你又不是不会数！{PART_003}我干吗还要数一遍？"
+  },
+  {
+    "text_index": 2039610740,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC0等一下……{PART_001}这样就说得通了。"
+  },
+  {
+    "text_index": 1036796244,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么说得通了？"
+  },
+  {
+    "text_index": 1122308319,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC1我们数数时，{PART_001}数到某个时候，{PART_002}就会把这一位归零。{PART_003}我们数到 9，{PART_004}再往后没有别的数码可用，{PART_005}于是就写成 1 和 0。"
+  },
+  {
+    "text_index": 711187181,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以他们也一样，{PART_001}$animA4只不过没有表示 8 和 9 的信号？"
+  },
+  {
+    "text_index": 1801118836,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}于是问题又来了：{PART_001}$animA0接下来是什么？"
+  },
+  {
+    "text_index": 353285788,
+    "translated_text": "跳过 1-8 和 1-9"
+  },
+  {
+    "text_index": 1539644413,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 2062186720,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}想到什么了，{PART_001}巴蒂斯塔？"
+  },
+  {
+    "text_index": 590371375,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}避开 8 和 9。{PART_001}那就是八进制。"
+  },
+  {
+    "text_index": 558804365,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}八进制？"
+  },
+  {
+    "text_index": 650851107,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}人类使用十进制，{PART_001}用 0 到 9 这十个数码表示数字。"
+  },
+  {
+    "text_index": 2097460840,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以他们用的是八进制？"
+  },
+  {
+    "text_index": 1454016532,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}他们从 7 跳到 1-0。{PART_001}照这样看，也会跳过 1-8 和 1-9，{PART_002}很合理。"
+  },
+  {
+    "text_index": 1092826456,
+    "translated_text": "没有 8 或 9？"
+  },
+  {
+    "text_index": 799421759,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我猜我们要输入数列中的下一个信号，{PART_001}也可能不止一个。"
+  },
+  {
+    "text_index": 1753466411,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1他们每次都加 1。"
+  },
+  {
+    "text_index": 1802821623,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}没错，{PART_001}但增量看起来并不一致。{PART_002}$animA0在到 8 之前，每次都是加 1。"
+  },
+  {
+    "text_index": 244224161,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}他们故意避开了 8 和 9。{PART_001}为什么？"
+  },
+  {
+    "text_index": 685543652,
+    "translated_text": "三个独立数列"
+  },
+  {
+    "text_index": 1595937514,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1我们面对的是三个独立的数列。"
+  },
+  {
+    "text_index": 1087198088,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}分别是什么？"
+  },
+  {
+    "text_index": 1197155468,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}第一个，{PART_001}从 1 开始，每次加 1。{PART_002}然后从某个数开始，每次加 3。{PART_003}到 12 的地方有点奇怪，{PART_004}$animA0不过除此之外都对得上。"
+  },
+  {
+    "text_index": 634079712,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不是“十二”——{PART_001}那是八进制的 1-2。"
+  },
+  {
+    "text_index": 1731412560,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好好好，随便吧。{PART_001}重点是，{PART_002}$animA4这不是一串数字：{PART_003}而是三串，{PART_004}每串的起点和增量都不同。"
+  },
+  {
+    "text_index": 833252192,
+    "translated_text": "间隔不均？"
+  },
+  {
+    "text_index": 287836064,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这题真让我摸不着头脑。{PART_001}巴蒂斯塔，{PART_002}柯林斯？"
+  },
+  {
+    "text_index": 1760446584,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}我看看。"
+  },
+  {
+    "text_index": 1477138893,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5你刚才没在看吗？"
+  },
+  {
+    "text_index": 1082021169,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我在编程改进工作站。{PART_001}抱歉。{PART_002}以后绝不会再这样了。"
+  },
+  {
+    "text_index": 135428800,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}好吧。{PART_001}$animC0对不起，{PART_002}巴蒂斯塔博士。"
+  },
+  {
+    "text_index": 50567964,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}别向那个阴沉的家伙道歉！{PART_001}$animA1这是什么态度！"
+  },
+  {
+    "text_index": 589362262,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}总之，{PART_001}$animA0这又是一个数列。"
+  },
+  {
+    "text_index": 1152125059,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不过，{PART_001}它不是线性的。"
+  },
+  {
+    "text_index": 358754319,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}那规律是什么？"
+  },
+  {
+    "text_index": 1438044465,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}先是 0，{PART_001}然后 1、1、2、3、5，再到 10——"
+  },
+  {
+    "text_index": 286230508,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不是“十”。{PART_001}那是八进制的 1-0。"
+  },
+  {
+    "text_index": 1157543947,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}换成十进制是多少？"
+  },
+  {
+    "text_index": 1526347024,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我猜我们应该算出下一项。{PART_001}可我想不出接下来要跳多少。"
+  },
+  {
+    "text_index": 994248538,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}问题就在这里。{PART_001}有什么想法吗，{PART_002}{PLAYER_NAME}？"
+  },
+  {
+    "text_index": 1349952175,
+    "translated_text": "斐波那契数列"
+  },
+  {
+    "text_index": 594417754,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}斐波那契。"
+  },
+  {
+    "text_index": 400916721,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+  },
+  {
+    "text_index": 1028060307,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这是斐波那契数列。{PART_001}从 0 和 1 开始，{PART_002}之后每一项都是前两项之和。"
+  },
+  {
+    "text_index": 718360978,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}0、1、1、2、3、5、1-0，{PART_001}也就是 8，{PART_002}然后我们输入下一项。"
+  },
+  {
+    "text_index": 199401233,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也就是 5 加 8，{PART_001}再换成他们那古怪的八进制格式。{PART_002}所以还得跳过数码 8 和 9，{PART_003}真烦。"
+  },
+  {
+    "text_index": 1772798514,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}分析得很好，{PART_001}巴蒂斯塔博士。"
+  },
+  {
+    "text_index": 1285831587,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 1240093365,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}数字题嘛，{PART_001}他本来就该擅长！"
+  },
+  {
+    "text_index": 932088003,
+    "translated_text": "把 13 转成八进制"
+  },
+  {
+    "text_index": 1008733414,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}如果你想传输 13，{PART_001}$animC4别忘了按他们的数制重新表示。"
+  },
+  {
+    "text_index": 608923764,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}唉。{PART_001}$animC0我也还在适应呢，{PART_002}{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 1545208568,
+    "translated_text": "100 要分三行"
+  },
+  {
+    "text_index": 616793651,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}每行输入一个信号。"
+  },
+  {
+    "text_index": 191848550,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可{PLAYER_NAME}输入的是 100。"
+  },
+  {
+    "text_index": 1260711196,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}电脑每行只能处理一个信号。{PART_001}要发送 1-0-0，{PART_002}就需要三个信号，{PART_003}分三行。"
+  },
+  {
+    "text_index": 1902902858,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}笨电脑。"
+  },
+  {
+    "text_index": 2139152348,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}喂。{PART_001}客气点。{PART_002}电脑很聪明。"
+  },
+  {
+    "text_index": 1864789519,
+    "translated_text": "分行输入"
+  },
+  {
+    "text_index": 153826953,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}试试分行输入。"
+  },
+  {
+    "text_index": 954662020,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等，{PART_001}为什么？"
+  },
+  {
+    "text_index": 1091692588,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不同行代表不同信号。{PART_001}现在这只是一道频率比氢谱线高 20 赫兹的信号。"
+  },
+  {
+    "text_index": 385220154,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不同行，{PART_001}不同信号。{PART_002}懂了。"
+  },
+  {
+    "text_index": 1087463381,
+    "translated_text": "两个信号，两行输入"
+  },
+  {
+    "text_index": 1423527107,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}输入两个信号，{PART_002}每行一个。"
+  },
+  {
+    "text_index": 119518616,
+    "translated_text": "操作"
+  },
+  {
+    "text_index": 1397192180,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}继续这段日志之前，{PART_001}你可以按 TAB 键推进对话。{PART_002}这样即使鼠标右键不起作用也没关系。"
+  },
+  {
+    "text_index": 841121951,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}两种都能用？"
+  },
+  {
+    "text_index": 1894079016,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 1991839637,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}总之，{PART_001}呃，{PART_002}搞电脑的，你叫什么来着？"
+  },
+  {
+    "text_index": 1251455204,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他是巴蒂斯塔博士，{PART_001}我是柯林斯博士，{PART_002}这位翻译员是{PLAYER_NAME}。"
+  },
+  {
+    "text_index": 173841871,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}巴蒂斯塔博士，{PART_001}我要怎么操作电脑？"
+  },
+  {
+    "text_index": 287463741,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不用你。{PART_001}由{PLAYER_NAME}来操作。{PART_002}移动鼠标光标，再点击按钮。{PART_003}右侧的输出窗口会显示陨石传来的频率。{PART_004}点击“回应”按钮会进入输入页。"
+  },
+  {
+    "text_index": 1276677285,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以{PLAYER_NAME}会在那里输入频率，再传回陨石，对吧？"
+  },
+  {
+    "text_index": 945778130,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}在那里输入。{PART_002}然后发送该频率。"
+  },
+  {
+    "text_index": 1404068628,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}谢了，搞电脑的！"
+  },
+  {
+    "text_index": 646765461,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}哼。"
+  },
+  {
+    "text_index": 1812794669,
+    "translated_text": "在等回应？"
+  },
+  {
+    "text_index": 1913316416,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这东西正常吗？"
+  },
+  {
+    "text_index": 1596959538,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}只要输入能编译，{PART_001}无线电波就会发出去。"
+  },
+  {
+    "text_index": 1932274257,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}可为什么不管输入什么，{PART_001}接收到的信号都不变？"
+  },
+  {
+    "text_index": 710917790,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}看来陨石是在等待某种特定回应。"
+  },
+  {
+    "text_index": 259764164,
+    "translated_text": "照抄输出？"
+  },
+  {
+    "text_index": 1811680188,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好，{PART_001}我们来理一理：{PART_002}我们能发点什么，让陨石处理得了？"
+  },
+  {
+    "text_index": 381714198,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}嗯，{PART_001}我们知道陨石肯定能处理自己发出的讯息。"
+  },
+  {
+    "text_index": 617974745,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好主意！{PART_001}把输出控制台里的同一个频率发回去！"
+  },
+  {
+    "text_index": 937608200,
+    "translated_text": "发回氢谱线"
+  },
+  {
+    "text_index": 1155535500,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我有个主意。{PART_001}把那个频率传回陨石。"
+  },
+  {
+    "text_index": 1005623774,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}氢谱线？"
+  },
+  {
+    "text_index": 1027694922,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}对。{PART_001}就是输出屏幕上的数字。{PART_002}数字 1420405752。"
+  },
+  {
+    "text_index": 989905194,
+    "translated_text": "1420405754 错了"
+  },
+  {
+    "text_index": 67221440,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们发出的信号，比他们传来的频率高了 1。"
+  },
+  {
+    "text_index": 180421199,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}而他们传来的频率又比氢谱线高 1。"
+  },
+  {
+    "text_index": 1215293950,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}但陨石似乎不接受这个答案。"
+  },
+  {
+    "text_index": 658633815,
+    "translated_text": "不是下一项"
+  },
+  {
+    "text_index": 192605922,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}没用？{PART_001}为什么？"
+  },
+  {
+    "text_index": 926835289,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}它肯定不是数列的下一项。{PART_001}前两次传输里，我们就是靠找出下一项才继续下去的。"
+  },
+  {
+    "text_index": 2050270364,
+    "translated_text": "-758、750 都错了"
+  },
+  {
+    "text_index": 618601942,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}-758，{PART_001}750，陨石都没反应。{PART_002}奇怪。"
+  },
+  {
+    "text_index": 1245429748,
+    "translated_text": "重复第一次传输？"
+  },
+  {
+    "text_index": 64754802,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔博士，{PART_001}这绝对和第一次传输的频率相同。{PART_002}持续时间{PART_003}也一样吗？"
+  },
+  {
+    "text_index": 974700919,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}对。{PART_001}0.8066 秒，{PART_002}还是一样。{PART_003}播放、{PART_004}暂停、{PART_005}循环。"
+  },
+  {
+    "text_index": 447532181,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好吧，{PART_001}这次该怎么回应，我们应该知道了。{PART_002}毕竟之前见过。"
+  },
+  {
+    "text_index": 1943490706,
+    "translated_text": "你好！"
+  },
+  {
+    "text_index": 1663891204,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你好！{PART_001}真聪明！{PART_002}先给外星人留个好印象。"
+  },
+  {
+    "text_index": 1092420189,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是，{PART_001}可是，{PART_002}他们多半听不懂英语。{PART_003}甚至任何一种人类语言都听不懂。"
+  },
+  {
+    "text_index": 1695859534,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}对。{PART_002}真遗憾。{PART_003}看来只能继续用数字了。"
+  },
+  {
+    "text_index": 794009469,
+    "translated_text": "重复也失败了"
+  },
+  {
+    "text_index": 1526148664,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？{PART_001}我们重复了他们传出的讯息，结果还是没变化？{PART_002}巴蒂斯塔，{PART_003}系统还正常吗？"
+  },
+  {
+    "text_index": 327415994,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}正常。{PART_001}所有系统均正常运行。"
+  },
+  {
+    "text_index": 551005789,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}那就只剩一种可能：{PART_001}陨石不想再让我们照着重复了。"
+  },
+  {
+    "text_index": 2036209895,
+    "translated_text": "带我去见你们的首领"
+  },
+  {
+    "text_index": 236651567,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}悠着点，{PART_001}翻译员，{PART_002}可别一上来就挑起星际冲突，{PART_003}好吗？"
+  },
+  {
+    "text_index": 266702222,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}这条讯息连编译都过不了。"
+  },
+  {
+    "text_index": 1706640794,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}听着，{PART_001}我只是不想一开始就给人家留下坏印象！"
+  },
+  {
+    "text_index": 2092087311,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}埃克斯博士，{PART_001}陨石看不到我们的屏幕。{PART_002}它接收的是一串串无线电波。"
+  },
+  {
+    "text_index": 1059770628,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿！{PART_001}我只是说，{PART_002}面对外星人最好谨慎点！"
+  },
+  {
+    "text_index": 1074576922,
+    "translated_text": "偏移 256"
+  },
+  {
+    "text_index": 25673954,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}最新的频率就是原始频率，{PART_001}偏移了 256。"
+  },
+  {
+    "text_index": 1924532977,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你们两位觉得这有什么含义吗？"
+  },
+  {
+    "text_index": 488335242,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}没有，{PART_001}完全没头绪。"
+  },
+  {
+    "text_index": 1072023915,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}这是 2 的 8 次方。"
+  },
+  {
+    "text_index": 517407186,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有意思。{PART_001}我会记下来。"
+  },
+  {
+    "text_index": 529345337,
+    "translated_text": "天生一对的信号"
+  },
+  {
+    "text_index": 811599321,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这么快，{PART_001}又定义了一个新信号？"
+  },
+  {
+    "text_index": 1096393863,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，我也注意到了。{PART_001}看来上一题答得很准。"
+  },
+  {
+    "text_index": 1231810512,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}即便如此，{PART_001}陨石通常也会拿同一个信号考我们好几次。"
+  },
+  {
+    "text_index": 1077579453,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也许现在还在检验。{PART_001}也许这两个信号是一对，{PART_002}天生就该在一起。"
+  },
+  {
+    "text_index": 432778088,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}也许你说得对。{PART_001}这两个信号，{PART_002}可能彼此对应，{PART_003}或者本来就该联系起来。{PART_004}发现得好，埃克斯博士！"
+  },
+  {
+    "text_index": 746261846,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嘿，{PART_001}有事算我一个。{PART_002}只是尽本分而已。"
+  },
+  {
+    "text_index": 515704466,
+    "translated_text": "反过来了"
+  },
+  {
+    "text_index": 1682849342,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}没错，{PART_001}他们把顺序反过来了。{PART_002}上一次传输里，{PART_003}我们要用 {SIG_N022} 计算 {SIG_N021}。{PART_004}现在正好相反。{PART_005}整个顺序都反了。"
+  },
+  {
+    "text_index": 1009297445,
+    "translated_text": "不同形式"
+  },
+  {
+    "text_index": 829677160,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我觉得他们是在用不同的例子拓展 {SIG_N018} 的定义。"
+  },
+  {
+    "text_index": 1843845914,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嗯哼。{PART_001}能不能也用不同的例子，拓展一下这句话的意思？"
+  },
+  {
+    "text_index": 2063472878,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}抱歉。{PART_001}刚才说得太绕了。{PART_002}这段传输是在展示 {SIG_N018} 可以有不同形式。{PART_003}上一次传输中，{SIG_N018} 由 4 个 {SIG_N017} 构成。{PART_004}这次只有 3 个 {SIG_N017}。"
+  },
+  {
+    "text_index": 1457788645,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以 {SIG_N018} 可以有不同的形式。{PART_001}这我也能告诉你！"
+  },
+  {
+    "text_index": 1141319054,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}唉……{PART_001}我只是想帮忙。"
+  },
+  {
+    "text_index": 709857549,
+    "translated_text": "抓住本义"
+  },
+  {
+    "text_index": 1022915337,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}陨石正在更灵活地运用信号。"
+  },
+  {
+    "text_index": 1996055888,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，{PART_001}上一次传输我们就看出来了。{PART_002}还有，那叫陨石。"
+  },
+  {
+    "text_index": 964000232,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我指的不是这个——{PART_001}陨石在用更抽象的方式定义新词、{PART_002}新概念。{PART_003}我们必须抓住每个定义的根本含义，{PART_004}找出其中的共同点。{PART_005}不能一知半解地勉强混过每次传输，{PART_006}必须理解背后的含义。"
+  },
+  {
+    "text_index": 1058838575,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我们不是一直都在这么做吗？{PART_001}信号 {SIG_N004} 和 {SIG_N005} 应该都很明确。{PART_002}我们已经抓住它们的核心含义了，{PART_003}不是吗？"
+  },
+  {
+    "text_index": 509754082,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}但这些新信号并不明确。{PART_001}它们很可能还是数学概念，{PART_002}却在组织、{PART_003}分类信息。{PART_004}这比定义运算更抽象。{PART_005}我们离共同建立一门语言又近了一步，{PART_006}彼此能够理解的范围也更大了。"
+  },
+  {
+    "text_index": 1941433556,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}一下子要消化的东西可真多。{PART_001}我得想想。"
+  },
+  {
+    "text_index": 1705639307,
+    "translated_text": "并非独有"
+  },
+  {
+    "text_index": 1783276160,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哇！{PART_001}又出现 {SIG_N014} 和 {SIG_N015} 了！"
+  },
+  {
+    "text_index": 557215586,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以它们并不是 {SIG_N016} 独有的。{PART_001}有意思。{PART_002}观察得好，{PART_003}埃克斯。"
+  },
+  {
+    "text_index": 845471468,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那当然，{PART_001}交给我吧。{PART_002}毕竟，{PART_003}我可是专家。"
+  },
+  {
+    "text_index": 219301486,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}他有时会让你后悔夸他吗？"
+  },
+  {
+    "text_index": 468250683,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}很遗憾，{PART_001}会。"
+  },
+  {
+    "text_index": 1590375075,
+    "translated_text": "数值错位"
+  },
+  {
+    "text_index": 367407137,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC1又来了。{PART_001}这些值不同步。"
+  },
+  {
+    "text_index": 11673929,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}对，我懂。{PART_001}就像没对齐一样。"
+  },
+  {
+    "text_index": 1854521180,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}0$animC0 对应 0 和 1。{PART_001}这没问题。{PART_002}1 对应 3 和 7。{PART_003}错位。{PART_004}2 对应 4 和 9。{PART_005}错位。{PART_006}3 对应 8 和某个数。"
+  },
+  {
+    "text_index": 1476081396,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}错位。"
+  },
+  {
+    "text_index": 1661926219,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔博士，{PART_001}这串数字有什么规律吗？{PART_002}有没有某个固定函数，能让 0 对应 0、{PART_003}1 对应 3、{PART_004}2 对应 4，{PART_005}或 3 对应 8？"
+  },
+  {
+    "text_index": 784415623,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}没有。{PART_001}$animB2不存在映射关系。{PART_002}感觉很随意。"
+  },
+  {
+    "text_index": 1507823503,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有意思。{PART_001}$animB0也许重点就在这里。{PART_002}$animC4那些数字只是标签，{PART_003}而 {SIG_N014} 后面的数字才是输入。"
+  },
+  {
+    "text_index": 791184786,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1那下一个数字呢？"
+  },
+  {
+    "text_index": 892944044,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC1也许它就是上述关系的输出。"
+  },
+  {
+    "text_index": 2054590389,
+    "translated_text": "第二个值是什么？"
+  },
+  {
+    "text_index": 1138583054,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我觉得外星人弄错了。{PART_001}想算出第二个值，{PART_002}也就是 {SIG_N012} 所在的位置，{PART_003}好像根本不可能。"
+  },
+  {
+    "text_index": 1036648606,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们可以利用 {SIG_N017}。{PART_001}$animC3传输还提供了额外信息，{PART_002}只是，{PART_003}我不确定怎么把它们拼起来。"
+  },
+  {
+    "text_index": 1303605351,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 1910395299,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦！{PART_001}$animA4瞧瞧谁终于来上班了？！{PART_002}今天想搭把手？"
+  },
+  {
+    "text_index": 1475343528,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}算了。"
+  },
+  {
+    "text_index": 1097971422,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好啦，我只是逗你，巴蒂斯塔。{PART_001}想到什么了？"
+  },
+  {
+    "text_index": 1047917681,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}每个 {SIG_N017} 总有两个 {SIG_N016}。"
+  },
+  {
+    "text_index": 741580275,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}而他们给出了第一个 {SIG_N016}。{PART_001}甚至还给出了第二个 {SIG_N016} 的一半。"
+  },
+  {
+    "text_index": 706522641,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}接着就能得出这条线的 {SIG_N020}。{PART_001}利用这两项数据，{PART_002}就能算出 {SIG_N012}。"
+  },
+  {
+    "text_index": 1397179111,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}所以也许没有错误。{PART_001}只是最近定义的几个信号让我有点糊涂……"
+  },
+  {
+    "text_index": 1409368455,
+    "translated_text": "熟悉的公式"
+  },
+  {
+    "text_index": 1784788558,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}呼！{PART_001}好了！{PART_002}$animA1这次可真够长的。{PART_003}$animA3不过我已经把它改写成自己看得懂的数学式了。{PART_004}当然，{PART_005}$animA2你们也看得懂。"
+  },
+  {
+    "text_index": 1248484088,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是什么？"
+  },
+  {
+    "text_index": 1702849691,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这是一条很长的方程。{PART_001}大概可以读作：{PART_002}$animA4(x1 - x2)^2 + (y1 - y2)^2 的平方根等于 {SIG_N020}。{PART_003}至于 {SIG_N020} 是什么意思，{PART_004}$animA0就看{PLAYER_NAME}怎么想了。"
+  },
+  {
+    "text_index": 1527087888,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这条方程看起来很熟悉。{PART_001}我看参考页签时，{PART_002}见过非常相似的东西。{PART_003}$animC5巴蒂斯塔博士，{PART_004}你记得吗？"
+  },
+  {
+    "text_index": 340939262,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}也许。{PART_002}我这就查。"
+  },
+  {
+    "text_index": 1563303677,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这下可把我急死了。{PART_001}$animC0我非得找到它。"
+  },
+  {
+    "text_index": 1417613963,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}那可未必，我会先找到！{PART_001}$animA1最后找到的是臭鸡蛋！"
+  },
+  {
+    "text_index": 1058226327,
+    "translated_text": "整体的一部分？"
+  },
+  {
+    "text_index": 801696774,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我猜这些是某个整体的组成部分。"
+  },
+  {
+    "text_index": 1654719861,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}看起来他们给了我们四个部分和一个整体。"
+  },
+  {
+    "text_index": 766873101,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以要拼出 1 个 {SIG_N018}，得用 4 个 {SIG_N017}。"
+  },
+  {
+    "text_index": 600796877,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不过这些 {SIG_N017} 里也许有一个根本用不上。"
+  },
+  {
+    "text_index": 1083590160,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}哦？"
+  },
+  {
+    "text_index": 626780512,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}看$animA1：{PART_001}如果某个 {SIG_N017} 里的 {SIG_N016} 和其他任何一个都对不上，{PART_002}$animA3那它们根本连不起来！"
+  },
+  {
+    "text_index": 173891222,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}观察得很好，{PART_001}埃克斯博士。{PART_002}{PLAYER_NAME}，{PART_003}来看看这些 {SIG_N017} 应该怎么拼起来。"
+  },
+  {
+    "text_index": 484564274,
+    "translated_text": "八边形问题"
+  },
+  {
+    "text_index": 854400120,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}目前我弄明白了这些……{PART_001}$animA4我们有 1 个 {SIG_N018}，里面有 8 个 {SIG_N017} 和 8 个 {SIG_N016}。{PART_002}$animA3这不就是个八边形吗，{PART_003}对吧？"
+  },
+  {
+    "text_index": 833139752,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以这道题跟八边形有关。"
+  },
+  {
+    "text_index": 156167925,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0而且要算出 {SIG_N022}，就得用 {SIG_N021}。"
+  },
+  {
+    "text_index": 2048231655,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}听起来是数学题。{PART_001}$animC5我去查参考页签。"
+  },
+  {
+    "text_index": 1203011156,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我才不需要参考页签！{PART_001}$animA3全都装在我脑袋里呢！"
+  },
+  {
+    "text_index": 95198942,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animA0当初不是你要求加的吗？"
+  },
+  {
+    "text_index": 345346351,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA4嘘！{PART_001}$animA0……{PART_002}$animA5对……{PART_003}是我……"
+  },
+  {
+    "text_index": 1202227848,
+    "translated_text": "点"
+  },
+  {
+    "text_index": 1536845145,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}一对数值。{PART_002}一个二元组。{PART_003}一个有序对。{PART_004}一个点。"
+  },
+  {
+    "text_index": 1960299697,
+    "translated_text": "组成有序对"
+  },
+  {
+    "text_index": 321127360,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这是组合。"
+  },
+  {
+    "text_index": 769386863,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你说什么？"
+  },
+  {
+    "text_index": 1190195916,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}他们在演示如何组合出 {SIG_N016} 的各个值。"
+  },
+  {
+    "text_index": 1457984639,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你再说一遍？"
+  },
+  {
+    "text_index": 193836380,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC1看。{PART_001}埃克斯。{PART_002}传输的第一部分，{PART_003}{SIG_N016} 0，{PART_004}$animC3它的两个值是 3 和 5。"
+  },
+  {
+    "text_index": 700961592,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦——！{PART_001}我懂了。{PART_002}$animA1你把 {SIG_N016} 0 的两个值拆成了 {SIG_N011} 0 和 {SIG_N011} 1。"
+  },
+  {
+    "text_index": 974134476,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5所以我们必须用它的两个值构造出 {SIG_N016} 1。"
+  },
+  {
+    "text_index": 1987949730,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}唉，{PART_001}$animA5真希望这是我先想到的。"
+  },
+  {
+    "text_index": 1758323309,
+    "translated_text": "乘法函数"
+  },
+  {
+    "text_index": 749623983,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这是个乘法函数！{PART_001}{SIG_N011} 0 乘 2 等于 {SIG_N011} 1。"
+  },
+  {
+    "text_index": 1359563088,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}没错，{PART_001}看来的确如此。{PART_002}不过，{PART_003}最新出现的三个信号又有什么作用？"
+  },
+  {
+    "text_index": 1805852453,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我，{PART_001}呃，{PART_002}还没想到那一步。"
+  },
+  {
+    "text_index": 1399319444,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}{SIG_N016} 0，{PART_001}然后是 {SIG_N016} 1，{PART_002}再是 {SIG_N016} 2。{PART_003}配上 {SIG_N014}，{PART_004}两个数字，{PART_005}然后是 {SIG_N015}。{PART_006}嗯。"
+  },
+  {
+    "text_index": 636242673,
+    "translated_text": "线段信息？"
+  },
+  {
+    "text_index": 1311893501,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我的车轮陷在泥里空转了。"
+  },
+  {
+    "text_index": 1679559732,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}反正你的发动机马力也不大。"
+  },
+  {
+    "text_index": 1025101781,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}喂！{PART_001}$animA4你是在说我笨！"
+  },
+  {
+    "text_index": 710572054,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}很好。{PART_001}$animB3你解开我的谜题了。"
+  },
+  {
+    "text_index": 658897524,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4能不能先解开他们的谜题？{PART_001}$animC1我们有一个和 {SIG_N017} 相关的新信号。{PART_002}$animB0每个 {SIG_N017} 都像是一条线段，{PART_003}$animA0由一对 {SIG_N016} 连接而成。{PART_004}{SIG_N020} 描述的是 {SIG_N017} 的某项信息。{PART_005}会是什么信息？{PART_006}$animC5有哪些可能？"
+  },
+  {
+    "text_index": 1590723072,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+  },
+  {
+    "text_index": 1426644384,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}也许是斜率？"
+  },
+  {
+    "text_index": 370477463,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}或者距离。"
+  },
+  {
+    "text_index": 980343905,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}{PLAYER_NAME}，{PART_001}你来决定。"
+  },
+  {
+    "text_index": 2035103733,
+    "translated_text": "勾股定理"
+  },
+  {
+    "text_index": 225398258,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你们三个。{PART_001}看看这个。{PART_002}$animA3我把 {SIG_N011} 改写成了字母，{PART_003}这样我看着更顺眼。{PART_004}我得到的方程是：{PART_005}X 的平方加 Y 的平方等于 Z 的平方。{PART_006}$animA0想起什么了吗？"
+  },
+  {
+    "text_index": 1211356599,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}嗯……{PART_002}埃克斯。{PART_003}$animB2你发现了关键线索。"
+  },
+  {
+    "text_index": 1215724881,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}真的？！"
+  },
+  {
+    "text_index": 1942065974,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB0那是勾股定理。"
+  },
+  {
+    "text_index": 878263439,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}太棒了！！！"
+  },
+  {
+    "text_index": 963659278,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}{PART_001}$animB4我之前在参考页签里写过，{PART_002}数学分类下，{PART_003}距离那一节。{PART_004}不过，{PART_005}$animB0嗯，{PART_006}发现得好，埃克斯，{PART_007}发现得好。"
+  },
+  {
+    "text_index": 377976866,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}谢了，巴蒂斯塔！{PART_001}那你能叫我“鹰眼艾伦”吗？{PART_002}$animA2我觉得自己配得上这个称号了。"
+  },
+  {
+    "text_index": 423663783,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不行。"
+  },
+  {
+    "text_index": 1860803775,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0试试又不亏！"
+  },
+  {
+    "text_index": 34254271,
+    "translated_text": "矩形问题"
+  },
+  {
+    "text_index": 1309460430,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦哦哦，{PART_001}我懂怎么回事了。{PART_002}$animA1要求出矩形的 {SIG_N021}，{PART_003}已知的是 {SIG_N022}。{PART_004}狡猾的小火星人！{PART_005}不过说真的，{PART_006}$animA5他们多半不是来自火星。{PART_007}$animA3要是那里有先进的智慧生命，我们应该早就看出迹象了。{PART_008}比如飞船或者巨型结构什么的。{PART_009}$animA4万一他们造了太空电梯呢！{PART_010}那可真不得了，{PART_011}不过我们在地球上肯定一眼就能看见。{PART_012}所以我觉得他们不是来自火星。{PART_013}……{PART_014}有点跑题了。"
+  },
+  {
+    "text_index": 2085002350,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}对。"
+  },
+  {
+    "text_index": 409950788,
+    "translated_text": "补全闭环"
+  },
+  {
+    "text_index": 276107419,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}补全闭环。"
+  },
+  {
+    "text_index": 550084153,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}就这样？"
+  },
+  {
+    "text_index": 1768837518,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}照他们给的例子看，{PART_001}这正是传输要求我们做的。"
+  },
+  {
+    "text_index": 1577206461,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}补全闭环。{PART_001}对，{PART_002}有道理。{PART_003}补全闭环，{PART_004}补全闭环，{PART_005}补全闭环……"
+  },
+  {
+    "text_index": 171118714,
+    "translated_text": "选哪两个？"
+  },
+  {
+    "text_index": 1263613548,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这些全都是 {SIG_N016}。{PART_001}一个 {SIG_N017} 只需要两个 {SIG_N016}。{PART_002}$animA3那随便选两个 {SIG_N016} 配成一对，不都可能是答案吗？"
+  },
+  {
+    "text_index": 1981711784,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我们还受到 {SIG_N020} 值的限制。"
+  },
+  {
+    "text_index": 955556156,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}它被设成了 1。{PART_001}$animA0天啊，那就是说只有一对 {SIG_N016}，{PART_002}能组成一个 {SIG_N017}，且其 {SIG_N020} 为 1。{PART_003}我来一个个试。{PART_004}你们谁先算出来就告诉我。"
+  },
+  {
+    "text_index": 1216331108,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animA1解开这段传输时，绿灯就会亮。"
+  },
+  {
+    "text_index": 522170709,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}希望如此！{PART_001}我可不想马上又听到红灯“呃呃”的声音！"
+  },
+  {
+    "text_index": 251158221,
+    "translated_text": "拆分并运算"
+  },
+  {
+    "text_index": 649274553,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}嗯。{PART_001}还记得上一次传输里，{PART_002}我们把一个 {SIG_N016} 信号拆成了各个分量吗？"
+  },
+  {
+    "text_index": 1862955701,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}记得，{PART_001}你觉得这次也一样？"
+  },
+  {
+    "text_index": 846816512,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}有些相似。{PART_001}我想我们要先拆出各个分量，{PART_002}再用数学表达式处理它们。"
+  },
+  {
+    "text_index": 789373659,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嗯。{PART_001}对，有道理。{PART_002}试试看。"
+  },
+  {
+    "text_index": 1345628364,
+    "translated_text": "0 等于 0"
+  },
+  {
+    "text_index": 1461161783,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什——？{PART_001}可 {SIG_N017}“0”就是 {SIG_N017}“0”啊。{PART_002}我觉得陨石出故障了。"
+  },
+  {
+    "text_index": 1630660634,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这在逻辑上确实成立，{PART_001}但不代表我们给出了陨石要的答案。{PART_002}说真的，{PART_003}这反而是好事。"
+  },
+  {
+    "text_index": 1391061462,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}为什么？{PART_001}我倒希望所有真命题陨石都接受，{PART_002}而不是只认某个指定答案。"
+  },
+  {
+    "text_index": 755420200,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}正因为它会拒绝永远成立的命题，{PART_001}每段传输才迫使我们抓住核心含义。"
+  },
+  {
+    "text_index": 1086408820,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}陨石不接受永真式。"
+  },
+  {
+    "text_index": 1393081465,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我们必须证明自己真的理解了，才能继续。{PART_001}除非他们写的是“{SIG_N012} {SIG_N004} 0”。{PART_002}那我们的答案就只是 0。"
+  },
+  {
+    "text_index": 478642272,
+    "translated_text": "又要同时回应三项"
+  },
+  {
+    "text_index": 1467453838,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}又要同时回应三项，{PART_001}是吧？{PART_002}这些讨厌鬼。"
+  },
+  {
+    "text_index": 107933981,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我呢，{PART_001}倒是{PART_002}挺感谢他们。{PART_003}我想把这则讯息里的每一丝含义都榨出来。{PART_004}如果他们选择用这种方式，{PART_005}那就这样吧。"
+  },
+  {
+    "text_index": 1319271409,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}好吧，{PART_001}我佩服你的求知欲，{PART_002}柯林斯博士。"
+  },
+  {
+    "text_index": 1469548470,
+    "translated_text": "抽象层次"
+  },
+  {
+    "text_index": 856486799,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}话说，{PART_001}$animA2你们弄清 {SIG_N032} 和 {SIG_N034} 的区别了吗？{PART_002}$animA3它们看起来一样。"
+  },
+  {
+    "text_index": 436884743,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也在想这个。{PART_001}$animA0到目前为止，{PART_002}我们只使用过 {SIG_N034}，而且都涉及 {SIG_N022}。{PART_003}如果这个规律成立，{PART_004}$animC3我认为 {SIG_N034} 指的是几何学中的某项特定属性。{PART_005}这又多了一层抽象。{PART_006}陨石的语言正逐渐跨出数学，{PART_007}$animC5进入更抽象的领域。"
+  },
+  {
+    "text_index": 796696400,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}看来我们正朝着某个方向前进。{PART_001}朝着真正的含义。"
+  },
+  {
+    "text_index": 1504952862,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC0希望如此。"
+  },
+  {
+    "text_index": 185533719,
+    "translated_text": "三连又来了！"
+  },
+  {
+    "text_index": 1497811396,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}三连又来了！{PART_001}来吧！！"
+  },
+  {
+    "text_index": 1542842834,
+    "translated_text": "一次回应三项"
+  },
+  {
+    "text_index": 1391273746,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}为什么这段传输一次要三个回应？{PART_001}真麻烦。{PART_002}这样会更难。"
+  },
+  {
+    "text_index": 2105049064,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我想这正是目的。"
+  },
+  {
+    "text_index": 1641703083,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嗯？"
+  },
+  {
+    "text_index": 2004957592,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}外星人不想让我们在讯息里跌跌撞撞地乱试，{PART_001}用穷举法试遍所有信号。{PART_002}这是他们故意设下的障碍，{PART_003}我们必须跨过去才能理解。"
+  },
+  {
+    "text_index": 195097734,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这些外星人要求可真多。"
+  },
+  {
+    "text_index": 1885608635,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}看来他们执意要让我们理解这颗陨石的讯息。"
+  },
+  {
+    "text_index": 41579497,
+    "translated_text": "三连尽管来！"
+  },
+  {
+    "text_index": 212403049,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}又是三个一组。{PART_001}你猜怎么着？{PART_002}外星人要这么玩，{PART_003}那好。{PART_004}我奉陪。{PART_005}三连尽管来！"
+  },
+  {
+    "text_index": 1068592957,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}哈哈，{PART_001}埃克斯博士。{PART_002}我佩服你的干劲。"
+  },
+  {
+    "text_index": 1422046770,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哼。{PART_001}我也佩服！"
+  },
+  {
+    "text_index": 1221877138,
+    "translated_text": "双重测试？"
+  },
+  {
+    "text_index": 1255346629,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}双重测试？{PART_001}不是三重？{PART_002}$animA5别啊，{PART_003}我才刚来劲呢。"
+  },
+  {
+    "text_index": 1533816041,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}埃克斯博士，{PART_001}你提出了个很好的问题。{PART_002}$animC3每段传输怎么组织，本身总带着一点含义。"
+  },
+  {
+    "text_index": 1921214208,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}嗯？{PART_001}哦，{PART_002}对。{PART_003}$animA4我刚才绝对就是这个意思。"
+  },
+  {
+    "text_index": 1523269382,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不，{PART_001}你没有。{PART_002}$animA0不过没关系。{PART_003}是你提醒了我。{PART_004}$animC3知道他们为什么给我们两项，而不是三项吗？"
+  },
+  {
+    "text_index": 250129914,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}不知道。"
+  },
+  {
+    "text_index": 1414636228,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}看看这段传输。{PART_001}$animC1他们在直接比较 {SIG_N030} 和 {SIG_N031}。{PART_002}这是在划清两者的区别。"
+  },
+  {
+    "text_index": 535499653,
+    "translated_text": "两个值"
+  },
+  {
+    "text_index": 204487898,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这下我们有了比较数值的新方法。{PART_001}{SIG_N026} 可以取两个值之一。{PART_002}$animC2而且各个 {SIG_N026} 之间可以彼此比较。"
+  },
+  {
+    "text_index": 719290978,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这些都要用 {SIG_N027} 或 {SIG_N028} 的值来做，对吧？"
+  },
+  {
+    "text_index": 1688174206,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC0这是目前最合理的分析。"
+  },
+  {
+    "text_index": 875660624,
+    "translated_text": "格式误导"
+  },
+  {
+    "text_index": 1634544042,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我不明白“{SIG_N011} 01”是什么意思。{PART_001}完全说不通。"
+  },
+  {
+    "text_index": 544040963,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我也这么想。{PART_001}巴蒂斯塔，{PART_002}能帮忙看看吗？"
+  },
+  {
+    "text_index": 1678560511,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯，{PART_001}可能是格式造成了误导。{PART_002}传输显示的是“{SIG_N011} 0”，{PART_003}后面碰巧紧跟着一个 1。{PART_004}这两个数码互不相关。{PART_005}后面三条陈述也一样。"
+  },
+  {
+    "text_index": 1953989450,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}明白了。{PART_001}这是传输本身和我们的显示方式共同造成的小问题。"
+  },
+  {
+    "text_index": 358629219,
+    "translated_text": "推导"
+  },
+  {
+    "text_index": 1524597796,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4根据前面的陈述，我们能推导出 {SIG_N011} 0 和 {SIG_N011} 2 的什么关系？"
+  },
+  {
+    "text_index": 1871561247,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}有哪些选项？"
+  },
+  {
+    "text_index": 328978135,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}{SIG_N004}、{PART_001}{SIG_N032}、{PART_002}或者 {SIG_N033}。"
+  },
+  {
+    "text_index": 606943776,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}啊。{PART_001}我早该自己想到的。"
+  },
+  {
+    "text_index": 1755545985,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}所以大家才聚在这里。{PART_001}我们是一个团队！"
+  },
+  {
+    "text_index": 163891574,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}如果每个人都该派上用场，{PART_001}那埃克斯为什么在这里？"
+  },
+  {
+    "text_index": 490924142,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}喂！{PART_001}过分！"
+  },
+  {
+    "text_index": 987200978,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}呵呵。"
+  },
+  {
+    "text_index": 465502782,
+    "translated_text": "逻辑？"
+  },
+  {
+    "text_index": 1543225101,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯！"
+  },
+  {
+    "text_index": 1675443247,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}我已经能听懂你的“嗯”了。{PART_001}这声听着更兴奋。{PART_002}有什么新发现？"
+  },
+  {
+    "text_index": 666082218,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}最近几次传输。{PART_001}$animB1看看参考页签，{PART_002}逻辑部分。"
+  },
+  {
+    "text_index": 426161387,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}你觉得和这里有关？"
+  },
+  {
+    "text_index": 1920831349,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB0嗯。"
+  },
+  {
+    "text_index": 282834629,
+    "translated_text": "1 不等于 2"
+  },
+  {
+    "text_index": 2004125758,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}让我理清楚。{PART_001}他们要我们给出 {SIG_N026} 5 的值。{PART_002}可 {SIG_N026} 5 本身好像就是一条数值陈述。{PART_003}它说 1 {SIG_N004} 2，{PART_004}这显然是错的。{PART_005}我们要怎么表示它是错的？"
+  },
+  {
+    "text_index": 1360787046,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我同意，{PART_001}不过，{PART_002}我认为他们正在教我们怎么回应。{PART_003}每个 {SIG_N026} 的核心值，不是 {SIG_N027} 就是 {SIG_N028}。"
+  },
+  {
+    "text_index": 86777930,
+    "translated_text": "我们的责任"
+  },
+  {
+    "text_index": 1226334952,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}啊！{PART_001}我懂了！{PART_002}他们把 {SIG_N026} 内部怎么定义交给我们了！{PART_003}我们的责任越来越大了！"
+  },
+  {
+    "text_index": 1414484573,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你有什么感受？"
+  },
+  {
+    "text_index": 1550162742,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这当然是个挑战。{PART_001}但伟大的艾伦·埃克斯博士{PART_002}从来不会在挑战面前退缩。"
+  },
+  {
+    "text_index": 327504048,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}后悔问他了吗？"
+  },
+  {
+    "text_index": 1536601750,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}后——悔。"
+  },
+  {
+    "text_index": 1928097130,
+    "translated_text": "预感不错"
+  },
+  {
+    "text_index": 478135106,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5我有种好预感。"
+  },
+  {
+    "text_index": 385906470,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯！"
+  },
+  {
+    "text_index": 114817291,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}来了：{PART_001}$animA1我最喜欢的绿灯！"
+  },
+  {
+    "text_index": 1556912078,
+    "translated_text": "新话题？"
+  },
+  {
+    "text_index": 1110610338,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}我觉得陨石换了个话题。"
+  },
+  {
+    "text_index": 607529792,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}为什么这么说？"
+  },
+  {
+    "text_index": 1096141885,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}没有 {SIG_N027}，{PART_001}也没有 {SIG_N028}。{PART_002}现在只围绕最新的信号 {SIG_N038}。{PART_003}我会根据这种模式，{PART_004}或者节奏变化，{PART_005}决定在日志里把哪些传输归为一组。"
+  },
+  {
+    "text_index": 20861323,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦，有意思。{PART_001}我倒没怎么想过这个。"
+  },
+  {
+    "text_index": 1370935551,
+    "translated_text": "终于不是数学了！"
+  },
+  {
+    "text_index": 1105318686,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}上一段传输不全是数学。"
+  },
+  {
+    "text_index": 674623656,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}什么意思？"
+  },
+  {
+    "text_index": 792774366,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}它不是要我们求某个 {SIG_N022}。{PART_001}它用 {SIG_N019}，根据 {SIG_N016} 来组织信息。{PART_002}$animC4他们在把对象联系起来，对信息进行分类！"
+  },
+  {
+    "text_index": 1828435388,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}这有什么好兴奋的？"
+  },
+  {
+    "text_index": 1099798854,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC3因为他们正在教我们怎么谈论——{PART_001}数学之外的东西！！"
+  },
+  {
+    "text_index": 1307602376,
+    "translated_text": "非得一个个数吗？"
+  },
+  {
+    "text_index": 37189125,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1这些非得一个个数吗？"
+  },
+  {
+    "text_index": 1078627930,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我知道数数不是你的强项。"
+  },
+  {
+    "text_index": 1704195195,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}喂！{PART_001}$animA4你不说话的时候，大家都轻松多了！"
+  },
+  {
+    "text_index": 1297122660,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}呵呵。"
+  },
+  {
+    "text_index": 438023454,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}$animA0我觉得不用数。{PART_001}$animC2{PLAYER_NAME}的词典里有多少个 {SIG_N042}，{PART_002}我们知道，对吧？"
+  },
+  {
+    "text_index": 1042201717,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦，对！{PART_001}再加上八个正数数码！"
+  },
+  {
+    "text_index": 1270758662,
+    "translated_text": "埃克斯：快结束了？"
+  },
+  {
+    "text_index": 717058005,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}两个新信号！{PART_001}我还以为快结束了！"
+  },
+  {
+    "text_index": 1938018594,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}你为什么会这么想，{PART_001}埃克斯……"
+  },
+  {
+    "text_index": 742402654,
+    "translated_text": "在测试我们？"
+  },
+  {
+    "text_index": 456938142,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}又有一个新信号！"
+  },
+  {
+    "text_index": 355855705,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}没错！{PART_001}这让我觉得，上一次传输{PART_002}是在测试我们，通过之后才会进入新概念！"
+  },
+  {
+    "text_index": 1850883236,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦！{PART_001}所以只是继续前进前的小测验？"
+  },
+  {
+    "text_index": 315813053,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}这是目前最合理的猜测。"
+  },
+  {
+    "text_index": 503874595,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}现在有新信号了。{PART_001}$animB4专心看眼前。{PART_002}先做这个。"
+  },
+  {
+    "text_index": 1592345668,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}好吧，{PART_001}好吧！{PART_002}只是有太多东西需要分析了！"
+  },
+  {
+    "text_index": 2035653824,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}那就继续。"
+  },
+  {
+    "text_index": 971526763,
+    "translated_text": "同一类题"
+  },
+  {
+    "text_index": 2142763488,
+    "translated_text": "{SPEAKER_AKERS}{PART_000}等等，{PART_001}这种题我们刚解过。"
+  },
+  {
+    "text_index": 251566740,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}那他们为什么又发来一道？{PART_001}有意思……"
+  },
+  {
+    "text_index": 203456121,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}继续就好。{PART_001}$animB2别讨论。{PART_002}直接做。"
+  },
+  {
+    "text_index": 2114106852,
+    "translated_text": "数量巨大"
+  },
+  {
+    "text_index": 350752756,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}又是白送的一题。"
+  },
+  {
+    "text_index": 541157876,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}是，{PART_001}我知道你只想往下做。"
+  },
+  {
+    "text_index": 341810525,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}对，{PART_001}我们继续。{PART_002}不过，{PART_003}嗯……"
+  },
+  {
+    "text_index": 5406716,
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔博士，{PART_001}你发现什么了吗？"
+  },
+  {
+    "text_index": 938922920,
+    "translated_text": "{SPEAKER_BAUTISTA}{PART_000}8 {SIG_N009} 16。{PART_001}嗯。{PART_002}真是个大数。"
+  }
+]

@@ -1,0 +1,693 @@
+{
+  "valid": true,
+  "groups": 19,
+  "items": 11067,
+  "errors": [],
+  "latin_candidates": [
+    {
+      "type": "latin_candidate",
+      "group": 2,
+      "text_index": 1099368954,
+      "items": [
+        "o.o",
+        "b"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 2,
+      "text_index": 2129172693,
+      "items": [
+        "ASDF 2"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 2,
+      "text_index": 1168962806,
+      "items": [
+        "Aliens Sometimes Deliver Fortunes"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1475619372,
+      "items": [
+        "Ans",
+        "answer"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1361827065,
+      "items": [
+        "Endnum"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 178129684,
+      "items": [
+        "Var"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 126710755,
+      "items": [
+        "Endhas"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1715470034,
+      "items": [
+        "Addcoords"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 900356033,
+      "items": [
+        "Msg"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1384306422,
+      "items": [
+        "Nuetron"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 76540542,
+      "items": [
+        "nuetron"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 598213623,
+      "items": [
+        "mispelled"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1821491771,
+      "items": [
+        "de"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1269094120,
+      "items": [
+        "Nuetronstar"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 2035599104,
+      "items": [
+        "Neustronstar"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1021474299,
+      "items": [
+        "A  B  C"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 1859495101,
+      "items": [
+        "A  B  C"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 3,
+      "text_index": 598550444,
+      "items": [
+        "heli"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 4,
+      "text_index": 574076472,
+      "items": [
+        "e"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 5,
+      "text_index": 625361298,
+      "items": [
+        "apple",
+        "apple"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 5,
+      "text_index": 1702849691,
+      "items": [
+        "x1 - x2",
+        "y1 - y2"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 1422878300,
+      "items": [
+        "X-Z-Y"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 2095796018,
+      "items": [
+        "X-Y-Z"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 1951711450,
+      "items": [
+        "eh",
+        "hi",
+        "hi"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 459826640,
+      "items": [
+        "o",
+        "o",
+        "oh",
+        "oo",
+        "oh-oo"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 1607483547,
+      "items": [
+        "o"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 2063292260,
+      "items": [
+        "oh"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 1451578620,
+      "items": [
+        "I run",
+        "I ran"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 8,
+      "text_index": 1017534503,
+      "items": [
+        "run",
+        "I run",
+        "I run in the past"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 11,
+      "text_index": 446384012,
+      "items": [
+        "aHz"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 13,
+      "text_index": 1881593564,
+      "items": [
+        "desu",
+        "da"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 14,
+      "text_index": 969965719,
+      "items": [
+        "the",
+        "of",
+        "to"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 998524590,
+      "items": [
+        "cos"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1064393028,
+      "items": [
+        "sin"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 824994031,
+      "items": [
+        "tan"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 873958976,
+      "items": [
+        "yaggleyaggle"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 704047260,
+      "items": [
+        "Applesinmypants"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1943151626,
+      "items": [
+        "TMFDS.SAVE",
+        "DICTIONARY-1.SAVE",
+        "TMFDS-OLD-X.SAVE",
+        "DICTIONARY-1-OLD-X.SAVE"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1974406803,
+      "items": [
+        "Users",
+        "caden",
+        "AppData",
+        "LocalLow",
+        "Applesinmypants",
+        "The Message From Deep Space"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1153273962,
+      "items": [
+        "METEOR_OS vXXX",
+        "x88B0A102",
+        "BAU_CORE_XXX.MOS",
+        "DUAL_GUI.MOS",
+        "AUTO_LOG.MOS",
+        "TRANSLATION.MOS",
+        "DDD CCC"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1173569512,
+      "items": [
+        "Dr"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1543450219,
+      "items": [
+        "MESSAGE",
+        "APPLES"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 225443194,
+      "items": [
+        "asef",
+        "asdf",
+        "asdf",
+        "asdasdfasdfasdfasdfasdfaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1345606384,
+      "items": [
+        "asef",
+        "asdf",
+        "asdf",
+        "asdasdfasdfasdfasdfasdfaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1790108899,
+      "items": [
+        "asef",
+        "asdf",
+        "asdf",
+        "asdasdfasdfasdfasdfasdfaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "asdfasd",
+        "fasdfasd",
+        "fasd",
+        "fas",
+        "dfa",
+        "sdf",
+        "asdfasdfafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1347644889,
+      "items": [
+        "x",
+        "y",
+        "r"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1786191277,
+      "items": [
+        "Pi"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 189052509,
+      "items": [
+        "H/2"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1989098849,
+      "items": [
+        "B + 2H"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1822953892,
+      "items": [
+        "x",
+        "y",
+        "z",
+        "r"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 988993910,
+      "items": [
+        "X-1"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1312345428,
+      "items": [
+        "NaCl",
+        "Fe"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 747613942,
+      "items": [
+        "H2 + O2",
+        "CO2 + H2O",
+        "Fe + 3O2",
+        "Fe2O3",
+        "Na + Cl2",
+        "NaCl"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1260914071,
+      "items": [
+        "He",
+        "Fe",
+        "Fe2O3",
+        "Al",
+        "Al2O3",
+        "Cu",
+        "CuO",
+        "Cu2O",
+        "NaCl",
+        "HCl",
+        "C6H12O6",
+        "C2H5OH"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 618633133,
+      "items": [
+        "c",
+        "a",
+        "b",
+        "a + b",
+        "c"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1732097048,
+      "items": [
+        "x1",
+        "y1",
+        "x2",
+        "y2",
+        "d",
+        "x1 - x2",
+        "y1 - y2"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1924558467,
+      "items": [
+        "do",
+        "did",
+        "had",
+        "had"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1634605698,
+      "items": [
+        "Co"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1272547159,
+      "items": [
+        "train",
+        "school"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1636203063,
+      "items": [
+        "P1      P2"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1889495507,
+      "items": [
+        "x 10",
+        "m",
+        "kg/cm"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 317019133,
+      "items": [
+        "CO2 + 6H2O",
+        "C6H12O6 + 6O2",
+        "C6H12O6 + 6O2",
+        "CO2 + 6H2O"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 1283921179,
+      "items": [
+        "He"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 64397353,
+      "items": [
+        "ate",
+        "eat",
+        "a",
+        "the",
+        "wa"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 15,
+      "text_index": 74203630,
+      "items": [
+        "CTRL + E",
+        "CTRL + Enter",
+        "CTRL + R",
+        "CTRL + T",
+        "Ctrl + Q"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 516439201,
+      "items": [
+        "Dr"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 1043832843,
+      "items": [
+        "Tab"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 183358028,
+      "items": [
+        "METEOR_OS v",
+        "CMOS ... 99",
+        "RTC CPU",
+        "IRQ0 - IRQ8",
+        "RUN BAU_CORE_.MOS",
+        "RUN DUAL_GUI.MOS",
+        "RUN AUTO_LOG.MOS",
+        "RUN .MOS"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 858755080,
+      "items": [
+        "METEOR_OS v",
+        "CMOS ... 99",
+        "FREE BAU_CORE_.MOS",
+        "FREE DUAL_GUI.MOS",
+        "FREE AUTO_LOG.MOS",
+        "FREE .MOS"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 2058588159,
+      "items": [
+        "Dr"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 1036615405,
+      "items": [
+        "Tab"
+      ]
+    },
+    {
+      "type": "latin_candidate",
+      "group": 19,
+      "text_index": 268557881,
+      "items": [
+        "Esc"
+      ]
+    }
+  ],
+  "latin_candidate_count": 72
+}
