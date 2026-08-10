@@ -109,7 +109,8 @@ internal sealed class FontFallback
             return false;
         EnsureLoaded();
         int id = component.GetInstanceID();
-        if (!_directBindings.TryGetValue(id, out DirectBinding binding))
+        if (!_directBindings.TryGetValue(id, out DirectBinding binding) ||
+            binding.Component == null || !ReferenceEquals(binding.Component, component))
         {
             binding = new DirectBinding
             {
@@ -118,7 +119,7 @@ internal sealed class FontFallback
                 OriginalMaterial = component.fontSharedMaterial,
                 OriginalOverflowMode = component.overflowMode,
             };
-            _directBindings.Add(id, binding);
+            _directBindings[id] = binding;
         }
         binding.UseChineseFont = useChineseFont;
         if (useChineseFont)

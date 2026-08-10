@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.42";
+    public const string PluginVersion = "0.1.43";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -45,10 +45,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         TranslationStore store = TranslationStore.Load(_translationDirectory, Logger);
         _frameCatalog = new DialogueFrameCatalog();
         _dialogue = new DialogueLocalizer(store, _patchConfig, _frameCatalog, Logger);
-        _logTitles = new LogTitleRuntime(_dialogue, Logger);
+        _font = new FontFallback(_patchConfig, contentRoot, Logger);
+        _logTitles = new LogTitleRuntime(_dialogue, _font, _patchConfig, Logger);
         _ui = new UiLocalizer(store, _patchConfig, _dialogue, _frameCatalog, Logger);
         _liveDialogueText = new DialogueLiveTextRuntime(_patchConfig, Logger);
-        _font = new FontFallback(_patchConfig, contentRoot, Logger);
         _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
         _playerName = new PlayerNameRuntime(_patchConfig, Logger);
 
@@ -199,10 +199,32 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 
     internal string TranslateTmpText(TMP_Text component, string proposed)
     {
+        string translated;
         if (_liveDialogueText != null &&
-            _liveDialogueText.TryTranslate(component, proposed, out string dialogueText))
-            return dialogueText;
-        return _ui == null ? proposed : _ui.TranslateIncoming(component, proposed);
+            _liveDialogueText.TryTranslate(component, proposed, out translated))
+        {
+            ApplyInterfaceFont(component, translated);
+            return translated;
+        }
+        translated = _ui == null ? proposed : _ui.TranslateIncoming(component, proposed);
+        ApplyInterfaceFont(component, translated);
+        return translated;
+    }
+
+    private void ApplyInterfaceFont(TMP_Text component, string displayText)
+    {
+        if (component == null || _font == null || _patchConfig == null)
+            return;
+        string path = UiLocalizer.BuildObjectPath(component.transform);
+        bool hasSpecialMaterialOwner =
+            component.GetComponentInParent<PopupBox>(true) != null ||
+            component.GetComponentInParent<TermLogger>(true) != null ||
+            component.GetComponentInParent<IdeaEntry>(true) != null;
+        if (InterfaceFontPolicy.ShouldUseDirectFont(path, displayText,
+                _patchConfig.DisplayMode, hasSpecialMaterialOwner))
+            _font.ApplyDirect(component, true);
+        else if (InterfaceFontPolicy.IsDirectFontTarget(path, hasSpecialMaterialOwner))
+            _font.ApplyDirect(component, false);
     }
 
     internal void AdjustDialogueVisibleCharacters(TMP_Text component, ref int value)

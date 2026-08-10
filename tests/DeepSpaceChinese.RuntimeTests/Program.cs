@@ -260,6 +260,28 @@ internal static class Program
                    LogTitleRuntime.TruncateForTests("这是一个超过十二个汉字的日志标题", 12, "...") ==
                    "这是一个超过十二个汉字的...",
                 "日志列表项必须在生成时解析当前模式的标题，并在翻译后按列表上限截断");
+            Assert(InterfaceFontPolicy.ShouldUseDirectFont(
+                       "Ideas Window/Idea Popup[1]/Text[0]", "*** 有新想法 ***",
+                       DisplayMode.TranslationOnly) &&
+                   InterfaceFontPolicy.ShouldUseDirectFont(
+                       "GlobalPopups/Clipboard Popup[0]/Text[0]", "*** 有新想法 ***",
+                       DisplayMode.TranslationOnly) &&
+                   InterfaceFontPolicy.ShouldUseDirectFont(
+                       "Idea Log Entry(Clone)[0]/Name[0]", "传输：69，时间：01:30:23",
+                       DisplayMode.TranslationOnly) &&
+                   InterfaceFontPolicy.ShouldUseDirectFont(
+                       "Calculator Window/Select to Edit Var/Text", "选择要编辑的变量",
+                       DisplayMode.TranslationOnly, hasSpecialMaterialOwner: true) &&
+                   InterfaceFontPolicy.ShouldUseDirectFont(
+                       "Input Output Objects/Term Logger/Text", "为信号 -256 命名",
+                       DisplayMode.TranslationOnly, hasSpecialMaterialOwner: true) &&
+                   !InterfaceFontPolicy.ShouldUseDirectFont(
+                       "Ideas Window/Idea Popup[1]/Text[0]", "*** IDEA AVAILABLE ***",
+                       DisplayMode.OriginalOnly) &&
+                   !InterfaceFontPolicy.ShouldUseDirectFont(
+                       "Ideas Window/Viewport[0]/Top Tab[2]/Text[0]", "想法",
+                       DisplayMode.TranslationOnly),
+                "特殊界面材质上的日志与想法中文必须改用直绑字体，原文和普通 UI 不得受影响");
             NameSuffixLayout suffixLayout = NameSuffixLayoutEngine.Calculate(
                 containerLeft: 0f, containerRight: 360f,
                 inputLeft: 24f, inputRight: 340f,

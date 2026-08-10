@@ -20,11 +20,16 @@ internal sealed class LogTitleRuntime
         AccessTools.Field(typeof(LogWindow), "logTitleLabel");
 
     private readonly DialogueLocalizer _dialogue;
+    private readonly FontFallback _font;
+    private readonly PatchConfig _config;
     private readonly ManualLogSource _log;
 
-    public LogTitleRuntime(DialogueLocalizer dialogue, ManualLogSource log)
+    public LogTitleRuntime(DialogueLocalizer dialogue, FontFallback font, PatchConfig config,
+        ManualLogSource log)
     {
         _dialogue = dialogue;
+        _font = font;
+        _config = config;
         _log = log;
     }
 
@@ -42,6 +47,8 @@ internal sealed class LogTitleRuntime
             string overflow = (string)LogOverflowTextField?.GetValue(window) ?? "...";
             title = TruncateForTests(title, limit, overflow);
         }
+        _font.ApplyDirect(label,
+            InterfaceFontPolicy.ShouldUseDirectLogTitleFont(title, _config.DisplayMode));
         label.text = title;
     }
 
@@ -51,7 +58,12 @@ internal sealed class LogTitleRuntime
             return;
         TMP_Text label = (TMP_Text)OpenTitleLabelField?.GetValue(window);
         if (label != null)
-            label.text = _dialogue.ResolveLogTitle(chunk);
+        {
+            string title = _dialogue.ResolveLogTitle(chunk);
+            _font.ApplyDirect(label,
+                InterfaceFontPolicy.ShouldUseDirectLogTitleFont(title, _config.DisplayMode));
+            label.text = title;
+        }
     }
 
     public void RefreshAll()
