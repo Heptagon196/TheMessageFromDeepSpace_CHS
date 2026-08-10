@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.55";
+    public const string PluginVersion = "0.1.56";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -150,7 +150,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _ui.ReapplyAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
-        ApplyPuzzleFixes(PuzzleManager.Instance);
+        ApplyPuzzleFixes(PuzzleManager.Instance, refreshCurrentDisplay: true);
         if (translationsReloaded)
             Logger.LogMessage($"译文已重新载入并应用：{replacement.Count} 条；" +
                               $"中文字体{(fontReloaded ? "已刷新" : fontReady ? "未变化" : "保持原字体")}。");
@@ -190,11 +190,24 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             Instance = null;
     }
 
-    internal void ApplyPuzzleFixes(PuzzleManager manager)
+    internal void ApplyPuzzleFixes(PuzzleManager manager, bool refreshCurrentDisplay = false)
     {
         try
         {
-            _puzzleFixes?.ApplyAll(manager);
+            bool currentPuzzleChanged = _puzzleFixes?.ApplyAll(manager) == true;
+            if (!refreshCurrentDisplay || !currentPuzzleChanged)
+                return;
+
+            Puzzle currentPuzzle = manager?.CurrPuzzle;
+            ConsoleDisplay consoleDisplay = ConsoleDisplay.Instance;
+            if (currentPuzzle == null || consoleDisplay == null)
+            {
+                Logger.LogWarning("当前题面已修正，但找不到正在显示题目的控制台，无法立即刷新显示。");
+                return;
+            }
+
+            consoleDisplay.LoadNewSignal(currentPuzzle.RockOutput);
+            Logger.LogInfo($"题面显示已刷新：第 {manager.TotalPuzzleID + 1} 题。");
         }
         catch (Exception ex)
         {

@@ -164,13 +164,14 @@ internal sealed class PuzzleFixRuntime
         _log.LogInfo($"已读取 {_rules.Count} 条题面修正规则。");
     }
 
-    public void ApplyAll(PuzzleManager manager)
+    public bool ApplyAll(PuzzleManager manager)
     {
         RestoreAll();
         if (_config?.Enabled != true || !_config.PuzzleFixesEnabled || manager == null ||
             RockOutputField == null)
-            return;
+            return false;
 
+        bool currentPuzzleChanged = false;
         int displayId = 1;
         PuzzleList[] lists = manager.PuzzleLists ?? Array.Empty<PuzzleList>();
         foreach (PuzzleList list in lists)
@@ -179,10 +180,15 @@ internal sealed class PuzzleFixRuntime
             foreach (Puzzle puzzle in puzzles)
             {
                 if (puzzle != null && _rules.TryGetValue(displayId, out PuzzleFixRule rule))
-                    TryApply(puzzle, displayId, rule);
+                {
+                    bool applied = TryApply(puzzle, displayId, rule);
+                    if (applied && ReferenceEquals(puzzle, manager.CurrPuzzle))
+                        currentPuzzleChanged = true;
+                }
                 displayId++;
             }
         }
+        return currentPuzzleChanged;
     }
 
     public void RestoreAll()
@@ -204,7 +210,7 @@ internal sealed class PuzzleFixRuntime
         _applied.Clear();
     }
 
-    private void TryApply(Puzzle puzzle, int displayId, PuzzleFixRule rule)
+    private bool TryApply(Puzzle puzzle, int displayId, PuzzleFixRule rule)
     {
         int[] current = puzzle.RockOutput.signals;
         if (!rule.Matches(current))
@@ -212,7 +218,7 @@ internal sealed class PuzzleFixRuntime
             _log.LogWarning($"第 {displayId} 题未应用修正：修正文件中的原题面与游戏数据不一致。" +
                             $"\n期望：{Format(rule.OriginalSignals)}" +
                             $"\n实际：{Format(current)}");
-            return;
+            return false;
         }
 
         int[] original = Clone(current);
@@ -225,6 +231,7 @@ internal sealed class PuzzleFixRuntime
         };
         _log.LogInfo($"已应用第 {displayId} 题题面修正" +
                      (string.IsNullOrWhiteSpace(rule.Note) ? "。" : $"：{rule.Note}"));
+        return true;
     }
 
     private static void SetRockOutput(Puzzle puzzle, int[] signals)
