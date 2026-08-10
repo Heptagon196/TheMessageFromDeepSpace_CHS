@@ -477,6 +477,28 @@ internal static class Program
             Assert(displayLocalizer.TranslateRuntimeSentinels("@-2_未定义") == "@-2_UNDEF",
                 "切回原文时必须恢复游戏原始的未定义后缀");
 
+            TranslationStore fullStore = TranslationStore.Load(
+                Path.Combine(projectRoot, "build", "package", "DeepSpaceChinese", "Translations"),
+                log);
+            config.DisplayMode = DisplayMode.TranslationOnly;
+            var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
+            Assert(fullUiLocalizer.TranslateCompositeValues("0.33203125") == "0.33203125",
+                "动态 UI 本地化不得删掉八进制转换结果 0.33203125 的前导 0 和小数点");
+
+            Assert(CalculatorBaseConversionCompatibility.RepairResult(
+                       0.252d, 8, 10, "33203125") == "0.33203125",
+                "八进制小数转十进制时必须恢复原版算法漏掉的前导 0 和小数点");
+            Assert(CalculatorBaseConversionCompatibility.RepairResult(
+                       0.001d, 8, 10, "1953125") == "0.001953125",
+                "修复不得只在小数点后补零，较小的八进制小数也必须保持数值");
+            Assert(CalculatorBaseConversionCompatibility.RepairResult(
+                       0.252d, 8, 10, "0.33203125") == "0.33203125" &&
+                   CalculatorBaseConversionCompatibility.RepairResult(
+                       1.252d, 8, 10, "1.33203125") == "1.33203125" &&
+                   CalculatorBaseConversionCompatibility.RepairResult(
+                       0.9d, 8, 10, "9") == "9",
+                "计算器兼容修复不得改写正常结果、整数结果或含无效进制数字的结果");
+
             Console.WriteLine("Runtime self-test passed: INI, hotkey, JSON, tokens, original/translation display, dialogue layout.");
             return 0;
         }
