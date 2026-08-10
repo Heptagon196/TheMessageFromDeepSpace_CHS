@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.57";
+    public const string PluginVersion = "0.1.58";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -244,12 +244,14 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             _liveDialogueText.TryTranslate(component, proposed, out translated))
         {
             isTrackedDialogue = true;
+            translated = _ui?.TranslateRuntimeSentinels(translated) ?? translated;
             bool usesCharacterFont = _characterFonts?.Contains(component?.font) == true;
             ApplyInterfaceFont(component, translated);
             return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
                 usesCharacterFont);
         }
         translated = _ui == null ? proposed : _ui.TranslateIncoming(component, proposed);
+        translated = _ui?.TranslateRuntimeSentinels(translated) ?? translated;
         bool usesRoleFont = _characterFonts?.Contains(component?.font) == true;
         ApplyInterfaceFont(component, translated);
         return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,

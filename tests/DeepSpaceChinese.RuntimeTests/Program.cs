@@ -464,6 +464,18 @@ internal static class Program
                 "总结界面的复合文本必须翻译大小写不同的谜题组标题");
             Assert(displayLocalizer.TranslateCompositeValues("@-2_UNDEF") == "@-2_未定义",
                 "未定义词典条目的动态数字必须保留，只翻译 _UNDEF 后缀");
+            config.DisplayMode = DisplayMode.TranslationOnly;
+            Assert(displayLocalizer.TranslateRuntimeSentinels("@-2_UNDEF") == "@-2_未定义",
+                "绕过普通 UI 翻译的对话与词典词条仍须翻译未定义后缀");
+            Assert(displayLocalizer.TranslateRuntimeSentinels("<u>@-2_UNDEF</u>") ==
+                   "<u>@-2_未定义</u>",
+                "对话中的富文本下划线不得阻止未定义后缀翻译");
+            Assert(displayLocalizer.TranslateRuntimeSentinels("UNDEFINED _UNDEF") ==
+                   "UNDEFINED _UNDEF",
+                "不得全局替换说明文字或玩家输入的普通 UNDEF 字样");
+            config.DisplayMode = DisplayMode.OriginalOnly;
+            Assert(displayLocalizer.TranslateRuntimeSentinels("@-2_未定义") == "@-2_UNDEF",
+                "切回原文时必须恢复游戏原始的未定义后缀");
 
             Console.WriteLine("Runtime self-test passed: INI, hotkey, JSON, tokens, original/translation display, dialogue layout.");
             return 0;

@@ -10,6 +10,7 @@ namespace DeepSpaceChinese;
 
 internal sealed class UiLocalizer
 {
+    private const string UndefinedSuffixStableKey = "ui-fragment:undefined-suffix";
     [ThreadStatic] private static bool _applying;
 
     private TranslationStore _store;
@@ -237,6 +238,60 @@ internal sealed class UiLocalizer
         }
         composite = ApplyDisplayValues(composite);
         return fragmentChanged || composite != original ? composite : original;
+    }
+
+    internal string TranslateRuntimeSentinels(string text)
+    {
+        if (string.IsNullOrEmpty(text) ||
+            !_store.TryGet(UndefinedSuffixStableKey, out RuntimeTranslationEntry entry) ||
+            entry.Kind != "ui_fragment")
+            return text;
+        string source = entry.SourceText ?? string.Empty;
+        if (string.IsNullOrEmpty(source) || TokenCodec.Sha256(source) != entry.SourceSha256)
+        {
+            ReportMismatch(UndefinedSuffixStableKey);
+            return text;
+        }
+        string translated = entry.TranslatedText ?? string.Empty;
+        string from = _config.DisplayMode == DisplayMode.TranslationOnly ? source : translated;
+        string to = _config.DisplayMode == DisplayMode.TranslationOnly ? translated : source;
+        if (string.IsNullOrEmpty(from) || from == to)
+            return text;
+        return ReplaceUndefinedSignalSuffix(text, from, to);
+    }
+
+    private static string ReplaceUndefinedSignalSuffix(string text, string from, string to)
+    {
+        int searchStart = 0;
+        StringBuilder result = null;
+        while (searchStart < text.Length)
+        {
+            int match = text.IndexOf(from, searchStart, StringComparison.Ordinal);
+            if (match < 0)
+                break;
+            int prefix = match - 1;
+            while (prefix >= 0 && char.IsDigit(text[prefix]))
+                prefix--;
+            if (prefix >= 0 && text[prefix] == '-')
+                prefix--;
+            bool validPrefix = prefix >= 0 && text[prefix] == '@' && prefix < match - 1;
+            int after = match + from.Length;
+            bool validSuffix = after >= text.Length ||
+                               (!char.IsLetterOrDigit(text[after]) && text[after] != '_');
+            if (!validPrefix || !validSuffix)
+            {
+                searchStart = match + from.Length;
+                continue;
+            }
+            result ??= new StringBuilder(text.Length + Math.Max(0, to.Length - from.Length));
+            result.Append(text, searchStart, match - searchStart);
+            result.Append(to);
+            searchStart = after;
+        }
+        if (result == null)
+            return text;
+        result.Append(text, searchStart, text.Length - searchStart);
+        return result.ToString();
     }
 
     private string TranslateExactEntry(RuntimeTranslationEntry entry, string original)
