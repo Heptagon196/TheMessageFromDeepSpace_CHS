@@ -1,96 +1,209 @@
 from __future__ import annotations
 
+import argparse
 import json
+import os
+import re
 import sys
 from pathlib import Path
+from typing import Any
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 GAME_ROOT = PROJECT_DIR.parent
 DATA_DIR = GAME_ROOT / "The Message From Deep Space_Data"
-sys.path.insert(0, str(PROJECT_DIR / "tools" / "python-packages"))
+SAVE_DIR = (
+    Path.home()
+    / "AppData"
+    / "LocalLow"
+    / "Applesinmypants"
+    / "The Message From Deep Space"
+)
 
-import UnityPy  # noqa: E402
-from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator  # noqa: E402
+
+def find_dictionary(explicit_path: str | None) -> Path | None:
+    if explicit_path:
+        path = Path(explicit_path).expanduser().resolve()
+        if not path.is_file():
+            raise FileNotFoundError(f"找不到词典存档：{path}")
+        return path
+
+    candidates = [
+        path
+        for path in SAVE_DIR.glob("DICTIONARY-*.save")
+        if re.fullmatch(r"DICTIONARY-\d+\.save", path.name, re.IGNORECASE)
+    ]
+    return max(candidates, key=lambda path: path.stat().st_mtime) if candidates else None
 
 
-def main() -> int:
-    target = int(sys.argv[1]) if len(sys.argv) > 1 else 62
+def load_dictionary(path: Path | None) -> dict[int, str]:
+    if path is None:
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8-sig"))
+    word_dict = data.get("wordDict", {})
+    keys = word_dict.get("keys", [])
+    values = word_dict.get("values", [])
+    result: dict[int, str] = {}
+    for key, value in zip(keys, values):
+        if isinstance(value, dict):
+            name = value.get("name", "")
+        else:
+            name = str(value)
+        if name:
+            result[int(key)] = name
+    return result
+
+
+def decode_tokens(signals: list[int], dictionary: dict[int, str]) -> list[str]:
+    return [dictionary.get(value, str(value)) if value < 0 else str(value) for value in signals]
+
+
+def render_tokens(tokens: list[str]) -> str:
+    """Render a readable approximation without claiming to reproduce game layout."""
+    compact_before = {".", ",", ";", ")", "?"}
+    compact_after = {"("}
+    output = ""
+    previous = ""
+    for token in tokens:
+        if not output:
+            output = token
+        elif token in compact_before or previous in compact_after:
+            output += token
+        elif token.isdigit() and (previous.isdigit() or previous == "."):
+            output += token
+        else:
+            output += " " + token
+        previous = token
+    return output
+
+
+def decoded_signal(signals: list[int], dictionary: dict[int, str]) -> dict[str, Any]:
+    tokens = decode_tokens(signals, dictionary)
+    return {
+        "raw": signals,
+        "tokens": tokens,
+        "text": render_tokens(tokens),
+    }
+
+
+def load_unitypy() -> tuple[Any, Any]:
+    dependency_dir = os.environ.get("TMFDS_PYTHON_PACKAGES")
+    if dependency_dir:
+        sys.path.insert(0, dependency_dir)
+    else:
+        sys.path.insert(0, str(PROJECT_DIR / "tools" / "python-packages"))
+    try:
+        import UnityPy
+        from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
+    except ImportError as exc:
+        raise RuntimeError(
+            "缺少 UnityPy。请通过 inspect_puzzle.ps1 运行，包装脚本会自动下载依赖。"
+        ) from exc
+    return UnityPy, TypeTreeGenerator
+
+
+def extract(display_id: int, dictionary: dict[int, str]) -> dict[str, Any]:
+    if display_id < 1:
+        raise ValueError("显示题号必须从 1 开始。")
+
+    UnityPy, TypeTreeGenerator = load_unitypy()
     generator = TypeTreeGenerator("6000.0.73f1")
     generator.load_local_game(str(GAME_ROOT))
     env = UnityPy.load(str(DATA_DIR / "sharedassets0.assets"), str(DATA_DIR / "level0"))
     env.typetree_generator = generator
 
-    puzzles: dict[int, dict] = {}
-    lists: list[dict] = []
-    managers: list[dict] = []
-    failures = 0
+    puzzles: dict[int, dict[str, Any]] = {}
+    puzzle_lists: dict[int, dict[str, Any]] = {}
+    managers: list[dict[str, Any]] = []
+    parse_failures = 0
     for obj in env.objects:
         if obj.type.name != "MonoBehaviour":
             continue
         try:
             tree = obj.parse_as_dict()
         except Exception:
-            failures += 1
+            parse_failures += 1
             continue
         if "winningResponse" in tree and "rockOutput" in tree:
             puzzles[obj.path_id] = tree
         if "puzzleGroupName" in tree and "puzzles" in tree:
-            lists.append({"path_id": obj.path_id, "tree": tree})
+            puzzle_lists[obj.path_id] = tree
         if "puzzleLists" in tree and "puzzleListsToReset" in tree:
-            managers.append({"path_id": obj.path_id, "tree": tree})
+            managers.append(tree)
 
-    result = {
-        "target_zero_based": target,
-        "parse_failures": failures,
-        "puzzle_count": len(puzzles),
-        "list_count": len(lists),
-        "manager_count": len(managers),
-        "lists": [
-            {
-                "path_id": item["path_id"],
-                "name": item["tree"].get("m_Name", ""),
-                "group": item["tree"].get("puzzleGroupName", ""),
-                "puzzle_path_ids": [pointer.get("m_PathID", 0)
-                                    for pointer in item["tree"].get("puzzles", [])],
-            }
-            for item in lists
-        ],
-        "managers": [
-            {
-                "path_id": item["path_id"],
-                "puzzle_list_path_ids": [pointer.get("m_PathID", 0)
-                                         for pointer in item["tree"].get("puzzleLists", [])],
-            }
-            for item in managers
-        ],
+    if not managers:
+        raise RuntimeError("资源中没有找到 PuzzleManager。")
+    manager = max(managers, key=lambda item: len(item.get("puzzleLists", [])))
+
+    ordered: list[tuple[int, str]] = []
+    for pointer in manager.get("puzzleLists", []):
+        puzzle_list = puzzle_lists.get(pointer.get("m_PathID", 0))
+        if not puzzle_list:
+            continue
+        group = puzzle_list.get("puzzleGroupName", "")
+        ordered.extend(
+            (entry.get("m_PathID", 0), group)
+            for entry in puzzle_list.get("puzzles", [])
+        )
+
+    zero_based = display_id - 1
+    if zero_based >= len(ordered):
+        raise IndexError(f"显示题号 {display_id} 超出范围；资源中共有 {len(ordered)} 道题。")
+    path_id, group = ordered[zero_based]
+    puzzle = puzzles.get(path_id)
+    if puzzle is None:
+        raise RuntimeError(f"题目 {display_id} 对应资源 {path_id} 无法解析。")
+
+    rock_output = puzzle.get("rockOutput", {}).get("signals", [])
+    winning_response = puzzle.get("winningResponse", {}).get("signals", [])
+    alt_responses = [
+        entry.get("signals", []) for entry in puzzle.get("altResponses", [])
+    ]
+    return {
+        "display_id": display_id,
+        "zero_based_index": zero_based,
+        "path_id": path_id,
+        "developer_name": puzzle.get("m_Name", ""),
+        "developer_title": puzzle.get("title", ""),
+        "developer_unique_id": puzzle.get("uniqueID"),
+        "group": group,
+        "premise": decoded_signal(rock_output, dictionary),
+        "winning_response": decoded_signal(winning_response, dictionary),
+        "allow_alt_responses": puzzle.get("allowAltResponses", False),
+        "alt_responses": [decoded_signal(item, dictionary) for item in alt_responses],
+        "diagnostics": {
+            "puzzle_count": len(ordered),
+            "parse_failures": parse_failures,
+        },
     }
 
-    ordered_ids: list[int] = []
-    if managers:
-        list_by_id = {item["path_id"]: item["tree"] for item in lists}
-        for pointer in managers[0]["tree"].get("puzzleLists", []):
-            puzzle_list = list_by_id.get(pointer.get("m_PathID", 0))
-            if puzzle_list:
-                ordered_ids.extend(entry.get("m_PathID", 0)
-                                   for entry in puzzle_list.get("puzzles", []))
-    if 0 <= target < len(ordered_ids):
-        puzzle = puzzles.get(ordered_ids[target])
-        if puzzle:
-            result["target"] = {
-                "path_id": ordered_ids[target],
-                "name": puzzle.get("m_Name", ""),
-                "title": puzzle.get("title", ""),
-                "unique_id": puzzle.get("uniqueID"),
-                "rock_output": puzzle.get("rockOutput", {}).get("signals", []),
-                "winning_response": puzzle.get("winningResponse", {}).get("signals", []),
-                "allow_alt_responses": puzzle.get("allowAltResponses", False),
-                "alt_responses": [entry.get("signals", [])
-                                  for entry in puzzle.get("altResponses", [])],
-            }
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="按游戏界面显示题号提取题面，并用当前玩家词典解码。"
+    )
+    parser.add_argument("display_id", type=int, help="游戏界面显示的题号，例如 100")
+    parser.add_argument(
+        "--dictionary",
+        help="词典存档路径；省略时自动选择最近修改的 DICTIONARY-*.save",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    dictionary_path = find_dictionary(args.dictionary)
+    dictionary = load_dictionary(dictionary_path)
+    result = extract(args.display_id, dictionary)
+    result["dictionary_path"] = str(dictionary_path) if dictionary_path else None
+    result["dictionary_entries"] = len(dictionary)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except Exception as exc:
+        print(f"题目提取失败：{exc}", file=sys.stderr)
+        raise SystemExit(1)

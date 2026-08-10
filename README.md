@@ -41,6 +41,18 @@ The Message from Deep Space/
 信号数组，运行时只有在显示题号和原始数组都完全一致时才会替换。完整格式见
 `patch/Fix/README_题面修正.txt`。
 
+## 一键查看题目
+
+按游戏界面显示的题号提取题面，并用最近修改的玩家词典解码：
+
+```powershell
+& .\TranslationProject\tools\inspect_puzzle.ps1 100
+```
+
+首次运行会把固定版本的 UnityPy 和 TypeTreeGeneratorAPI 下载到被 Git 忽略的
+`build/` 目录。若要指定另一份词典，可追加
+`-Dictionary "完整的 DICTIONARY-*.save 路径"`。
+
 ## 测试
 
 ```powershell

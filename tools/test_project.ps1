@@ -26,6 +26,9 @@ if ($LASTEXITCODE -ne 0) { throw "提取缓存测试失败。" }
 python (Join-Path $projectRoot "tests\test_extraction_rules.py")
 if ($LASTEXITCODE -ne 0) { throw "提取规则测试失败。" }
 
+python (Join-Path $projectRoot "tests\test_inspect_puzzles.py")
+if ($LASTEXITCODE -ne 0) { throw "题目提取工具测试失败。" }
+
 $pythonSources = @(
     Get-ChildItem -LiteralPath (Join-Path $projectRoot "tools") -Filter "*.py" -File
     Get-ChildItem -LiteralPath (Join-Path $projectRoot "work\formal_batches") -Filter "*.py" -File
