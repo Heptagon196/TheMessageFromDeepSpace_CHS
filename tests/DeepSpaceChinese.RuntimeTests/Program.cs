@@ -1,7 +1,9 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using BepInEx.Logging;
 using DeepSpaceChinese;
 using Newtonsoft.Json.Linq;
@@ -499,6 +501,8 @@ internal static class Program
                        0.9d, 8, 10, "9") == "9",
                 "计算器兼容修复不得改写正常结果、整数结果或含无效进制数字的结果");
 
+            RunConfigEditorLayoutTests(projectRoot);
+
             Console.WriteLine("Runtime self-test passed: INI, hotkey, JSON, tokens, original/translation display, dialogue layout.");
             return 0;
         }
@@ -513,6 +517,56 @@ internal static class Program
     {
         if (!condition)
             throw new InvalidOperationException(message);
+    }
+
+    private static void RunConfigEditorLayoutTests(string projectRoot)
+    {
+        string editorAssemblyPath = Path.Combine(projectRoot, "src",
+            "DeepSpaceChinese.ConfigEditor", "bin", "Release", "net472",
+            "DeepSpaceChinese.ConfigEditor.exe");
+        Assembly editorAssembly = Assembly.LoadFrom(editorAssemblyPath);
+        Type formType = editorAssembly.GetType(
+            "DeepSpaceChinese.ConfigEditor.ConfigEditorForm", true);
+        using var form = (Form)Activator.CreateInstance(formType,
+            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic,
+            null, new object[] { Path.Combine(projectRoot, "patch", "DeepSpaceChinese.ini") },
+            null);
+        Control[] controls = Descendants(form).ToArray();
+        CheckBox compilerOption = controls.OfType<CheckBox>().Single(control =>
+            control.Text.Contains("忽略英文字母大小写"));
+        CheckBox puzzleOption = controls.OfType<CheckBox>().Single(control =>
+            control.Text.Contains("题面的修正规则"));
+        Label compilerHint = controls.OfType<Label>().Single(control =>
+            control.Text.Contains("VAR 可匹配词典中的 var"));
+        Label puzzleHint = controls.OfType<Label>().Single(control =>
+            control.Text.Contains("题面修正按游戏显示编号"));
+        Label reloadHint = controls.OfType<Label>().Single(control =>
+            control.Text.Contains("以上兼容项和题面修正规则保存后"));
+
+        Assert(!ReferenceEquals(compilerHint, puzzleHint) &&
+               !ReferenceEquals(puzzleHint, reloadHint) &&
+               !ReferenceEquals(compilerHint, reloadHint),
+            "常规页的大小写、题面修正和 F5 说明必须使用三个独立标签");
+        Assert(compilerHint.Parent == compilerOption.Parent &&
+               compilerHint.Top >= compilerOption.Bottom &&
+               compilerHint.Top - compilerOption.Bottom <= 12 &&
+               compilerHint.Bottom <= puzzleOption.Top,
+            "大小写兼容说明必须紧跟在对应复选框下方");
+        Assert(puzzleHint.Parent == puzzleOption.Parent &&
+               puzzleHint.Top >= puzzleOption.Bottom &&
+               puzzleHint.Top - puzzleOption.Bottom <= 12 &&
+               reloadHint.Top >= puzzleHint.Bottom,
+            "题面修正说明必须紧跟在对应复选框下方，F5 公共说明应位于其后");
+    }
+
+    private static System.Collections.Generic.IEnumerable<Control> Descendants(Control parent)
+    {
+        foreach (Control child in parent.Controls)
+        {
+            yield return child;
+            foreach (Control descendant in Descendants(child))
+                yield return descendant;
+        }
     }
 
     private static void RunDialogueLayoutTests()

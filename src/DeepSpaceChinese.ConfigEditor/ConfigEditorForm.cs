@@ -45,7 +45,7 @@ internal sealed class ConfigEditorForm : Form
     public ConfigEditorForm(string iniPath)
     {
         _iniPath = iniPath;
-        Text = "《来自深空的讯息》汉化配置工具 v0.1.59";
+        Text = "《来自深空的讯息》汉化配置工具 v0.1.60";
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(650, 540);
         ClientSize = new Size(720, 590);
@@ -105,16 +105,14 @@ internal sealed class ConfigEditorForm : Form
         table.SetColumnSpan(types, 2);
         table.Controls.Add(_compilerCaseInsensitive, 0, 5);
         table.SetColumnSpan(_compilerCaseInsensitive, 3);
-        table.Controls.Add(_puzzleFixes, 0, 6);
+        AddFullWidthHint(table, 6,
+            "启用后，VAR 可匹配词典中的 var；精确拼写仍优先，存在歧义时不会误选。");
+        table.Controls.Add(_puzzleFixes, 0, 7);
         table.SetColumnSpan(_puzzleFixes, 3);
-        table.Controls.Add(new Label
-        {
-            Text = "开启后，VAR 可匹配词典中的 var；精确拼写仍优先，存在歧义时不会误选。\n" +
-                   "题面修正按游戏显示编号读取 DeepSpaceChinese\\Fix\\*.json，且仅在原始数字信号完全一致时替换。\n" +
-                   "翻译、字体、角色颜色、兼容项和题面修正规则可在游戏中按 F5 重载。",
-            AutoSize = true, ForeColor = Color.DimGray, Margin = new Padding(3, 18, 3, 3),
-        }, 0, 7);
-        table.SetColumnSpan(table.GetControlFromPosition(0, 7), 3);
+        AddFullWidthHint(table, 8,
+            "题面修正按游戏显示编号读取 DeepSpaceChinese\\Fix\\*.json；仅当文件中的原始数字信号与当前题面完全一致时才替换。");
+        AddFullWidthHint(table, 9,
+            "以上兼容项和题面修正规则保存后，可在游戏中按 F5 重载。", false);
         page.Controls.Add(table);
         return page;
     }
@@ -358,6 +356,21 @@ internal sealed class ConfigEditorForm : Form
         box.Dock = DockStyle.Fill;
         table.Controls.Add(box, 1, row);
         table.Controls.Add(new Label { Text = hint, AutoSize = true, ForeColor = Color.DimGray, MaximumSize = new Size(260, 0) }, 2, row);
+    }
+
+    private static void AddFullWidthHint(TableLayoutPanel table, int row, string text,
+        bool indent = true)
+    {
+        var hint = new Label
+        {
+            Text = text,
+            AutoSize = true,
+            ForeColor = Color.DimGray,
+            MaximumSize = new Size(620, 0),
+            Margin = indent ? new Padding(24, 0, 3, 8) : new Padding(3, 4, 3, 3),
+        };
+        table.Controls.Add(hint, 0, row);
+        table.SetColumnSpan(hint, 3);
     }
 
     private static void AddBrowseRow(TableLayoutPanel table, int row, string label, TextBox box, EventHandler browse)

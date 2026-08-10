@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DeepSpaceChinese\DeepSpaceChinese.csproj" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="BepInEx">
       <HintPath>..\..\vendor\BepInEx\extracted\BepInEx\core\BepInEx.dll</HintPath>
       <Private>true</Private>
