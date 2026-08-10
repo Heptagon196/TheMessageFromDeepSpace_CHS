@@ -97,17 +97,9 @@ internal sealed class PlayerNameRuntime
         TMP_InputField input = dummy?.InputField;
         if (input == null)
             return;
-        _log.LogInfo($"[DEBUG-enter31] ApplySharedInput before path={ObjectPath(input.transform)} " +
-                     $"lineType={input.lineType} lineLimit={input.lineLimit} " +
-                     $"contentType={input.contentType} validation={input.characterValidation} " +
-                     $"textComponent={ObjectPath(input.textComponent?.transform)}");
         ConfigureUnicodeInput(input);
         SharedInputReturnCompatibility.Track(input);
         TrackInput(input);
-        _log.LogInfo($"[DEBUG-enter31] ApplySharedInput after path={ObjectPath(input.transform)} " +
-                     $"lineType={input.lineType} lineLimit={input.lineLimit} " +
-                     $"contentType={input.contentType} validation={input.characterValidation} " +
-                     $"tracked={SharedInputReturnCompatibility.IsTracked(input)}");
     }
 
     public void UpdateImeCursorPosition(TMP_InputField preferred = null)
@@ -137,19 +129,6 @@ internal sealed class PlayerNameRuntime
             return;
 
         Input.compositionCursorPos = windowsPosition;
-    }
-
-    private static string ObjectPath(Transform transform)
-    {
-        if (transform == null)
-            return "<null>";
-        string path = transform.name;
-        while (transform.parent != null)
-        {
-            transform = transform.parent;
-            path = transform.name + "/" + path;
-        }
-        return path;
     }
 
     internal static string FormatFullName(string rawName, string originalFullName, DisplayMode mode)

@@ -14,6 +14,8 @@ internal sealed class DialogueLayoutRuntime
 
     private static readonly FieldInfo MainSubtitleField =
         AccessTools.Field(typeof(DialogueManager), "subtitle");
+    private static readonly FieldInfo MainAdvanceIconField =
+        AccessTools.Field(typeof(DialogueManager), "advanceIcon");
     private static readonly FieldInfo NonLogSubtitleField =
         AccessTools.Field(typeof(NonLogDialogueManager), "subtitle");
     private static readonly FieldInfo NonLogSpeakerTitleField =
@@ -24,8 +26,10 @@ internal sealed class DialogueLayoutRuntime
     private readonly PatchConfig _config;
     private readonly ManualLogSource _log;
     private readonly Dictionary<int, float> _baseFontSizes = new();
+    private readonly Dictionary<int, Vector4> _baseMargins = new();
     private readonly Dictionary<int, Color> _baseColors = new();
     private readonly Dictionary<TMP_Text, Speaker> _lastSpeakers = new();
+    private readonly HashSet<int> _resizedSubtitleRects = new();
 
     public DialogueLayoutRuntime(PatchConfig config, ManualLogSource log)
     {
@@ -38,6 +42,7 @@ internal sealed class DialogueLayoutRuntime
         if (_config.Enabled == false || manager == null)
             return frame;
         var subtitle = MainSubtitleField?.GetValue(manager) as TMP_Text;
+        ReserveAdvanceIconSpace(manager, subtitle);
         ConfigureSpeakerColor(subtitle, frame.speaker);
         if (!_config.TranslateDialogue)
             return frame;
@@ -87,7 +92,10 @@ internal sealed class DialogueLayoutRuntime
         float baseFontSize = GetBaseFontSize(subtitle);
         subtitle.enableAutoSizing = false;
         subtitle.fontSize = baseFontSize;
-        float availableWidth = subtitle.rectTransform.rect.width - subtitle.margin.x - subtitle.margin.z;
+        Vector4 baseMargin = GetBaseMargin(subtitle);
+        subtitle.margin = baseMargin;
+        float availableWidth = DialogueWidthBudget.AvailableWidth(
+            subtitle.rectTransform.rect.width, baseMargin.x, baseMargin.z);
         if (availableWidth <= 1f)
         {
             ConfigureAutoSizing(subtitle, baseFontSize);
@@ -100,6 +108,30 @@ internal sealed class DialogueLayoutRuntime
             return subtitle.GetPreferredValues(resolved, 32767f, 32767f).x;
         }
 
+        bool FitsDisplayArea(string raw)
+        {
+            float savedFontSize = subtitle.fontSize;
+            try
+            {
+                subtitle.fontSize = baseFontSize / ShrinkThreshold;
+                string resolved = ResolveRuntimeText(raw);
+                float availableHeight = Math.Max(0f,
+                    subtitle.rectTransform.rect.height - baseMargin.y - baseMargin.w);
+                Vector2 preferred = subtitle.GetPreferredValues(
+                    resolved, availableWidth, 32767f);
+                return preferred.y <= availableHeight + 0.001f;
+            }
+            catch (Exception ex)
+            {
+                _log.LogWarning($"测量对白实际显示高度失败，将沿用两行宽度判定：{ex.Message}");
+                return true;
+            }
+            finally
+            {
+                subtitle.fontSize = savedFontSize;
+            }
+        }
+
         var input = new DialogueLayoutPart[frame.dialogueParts.Length];
         for (int index = 0; index < input.Length; index++)
         {
@@ -107,7 +139,7 @@ internal sealed class DialogueLayoutRuntime
             input[index] = new DialogueLayoutPart(part.txt, part.charDelay, part.clearPrev, part.msgDelay);
         }
         DialogueLayoutResult layout = DialogueLayoutEngine.Fit(input, availableWidth,
-            ShrinkThreshold, Measure, repeatedPrefix);
+            ShrinkThreshold, Measure, repeatedPrefix, FitsDisplayArea);
         ConfigureAutoSizing(subtitle, baseFontSize);
         if (!layout.WasPaginated)
             return frame;
@@ -141,6 +173,75 @@ internal sealed class DialogueLayoutRuntime
             size = 36f;
         _baseFontSizes[id] = size;
         return size;
+    }
+
+    private void ReserveAdvanceIconSpace(DialogueManager manager, TMP_Text subtitle)
+    {
+        var iconComponent = MainAdvanceIconField?.GetValue(manager) as Component;
+        Transform icon = iconComponent?.transform;
+        RectTransform textRect = subtitle?.rectTransform;
+        Transform parent = icon?.parent;
+        if (icon == null || textRect == null || parent == null)
+            return;
+
+        int id = textRect.GetInstanceID();
+        if (_resizedSubtitleRects.Contains(id))
+            return;
+
+        float textRight = parent.InverseTransformPoint(
+            textRect.TransformPoint(new Vector3(textRect.rect.xMax, textRect.rect.center.y, 0f))).x;
+        if (!TryGetMeshLeft(icon, parent, out float iconLeft))
+        {
+            _log.LogWarning("[DialogueAdvanceIcon] 无法读取继续图标网格边界，未调整位置。");
+            return;
+        }
+
+        const float gap = 0.005f;
+        float shrink = DialogueTextRectLayout.RequiredRightShrink(textRight, iconLeft, gap);
+        Vector2 beforeSize = textRect.sizeDelta;
+        Vector2 beforePosition = textRect.anchoredPosition;
+        if (shrink > 0.0001f && shrink < textRect.rect.width * 0.25f)
+        {
+            textRect.sizeDelta = new Vector2(beforeSize.x - shrink, beforeSize.y);
+            textRect.anchoredPosition = new Vector2(
+                beforePosition.x - shrink * (1f - textRect.pivot.x), beforePosition.y);
+        }
+        _resizedSubtitleRects.Add(id);
+        _log.LogInfo($"[DialogueTextRect] textRight={textRight:F4}, iconLeft={iconLeft:F4}, " +
+                     $"shrink={shrink:F4}, width={beforeSize.x:F4}->{textRect.sizeDelta.x:F4}, " +
+                     $"anchoredX={beforePosition.x:F4}->{textRect.anchoredPosition.x:F4}");
+    }
+
+    private static bool TryGetMeshLeft(Transform icon, Transform parent, out float left)
+    {
+        left = float.PositiveInfinity;
+        var filter = icon.GetComponent<MeshFilter>();
+        Mesh mesh = filter == null ? null : filter.sharedMesh;
+        if (mesh == null)
+            return false;
+        Bounds bounds = mesh.bounds;
+        Vector3 center = bounds.center;
+        Vector3 extents = bounds.extents;
+        for (int x = -1; x <= 1; x += 2)
+        for (int y = -1; y <= 1; y += 2)
+        for (int z = -1; z <= 1; z += 2)
+        {
+            Vector3 local = center + Vector3.Scale(extents, new Vector3(x, y, z));
+            float value = parent.InverseTransformPoint(icon.TransformPoint(local)).x;
+            if (value < left)
+                left = value;
+        }
+        return !float.IsInfinity(left) && !float.IsNaN(left);
+    }
+
+    private Vector4 GetBaseMargin(TMP_Text subtitle)
+    {
+        int id = subtitle.GetInstanceID();
+        if (_baseMargins.TryGetValue(id, out Vector4 margin))
+            return margin;
+        margin = subtitle.margin;
+        _baseMargins[id] = margin;
+        return margin;
     }
 
     private void ConfigureSpeakerColor(TMP_Text text, Speaker speaker)
@@ -188,4 +289,5 @@ internal sealed class DialogueLayoutRuntime
             return DialogueChunk.RemoveAnimCommands(raw ?? string.Empty);
         }
     }
+
 }

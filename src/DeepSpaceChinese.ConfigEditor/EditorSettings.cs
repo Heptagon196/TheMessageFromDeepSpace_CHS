@@ -15,6 +15,7 @@ internal sealed class EditorSettings
     public bool TranslateUI = true;
     public bool TranslateSystem = true;
     public bool CompilerCaseInsensitive = true;
+    public bool PuzzleFixesEnabled = true;
     public bool DialogueColorsEnabled = true;
     public readonly Dictionary<string, string> Colors = new(StringComparer.OrdinalIgnoreCase)
     {
@@ -45,6 +46,7 @@ internal sealed class EditorSettings
             TranslateSystem = Bool(ini.Get("Localization", "TranslateSystem", "true"), true),
             CompilerCaseInsensitive = Bool(ini.Get("Compatibility",
                 "CompilerCaseInsensitive", "true"), true),
+            PuzzleFixesEnabled = Bool(ini.Get("PuzzleFixes", "Enabled", "true"), true),
             DialogueColorsEnabled = Bool(ini.Get("DialogueColors", "Enabled", "true"), true),
             FontSource = ini.Get("Font", "FontSource", "Auto"),
             BundledFont = ini.Get("Font", "BundledFont", @"Fonts\fusion-pixel-12px-proportional-zh_hans.otf"),
@@ -69,6 +71,7 @@ internal sealed class EditorSettings
         ini.Set("Localization", "TranslateSystem", TranslateSystem.ToString().ToLowerInvariant());
         ini.Set("Compatibility", "CompilerCaseInsensitive",
             CompilerCaseInsensitive.ToString().ToLowerInvariant());
+        ini.Set("PuzzleFixes", "Enabled", PuzzleFixesEnabled.ToString().ToLowerInvariant());
         ini.Set("DialogueColors", "Enabled", DialogueColorsEnabled.ToString().ToLowerInvariant());
         foreach (KeyValuePair<string, string> pair in Colors)
             ini.Set("DialogueColors", pair.Key, pair.Value.ToUpperInvariant());

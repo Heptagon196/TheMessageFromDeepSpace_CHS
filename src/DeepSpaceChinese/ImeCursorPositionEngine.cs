@@ -43,8 +43,6 @@ internal static class ImeCursorPositionEngine
     private static WorldSpaceClicker _cachedClicker;
     private static readonly List<RenderTextureBinding> SceneBindings = new();
     private static readonly ImeBindingDiscoveryState BindingDiscoveryState = new();
-    private static int _lastDebugFrame = -1000;
-    private static string _mappingDebug = "not-attempted";
 
     private sealed class RenderTextureBinding
     {
@@ -129,17 +127,6 @@ internal static class ImeCursorPositionEngine
             return false;
 
         windowsScreen = ToWindowsScreen(unityScreen, Screen.width, Screen.height);
-        if (Time.frameCount - _lastDebugFrame >= 120)
-        {
-            _lastDebugFrame = Time.frameCount;
-            DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
-                $"[DEBUG-ime31] input={ObjectPath(input.transform)} text={ObjectPath(text.transform)} " +
-                $"local=({localCaret.x:F4},{localCaret.y:F4}) " +
-                $"world=({worldCaret.x:F4},{worldCaret.y:F4},{worldCaret.z:F4}) " +
-                $"route={(renderTextureMapped ? "render-texture" : "world-clicker-fallback")} " +
-                $"unity=({unityScreen.x:F2},{unityScreen.y:F2}) " +
-                $"windows=({windowsScreen.x:F2},{windowsScreen.y:F2}) detail={_mappingDebug}");
-        }
         return true;
     }
 
@@ -198,8 +185,6 @@ internal static class ImeCursorPositionEngine
                 return true;
             failures.Add($"{binding.SourceCamera.targetTexture?.name ?? "<null>"}:{failure}");
         }
-        _mappingDebug = $"cached-bindings={SceneBindings.Count} textLayer={textLayer} " +
-                        $"attempts={string.Join(" | ", failures)}";
         return false;
     }
 
@@ -230,10 +215,6 @@ internal static class ImeCursorPositionEngine
                 details.Add(detail);
             }
         }
-        DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
-            $"[DEBUG-bind36] scene={sceneHandle} bindings={SceneBindings.Count} " +
-            $"renderers={renderers.Length} materials={allMaterials.Length} " +
-            $"detail={string.Join(" | ", details)}");
     }
 
     private static bool TryCreateSceneScreenBinding(Camera sourceCamera, Camera[] cameras,
@@ -429,16 +410,6 @@ internal static class ImeCursorPositionEngine
         }
         unityScreen = new Vector2(screen.x, screen.y);
         failure = "none";
-        _mappingDebug = $"source={binding.SourceCamera.name} " +
-                        $"rt={binding.SourceCamera.targetTexture.name} " +
-                        $"viewport=({viewport.x:F4},{viewport.y:F4}) " +
-                        $"renderer={ObjectPath(binding.DisplayRenderer.transform)} " +
-                        $"property={binding.TextureProperty} textureUv=({textureUv.x:F4},{textureUv.y:F4}) " +
-                        $"firstLineY={firstLineTextureY:F4} " +
-                        $"shaderUv=({transformedUv.x:F4},{transformedUv.y:F4}) " +
-                        $"meshUv=({meshUv.x:F4},{meshUv.y:F4}) " +
-                        $"displayWorld=({displayWorld.x:F4},{displayWorld.y:F4},{displayWorld.z:F4}) " +
-                        $"output={binding.OutputCamera.name}";
         return true;
     }
 

@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using BepInEx.Logging;
 using DeepSpaceChinese;
 using Newtonsoft.Json.Linq;
+using UnityEngine;
 
 internal static class Program
 {
@@ -26,6 +27,21 @@ internal static class Program
             Assert(config.DisplayMode == DisplayMode.TranslationOnly, "启动显示模式必须固定为仅译文");
             Assert(config.CompilerCaseInsensitive,
                 "编译时忽略英文字母大小写必须默认开启");
+            Assert(config.PuzzleFixesEnabled,
+                "题面修正功能必须默认开启");
+            const string validPuzzleFix =
+                "{\"display_id\":80,\"original_signals\":[-11,1,-2,6]," +
+                "\"replacement_signals\":[-11,1,-2,7],\"note\":\"test\"}";
+            Assert(PuzzleFixRule.TryParse(validPuzzleFix, "80.json",
+                       out PuzzleFixRule puzzleFixRule, out string puzzleFixError) &&
+                   puzzleFixError == null &&
+                   puzzleFixRule.Matches(new[] { -11, 1, -2, 6 }) &&
+                   !puzzleFixRule.Matches(new[] { -11, 1, -2, 7 }),
+                "题面修正规则必须读取显示编号，并严格匹配原始数字信号");
+            Assert(!PuzzleFixRule.TryParse(validPuzzleFix, "81.json",
+                       out _, out string wrongFixIdError) &&
+                   wrongFixIdError.Contains("display_id"),
+                "题面修正文件名必须与游戏显示编号一致");
             var compilerEntries = new[]
             {
                 new System.Collections.Generic.KeyValuePair<string, int>("var", -11),
@@ -157,11 +173,12 @@ internal static class Program
             File.WriteAllText(iniPath,
                 "[Localization]\nToggleModeHotkey=F8\n" +
                 "[Compatibility]\nCompilerCaseInsensitive=false\n" +
+                "[PuzzleFixes]\nEnabled=false\n" +
                 "[Font]\nFontSource=File\nFontFile=CustomChinese.otf\n" +
                 "SystemFontCandidates=Test Sans;Test Hei\n");
             config.ReloadCompatibilitySettings(iniPath, log);
-            Assert(!config.CompilerCaseInsensitive,
-                "编译大小写兼容开关必须能从 INI 热重载");
+            Assert(!config.CompilerCaseInsensitive && !config.PuzzleFixesEnabled,
+                "兼容项和题面修正开关必须能从 INI 热重载");
             config.ReloadFontSettings(iniPath, log);
             Assert(config.FontSource == "File" && config.FontFile == "CustomChinese.otf" &&
                    config.SystemFontCandidates.SequenceEqual(new[] { "Test Sans", "Test Hei" }),
@@ -282,6 +299,44 @@ internal static class Program
                        "Ideas Window/Viewport[0]/Top Tab[2]/Text[0]", "想法",
                        DisplayMode.TranslationOnly),
                 "特殊界面材质上的日志与想法中文必须改用直绑字体，原文和普通 UI 不得受影响");
+            Assert(DialoguePunctuationFontMarkup.Apply(
+                       "你好，等等……OK!《记录》", "DeepSpaceChinese Fallback",
+                       "12AB34FF") ==
+                   "你好<font=\"DeepSpaceChinese Fallback\"><color=#12AB34FF>，" +
+                   "</color></font>等等" +
+                   "<font=\"DeepSpaceChinese Fallback\"><color=#12AB34FF>……" +
+                   "</color></font>OK!" +
+                   "<font=\"DeepSpaceChinese Fallback\"><color=#12AB34FF>《" +
+                   "</color></font>记录" +
+                   "<font=\"DeepSpaceChinese Fallback\"><color=#12AB34FF>》" +
+                   "</color></font>",
+                "中文译文中的中文标点必须显式使用中文字体并继承角色颜色，ASCII 标点不得改变");
+            Assert(DialoguePunctuationPolicy.ShouldDecorate(
+                       isTrackedDialogue: false, usesCharacterFont: true,
+                       supportsRichText: true, DisplayMode.TranslationOnly, "角色日志，正文。") &&
+                   DialoguePunctuationPolicy.ShouldDecorate(
+                       isTrackedDialogue: true, usesCharacterFont: false,
+                       supportsRichText: true, DisplayMode.TranslationOnly, "场景对白……") &&
+                   !DialoguePunctuationPolicy.ShouldDecorate(
+                       isTrackedDialogue: false, usesCharacterFont: false,
+                       supportsRichText: true, DisplayMode.TranslationOnly, "普通界面，文本。") &&
+                   !DialoguePunctuationPolicy.ShouldDecorate(
+                       isTrackedDialogue: false, usesCharacterFont: true,
+                       supportsRichText: true, DisplayMode.OriginalOnly, "Character log, text.") &&
+                   !DialoguePunctuationPolicy.ShouldDecorate(
+                       isTrackedDialogue: false, usesCharacterFont: true,
+                       supportsRichText: false, DisplayMode.TranslationOnly,
+                       "可在词典各条目中查看假说。（词典 → 条目注释 → 假说）"),
+                "角色字体组件与实时对话仅可在支持富文本时注入标点标签，普通 UI、原文及 richText=false 组件不得受影响");
+            Color compensatedColor = DialoguePunctuationColor.Compensate(
+                new Color(0.5f, 0.25f, 1f, 1f),
+                new Color(0.5f, 1f, 0.25f, 1f),
+                new Color(0.25f, 0.5f, 0.5f, 1f));
+            Assert(Math.Abs(compensatedColor.r - 1f) < 0.001f &&
+                   Math.Abs(compensatedColor.g - 0.5f) < 0.001f &&
+                   Math.Abs(compensatedColor.b - 0.5f) < 0.001f &&
+                   Math.Abs(compensatedColor.a - 1f) < 0.001f,
+                "中文标点颜色必须补偿原角色字体和中文字体材质的 Face Color 差异");
             NameSuffixLayout suffixLayout = NameSuffixLayoutEngine.Calculate(
                 containerLeft: 0f, containerRight: 360f,
                 inputLeft: 24f, inputRight: 340f,
@@ -412,6 +467,50 @@ internal static class Program
 
     private static void RunDialogueLayoutTests()
     {
+        float rectShrink = DialogueTextRectLayout.RequiredRightShrink(
+            textRight: 2.7797f, iconLeft: 2.5900f, gap: 0.01f);
+        Assert(Math.Abs(rectShrink - 0.1997f) < 0.0001f,
+            "主对话框应按继续图标的实际左边缘收窄右边界");
+        Assert(Math.Abs(DialogueWidthBudget.AvailableWidth(
+                   rectWidth: 100f, leftMargin: 5f, rightMargin: 7f) - 88f) < 0.001f,
+            "分页宽度必须使用文本框收窄后的实际宽度并扣除左右边距");
+        float originalWidthAtBoundary = DialogueWidthBudget.AvailableWidth(
+            rectWidth: 21f, leftMargin: 1f, rightMargin: 1f);
+        DialogueLayoutResult nearShrinkLimit = DialogueLayoutEngine.Fit(
+            new[] { new DialogueLayoutPart(new string('测', 28), 0.02f, false, 0.4f) },
+            originalWidthAtBoundary, 1.5f, ApproximateWidth);
+        Assert(!nearShrinkLimit.WasPaginated &&
+               nearShrinkLimit.Parts.Count == 1 &&
+               nearShrinkLimit.Parts[0].Text == new string('测', 28),
+            "原宽度 1.5 倍以内的对白不能提前分页或插入猜测性的手动换行");
+        DialogueLayoutResult shortLine = DialogueLayoutEngine.Fit(
+            new[] { new DialogueLayoutPart("短文本", 0.02f, false, 0.4f) },
+            19f, 1.5f, ApproximateWidth);
+        Assert(!shortLine.WasPaginated && shortLine.Parts[0].Text == "短文本",
+            "本来能以正常字号单行显示的短对白不能被强制换行");
+        DialogueLayoutResult reportedTwoLineDialogue = DialogueLayoutEngine.Fit(
+            new[]
+            {
+                new DialogueLayoutPart("所以每经历一步，", 0f, true, 0.1f),
+                new DialogueLayoutPart("更年轻的恒星就能制造更重的原子，", 0f, false, 0.1f),
+                new DialogueLayoutPart("再形成更重的岩石。", 0f, false, 1.93f),
+            },
+            19f, 1.5f, ApproximateWidth);
+        Assert(!reportedTwoLineDialogue.WasPaginated &&
+               reportedTwoLineDialogue.Parts.Count == 3,
+            "两行缩小后能够完整显示的连续 PART 不得被拆成两个页面");
+        DialogueLayoutResult forcedOverflowFallback = DialogueLayoutEngine.Fit(
+            new[]
+            {
+                new DialogueLayoutPart("所以每经历一步，", 0f, true, 0.1f),
+                new DialogueLayoutPart("更年轻的恒星就能制造更重的原子，", 0f, false, 0.1f),
+                new DialogueLayoutPart("再形成更重的岩石。", 0f, false, 1.93f),
+            },
+            19f, 1.5f, ApproximateWidth, string.Empty,
+            text => CountVisible(text) <= 30);
+        Assert(forcedOverflowFallback.WasPaginated &&
+               forcedOverflowFallback.Parts.Count(part => part.ClearPrevious) >= 2,
+            "即使宽度估算未超限，TMP 实际显示区域溢出也必须强制分页");
         const string reportedLine = "我们开始调查人类历史上第一次与外星生命的接触。";
         DialogueLayoutResult shrunk = DialogueLayoutEngine.Fit(
             new[] { new DialogueLayoutPart(reportedLine, 0.02f, false, 0.4f) },
@@ -420,7 +519,7 @@ internal static class Program
                shrunk.Parts[0].Text == reportedLine,
             "不超过 1.5 倍上限的对白不应分页，应交给 TMP 自动缩小字号");
 
-        string longLine = new string('测', 30);
+        string longLine = new string('测', 60);
         DialogueLayoutResult paginated = DialogueLayoutEngine.Fit(
             new[] { new DialogueLayoutPart("$animD00" + longLine, 0.02f, false, 0.4f) },
             19f, 1.5f, ApproximateWidth);
@@ -428,27 +527,36 @@ internal static class Program
             "超过 1.5 倍上限的对白应分页");
         Assert(!paginated.Parts[0].ClearPrevious && paginated.Parts[1].ClearPrevious,
             "自动分页必须只在续页前插入清屏标记");
-        Assert(paginated.Parts.Sum(part => CountVisible(part.Text)) == 30 &&
+        Assert(paginated.Parts.Sum(part => CountVisible(part.Text)) == 60 &&
                paginated.Parts.Count(part => part.Text.Contains("$animD00")) == 1,
             "分页不得丢字、复制作画指令或改变正文");
-        Assert(paginated.Parts.All(part => ApproximateWidth(part.Text) <= 19f),
-            "分页后的每一页都必须落在原字号宽度上限内");
+        Assert(paginated.Parts.All(part => ApproximateWidth(part.Text) <= 19f * 2f),
+            "分页后的每一页都必须落在文本框的两行容量内");
         Assert(Math.Abs(paginated.Parts[0].MessageDelay) < 0.001f &&
                Math.Abs(paginated.Parts[1].MessageDelay - 0.4f) < 0.001f,
             "拆分同一 PART 时只能由最后一段继承消息延迟");
 
-        string rich = "<size=75%><u>" + new string('原', 35) + "</u></size>";
+        string rich = "<size=75%><u>" + new string('原', 65) + "</u></size>";
         DialogueLayoutResult richPages = DialogueLayoutEngine.Fit(
             new[] { new DialogueLayoutPart(rich, 0f, true, 0f) },
             19f, 1.5f, ApproximateWidth);
         Assert(richPages.WasPaginated && richPages.Parts.All(IsBalancedRichText),
             "富文本跨页时每一页都必须拥有完整、平衡的标签");
+        string punctuationMarkup = string.Concat(Enumerable.Repeat(
+            "正文<font=\"DeepSpaceChinese Fallback\"><color=#12AB34FF>，</color></font>", 20));
+        DialogueLayoutResult punctuationPages = DialogueLayoutEngine.Fit(
+            new[] { new DialogueLayoutPart(punctuationMarkup, 0f, true, 0f) },
+            19f, 1.5f, ApproximateWidth);
+        Assert(punctuationPages.WasPaginated &&
+               punctuationPages.Parts.All(IsBalancedRichText) &&
+               punctuationPages.Parts.Sum(part => CountVisible(part.Text)) == 60,
+            "分页不得切断中文标点的 font/color 标签，也不得丢失标签内字符");
 
         DialogueLayoutResult grouped = DialogueLayoutEngine.Fit(
             new[]
             {
-                new DialogueLayoutPart(new string('甲', 15), 0.01f, false, 0.2f),
-                new DialogueLayoutPart(new string('乙', 15), 0.03f, false, 0.5f),
+                new DialogueLayoutPart(new string('甲', 35), 0.01f, false, 0.2f),
+                new DialogueLayoutPart(new string('乙', 35), 0.03f, false, 0.5f),
             },
             19f, 1.5f, ApproximateWidth);
         Assert(grouped.WasPaginated && grouped.Parts.Last().CharacterDelay == 0.03f &&
@@ -515,7 +623,12 @@ internal static class Program
         int sizeEnds = Regex.Matches(part.Text, "</size>", RegexOptions.IgnoreCase).Count;
         int underlines = Regex.Matches(part.Text, "<u>", RegexOptions.IgnoreCase).Count;
         int underlineEnds = Regex.Matches(part.Text, "</u>", RegexOptions.IgnoreCase).Count;
-        return sizes == sizeEnds && underlines == underlineEnds;
+        int fonts = Regex.Matches(part.Text, "<font(?:=[^>]*)?>", RegexOptions.IgnoreCase).Count;
+        int fontEnds = Regex.Matches(part.Text, "</font>", RegexOptions.IgnoreCase).Count;
+        int colors = Regex.Matches(part.Text, "<color(?:=[^>]*)?>", RegexOptions.IgnoreCase).Count;
+        int colorEnds = Regex.Matches(part.Text, "</color>", RegexOptions.IgnoreCase).Count;
+        return sizes == sizeEnds && underlines == underlineEnds &&
+               fonts == fontEnds && colors == colorEnds;
     }
 
     private static double ContrastRatio(string foreground, string background)

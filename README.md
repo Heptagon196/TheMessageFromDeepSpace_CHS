@@ -33,6 +33,14 @@ The Message from Deep Space/
 
 生成的可分发目录位于 `build/package/`。它以游戏根目录为压缩包根，适合直接复制或打包为 ZIP。
 
+## 题面修正
+
+已知错误题面的修正规则放在 `patch/Fix/`，构建后位于
+`DeepSpaceChinese/Fix/`。每道题使用一个以游戏界面显示题号命名的 JSON，
+例如 `80.json`；不要使用资源内部的 `uniqueID`。规则保存原始与修正后的整数
+信号数组，运行时只有在显示题号和原始数组都完全一致时才会替换。完整格式见
+`patch/Fix/README_题面修正.txt`。
+
 ## 测试
 
 ```powershell

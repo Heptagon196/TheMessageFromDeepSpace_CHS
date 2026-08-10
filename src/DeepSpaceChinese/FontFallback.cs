@@ -27,6 +27,7 @@ internal sealed class FontFallback
     private readonly ManualLogSource _log;
     private TMP_FontAsset _font;
     private string _fingerprint;
+    private int _fontGeneration;
     private readonly Dictionary<int, DirectBinding> _directBindings = new();
 
     public FontFallback(PatchConfig config, string contentRoot, ManualLogSource log)
@@ -139,6 +140,28 @@ internal sealed class FontFallback
         return true;
     }
 
+    public string RichTextFontName
+    {
+        get
+        {
+            EnsureLoaded();
+            return _font == null ? string.Empty : _font.name;
+        }
+    }
+
+    public string RichTextColorFor(TMP_Text component)
+    {
+        EnsureLoaded();
+        if (component == null)
+            return "FFFFFFFF";
+        Color textColor = component.color;
+        Color sourceFaceColor = ReadFaceColor(component.fontSharedMaterial);
+        Color targetFaceColor = ReadFaceColor(_font == null ? null : _font.material);
+        Color compensated = DialoguePunctuationColor.Compensate(textColor,
+            sourceFaceColor, targetFaceColor);
+        return ColorUtility.ToHtmlStringRGBA(compensated);
+    }
+
     public void RefreshDirectBindings()
     {
         foreach (KeyValuePair<int, DirectBinding> item in
@@ -234,6 +257,11 @@ internal sealed class FontFallback
         return null;
     }
 
+    private static Color ReadFaceColor(Material material) =>
+        material != null && material.HasProperty("_FaceColor")
+            ? material.GetColor("_FaceColor")
+            : Color.white;
+
     private TMP_FontAsset CreateFromFile(string path)
     {
         if (string.IsNullOrWhiteSpace(path) || !File.Exists(path))
@@ -284,7 +312,9 @@ internal sealed class FontFallback
     {
         if (font == null)
             return null;
-        font.name = "DeepSpaceChinese Fallback";
+        font.name = "DeepSpaceChinese Fallback " + (++_fontGeneration).ToString();
+        font.hashCode = unchecked((int)TMP_TextUtilities.GetHashCodeCaseInSensitive(font.name));
+        MaterialReferenceManager.AddFontAsset(font);
         PropertyInfo multiAtlas = typeof(TMP_FontAsset).GetProperty("isMultiAtlasTexturesEnabled");
         if (multiAtlas?.CanWrite == true)
             multiAtlas.SetValue(font, true, null);

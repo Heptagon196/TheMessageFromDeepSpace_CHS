@@ -29,6 +29,10 @@ internal sealed class ConfigEditorForm : Form
     {
         Text = "编译词典词名时忽略英文字母大小写（推荐）", AutoSize = true,
     };
+    private readonly CheckBox _puzzleFixes = new()
+    {
+        Text = "应用已知错误题面的修正规则（推荐）", AutoSize = true,
+    };
     private readonly CheckBox _colorsEnabled = new() { Text = "按说话者给对白着色", AutoSize = true };
     private readonly Dictionary<string, TextBox> _colorBoxes = new(StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, Button> _colorButtons = new(StringComparer.OrdinalIgnoreCase);
@@ -41,7 +45,7 @@ internal sealed class ConfigEditorForm : Form
     public ConfigEditorForm(string iniPath)
     {
         _iniPath = iniPath;
-        Text = "《来自深空的讯息》汉化配置工具 v0.1.42";
+        Text = "《来自深空的讯息》汉化配置工具 v0.1.55";
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(650, 540);
         ClientSize = new Size(720, 590);
@@ -101,13 +105,16 @@ internal sealed class ConfigEditorForm : Form
         table.SetColumnSpan(types, 2);
         table.Controls.Add(_compilerCaseInsensitive, 0, 5);
         table.SetColumnSpan(_compilerCaseInsensitive, 3);
+        table.Controls.Add(_puzzleFixes, 0, 6);
+        table.SetColumnSpan(_puzzleFixes, 3);
         table.Controls.Add(new Label
         {
             Text = "开启后，VAR 可匹配词典中的 var；精确拼写仍优先，存在歧义时不会误选。\n" +
-                   "翻译、字体、角色颜色和此兼容项可在游戏中按 F5 重载。",
+                   "题面修正按游戏显示编号读取 DeepSpaceChinese\\Fix\\*.json，且仅在原始数字信号完全一致时替换。\n" +
+                   "翻译、字体、角色颜色、兼容项和题面修正规则可在游戏中按 F5 重载。",
             AutoSize = true, ForeColor = Color.DimGray, Margin = new Padding(3, 18, 3, 3),
-        }, 0, 6);
-        table.SetColumnSpan(table.GetControlFromPosition(0, 6), 3);
+        }, 0, 7);
+        table.SetColumnSpan(table.GetControlFromPosition(0, 7), 3);
         page.Controls.Add(table);
         return page;
     }
@@ -193,7 +200,7 @@ internal sealed class ConfigEditorForm : Form
             }
             settings.ApplyTo(_document);
             _document.SaveAtomic(_iniPath);
-            SetStatus("已保存。常规设置请重启游戏；字体和角色颜色可在游戏中按 F5 应用。", true);
+            SetStatus("已保存。翻译、字体、角色颜色、兼容项和题面修正规则可在游戏中按 F5 应用。", true);
             if (close)
                 Close();
         }
@@ -232,6 +239,7 @@ internal sealed class ConfigEditorForm : Form
             TranslateUI = _ui.Checked,
             TranslateSystem = _system.Checked,
             CompilerCaseInsensitive = _compilerCaseInsensitive.Checked,
+            PuzzleFixesEnabled = _puzzleFixes.Checked,
             DialogueColorsEnabled = _colorsEnabled.Checked,
             FontSource = Convert.ToString(_fontSource.SelectedItem) ?? "Auto",
             BundledFont = _bundledFont.Text,
@@ -254,6 +262,7 @@ internal sealed class ConfigEditorForm : Form
         _ui.Checked = settings.TranslateUI;
         _system.Checked = settings.TranslateSystem;
         _compilerCaseInsensitive.Checked = settings.CompilerCaseInsensitive;
+        _puzzleFixes.Checked = settings.PuzzleFixesEnabled;
         _colorsEnabled.Checked = settings.DialogueColorsEnabled;
         foreach (KeyValuePair<string, TextBox> pair in _colorBoxes)
             pair.Value.Text = settings.Colors[pair.Key];

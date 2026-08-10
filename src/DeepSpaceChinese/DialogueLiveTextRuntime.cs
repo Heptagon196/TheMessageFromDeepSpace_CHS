@@ -296,4 +296,5 @@ internal sealed class DialogueLiveTextRuntime
             value = DialogueManager.ReplaceTranslator(value);
         return value;
     }
+
 }

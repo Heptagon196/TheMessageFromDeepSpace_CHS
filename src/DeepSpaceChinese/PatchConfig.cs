@@ -30,6 +30,7 @@ internal sealed class PatchConfig
     public bool TranslateUI { get; private set; } = true;
     public bool TranslateSystem { get; private set; } = true;
     public bool CompilerCaseInsensitive { get; private set; } = true;
+    public bool PuzzleFixesEnabled { get; private set; } = true;
     public KeyboardShortcut ToggleModeHotkey { get; private set; } = KeyboardShortcut.Deserialize("F8");
     public KeyboardShortcut ReloadTranslationsHotkey { get; private set; } = KeyboardShortcut.Deserialize("F5");
     public string FontSource { get; private set; } = "Auto";
@@ -59,6 +60,7 @@ internal sealed class PatchConfig
             TranslateSystem = GetBool(values, "Localization.TranslateSystem", true),
             CompilerCaseInsensitive = GetBool(values,
                 "Compatibility.CompilerCaseInsensitive", true),
+            PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true),
             FontSource = Get(values, "Font.FontSource", "Auto"),
             BundledFont = Get(values, "Font.BundledFont", @"Fonts\fusion-pixel-12px-proportional-zh_hans.otf"),
             FontFile = Get(values, "Font.FontFile", string.Empty),
@@ -116,6 +118,7 @@ internal sealed class PatchConfig
         var values = ReadIni(path, log);
         CompilerCaseInsensitive = GetBool(values,
             "Compatibility.CompilerCaseInsensitive", true);
+        PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true);
     }
 
     public string SpeakerColor(Speaker speaker) => speaker switch

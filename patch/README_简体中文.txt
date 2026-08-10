@@ -9,7 +9,7 @@
 也可以双击游戏根目录的 DeepSpaceChinese.ConfigEditor.exe，通过图形界面修改并校验配置。
 配置工具使用 Windows 自带的 .NET Framework WinForms，不附带额外运行时。
 默认按 F8 可在“仅译文”和“仅原文”模式之间即时切换；快捷键可在 INI 中修改。
-默认按 F5 可重新读取四个翻译 JSON、INI 的 [Font]、[DialogueColors]、[Compatibility] 和中文字体并立即应用，无需重启游戏。
+默认按 F5 可重新读取四个翻译 JSON、INI 的 [Font]、[DialogueColors]、[Compatibility]、[PuzzleFixes]、题面修正规则和中文字体并立即应用，无需重启游戏。
 字体热重载失败时会保留当前字体；译文与字体相互独立，任一失败都不会覆盖其旧版本。
 默认开启按说话者着色，可在 INI 中关闭或分别修改七种高对比度颜色。
 过长对白会按实际文本框宽度自动排版：不超过上限 1.5 倍时缩小字号，更长时自动分页。
@@ -17,12 +17,17 @@
 所有输入均使用游戏原本的 TMP 输入框；补丁会修复游戏每帧强制关闭 Windows 输入法的问题。
 中文姓名仍沿用游戏输入框的 14 字符上限。
 默认开启编译词典词名时忽略英文字母大小写，因此 VAR 可匹配词典中的 var；精确拼写仍优先。
+默认开启已知错误题面的修正规则。规则位于 DeepSpaceChinese\Fix，以游戏界面显示题号命名；仅当规则中的原始数字信号与当前游戏数据完全一致时才替换。
 
 翻译文件：
 DeepSpaceChinese\Translations\dialogue.json  全部对白
 DeepSpaceChinese\Translations\titles.json    日志标题
 DeepSpaceChinese\Translations\ui.json        界面文本
 DeepSpaceChinese\Translations\system.json    系统提示和运行时模板
+
+题面修正：
+DeepSpaceChinese\Fix\数字.json               按游戏界面显示题号保存的修正规则
+DeepSpaceChinese\Fix\README_题面修正.txt      规则格式和安全匹配说明
 
 字体：
 补丁自带 Fusion Pixel Font（缝合像素字体）12px 非等宽简体中文版，不依赖 Windows 预装字体。

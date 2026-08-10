@@ -148,7 +148,7 @@ TRANSLATIONS: list[str] = [
     "{SPEAKER_COLLINS}{PART_000}哦，对。{PART_001}我记得。{PART_002}$animC3埃克斯，{PART_003}我再跟你赌一次。",
     "{SPEAKER_AKERS}{PART_000}$animB0我还以为你不喜欢打赌呢，{PART_001}柯林斯。",
     "{SPEAKER_COLLINS}{PART_000}这个嘛，{PART_001}$animC4我可不反对赚钱。",
-    "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}我造出了一个怪物。",
+    "{SPEAKER_BAUTISTA}{PART_000}嗯。{PART_001}看来是我把她带坏了。",
     "{SPEAKER_AKERS}{PART_000}$animC0确实，{PART_001}巴蒂斯塔。{PART_002}确实如此。",
     "254 个信号的传输",
     "{SPEAKER_AKERS}{PART_000}天啊！{PART_001}$animA1这次传输可真够大的！",

@@ -10,8 +10,6 @@ namespace DeepSpaceChinese;
 internal static class SharedInputReturnCompatibility
 {
     private static readonly HashSet<int> TrackedInputIds = new();
-    private static readonly HashSet<int> LoggedActivations = new();
-    private static readonly HashSet<int> LoggedDeactivations = new();
 
     internal static void Track(TMP_InputField input)
     {
@@ -21,12 +19,6 @@ internal static class SharedInputReturnCompatibility
 
     internal static bool IsTracked(TMP_InputField input) =>
         input != null && TrackedInputIds.Contains(input.GetInstanceID());
-
-    internal static bool MarkActivationForLog(TMP_InputField input) =>
-        input != null && LoggedActivations.Add(input.GetInstanceID());
-
-    internal static bool MarkDeactivationForLog(TMP_InputField input) =>
-        input != null && LoggedDeactivations.Add(input.GetInstanceID());
 
     internal static bool ShouldSuppressEarlySubmit(bool isTrackedSharedInput,
         bool isFocused, bool isMultiLineNewline, bool returnPressed,
@@ -67,62 +59,6 @@ internal static class SharedMultilineEarlySubmitPatch
             SharedInputReturnCompatibility.IsTracked(__instance), __instance.isFocused,
             __instance.lineType == TMP_InputField.LineType.MultiLineNewline, returnPressed,
             isInputSystemNavigationEvent);
-        if (SharedInputReturnCompatibility.IsTracked(__instance))
-            DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
-                $"[DEBUG-enter34] OnSubmit frame={Time.frameCount} id={__instance.GetInstanceID()} " +
-                $"returnPressed={returnPressed} focused={__instance.isFocused} " +
-                $"lineType={__instance.lineType} lineLimit={__instance.lineLimit} " +
-                $"navigation={isInputSystemNavigationEvent} suppress={suppress} " +
-                $"event={eventData?.GetType().FullName ?? "<null>"}");
         return !suppress;
-    }
-}
-
-[HarmonyPatch(typeof(TMP_InputField), nameof(TMP_InputField.DeactivateInputField))]
-internal static class SharedInputDeactivateTracePatch
-{
-    [HarmonyPrefix]
-    private static void Prefix(TMP_InputField __instance, bool clearSelection)
-    {
-        if (!SharedInputReturnCompatibility.IsTracked(__instance) ||
-            !SharedInputReturnCompatibility.MarkDeactivationForLog(__instance))
-            return;
-        DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
-            $"[DEBUG-focus34] first DeactivateInputField frame={Time.frameCount} " +
-            $"id={__instance.GetInstanceID()} " +
-            $"focused={__instance.isFocused} clear={clearSelection} " +
-            $"lineType={__instance.lineType} lineLimit={__instance.lineLimit}\n" +
-            Environment.StackTrace);
-    }
-}
-
-[HarmonyPatch(typeof(TMP_InputField), nameof(TMP_InputField.OnDeselect))]
-internal static class SharedInputDeselectTracePatch
-{
-    [HarmonyPrefix]
-    private static void Prefix(TMP_InputField __instance, BaseEventData eventData)
-    {
-        if (!SharedInputReturnCompatibility.IsTracked(__instance))
-            return;
-        DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
-            $"[DEBUG-focus34] OnDeselect frame={Time.frameCount} id={__instance.GetInstanceID()} " +
-            $"focused={__instance.isFocused} event={eventData?.GetType().Name ?? "<null>"}\n" +
-            Environment.StackTrace);
-    }
-}
-
-[HarmonyPatch(typeof(TMP_InputField), "ActivateInputFieldInternal")]
-internal static class SharedInputActivateTracePatch
-{
-    [HarmonyPostfix]
-    private static void Postfix(TMP_InputField __instance)
-    {
-        if (!SharedInputReturnCompatibility.IsTracked(__instance) ||
-            !SharedInputReturnCompatibility.MarkActivationForLog(__instance))
-            return;
-        DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
-            $"[DEBUG-focus34] first ActivateInputFieldInternal frame={Time.frameCount} " +
-            $"id={__instance.GetInstanceID()} focused={__instance.isFocused} " +
-            $"lineType={__instance.lineType} lineLimit={__instance.lineLimit}");
     }
 }

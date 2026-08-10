@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.43";
+    public const string PluginVersion = "0.1.55";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -28,8 +28,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     private UiLocalizer _ui;
     private DialogueLiveTextRuntime _liveDialogueText;
     private FontFallback _font;
+    private CharacterFontRegistry _characterFonts;
     private DialogueLayoutRuntime _dialogueLayout;
     private PlayerNameRuntime _playerName;
+    private PuzzleFixRuntime _puzzleFixes;
     private Harmony _harmony;
     private string _translationDirectory;
     private string _configPath;
@@ -42,19 +44,24 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _configPath = System.IO.Path.Combine(gameRoot, "DeepSpaceChinese.ini");
         _patchConfig = PatchConfig.Load(_configPath, Logger);
         _translationDirectory = System.IO.Path.Combine(contentRoot, "Translations");
+        string fixDirectory = System.IO.Path.Combine(contentRoot, "Fix");
         TranslationStore store = TranslationStore.Load(_translationDirectory, Logger);
         _frameCatalog = new DialogueFrameCatalog();
         _dialogue = new DialogueLocalizer(store, _patchConfig, _frameCatalog, Logger);
         _font = new FontFallback(_patchConfig, contentRoot, Logger);
+        _characterFonts = new CharacterFontRegistry();
         _logTitles = new LogTitleRuntime(_dialogue, _font, _patchConfig, Logger);
         _ui = new UiLocalizer(store, _patchConfig, _dialogue, _frameCatalog, Logger);
         _liveDialogueText = new DialogueLiveTextRuntime(_patchConfig, Logger);
         _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
         _playerName = new PlayerNameRuntime(_patchConfig, Logger);
+        _puzzleFixes = new PuzzleFixRuntime(_patchConfig, fixDirectory, Logger);
+        _puzzleFixes.ReloadRules();
 
         _harmony = new Harmony(PluginGuid);
         _harmony.PatchAll(typeof(DeepSpaceChinesePlugin).Assembly);
         SceneManager.sceneLoaded += OnSceneLoaded;
+        RegisterCharacterFonts();
 
         if (_patchConfig.Enabled)
         {
@@ -104,6 +111,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             ? DisplayMode.OriginalOnly
             : DisplayMode.TranslationOnly;
         _font.EnsureLoaded();
+        RegisterCharacterFonts();
         ApplyProgressLogTitleFonts();
         _dialogue.ReapplyAll();
         _liveDialogueText.RefreshAll();
@@ -116,9 +124,11 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 
     private void ReloadTranslations()
     {
+        RegisterCharacterFonts();
         _patchConfig.ReloadFontSettings(_configPath, Logger);
         _patchConfig.ReloadDialogueColorSettings(_configPath, Logger);
         _patchConfig.ReloadCompatibilitySettings(_configPath, Logger);
+        _puzzleFixes.ReloadRules();
         _dialogueLayout.ReapplySpeakerColors();
         bool fontReady = _font.ReloadIfChanged(out bool fontReloaded);
         ApplyProgressLogTitleFonts();
@@ -140,6 +150,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _ui.ReapplyAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
+        ApplyPuzzleFixes(PuzzleManager.Instance);
         if (translationsReloaded)
             Logger.LogMessage($"译文已重新载入并应用：{replacement.Count} 条；" +
                               $"中文字体{(fontReloaded ? "已刷新" : fontReady ? "未变化" : "保持原字体")}。");
@@ -160,20 +171,35 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         yield return null;
         yield return null;
         _font.EnsureLoaded();
+        RegisterCharacterFonts();
         ApplyProgressLogTitleFonts();
         _dialogue.ReapplyAll();
         _liveDialogueText.RefreshAll();
         _ui.ReapplyAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
+        ApplyPuzzleFixes(PuzzleManager.Instance);
     }
 
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        _puzzleFixes?.RestoreAll();
         _harmony?.UnpatchSelf();
         if (ReferenceEquals(Instance, this))
             Instance = null;
+    }
+
+    internal void ApplyPuzzleFixes(PuzzleManager manager)
+    {
+        try
+        {
+            _puzzleFixes?.ApplyAll(manager);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"应用题面修正规则失败，游戏将继续使用当前题面：\n{ex}");
+        }
     }
 
     internal void ApplyDialogueBank(DialogueBank bank)
@@ -200,15 +226,33 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     internal string TranslateTmpText(TMP_Text component, string proposed)
     {
         string translated;
+        bool isTrackedDialogue = false;
         if (_liveDialogueText != null &&
             _liveDialogueText.TryTranslate(component, proposed, out translated))
         {
+            isTrackedDialogue = true;
+            bool usesCharacterFont = _characterFonts?.Contains(component?.font) == true;
             ApplyInterfaceFont(component, translated);
-            return translated;
+            return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
+                usesCharacterFont);
         }
         translated = _ui == null ? proposed : _ui.TranslateIncoming(component, proposed);
+        bool usesRoleFont = _characterFonts?.Contains(component?.font) == true;
         ApplyInterfaceFont(component, translated);
-        return translated;
+        return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
+            usesRoleFont);
+    }
+
+    private string ApplyCharacterPunctuation(TMP_Text component, string displayText,
+        bool isTrackedDialogue, bool usesCharacterFont)
+    {
+        if (component == null || _font == null || _patchConfig == null ||
+            !DialoguePunctuationPolicy.ShouldDecorate(isTrackedDialogue,
+                usesCharacterFont, component.richText,
+                _patchConfig.DisplayMode, displayText))
+            return displayText;
+        return DialoguePunctuationFontMarkup.Apply(displayText, _font.RichTextFontName,
+            _font.RichTextColorFor(component));
     }
 
     private void ApplyInterfaceFont(TMP_Text component, string displayText)
@@ -266,6 +310,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 
     internal DialogueFrame FitMainDialogue(DialogueManager manager, DialogueFrame frame)
     {
+        _characterFonts?.Register(manager);
         if (_dialogueLayout == null)
             return frame;
         if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
@@ -282,6 +327,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 
     internal DialogueFrame FitNonLogDialogue(NonLogDialogueManager manager, DialogueFrame frame)
     {
+        _characterFonts?.Register(manager);
         if (_dialogueLayout == null)
             return frame;
         if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
@@ -299,6 +345,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     internal DialogueFrame PrepareCharacterTypedDialogue(TMP_Text textBox,
         DialogueFrame frame)
     {
+        _characterFonts?.Register(textBox?.font);
         if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
         {
             _liveDialogueText?.TrackCharacter(textBox, pair.Original, pair.Translated);
@@ -338,6 +385,14 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         }
         if (count > 0)
             Logger.LogInfo($"个人日志标题字体已应用：{count} 项，模式 {_patchConfig.DisplayMode}。");
+    }
+
+    private void RegisterCharacterFonts()
+    {
+        if (_characterFonts == null)
+            return;
+        foreach (DialogueManager manager in Resources.FindObjectsOfTypeAll<DialogueManager>())
+            _characterFonts.Register(manager);
     }
 
     private bool ApplyProgressLogTitleFont(TMP_Text label)

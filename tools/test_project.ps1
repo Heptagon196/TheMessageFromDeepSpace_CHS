@@ -4,6 +4,16 @@ param(
 
 $ErrorActionPreference = "Stop"
 $projectRoot = Split-Path -Parent $PSScriptRoot
+$projectDrive = Split-Path -Qualifier $projectRoot
+if ([string]::IsNullOrWhiteSpace($env:SystemDrive)) {
+    $env:SystemDrive = $projectDrive
+}
+if ([string]::IsNullOrWhiteSpace($env:ProgramData)) {
+    $env:ProgramData = Join-Path $projectDrive "ProgramData"
+}
+if ([string]::IsNullOrWhiteSpace($env:ALLUSERSPROFILE)) {
+    $env:ALLUSERSPROFILE = $env:ProgramData
+}
 
 & (Join-Path $PSScriptRoot "build_patch.ps1") -Configuration $Configuration
 

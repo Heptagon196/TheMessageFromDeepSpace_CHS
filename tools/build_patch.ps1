@@ -70,7 +70,8 @@ if (-not (Test-Path -LiteralPath $fontArchive -PathType Leaf)) {
 
 New-Item -ItemType Directory -Force -Path $packageRoot, $contentRoot,
     (Join-Path $contentRoot "Fonts"), (Join-Path $contentRoot "Licenses"),
-    (Join-Path $contentRoot "Translations"), (Join-Path $packageRoot "BepInEx\plugins"),
+    (Join-Path $contentRoot "Translations"), (Join-Path $contentRoot "Fix"),
+    (Join-Path $packageRoot "BepInEx\plugins"),
     $fontExtract | Out-Null
 
 python (Join-Path $PSScriptRoot "build_runtime.py") --strict
@@ -92,6 +93,11 @@ Copy-Item -LiteralPath (Join-Path $bepInExRoot "winhttp.dll") -Destination $pack
 Copy-Item -LiteralPath (Join-Path $bepInExRoot "doorstop_config.ini") -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot "patch\DeepSpaceChinese.ini") -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot "patch\README_简体中文.txt") -Destination $contentRoot -Force
+$fixSource = Join-Path $projectRoot "patch\Fix"
+$fixOutput = Join-Path $contentRoot "Fix"
+foreach ($fixFile in Get-ChildItem -LiteralPath $fixSource -File) {
+    Copy-Item -LiteralPath $fixFile.FullName -Destination $fixOutput -Force
+}
 Copy-Item -LiteralPath (Join-Path $projectRoot "src\DeepSpaceChinese\bin\$Configuration\net472\DeepSpaceChinese.dll") `
     -Destination (Join-Path $packageRoot "BepInEx\plugins") -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot "src\DeepSpaceChinese.ConfigEditor\bin\$Configuration\net472\DeepSpaceChinese.ConfigEditor.exe") `

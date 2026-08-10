@@ -35,12 +35,21 @@ internal sealed class DialogueLayoutResult
     }
 }
 
+internal static class DialogueWidthBudget
+{
+    internal static float AvailableWidth(float rectWidth, float leftMargin,
+        float rightMargin) =>
+        Math.Max(0f, rectWidth - leftMargin - rightMargin);
+}
+
 /// <summary>
 /// Pure dialogue pagination logic. Font measurement is supplied by the runtime adapter so this
 /// class can be regression-tested without starting Unity.
 /// </summary>
 internal static class DialogueLayoutEngine
 {
+    private const int MaxDisplayLines = 2;
+
     private enum TokenKind
     {
         Text,
@@ -83,7 +92,8 @@ internal static class DialogueLayoutEngine
         float availableWidth,
         float shrinkThreshold,
         Func<string, float> measure,
-        string repeatedPrefix = "")
+        string repeatedPrefix = "",
+        Func<string, bool> fitsDisplayArea = null)
     {
         if (input == null)
             throw new ArgumentNullException(nameof(input));
@@ -104,7 +114,10 @@ internal static class DialogueLayoutEngine
             string groupText = string.Concat(input.Skip(groupStart).Take(groupEnd - groupStart)
                 .Select(part => part.Text));
             float fullWidth = SafeMeasure(measure, repeatedPrefix + groupText);
-            if (fullWidth <= availableWidth * shrinkThreshold)
+            float pageCapacity = availableWidth * MaxDisplayLines;
+            bool fitsArea = fitsDisplayArea == null ||
+                            fitsDisplayArea(repeatedPrefix + groupText);
+            if (fullWidth <= pageCapacity && fitsArea)
             {
                 for (int index = groupStart; index < groupEnd; index++)
                     output.Add(input[index]);
@@ -113,8 +126,8 @@ internal static class DialogueLayoutEngine
             {
                 IReadOnlyList<DialogueLayoutPart> group = input.Skip(groupStart)
                     .Take(groupEnd - groupStart).ToArray();
-                List<DialogueLayoutPart> paginated = PaginateGroup(group, availableWidth,
-                    measure, repeatedPrefix, out int pageCount);
+                List<DialogueLayoutPart> paginated = PaginateGroup(group, pageCapacity,
+                    measure, repeatedPrefix, fitsDisplayArea, out int pageCount);
                 output.AddRange(paginated);
                 addedPages += Math.Max(0, pageCount - 1);
             }
@@ -128,6 +141,7 @@ internal static class DialogueLayoutEngine
         float availableWidth,
         Func<string, float> measure,
         string prefix,
+        Func<string, bool> fitsDisplayArea,
         out int pageCount)
     {
         List<Token> tokens = Tokenize(parts);
@@ -152,7 +166,9 @@ internal static class DialogueLayoutEngine
                     continue;
                 string candidate = BuildBalanced(tokens, pageStart, scan);
                 float width = SafeMeasure(measure, prefix + candidate);
-                if (width <= availableWidth)
+                bool fitsArea = fitsDisplayArea == null ||
+                                fitsDisplayArea(prefix + candidate);
+                if (width <= availableWidth && fitsArea)
                 {
                     lastFitEnd = scan;
                     if (tokens[scan - 1].PreferredBreakAfter)
@@ -176,7 +192,9 @@ internal static class DialogueLayoutEngine
             {
                 string preferred = BuildBalanced(tokens, pageStart, lastPreferredEnd);
                 float preferredWidth = SafeMeasure(measure, prefix + preferred);
-                if (preferredWidth >= availableWidth * 0.45f)
+                bool preferredFitsArea = fitsDisplayArea == null ||
+                                         fitsDisplayArea(prefix + preferred);
+                if (preferredWidth >= availableWidth * 0.45f && preferredFitsArea)
                     pageEnd = lastPreferredEnd;
             }
             if (pageEnd <= pageStart)
