@@ -434,20 +434,36 @@ internal static class Program
                 "\"source_sha256\": \"" + TokenCodec.Sha256("Hydrogen") + "\", " +
                 "\"source_text\": \"Hydrogen\", \"translated_text\": \"氢\", " +
                 "\"game\": { \"original_text\": \"Hydrogen\" } },\n" +
+                "    { \"stable_key\": \"display:shapes\", \"kind\": \"display_value\", " +
+                "\"source_sha256\": \"" + TokenCodec.Sha256("Shapes") + "\", " +
+                "\"source_text\": \"Shapes\", \"translated_text\": \"形状\", " +
+                "\"game\": { \"original_text\": \"Shapes\" } },\n" +
                 "    { \"stable_key\": \"ui-fragment:test\", \"kind\": \"ui_fragment\", " +
                 "\"source_sha256\": \"" + TokenCodec.Sha256("Stable: yes") + "\", " +
                 "\"source_text\": \"Stable: yes\", \"translated_text\": \"稳定：是\", " +
-                "\"game\": { \"original_text\": \"Stable: yes\" } }\n" +
+                "\"game\": { \"original_text\": \"Stable: yes\" } },\n" +
+                "    { \"stable_key\": \"ui-fragment:undefined-suffix\", \"kind\": \"ui_fragment\", " +
+                "\"source_sha256\": \"" + TokenCodec.Sha256("_UNDEF") + "\", " +
+                "\"source_text\": \"_UNDEF\", \"translated_text\": \"_未定义\", " +
+                "\"game\": { \"original_text\": \"_UNDEF\" } }\n" +
                 "  ]\n}";
             File.WriteAllText(Path.Combine(translations, "display.json"), displayJson);
             TranslationStore store = TranslationStore.Load(translations, log);
-            Assert(store.Count == 5 && store.TryGet("ui:test", out RuntimeTranslationEntry entry) &&
+            Assert(store.Count == 7 && store.TryGet("ui:test", out RuntimeTranslationEntry entry) &&
                    entry.TranslatedText == "开始", "运行时 JSON 加载失败");
             Assert(store.UiTemplates.Count() == 1 &&
                    store.FindUnambiguousAchievement("Hello World!")?.TranslatedText == "你好，世界！",
                 "动态模板或成就显示译文索引失败");
             Assert(store.FindUnambiguousDisplayValue("Hydrogen")?.TranslatedText == "氢" &&
-                   store.UiFragments.Count() == 1, "动态显示值或富文本片段索引失败");
+                   store.UiFragments.Count() == 2, "动态显示值或富文本片段索引失败");
+            Assert(store.FindUnambiguousDisplayValue("SHAPES")?.TranslatedText == "形状",
+                "总结界面的全大写谜题组标题必须命中显示值译文");
+            var displayLocalizer = new UiLocalizer(store, config, null, null, log);
+            Assert(displayLocalizer.TranslateCompositeValues("已完成的谜题组：\n1. SHAPES") ==
+                   "已完成的谜题组：\n1. 形状",
+                "总结界面的复合文本必须翻译大小写不同的谜题组标题");
+            Assert(displayLocalizer.TranslateCompositeValues("@-2_UNDEF") == "@-2_未定义",
+                "未定义词典条目的动态数字必须保留，只翻译 _UNDEF 后缀");
 
             Console.WriteLine("Runtime self-test passed: INI, hotkey, JSON, tokens, original/translation display, dialogue layout.");
             return 0;

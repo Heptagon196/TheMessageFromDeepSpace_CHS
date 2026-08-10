@@ -45,7 +45,7 @@ internal sealed class ConfigEditorForm : Form
     public ConfigEditorForm(string iniPath)
     {
         _iniPath = iniPath;
-        Text = "《来自深空的讯息》汉化配置工具 v0.1.56";
+        Text = "《来自深空的讯息》汉化配置工具 v0.1.57";
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(650, 540);
         ClientSize = new Size(720, 590);

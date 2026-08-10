@@ -19,7 +19,7 @@ def iter_items(cache: dict):
 cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
 items = list(iter_items(cache))
 
-assert len(items) == 12_509
+assert len(items) == 12_510
 
 text_indices = [item["text_index"] for item in items]
 stable_keys = [item["extra"]["game"]["stable_key"] for item in items]
@@ -42,7 +42,7 @@ assert kind_counts == {
     "achievement_description": 39,
     "display_value": 1_279,
     "ui_template": 13,
-    "ui_fragment": 9,
+    "ui_fragment": 10,
 }
 
 component_items = [
@@ -125,6 +125,6 @@ for item in translatable:
     assert not re.search(r"\bSIGNAL_-?\d+\b", source), item["extra"]["game"]["stable_key"]
 
 print(
-    "Extracted-cache audit passed: 12,509 unique items, recovered component data, "
+    "Extracted-cache audit passed: 12,510 unique items, recovered component data, "
     "dynamic UI, display data and protected gameplay state."
 )

@@ -57,7 +57,7 @@ internal sealed class TranslationStore
     private readonly Dictionary<string, List<RuntimeTranslationEntry>> _achievementByOriginal =
         new(StringComparer.Ordinal);
     private readonly Dictionary<string, List<RuntimeTranslationEntry>> _displayByOriginal =
-        new(StringComparer.Ordinal);
+        new(StringComparer.OrdinalIgnoreCase);
     private readonly List<RuntimeTranslationEntry> _uiFragments = new();
 
     public int Count => _entries.Count;

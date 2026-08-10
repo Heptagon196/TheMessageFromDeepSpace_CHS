@@ -76,5 +76,6 @@ assert "No {DYN_0} in {DYN_1} {DYN_2}" in templates
 fragments = {fragment["source_text"] for fragment in rules.UI_FRAGMENTS}
 assert "Half-Life: Almost Instantaneous" in fragments
 assert "Stable: yes" in fragments
+assert "_UNDEF" in fragments
 
 print("Extraction-rules self-test passed: locked tokens, exclusions, raw arrays and UI templates.")

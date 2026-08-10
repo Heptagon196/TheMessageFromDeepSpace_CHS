@@ -100,6 +100,7 @@ UI_FRAGMENTS: list[dict[str, str]] = [
     {"fragment_id": "abundance", "source_text": "Abundance: "},
     {"fragment_id": "half-life", "source_text": "Half-Life: "},
     {"fragment_id": "element-preview", "source_text": " | Element "},
+    {"fragment_id": "undefined-suffix", "source_text": "_UNDEF"},
 ]
 
 

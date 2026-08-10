@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using BepInEx.Logging;
 using TMPro;
 using UnityEngine;
@@ -209,6 +210,15 @@ internal sealed class UiLocalizer
             }
         }
 
+        string composite = TranslateCompositeValues(original);
+        if (composite == original)
+            return original;
+        RememberOriginal(component, original);
+        return TokenCodec.FormatDisplayLiteral(composite, original, _config);
+    }
+
+    internal string TranslateCompositeValues(string original)
+    {
         string composite = original;
         bool fragmentChanged = false;
         foreach (RuntimeTranslationEntry fragment in _store.UiFragments
@@ -225,11 +235,8 @@ internal sealed class UiLocalizer
             composite = composite.Replace(source, fragment.TranslatedText);
             fragmentChanged = true;
         }
-        if (!fragmentChanged)
-            return original;
         composite = ApplyDisplayValues(composite);
-        RememberOriginal(component, original);
-        return TokenCodec.FormatDisplayLiteral(composite, original, _config);
+        return fragmentChanged || composite != original ? composite : original;
     }
 
     private string TranslateExactEntry(RuntimeTranslationEntry entry, string original)
@@ -244,12 +251,13 @@ internal sealed class UiLocalizer
             _dialogue.PlayerFullName());
     }
 
-    private string ApplyDisplayValues(string text)
+    internal string ApplyDisplayValues(string text)
     {
         foreach (KeyValuePair<string, RuntimeTranslationEntry> pair in _store.DisplayValues
                      .OrderByDescending(value => value.Key.Length))
         {
-            if (string.IsNullOrEmpty(pair.Key) || !text.Contains(pair.Key))
+            if (string.IsNullOrEmpty(pair.Key) ||
+                text.IndexOf(pair.Key, StringComparison.OrdinalIgnoreCase) < 0)
                 continue;
             RuntimeTranslationEntry entry = pair.Value;
             if (TokenCodec.Sha256(TokenCodec.ProtectForEntry(pair.Key, entry)) !=
@@ -258,9 +266,30 @@ internal sealed class UiLocalizer
                 ReportMismatch(entry.StableKey);
                 continue;
             }
-            text = text.Replace(pair.Key, entry.TranslatedText);
+            text = ReplaceOrdinalIgnoreCase(text, pair.Key, entry.TranslatedText);
         }
         return text;
+    }
+
+    private static string ReplaceOrdinalIgnoreCase(string text, string source,
+        string replacement)
+    {
+        if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(source))
+            return text;
+        int start = 0;
+        int match = text.IndexOf(source, start, StringComparison.OrdinalIgnoreCase);
+        if (match < 0)
+            return text;
+        var result = new StringBuilder(text.Length);
+        while (match >= 0)
+        {
+            result.Append(text, start, match - start);
+            result.Append(replacement);
+            start = match + source.Length;
+            match = text.IndexOf(source, start, StringComparison.OrdinalIgnoreCase);
+        }
+        result.Append(text, start, text.Length - start);
+        return result.ToString();
     }
 
     private void RememberOriginal(TMP_Text component, string original)
