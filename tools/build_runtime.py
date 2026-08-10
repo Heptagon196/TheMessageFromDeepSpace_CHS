@@ -25,6 +25,25 @@ TOKEN_PATTERNS = {
     "tmp_tag": re.compile(r"</?[A-Za-z][^>]*>"),
 }
 TMP_SIZE_OPEN = re.compile(r"<size=(?:\d+(?:\.\d+)?%?)>", re.IGNORECASE)
+SOURCE_CELSIUS = re.compile(r"\bcelsius\b", re.IGNORECASE)
+SOURCE_FAHRENHEIT = re.compile(r"\bfahrenheit\b", re.IGNORECASE)
+SOURCE_DEGREES = re.compile(r"\bdegrees?\b", re.IGNORECASE)
+TRANSLATED_CELSIUS = re.compile(r"(?:摄氏度|℃|°\s*[Cc])")
+TRANSLATED_FAHRENHEIT = re.compile(r"(?:华氏度|℉|°\s*[Ff])")
+TRANSLATED_ANGLE = re.compile(r"(?:度|°)")
+TRANSLATED_ACADEMIC_DEGREE = re.compile(r"学位")
+TRANSLATED_ABSTRACT_DEGREE = re.compile(r"程度")
+
+# "degree" is polysemous, and English sometimes omits a temperature scale.
+# Classify every occurrence by stable key instead of guessing from one isolated
+# sentence. Frame 32 immediately says "500 Celsius", so Akers's "a thousand
+# degrees" in frame 33 is the approximate Fahrenheit conversion.
+DEGREE_CONTEXTS = {
+    "dialogue:1126/frame:5": "academic",
+    "dialogue:16/frame:33": "fahrenheit",
+    "dialogue:637/frame:1": "academic",
+    "dialogue:878/frame:0": "abstract",
+}
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -45,6 +64,43 @@ def iter_items(cache: dict[str, Any]) -> Iterable[dict[str, Any]]:
         yield from file_data.get("items", [])
 
 
+def validate_temperature_units(item: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    source = item.get("source_text") or ""
+    translated = item.get("translated_text") or ""
+    stable_key = item.get("extra", {}).get("game", {}).get("stable_key", "")
+    has_celsius = SOURCE_CELSIUS.search(source) is not None
+    has_fahrenheit = SOURCE_FAHRENHEIT.search(source) is not None
+
+    if has_celsius and not TRANSLATED_CELSIUS.search(translated):
+        errors.append("原文 Celsius 必须明确译为摄氏度（或 ℃/°C）")
+    if has_fahrenheit and not TRANSLATED_FAHRENHEIT.search(translated):
+        errors.append("原文 Fahrenheit 必须明确译为华氏度（或 ℉/°F）")
+
+    # Explicit Celsius/Fahrenheit already classifies the scale. Every other
+    # degree/degrees is ambiguous and must first be reviewed and registered.
+    if SOURCE_DEGREES.search(source) and not (has_celsius or has_fahrenheit):
+        expected = DEGREE_CONTEXTS.get(stable_key)
+        if expected is None:
+            errors.append(
+                "degree/degrees 语境尚未分类；请按 stable_key 标记为 celsius、"
+                "fahrenheit、angle、academic 或 abstract"
+            )
+        elif expected == "celsius" and not TRANSLATED_CELSIUS.search(translated):
+            errors.append("该语境中的 degree/degrees 指摄氏度，译文必须明确温标")
+        elif expected == "fahrenheit" and not TRANSLATED_FAHRENHEIT.search(translated):
+            errors.append("该语境中的 degree/degrees 指华氏度，译文必须明确温标")
+        elif expected == "angle" and not TRANSLATED_ANGLE.search(translated):
+            errors.append("该语境中的 degree/degrees 指角度，译文必须保留角度单位")
+        elif expected == "academic" and not TRANSLATED_ACADEMIC_DEGREE.search(translated):
+            errors.append("该语境中的 degree 指学位，译文必须保留学位含义")
+        elif expected == "abstract" and not TRANSLATED_ABSTRACT_DEGREE.search(translated):
+            errors.append("该语境中的 degree 指程度，译文必须保留程度含义")
+        elif expected not in {"celsius", "fahrenheit", "angle", "academic", "abstract"}:
+            errors.append(f"未知 degree/degrees 语境分类: {expected!r}")
+    return errors
+
+
 def validate_item(item: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     source = item.get("source_text") or ""
@@ -54,6 +110,7 @@ def validate_item(item: dict[str, Any]) -> list[str]:
         errors.append("translated_text 为空")
     if sha256_text(source) != game.get("source_sha256"):
         errors.append("source_sha256 与 source_text 不一致")
+    errors.extend(validate_temperature_units(item))
     for name, pattern in TOKEN_PATTERNS.items():
         source_tokens = pattern.findall(source)
         translated_tokens = pattern.findall(translated)

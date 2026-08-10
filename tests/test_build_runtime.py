@@ -116,6 +116,38 @@ items_by_key = {
     item.get("extra", {}).get("game", {}).get("stable_key"): item
     for item in build_runtime.iter_items(cache)
 }
+
+fahrenheit_item = items_by_key["dialogue:16/frame:33"]
+assert build_runtime.validate_item(fahrenheit_item) == [], "一千度语境应明确译为华氏度"
+wrong_fahrenheit = deepcopy(fahrenheit_item)
+wrong_fahrenheit["translated_text"] = wrong_fahrenheit["translated_text"].replace(
+    "一千华氏度", "一千度"
+)
+errors = build_runtime.validate_item(wrong_fahrenheit)
+assert any("华氏度" in error for error in errors), "省略 Fahrenheit 温标必须被拒绝"
+
+celsius_item = items_by_key["dialogue:16/frame:32"]
+assert build_runtime.validate_item(celsius_item) == [], "500 Celsius 应明确译为摄氏度"
+wrong_celsius = deepcopy(celsius_item)
+wrong_celsius["translated_text"] = wrong_celsius["translated_text"].replace(
+    "500 摄氏度", "500 度"
+)
+errors = build_runtime.validate_item(wrong_celsius)
+assert any("摄氏度" in error for error in errors), "省略 Celsius 温标必须被拒绝"
+
+academic_degree = items_by_key["dialogue:1126/frame:5"]
+assert build_runtime.validate_item(academic_degree) == [], "学位语境不得被温度校验误伤"
+
+unclassified_degrees = deepcopy(fahrenheit_item)
+unclassified_degrees["source_text"] = "{SPEAKER_AKERS}{PART_000}Turn it 90 degrees."
+unclassified_degrees["translated_text"] = "{SPEAKER_AKERS}{PART_000}把它转 90 度。"
+unclassified_degrees["extra"]["game"]["source_sha256"] = build_runtime.sha256_text(
+    unclassified_degrees["source_text"]
+)
+unclassified_degrees["extra"]["game"]["stable_key"] = "test:unclassified-degrees"
+errors = build_runtime.validate_item(unclassified_degrees)
+assert any("尚未分类" in error for error in errors), "新的 degree/degrees 语境必须先人工分类"
+
 for stable_key, expected in console_expected.items():
     item = items_by_key.get(stable_key)
     assert item is not None, f"控制台提示未被提取：{stable_key}"
@@ -137,4 +169,6 @@ expected_categories = {
 for kind, category in expected_categories.items():
     assert build_runtime.category_for(kind) == category, f"{kind} 运行时分类错误"
 
-print("Build-runtime self-test passed: category, PART, signal and dynamic token validation.")
+print(
+    "Build-runtime self-test passed: category, tokens, ellipsis and temperature-unit validation."
+)
