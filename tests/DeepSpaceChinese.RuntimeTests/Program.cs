@@ -31,6 +31,17 @@ internal static class Program
                 "编译时忽略英文字母大小写必须默认开启");
             Assert(config.PuzzleFixesEnabled,
                 "题面修正功能必须默认开启");
+            Assert(config.MoveNewWordPromptToLowerRight,
+                "新单词命名浮窗移动到右下角必须默认开启");
+            Vector3 promptLast = TermLoggerLayoutEngine.TargetViewportPoint(
+                new Vector3(0.82f, 0.71f, 12f), 2, 3, 0.045f);
+            Vector3 promptFirst = TermLoggerLayoutEngine.TargetViewportPoint(
+                new Vector3(0.82f, 0.62f, 12f), 0, 3, 0.045f);
+            Assert(Math.Abs(promptLast.x - 0.82f) < 0.0001f &&
+                   Math.Abs(promptLast.y - 0.38f) < 0.0001f &&
+                   Math.Abs(promptLast.z - 12f) < 0.0001f &&
+                   Math.Abs(promptFirst.y - 0.47f) < 0.0001f,
+                "新单词浮窗列表必须保持右侧横坐标、深度和原顺序，并从右下角向上排列");
             const string validPuzzleFix =
                 "{\"display_id\":80,\"original_signals\":[-11,1,-2,6]," +
                 "\"replacement_signals\":[-11,1,-2,7],\"note\":\"test\"}";
@@ -271,12 +282,16 @@ internal static class Program
             File.WriteAllText(iniPath,
                 "[Localization]\nToggleModeHotkey=F8\n" +
                 "[Compatibility]\nCompilerCaseInsensitive=false\n" +
+                "[Layout]\nNewWordPromptLowerRight=false\n" +
                 "[PuzzleFixes]\nEnabled=false\n" +
                 "[Font]\nFontSource=File\nFontFile=CustomChinese.otf\n" +
                 "SystemFontCandidates=Test Sans;Test Hei\n");
             config.ReloadCompatibilitySettings(iniPath, log);
             Assert(!config.CompilerCaseInsensitive && !config.PuzzleFixesEnabled,
                 "兼容项和题面修正开关必须能从 INI 热重载");
+            config.ReloadLayoutSettings(iniPath, log);
+            Assert(!config.MoveNewWordPromptToLowerRight,
+                "新单词浮窗位置开关必须能从 INI 热重载");
             config.ReloadFontSettings(iniPath, log);
             Assert(config.FontSource == "File" && config.FontFile == "CustomChinese.otf" &&
                    config.SystemFontCandidates.SequenceEqual(new[] { "Test Sans", "Test Hei" }),
@@ -597,6 +612,17 @@ internal static class Program
                 log);
             config.DisplayMode = DisplayMode.TranslationOnly;
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
+            string nameSignalLocalized = null;
+            foreach (RuntimeTranslationEntry candidate in fullStore.UiTemplates)
+            {
+                if (!UiTemplateRenderer.TryRender(candidate, "NAME SIGNAL -25",
+                        out string candidateText))
+                    continue;
+                nameSignalLocalized = candidateText;
+                break;
+            }
+            Assert(nameSignalLocalized == "为信号 -25 命名",
+                "右侧新单词浮窗 NAME SIGNAL-数字 必须通过动态模板完整翻译");
             Assert(fullUiLocalizer.TranslateCompositeValues("0.33203125") == "0.33203125",
                 "动态 UI 本地化不得删掉八进制转换结果 0.33203125 的前导 0 和小数点");
             Assert(fullUiLocalizer.TranslateCompositeValues(
@@ -693,22 +719,32 @@ internal static class Program
             control.Text.Contains("忽略英文字母大小写"));
         CheckBox puzzleOption = controls.OfType<CheckBox>().Single(control =>
             control.Text.Contains("题目及答案的修正规则"));
+        CheckBox layoutOption = controls.OfType<CheckBox>().Single(control =>
+            control.Text.Contains("新单词命名") && control.Text.Contains("右下角"));
         Label compilerHint = controls.OfType<Label>().Single(control =>
             control.Text.Contains("VAR 可匹配词典中的 var"));
+        Label layoutHint = controls.OfType<Label>().Single(control =>
+            control.Text.Contains("保持列表原有顺序和行距"));
         Label puzzleHint = controls.OfType<Label>().Single(control =>
             control.Text.Contains("题面和答案集可单独修正"));
         Label reloadHint = controls.OfType<Label>().Single(control =>
-            control.Text.Contains("以上兼容项和题目及答案修正规则保存后"));
+            control.Text.Contains("以上兼容项、界面排布和题目及答案修正规则保存后"));
 
-        Assert(!ReferenceEquals(compilerHint, puzzleHint) &&
+        Assert(!ReferenceEquals(compilerHint, layoutHint) &&
+               !ReferenceEquals(layoutHint, puzzleHint) &&
                !ReferenceEquals(puzzleHint, reloadHint) &&
                !ReferenceEquals(compilerHint, reloadHint),
-            "常规页的大小写、题面修正和 F5 说明必须使用三个独立标签");
+            "常规页的大小写、浮窗排布、题面修正和 F5 说明必须使用独立标签");
         Assert(compilerHint.Parent == compilerOption.Parent &&
                compilerHint.Top >= compilerOption.Bottom &&
                compilerHint.Top - compilerOption.Bottom <= 12 &&
-               compilerHint.Bottom <= puzzleOption.Top,
+               compilerHint.Bottom <= layoutOption.Top,
             "大小写兼容说明必须紧跟在对应复选框下方");
+        Assert(layoutHint.Parent == layoutOption.Parent &&
+               layoutHint.Top >= layoutOption.Bottom &&
+               layoutHint.Top - layoutOption.Bottom <= 12 &&
+               layoutHint.Bottom <= puzzleOption.Top,
+            "新单词浮窗列表的排布说明必须紧跟在对应复选框下方");
         Assert(puzzleHint.Parent == puzzleOption.Parent &&
                puzzleHint.Top >= puzzleOption.Bottom &&
                puzzleHint.Top - puzzleOption.Bottom <= 12 &&

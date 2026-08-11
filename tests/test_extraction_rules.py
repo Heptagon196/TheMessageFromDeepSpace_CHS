@@ -72,6 +72,7 @@ templates = {template["source_text"] for template in rules.UI_TEMPLATES}
 assert "Transmission: {DYN_0}, Time: {DYN_1}" in templates
 assert "Atomic Number: {DYN_0}" in templates
 assert "No {DYN_0} in {DYN_1} {DYN_2}" in templates
+assert "NAME SIGNAL {DYN_0}" in templates
 template_policies = {
     template["template_id"]: template.get("translate_display_values", False)
     for template in rules.UI_TEMPLATES

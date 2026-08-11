@@ -15,6 +15,7 @@ internal sealed class EditorSettings
     public bool TranslateUI = true;
     public bool TranslateSystem = true;
     public bool CompilerCaseInsensitive = true;
+    public bool MoveNewWordPromptToLowerRight = true;
     public bool PuzzleFixesEnabled = true;
     public bool DialogueColorsEnabled = true;
     public readonly Dictionary<string, string> Colors = new(StringComparer.OrdinalIgnoreCase)
@@ -46,6 +47,8 @@ internal sealed class EditorSettings
             TranslateSystem = Bool(ini.Get("Localization", "TranslateSystem", "true"), true),
             CompilerCaseInsensitive = Bool(ini.Get("Compatibility",
                 "CompilerCaseInsensitive", "true"), true),
+            MoveNewWordPromptToLowerRight = Bool(ini.Get("Layout",
+                "NewWordPromptLowerRight", "true"), true),
             PuzzleFixesEnabled = Bool(ini.Get("PuzzleFixes", "Enabled", "true"), true),
             DialogueColorsEnabled = Bool(ini.Get("DialogueColors", "Enabled", "true"), true),
             FontSource = ini.Get("Font", "FontSource", "Auto"),
@@ -71,6 +74,8 @@ internal sealed class EditorSettings
         ini.Set("Localization", "TranslateSystem", TranslateSystem.ToString().ToLowerInvariant());
         ini.Set("Compatibility", "CompilerCaseInsensitive",
             CompilerCaseInsensitive.ToString().ToLowerInvariant());
+        ini.Set("Layout", "NewWordPromptLowerRight",
+            MoveNewWordPromptToLowerRight.ToString().ToLowerInvariant());
         ini.Set("PuzzleFixes", "Enabled", PuzzleFixesEnabled.ToString().ToLowerInvariant());
         ini.Set("DialogueColors", "Enabled", DialogueColorsEnabled.ToString().ToLowerInvariant());
         foreach (KeyValuePair<string, string> pair in Colors)

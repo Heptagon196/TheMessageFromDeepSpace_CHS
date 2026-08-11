@@ -30,6 +30,7 @@ internal sealed class PatchConfig
     public bool TranslateUI { get; private set; } = true;
     public bool TranslateSystem { get; private set; } = true;
     public bool CompilerCaseInsensitive { get; private set; } = true;
+    public bool MoveNewWordPromptToLowerRight { get; private set; } = true;
     public bool PuzzleFixesEnabled { get; private set; } = true;
     public KeyboardShortcut ToggleModeHotkey { get; private set; } = KeyboardShortcut.Deserialize("F8");
     public KeyboardShortcut ReloadTranslationsHotkey { get; private set; } = KeyboardShortcut.Deserialize("F5");
@@ -60,6 +61,8 @@ internal sealed class PatchConfig
             TranslateSystem = GetBool(values, "Localization.TranslateSystem", true),
             CompilerCaseInsensitive = GetBool(values,
                 "Compatibility.CompilerCaseInsensitive", true),
+            MoveNewWordPromptToLowerRight = GetBool(values,
+                "Layout.NewWordPromptLowerRight", true),
             PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true),
             FontSource = Get(values, "Font.FontSource", "Auto"),
             BundledFont = Get(values, "Font.BundledFont", @"Fonts\fusion-pixel-12px-proportional-zh_hans.otf"),
@@ -119,6 +122,13 @@ internal sealed class PatchConfig
         CompilerCaseInsensitive = GetBool(values,
             "Compatibility.CompilerCaseInsensitive", true);
         PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true);
+    }
+
+    public void ReloadLayoutSettings(string path, ManualLogSource log)
+    {
+        var values = ReadIni(path, log);
+        MoveNewWordPromptToLowerRight = GetBool(values,
+            "Layout.NewWordPromptLowerRight", true);
     }
 
     public string SpeakerColor(Speaker speaker) => speaker switch

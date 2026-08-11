@@ -859,19 +859,19 @@ def extract_ui(
     for template in UI_TEMPLATES:
         source = str(template["source_text"])
         template_id = str(template["template_id"])
+        template_extra = {
+            "template_id": template_id,
+            "original_text": source,
+            "protect_player_name": False,
+        }
+        if template.get("translate_display_values", False):
+            template_extra["translate_display_values"] = True
         groups["ui.templates"].append(
             cache_item(
                 stable_key=f"ui-template:{template_id}",
                 source_text=source,
                 kind="ui_template",
-                game_extra={
-                    "template_id": template_id,
-                    "original_text": source,
-                    "protect_player_name": False,
-                    "translate_display_values": bool(
-                        template.get("translate_display_values", False)
-                    ),
-                },
+                game_extra=template_extra,
                 used_indexes=used_indexes,
             )
         )

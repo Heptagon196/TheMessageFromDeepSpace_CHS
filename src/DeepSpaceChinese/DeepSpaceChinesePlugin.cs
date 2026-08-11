@@ -14,12 +14,14 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.64";
+    public const string PluginVersion = "0.1.65";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
     internal bool CompilerCaseInsensitiveEnabled =>
         _patchConfig?.Enabled == true && _patchConfig.CompilerCaseInsensitive;
+    internal bool MoveNewWordPromptToLowerRightEnabled =>
+        _patchConfig?.Enabled == true && _patchConfig.MoveNewWordPromptToLowerRight;
 
     private PatchConfig _patchConfig;
     private DialogueFrameCatalog _frameCatalog;
@@ -131,6 +133,11 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _patchConfig.ReloadFontSettings(_configPath, Logger);
         _patchConfig.ReloadDialogueColorSettings(_configPath, Logger);
         _patchConfig.ReloadCompatibilitySettings(_configPath, Logger);
+        _patchConfig.ReloadLayoutSettings(_configPath, Logger);
+        if (_patchConfig.MoveNewWordPromptToLowerRight)
+            TermLoggerLayoutRuntime.ApplyCurrentLists();
+        else
+            TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes.ReloadRules();
         _dialogueLayout.ReapplySpeakerColors();
         bool fontReady = _font.ReloadIfChanged(out bool fontReloaded);
@@ -190,6 +197,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         _mainMenuLayout?.RestoreAll();
+        TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes?.RestoreAll();
         _harmony?.UnpatchSelf();
         if (ReferenceEquals(Instance, this))

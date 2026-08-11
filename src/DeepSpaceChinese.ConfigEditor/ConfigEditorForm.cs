@@ -33,6 +33,10 @@ internal sealed class ConfigEditorForm : Form
     {
         Text = "应用已知错误题目及答案的修正规则（推荐）", AutoSize = true,
     };
+    private readonly CheckBox _newWordPromptLowerRight = new()
+    {
+        Text = "把“新单词命名”浮窗列表移到右下角（推荐）", AutoSize = true,
+    };
     private readonly CheckBox _colorsEnabled = new() { Text = "按说话者给对白着色", AutoSize = true };
     private readonly Dictionary<string, TextBox> _colorBoxes = new(StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, Button> _colorButtons = new(StringComparer.OrdinalIgnoreCase);
@@ -45,7 +49,7 @@ internal sealed class ConfigEditorForm : Form
     public ConfigEditorForm(string iniPath)
     {
         _iniPath = iniPath;
-        Text = "《来自深空的讯息》汉化配置工具 v0.1.64";
+        Text = "《来自深空的讯息》汉化配置工具 v0.1.65";
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(650, 540);
         ClientSize = new Size(720, 590);
@@ -107,12 +111,16 @@ internal sealed class ConfigEditorForm : Form
         table.SetColumnSpan(_compilerCaseInsensitive, 3);
         AddFullWidthHint(table, 6,
             "启用后，VAR 可匹配词典中的 var；精确拼写仍优先，存在歧义时不会误选。");
-        table.Controls.Add(_puzzleFixes, 0, 7);
-        table.SetColumnSpan(_puzzleFixes, 3);
+        table.Controls.Add(_newWordPromptLowerRight, 0, 7);
+        table.SetColumnSpan(_newWordPromptLowerRight, 3);
         AddFullWidthHint(table, 8,
+            "保持列表原有顺序和行距，从右下角向上排列，避免遮挡右上方控制台输出。");
+        table.Controls.Add(_puzzleFixes, 0, 9);
+        table.SetColumnSpan(_puzzleFixes, 3);
+        AddFullWidthHint(table, 10,
             "题面和答案集可单独修正；两者都填写时，原题面和原始答案集必须同时匹配才会替换。");
-        AddFullWidthHint(table, 9,
-            "以上兼容项和题目及答案修正规则保存后，可在游戏中按 F5 重载。", false);
+        AddFullWidthHint(table, 11,
+            "以上兼容项、界面排布和题目及答案修正规则保存后，可在游戏中按 F5 重载。", false);
         page.Controls.Add(table);
         return page;
     }
@@ -198,7 +206,7 @@ internal sealed class ConfigEditorForm : Form
             }
             settings.ApplyTo(_document);
             _document.SaveAtomic(_iniPath);
-            SetStatus("已保存。翻译、字体、角色颜色、兼容项和题目及答案修正规则可在游戏中按 F5 应用。", true);
+            SetStatus("已保存。翻译、字体、角色颜色、兼容项、界面排布和题目及答案修正规则可在游戏中按 F5 应用。", true);
             if (close)
                 Close();
         }
@@ -237,6 +245,7 @@ internal sealed class ConfigEditorForm : Form
             TranslateUI = _ui.Checked,
             TranslateSystem = _system.Checked,
             CompilerCaseInsensitive = _compilerCaseInsensitive.Checked,
+            MoveNewWordPromptToLowerRight = _newWordPromptLowerRight.Checked,
             PuzzleFixesEnabled = _puzzleFixes.Checked,
             DialogueColorsEnabled = _colorsEnabled.Checked,
             FontSource = Convert.ToString(_fontSource.SelectedItem) ?? "Auto",
@@ -260,6 +269,7 @@ internal sealed class ConfigEditorForm : Form
         _ui.Checked = settings.TranslateUI;
         _system.Checked = settings.TranslateSystem;
         _compilerCaseInsensitive.Checked = settings.CompilerCaseInsensitive;
+        _newWordPromptLowerRight.Checked = settings.MoveNewWordPromptToLowerRight;
         _puzzleFixes.Checked = settings.PuzzleFixesEnabled;
         _colorsEnabled.Checked = settings.DialogueColorsEnabled;
         foreach (KeyValuePair<string, TextBox> pair in _colorBoxes)

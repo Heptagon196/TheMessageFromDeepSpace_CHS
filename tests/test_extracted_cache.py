@@ -19,7 +19,7 @@ def iter_items(cache: dict):
 cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
 items = list(iter_items(cache))
 
-assert len(items) == 12_510
+assert len(items) == 12_511
 
 text_indices = [item["text_index"] for item in items]
 stable_keys = [item["extra"]["game"]["stable_key"] for item in items]
@@ -41,7 +41,7 @@ assert kind_counts == {
     "achievement_name": 36,
     "achievement_description": 39,
     "display_value": 1_279,
-    "ui_template": 13,
+    "ui_template": 14,
     "ui_fragment": 10,
 }
 
@@ -102,6 +102,7 @@ assert template_ids == {
     "invalid-transmission",
     "missing-visual",
     "name-dictionary-term",
+    "name-signal",
     "puzzle-group",
     "save-path",
     "universal-abundance",
@@ -125,6 +126,6 @@ for item in translatable:
     assert not re.search(r"\bSIGNAL_-?\d+\b", source), item["extra"]["game"]["stable_key"]
 
 print(
-    "Extracted-cache audit passed: 12,510 unique items, recovered component data, "
+    "Extracted-cache audit passed: 12,511 unique items, recovered component data, "
     "dynamic UI, display data and protected gameplay state."
 )
