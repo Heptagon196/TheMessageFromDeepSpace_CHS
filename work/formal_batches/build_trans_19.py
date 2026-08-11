@@ -98,7 +98,7 @@ TRANSLATIONS = {
     "Copied {DYN_0} to Clipboard": "已将 {DYN_0} 复制到剪贴板",
     "Your colleagues have some ideas for what these signals mean...": "同事们对这些信号的含义有了一些想法...",
     "View the hypotheses inside each entry in the dictionary. (Dictionary -> Entry Notes -> Hypotheses)":
-        "可在词典各条目中查看假说。\n（词典 → 条目注释 → 假说）",
+        "<size=80%>可在词典各条目中查看假说。\n（词典 → 条目注释 → 假说）</size>",
     "Freq #": "频率 #",
     " Hz": " Hz",
     "DATA MISSING": "数据缺失",

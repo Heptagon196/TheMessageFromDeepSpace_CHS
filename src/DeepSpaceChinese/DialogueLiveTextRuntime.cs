@@ -36,13 +36,38 @@ internal sealed class DialogueTextMap
             : _toOriginal;
         if (!index.TryGetValue(proposed, out mapped))
         {
-            sourceLength = proposed.Length;
-            targetLength = proposed.Length;
+            sourceLength = VisibleLength(proposed);
+            targetLength = sourceLength;
             return false;
         }
-        sourceLength = proposed.Length;
-        targetLength = mapped.Length;
+        sourceLength = VisibleLength(proposed);
+        targetLength = VisibleLength(mapped);
         return true;
+    }
+
+    internal static int VisibleLength(string value)
+    {
+        if (string.IsNullOrEmpty(value))
+            return 0;
+        int count = 0;
+        bool insideTag = false;
+        for (int index = 0; index < value.Length; index++)
+        {
+            char current = value[index];
+            if (!insideTag && current == '<')
+            {
+                insideTag = true;
+                continue;
+            }
+            if (insideTag)
+            {
+                if (current == '>')
+                    insideTag = false;
+                continue;
+            }
+            count++;
+        }
+        return count;
     }
 
     public static int ScaleVisibleCharacters(int visible, int sourceLength, int targetLength)
@@ -61,6 +86,38 @@ internal sealed class DialogueTextMap
         int producerVisible = ScaleVisibleCharacters(visible,
             oldTargetLength <= 0 ? producerLength : oldTargetLength, producerLength);
         return ScaleVisibleCharacters(producerVisible, producerLength, newTargetLength);
+    }
+
+    public static bool TryRetarget(DialogueTextMap current, DialogueTextMap replacement,
+        string proposed, DisplayMode target, out string mapped)
+    {
+        mapped = proposed ?? string.Empty;
+        if (current == null || replacement == null)
+            return false;
+        if (!current.TryMap(mapped, DisplayMode.OriginalOnly, out string canonical,
+                out _, out _))
+            canonical = mapped;
+        return replacement.TryMap(canonical, target, out mapped, out _, out _);
+    }
+
+    public void ImportRetargetAliases(DialogueTextMap previous)
+    {
+        if (previous == null || ReferenceEquals(previous, this))
+            return;
+        var oldStates = new HashSet<string>(previous._toOriginal.Keys, StringComparer.Ordinal);
+        oldStates.UnionWith(previous._toTranslation.Keys);
+        foreach (string oldState in oldStates)
+        {
+            if (!previous.TryMap(oldState, DisplayMode.OriginalOnly,
+                    out string canonical, out _, out _) ||
+                !TryMap(canonical, DisplayMode.OriginalOnly,
+                    out string newOriginal, out _, out _) ||
+                !TryMap(canonical, DisplayMode.TranslationOnly,
+                    out string newTranslation, out _, out _))
+                continue;
+            AddUnambiguous(_toOriginal, _ambiguousOriginal, oldState, newOriginal);
+            AddUnambiguous(_toTranslation, _ambiguousTranslation, oldState, newTranslation);
+        }
     }
 
     private void AddStatePairs(IReadOnlyList<string> original,
@@ -127,6 +184,18 @@ internal sealed class DialogueTextMap
     }
 }
 
+internal readonly struct DialogueLiteralPair
+{
+    public DialogueLiteralPair(string original, string translated)
+    {
+        Original = original ?? string.Empty;
+        Translated = translated ?? string.Empty;
+    }
+
+    public string Original { get; }
+    public string Translated { get; }
+}
+
 internal sealed class DialogueLiveTextRuntime
 {
     private sealed class TrackedText
@@ -137,6 +206,12 @@ internal sealed class DialogueLiveTextRuntime
         public string ProducerText;
         public int SourceLength;
         public int TargetLength;
+        public bool RefreshFromCatalog;
+        public DialogueFrame CatalogFrame;
+        public Func<DialogueFramePair, DialogueFramePair> RebuildDisplayPair;
+        public string RepeatedPrefix;
+        public string LiteralOriginal;
+        public Func<string, DialogueLiteralPair?> RebuildLiteralPair;
     }
 
     private static readonly FieldInfo MainSubtitleField =
@@ -155,29 +230,33 @@ internal sealed class DialogueLiveTextRuntime
         _log = log;
     }
 
-    public void TrackMain(DialogueManager manager, DialogueFrame original,
-        DialogueFrame translated)
+    public void TrackMain(DialogueManager manager, DialogueFrame catalogFrame,
+        DialogueFrame original, DialogueFrame translated,
+        Func<DialogueFramePair, DialogueFramePair> rebuildDisplayPair)
     {
-        Track(MainSubtitleField?.GetValue(manager) as TMP_Text, original, translated,
-            string.Empty);
+        Track(MainSubtitleField?.GetValue(manager) as TMP_Text, catalogFrame,
+            original, translated, string.Empty, rebuildDisplayPair);
     }
 
-    public void TrackNonLog(NonLogDialogueManager manager, DialogueFrame original,
-        DialogueFrame translated)
+    public void TrackNonLog(NonLogDialogueManager manager, DialogueFrame catalogFrame,
+        DialogueFrame original, DialogueFrame translated,
+        Func<DialogueFramePair, DialogueFramePair> rebuildDisplayPair)
     {
         string prefix = DialogueManager.GetSpeakerNameDr(original.speaker) + ": ";
-        Track(NonLogSubtitleField?.GetValue(manager) as TMP_Text, original, translated, prefix);
+        Track(NonLogSubtitleField?.GetValue(manager) as TMP_Text, catalogFrame,
+            original, translated, prefix, rebuildDisplayPair);
     }
 
     public void TrackCharacter(TMP_Text component, DialogueFrame original,
         DialogueFrame translated)
     {
-        Track(component, original, translated, string.Empty);
+        Track(component, original, original, translated, string.Empty, pair => pair);
     }
 
-    public void TrackLiteral(TMP_Text component, string original, string translated)
+    public void TrackLiteral(TMP_Text component, string original, string translated,
+        Func<string, DialogueLiteralPair?> rebuildLiteralPair = null)
     {
-        Track(component,
+        Track(component, default,
             new DialogueFrame
             {
                 dialogueParts = new[] { new DialoguePart { txt = original ?? string.Empty } },
@@ -185,7 +264,7 @@ internal sealed class DialogueLiveTextRuntime
             new DialogueFrame
             {
                 dialogueParts = new[] { new DialoguePart { txt = translated ?? string.Empty } },
-            }, string.Empty);
+            }, string.Empty, null, original, rebuildLiteralPair);
     }
 
     public bool TryTranslate(TMP_Text component, string proposed, out string translated)
@@ -254,8 +333,44 @@ internal sealed class DialogueLiveTextRuntime
         }
     }
 
-    private void Track(TMP_Text component, DialogueFrame original, DialogueFrame translated,
-        string prefix)
+    public void RefreshFrameMappings(DialogueFrameCatalog catalog)
+    {
+        if (catalog == null)
+            return;
+        foreach (TrackedText state in _tracked.Values)
+        {
+            if (state.Component == null)
+                continue;
+            DialogueFramePair displayPair;
+            if (state.RefreshFromCatalog && state.RebuildDisplayPair != null &&
+                catalog.TryGet(state.CatalogFrame, out DialogueFramePair updatedPair))
+            {
+                displayPair = state.RebuildDisplayPair(updatedPair);
+            }
+            else if (state.RebuildLiteralPair != null &&
+                     state.RebuildLiteralPair(state.LiteralOriginal) is
+                         DialogueLiteralPair literalPair)
+            {
+                displayPair = new DialogueFramePair(
+                    LiteralFrame(literalPair.Original), LiteralFrame(literalPair.Translated));
+            }
+            else
+            {
+                continue;
+            }
+            DialogueTextMap replacement = DialogueTextMap.Create(
+                ToLayoutParts(displayPair.Original), ToLayoutParts(displayPair.Translated),
+                state.RepeatedPrefix, ResolveRuntimeText);
+            replacement.ImportRetargetAliases(state.Map);
+            state.Map = replacement;
+        }
+    }
+
+    private void Track(TMP_Text component, DialogueFrame catalogFrame,
+        DialogueFrame original, DialogueFrame translated, string prefix,
+        Func<DialogueFramePair, DialogueFramePair> rebuildDisplayPair,
+        string literalOriginal = null,
+        Func<string, DialogueLiteralPair?> rebuildLiteralPair = null)
     {
         if (component == null)
             return;
@@ -266,6 +381,12 @@ internal sealed class DialogueLiveTextRuntime
                 Component = component,
                 Map = DialogueTextMap.Create(ToLayoutParts(original), ToLayoutParts(translated),
                     prefix, ResolveRuntimeText),
+                RefreshFromCatalog = rebuildDisplayPair != null,
+                CatalogFrame = catalogFrame,
+                RebuildDisplayPair = rebuildDisplayPair,
+                RepeatedPrefix = prefix ?? string.Empty,
+                LiteralOriginal = literalOriginal,
+                RebuildLiteralPair = rebuildLiteralPair,
             };
         }
         catch (Exception ex)
@@ -273,6 +394,11 @@ internal sealed class DialogueLiveTextRuntime
             _log.LogWarning($"无法跟踪当前对白的语言切换：{ex.Message}");
         }
     }
+
+    private static DialogueFrame LiteralFrame(string text) => new()
+    {
+        dialogueParts = new[] { new DialoguePart { txt = text ?? string.Empty } },
+    };
 
     private static DialogueLayoutPart[] ToLayoutParts(DialogueFrame frame)
     {

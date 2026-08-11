@@ -660,12 +660,25 @@ internal static class Program
                 log);
             config.DisplayMode = DisplayMode.TranslationOnly;
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
+            Assert(fullStore.TryGet("dialogue:55/frame:3",
+                       out RuntimeTranslationEntry dopplerJournal) &&
+                   TokenCodec.TrySplitFrameTranslation(dopplerJournal.TranslatedText, 12,
+                       string.Empty, out string[] dopplerJournalParts) &&
+                   dopplerJournalParts.All(part =>
+                       part.StartsWith("<size=85%>", StringComparison.Ordinal) &&
+                       part.EndsWith("</size>", StringComparison.Ordinal)),
+                "超长多普勒日记的每个 PART 都必须独立闭合字号标签，不能跨 PART 包裹");
             Assert(fullStore.TryGet(
-                       "system:ControlRoom:Hypotheses Log:component:1:field:viewInDict_s",
-                       out RuntimeTranslationEntry hypothesesInstruction) &&
+                   "system:ControlRoom:Hypotheses Log:component:1:field:viewInDict_s",
+                   out RuntimeTranslationEntry hypothesesInstruction) &&
                    hypothesesInstruction.TranslatedText ==
-                   "可在词典各条目中查看假说。\n（词典 → 条目注释 → 假说）",
-                "章节总结的词典假说提示必须显式分为两行，不能依赖英文空格自动换行");
+                   "<size=80%>可在词典各条目中查看假说。\n（词典 → 条目注释 → 假说）</size>" &&
+                   fullStore.TryGet(
+                       "ui:ControlRoom:Progress Log (Canvas) (start inactive)/Hypotheses Log (start inactive)[4]/View in Dict[1]:component:2",
+                       out RuntimeTranslationEntry hypothesesInstructionUi) &&
+                   hypothesesInstructionUi.TranslatedText ==
+                   "<size=80%>可在词典各条目中查看假说。\n（词典 -> 条目注释 -> 假说）</size>",
+                "章节总结的词典假说提示必须显式分为两行并缩小字号，不能依赖英文空格自动换行");
             Assert(fullStore.TryGet(
                        "ui:ControlRoom:Reference Window/WHITEDWARF STAR PAGE[38]/Area[0]/STUFF[1]:component:2",
                        out RuntimeTranslationEntry whiteDwarfReference) &&
@@ -951,6 +964,10 @@ internal static class Program
 
     private static void RunLiveDialogueSwitchTests()
     {
+        Assert(JournalPreviewId.TryNormalize(" dialogue:55/frame:3 ",
+                   out string previewId) && previewId == "dialogue:55/frame:3" &&
+               !JournalPreviewId.TryNormalize("55/3", out _),
+            "F6 日志预览必须只接受可审计的 dialogue:<id>/frame:<id> 稳定键");
         DialogueLayoutPart[] original =
         {
             new DialogueLayoutPart("Hello, ", 0f, false, 0f),
@@ -971,10 +988,28 @@ internal static class Program
         Assert(map.TryMap("Next page.", DisplayMode.TranslationOnly, out string chinese,
                    out _, out _) && chinese == "下一页。",
             "当前英文对白必须能即时映射为中文，并正确处理清屏后的新页");
+        DialogueTextMap refreshedMap = DialogueTextMap.Create(original,
+            new[]
+            {
+                new DialogueLayoutPart("您好，", 0f, false, 0f),
+                new DialogueLayoutPart("新世界。", 0f, false, 0f),
+                new DialogueLayoutPart("新的一页。", 0f, true, 0f),
+            }, string.Empty, value => value);
+        Assert(DialogueTextMap.TryRetarget(map, refreshedMap, "你好，世界。",
+                   DisplayMode.TranslationOnly, out string refreshed) &&
+               refreshed == "您好，新世界。",
+            "F5 重载后必须先把屏幕上的旧译文映射回原文，再映射为新译文");
+        refreshedMap.ImportRetargetAliases(map);
+        Assert(refreshedMap.TryMap("你好，世界。", DisplayMode.TranslationOnly,
+                   out string continuedAfterReload, out _, out _) &&
+               continuedAfterReload == "您好，新世界。",
+            "F5 后仍在运行的逐字协程会继续提交旧译文，刷新映射必须保留旧状态别名");
         Assert(DialogueTextMap.ScaleVisibleCharacters(chineseLength, chineseLength,
                    englishLength) == englishLength &&
                DialogueTextMap.ScaleVisibleCharacters(3, 6, 12) == 6,
             "切换语言时必须同比换算逐字显示进度，不能截断更长的英文");
+        Assert(DialogueTextMap.VisibleLength("<size=85%>你好，世界。</size>") == 6,
+            "逐字进度换算必须忽略 TMP 富文本标签，否则 F5/F8 会把字号标签算成可见字符");
         DialogueTextMap titleMap = DialogueTextMap.Create(
             new[] { new DialogueLayoutPart("Alan's Journal: ", 0f, false, 0f) },
             new[] { new DialogueLayoutPart("艾伦的手记：", 0f, false, 0f) },

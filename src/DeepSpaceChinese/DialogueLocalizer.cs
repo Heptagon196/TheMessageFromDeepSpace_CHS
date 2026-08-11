@@ -170,7 +170,7 @@ internal sealed class DialogueLocalizer
                     translatedFrame.dialogueParts[partIndex].txt = translatedDisplayParts[partIndex];
                 }
                 if (_config.TranslateDialogue)
-                    _frameCatalog.Register(originalDisplayFrame, translatedFrame);
+                    _frameCatalog.Register(originalDisplayFrame, translatedFrame, key);
                 displayFrames[frameIndex] = _config.DisplayMode == DisplayMode.TranslationOnly
                     ? translatedFrame
                     : originalDisplayFrame;

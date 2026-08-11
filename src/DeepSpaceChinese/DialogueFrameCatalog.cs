@@ -20,23 +20,31 @@ internal readonly struct DialogueFramePair
 internal sealed class DialogueFrameCatalog
 {
     private readonly Dictionary<string, DialogueFramePair> _pairs = new(StringComparer.Ordinal);
+    private readonly Dictionary<string, DialogueFramePair> _stablePairs = new(StringComparer.Ordinal);
     private readonly HashSet<string> _ambiguous = new(StringComparer.Ordinal);
 
     public void Clear()
     {
         _pairs.Clear();
+        _stablePairs.Clear();
         _ambiguous.Clear();
     }
 
-    public void Register(DialogueFrame original, DialogueFrame translated)
+    public void Register(DialogueFrame original, DialogueFrame translated,
+        string stableKey = null)
     {
         var pair = new DialogueFramePair(original, translated);
         RegisterKey(FrameKey(original), pair);
         RegisterKey(FrameKey(translated), pair);
+        if (!string.IsNullOrWhiteSpace(stableKey))
+            _stablePairs[stableKey] = pair;
     }
 
     public bool TryGet(DialogueFrame current, out DialogueFramePair pair) =>
         _pairs.TryGetValue(FrameKey(current), out pair);
+
+    public bool TryGet(string stableKey, out DialogueFramePair pair) =>
+        _stablePairs.TryGetValue(stableKey ?? string.Empty, out pair);
 
     private void RegisterKey(string key, DialogueFramePair pair)
     {

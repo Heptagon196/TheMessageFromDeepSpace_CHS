@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.73";
+    public const string PluginVersion = "0.1.74";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -36,6 +36,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     private DialogueLayoutRuntime _dialogueLayout;
     private PlayerNameRuntime _playerName;
     private PuzzleFixRuntime _puzzleFixes;
+    private JournalPreviewRuntime _journalPreview;
     private Harmony _harmony;
     private string _translationDirectory;
     private string _configPath;
@@ -62,6 +63,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
         _playerName = new PlayerNameRuntime(_patchConfig, Logger);
         _puzzleFixes = new PuzzleFixRuntime(_patchConfig, fixDirectory, Logger);
+        _journalPreview = new JournalPreviewRuntime(this, _frameCatalog);
         _puzzleFixes.ReloadRules();
 
         _harmony = new Harmony(PluginGuid);
@@ -90,11 +92,18 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             if (!_patchConfig.ReloadTranslationsHotkey.Equals(BepInEx.Configuration.KeyboardShortcut.Empty) &&
                 _patchConfig.ReloadTranslationsHotkey.IsDown())
                 ReloadTranslations();
+            if (Input.GetKeyDown(KeyCode.F6))
+                _journalPreview?.Toggle();
         }
         catch (Exception ex)
         {
             Logger.LogError($"处理汉化快捷键时发生错误：\n{ex}");
         }
+    }
+
+    private void OnGUI()
+    {
+        _journalPreview?.DrawGui();
     }
 
     private void LateUpdate()
@@ -162,6 +171,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
         _referencePageLayout.ApplyAll();
+        _liveDialogueText.RefreshFrameMappings(_frameCatalog);
         _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
@@ -218,6 +228,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _referencePageLayout?.RestoreAll();
         TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes?.RestoreAll();
+        _journalPreview?.Dispose();
         _harmony?.UnpatchSelf();
         if (ReferenceEquals(Instance, this))
             Instance = null;
@@ -379,7 +390,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         {
             DialogueFrame original = _dialogueLayout.FitMain(manager, pair.Original);
             DialogueFrame translated = _dialogueLayout.FitMain(manager, pair.Translated);
-            _liveDialogueText?.TrackMain(manager, original, translated);
+            _liveDialogueText?.TrackMain(manager, pair.Original, original, translated,
+                updated => new DialogueFramePair(
+                    _dialogueLayout.FitMain(manager, updated.Original),
+                    _dialogueLayout.FitMain(manager, updated.Translated)));
             return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
                 ? translated
                 : original;
@@ -396,7 +410,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         {
             DialogueFrame original = _dialogueLayout.FitNonLog(manager, pair.Original);
             DialogueFrame translated = _dialogueLayout.FitNonLog(manager, pair.Translated);
-            _liveDialogueText?.TrackNonLog(manager, original, translated);
+            _liveDialogueText?.TrackNonLog(manager, pair.Original, original, translated,
+                updated => new DialogueFramePair(
+                    _dialogueLayout.FitNonLog(manager, updated.Original),
+                    _dialogueLayout.FitNonLog(manager, updated.Translated)));
             return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
                 ? translated
                 : original;
@@ -424,7 +441,13 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         if (_ui != null && _ui.TryResolveSystemLiteralPair(proposed,
                 out string original, out string translated))
         {
-            _liveDialogueText?.TrackLiteral(label, original, translated);
+            _liveDialogueText?.TrackLiteral(label, original, translated, source =>
+            {
+                return _ui != null && _ui.TryResolveSystemLiteralPair(source,
+                    out string refreshedOriginal, out string refreshedTranslated)
+                    ? new DialogueLiteralPair(refreshedOriginal, refreshedTranslated)
+                    : null;
+            });
             return _patchConfig.DisplayMode == DisplayMode.TranslationOnly
                 ? translated
                 : original;

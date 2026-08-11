@@ -90,7 +90,7 @@ def main() -> None:
         243: "传输：............................0",
         244: "已命名词语：THE、MESSAGE、FROM、DEEP、SPACE、APPLES、IN、MY、PANTS",
         245: "第一周", 246: "同事们对这些信号的含义有了一些想法...",
-        247: "可在词典各条目中查看假说。\n（词典 -> 条目注释 -> 假说）",
+        247: "<size=80%>可在词典各条目中查看假说。\n（词典 -> 条目注释 -> 假说）</size>",
         248: "艾伦的手记：", 249: "巴蒂斯塔的日志：asef\nasdf\nasdf\nasdasdfasdfasdfasdfasdfaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
         250: "巴蒂斯塔的日志：", 251: "凯莉的日记：asef\nasdf\nasdf\nasdasdfasdfasdfasdfasdfaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
         252: "凯莉的日记：", 253: "多普勒的报告：asef\nasdf\nasdf\nasdasdfasdfasdfasdfasdfaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\nasdfasd\nfasdfasd\nfasd\nfas\ndfa\nsdf\nasdfasdfafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
