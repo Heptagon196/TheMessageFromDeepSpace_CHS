@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.77";
+    public const string PluginVersion = "0.1.78";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -296,6 +296,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             translated = _ui?.TranslateRuntimeSentinels(translated) ?? translated;
             bool usesCharacterFont = _characterFonts?.Contains(component?.font) == true;
             ApplyInterfaceFont(component, translated);
+            ApplyHypothesesTextLayout(component);
             return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
                 usesCharacterFont);
         }
@@ -303,8 +304,23 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         translated = _ui?.TranslateRuntimeSentinels(translated) ?? translated;
         bool usesRoleFont = _characterFonts?.Contains(component?.font) == true;
         ApplyInterfaceFont(component, translated);
+        ApplyHypothesesTextLayout(component);
         return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
             usesRoleFont);
+    }
+
+    private static void ApplyHypothesesTextLayout(TMP_Text component)
+    {
+        if (component == null)
+            return;
+        DictionaryHypothesesLog log =
+            component.GetComponentInParent<DictionaryHypothesesLog>(true);
+        if (log == null ||
+            (component != log.haveUnlockedLabel && component != log.viewInDictLabel))
+            return;
+        component.richText = true;
+        component.textWrappingMode = TextWrappingModes.Normal;
+        component.overflowMode = TextOverflowModes.Overflow;
     }
 
     internal string PrepareAnalogBannerText(string source) =>

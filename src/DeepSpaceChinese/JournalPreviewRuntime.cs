@@ -16,6 +16,14 @@ internal static class JournalPreviewId
             stableKey = "hypotheses";
             return true;
         }
+        const string hypothesesPrefix = "hypotheses:";
+        if (value.StartsWith(hypothesesPrefix, StringComparison.OrdinalIgnoreCase) &&
+            int.TryParse(value.Substring(hypothesesPrefix.Length), out int clusterIndex) &&
+            clusterIndex >= 0)
+        {
+            stableKey = $"hypotheses:{clusterIndex}";
+            return true;
+        }
         const string prefix = "dialogue:";
         const string middle = "/frame:";
         if (!value.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
@@ -121,7 +129,7 @@ internal sealed class JournalPreviewRuntime
 
         GUI.Box(rect, "Journal preview (F6)");
         GUI.Label(new Rect(rect.x + 18f, rect.y + 34f, width - 36f, 24f),
-            "Stable ID, e.g. dialogue:55/frame:3 or hypotheses");
+            "Stable ID: dialogue:55/frame:3, hypotheses, or hypotheses:6");
         GUI.SetNextControlName("JournalPreviewId");
         _input = GUI.TextField(new Rect(rect.x + 18f, rect.y + 60f,
             width - 36f, 28f), _input ?? string.Empty);
@@ -143,7 +151,7 @@ internal sealed class JournalPreviewRuntime
             _message = "Invalid ID";
             return;
         }
-        if (stableKey == "hypotheses")
+        if (stableKey.StartsWith("hypotheses", StringComparison.Ordinal))
         {
             ShowHypotheses(stableKey);
             return;
@@ -218,12 +226,23 @@ internal sealed class JournalPreviewRuntime
         hypotheses.group.SetActive(true);
         hypotheses.haveUnlockedLabel.text = _plugin.PrepareGenericTypedText(
             hypotheses.haveUnlockedLabel, hypotheses.haveUnlocked_s);
+        hypotheses.haveUnlockedLabel.richText = true;
+        hypotheses.haveUnlockedLabel.textWrappingMode = TextWrappingModes.Normal;
+        hypotheses.haveUnlockedLabel.overflowMode = TextOverflowModes.Overflow;
         hypotheses.haveUnlockedLabel.maxVisibleCharacters = int.MaxValue;
         hypotheses.viewInDictLabel.text = _plugin.PrepareGenericTypedText(
             hypotheses.viewInDictLabel, hypotheses.viewInDict_s);
+        hypotheses.viewInDictLabel.richText = true;
+        hypotheses.viewInDictLabel.textWrappingMode = TextWrappingModes.Normal;
+        hypotheses.viewInDictLabel.overflowMode = TextOverflowModes.Overflow;
         hypotheses.viewInDictLabel.maxVisibleCharacters = int.MaxValue;
-        DictionaryHypotheses.TermCluster cluster =
-            hypotheses.dictionaryHypotheses.TermClusterExceeded;
+        if (!TrySelectHypothesesCluster(hypotheses.dictionaryHypotheses, stableKey,
+                out DictionaryHypotheses.TermCluster cluster, out int clusterIndex))
+        {
+            hypotheses.Close();
+            _message = "Hypotheses cluster not found";
+            return;
+        }
         if (cluster.terms != null && cluster.terms.Length != 0)
             _hypothesesRoutine = _plugin.StartCoroutine(hypotheses.SpawnAllWords(cluster));
         if (_progressLog.continueButton != null)
@@ -233,7 +252,29 @@ internal sealed class JournalPreviewRuntime
         _promptOpen = false;
         _previewActive = true;
         _hypothesesPreviewActive = true;
-        _plugin.PluginLog.LogMessage("F6 假说说明页预览已打开；再次按 F6 关闭。");
+        _plugin.PluginLog.LogMessage(
+            $"F6 假说说明页预览已打开：词群 {clusterIndex}；再次按 F6 关闭。");
+    }
+
+    private static bool TrySelectHypothesesCluster(DictionaryHypotheses hypotheses,
+        string stableKey, out DictionaryHypotheses.TermCluster cluster,
+        out int clusterIndex)
+    {
+        cluster = default;
+        clusterIndex = -1;
+        if (hypotheses == null)
+            return false;
+        if (stableKey == "hypotheses")
+        {
+            cluster = hypotheses.TermClusterExceeded;
+            return true;
+        }
+        if (!int.TryParse(stableKey.Substring("hypotheses:".Length),
+                out clusterIndex) || hypotheses.termClusters == null ||
+            clusterIndex < 0 || clusterIndex >= hypotheses.termClusters.Length)
+            return false;
+        cluster = hypotheses.termClusters[clusterIndex];
+        return true;
     }
 
     private void ClosePreview()

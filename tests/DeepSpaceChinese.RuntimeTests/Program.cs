@@ -982,6 +982,15 @@ internal static class Program
         Assert(journalPreviewSource.Contains("continueButton.SetActive(true)") &&
                !journalPreviewSource.Contains("continueButton.SetActive(false)"),
             "F6 日志预览必须显示实际日志页底部的 Continue 提示，才能检查正文是否与其重叠");
+        Assert(journalPreviewSource.Contains("haveUnlockedLabel.richText = true") &&
+               journalPreviewSource.Contains("viewInDictLabel.richText = true") &&
+               journalPreviewSource.Contains("viewInDictLabel.overflowMode = TextOverflowModes.Overflow"),
+            "F6 假说页预览必须先开启两个说明标签的 TMP 富文本，不能把 size/font 标签显示出来");
+        string pluginSource = File.ReadAllText(Path.Combine(projectRoot,
+            "src", "DeepSpaceChinese", "DeepSpaceChinesePlugin.cs"));
+        Assert(pluginSource.Contains("ApplyHypothesesTextLayout(component)") &&
+               pluginSource.Contains("component.overflowMode = TextOverflowModes.Overflow"),
+            "正常假说页与 F6 预览都必须允许底部说明换行溢出，不能把第二行截成省略号");
         Assert(JournalPreviewPromptInput.Resolve(true, KeyCode.Return) ==
                    JournalPreviewPromptAction.Submit &&
                JournalPreviewPromptInput.Resolve(true, KeyCode.KeypadEnter) ==
@@ -995,8 +1004,11 @@ internal static class Program
                    out string previewId) && previewId == "dialogue:55/frame:3" &&
                JournalPreviewId.TryNormalize(" HYPOTHESES ",
                    out string hypothesesPreviewId) && hypothesesPreviewId == "hypotheses" &&
+               JournalPreviewId.TryNormalize(" hypotheses:3 ",
+                   out string historicalHypothesesId) &&
+               historicalHypothesesId == "hypotheses:3" &&
                !JournalPreviewId.TryNormalize("55/3", out _),
-            "F6 日志预览必须接受 dialogue:<id>/frame:<id> 稳定键和 hypotheses 专用页");
+            "F6 日志预览必须接受 dialogue:<id>/frame:<id>、当前 hypotheses 和指定历史词群 hypotheses:<id>");
         DialogueLayoutPart[] original =
         {
             new DialogueLayoutPart("Hello, ", 0f, false, 0f),
