@@ -237,6 +237,14 @@ internal sealed class UiLocalizer
         return fragmentChanged || composite != original ? composite : original;
     }
 
+    internal string TranslateAnimatedSource(string original)
+    {
+        if (original == null || !_config.Enabled || !_config.TranslateUI)
+            return original;
+        string translated = TranslateCompositeValues(original, translateDisplayValues: true);
+        return TokenCodec.FormatDisplayLiteral(translated, original, _config);
+    }
+
     internal string ApplyTemplateDisplayValues(RuntimeTranslationEntry template,
         string rendered) =>
         template != null && template.GameBool("translate_display_values")

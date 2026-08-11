@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.65";
+    public const string PluginVersion = "0.1.66";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -276,6 +276,9 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
             usesRoleFont);
     }
+
+    internal string PrepareAnalogBannerText(string source) =>
+        AnalogTextBannerLocalizationRuntime.PrepareSource(_ui, source);
 
     private string ApplyCharacterPunctuation(TMP_Text component, string displayText,
         bool isTrackedDialogue, bool usesCharacterFont)

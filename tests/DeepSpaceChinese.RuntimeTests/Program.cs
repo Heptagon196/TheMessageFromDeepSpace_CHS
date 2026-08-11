@@ -612,6 +612,30 @@ internal static class Program
                 log);
             config.DisplayMode = DisplayMode.TranslationOnly;
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
+            Type bannerRuntimeType = typeof(DeepSpaceChinesePlugin).Assembly.GetType(
+                "DeepSpaceChinese.AnalogTextBannerLocalizationRuntime");
+            Assert(bannerRuntimeType != null,
+                "歌曲标题必须在 AnalogTextBanner 开始逐字滚动前完成整段翻译，不能逐帧翻译英文残片");
+            Type bannerPatchType = typeof(DeepSpaceChinesePlugin).Assembly.GetType(
+                "DeepSpaceChinese.SoundtrackTitleViewDisplayPatch");
+            Assert(bannerPatchType?.GetMethod("Prefix",
+                       BindingFlags.Static | BindingFlags.NonPublic) != null,
+                "SoundtrackTitleView.DisplayTitle 必须接入滚动前整段翻译补丁");
+            MethodInfo prepareBannerSource = bannerRuntimeType.GetMethod(
+                "PrepareSource", BindingFlags.Static | BindingFlags.NonPublic);
+            Assert(prepareBannerSource != null,
+                "歌曲标题滚动源文本必须提供可测试的预翻译入口");
+            string localizedBannerSource = (string)prepareBannerSource.Invoke(null,
+                new object[] { fullUiLocalizer, "正在播放：Falling Somewhere" });
+            Assert(localizedBannerSource == "正在播放：坠向某处" &&
+                   !localizedBannerSource.Contains("ing Somewhere"),
+                "歌曲标题必须先整体翻译为“坠向某处”再滚动，滚动结束不得露出 ING SOMEWHERE");
+            config.DisplayMode = DisplayMode.OriginalOnly;
+            string originalBannerSource = (string)prepareBannerSource.Invoke(null,
+                new object[] { fullUiLocalizer, "Song Playing: Falling Somewhere" });
+            Assert(originalBannerSource == "Song Playing: Falling Somewhere",
+                "纯原文模式的歌曲标题滚动源文本必须保持完整英文");
+            config.DisplayMode = DisplayMode.TranslationOnly;
             string nameSignalLocalized = null;
             foreach (RuntimeTranslationEntry candidate in fullStore.UiTemplates)
             {
