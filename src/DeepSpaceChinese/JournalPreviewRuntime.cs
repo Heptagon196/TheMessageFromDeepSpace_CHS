@@ -11,6 +11,11 @@ internal static class JournalPreviewId
     {
         stableKey = string.Empty;
         string value = (input ?? string.Empty).Trim();
+        if (string.Equals(value, "hypotheses", StringComparison.OrdinalIgnoreCase))
+        {
+            stableKey = "hypotheses";
+            return true;
+        }
         const string prefix = "dialogue:";
         const string middle = "/frame:";
         if (!value.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
@@ -58,9 +63,11 @@ internal sealed class JournalPreviewRuntime
     private bool _previewActive;
     private bool _canvasWasActive;
     private bool _continueWasActive;
+    private bool _hypothesesPreviewActive;
     private string _input = "dialogue:55/frame:3";
     private string _message = string.Empty;
     private ProgressLog _progressLog;
+    private Coroutine _hypothesesRoutine;
 
     public JournalPreviewRuntime(DeepSpaceChinesePlugin plugin,
         DialogueFrameCatalog catalog)
@@ -114,7 +121,7 @@ internal sealed class JournalPreviewRuntime
 
         GUI.Box(rect, "Journal preview (F6)");
         GUI.Label(new Rect(rect.x + 18f, rect.y + 34f, width - 36f, 24f),
-            "Stable ID, e.g. dialogue:55/frame:3");
+            "Stable ID, e.g. dialogue:55/frame:3 or hypotheses");
         GUI.SetNextControlName("JournalPreviewId");
         _input = GUI.TextField(new Rect(rect.x + 18f, rect.y + 60f,
             width - 36f, 28f), _input ?? string.Empty);
@@ -134,6 +141,11 @@ internal sealed class JournalPreviewRuntime
         if (!JournalPreviewId.TryNormalize(input, out string stableKey))
         {
             _message = "Invalid ID";
+            return;
+        }
+        if (stableKey == "hypotheses")
+        {
+            ShowHypotheses(stableKey);
             return;
         }
         if (!_catalog.TryGet(stableKey, out DialogueFramePair pair))
@@ -181,10 +193,60 @@ internal sealed class JournalPreviewRuntime
         _plugin.PluginLog.LogMessage($"F6 日志预览已打开：{stableKey}；再次按 F6 关闭。");
     }
 
+    private void ShowHypotheses(string stableKey)
+    {
+        _progressLog = Resources.FindObjectsOfTypeAll<ProgressLog>()
+            .FirstOrDefault(item => item != null && item.gameObject.scene.IsValid());
+        DictionaryHypothesesLog hypotheses = _progressLog?.hypothesesLog;
+        if (_progressLog == null || hypotheses == null || hypotheses.group == null ||
+            hypotheses.haveUnlockedLabel == null || hypotheses.viewInDictLabel == null ||
+            hypotheses.dictionaryHypotheses == null)
+        {
+            _message = "Hypotheses Log not found";
+            return;
+        }
+
+        _canvasWasActive = _progressLog.progressLogCanvas.activeSelf;
+        _continueWasActive = _progressLog.continueButton != null &&
+                             _progressLog.continueButton.activeSelf;
+        _progressLog.OpenLogBG();
+        _progressLog.progressParent.SetActive(false);
+        _progressLog.translatorLogGroup.SetActive(false);
+        _progressLog.actSequence.SetActive(false);
+        ClearJournalLabels(_progressLog);
+        hypotheses.Close();
+        hypotheses.group.SetActive(true);
+        hypotheses.haveUnlockedLabel.text = _plugin.PrepareGenericTypedText(
+            hypotheses.haveUnlockedLabel, hypotheses.haveUnlocked_s);
+        hypotheses.haveUnlockedLabel.maxVisibleCharacters = int.MaxValue;
+        hypotheses.viewInDictLabel.text = _plugin.PrepareGenericTypedText(
+            hypotheses.viewInDictLabel, hypotheses.viewInDict_s);
+        hypotheses.viewInDictLabel.maxVisibleCharacters = int.MaxValue;
+        DictionaryHypotheses.TermCluster cluster =
+            hypotheses.dictionaryHypotheses.TermClusterExceeded;
+        if (cluster.terms != null && cluster.terms.Length != 0)
+            _hypothesesRoutine = _plugin.StartCoroutine(hypotheses.SpawnAllWords(cluster));
+        if (_progressLog.continueButton != null)
+            _progressLog.continueButton.SetActive(true);
+
+        _input = stableKey;
+        _promptOpen = false;
+        _previewActive = true;
+        _hypothesesPreviewActive = true;
+        _plugin.PluginLog.LogMessage("F6 假说说明页预览已打开；再次按 F6 关闭。");
+    }
+
     private void ClosePreview()
     {
         if (_progressLog != null)
         {
+            if (_hypothesesRoutine != null)
+            {
+                _plugin.StopCoroutine(_hypothesesRoutine);
+                _hypothesesRoutine = null;
+            }
+            if (_hypothesesPreviewActive && _progressLog.hypothesesLog != null)
+                _progressLog.hypothesesLog.Close();
             ClearJournalLabels(_progressLog);
             if (_progressLog.continueButton != null)
                 _progressLog.continueButton.SetActive(_continueWasActive);
@@ -195,6 +257,7 @@ internal sealed class JournalPreviewRuntime
             }
         }
         _previewActive = false;
+        _hypothesesPreviewActive = false;
         _progressLog = null;
     }
 

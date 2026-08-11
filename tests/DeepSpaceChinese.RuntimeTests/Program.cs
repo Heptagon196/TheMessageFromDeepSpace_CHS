@@ -993,8 +993,10 @@ internal static class Program
             "F6 日志预览必须只在 KeyDown 时由 Enter 提交，并由 Esc 取消");
         Assert(JournalPreviewId.TryNormalize(" dialogue:55/frame:3 ",
                    out string previewId) && previewId == "dialogue:55/frame:3" &&
+               JournalPreviewId.TryNormalize(" HYPOTHESES ",
+                   out string hypothesesPreviewId) && hypothesesPreviewId == "hypotheses" &&
                !JournalPreviewId.TryNormalize("55/3", out _),
-            "F6 日志预览必须只接受可审计的 dialogue:<id>/frame:<id> 稳定键");
+            "F6 日志预览必须接受 dialogue:<id>/frame:<id> 稳定键和 hypotheses 专用页");
         DialogueLayoutPart[] original =
         {
             new DialogueLayoutPart("Hello, ", 0f, false, 0f),
