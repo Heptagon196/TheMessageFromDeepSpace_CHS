@@ -132,6 +132,7 @@ Puzzle.altResponses
 - 将原空白分别记录到 `CacheItem.extra.game.leading_whitespace` 和 `trailing_whitespace`。
 - 回注时由桥接工具恢复，不要求翻译模型维护边界空格。
 - 文本内部空格和换行仍属于正文；校验器必须检查换行数量。
+- 中文一级引用统一使用“ ”，‘ ’只允许作为“ ”内部的二级引用；半角直引号不得用于中文引用。构建与正式批次审计必须同时检查引号层级、开闭顺序和成对情况。
 
 ## 4. 与 `ainiee-translate` 的数据接口
 

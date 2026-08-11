@@ -9,6 +9,8 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from translation_text_checks import validate_chinese_quotes
+
 
 CONTROL_RE = re.compile(
     r"\{(?:SPEAKER_[A-Z0-9_]+|PART_\d{3}|SIG_(?:N)?\d{3}|PLAYER_NAME|DYN_\d+)\}|"
@@ -103,6 +105,16 @@ def main() -> int:
         if not translated_text:
             errors.append({"type": "empty_translation", "group": group, "text_index": text_index})
             continue
+        quote_issues = validate_chinese_quotes(translated_text)
+        if quote_issues:
+            errors.append(
+                {
+                    "type": "chinese_quote_style",
+                    "group": group,
+                    "text_index": text_index,
+                    "issues": quote_issues,
+                }
+            )
         for forbidden in NEUTRAL_MANDARIN_FORBIDDEN:
             if forbidden in translated_text:
                 errors.append(

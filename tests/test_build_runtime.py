@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import sys
 from copy import deepcopy
 from pathlib import Path
 
 
 PROJECT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT / "tools"))
 spec = importlib.util.spec_from_file_location(
     "build_runtime", PROJECT / "tools" / "build_runtime.py"
 )

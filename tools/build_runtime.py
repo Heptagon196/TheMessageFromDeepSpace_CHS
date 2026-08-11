@@ -8,6 +8,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
+from translation_text_checks import validate_chinese_quotes
+
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 FORMAT_VERSION = 1
@@ -111,6 +113,7 @@ def validate_item(item: dict[str, Any]) -> list[str]:
     if sha256_text(source) != game.get("source_sha256"):
         errors.append("source_sha256 与 source_text 不一致")
     errors.extend(validate_temperature_units(item))
+    errors.extend(validate_chinese_quotes(translated))
     for name, pattern in TOKEN_PATTERNS.items():
         source_tokens = pattern.findall(source)
         translated_tokens = pattern.findall(translated)
