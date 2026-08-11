@@ -32,6 +32,18 @@ internal static class SharedInputReturnCompatibility
                isInputSystemNavigationEvent;
     }
 
+    internal static bool ShouldSkipTextUpdateForSubmitShortcut(
+        bool isTrackedSharedInput, bool isFocused, bool isMultiLineNewline,
+        bool returnPressed, bool controlPressed)
+    {
+        // The game binds Ctrl+Enter to submission independently of TMP. If TMP
+        // processes the same key first, it inserts an LF at the caret and the
+        // compiler receives a modified answer. Skip only that one text-update
+        // frame; plain Enter continues through TMP's multiline newline path.
+        return isTrackedSharedInput && isFocused && isMultiLineNewline &&
+               returnPressed && controlPressed;
+    }
+
     internal static bool IsInputSystemNavigationEvent(BaseEventData eventData)
     {
         Type eventType = eventData?.GetType();
@@ -39,6 +51,24 @@ internal static class SharedInputReturnCompatibility
                eventType.Name == "ExtendedSubmitCancelEventData" &&
                (eventType.Namespace?.StartsWith("UnityEngine.InputSystem.UI",
                     StringComparison.Ordinal) ?? false);
+    }
+}
+
+[HarmonyPatch(typeof(TMP_InputField), nameof(TMP_InputField.OnUpdateSelected))]
+internal static class SharedMultilineSubmitShortcutPatch
+{
+    [HarmonyPrefix]
+    private static bool Prefix(TMP_InputField __instance, BaseEventData eventData)
+    {
+        bool returnPressed = Input.GetKeyDown(KeyCode.Return) ||
+                             Input.GetKeyDown(KeyCode.KeypadEnter);
+        bool controlPressed = Input.GetKey(KeyCode.LeftControl) ||
+                              Input.GetKey(KeyCode.RightControl);
+        bool skip = SharedInputReturnCompatibility.ShouldSkipTextUpdateForSubmitShortcut(
+            SharedInputReturnCompatibility.IsTracked(__instance), __instance.isFocused,
+            __instance.lineType == TMP_InputField.LineType.MultiLineNewline,
+            returnPressed, controlPressed);
+        return !skip;
     }
 }
 

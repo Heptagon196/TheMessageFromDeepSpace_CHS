@@ -79,7 +79,7 @@ UI_TEMPLATES: list[dict[str, Any]] = [
     },
     {
         "template_id": "name-signal",
-        "source_text": "NAME SIGNAL {DYN_0}",
+        "source_text": "NAME SIGNAL{DYN_0}",
     },
     {
         "template_id": "invalid-transmission",

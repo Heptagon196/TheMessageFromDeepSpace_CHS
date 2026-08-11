@@ -258,6 +258,15 @@ internal static class Program
                    !SharedInputReturnCompatibility.ShouldSuppressEarlySubmit(true, true,
                         true, true, false),
                 "已聚焦的场景多行输入框必须拦截 Input System 导航 Submit，且不依赖旧输入 API 的回车状态");
+            Assert(SharedInputReturnCompatibility.ShouldSkipTextUpdateForSubmitShortcut(
+                       true, true, true, true, true) &&
+                   !SharedInputReturnCompatibility.ShouldSkipTextUpdateForSubmitShortcut(
+                       true, true, true, true, false) &&
+                   !SharedInputReturnCompatibility.ShouldSkipTextUpdateForSubmitShortcut(
+                       true, true, true, false, true) &&
+                   !SharedInputReturnCompatibility.ShouldSkipTextUpdateForSubmitShortcut(
+                       false, true, true, true, true),
+                "Ctrl+Enter 提交快捷键必须跳过 TMP 的换行处理，纯 Enter 仍须正常换行");
             config.DisplayMode = DisplayMode.OriginalOnly;
             Assert(config.ToggleModeHotkey.MainKey.ToString() == "F8", "INI 快捷键解析失败");
             Assert(config.SpeakerColorsEnabled && config.AkersColor == "#FFD166",
@@ -639,7 +648,7 @@ internal static class Program
             string nameSignalLocalized = null;
             foreach (RuntimeTranslationEntry candidate in fullStore.UiTemplates)
             {
-                if (!UiTemplateRenderer.TryRender(candidate, "NAME SIGNAL -25",
+                if (!UiTemplateRenderer.TryRender(candidate, "NAME SIGNAL-25",
                         out string candidateText))
                     continue;
                 nameSignalLocalized = candidateText;
