@@ -28,6 +28,27 @@ internal static class JournalPreviewId
     }
 }
 
+internal enum JournalPreviewPromptAction
+{
+    None,
+    Submit,
+    Cancel,
+}
+
+internal static class JournalPreviewPromptInput
+{
+    public static JournalPreviewPromptAction Resolve(bool isKeyDown, KeyCode keyCode)
+    {
+        if (!isKeyDown)
+            return JournalPreviewPromptAction.None;
+        if (keyCode == KeyCode.Return || keyCode == KeyCode.KeypadEnter)
+            return JournalPreviewPromptAction.Submit;
+        return keyCode == KeyCode.Escape
+            ? JournalPreviewPromptAction.Cancel
+            : JournalPreviewPromptAction.None;
+    }
+}
+
 internal sealed class JournalPreviewRuntime
 {
     private readonly DeepSpaceChinesePlugin _plugin;
@@ -71,9 +92,25 @@ internal sealed class JournalPreviewRuntime
         if (!_promptOpen)
             return;
         const float width = 520f;
-        const float height = 150f;
+        const float height = 132f;
         var rect = new Rect((Screen.width - width) * 0.5f,
             (Screen.height - height) * 0.5f, width, height);
+
+        JournalPreviewPromptAction action = JournalPreviewPromptInput.Resolve(
+            Event.current.type == EventType.KeyDown, Event.current.keyCode);
+        if (action == JournalPreviewPromptAction.Submit)
+        {
+            Event.current.Use();
+            Show(_input);
+            return;
+        }
+        if (action == JournalPreviewPromptAction.Cancel)
+        {
+            Event.current.Use();
+            _promptOpen = false;
+            return;
+        }
+
         GUI.Box(rect, "Journal preview (F6)");
         GUI.Label(new Rect(rect.x + 18f, rect.y + 34f, width - 36f, 24f),
             "Stable ID, e.g. dialogue:55/frame:3");
@@ -85,20 +122,10 @@ internal sealed class JournalPreviewRuntime
             GUI.FocusControl("JournalPreviewId");
             _focusInput = false;
         }
-        bool submit = GUI.Button(new Rect(rect.x + 18f, rect.y + 100f, 110f, 30f),
-                          "Show") ||
-                      Event.current.type == EventType.KeyDown &&
-                      (Event.current.keyCode == KeyCode.Return ||
-                       Event.current.keyCode == KeyCode.KeypadEnter);
-        if (GUI.Button(new Rect(rect.x + 138f, rect.y + 100f, 110f, 30f), "Cancel"))
-            _promptOpen = false;
+        GUI.Label(new Rect(rect.x + 18f, rect.y + 96f, 190f, 24f),
+            "Enter: show    Esc: cancel");
         if (!string.IsNullOrEmpty(_message))
-            GUI.Label(new Rect(rect.x + 260f, rect.y + 103f, width - 278f, 30f), _message);
-        if (submit)
-        {
-            Event.current.Use();
-            Show(_input);
-        }
+            GUI.Label(new Rect(rect.x + 220f, rect.y + 96f, width - 238f, 24f), _message);
     }
 
     private void Show(string input)

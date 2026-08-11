@@ -339,7 +339,7 @@ internal static class Program
                 "字体内容指纹必须在文件未变时稳定、文件变化后更新");
 
             RunDialogueLayoutTests();
-            RunLiveDialogueSwitchTests();
+            RunLiveDialogueSwitchTests(projectRoot);
 
             string protectedText = TokenCodec.ProtectRuntimeTokens("Hello |-160, the Translator.");
             Assert(protectedText == "Hello {SIG_N160}, {PLAYER_NAME}.", "运行时标记保护失败");
@@ -973,8 +973,21 @@ internal static class Program
             "跨 PART 分页必须保留各段逐字速度和最终延迟");
     }
 
-    private static void RunLiveDialogueSwitchTests()
+    private static void RunLiveDialogueSwitchTests(string projectRoot)
     {
+        string journalPreviewSource = File.ReadAllText(Path.Combine(projectRoot,
+            "src", "DeepSpaceChinese", "JournalPreviewRuntime.cs"));
+        Assert(!journalPreviewSource.Contains("GUI.Button("),
+            "F6 日志预览输入面板不得依赖会被游戏拦截的鼠标按钮，只能由 Enter/Esc 操作");
+        Assert(JournalPreviewPromptInput.Resolve(true, KeyCode.Return) ==
+                   JournalPreviewPromptAction.Submit &&
+               JournalPreviewPromptInput.Resolve(true, KeyCode.KeypadEnter) ==
+                   JournalPreviewPromptAction.Submit &&
+               JournalPreviewPromptInput.Resolve(true, KeyCode.Escape) ==
+                   JournalPreviewPromptAction.Cancel &&
+               JournalPreviewPromptInput.Resolve(false, KeyCode.Return) ==
+                   JournalPreviewPromptAction.None,
+            "F6 日志预览必须只在 KeyDown 时由 Enter 提交，并由 Esc 取消");
         Assert(JournalPreviewId.TryNormalize(" dialogue:55/frame:3 ",
                    out string previewId) && previewId == "dialogue:55/frame:3" &&
                !JournalPreviewId.TryNormalize("55/3", out _),
