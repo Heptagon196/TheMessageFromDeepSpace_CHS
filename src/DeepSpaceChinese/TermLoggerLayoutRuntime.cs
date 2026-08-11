@@ -8,7 +8,7 @@ namespace DeepSpaceChinese;
 
 internal static class TermLoggerLayoutEngine
 {
-    internal const float BottomViewportY = 0.38f;
+    internal const float BottomViewportY = 0.12f;
     internal const float FallbackSpacing = 0.045f;
 
     internal static Vector3 TargetViewportPoint(Vector3 original, int index,
@@ -46,10 +46,6 @@ internal static class TermLoggerLayoutRuntime
 
     internal static void ApplyCurrentLists()
     {
-        Camera camera = Camera.main;
-        if (camera == null)
-            return;
-
         List<TermLogger> activeLoggers = Resources.FindObjectsOfTypeAll<TermLogger>()
             .Where(logger => logger != null && logger.gameObject.scene.IsValid() &&
                              logger.gameObject.activeInHierarchy && logger.transform.parent != null)
@@ -61,12 +57,23 @@ internal static class TermLoggerLayoutRuntime
         IEnumerable<IGrouping<int, TermLogger>> groups = activeLoggers
             .GroupBy(logger => logger.transform.parent.GetInstanceID());
         foreach (IGrouping<int, TermLogger> group in groups)
-            ApplyList(camera, group);
+            ApplyList(group);
     }
 
-    private static void ApplyList(Camera camera, IEnumerable<TermLogger> loggers)
+    private static void ApplyList(IEnumerable<TermLogger> loggers)
     {
-        var entries = loggers
+        List<TermLogger> loggerList = loggers.ToList();
+        if (loggerList.Count == 0)
+            return;
+        Camera camera = FindRenderingCamera(loggerList[0]);
+        if (camera == null)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogWarning(
+                "[NewWordPrompt] 找不到显示新词弹窗的 RenderTexture 摄像机，已保留原位置。");
+            return;
+        }
+
+        var entries = loggerList
             .Select(logger => CreateEntry(camera, logger))
             .Where(entry => entry.Viewport.z > 0f)
             .OrderByDescending(entry => entry.Viewport.y)
@@ -83,6 +90,44 @@ internal static class TermLoggerLayoutRuntime
                 entry.Viewport, index, entries.Count, spacing);
             entry.Logger.transform.position = camera.ViewportToWorldPoint(target);
         }
+        DeepSpaceChinesePlugin.Instance?.PluginLog.LogInfo(
+            $"[NewWordPrompt] 已在 {camera.name}/{camera.targetTexture?.name ?? "<screen>"} " +
+            $"内移动 {entries.Count} 项到右下角，底部 Y={TermLoggerLayoutEngine.BottomViewportY:F3}。");
+    }
+
+    private static Camera FindRenderingCamera(TermLogger logger)
+    {
+        if (logger == null)
+            return null;
+        int layerMask = 1 << logger.gameObject.layer;
+        Vector3 original = OriginalPosition(logger);
+        return Resources.FindObjectsOfTypeAll<Camera>()
+            .Where(camera => camera != null && camera.gameObject.scene.IsValid() &&
+                             camera.gameObject.activeInHierarchy && camera.enabled &&
+                             camera.targetTexture != null &&
+                             (camera.cullingMask & layerMask) != 0)
+            .Select(camera => new
+            {
+                Camera = camera,
+                Viewport = camera.WorldToViewportPoint(original),
+            })
+            .Where(candidate => candidate.Viewport.z > 0f &&
+                                candidate.Viewport.x >= 0f && candidate.Viewport.x <= 1f &&
+                                candidate.Viewport.y >= 0f && candidate.Viewport.y <= 1f)
+            .OrderByDescending(candidate => string.Equals(
+                candidate.Camera.targetTexture.name, "RT IO Monitor",
+                StringComparison.OrdinalIgnoreCase))
+            .Select(candidate => candidate.Camera)
+            .FirstOrDefault();
+    }
+
+    private static Vector3 OriginalPosition(TermLogger logger)
+    {
+        int instanceId = logger.GetInstanceID();
+        if (OriginalPositions.TryGetValue(instanceId, out OriginalEntry original) &&
+            ReferenceEquals(original.Logger, logger))
+            return original.Position;
+        return logger.transform.position;
     }
 
     private static Entry CreateEntry(Camera camera, TermLogger logger)

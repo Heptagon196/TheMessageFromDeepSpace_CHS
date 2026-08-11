@@ -38,9 +38,9 @@ internal static class Program
             Vector3 promptFirst = TermLoggerLayoutEngine.TargetViewportPoint(
                 new Vector3(0.82f, 0.62f, 12f), 0, 3, 0.045f);
             Assert(Math.Abs(promptLast.x - 0.82f) < 0.0001f &&
-                   Math.Abs(promptLast.y - 0.38f) < 0.0001f &&
+                   Math.Abs(promptLast.y - 0.12f) < 0.0001f &&
                    Math.Abs(promptLast.z - 12f) < 0.0001f &&
-                   Math.Abs(promptFirst.y - 0.47f) < 0.0001f,
+                   Math.Abs(promptFirst.y - 0.21f) < 0.0001f,
                 "新单词浮窗列表必须保持右侧横坐标、深度和原顺序，并从右下角向上排列");
             const string validPuzzleFix =
                 "{\"display_id\":80,\"original_signals\":[-11,1,-2,6]," +

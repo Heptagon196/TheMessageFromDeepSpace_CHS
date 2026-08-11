@@ -178,6 +178,13 @@ def is_translatable(text: str) -> bool:
     return bool(ENGLISH_WORD_RE.search(visible))
 
 
+def is_localizable_dialogue(text: str) -> bool:
+    """Include punctuation-only dialogue whose ellipsis changes in Chinese."""
+
+    visible = CONTROL_ONLY_RE.sub("", text).strip()
+    return is_translatable(text) or bool(re.fullmatch(r"\.{3,}", visible))
+
+
 def is_development_or_placeholder(text: str, *, object_path: str, scope: str) -> bool:
     """Reject serialized editor/debug placeholders without hiding real game terminology."""
     visible = CONTROL_ONLY_RE.sub("", text).strip()
@@ -371,7 +378,11 @@ def extract_dialogue(
                 )
             source_text = "".join(source_parts)
             stable_key = f"dialogue:{chunk_id}/frame:{frame_index}"
-            excluded = development_chunk or not is_translatable(source_text)
+            # Development prose stays excluded, but punctuation-only frames are
+            # harmless shared dialogue assets and still need Chinese ellipses.
+            excluded = not is_localizable_dialogue(source_text) or (
+                development_chunk and is_translatable(source_text)
+            )
             group = "dialogue.excluded" if excluded else "dialogue.frames"
             groups[group].append(
                 cache_item(

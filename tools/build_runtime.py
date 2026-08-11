@@ -8,7 +8,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
-from translation_text_checks import validate_chinese_quotes
+from translation_text_checks import validate_chinese_quotes, validate_dialogue_ellipsis
 from extraction_rules import DISPLAY_VALUE_UI_PATHS, UI_TEMPLATES
 
 
@@ -165,6 +165,8 @@ def validate_item(item: dict[str, Any]) -> list[str]:
     )
     if legacy_ellipsis_path and "…" in translated:
         errors.append("旧系统字体文本不能使用 U+2026；请改用 ASCII 三点省略号 ...")
+    if kind in {"dialogue_frame", "component_dialogue_frame"} and not legacy_ellipsis_path:
+        errors.extend(validate_dialogue_ellipsis(translated))
     if kind in {"dialogue_frame", "component_dialogue_frame"}:
         expected_parts = int(game.get("part_count", -1))
         actual_parts = len(TOKEN_PATTERNS["part"].findall(translated))

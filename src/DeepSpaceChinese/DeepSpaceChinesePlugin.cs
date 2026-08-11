@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.66";
+    public const string PluginVersion = "0.1.67";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -191,6 +191,19 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
         ApplyPuzzleFixes(PuzzleManager.Instance);
+        StartCoroutine(StabilizeMainMenuLayout());
+    }
+
+    private IEnumerator StabilizeMainMenuLayout()
+    {
+        // The original ControlRoom startup animation rewrites tab transforms
+        // after sceneLoaded. Reapply a few bounded times until that animation
+        // has settled; F5/F8 occur after initialization and do not need this.
+        for (int pass = 0; pass < 3; pass++)
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            _mainMenuLayout.ApplyAll();
+        }
     }
 
     private void OnDestroy()

@@ -3,6 +3,11 @@
 
 from __future__ import annotations
 
+import re
+
+
+ASCII_ELLIPSIS_RE = re.compile(r"\.{3,}")
+
 
 def validate_chinese_quotes(text: str) -> list[str]:
     """Validate Chinese quote hierarchy without rejecting Latin apostrophes.
@@ -54,4 +59,16 @@ def validate_chinese_quotes(text: str) -> list[str]:
     for kind, index in stack:
         label = "双引号" if kind == "double" else "单引号"
         issues.append(f"位置 {index} 的左{label}没有闭合")
+    return issues
+
+
+def validate_dialogue_ellipsis(text: str) -> list[str]:
+    """Require standard paired Chinese ellipses in translated dialogue."""
+
+    text = text or ""
+    issues: list[str] = []
+    if ASCII_ELLIPSIS_RE.search(text):
+        issues.append("对白省略号必须使用中文双省略号 ……，不能使用 ASCII 三点 ...")
+    if "…" in text.replace("……", ""):
+        issues.append("中文省略号必须成对使用 ……，不能只写一个 …")
     return issues

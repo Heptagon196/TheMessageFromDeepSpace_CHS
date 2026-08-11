@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import sys
 from copy import deepcopy
 from pathlib import Path
@@ -21,11 +22,11 @@ dialogue = next(
     item
     for item in build_runtime.iter_items(cache)
     if item.get("extra", {}).get("game", {}).get("kind") == "dialogue_frame"
+    and item.get("translation_status") in (1, 2)
+    and not build_runtime.validate_item(item)
 )
 
 valid = deepcopy(dialogue)
-valid["translation_status"] = 1
-valid["translated_text"] = valid["source_text"]
 assert build_runtime.validate_item(valid) == [], "合法译文不应被拒绝"
 assert build_runtime.category_for("dialogue_frame") == "dialogue"
 
@@ -76,6 +77,22 @@ nested_frame = deepcopy(valid)
 nested_frame["extra"]["game"]["kind"] = "component_dialogue_frame"
 assert build_runtime.validate_item(nested_frame) == [], "嵌套对白帧应使用对白结构校验"
 
+ascii_dialogue_ellipsis = deepcopy(valid)
+ascii_dialogue_ellipsis["translated_text"] += "..."
+errors = build_runtime.validate_item(ascii_dialogue_ellipsis)
+assert any("省略号" in error for error in errors), "对白中的 ASCII 三点必须被拒绝"
+
+single_dialogue_ellipsis = deepcopy(valid)
+single_dialogue_ellipsis["translated_text"] += "…"
+errors = build_runtime.validate_item(single_dialogue_ellipsis)
+assert any("成对" in error for error in errors), "对白中的单个 U+2026 必须被拒绝"
+
+paired_dialogue_ellipsis = deepcopy(valid)
+paired_dialogue_ellipsis["translated_text"] += "……"
+assert build_runtime.validate_item(paired_dialogue_ellipsis) == [], (
+    "规范的中文双省略号应通过对白校验"
+)
+
 legacy_system_ellipsis = [
     item
     for item in build_runtime.iter_items(cache)
@@ -107,6 +124,28 @@ dialogue_ellipsis = [
     and "…" in (item.get("translated_text") or "")
 ]
 assert dialogue_ellipsis, "非启动日志的内嵌对白应继续保留能正常显示的中文省略号"
+
+def is_ellipsis_only_dialogue(item: dict) -> bool:
+    visible = item.get("source_text") or ""
+    for token_name in ("speaker", "part", "signal", "player", "dynamic", "animation", "tmp_tag"):
+        visible = build_runtime.TOKEN_PATTERNS[token_name].sub("", visible)
+    return re.fullmatch(r"\.{3,}", visible.strip()) is not None
+
+
+unlocalized_ellipsis_only_dialogue = [
+    item
+    for item in build_runtime.iter_items(cache)
+    if item.get("extra", {}).get("game", {}).get("kind") == "dialogue_frame"
+    and item.get("translation_status") not in (1, 2)
+    and is_ellipsis_only_dialogue(item)
+]
+assert not unlocalized_ellipsis_only_dialogue, (
+    "纯省略号对白也必须进入汉化，不能因不含英文字母而漏掉："
+    + repr([
+        item.get("extra", {}).get("game", {}).get("stable_key")
+        for item in unlocalized_ellipsis_only_dialogue
+    ])
+)
 
 console_expected = {
     "system:ControlRoom:Console Message:component:3:field:correctInput":

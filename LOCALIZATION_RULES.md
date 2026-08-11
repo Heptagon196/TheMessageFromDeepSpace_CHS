@@ -367,7 +367,8 @@ system.messages
 - 枚举已知系统组件并按嵌套字段路径回写 `component_string` 和 `component_dialogue_frame`；模式切换时仍从保存的原始字段重新生成。
 - 对代码拼接的可见文本使用锚定的 `ui_template` 匹配，只替换模板固定部分并把捕获值放回 `{DYN_n}`；不要把动态数字、路径或玩家命名当成译文固化。
 - `TermLogger.Configure()` 会在运行时拼接 `NAME SIGNAL + 信号编号`，必须用 `NAME SIGNAL {DYN_0}` 模板翻译为“为信号 {DYN_0} 命名”，不能只依赖预制体字段的静态译文。
-- “新单词命名”浮窗可能同时生成多条。`[Layout] NewWordPromptLowerRight = true` 时必须把同一父节点下的整组 `TermLogger` 作为列表移动到右下角：按原纵坐标保持顺序，保留原行距，并从右下角向上增长；禁止把每条都写入同一坐标。该开关默认开启并支持 F5 热重载，关闭后恢复已记录的原始位置。
+- “新单词命名”浮窗可能同时生成多条。`[Layout] NewWordPromptLowerRight = true` 时必须把同一父节点下的整组 `TermLogger` 作为列表移动到右下角：按原纵坐标保持顺序，保留原行距，并从右下角向上增长；禁止把每条都写入同一坐标。弹窗实际由右侧显示器的 RenderTexture 摄像机渲染，移动时必须在该源摄像机的 viewport 内换算，禁止使用 `Camera.main`，否则对象会被移出显示器而彻底消失。找不到源摄像机时保留原位置。该开关默认开启并支持 F5 热重载，关闭后恢复已记录的原始位置。
+- 左侧主菜单的按钮碰撞/点击宽度统一沿用“传输”按钮，但每个图标必须分别紧贴在自身中文文字右侧，不得排成统一的末尾列。ControlRoom 启动动画会在 `sceneLoaded` 后继续改写按钮 Transform，因此首次应用后要做有限次延后重排；不得依赖玩家先用 F8 往返一次来纠正布局。
 - 左上角歌曲标题由 `AnalogTextBanner` 保存完整源串，再逐帧删除首字符形成滚动效果。必须在 `SoundtrackTitleView.DisplayTitle()` 把完整字符串交给滚动器之前翻译歌名；禁止仅在 `TMP_Text.set_text` 的逐帧结果上匹配，否则完整中文滚过后，失去开头的英文残片（如 `ING SOMEWHERE`）会重新显示。
 - 取名界面由运行时补丁把前置 `Dr.` 标签移到输入框右侧并显示为“博士”，形成“{输入框}博士”；输入框本身只保存玩家输入的姓名。中文布局复用原版“前缀 + 输入框”的总宽度：输入框占用左侧释放出的空间，右侧按当前字体的实际首选宽度为“博士”预留位置；标签高度与输入框对齐，并强制单行、溢出可见。F5、F8、场景重载前都先恢复原始 RectTransform，禁止重复应用导致布局漂移。纯原文模式完整恢复 `Dr. + 姓名` 及原始 TMP 设置。
 - 所有输入框必须关闭 TMP 的自定义字符验证并允许完整 Unicode。游戏使用 Unity 6000.0.73f1；`TMP_InputField.ActivateInputFieldInternal()` 会正常设置 `Input.imeCompositionMode = On` 并读取 `Input.compositionString`，但游戏自己的 `InputManager.LateUpdate()` 只有 `ldc.i4.2`、调用 `Input.set_imeCompositionMode`、`ret` 三条 IL 指令，即每帧把 IME 强制设为 `Off`。Windows 11 运行时探针也确认 TMP 聚焦后状态从 `On` 立即变为 `Off`，随后 IMM32 上下文被解除。补丁必须只跳过这个强制关闭方法，让 TMP 按焦点管理输入法；不得把 IME 永久强制为 `On`，否则普通游戏键盘输入会受影响。
@@ -378,7 +379,7 @@ system.messages
 - `NameEntry()` 会先激活起名对象，再清空文本并启动输入协程。补丁必须在该方法完成后通过 Postfix 应用一次布局；场景扫描时跳过未激活的起名对象。禁止在输入框首次聚焦时再次强制刷新 Canvas、LayoutRebuilder 或整套 RectTransform，否则提示、输入行和确认文字可能被二次重排到同一位置。
 - 中文起名界面必须把“姓名已占用”提示、两行姓名提示、输入框与“博士”、确认提示作为一个整体布局。以姓名提示原中心为基准，按各文本的 TMP 首选高度和至少 16 像素间距从上到下排列；三块提示文本统一扩展到原“Dr. + 输入框”的总宽度。所有边界只按各根 RectTransform 的四角计算，禁止把文本视口、Placeholder、Caret 等子节点纳入根节点中心计算。
 - 禁止创建额外的 Win32 输入窗口、覆盖 TMP 输入框、转移键盘焦点或自行切换系统键盘布局。所有输入必须继续使用游戏原生 `TMP_InputField`，仅修复游戏强制关闭 IME 的错误并放宽字符验证；游戏原有的提交、取消、非空、保留名检查和姓名 14 字符上限继续生效。
-- 普通 `component_string` 以及 `DialogueManager.autoLogStartFrame` 使用的旧系统 TMP 字体会把 U+2026 `…` 错绘为 `à`；这些路径必须使用 ASCII 三点 `...`。普通角色对话和其他内嵌对白使用不同字体，继续保留中文省略号 `……`。构建期必须按 `kind + field_path` 校验，禁止把限制错误扩大到全部对白。
+- 普通 `component_string` 以及 `DialogueManager.autoLogStartFrame` 使用的旧系统 TMP 字体会把 U+2026 `…` 错绘为 `à`；这些路径必须使用 ASCII 三点 `...`。普通角色对话和其他内嵌对白使用不同字体，只能使用成对的中文省略号 `……`，不得使用 `...`、更长的连续半角句点或单个 `…`。纯省略号对白即使不含英文字母也必须进入提取与翻译。构建期必须按 `kind + field_path` 校验，禁止把限制错误扩大到旧系统字体文本。
 - `ConsoleLoaderMessage` 的 `loadingSignalMsg/tokenizingSignalMsg/correctInput/wrongInput/sendingSignalMsg/recompilingMsg/updatingMsg`，以及谜题日志的 `winResponseLine/loadingTxt/failedToRetrieveResponse` 都是运行时可见文本。它们的字段名不符合通用提示词规则，提取器必须通过显式白名单纳入；字段白名单及十条定稿译文均须有回归测试。
 - 对话日志的说话者前缀必须跟随显示模式：译文模式使用角色中文名开头的 `埃/巴/科/多`，自动日志使用完整的 `日志`，驾驶员和副驾驶员使用 `驾/副`；原文模式仍使用 `A/B/C/D/L/P/Q`。F8 切换模式时重建日志文本，禁止让科林斯继续显示为 `C`。
 - 日志列表会在 `DialogueBank.SetDataFromLoad()` 内、对白库本地化 Postfix 执行前调用 `LogWindow.SetInitialLog()`，提前把当时的 `DialogueChunk.LogName` 复制进 `DialogueLogEntry`。因此不能只改 `DialogueChunk.logName`；必须在两个 `DialogueLogEntry.Configure()` 重载完成后按 `UniqueID` 解析当前显示模式的标题，并在 F5、F8 和对白库注册后刷新已存在的列表项。标题长度限制在翻译完成后再应用，日志详情页标题也使用同一解析入口。
