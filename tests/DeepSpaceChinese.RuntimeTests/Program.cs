@@ -632,6 +632,12 @@ internal static class Program
                 log);
             config.DisplayMode = DisplayMode.TranslationOnly;
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
+            Assert(fullStore.TryGet(
+                       "system:ControlRoom:Hypotheses Log:component:1:field:viewInDict_s",
+                       out RuntimeTranslationEntry hypothesesInstruction) &&
+                   hypothesesInstruction.TranslatedText ==
+                   "可在词典各条目中查看假说。\n（词典 → 条目注释 → 假说）",
+                "章节总结的词典假说提示必须显式分为两行，不能依赖英文空格自动换行");
             Type bannerRuntimeType = typeof(DeepSpaceChinesePlugin).Assembly.GetType(
                 "DeepSpaceChinese.AnalogTextBannerLocalizationRuntime");
             Assert(bannerRuntimeType != null,

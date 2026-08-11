@@ -367,6 +367,7 @@ system.messages
 - 场景加载后扫描 `TMP_Text`，按稳定对象路径或已知静态原文查找 UI 译文。
 - 枚举已知系统组件并按嵌套字段路径回写 `component_string` 和 `component_dialogue_frame`；模式切换时仍从保存的原始字段重新生成。
 - 对代码拼接的可见文本使用锚定的 `ui_template` 匹配，只替换模板固定部分并把捕获值放回 `{DYN_n}`；不要把动态数字、路径或玩家命名当成译文固化。
+- 由 `DialogueManager.GenericTypeRoutine()` 写入固定宽度标签的运行时 `component_string`，不能依赖英文单词空格触发自动换行；若对应静态 UI 文本已有手动换行，运行时字段译文必须采用相同的分行结构，并以该完整显示文本做回归测试。
 - `TermLogger.Configure()` 会把不带尾随空格的 `NAME SIGNAL` 与负数信号编号直接拼接成 `NAME SIGNAL-42`。必须用无空格模板 `NAME SIGNAL{DYN_0}` 翻译为“为信号 {DYN_0} 命名”，并用负数编号做回归测试。由于该方法会在运行时重新覆盖标签，补丁必须在 `Configure(signal)` 完成后用实际 `signal` 重建、翻译并登记该文本，保证 F8 也能恢复原文；不能只测试模板渲染器或依赖预制体字段的静态译文。
 - “新单词命名”浮窗可能同时生成多条。`[Layout] NewWordPromptLowerRight = true` 时必须把同一父节点下的整组 `TermLogger` 作为列表移动到右下角：按原纵坐标保持顺序，保留原行距，并从右下角向上增长；禁止把每条都写入同一坐标。弹窗实际由右侧显示器的 RenderTexture 摄像机渲染，移动时必须在该源摄像机的 viewport 内换算，禁止使用 `Camera.main`，否则对象会被移出显示器而彻底消失。找不到源摄像机时保留原位置。该开关默认开启并支持 F5 热重载，关闭后恢复已记录的原始位置。
 - 左侧主菜单的按钮碰撞/点击宽度统一沿用“传输”按钮，但每个图标必须分别紧贴在自身中文文字右侧，不得排成统一的末尾列。ControlRoom 启动动画会在 `sceneLoaded` 后继续改写按钮 Transform，因此首次应用后要做有限次延后重排；不得依赖玩家先用 F8 往返一次来纠正布局。
