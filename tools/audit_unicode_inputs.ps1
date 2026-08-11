@@ -1,11 +1,31 @@
+param(
+    [string]$GameRoot = '',
+    [string]$CecilPath = ''
+)
+
 $ErrorActionPreference = 'Stop'
 
 $projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
-$gameRoot = (Resolve-Path -LiteralPath (Join-Path $projectRoot '..')).Path
-$cecilPath = Join-Path $gameRoot 'BepInEx\core\Mono.Cecil.dll'
-$assemblyPath = Join-Path $gameRoot 'The Message from Deep Space_Data\Managed\Assembly-CSharp.dll'
+. (Join-Path $PSScriptRoot 'resolve_game_root.ps1')
+$gameRootPath = Resolve-GameRootPath -GameRoot $GameRoot -ProjectRoot $projectRoot
+$gameManagedDir = Resolve-GameManagedDirectory -GameRoot $gameRootPath
+if ([string]::IsNullOrWhiteSpace($CecilPath)) {
+    $CecilPath = Join-Path $projectRoot 'vendor\BepInEx\extracted\BepInEx\core\Mono.Cecil.dll'
+}
+elseif (-not [IO.Path]::IsPathRooted($CecilPath)) {
+    $CecilPath = Join-Path (Get-Location).Path $CecilPath
+}
+$CecilPath = [IO.Path]::GetFullPath($CecilPath)
+$assemblyPath = Join-Path $gameManagedDir 'Assembly-CSharp.dll'
 
-[void][Reflection.Assembly]::LoadFrom($cecilPath)
+if (-not (Test-Path -LiteralPath $CecilPath -PathType Leaf)) {
+    throw "Mono.Cecil 程序集不存在：$CecilPath"
+}
+if (-not (Test-Path -LiteralPath $assemblyPath -PathType Leaf)) {
+    throw "游戏程序集不存在：$assemblyPath"
+}
+
+[void][Reflection.Assembly]::LoadFrom($CecilPath)
 $assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly($assemblyPath)
 $actual = @(
     foreach ($type in $assembly.MainModule.Types) {

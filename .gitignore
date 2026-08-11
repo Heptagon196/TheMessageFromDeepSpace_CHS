@@ -29,6 +29,7 @@
 *.pyc
 
 # Editor and OS noise
+/local.config.json
 *.user
 *.suo
 .DS_Store

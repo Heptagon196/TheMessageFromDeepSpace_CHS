@@ -6,8 +6,9 @@ from collections import Counter
 from pathlib import Path
 
 
-PROJECT_DIR = Path(__file__).resolve().parents[1]
-GAME_ROOT = PROJECT_DIR.parent
+TOOLS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(TOOLS_DIR))
+from project_config import GAME_ROOT, PROJECT_DIR
 PYTHON_PACKAGES = PROJECT_DIR / "tools" / "python-packages"
 sys.path.insert(0, str(PYTHON_PACKAGES))
 

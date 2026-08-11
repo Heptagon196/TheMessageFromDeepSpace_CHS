@@ -1,16 +1,22 @@
 param(
-    [string]$Configuration = "Release"
+    [string]$Configuration = "Release",
+    [string]$GameRoot = ""
 )
 
 $ErrorActionPreference = "Stop"
-$projectRoot = Split-Path -Parent $PSScriptRoot
-$gameRoot = Split-Path -Parent $projectRoot
+$projectRoot = (Resolve-Path -LiteralPath (Split-Path -Parent $PSScriptRoot)).Path
+. (Join-Path $PSScriptRoot "resolve_game_root.ps1")
+$gameRoot = Resolve-GameRootPath -GameRoot $GameRoot -ProjectRoot $projectRoot
+$gameManagedDir = Resolve-GameManagedDirectory -GameRoot $gameRoot
 
 # 某些受控终端会清空这些标准环境变量。若 SystemDrive 缺失，Windows 的
 # %SystemDrive%\ProgramData 已知文件夹可能被误当成相对路径并写入当前目录。
-$driveRoot = [IO.Path]::GetPathRoot($gameRoot).TrimEnd('\')
-if (-not [IO.Path]::IsPathRooted($gameRoot) -or $driveRoot -notmatch '^[A-Za-z]:$') {
-    throw "无法从游戏目录确定系统盘：$gameRoot"
+$driveRoot = [IO.Path]::GetPathRoot([Environment]::SystemDirectory).TrimEnd('\')
+if ($driveRoot -notmatch '^[A-Za-z]:$') {
+    $driveRoot = [IO.Path]::GetPathRoot($projectRoot).TrimEnd('\')
+}
+if ($driveRoot -notmatch '^[A-Za-z]:$') {
+    throw "无法确定 Windows 系统盘。"
 }
 $env:SystemDrive = $driveRoot
 if (-not $env:ProgramData -or $env:ProgramData.Contains('%')) {
@@ -56,6 +62,26 @@ $bepInExRoot = Join-Path $projectRoot "vendor\BepInEx\extracted"
 $fontArchive = Join-Path $projectRoot "vendor\fusion-pixel-font-12px-proportional-otf-v2026.07.20.zip"
 $fontExtract = Join-Path $projectRoot "build\font-extract"
 
+$requiredGameAssemblies = @(
+    "Assembly-CSharp.dll",
+    "UnityEngine.dll",
+    "UnityEngine.CoreModule.dll",
+    "UnityEngine.InputLegacyModule.dll",
+    "UnityEngine.IMGUIModule.dll",
+    "UnityEngine.ParticleSystemModule.dll",
+    "UnityEngine.UI.dll",
+    "UnityEngine.UIModule.dll",
+    "Unity.TextMeshPro.dll",
+    "UnityEngine.TextCoreFontEngineModule.dll",
+    "Newtonsoft.Json.dll"
+)
+foreach ($assemblyName in $requiredGameAssemblies) {
+    $assemblyPath = Join-Path $gameManagedDir $assemblyName
+    if (-not (Test-Path -LiteralPath $assemblyPath -PathType Leaf)) {
+        throw "缺少游戏程序集：$assemblyPath"
+    }
+}
+
 & (Join-Path $PSScriptRoot "ensure_dependencies.ps1") -VendorRoot (Join-Path $projectRoot "vendor")
 
 $requiredRoots = @($projectRoot, $gameRoot, $bepInExRoot)
@@ -77,11 +103,14 @@ New-Item -ItemType Directory -Force -Path $packageRoot, $contentRoot,
 python (Join-Path $PSScriptRoot "build_runtime.py") --strict
 if ($LASTEXITCODE -ne 0) { throw "运行时翻译文件校验失败。" }
 
-& (Join-Path $PSScriptRoot "audit_unicode_inputs.ps1")
+& (Join-Path $PSScriptRoot "audit_unicode_inputs.ps1") `
+    -GameRoot $gameRoot `
+    -CecilPath (Join-Path $bepInExRoot "BepInEx\core\Mono.Cecil.dll")
 if ($LASTEXITCODE -ne 0) { throw "中文输入框覆盖审计失败。" }
 
 dotnet build (Join-Path $projectRoot "src\DeepSpaceChinese\DeepSpaceChinese.csproj") `
-    -c $Configuration --configfile (Join-Path $projectRoot "NuGet.Config")
+    -c $Configuration --configfile (Join-Path $projectRoot "NuGet.Config") `
+    "-p:GameManagedDir=$gameManagedDir"
 if ($LASTEXITCODE -ne 0) { throw "插件编译失败。" }
 
 dotnet build (Join-Path $projectRoot "src\DeepSpaceChinese.ConfigEditor\DeepSpaceChinese.ConfigEditor.csproj") `

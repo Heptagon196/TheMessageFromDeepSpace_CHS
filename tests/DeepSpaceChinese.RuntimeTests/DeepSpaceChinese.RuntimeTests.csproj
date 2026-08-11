@@ -4,41 +4,47 @@
     <TargetFramework>net472</TargetFramework>
     <LangVersion>latest</LangVersion>
     <AssemblyName>DeepSpaceChinese.RuntimeTests</AssemblyName>
+    <GameManagedDir Condition="'$(GameManagedDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\The Message From Deep Space_Data\Managed</GameManagedDir>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DeepSpaceChinese\DeepSpaceChinese.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="BepInEx">
       <HintPath>..\..\vendor\BepInEx\extracted\BepInEx\core\BepInEx.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(GameManagedDir)\Assembly-CSharp.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(GameManagedDir)\UnityEngine.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(GameManagedDir)\UnityEngine.CoreModule.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(GameManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(GameManagedDir)\UnityEngine.UI.dll</HintPath>
       <Private>true</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(GameManagedDir)\UnityEngine.UIModule.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(GameManagedDir)\Unity.TextMeshPro.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>$(GameManagedDir)\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>

@@ -15,6 +15,24 @@ internal static class Program
     {
         try
         {
+            return Run();
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex.GetType().FullName + ": " + ex.Message);
+            if (ex.InnerException != null)
+            {
+                Console.Error.WriteLine("Inner: " + ex.InnerException.GetType().FullName +
+                                        ": " + ex.InnerException.Message);
+            }
+            return 1;
+        }
+    }
+
+    private static int Run()
+    {
+        try
+        {
             string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 "..", "..", "..", "..", ".."));
             string testRoot = Path.Combine(projectRoot, "build", "runtime-selftest");
@@ -847,7 +865,19 @@ internal static class Program
         }
         catch (Exception ex)
         {
-            Console.Error.WriteLine(ex);
+            try
+            {
+                Console.Error.WriteLine(ex.GetType().FullName + ": " + ex.Message);
+                if (ex.InnerException != null)
+                {
+                    Console.Error.WriteLine("Inner: " + ex.InnerException.GetType().FullName +
+                                            ": " + ex.InnerException.Message);
+                }
+            }
+            catch
+            {
+                Console.Error.WriteLine("Runtime self-test failed with an unprintable exception.");
+            }
             return 1;
         }
     }

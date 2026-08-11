@@ -4,24 +4,47 @@
 
 仓库包含翻译源数据、运行时补丁源码、配置编辑器、构建脚本和测试。BepInEx、Fusion Pixel Font、编译结果与补丁 ZIP 均不纳入版本控制。
 
-## 目录要求
+## 游戏目录
 
-当前项目的游戏程序集引用采用相对路径。请把本仓库克隆为游戏根目录下的 `TranslationProject`：
+项目可以放在任意目录。仓库提交的 `project.config.json` 提供默认配置：
 
-```text
-The Message from Deep Space/
-├─ The Message From Deep Space_Data/
-└─ TranslationProject/
+```json
+{
+  "GameRoot": ".."
+}
 ```
+
+默认值表示项目父目录是游戏根目录。需要为当前机器指定其他位置时，复制为
+`local.config.json` 后修改；该文件已被 Git 忽略：
+
+```powershell
+Copy-Item .\project.config.json .\local.config.json
+```
+
+两个配置中的 `GameRoot` 都支持绝对路径，也支持相对于配置文件所在目录的
+相对路径。构建、测试、题目检查和 Python 资源工具都共享这套配置。
+
+如需临时覆盖配置，可以向 PowerShell 工具传入 `-GameRoot`；命令行相对路径以
+当前目录为基准。直接调用 Python 工具时可用 `TMFDS_GAME_ROOT` 环境变量覆盖：
+
+```powershell
+& .\tools\build_patch.ps1 -Configuration Release -GameRoot "..\Game"
+$env:TMFDS_GAME_ROOT = "..\Game"
+python .\tools\extract.py
+```
+
+解析优先级为命令行 `-GameRoot` 或 `TMFDS_GAME_ROOT`、`local.config.json`、
+`project.config.json`、旧布局默认值。配置文件都不存在时，项目目录的父目录
+仍会被视为游戏根目录，以兼容原有目录结构。
 
 需要 Windows PowerShell、Python 3、.NET SDK，以及已安装的正版游戏文件。
 
 ## 构建
 
-在游戏根目录执行：
+在项目根目录执行：
 
 ```powershell
-& .\TranslationProject\tools\build_patch.ps1 -Configuration Release
+& .\tools\build_patch.ps1 -Configuration Release
 ```
 
 构建脚本会自动调用 `tools/ensure_dependencies.ps1`：
@@ -57,7 +80,7 @@ The Message from Deep Space/
 ## 测试
 
 ```powershell
-& .\TranslationProject\tools\test_project.ps1 -Configuration Release
+& .\tools\test_project.ps1 -Configuration Release
 ```
 
 该入口会执行完整补丁构建、Python 测试与语法检查、.NET 运行时自测和翻译产物审计。

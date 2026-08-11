@@ -8,9 +8,9 @@ from pathlib import Path
 from typing import Any
 
 
-PROJECT_DIR = Path(__file__).resolve().parents[1]
-GAME_ROOT = PROJECT_DIR.parent
-DATA_DIR = GAME_ROOT / "The Message From Deep Space_Data"
+TOOLS_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(TOOLS_DIR))
+from project_config import DATA_DIR, GAME_ROOT, PROJECT_DIR
 sys.path.insert(0, str(PROJECT_DIR / "tools" / "python-packages"))
 
 import UnityPy  # noqa: E402

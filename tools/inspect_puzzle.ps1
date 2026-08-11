@@ -3,11 +3,16 @@ param(
     [ValidateRange(1, 9999)]
     [int]$DisplayId,
 
-    [string]$Dictionary
+    [string]$Dictionary,
+
+    [string]$GameRoot = ""
 )
 
 $ErrorActionPreference = "Stop"
-$projectRoot = Split-Path -Parent $PSScriptRoot
+$projectRoot = (Resolve-Path -LiteralPath (Split-Path -Parent $PSScriptRoot)).Path
+. (Join-Path $PSScriptRoot "resolve_game_root.ps1")
+$gameRootPath = Resolve-GameRootPath -GameRoot $GameRoot -ProjectRoot $projectRoot
+$null = Resolve-GameManagedDirectory -GameRoot $gameRootPath
 $dependencyDir = Join-Path $projectRoot "build\puzzle-inspector-python"
 $scriptPath = Join-Path $PSScriptRoot "inspect_puzzles.py"
 
@@ -32,8 +37,10 @@ if (
 }
 
 $previousPackages = $env:TMFDS_PYTHON_PACKAGES
+$previousGameRoot = $env:TMFDS_GAME_ROOT
 try {
     $env:TMFDS_PYTHON_PACKAGES = $dependencyDir
+    $env:TMFDS_GAME_ROOT = $gameRootPath
     $arguments = @($scriptPath, $DisplayId)
     if (-not [string]::IsNullOrWhiteSpace($Dictionary)) {
         $arguments += @("--dictionary", $Dictionary)
@@ -45,4 +52,5 @@ try {
 }
 finally {
     $env:TMFDS_PYTHON_PACKAGES = $previousPackages
+    $env:TMFDS_GAME_ROOT = $previousGameRoot
 }
