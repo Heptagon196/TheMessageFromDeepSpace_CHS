@@ -157,6 +157,8 @@ internal sealed class DialogueLocalizer
                 }
                 DialogueFrame originalDisplayFrame = CloneFrame(original.Frames[frameIndex]);
                 DialogueFrame translatedFrame = CloneFrame(original.Frames[frameIndex]);
+                string[] translatedDisplayParts = TokenCodec.ApplyTranslatedWhitespace(
+                    originalParts.Select(part => part.txt).ToArray(), translatedParts);
                 for (int partIndex = 0; partIndex < originalParts.Length; partIndex++)
                 {
                     string originalDisplay = TokenCodec.RestoreRuntimeTokens(
@@ -165,9 +167,7 @@ internal sealed class DialogueLocalizer
                     originalDisplayFrame.dialogueParts[partIndex].txt =
                         TokenCodec.ApplyOriginalWhitespace(originalParts[partIndex].txt,
                             originalDisplay);
-                    translatedFrame.dialogueParts[partIndex].txt =
-                        TokenCodec.ApplyOriginalWhitespace(originalParts[partIndex].txt,
-                            translatedParts[partIndex]);
+                    translatedFrame.dialogueParts[partIndex].txt = translatedDisplayParts[partIndex];
                 }
                 if (_config.TranslateDialogue)
                     _frameCatalog.Register(originalDisplayFrame, translatedFrame);

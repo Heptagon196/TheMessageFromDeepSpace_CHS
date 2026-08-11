@@ -326,6 +326,17 @@ internal static class Program
             Assert(protectedText == "Hello {SIG_N160}, {PLAYER_NAME}.", "运行时标记保护失败");
             string restored = TokenCodec.RestoreRuntimeTokens(protectedText, "Lin");
             Assert(restored == "Hello |-160, Lin.", "运行时标记还原失败");
+            string[] compactChineseParts = TokenCodec.ApplyTranslatedWhitespace(
+                new[] { "On my end, ", "the investigation ", "is progressing." },
+                new[] { "我这边", "对陨石本体的调查", "已经有进展。" });
+            Assert(string.Concat(compactChineseParts) ==
+                   "我这边对陨石本体的调查已经有进展。",
+                "原文 PART 边界的英文空格不得插入相邻中文片段之间");
+            string[] mixedLanguageParts = TokenCodec.ApplyTranslatedWhitespace(
+                new[] { "Use ", "VAR ", "1" },
+                new[] { "使用", "VAR", "1" });
+            Assert(string.Concat(mixedLanguageParts) == "使用 VAR 1",
+                "统一清理 PART 空格时必须保留中英文、英文与数字之间的必要间隔");
 
             var componentEntry = new RuntimeTranslationEntry
             {
@@ -645,17 +656,15 @@ internal static class Program
             Assert(originalBannerSource == "Song Playing: Falling Somewhere",
                 "纯原文模式的歌曲标题滚动源文本必须保持完整英文");
             config.DisplayMode = DisplayMode.TranslationOnly;
-            string nameSignalLocalized = null;
-            foreach (RuntimeTranslationEntry candidate in fullStore.UiTemplates)
-            {
-                if (!UiTemplateRenderer.TryRender(candidate, "NAME SIGNAL-25",
-                        out string candidateText))
-                    continue;
-                nameSignalLocalized = candidateText;
-                break;
-            }
+            string nameSignalLocalized = fullUiLocalizer.TranslateDynamicLiteral(
+                "NAME SIGNAL-25");
             Assert(nameSignalLocalized == "为信号 -25 命名",
-                "右侧新单词浮窗 NAME SIGNAL-数字 必须通过动态模板完整翻译");
+                "右侧新单词浮窗必须通过运行时动态文本入口翻译 NAME SIGNAL-数字");
+            Type termLoggerPatchType = typeof(DeepSpaceChinesePlugin).Assembly.GetType(
+                "DeepSpaceChinese.TermLoggerConfigureLocalizationPatch");
+            Assert(termLoggerPatchType?.GetMethod("Postfix",
+                       BindingFlags.Static | BindingFlags.NonPublic) != null,
+                "TermLogger.Configure 必须接入运行时浮窗翻译补丁，不能只验证模板函数");
             Assert(fullUiLocalizer.TranslateCompositeValues("0.33203125") == "0.33203125",
                 "动态 UI 本地化不得删掉八进制转换结果 0.33203125 的前导 0 和小数点");
             Assert(fullUiLocalizer.TranslateCompositeValues(

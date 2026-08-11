@@ -16,6 +16,7 @@ internal static class TokenCodec
     private static readonly Regex SpeakerMarker = new(@"\{SPEAKER_[A-Z0-9_]+\}", RegexOptions.Compiled);
     private static readonly Regex PartMarker = new(@"\{PART_(\d{3})\}", RegexOptions.Compiled);
     private static readonly Regex Animation = new(@"\$anim(?:[A-Za-z]\d{0,2}|\d{1,2})", RegexOptions.Compiled);
+    private static readonly Regex RichTextTag = new(@"<[^>]+>", RegexOptions.Compiled);
 
     public static string ProtectRuntimeTokens(string text)
     {
@@ -157,7 +158,65 @@ internal static class TokenCodec
         return original.Substring(0, leading) + localized + original.Substring(trailing);
     }
 
+    public static string[] ApplyTranslatedWhitespace(IReadOnlyList<string> originals,
+        IReadOnlyList<string> localizedParts)
+    {
+        if (originals == null)
+            throw new ArgumentNullException(nameof(originals));
+        if (localizedParts == null)
+            throw new ArgumentNullException(nameof(localizedParts));
+        if (originals.Count != localizedParts.Count)
+            throw new ArgumentException("原文与译文 PART 数量必须一致。", nameof(localizedParts));
+
+        var result = new string[localizedParts.Count];
+        for (int index = 0; index < result.Length; index++)
+            result[index] = ApplyOriginalWhitespace(originals[index], localizedParts[index]);
+
+        for (int index = 0; index + 1 < result.Length; index++)
+        {
+            int leftEnd = HorizontalWhitespaceStart(result[index]);
+            int rightStart = HorizontalWhitespaceEnd(result[index + 1]);
+            if (leftEnd == result[index].Length && rightStart == 0)
+                continue;
+
+            string leftVisible = VisibleText(result[index].Substring(0, leftEnd));
+            string rightVisible = VisibleText(result[index + 1].Substring(rightStart));
+            if (leftVisible.Length == 0 || rightVisible.Length == 0 ||
+                !IsChineseTypographyCharacter(leftVisible[leftVisible.Length - 1]) ||
+                !IsChineseTypographyCharacter(rightVisible[0]))
+                continue;
+
+            result[index] = result[index].Substring(0, leftEnd);
+            result[index + 1] = result[index + 1].Substring(rightStart);
+        }
+        return result;
+    }
+
     public static string RemoveAnimations(string value) => Animation.Replace(value ?? string.Empty, string.Empty);
+
+    private static int HorizontalWhitespaceStart(string value)
+    {
+        int end = value?.Length ?? 0;
+        while (end > 0 && value[end - 1] is ' ' or '\t')
+            end--;
+        return end;
+    }
+
+    private static int HorizontalWhitespaceEnd(string value)
+    {
+        int start = 0;
+        while (start < (value?.Length ?? 0) && value[start] is ' ' or '\t')
+            start++;
+        return start;
+    }
+
+    private static string VisibleText(string value) =>
+        RichTextTag.Replace(RemoveAnimations(value), string.Empty);
+
+    private static bool IsChineseTypographyCharacter(char value) =>
+        value is >= '\u3400' and <= '\u4DBF' or >= '\u4E00' and <= '\u9FFF' or
+            >= '\uF900' and <= '\uFAFF' ||
+        "，。！？；：、…—～（）【】《》“”‘’".IndexOf(value) >= 0;
 
     public static string Sha256(string value)
     {

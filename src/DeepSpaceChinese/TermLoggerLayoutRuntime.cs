@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using HarmonyLib;
+using TMPro;
 using UnityEngine;
 
 namespace DeepSpaceChinese;
@@ -187,5 +189,27 @@ internal static class ConsoleDisplayNewWordLayoutPatch
     {
         if (DeepSpaceChinesePlugin.Instance?.MoveNewWordPromptToLowerRightEnabled == true)
             TermLoggerLayoutRuntime.ApplyCurrentLists();
+    }
+}
+
+[HarmonyPatch(typeof(TermLogger), nameof(TermLogger.Configure))]
+internal static class TermLoggerConfigureLocalizationPatch
+{
+    private static readonly FieldInfo LabelField =
+        AccessTools.Field(typeof(WriteableButton), "label");
+
+    [HarmonyPostfix]
+    private static void Postfix(TermLogger __instance, int signal)
+    {
+        try
+        {
+            TMP_Text label = LabelField?.GetValue(__instance) as TMP_Text;
+            DeepSpaceChinesePlugin.Instance?.ApplyTermLoggerPrompt(label, signal);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"翻译新单词命名浮窗失败：\n{ex}");
+        }
     }
 }

@@ -29,6 +29,10 @@
       <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>true</Private>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\The Message From Deep Space_Data\Managed\Newtonsoft.Json.dll</HintPath>
       <Private>true</Private>

@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.68";
+    public const string PluginVersion = "0.1.69";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -342,6 +342,12 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     {
         if (_patchConfig?.Enabled == true)
             _playerName?.ApplySharedInput(dummy);
+    }
+
+    internal void ApplyTermLoggerPrompt(TMP_Text label, int signal)
+    {
+        if (_patchConfig?.Enabled == true && _patchConfig.TranslateUI)
+            _ui?.ApplyKnownDynamicText(label, $"NAME SIGNAL{signal}");
     }
 
     internal void UpdateImeCursorPosition(TMP_InputField input)

@@ -114,6 +114,7 @@ internal sealed class UiLocalizer
     {
         if (!_config.Enabled)
             return;
+        bool wasApplying = _applying;
         _applying = true;
         try
         {
@@ -140,7 +141,7 @@ internal sealed class UiLocalizer
         }
         finally
         {
-            _applying = false;
+            _applying = wasApplying;
         }
     }
 
@@ -211,6 +212,29 @@ internal sealed class UiLocalizer
         if (composite == original)
             return original;
         return TokenCodec.FormatDisplayLiteral(composite, original, _config);
+    }
+
+    internal string TranslateDynamicLiteral(string original) =>
+        TranslateDynamic(null, original);
+
+    internal void ApplyKnownDynamicText(TMP_Text component, string original)
+    {
+        if (component == null)
+            return;
+        string localized = TranslateDynamicLiteral(original);
+        int id = component.GetInstanceID();
+        _originalTexts[id] = original;
+        _lastLocalizedTexts[id] = localized;
+        bool wasApplying = _applying;
+        _applying = true;
+        try
+        {
+            component.text = localized;
+        }
+        finally
+        {
+            _applying = wasApplying;
+        }
     }
 
     internal string TranslateCompositeValues(string original,
