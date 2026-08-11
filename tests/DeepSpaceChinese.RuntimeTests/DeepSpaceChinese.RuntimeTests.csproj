@@ -13,6 +13,10 @@
       <HintPath>..\..\vendor\BepInEx\extracted\BepInEx\core\BepInEx.dll</HintPath>
       <Private>true</Private>
     </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\The Message From Deep Space_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\The Message From Deep Space_Data\Managed\UnityEngine.dll</HintPath>
       <Private>true</Private>

@@ -193,7 +193,7 @@ TranslationProject/
 └─ tools/
 ```
 
-标准 `ainiee_translate.export` 面向 EPUB、TXT、JSON 等原始文档，不负责写回 Unity 游戏资源。本项目完成翻译后，由 `tools/build_runtime.py` 读取 `cache.json` 并生成上列 4 个固定 JSON。全部对白合并在 `dialogue.json`；插件仍会递归合并 `Translations` 下所有 JSON，因此以后需要人工拆分时无需改插件。
+标准 `ainiee_translate.export` 面向 EPUB、TXT、JSON 等原始文档，不负责写回 Unity 游戏资源。本项目完成翻译后，由 `tools/build_runtime.py` 读取 `cache.json` 并生成上列 4 个固定文本 JSON。全部对白合并在 `dialogue.json`。此外，`patch/Translations/dictionary_trigger_aliases.json` 是人工维护的词典命名对白中文附加触发表，构建时会校验并复制到成品的 `DeepSpaceChinese/Translations/`；它不计入普通译文文件数量。
 
 ### 4.3 CacheFile 分组
 
@@ -395,6 +395,7 @@ system.messages
 - 普通系统字段 `component_string` 所用的旧 TMP 字体资产会把 `U+2026` 显示为 `à`，因此这类字段中的省略号固定写成 ASCII `...`；使用另一套字体且已确认显示正常的 `dialogue_frame` / `component_dialogue_frame` 继续使用中文省略号 `……`。同一条系统提示若另有静态 `ui_text` 副本，两份译文必须统一使用 `...`。
 - 构建期必须对全部运行时译文检查意外重复的中文句号、逗号、顿号、分号和冒号。检查前须剥离 `{SPEAKER_*}`、`{PART_nnn}`、`$anim*` 与 TMP 富文本标签，因为这些控制标记在画面上不可见；例如 `没错。$animD19。` 实际会显示为 `没错。。`。规范的 `……`、`——` 以及角色有意使用的连续问号、叹号不属于此类错误。
 - 外星信号本体、玩家输入、玩家给词典条目起的名字和运行时信号解析结果保持动态，不做静态替换。
+- 词典命名对白的 6 类条件（改名前、改名后、指定词条改名前/后、词条等于、词条包含）统一忽略英文字母大小写。若条件英文与同一词条某条假说的英文完全相同，则该条假说的中文译文也作为额外触发别名；必须按“词条 ID + 假说字段位置 + 原始英文”精确定位，禁止把同一英文在全局的所有译文都当作别名。原版条件先行、中文别名仅作失败后的兼容匹配，且不得改写玩家词典或原始监听条件；“包含”条件仍按包含语义，其余条件仍按完整相等语义。F5 重载翻译后，触发别名必须立即使用新译文。
 
 ### 7.4 字体
 
@@ -444,7 +445,7 @@ CoPilot = #FFB07C
 
 显示模式只有“仅译文”和“仅原文”两种，任何时刻只显示其中一种。
 
-`ReloadTranslationsHotkey` 使用相同语法，默认为 `F5`。按下后重新读取 `DeepSpaceChinese\Translations` 下的四个 JSON、根目录 INI 的 `[Font]`、`[DialogueColors]` 和中文字体文件；只有四个 JSON 全部成功解析且至少读到一条译文时才替换当前内存中的译文。字体根据配置和文件 SHA-256 指纹判断是否变化，未变化时不重建；变化时先创建新 `TMP_FontAsset`，成功后才替换全局 fallback，失败则保留旧字体。译文与字体重载互相独立，随后统一重新应用对白、日志、UI 和系统模板，并用新字体重新测量后续对白宽度。
+`ReloadTranslationsHotkey` 使用相同语法，默认为 `F5`。按下后重新读取 `DeepSpaceChinese\Translations` 下的四个文本 JSON、`dictionary_trigger_aliases.json`、根目录 INI 的 `[Font]`、`[DialogueColors]` 和中文字体文件；普通译文或触发表解析失败时都保留各自上一份可用数据。字体根据配置和文件 SHA-256 指纹判断是否变化，未变化时不重建；变化时先创建新 `TMP_FontAsset`，成功后才替换全局 fallback，失败则保留旧字体。译文、触发表与字体重载互相独立，随后统一重新应用对白、日志、UI 和系统模板，并用新字体重新测量后续对白宽度。
 
 F5 还必须重建当前正在逐字显示的对白、个人日志正文和标题映射。重建后要保留“旧译文状态 → 新译文状态”的临时别名，直到原逐字协程结束；否则协程下一帧仍会提交旧字符串，造成热加载不生效或文字重叠。
 

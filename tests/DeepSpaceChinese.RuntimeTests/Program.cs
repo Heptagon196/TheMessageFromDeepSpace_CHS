@@ -33,6 +33,50 @@ internal static class Program
                 "题面修正功能必须默认开启");
             Assert(config.MoveNewWordPromptToLowerRight,
                 "新单词命名浮窗移动到右下角必须默认开启");
+            Assert(DictionaryDialogueConditionMatcher.Matches("VAR", "var", false) &&
+                   DictionaryDialogueConditionMatcher.Matches("frequency", "FREQUENCY", false) &&
+                   DictionaryDialogueConditionMatcher.Matches("频率", "信号频率", true) &&
+                   !DictionaryDialogueConditionMatcher.Matches("频率", "信号频率", false) &&
+                   !DictionaryDialogueConditionMatcher.Matches("VAR", "variable", false),
+                "词典命名对白必须忽略英文大小写，同时保留完整相等与包含条件的语义差异");
+            Assert(DictionaryTriggerAliasStore.RuleMatches(
+                       new DictionaryTriggerAliasStore.Rule
+                       {
+                           Type = "contains",
+                           Values = new System.Collections.Generic.List<string>
+                               { "md不知道", "tm不知道" }
+                       }, "我tm不知道啊") &&
+                   DictionaryTriggerAliasStore.RuleMatches(
+                       new DictionaryTriggerAliasStore.Rule
+                       {
+                           Type = "contains_all",
+                           Values = new System.Collections.Generic.List<string>
+                               { "妈", "不知道" }
+                       }, "我他妈真不知道") &&
+                   !DictionaryTriggerAliasStore.RuleMatches(
+                       new DictionaryTriggerAliasStore.Rule
+                       {
+                           Type = "contains_all",
+                           Values = new System.Collections.Generic.List<string>
+                               { "妈", "不知道" }
+                       }, "我不知道"),
+                "中文附加触发必须支持任一包含和全部包含，且不能把 IDFK 放宽成普通 IDK");
+            string triggerAliasPath = Path.Combine(projectRoot, "patch", "Translations",
+                "dictionary_trigger_aliases.json");
+            Assert(DictionaryTriggerAliasStore.TryLoad(triggerAliasPath, log,
+                       out DictionaryTriggerAliasStore triggerAliases) &&
+                   triggerAliases.Count == 154 &&
+                   triggerAliases.Matches(0, "EditEntryToName",
+                       "IDK", "我也不知道") &&
+                   triggerAliases.Matches(0, "EditEntryToName",
+                       "IDFK", "我他妈真的不知道") &&
+                   !triggerAliases.Matches(0, "EditEntryToName",
+                       "IDFK", "不知道") &&
+                   triggerAliases.Matches(-61, "EditEntryIDToName",
+                       "NUETRON", "种子") &&
+                   !triggerAliases.Matches(-60, "EditEntryIDToName",
+                       "NUETRON", "种子"),
+                "维护表必须完整载入，并按英文定位键、词条 ID 和复合中文规则精确匹配");
             Vector3 promptLast = TermLoggerLayoutEngine.TargetViewportPoint(
                 new Vector3(0.82f, 0.71f, 12f), 2, 3, 0.045f);
             Vector3 promptFirst = TermLoggerLayoutEngine.TargetViewportPoint(

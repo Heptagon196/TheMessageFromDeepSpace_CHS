@@ -1,13 +1,18 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 GAME_ROOT = PROJECT_DIR.parent
-sys.path.insert(0, str(PROJECT_DIR / "tools" / "python-packages"))
+dependency_dir = os.environ.get("TMFDS_PYTHON_PACKAGES")
+if not dependency_dir:
+    bundled = PROJECT_DIR / "build" / "puzzle-inspector-python"
+    dependency_dir = str(bundled if bundled.exists() else PROJECT_DIR / "tools" / "python-packages")
+sys.path.insert(0, dependency_dir)
 
 import UnityPy  # noqa: E402
 from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator  # noqa: E402

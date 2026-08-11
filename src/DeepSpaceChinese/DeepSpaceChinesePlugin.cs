@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.78";
+    public const string PluginVersion = "0.1.80";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -22,6 +22,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _patchConfig?.Enabled == true && _patchConfig.CompilerCaseInsensitive;
     internal bool MoveNewWordPromptToLowerRightEnabled =>
         _patchConfig?.Enabled == true && _patchConfig.MoveNewWordPromptToLowerRight;
+    internal bool TryMatchDictionaryDialogueCondition(ListenerCondition condition) =>
+        _patchConfig?.Enabled == true && _ui != null &&
+        DictionaryDialogueConditionCompatibility.TryMatch(condition, _ui,
+            _dictionaryTriggerAliases);
 
     private PatchConfig _patchConfig;
     private DialogueFrameCatalog _frameCatalog;
@@ -37,8 +41,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     private PlayerNameRuntime _playerName;
     private PuzzleFixRuntime _puzzleFixes;
     private JournalPreviewRuntime _journalPreview;
+    private DictionaryTriggerAliasStore _dictionaryTriggerAliases;
     private Harmony _harmony;
     private string _translationDirectory;
+    private string _dictionaryTriggerAliasPath;
     private string _configPath;
 
     private void Awake()
@@ -49,8 +55,12 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _configPath = System.IO.Path.Combine(gameRoot, "DeepSpaceChinese.ini");
         _patchConfig = PatchConfig.Load(_configPath, Logger);
         _translationDirectory = System.IO.Path.Combine(contentRoot, "Translations");
+        _dictionaryTriggerAliasPath = System.IO.Path.Combine(_translationDirectory,
+            "dictionary_trigger_aliases.json");
         string fixDirectory = System.IO.Path.Combine(contentRoot, "Fix");
         TranslationStore store = TranslationStore.Load(_translationDirectory, Logger);
+        DictionaryTriggerAliasStore.TryLoad(_dictionaryTriggerAliasPath, Logger,
+            out _dictionaryTriggerAliases);
         _frameCatalog = new DialogueFrameCatalog();
         _dialogue = new DialogueLocalizer(store, _patchConfig, _frameCatalog, Logger);
         _font = new FontFallback(_patchConfig, contentRoot, Logger);
@@ -151,6 +161,9 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         else
             TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes.ReloadRules();
+        if (DictionaryTriggerAliasStore.TryLoad(_dictionaryTriggerAliasPath, Logger,
+                out DictionaryTriggerAliasStore replacementAliases))
+            _dictionaryTriggerAliases = replacementAliases;
         _dialogueLayout.ReapplySpeakerColors();
         bool fontReady = _font.ReloadIfChanged(out bool fontReloaded);
         ApplyProgressLogTitleFonts();

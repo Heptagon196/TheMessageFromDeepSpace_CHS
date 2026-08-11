@@ -5,13 +5,14 @@ param(
 $ErrorActionPreference = "Stop"
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $projectDrive = Split-Path -Qualifier $projectRoot
-if ([string]::IsNullOrWhiteSpace($env:SystemDrive)) {
-    $env:SystemDrive = $projectDrive
+$env:SystemDrive = $projectDrive.TrimEnd('\')
+if ([string]::IsNullOrWhiteSpace($env:ProgramData) -or $env:ProgramData.Contains('%') -or
+    -not [IO.Path]::IsPathRooted($env:ProgramData)) {
+    $env:ProgramData = Join-Path $env:SystemDrive "ProgramData"
 }
-if ([string]::IsNullOrWhiteSpace($env:ProgramData)) {
-    $env:ProgramData = Join-Path $projectDrive "ProgramData"
-}
-if ([string]::IsNullOrWhiteSpace($env:ALLUSERSPROFILE)) {
+if ([string]::IsNullOrWhiteSpace($env:ALLUSERSPROFILE) -or
+    $env:ALLUSERSPROFILE.Contains('%') -or
+    -not [IO.Path]::IsPathRooted($env:ALLUSERSPROFILE)) {
     $env:ALLUSERSPROFILE = $env:ProgramData
 }
 

@@ -59,6 +59,8 @@ internal sealed class TranslationStore
     private readonly Dictionary<string, List<RuntimeTranslationEntry>> _displayByOriginal =
         new(StringComparer.OrdinalIgnoreCase);
     private readonly List<RuntimeTranslationEntry> _uiFragments = new();
+    private readonly Dictionary<string, List<RuntimeTranslationEntry>> _hypothesesByFieldPath =
+        new(StringComparer.Ordinal);
 
     public int Count => _entries.Count;
     public int FilesLoaded { get; private set; }
@@ -77,7 +79,9 @@ internal sealed class TranslationStore
         foreach (string path in Directory.GetFiles(directory, "*.json", SearchOption.AllDirectories)
                      .OrderBy(value => value, StringComparer.OrdinalIgnoreCase))
         {
-            if (string.Equals(Path.GetFileName(path), "manifest.json", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Path.GetFileName(path), "manifest.json", StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(Path.GetFileName(path), "dictionary_trigger_aliases.json",
+                    StringComparison.OrdinalIgnoreCase))
                 continue;
             try
             {
@@ -135,6 +139,21 @@ internal sealed class TranslationStore
                     {
                         result._uiFragments.Add(entry);
                     }
+                    else if (entry.Kind == "component_string")
+                    {
+                        string fieldPath = entry.GameString("field_path");
+                        if (fieldPath.StartsWith("hypos[", StringComparison.Ordinal) &&
+                            (fieldPath.EndsWith(".aGuess", StringComparison.Ordinal) ||
+                             fieldPath.EndsWith(".bGuess", StringComparison.Ordinal) ||
+                             fieldPath.EndsWith(".cGuess", StringComparison.Ordinal)))
+                        {
+                            if (!result._hypothesesByFieldPath.TryGetValue(fieldPath,
+                                    out List<RuntimeTranslationEntry> hypotheses))
+                                result._hypothesesByFieldPath[fieldPath] = hypotheses =
+                                    new List<RuntimeTranslationEntry>();
+                            hypotheses.Add(entry);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -180,6 +199,22 @@ internal sealed class TranslationStore
             .Where(pair => pair.Value != null);
 
     public IEnumerable<RuntimeTranslationEntry> UiFragments => _uiFragments;
+
+    public RuntimeTranslationEntry FindUnambiguousHypothesis(string fieldPath,
+        string original)
+    {
+        if (string.IsNullOrEmpty(fieldPath) || string.IsNullOrEmpty(original) ||
+            !_hypothesesByFieldPath.TryGetValue(fieldPath,
+                out List<RuntimeTranslationEntry> entries))
+            return null;
+        RuntimeTranslationEntry[] matches = entries.Where(entry =>
+            string.Equals(entry.GameString("original_text", entry.SourceText), original,
+                StringComparison.OrdinalIgnoreCase)).ToArray();
+        if (matches.Length == 0)
+            return null;
+        string first = matches[0].TranslatedText;
+        return matches.All(entry => entry.TranslatedText == first) ? matches[0] : null;
+    }
 
     private static void AddOriginalIndex(
         IDictionary<string, List<RuntimeTranslationEntry>> index,

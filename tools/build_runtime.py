@@ -318,8 +318,32 @@ def main() -> int:
             }
         )
 
-    # The distributable intentionally exposes exactly four translation JSON
-    # files.  Older builds wrote an unused manifest.json beside them; remove
+    alias_source = PROJECT_DIR / "patch" / "Translations" / "dictionary_trigger_aliases.json"
+    alias_payload = json.loads(alias_source.read_text(encoding="utf-8"))
+    alias_entries = alias_payload.get("entries")
+    if alias_payload.get("format_version") != 1 or not isinstance(alias_entries, list):
+        raise ValueError(f"词典中文触发规则格式无效：{alias_source}")
+    allowed_rule_types = {"exact", "contains", "contains_all"}
+    for index, entry in enumerate(alias_entries):
+        if not isinstance(entry, dict) or not entry.get("channel") or not entry.get("english"):
+            raise ValueError(f"词典中文触发规则第 {index + 1} 条缺少定位键。")
+        for rule in entry.get("rules", []):
+            if rule.get("type") not in allowed_rule_types or not isinstance(rule.get("values"), list):
+                raise ValueError(f"词典中文触发规则第 {index + 1} 条包含无效匹配器。")
+    alias_path = args.output / "dictionary_trigger_aliases.json"
+    alias_path.write_bytes(alias_source.read_bytes())
+    alias_data = alias_path.read_bytes()
+    manifest_files.append(
+        {
+            "path": alias_path.name,
+            "category": "dictionary_trigger_aliases",
+            "entries": len(alias_entries),
+            "sha256": sha256_bytes(alias_data),
+        }
+    )
+
+    # Four generated text JSON files plus one maintained trigger-rule JSON are
+    # exposed. Older builds wrote an unused manifest.json beside them; remove
     # that known legacy artifact so repeated builds stay deterministic.
     legacy_manifest = args.output / "manifest.json"
     if legacy_manifest.is_file():

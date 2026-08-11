@@ -80,6 +80,25 @@ internal sealed class UiLocalizer
         return original != null;
     }
 
+    public bool TryResolveHypothesisTranslation(int hypothesisIndex, string guessField,
+        string expectedOriginal, out string translated)
+    {
+        translated = null;
+        RuntimeTranslationEntry entry = _store.FindUnambiguousHypothesis(
+            $"hypos[{hypothesisIndex}].{guessField}", expectedOriginal);
+        if (entry == null)
+            return false;
+        string original = TokenCodec.RestoreForEntry(
+            entry.GameString("original_text", entry.SourceText), entry,
+            _dialogue.PlayerFullName(DisplayMode.OriginalOnly));
+        if (!string.Equals(original, expectedOriginal, StringComparison.OrdinalIgnoreCase))
+            return false;
+        translated = TokenCodec.RestoreForEntry(entry.TranslatedText, entry,
+            _dialogue.PlayerFullName(DisplayMode.TranslationOnly));
+        return !string.IsNullOrWhiteSpace(translated) &&
+               !string.Equals(translated, original, StringComparison.OrdinalIgnoreCase);
+    }
+
     private static Dictionary<string, List<RuntimeTranslationEntry>> BuildSystemIndex(
         TranslationStore store) =>
         store.Entries.Where(entry =>
