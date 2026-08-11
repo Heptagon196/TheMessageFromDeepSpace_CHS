@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.70";
+    public const string PluginVersion = "0.1.71";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -29,6 +29,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     private LogTitleRuntime _logTitles;
     private UiLocalizer _ui;
     private MainMenuLayoutRuntime _mainMenuLayout;
+    private ReferencePageLayoutRuntime _referencePageLayout;
     private DialogueLiveTextRuntime _liveDialogueText;
     private FontFallback _font;
     private CharacterFontRegistry _characterFonts;
@@ -56,6 +57,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _logTitles = new LogTitleRuntime(_dialogue, _font, _patchConfig, Logger);
         _ui = new UiLocalizer(store, _patchConfig, _dialogue, _frameCatalog, Logger);
         _mainMenuLayout = new MainMenuLayoutRuntime(_patchConfig, Logger);
+        _referencePageLayout = new ReferencePageLayoutRuntime(_patchConfig, Logger);
         _liveDialogueText = new DialogueLiveTextRuntime(_patchConfig, Logger);
         _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
         _playerName = new PlayerNameRuntime(_patchConfig, Logger);
@@ -120,6 +122,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _dialogue.ReapplyAll();
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
+        _referencePageLayout.ApplyAll();
         _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
@@ -158,6 +161,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _dialogue.ReapplyAll();
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
+        _referencePageLayout.ApplyAll();
         _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
@@ -187,6 +191,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _dialogue.ReapplyAll();
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
+        _referencePageLayout.ApplyAll();
         _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
@@ -210,6 +215,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         _mainMenuLayout?.RestoreAll();
+        _referencePageLayout?.RestoreAll();
         TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes?.RestoreAll();
         _harmony?.UnpatchSelf();

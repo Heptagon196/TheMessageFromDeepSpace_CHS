@@ -49,6 +49,18 @@ internal static class Program
                    Math.Abs(ConsoleOutputScrollPadding.AddToWorldHeight(
                        0.8f, 0.04f, enabled: false) - 0.8f) < 0.0001f,
                 "右侧输出滚动范围必须在新单词浮窗下方增加整整三行余量");
+            Assert(Math.Abs(ReferenceCopyButtonLayout.PlaceAfterText(
+                       textLeftX: -0.30f, renderedTextWidth: 0.22f, gap: 0.01f) - (-0.07f)) < 0.0001f &&
+                   Math.Abs(ReferenceCopyButtonLayout.PlaceAfterText(
+                       textLeftX: -0.30f, renderedTextWidth: 0.47f, gap: 0.01f) - 0.18f) < 0.0001f,
+                "参考页复制按钮必须跟随每行文本的实际渲染末端，而不是沿用英文固定坐标");
+            Assert(ReferenceCopyButtonLayout.MatchScore(
+                       "Copy Volume", "体积：4053 m^3", "4053") > 1000 &&
+                   ReferenceCopyButtonLayout.MatchScore(
+                       "Copy Mass", "质量：1.253 x 10^7 kg", "12530000") == 900 &&
+                   ReferenceCopyButtonLayout.MatchScore(
+                       "Copy Height", "Height: 3.8 meters", "3.8") > 1000,
+                "参考页复制按钮必须按复制值匹配对应行，并为科学记数法的陨石质量保留语义匹配");
             const string validPuzzleFix =
                 "{\"display_id\":80,\"original_signals\":[-11,1,-2,6]," +
                 "\"replacement_signals\":[-11,1,-2,7],\"note\":\"test\"}";
@@ -645,6 +657,18 @@ internal static class Program
                    hypothesesInstruction.TranslatedText ==
                    "可在词典各条目中查看假说。\n（词典 → 条目注释 → 假说）",
                 "章节总结的词典假说提示必须显式分为两行，不能依赖英文空格自动换行");
+            Assert(fullStore.TryGet(
+                       "ui:ControlRoom:Reference Window/WHITEDWARF STAR PAGE[38]/Area[0]/STUFF[1]:component:2",
+                       out RuntimeTranslationEntry whiteDwarfReference) &&
+                   whiteDwarfReference.TranslatedText.Contains(
+                       "恒星残骸。\n\n\n\n\n\n\n\n绝大多数恒星"),
+                "白矮星参考页必须补偿中文首段少占的一行，避免图片遮挡后续正文");
+            Assert(fullStore.TryGet(
+                       "ui:ControlRoom:Reference Window/BLACKHOLE PAGE[40]/Area[0]/STUFF[3]:component:2",
+                       out RuntimeTranslationEntry blackholeReference) &&
+                   blackholeReference.TranslatedText.Contains(
+                       "首次探测到黑洞。\n\n\n\n\n只有质量最大的恒星"),
+                "黑洞参考页必须补偿中文第三段少占的一行，避免正文与天文学家注释重叠");
             Type bannerRuntimeType = typeof(DeepSpaceChinesePlugin).Assembly.GetType(
                 "DeepSpaceChinese.AnalogTextBannerLocalizationRuntime");
             Assert(bannerRuntimeType != null,
