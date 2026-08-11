@@ -42,6 +42,13 @@ internal static class Program
                    Math.Abs(promptLast.z - 12f) < 0.0001f &&
                    Math.Abs(promptFirst.y - 0.21f) < 0.0001f,
                 "新单词浮窗列表必须保持右侧横坐标、深度和原顺序，并从右下角向上排列");
+            Assert(Math.Abs(ConsoleOutputScrollPadding.AddToWorldHeight(
+                       0.8f, 0.04f, enabled: true) - 0.92f) < 0.0001f &&
+                   Math.Abs(ConsoleOutputScrollPadding.AddToRelativeMenuHeight(
+                       1.2f, 0.04f, 0.5f, enabled: true) - 1.44f) < 0.0001f &&
+                   Math.Abs(ConsoleOutputScrollPadding.AddToWorldHeight(
+                       0.8f, 0.04f, enabled: false) - 0.8f) < 0.0001f,
+                "右侧输出滚动范围必须在新单词浮窗下方增加整整三行余量");
             const string validPuzzleFix =
                 "{\"display_id\":80,\"original_signals\":[-11,1,-2,6]," +
                 "\"replacement_signals\":[-11,1,-2,7],\"note\":\"test\"}";
