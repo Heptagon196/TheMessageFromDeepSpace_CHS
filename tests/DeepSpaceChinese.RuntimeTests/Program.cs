@@ -979,6 +979,9 @@ internal static class Program
             "src", "DeepSpaceChinese", "JournalPreviewRuntime.cs"));
         Assert(!journalPreviewSource.Contains("GUI.Button("),
             "F6 日志预览输入面板不得依赖会被游戏拦截的鼠标按钮，只能由 Enter/Esc 操作");
+        Assert(journalPreviewSource.Contains("continueButton.SetActive(true)") &&
+               !journalPreviewSource.Contains("continueButton.SetActive(false)"),
+            "F6 日志预览必须显示实际日志页底部的 Continue 提示，才能检查正文是否与其重叠");
         Assert(JournalPreviewPromptInput.Resolve(true, KeyCode.Return) ==
                    JournalPreviewPromptAction.Submit &&
                JournalPreviewPromptInput.Resolve(true, KeyCode.KeypadEnter) ==

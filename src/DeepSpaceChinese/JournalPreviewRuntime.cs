@@ -57,6 +57,7 @@ internal sealed class JournalPreviewRuntime
     private bool _focusInput;
     private bool _previewActive;
     private bool _canvasWasActive;
+    private bool _continueWasActive;
     private string _input = "dialogue:55/frame:3";
     private string _message = string.Empty;
     private ProgressLog _progressLog;
@@ -155,13 +156,16 @@ internal sealed class JournalPreviewRuntime
         }
 
         _canvasWasActive = _progressLog.progressLogCanvas.activeSelf;
+        _continueWasActive = _progressLog.continueButton != null &&
+                             _progressLog.continueButton.activeSelf;
         _progressLog.OpenLogBG();
         _progressLog.progressParent.SetActive(false);
         _progressLog.translatorLogGroup.SetActive(false);
         _progressLog.actSequence.SetActive(false);
         if (_progressLog.hypothesesLog != null)
             _progressLog.hypothesesLog.gameObject.SetActive(false);
-        _progressLog.continueButton.SetActive(false);
+        if (_progressLog.continueButton != null)
+            _progressLog.continueButton.SetActive(true);
         ClearJournalLabels(_progressLog);
 
         DialogueFrame display = _plugin.PrepareCharacterTypedDialogue(body, pair.Original);
@@ -182,6 +186,8 @@ internal sealed class JournalPreviewRuntime
         if (_progressLog != null)
         {
             ClearJournalLabels(_progressLog);
+            if (_progressLog.continueButton != null)
+                _progressLog.continueButton.SetActive(_continueWasActive);
             if (!_canvasWasActive)
             {
                 _progressLog.starSystem.Stop();
