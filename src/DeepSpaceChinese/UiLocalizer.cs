@@ -19,6 +19,7 @@ internal sealed class UiLocalizer
     private readonly DialogueFrameCatalog _frameCatalog;
     private readonly ManualLogSource _log;
     private readonly Dictionary<int, string> _originalTexts = new();
+    private readonly Dictionary<int, string> _lastLocalizedTexts = new();
     private readonly Dictionary<string, string> _originalFields = new(StringComparer.Ordinal);
     private Dictionary<string, List<RuntimeTranslationEntry>> _systemByPrefix;
     private readonly HashSet<string> _reportedMismatches = new(StringComparer.Ordinal);
@@ -83,28 +84,30 @@ internal sealed class UiLocalizer
     {
         if (_applying || !_config.Enabled || !_config.TranslateUI || component == null || proposed == null)
             return proposed;
+        string localized;
         if (CompilerErrorRuntime.IsCompilerError(proposed))
         {
-            RememberOriginal(component, proposed);
-            return CompilerErrorRuntime.Format(proposed, _config.DisplayMode);
+            localized = CompilerErrorRuntime.Format(proposed, _config.DisplayMode);
+            return RememberDisplay(component, proposed, localized);
         }
         if (ShouldPreservePlayerText(component))
             return proposed;
         RuntimeTranslationEntry entry = FindUiEntry(component, proposed);
         if (entry == null)
-            return TranslateDynamic(component, proposed);
+        {
+            localized = TranslateDynamic(component, proposed);
+            return RememberDisplay(component, proposed, localized);
+        }
         string original = entry.GameString("original_text");
         string source = TokenCodec.ProtectForEntry(original, entry);
         if (TokenCodec.Sha256(source) != entry.SourceSha256)
         {
             ReportMismatch(entry.StableKey);
-            return proposed;
+            return RememberDisplay(component, proposed, proposed);
         }
-        int instanceId = component.GetInstanceID();
-        if (!_originalTexts.ContainsKey(instanceId))
-            _originalTexts.Add(instanceId, original);
-        return TokenCodec.FormatDisplayForEntry(entry.TranslatedText, original, entry, _config,
-            _dialogue.PlayerFullName());
+        localized = TokenCodec.FormatDisplayForEntry(entry.TranslatedText, original, entry,
+            _config, _dialogue.PlayerFullName());
+        return RememberDisplay(component, original, localized);
     }
 
     public void ReapplyAll()
@@ -120,17 +123,16 @@ internal sealed class UiLocalizer
                 if (text == null)
                     continue;
                 int id = text.GetInstanceID();
-                string original = _originalTexts.TryGetValue(id, out string saved) ? saved : text.text;
+                _originalTexts.TryGetValue(id, out string saved);
+                _lastLocalizedTexts.TryGetValue(id, out string lastLocalized);
+                string original = SelectRefreshSourceForTests(saved, text.text, lastLocalized);
                 string localized = TranslateIncomingWithoutGuard(text, original);
-                if (localized != original)
+                _originalTexts[id] = original;
+                _lastLocalizedTexts[id] = localized;
+                if (localized != text.text)
                 {
-                    _originalTexts[id] = original;
                     text.text = localized;
                     uiCount++;
-                }
-                else if (_originalTexts.ContainsKey(id))
-                {
-                    text.text = original;
                 }
             }
             int systemCount = ApplySystemStrings();
@@ -185,7 +187,6 @@ internal sealed class UiLocalizer
             if (!UiTemplateRenderer.TryRender(template, original, out string rendered))
                 continue;
             rendered = ApplyDisplayValues(rendered);
-            RememberOriginal(component, original);
             return TokenCodec.FormatDisplayLiteral(rendered, original, _config);
         }
 
@@ -194,10 +195,7 @@ internal sealed class UiLocalizer
         {
             string localized = TranslateExactEntry(achievement, original);
             if (localized != null)
-            {
-                RememberOriginal(component, original);
                 return localized;
-            }
         }
 
         RuntimeTranslationEntry displayValue = _store.FindUnambiguousDisplayValue(original);
@@ -205,16 +203,12 @@ internal sealed class UiLocalizer
         {
             string localized = TranslateExactEntry(displayValue, original);
             if (localized != null)
-            {
-                RememberOriginal(component, original);
                 return localized;
-            }
         }
 
         string composite = TranslateCompositeValues(original);
         if (composite == original)
             return original;
-        RememberOriginal(component, original);
         return TokenCodec.FormatDisplayLiteral(composite, original, _config);
     }
 
@@ -347,13 +341,24 @@ internal sealed class UiLocalizer
         return result.ToString();
     }
 
-    private void RememberOriginal(TMP_Text component, string original)
+    internal static string SelectRefreshSourceForTests(string savedOriginal,
+        string currentDisplay, string lastLocalizedDisplay)
+    {
+        if (savedOriginal == null)
+            return currentDisplay;
+        return lastLocalizedDisplay != null && currentDisplay == lastLocalizedDisplay
+            ? savedOriginal
+            : currentDisplay;
+    }
+
+    private string RememberDisplay(TMP_Text component, string original, string localized)
     {
         if (component == null)
-            return;
+            return localized;
         int id = component.GetInstanceID();
-        if (!_originalTexts.ContainsKey(id))
-            _originalTexts.Add(id, original);
+        _originalTexts[id] = original;
+        _lastLocalizedTexts[id] = localized;
+        return localized;
     }
 
     private static bool ShouldPreservePlayerText(TMP_Text component)

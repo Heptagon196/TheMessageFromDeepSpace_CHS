@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.61";
+    public const string PluginVersion = "0.1.62";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -114,8 +114,8 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         RegisterCharacterFonts();
         ApplyProgressLogTitleFonts();
         _dialogue.ReapplyAll();
-        _liveDialogueText.RefreshAll();
         _ui.ReapplyAll();
+        _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
         string displayName = _patchConfig.DisplayMode == DisplayMode.TranslationOnly ? "仅译文" : "仅原文";
@@ -146,8 +146,8 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             _ui.ReplaceStore(replacement);
         }
         _dialogue.ReapplyAll();
-        _liveDialogueText.RefreshAll();
         _ui.ReapplyAll();
+        _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
         ApplyPuzzleFixes(PuzzleManager.Instance, refreshCurrentDisplay: true);
@@ -174,8 +174,8 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         RegisterCharacterFonts();
         ApplyProgressLogTitleFonts();
         _dialogue.ReapplyAll();
-        _liveDialogueText.RefreshAll();
         _ui.ReapplyAll();
+        _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
         ApplyPuzzleFixes(PuzzleManager.Instance);
@@ -234,6 +234,11 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     {
         if (_patchConfig?.Enabled == true)
             _logTitles?.ApplyOpenTitle(window, chunk);
+    }
+
+    internal void ForgetOpenLog(LogWindow window)
+    {
+        _logTitles?.ForgetOpen(window);
     }
 
     internal string TranslateTmpText(TMP_Text component, string proposed)

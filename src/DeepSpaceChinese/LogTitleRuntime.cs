@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -18,11 +19,14 @@ internal sealed class LogTitleRuntime
         AccessTools.Field(typeof(LogWindow), "logOverflowText");
     private static readonly FieldInfo OpenTitleLabelField =
         AccessTools.Field(typeof(LogWindow), "logTitleLabel");
+    private static readonly FieldInfo DialogueViewField =
+        AccessTools.Field(typeof(LogWindow), "dialogueView");
 
     private readonly DialogueLocalizer _dialogue;
     private readonly FontFallback _font;
     private readonly PatchConfig _config;
     private readonly ManualLogSource _log;
+    private readonly Dictionary<LogWindow, DialogueChunk> _openDetails = new();
 
     public LogTitleRuntime(DialogueLocalizer dialogue, FontFallback font, PatchConfig config,
         ManualLogSource log)
@@ -56,6 +60,7 @@ internal sealed class LogTitleRuntime
     {
         if (window == null || chunk == null)
             return;
+        _openDetails[window] = chunk;
         TMP_Text label = (TMP_Text)OpenTitleLabelField?.GetValue(window);
         if (label != null)
         {
@@ -64,6 +69,12 @@ internal sealed class LogTitleRuntime
                 InterfaceFontPolicy.ShouldUseDirectLogTitleFont(title, _config.DisplayMode));
             label.text = title;
         }
+    }
+
+    public void ForgetOpen(LogWindow window)
+    {
+        if (window != null)
+            _openDetails.Remove(window);
     }
 
     public void RefreshAll()
@@ -80,8 +91,30 @@ internal sealed class LogTitleRuntime
             ApplyEntry(entry, chunk, window);
             count++;
         }
+        int openCount = 0;
+        foreach (KeyValuePair<LogWindow, DialogueChunk> pair in
+                 new List<KeyValuePair<LogWindow, DialogueChunk>>(_openDetails))
+        {
+            LogWindow window = pair.Key;
+            DialogueChunk chunk = pair.Value;
+            if (window == null || chunk == null)
+            {
+                _openDetails.Remove(window);
+                continue;
+            }
+            var dialogueView = DialogueViewField?.GetValue(window) as GameObject;
+            if (dialogueView == null || !dialogueView.activeSelf)
+            {
+                _openDetails.Remove(window);
+                continue;
+            }
+            window.OpenDialogue(chunk);
+            openCount++;
+        }
         if (count > 0)
             _log.LogInfo($"日志列表标题已刷新：{count} 项。");
+        if (openCount > 0)
+            _log.LogInfo($"当前日志详情已按语言模式重新生成：{openCount} 项。");
     }
 
     internal static string TruncateForTests(string title, int limit, string overflow)
@@ -144,5 +177,15 @@ internal static class LogWindowOpenDialogueTitlePatch
         {
             DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"应用日志详情标题翻译失败：\n{ex}");
         }
+    }
+}
+
+[HarmonyPatch(typeof(LogWindow), "CloseDialogue")]
+internal static class LogWindowCloseDialogueTitlePatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(LogWindow __instance)
+    {
+        DeepSpaceChinesePlugin.Instance?.ForgetOpenLog(__instance);
     }
 }

@@ -582,6 +582,17 @@ internal static class Program
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
             Assert(fullUiLocalizer.TranslateCompositeValues("0.33203125") == "0.33203125",
                 "动态 UI 本地化不得删掉八进制转换结果 0.33203125 的前导 0 和小数点");
+            Assert(UiLocalizer.SelectRefreshSourceForTests(
+                       "TITLE TITLE TITLE", "THE MISSION", "标题 标题 标题") ==
+                   "THE MISSION" &&
+                   UiLocalizer.SelectRefreshSourceForTests(
+                       "LOREMIPSUMLOREMIPSUM", "Character journal text.",
+                       "角色日记正文。") == "Character journal text." &&
+                   UiLocalizer.SelectRefreshSourceForTests(
+                       "MISSION TIME", "任务时间", "任务时间") == "MISSION TIME" &&
+                   UiLocalizer.SelectRefreshSourceForTests(
+                       null, "Runtime generated text", null) == "Runtime generated text",
+                "F8 刷新动态日志时不得用 prefab 标题或 LOREMIPSUM 占位文本覆盖游戏已生成的内容");
 
             Assert(CalculatorBaseConversionCompatibility.RepairResult(
                        0.252d, 8, 10, "33203125") == "0.33203125",
