@@ -660,14 +660,25 @@ internal static class Program
                 log);
             config.DisplayMode = DisplayMode.TranslationOnly;
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
-            Assert(fullStore.TryGet("dialogue:55/frame:3",
-                       out RuntimeTranslationEntry dopplerJournal) &&
-                   TokenCodec.TrySplitFrameTranslation(dopplerJournal.TranslatedText, 12,
-                       string.Empty, out string[] dopplerJournalParts) &&
-                   dopplerJournalParts.All(part =>
-                       part.StartsWith("<size=85%>", StringComparison.Ordinal) &&
-                       part.EndsWith("</size>", StringComparison.Ordinal)),
-                "超长多普勒日记的每个 PART 都必须独立闭合字号标签，不能跨 PART 包裹");
+            var scaledJournals = new[]
+            {
+                ("dialogue:46/frame:2", 9, "85%"),
+                ("dialogue:55/frame:3", 12, "85%"),
+                ("dialogue:58/frame:2", 9, "80%"),
+                ("dialogue:63/frame:3", 9, "90%"),
+                ("dialogue:69/frame:2", 12, "75%"),
+                ("dialogue:70/frame:2", 9, "85%")
+            };
+            foreach ((string key, int partCount, string scale) in scaledJournals)
+            {
+                Assert(fullStore.TryGet(key, out RuntimeTranslationEntry journal) &&
+                       TokenCodec.TrySplitFrameTranslation(journal.TranslatedText, partCount,
+                           string.Empty, out string[] journalParts) &&
+                       journalParts.All(part =>
+                           part.StartsWith($"<size={scale}>", StringComparison.Ordinal) &&
+                           part.EndsWith("</size>", StringComparison.Ordinal)),
+                    $"超长个人日志 {key} 的每个 PART 都必须独立闭合 {scale} 字号标签");
+            }
             Assert(fullStore.TryGet(
                    "system:ControlRoom:Hypotheses Log:component:1:field:viewInDict_s",
                    out RuntimeTranslationEntry hypothesesInstruction) &&
