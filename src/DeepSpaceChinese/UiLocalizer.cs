@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using BepInEx.Logging;
 using TMPro;
 using UnityEngine;
@@ -11,6 +12,12 @@ namespace DeepSpaceChinese;
 internal sealed class UiLocalizer
 {
     private const string UndefinedSuffixStableKey = "ui-fragment:undefined-suffix";
+    private static readonly Regex UnknownSignalPlaceholderRegex = new(
+        @"(?<![A-Za-z0-9_])SIGNAL_(-?\d+)(?![A-Za-z0-9_])",
+        RegexOptions.CultureInvariant);
+    private static readonly Regex LocalizedUnknownSignalPlaceholderRegex = new(
+        @"信号(-?\d+)(?![A-Za-z0-9_])",
+        RegexOptions.CultureInvariant);
     [ThreadStatic] private static bool _applying;
 
     private TranslationStore _store;
@@ -285,7 +292,10 @@ internal sealed class UiLocalizer
 
     internal string TranslateRuntimeSentinels(string text)
     {
-        if (string.IsNullOrEmpty(text) ||
+        if (string.IsNullOrEmpty(text))
+            return text;
+        text = TranslateUnknownSignalPlaceholders(text);
+        if (
             !_store.TryGet(UndefinedSuffixStableKey, out RuntimeTranslationEntry entry) ||
             entry.Kind != "ui_fragment")
             return text;
@@ -301,6 +311,13 @@ internal sealed class UiLocalizer
         if (string.IsNullOrEmpty(from) || from == to)
             return text;
         return ReplaceUndefinedSignalSuffix(text, from, to);
+    }
+
+    private string TranslateUnknownSignalPlaceholders(string text)
+    {
+        if (_config.DisplayMode == DisplayMode.TranslationOnly)
+            return UnknownSignalPlaceholderRegex.Replace(text, "信号$1");
+        return LocalizedUnknownSignalPlaceholderRegex.Replace(text, "SIGNAL_$1");
     }
 
     private static string ReplaceUndefinedSignalSuffix(string text, string from, string to)

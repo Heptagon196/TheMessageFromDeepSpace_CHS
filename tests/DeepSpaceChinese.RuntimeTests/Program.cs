@@ -639,12 +639,21 @@ internal static class Program
             Assert(displayLocalizer.TranslateRuntimeSentinels("<u>@-2_UNDEF</u>") ==
                    "<u>@-2_未定义</u>",
                 "对话中的富文本下划线不得阻止未定义后缀翻译");
+            Assert(displayLocalizer.TranslateRuntimeSentinels("每个 SIGNAL_-43 都包含信号") ==
+                   "每个 信号-43 都包含信号",
+                "对话中的未命名 SIGNAL_数字占位词必须翻译为信号数字");
+            Assert(displayLocalizer.TranslateRuntimeSentinels("SIGNAL_17 / MY_SIGNAL_18") ==
+                   "信号17 / MY_SIGNAL_18",
+                "正数未命名信号也必须翻译，但不得替换较长标识符内部的 SIGNAL");
             Assert(displayLocalizer.TranslateRuntimeSentinels("UNDEFINED _UNDEF") ==
                    "UNDEFINED _UNDEF",
                 "不得全局替换说明文字或玩家输入的普通 UNDEF 字样");
             config.DisplayMode = DisplayMode.OriginalOnly;
             Assert(displayLocalizer.TranslateRuntimeSentinels("@-2_未定义") == "@-2_UNDEF",
                 "切回原文时必须恢复游戏原始的未定义后缀");
+            Assert(displayLocalizer.TranslateRuntimeSentinels("每个 信号-43 都包含信号") ==
+                   "每个 SIGNAL_-43 都包含信号",
+                "切回原文时必须恢复未命名信号的游戏占位词");
 
             TranslationStore fullStore = TranslationStore.Load(
                 Path.Combine(projectRoot, "build", "package", "DeepSpaceChinese", "Translations"),

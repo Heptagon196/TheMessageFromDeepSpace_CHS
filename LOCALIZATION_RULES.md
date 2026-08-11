@@ -51,7 +51,7 @@ Puzzle.winningResponse
 Puzzle.altResponses
 ```
 
-信号显示时由 `SignalCompiler` 和玩家的 `UserDictionary` 动态转换。未知信号显示为类似 `SIGNAL_17` 的占位内容；已识别信号显示为玩家自己命名的词。
+信号显示时由 `SignalCompiler` 和玩家的 `UserDictionary` 动态转换。未知信号的内部占位内容类似 `SIGNAL_17`，汉化显示为“信号17”（负数如 `SIGNAL_-43` 显示为“信号-43”）；已识别信号显示为玩家自己命名的词。
 
 这些信号数组、谜题答案和玩家词典属于玩法数据，不属于本地化文本。
 
@@ -82,7 +82,7 @@ Puzzle.altResponses
 ### 2.3 需要上下文判断
 
 - `SIGNALS`、`TRANSMISSIONS`、`TRANSLATOR` 等静态界面标签是 UI，应翻译；其中 `TRANSLATOR` 固定译为“翻译员”。
-- `SIGNAL_17` 是游戏内未知词，应保留；不得把它翻成谜底。
+- `SIGNAL_17` 是游戏内未知词：数字 ID 必须原样保留，不得把它翻成谜底；仅在最终画面把 `SIGNAL_` 前缀本地化为“信号”。F8 切回原文时必须恢复完整的 `SIGNAL_17`。
 - 人物对白中谈论“signal”“transmission”等普通单词时可以翻译。
 - 人名、地名、机构名和科学术语必须先进入锁定词汇表，再统一决定保留、音译或意译。
 - 玩家已识别的外星词由 `UserDictionary` 动态提供，不做静态翻译，也不得提前写入译文。
