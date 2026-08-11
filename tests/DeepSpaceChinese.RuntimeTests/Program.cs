@@ -608,6 +608,27 @@ internal static class Program
                        0.9d, 8, 10, "9") == "9",
                 "计算器兼容修复不得改写正常结果、整数结果或含无效进制数字的结果");
 
+            float transmissionX = -0.47925f;
+            float transmissionWidth = 0.88151f;
+            foreach (float originalWidth in new[] { 0.38896f, 0.60893f, 0.70944f })
+            {
+                MainMenuButtonLayout layout = MainMenuButtonLayoutEngine.Calculate(
+                    originalParentScaleX: originalWidth,
+                    originalChildScaleX: 1f / originalWidth,
+                    referencePositionX: transmissionX,
+                    referenceScaleX: transmissionWidth,
+                    labelRightX: 0.25f,
+                    visualGapX: 0.04f,
+                    iconHalfWidthX: 0.03f);
+                Assert(Math.Abs(layout.RootPositionX - transmissionX) < 0.00001f &&
+                       Math.Abs(layout.RootScaleX - transmissionWidth) < 0.00001f,
+                    "中文主菜单的所有按钮必须保持与“传输”按钮相同的完整点击宽度");
+                Assert(Math.Abs(layout.ChildScaleX * transmissionWidth - 1f) < 0.0001f,
+                    "统一按钮宽度时不得横向拉伸文字或图标");
+                Assert(Math.Abs(layout.IconCenterX - 0.32f) < 0.00001f,
+                    "图标必须按中文文字右边界和固定视觉间距定位");
+            }
+
             RunConfigEditorLayoutTests(projectRoot);
 
             Console.WriteLine("Runtime self-test passed: INI, hotkey, JSON, tokens, original/translation display, dialogue layout.");
