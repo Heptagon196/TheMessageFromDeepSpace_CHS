@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from translation_text_checks import validate_chinese_quotes
+from extraction_rules import DISPLAY_VALUE_UI_PATHS, UI_TEMPLATES
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
@@ -46,6 +47,22 @@ DEGREE_CONTEXTS = {
     "dialogue:637/frame:1": "academic",
     "dialogue:878/frame:0": "abstract",
 }
+
+DISPLAY_VALUE_TEMPLATE_IDS = {
+    str(template["template_id"])
+    for template in UI_TEMPLATES
+    if template.get("translate_display_values", False)
+}
+
+
+def should_translate_display_values(game: dict[str, Any]) -> bool:
+    """Allow semantic display-value substitution only in explicitly known UI."""
+    kind = str(game.get("kind", ""))
+    if kind == "ui_template":
+        return str(game.get("template_id", "")) in DISPLAY_VALUE_TEMPLATE_IDS
+    if kind == "ui_text":
+        return str(game.get("object_path", "")) in DISPLAY_VALUE_UI_PATHS
+    return False
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -254,8 +271,15 @@ def main() -> int:
                 "display_field",
                 "fragment_id",
                 "object_name",
+                "translate_display_values",
             }
         }
+        # Derive this security-sensitive policy from extraction rules instead of
+        # trusting stale cache metadata. Absence means false in the runtime.
+        if should_translate_display_values(game):
+            runtime_game["translate_display_values"] = True
+        else:
+            runtime_game.pop("translate_display_values", None)
         output[category].append(
             {
                 "stable_key": stable_key,

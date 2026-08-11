@@ -29,6 +29,22 @@ valid["translated_text"] = valid["source_text"]
 assert build_runtime.validate_item(valid) == [], "合法译文不应被拒绝"
 assert build_runtime.category_for("dialogue_frame") == "dialogue"
 
+assert build_runtime.should_translate_display_values(
+    {"kind": "ui_template", "template_id": "puzzle-group"}
+)
+assert not build_runtime.should_translate_display_values(
+    {"kind": "ui_template", "template_id": "save-path"}
+)
+assert build_runtime.should_translate_display_values(
+    {
+        "kind": "ui_text",
+        "object_path": "Progress Log (Canvas) (start inactive)/FULL PROGRESS LOG (start inactive)[1]/TRANSMISSION GROUP LOG[6]",
+    }
+)
+assert not build_runtime.should_translate_display_values(
+    {"kind": "ui_text", "object_path": "Menu Window/Save Path"}
+)
+
 invalid = deepcopy(valid)
 invalid["translated_text"] = invalid["translated_text"].replace("{PART_000}", "", 1)
 errors = build_runtime.validate_item(invalid)

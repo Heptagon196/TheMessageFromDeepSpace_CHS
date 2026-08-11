@@ -557,9 +557,26 @@ internal static class Program
             Assert(store.FindUnambiguousDisplayValue("SHAPES")?.TranslatedText == "形状",
                 "总结界面的全大写谜题组标题必须命中显示值译文");
             var displayLocalizer = new UiLocalizer(store, config, null, null, log);
-            Assert(displayLocalizer.TranslateCompositeValues("已完成的谜题组：\n1. SHAPES") ==
+            Assert(displayLocalizer.TranslateCompositeValues(
+                       "已完成的谜题组：\n1. SHAPES", translateDisplayValues: true) ==
                    "已完成的谜题组：\n1. 形状",
                 "总结界面的复合文本必须翻译大小写不同的谜题组标题");
+            var safeTemplate = new RuntimeTranslationEntry
+            {
+                StableKey = "ui-template:save-path",
+                Game = new JObject { ["translate_display_values"] = false },
+            };
+            var displayValueTemplate = new RuntimeTranslationEntry
+            {
+                StableKey = "ui-template:puzzle-group",
+                Game = new JObject { ["translate_display_values"] = true },
+            };
+            Assert(displayLocalizer.ApplyTemplateDisplayValues(safeTemplate,
+                       "路径：C:/AppData/The Message From Deep Space") ==
+                   "路径：C:/AppData/The Message From Deep Space" &&
+                   displayLocalizer.ApplyTemplateDisplayValues(displayValueTemplate,
+                       "第 15 组 - Shapes") == "第 15 组 - 形状",
+                "只有显式声明的动态模板才能翻译显示值，路径模板必须原样保留动态参数");
             Assert(displayLocalizer.TranslateCompositeValues("@-2_UNDEF") == "@-2_未定义",
                 "未定义词典条目的动态数字必须保留，只翻译 _UNDEF 后缀");
             config.DisplayMode = DisplayMode.TranslationOnly;
@@ -582,6 +599,18 @@ internal static class Program
             var fullUiLocalizer = new UiLocalizer(fullStore, config, null, null, log);
             Assert(fullUiLocalizer.TranslateCompositeValues("0.33203125") == "0.33203125",
                 "动态 UI 本地化不得删掉八进制转换结果 0.33203125 的前导 0 和小数点");
+            Assert(fullUiLocalizer.TranslateCompositeValues(
+                       "COMPILATION FAILED", translateDisplayValues: true) ==
+                   "COMPILATION FAILED",
+                "逐字加载编译错误时不得把 COMPILATION 内部的 PI 替换为圆周率");
+            Assert(fullUiLocalizer.TranslateCompositeValues(
+                       "-RUN BAU_CORE_5.MOS", translateDisplayValues: true) ==
+                   "-RUN BAU_CORE_5.MOS",
+                "启动日志不得把程序名 CORE 内部的 OR 替换为“或”");
+            const string savePath =
+                "C:/Users/hepta/AppData/LocalLow/Applesinmypants/The Message From Deep Space";
+            Assert(fullUiLocalizer.TranslateCompositeValues(savePath) == savePath,
+                "保存路径中的 AppData、The Message From 等文件夹名必须保持原样");
             Assert(UiLocalizer.SelectRefreshSourceForTests(
                        "TITLE TITLE TITLE", "THE MISSION", "标题 标题 标题") ==
                    "THE MISSION" &&

@@ -72,6 +72,16 @@ templates = {template["source_text"] for template in rules.UI_TEMPLATES}
 assert "Transmission: {DYN_0}, Time: {DYN_1}" in templates
 assert "Atomic Number: {DYN_0}" in templates
 assert "No {DYN_0} in {DYN_1} {DYN_2}" in templates
+template_policies = {
+    template["template_id"]: template.get("translate_display_values", False)
+    for template in rules.UI_TEMPLATES
+}
+assert template_policies["puzzle-group"] is True
+assert template_policies["save-path"] is False
+assert (
+    "Progress Log (Canvas) (start inactive)/FULL PROGRESS LOG (start inactive)[1]/TRANSMISSION GROUP LOG[6]"
+    in rules.DISPLAY_VALUE_UI_PATHS
+)
 
 fragments = {fragment["source_text"] for fragment in rules.UI_FRAGMENTS}
 assert "Half-Life: Almost Instantaneous" in fragments

@@ -868,6 +868,9 @@ def extract_ui(
                     "template_id": template_id,
                     "original_text": source,
                     "protect_player_name": False,
+                    "translate_display_values": bool(
+                        template.get("translate_display_values", False)
+                    ),
                 },
                 used_indexes=used_indexes,
             )

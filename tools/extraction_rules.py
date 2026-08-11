@@ -62,7 +62,11 @@ UI_TEMPLATES: list[dict[str, Any]] = [
         "source_text": "Transmission: {DYN_0}, Time: {DYN_1}",
     },
     {"template_id": "save-path", "source_text": "Path: {DYN_0}"},
-    {"template_id": "puzzle-group", "source_text": "GROUP {DYN_0} - {DYN_1}"},
+    {
+        "template_id": "puzzle-group",
+        "source_text": "GROUP {DYN_0} - {DYN_1}",
+        "translate_display_values": True,
+    },
     {"template_id": "atomic-number", "source_text": "Atomic Number: {DYN_0}"},
     {"template_id": "atomic-mass", "source_text": "Atomic Mass: {DYN_0}"},
     {
@@ -86,6 +90,15 @@ UI_TEMPLATES: list[dict[str, Any]] = [
         "source_text": "NAME {DYN_0} IN DICTIONARY",
     },
 ]
+
+
+# Dynamic TMP components whose generated contents contain game-authored display
+# values (currently puzzle-group names). All other dynamic text is opaque: it can
+# contain file paths, program names, compiler output, or player-authored text and
+# must never receive dictionary-style substitutions.
+DISPLAY_VALUE_UI_PATHS = {
+    "Progress Log (Canvas) (start inactive)/FULL PROGRESS LOG (start inactive)[1]/TRANSMISSION GROUP LOG[6]",
+}
 
 
 # Fragments used to construct longer periodic-table strings. They are translated

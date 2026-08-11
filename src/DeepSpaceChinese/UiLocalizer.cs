@@ -186,7 +186,7 @@ internal sealed class UiLocalizer
             }
             if (!UiTemplateRenderer.TryRender(template, original, out string rendered))
                 continue;
-            rendered = ApplyDisplayValues(rendered);
+            rendered = ApplyTemplateDisplayValues(template, rendered);
             return TokenCodec.FormatDisplayLiteral(rendered, original, _config);
         }
 
@@ -206,13 +206,15 @@ internal sealed class UiLocalizer
                 return localized;
         }
 
-        string composite = TranslateCompositeValues(original);
+        string composite = TranslateCompositeValues(original,
+            ShouldTranslateDisplayValues(component));
         if (composite == original)
             return original;
         return TokenCodec.FormatDisplayLiteral(composite, original, _config);
     }
 
-    internal string TranslateCompositeValues(string original)
+    internal string TranslateCompositeValues(string original,
+        bool translateDisplayValues = false)
     {
         string composite = original;
         bool fragmentChanged = false;
@@ -230,8 +232,23 @@ internal sealed class UiLocalizer
             composite = composite.Replace(source, fragment.TranslatedText);
             fragmentChanged = true;
         }
-        composite = ApplyDisplayValues(composite);
+        if (translateDisplayValues)
+            composite = ApplyDisplayValues(composite);
         return fragmentChanged || composite != original ? composite : original;
+    }
+
+    internal string ApplyTemplateDisplayValues(RuntimeTranslationEntry template,
+        string rendered) =>
+        template != null && template.GameBool("translate_display_values")
+            ? ApplyDisplayValues(rendered)
+            : rendered;
+
+    private bool ShouldTranslateDisplayValues(TMP_Text component)
+    {
+        if (component == null)
+            return false;
+        return _store.TryGet(BuildUiStableKey(component), out RuntimeTranslationEntry entry) &&
+               entry.Kind == "ui_text" && entry.GameBool("translate_display_values");
     }
 
     internal string TranslateRuntimeSentinels(string text)
@@ -325,21 +342,41 @@ internal sealed class UiLocalizer
     {
         if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(source))
             return text;
-        int start = 0;
-        int match = text.IndexOf(source, start, StringComparison.OrdinalIgnoreCase);
+        int scan = 0;
+        int copyStart = 0;
+        int match = text.IndexOf(source, scan, StringComparison.OrdinalIgnoreCase);
         if (match < 0)
             return text;
         var result = new StringBuilder(text.Length);
+        bool replaced = false;
         while (match >= 0)
         {
-            result.Append(text, start, match - start);
+            int after = match + source.Length;
+            bool validStart = !IsAsciiIdentifier(source[0]) || match == 0 ||
+                              !IsAsciiIdentifier(text[match - 1]);
+            bool validEnd = !IsAsciiIdentifier(source[source.Length - 1]) ||
+                            after == text.Length || !IsAsciiIdentifier(text[after]);
+            if (!validStart || !validEnd)
+            {
+                scan = match + 1;
+                match = text.IndexOf(source, scan, StringComparison.OrdinalIgnoreCase);
+                continue;
+            }
+            result.Append(text, copyStart, match - copyStart);
             result.Append(replacement);
-            start = match + source.Length;
-            match = text.IndexOf(source, start, StringComparison.OrdinalIgnoreCase);
+            copyStart = after;
+            scan = after;
+            replaced = true;
+            match = text.IndexOf(source, scan, StringComparison.OrdinalIgnoreCase);
         }
-        result.Append(text, start, text.Length - start);
+        if (!replaced)
+            return text;
+        result.Append(text, copyStart, text.Length - copyStart);
         return result.ToString();
     }
+
+    private static bool IsAsciiIdentifier(char value) =>
+        value is >= 'A' and <= 'Z' or >= 'a' and <= 'z' or >= '0' and <= '9' or '_';
 
     internal static string SelectRefreshSourceForTests(string savedOriginal,
         string currentDisplay, string lastLocalizedDisplay)
