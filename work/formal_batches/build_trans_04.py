@@ -682,7 +682,7 @@ POLISH_OVERRIDES: dict[int, str] = {
     401: "{SPEAKER_COLLINS}{PART_000}我倒想知道这是什么意思。",
     418: "{SPEAKER_COLLINS}{PART_000}信号 -2，{PART_001}它好像不像数字那样起作用？{PART_002}$animC5埃克斯博士，{PART_003}巴蒂斯塔博士？{PART_004}{PLAYER_NAME}？{PART_005}$animC3有什么想法吗？",
     419: "{SPEAKER_AKERS}{PART_000}不是数字啊，{PART_001}嗯……",
-    425: "{SPEAKER_COLLINS}{PART_000}‘为翻译外星造物提供语言分析支持’——{PART_001}这就是我办公桌上职位说明的标题。{PART_002}到目前为止，{PART_003}内容倒很准确，{PART_004}不过对我来说也同样{PART_005}是片未知领域。",
+    425: "{SPEAKER_COLLINS}{PART_000}‘为翻译外星造物提供语言分析支持’——{PART_001}这就是我办公桌上职位说明的标题。{PART_002}到目前为止，{PART_003}内容倒很准确，{PART_004}不过对我来说，{PART_005}这同样是片未知领域。",
     430: "{SPEAKER_COLLINS}{PART_000}我赞同。{PART_001}可我怕的正是这一点。",
     439: "{SPEAKER_BAUTISTA}{PART_000}我很兴奋。{PART_001}我很高兴。{PART_002}我兴奋起来就是这个样子。",
     443: "{SPEAKER_BAUTISTA}{PART_000}我提过。",
