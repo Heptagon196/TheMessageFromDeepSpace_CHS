@@ -8,7 +8,11 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
-from translation_text_checks import validate_chinese_quotes, validate_dialogue_ellipsis
+from translation_text_checks import (
+    validate_chinese_quotes,
+    validate_dialogue_ellipsis,
+    validate_duplicate_punctuation,
+)
 from extraction_rules import DISPLAY_VALUE_UI_PATHS, UI_TEMPLATES
 
 
@@ -131,6 +135,7 @@ def validate_item(item: dict[str, Any]) -> list[str]:
         errors.append("source_sha256 与 source_text 不一致")
     errors.extend(validate_temperature_units(item))
     errors.extend(validate_chinese_quotes(translated))
+    errors.extend(validate_duplicate_punctuation(translated))
     for name, pattern in TOKEN_PATTERNS.items():
         source_tokens = pattern.findall(source)
         translated_tokens = pattern.findall(translated)

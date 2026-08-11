@@ -424,7 +424,7 @@ translations = [
     "{SPEAKER_COLLINS}{PART_000}你该感谢的{PART_001}$animD02不是我。",
     "{SPEAKER_DOPPLER}{PART_000}{PLAYER_NAME}，{PART_001}$animD22希望你能感受到我对你的感激和自豪。{PART_002}团队离不开你这样聪明的人。{PART_003}$animD04也许，{PART_004}$animM4这座奖杯能表达我的喜悦。{PART_005}$animD02我知道不算什么，{PART_006}但心意最重要，对吧？",
     "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}是本周优秀员工？",
-    "{SPEAKER_DOPPLER}{PART_000}没错。$animD19。{PART_001}谢谢你，{PLAYER_NAME}$animD22。{PART_002}没有你，我们的发现根本走不到今天。$animM",
+    "{SPEAKER_DOPPLER}{PART_000}没错$animD19。{PART_001}谢谢你，{PLAYER_NAME}$animD22。{PART_002}没有你，我们的发现根本走不到今天。$animM",
     # chunk 20
     "第十二周结束",
     "{SPEAKER_COLLINS}{PART_000}就是它。{PART_001}这个小东西，{PART_002}是我们窥见一个与地球截然不同世界的窗口。",

@@ -7,6 +7,14 @@ import re
 
 
 ASCII_ELLIPSIS_RE = re.compile(r"\.{3,}")
+INVISIBLE_CONTROL_RE = re.compile(
+    r"(?:"
+    r"\{(?:SPEAKER_[A-Z0-9_]+|PART_\d{3})\}"
+    r"|\$anim(?:[A-Za-z]\d{0,2}|\d{1,2})"
+    r"|</?[A-Za-z][^>]*>"
+    r")"
+)
+ACCIDENTAL_PUNCTUATION_REPEAT_RE = re.compile(r"([。，、；：])\1+")
 
 
 def validate_chinese_quotes(text: str) -> list[str]:
@@ -71,4 +79,22 @@ def validate_dialogue_ellipsis(text: str) -> list[str]:
         issues.append("对白省略号必须使用中文双省略号 ……，不能使用 ASCII 三点 ...")
     if "…" in text.replace("……", ""):
         issues.append("中文省略号必须成对使用 ……，不能只写一个 …")
+    return issues
+
+
+def validate_duplicate_punctuation(text: str) -> list[str]:
+    """Reject accidental repeated punctuation as it appears on screen.
+
+    Speaker, dialogue-part, animation and TMP rich-text tags are invisible at
+    runtime.  Removing them before validation catches strings such as
+    ``没错。$animD19。`` which render as ``没错。。``.  Paired ellipses,
+    em dashes and expressive question/exclamation runs remain valid.
+    """
+
+    visible_text = INVISIBLE_CONTROL_RE.sub("", text or "")
+    issues: list[str] = []
+    for match in ACCIDENTAL_PUNCTUATION_REPEAT_RE.finditer(visible_text):
+        issues.append(
+            f"位置 {match.start()} 存在重复中文标点 {match.group(0)!r}"
+        )
     return issues

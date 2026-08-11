@@ -93,6 +93,13 @@ assert build_runtime.validate_item(paired_dialogue_ellipsis) == [], (
     "规范的中文双省略号应通过对白校验"
 )
 
+duplicate_punctuation = deepcopy(valid)
+duplicate_punctuation["translated_text"] += "。。"
+errors = build_runtime.validate_item(duplicate_punctuation)
+assert any("重复中文标点" in error for error in errors), (
+    "所有运行时译文都必须经过重复标点校验"
+)
+
 legacy_system_ellipsis = [
     item
     for item in build_runtime.iter_items(cache)
