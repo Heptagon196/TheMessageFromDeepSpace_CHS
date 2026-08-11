@@ -14,7 +14,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.60";
+    public const string PluginVersion = "0.1.61";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -211,7 +211,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         }
         catch (Exception ex)
         {
-            Logger.LogError($"应用题面修正规则失败，游戏将继续使用当前题面：\n{ex}");
+            Logger.LogError($"应用题目及答案修正规则失败，游戏将继续使用当前数据：\n{ex}");
         }
     }
 

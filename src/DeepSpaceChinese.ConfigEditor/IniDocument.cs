@@ -126,7 +126,7 @@ internal sealed class IniDocument
     }
 
     private const string DefaultIniText = @"# 《The Message from Deep Space》简体中文补丁配置
-# 翻译、字体、对白颜色、兼容设置和题面修正规则可按 F5 热重载。
+# 翻译、字体、对白颜色、兼容设置和题目及答案修正规则可按 F5 热重载。
 # “显示模式”也可在游戏运行时用快捷键切换。
 
 [Localization]
@@ -136,7 +136,7 @@ Enabled = true
 # 运行时切换“仅译文 / 仅原文”的快捷键。默认 F8；写 None 可禁用。
 ToggleModeHotkey = F8
 
-# 运行时重新读取翻译、字体、对白颜色、兼容设置和题面修正规则的快捷键。
+# 运行时重新读取翻译、字体、对白颜色、兼容设置和题目及答案修正规则的快捷键。
 ReloadTranslationsHotkey = F5
 
 # 缺少译文或译文校验失败时是否显示英文原文。
@@ -152,8 +152,8 @@ TranslateSystem = true
 CompilerCaseInsensitive = true
 
 [PuzzleFixes]
-# 是否应用 DeepSpaceChinese\Fix 中的题面修正规则。默认开启。
-# 只有显示题号匹配，且原始数字信号与游戏数据完全一致时才会替换。
+# 是否应用 DeepSpaceChinese\Fix 中的题目及答案修正规则。默认开启。
+# 题面和答案集可单独修正；两者都提供时，原题面和原始答案集必须都匹配才会替换。
 Enabled = true
 
 [DialogueColors]

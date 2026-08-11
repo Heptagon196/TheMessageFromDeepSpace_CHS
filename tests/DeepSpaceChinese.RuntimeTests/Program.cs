@@ -44,6 +44,102 @@ internal static class Program
                        out _, out string wrongFixIdError) &&
                    wrongFixIdError.Contains("display_id"),
                 "题面修正文件名必须与游戏显示编号一致");
+            const string puzzleFixWithAnswers =
+                "{\"display_id\":80,\"original_signals\":[-11,1,-2,6]," +
+                "\"replacement_signals\":[-11,1,-2,7]," +
+                "\"original_answers\":[[-11,2],[-11,3]]," +
+                "\"replacement_answers\":[[-11,4],[-11,5]]}";
+            Assert(PuzzleFixRule.TryParse(puzzleFixWithAnswers, "80.json",
+                       out PuzzleFixRule answerFixRule, out string answerFixError) &&
+                   answerFixError == null && answerFixRule.HasAnswerReplacement &&
+                   answerFixRule.OriginalAnswers.Length == 2 &&
+                   answerFixRule.ReplacementAnswers.Length == 2,
+                "题面修正规则必须支持可选的原始答案集和替换答案集");
+            const string incompleteAnswerFix =
+                "{\"display_id\":80,\"original_signals\":[1]," +
+                "\"replacement_signals\":[2],\"replacement_answers\":[[3]]}";
+            Assert(!PuzzleFixRule.TryParse(incompleteAnswerFix, "80.json", out _,
+                       out string incompleteAnswerError) &&
+                   incompleteAnswerError.Contains("original_answers") &&
+                   incompleteAnswerError.Contains("replacement_answers"),
+                "答案修正必须同时提供原始答案集和替换答案集");
+            const string emptyAnswerFix =
+                "{\"display_id\":80,\"original_signals\":[1]," +
+                "\"replacement_signals\":[2],\"original_answers\":[]," +
+                "\"replacement_answers\":[[]]}";
+            Assert(!PuzzleFixRule.TryParse(emptyAnswerFix, "80.json", out _,
+                       out string emptyAnswerError) &&
+                   emptyAnswerError.Contains("答案集"),
+                "答案修正不得接受空答案集或空答案");
+            Assert(answerFixRule.TryCreatePlan(
+                       new[] { -11, 1, -2, 6 },
+                       new[] { new[] { -11, 2 }, new[] { -11, 3 } },
+                       out PuzzleFixPlan answerPlan, out string answerPlanError) &&
+                   answerPlanError == null &&
+                   PuzzleFixRule.SignalsEqual(answerPlan.ReplacementSignals,
+                       new[] { -11, 1, -2, 7 }) &&
+                   PuzzleFixRule.AnswerSetsEqual(answerPlan.ReplacementAnswers,
+                       new[] { new[] { -11, 4 }, new[] { -11, 5 } }),
+                "题面和原始答案集匹配时，规则必须生成同时替换题面与答案集的计划");
+            Assert(puzzleFixRule.TryCreatePlan(
+                       new[] { -11, 1, -2, 6 },
+                       new[] { new[] { 999 } },
+                       out PuzzleFixPlan legacyPlan, out string legacyPlanError) &&
+                   legacyPlanError == null && legacyPlan.ReplacementAnswers == null,
+                "未填写答案字段的旧规则必须只替换题面，不检查或改写答案集");
+            Assert(!answerFixRule.TryCreatePlan(
+                       new[] { -11, 1, -2, 6 },
+                       new[] { new[] { -11, 2 }, new[] { -11, 99 } },
+                       out _, out string mismatchedAnswersError) &&
+                   mismatchedAnswersError.Contains("原始答案集"),
+                "原始答案集不匹配时必须原子地拒绝整条修正规则");
+            Assert(!answerFixRule.TryCreatePlan(
+                       new[] { -11, 1, -2, 99 },
+                       new[] { new[] { -11, 2 }, new[] { -11, 3 } },
+                       out _, out string mismatchedQuestionError) &&
+                   mismatchedQuestionError.Contains("原题面"),
+                "原题面不匹配时不得替换答案集");
+            const string answerOnlyFix =
+                "{\"display_id\":81," +
+                "\"original_answers\":[[-11,2],[-11,3]]," +
+                "\"replacement_answers\":[[-11,4]]}";
+            Assert(PuzzleFixRule.TryParse(answerOnlyFix, "81.json",
+                       out PuzzleFixRule answerOnlyRule, out string answerOnlyParseError) &&
+                   answerOnlyParseError == null && !answerOnlyRule.HasQuestionReplacement &&
+                   answerOnlyRule.HasAnswerReplacement &&
+                   answerOnlyRule.TryCreatePlan(new[] { 999 },
+                       new[] { new[] { -11, 2 }, new[] { -11, 3 } },
+                       out PuzzleFixPlan answerOnlyPlan, out string answerOnlyPlanError) &&
+                   answerOnlyPlanError == null &&
+                   answerOnlyPlan.ReplacementSignals == null &&
+                   answerOnlyPlan.ReplacementAnswers.Length == 1,
+                "只提供答案区时必须跳过题面校验并只生成答案集替换");
+            const string incompleteQuestionFix =
+                "{\"display_id\":82,\"original_signals\":[1]}";
+            Assert(!PuzzleFixRule.TryParse(incompleteQuestionFix, "82.json", out _,
+                       out string incompleteQuestionError) &&
+                   incompleteQuestionError.Contains("original_signals") &&
+                   incompleteQuestionError.Contains("replacement_signals"),
+                "题面修正必须同时提供非空的原始题面和替换题面");
+            const string noActiveFix =
+                "{\"display_id\":83,\"original_signals\":[]," +
+                "\"replacement_signals\":[],\"original_answers\":[]," +
+                "\"replacement_answers\":[]}";
+            Assert(!PuzzleFixRule.TryParse(noActiveFix, "83.json", out _,
+                       out string noActiveFixError) &&
+                   noActiveFixError.Contains("至少"),
+                "题面和答案集都为空时不得加载无效规则");
+            const string answerOnlyWithEmptyQuestionArrays =
+                "{\"display_id\":84,\"original_signals\":[]," +
+                "\"replacement_signals\":[],\"original_answers\":[[1]]," +
+                "\"replacement_answers\":[[2]]}";
+            Assert(PuzzleFixRule.TryParse(answerOnlyWithEmptyQuestionArrays, "84.json",
+                       out PuzzleFixRule emptyQuestionRule,
+                       out string emptyQuestionError) &&
+                   emptyQuestionError == null &&
+                   !emptyQuestionRule.HasQuestionReplacement &&
+                   emptyQuestionRule.HasAnswerReplacement,
+                "题面数组同时为空时应视为未提供题面区，不得阻止答案集修正");
             var compilerEntries = new[]
             {
                 new System.Collections.Generic.KeyValuePair<string, int>("var", -11),
@@ -535,13 +631,13 @@ internal static class Program
         CheckBox compilerOption = controls.OfType<CheckBox>().Single(control =>
             control.Text.Contains("忽略英文字母大小写"));
         CheckBox puzzleOption = controls.OfType<CheckBox>().Single(control =>
-            control.Text.Contains("题面的修正规则"));
+            control.Text.Contains("题目及答案的修正规则"));
         Label compilerHint = controls.OfType<Label>().Single(control =>
             control.Text.Contains("VAR 可匹配词典中的 var"));
         Label puzzleHint = controls.OfType<Label>().Single(control =>
-            control.Text.Contains("题面修正按游戏显示编号"));
+            control.Text.Contains("题面和答案集可单独修正"));
         Label reloadHint = controls.OfType<Label>().Single(control =>
-            control.Text.Contains("以上兼容项和题面修正规则保存后"));
+            control.Text.Contains("以上兼容项和题目及答案修正规则保存后"));
 
         Assert(!ReferenceEquals(compilerHint, puzzleHint) &&
                !ReferenceEquals(puzzleHint, reloadHint) &&

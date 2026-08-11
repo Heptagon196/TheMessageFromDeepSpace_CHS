@@ -31,7 +31,7 @@ internal sealed class ConfigEditorForm : Form
     };
     private readonly CheckBox _puzzleFixes = new()
     {
-        Text = "应用已知错误题面的修正规则（推荐）", AutoSize = true,
+        Text = "应用已知错误题目及答案的修正规则（推荐）", AutoSize = true,
     };
     private readonly CheckBox _colorsEnabled = new() { Text = "按说话者给对白着色", AutoSize = true };
     private readonly Dictionary<string, TextBox> _colorBoxes = new(StringComparer.OrdinalIgnoreCase);
@@ -45,7 +45,7 @@ internal sealed class ConfigEditorForm : Form
     public ConfigEditorForm(string iniPath)
     {
         _iniPath = iniPath;
-        Text = "《来自深空的讯息》汉化配置工具 v0.1.60";
+        Text = "《来自深空的讯息》汉化配置工具 v0.1.61";
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(650, 540);
         ClientSize = new Size(720, 590);
@@ -110,9 +110,9 @@ internal sealed class ConfigEditorForm : Form
         table.Controls.Add(_puzzleFixes, 0, 7);
         table.SetColumnSpan(_puzzleFixes, 3);
         AddFullWidthHint(table, 8,
-            "题面修正按游戏显示编号读取 DeepSpaceChinese\\Fix\\*.json；仅当文件中的原始数字信号与当前题面完全一致时才替换。");
+            "题面和答案集可单独修正；两者都填写时，原题面和原始答案集必须同时匹配才会替换。");
         AddFullWidthHint(table, 9,
-            "以上兼容项和题面修正规则保存后，可在游戏中按 F5 重载。", false);
+            "以上兼容项和题目及答案修正规则保存后，可在游戏中按 F5 重载。", false);
         page.Controls.Add(table);
         return page;
     }
@@ -198,7 +198,7 @@ internal sealed class ConfigEditorForm : Form
             }
             settings.ApplyTo(_document);
             _document.SaveAtomic(_iniPath);
-            SetStatus("已保存。翻译、字体、角色颜色、兼容项和题面修正规则可在游戏中按 F5 应用。", true);
+            SetStatus("已保存。翻译、字体、角色颜色、兼容项和题目及答案修正规则可在游戏中按 F5 应用。", true);
             if (close)
                 Close();
         }
