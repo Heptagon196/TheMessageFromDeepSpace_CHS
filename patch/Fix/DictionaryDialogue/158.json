@@ -1,0 +1,8 @@
+{
+  "dialogue_chunk_id": 158,
+  "channel": "EditEntryIDToName",
+  "english": "TO",
+  "original_term_id": -41,
+  "replacement_term_id": -40,
+  "note": "原版误把“FROM 词条被命名为 TO”的对白 158 绑定到了 TO 词条（-41）；应绑定 FROM 词条（-40）。对白 165 继续绑定 -41。"
+}

@@ -1509,11 +1509,11 @@
   },
   {
     "text_index": 652181343,
-    "translated_text": "{SPEAKER_AKERS}{PART_000}找我干什么？"
+    "translated_text": "{SPEAKER_AKERS}{PART_000}院子？院子怎么了？"
   },
   {
     "text_index": 2130894129,
-    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是，{PART_001}我说的是“原子”。{PART_002}词典，{PART_003}快看！"
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是“院子”，{PART_001}是“原子”。{PART_002}看词典{PART_003}！"
   },
   {
     "text_index": 537916566,
@@ -1581,11 +1581,11 @@
   },
   {
     "text_index": 180471890,
-    "translated_text": "{SPEAKER_AKERS}{PART_000}我觉得{PLAYER_NAME}指的是化合物！"
+    "translated_text": "{SPEAKER_AKERS}{PART_000}有道理！{PLAYER_NAME}应该是从化学组成上判断的。"
   },
   {
     "text_index": 510050689,
-    "translated_text": "{SPEAKER_COLLINS}{PART_000}希望外星人也是这个意思。"
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}但愿外星人表达的也是这个意思。"
   },
   {
     "text_index": 454304862,
@@ -1633,15 +1633,15 @@
   },
   {
     "text_index": 1421292129,
-    "translated_text": "{SPEAKER_AKERS}{PART_000}什么？"
+    "translated_text": "{SPEAKER_AKERS}{PART_000}院子？院子怎么了？"
   },
   {
     "text_index": 1215930562,
-    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是，{PART_001}我说的是“原子”。{PART_002}词典。{PART_003}……{PART_004}埃克斯博士，{PART_005}你听错了。{PART_006}{PLAYER_NAME}把一个信号命名为“原子”。"
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}不是“院子”，{PART_001}是“原子”。{PART_002}看词典。{PART_003}……{PART_004}埃克斯博士，{PART_005}你听错了。{PART_006}{PLAYER_NAME}把这个信号命名为“原子”。"
   },
   {
     "text_index": 38350743,
-    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}抱歉。{PART_002}我还以为你说的是“艾伦”。"
+    "translated_text": "{SPEAKER_AKERS}{PART_000}哦。{PART_001}抱歉。{PART_002}我听成“院子”了。"
   },
   {
     "text_index": 1765492716,

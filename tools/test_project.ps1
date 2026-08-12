@@ -39,6 +39,9 @@ if ($LASTEXITCODE -ne 0) { throw "题目提取工具测试失败。" }
 python (Join-Path $projectRoot "tests\test_translation_text_checks.py")
 if ($LASTEXITCODE -ne 0) { throw "译文标点规范测试失败。" }
 
+python (Join-Path $projectRoot "tests\test_dictionary_trigger_conflicts.py")
+if ($LASTEXITCODE -ne 0) { throw "词典中文触发冲突校验测试失败。" }
+
 $pythonSources = @(
     Get-ChildItem -LiteralPath (Join-Path $projectRoot "tools") -Filter "*.py" -File
     Get-ChildItem -LiteralPath (Join-Path $projectRoot "work\formal_batches") -Filter "*.py" -File

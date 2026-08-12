@@ -15,6 +15,7 @@ internal sealed class EditorSettings
     public bool TranslateUI = true;
     public bool TranslateSystem = true;
     public bool CompilerCaseInsensitive = true;
+    public bool CompilerPunctuationInsensitive = true;
     public bool MoveNewWordPromptToLowerRight = true;
     public bool PuzzleFixesEnabled = true;
     public bool DialogueColorsEnabled = true;
@@ -47,6 +48,8 @@ internal sealed class EditorSettings
             TranslateSystem = Bool(ini.Get("Localization", "TranslateSystem", "true"), true),
             CompilerCaseInsensitive = Bool(ini.Get("Compatibility",
                 "CompilerCaseInsensitive", "true"), true),
+            CompilerPunctuationInsensitive = Bool(ini.Get("Compatibility",
+                "CompilerPunctuationInsensitive", "true"), true),
             MoveNewWordPromptToLowerRight = Bool(ini.Get("Layout",
                 "NewWordPromptLowerRight", "true"), true),
             PuzzleFixesEnabled = Bool(ini.Get("PuzzleFixes", "Enabled", "true"), true),
@@ -74,6 +77,8 @@ internal sealed class EditorSettings
         ini.Set("Localization", "TranslateSystem", TranslateSystem.ToString().ToLowerInvariant());
         ini.Set("Compatibility", "CompilerCaseInsensitive",
             CompilerCaseInsensitive.ToString().ToLowerInvariant());
+        ini.Set("Compatibility", "CompilerPunctuationInsensitive",
+            CompilerPunctuationInsensitive.ToString().ToLowerInvariant());
         ini.Set("Layout", "NewWordPromptLowerRight",
             MoveNewWordPromptToLowerRight.ToString().ToLowerInvariant());
         ini.Set("PuzzleFixes", "Enabled", PuzzleFixesEnabled.ToString().ToLowerInvariant());

@@ -5,6 +5,19 @@ import json
 from pathlib import Path
 from typing import Any
 
+from dictionary_dialogue_fixes import (
+    apply_to_alias_entries,
+    load_fixes,
+    validate_against_source,
+)
+from dictionary_trigger_conflicts import (
+    condition_key,
+    find_conflicts,
+    format_conflict,
+    normalize,
+    validate_no_conflicts,
+)
+
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 
@@ -105,6 +118,12 @@ ALIASES: dict[str, list[str]] = {
     "PIXEL": ["像素"],
     "VISUAL": ["视觉", "视觉单位"],
     "VOBJ": [],
+    "POINT": ["点"],
+    "LINE": ["线", "直线"],
+    "SHAPE": ["形状", "多边形"],
+    "ELECTRON": ["电子"],
+    "NEUTRON": ["中子"],
+    "PROTON": ["质子"],
     "EARTH": ["地球"],
     "HUMANITY": ["人类文明", "全人类"],
     "HUMANS": ["人类", "人"],
@@ -142,6 +161,8 @@ ALIASES: dict[str, list[str]] = {
     "APPLE": ["苹果"],
     "ENDNUM": ["数字结束", "数终", "结束数字"],
     "PLUSONE": ["加一", "加上1", "加上 1", "递增一", "递增", "自增"],
+    "PRESENT": ["现在"],
+    "FREQ": ["频率缩写", "频率简称"],
     "SKIP": ["跳过", "略过"],
     "SPACE": ["空间", "空格"],
     "ANS": [],
@@ -190,21 +211,124 @@ ENTRY_VALUE_OVERRIDES: dict[tuple[int | None, str, str], list[str]] = {
 }
 
 
+# Key: (term ID, competing channel group, ambiguous Chinese input).
+# Value: the source channel/English condition that owns that input. The build
+# validates that every item here is both necessary and points at a real owner.
+# Reusing an input under different term IDs (for example TO -> 到) is legal.
+CONFLICT_OWNERS: dict[
+    tuple[int | None, int, str], tuple[str, str]
+] = {
+    (-168, 1, "远古"): ("EditEntryIDToName", "ANCIENT"),
+    (-119, 1, "当前"): ("EditEntryIDToName", "CURRENT"),
+    (-77, 1, "或"): ("EditEntryIDToName", "OR"),
+    (-67, 1, "光速"): ("EditEntryIDToName", "LIGHTSPEED"),
+    (-42, 1, "频率"): ("EditEntryIDToName", "FREQUENCY"),
+    (-36, 1, "所以"): ("EditEntryIDToName", "SO"),
+    (-28, 1, "错误"): ("EditEntryIDToName", "INCORRECT"),
+    (-27, 1, "正确"): ("EditEntryIDToName", "CORRECT"),
+    (-2, 1, "加一"): ("EditEntryIDToName", "ADDONE"),
+}
+
+
+def direct_hypothesis_aliases(item: dict[str, Any]) -> list[str]:
+    english = str(item["english_trigger"])
+    values: list[str] = []
+    for hypothesis in item.get("hypotheses", []):
+        if str(hypothesis.get("source", "")).casefold() != english.casefold():
+            continue
+        translated = str(hypothesis.get("translation", "")).strip()
+        if translated and translated not in values:
+            values.append(translated)
+    return values
+
+
+def deduplicate_rules(rules: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    combined: dict[tuple[str, str], dict[str, Any]] = {}
+    for rule in rules:
+        rule_type = str(rule["type"])
+        origin = str(rule.get("_origin", ""))
+        key = (rule_type, origin)
+        target = combined.setdefault(key, {
+            "type": rule_type,
+            "values": [],
+            "_origin": origin,
+            **({"exclude_any": list(rule["exclude_any"])}
+               if rule.get("exclude_any") else {}),
+        })
+        known = {normalize(value) for value in target["values"]}
+        for value in rule.get("values", []):
+            if normalize(value) and normalize(value) not in known:
+                target["values"].append(value)
+                known.add(normalize(value))
+    return [rule for rule in combined.values() if rule["values"]]
+
+
+def apply_conflict_owners(entries: list[dict[str, Any]]) -> None:
+    encountered: set[tuple[int | None, int, str]] = set()
+    for conflict in find_conflicts(entries):
+        key = conflict.resolution_key
+        owner = CONFLICT_OWNERS.get(key)
+        if owner is None:
+            raise ValueError("缺少词典触发冲突消歧项：" + format_conflict(conflict))
+        encountered.add(key)
+        owner_key = (
+            conflict.term_id,
+            owner[0].casefold(),
+            owner[1].casefold(),
+        )
+        if owner_key not in conflict.conditions:
+            raise ValueError(
+                f"词典触发冲突 {key!r} 指定的保留条件不存在：{owner!r}"
+            )
+
+        for entry in entries:
+            entry_key = condition_key(entry)
+            if entry_key not in conflict.conditions or entry_key == owner_key:
+                continue
+            for rule in entry.get("rules", []):
+                values = rule.get("values", [])
+                matching = [value for value in values if normalize(value) == key[2]]
+                if not matching:
+                    continue
+                if str(rule.get("type", "")).casefold() == "contains_all":
+                    raise ValueError(
+                        "不能通过删除 contains_all 的一部分来消歧：" +
+                        format_conflict(conflict)
+                    )
+                rule["values"] = [
+                    value for value in values if normalize(value) != key[2]
+                ]
+            entry["rules"] = [rule for rule in entry["rules"] if rule["values"]]
+
+    stale = set(CONFLICT_OWNERS) - encountered
+    if stale:
+        raise ValueError(
+            "词典触发冲突消歧表含有已失效项目：" +
+            ", ".join(repr(item) for item in sorted(stale, key=repr))
+        )
+    validate_no_conflicts(entries)
+
+
 def make_rules(term_id: int | None, channel: str, english: str,
     mode: str) -> list[dict[str, Any]]:
     if term_id is None and english == "IDK":
-        return [{"type": "contains", "values": ["不知道"]}]
+        return [{
+            "type": "contains",
+            "values": ["不知道"],
+            "exclude_any": ["妈", "md不知道", "tm不知道"],
+            "_origin": "maintained",
+        }]
     if term_id is None and english == "IDFK":
         return [
-            {"type": "contains", "values": ["md不知道", "tm不知道"]},
-            {"type": "contains_all", "values": ["妈", "不知道"]},
+            {"type": "contains", "values": ["md不知道", "tm不知道"], "_origin": "maintained"},
+            {"type": "contains_all", "values": ["妈", "不知道"], "_origin": "maintained"},
         ]
     if term_id is None and english == "ASDF":
         return []
-    values = ENTRY_VALUE_OVERRIDES.get(
+    values = list(ENTRY_VALUE_OVERRIDES.get(
         (term_id, channel, english),
         OVERRIDES.get((term_id, english), ALIASES.get(english, [])),
-    )
+    ))
     if not values:
         # Language-neutral symbols and one-letter identifiers keep working via
         # the stock English condition; there is no fabricated Chinese alias.
@@ -212,7 +336,7 @@ def make_rules(term_id: int | None, channel: str, english: str,
     rule_type = "exact" if (term_id, english) in EXACT_ENTRY_KEYS else (
         "contains" if mode == "contains" else "exact"
     )
-    return [{"type": rule_type, "values": values}]
+    return [{"type": rule_type, "values": values, "_origin": "maintained"}]
 
 
 def note_for(term_id: int | None, english: str, rules: list[dict[str, Any]]) -> str:
@@ -246,15 +370,33 @@ def main() -> int:
         type=Path,
         default=PROJECT_DIR / "work" / "dictionary_trigger_aliases" / "translations.json",
     )
+    parser.add_argument(
+        "--fix-directory",
+        type=Path,
+        default=PROJECT_DIR / "patch" / "Fix" / "DictionaryDialogue",
+    )
     args = parser.parse_args()
     source = json.loads(args.source.read_text(encoding="utf-8"))
+    fixes = load_fixes(args.fix_directory)
+    validate_against_source(fixes, source)
     entries: list[dict[str, Any]] = []
     ainiee: list[dict[str, Any]] = []
-    for index, item in enumerate(source["entries"], start=1):
+    source_entries = list(source["entries"]) + list(source.get("covered_entries", []))
+    for index, item in enumerate(source_entries, start=1):
         term_id = item["term_id"]
         english = item["english_trigger"]
         mode = item["match_mode"]
         rules = make_rules(term_id, item["channel_name"], english, mode)
+        hypothesis_values = direct_hypothesis_aliases(item)
+        if hypothesis_values:
+            rules.append(
+                {
+                    "type": "contains" if mode == "contains" else "exact",
+                    "values": hypothesis_values,
+                    "_origin": "hypothesis",
+                }
+            )
+        rules = deduplicate_rules(rules)
         note = note_for(term_id, english, rules)
         entry = {
             "term_id": term_id,
@@ -273,10 +415,29 @@ def main() -> int:
                 ),
             }
         )
+    apply_to_alias_entries(entries, fixes)
+    apply_conflict_owners(entries)
+    for entry in entries:
+        for rule in entry["rules"]:
+            rule.pop("_origin", None)
+        entry["rules"] = deduplicate_rules(entry["rules"])
+        for rule in entry["rules"]:
+            rule.pop("_origin", None)
+    ainiee = [
+        {
+            "text_index": index,
+            "translated_text": json.dumps(
+                {"rules": entry["rules"], "note": entry["note"]},
+                ensure_ascii=False,
+                separators=(",", ":"),
+            ),
+        }
+        for index, entry in enumerate(entries, start=1)
+    ]
     payload = {
         "format_version": 1,
         "description": "词典命名对白的中文附加触发规则；原版英文触发始终保留。",
-        "matching": "同一条目的 rules 按 OR 组合，contains_all 内部按 AND 组合；同一编辑候选跨规则取最长中文命中，并列最长时不触发中文别名。",
+        "matching": "同一条件的人工维护词与假说译名按 OR 合并；exclude_any 为明确配置的排除子串。构建时拒绝一次输入可同时命中多个条件的配置，运行时不做跨条件判优先级或消歧。",
         "entries": entries,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

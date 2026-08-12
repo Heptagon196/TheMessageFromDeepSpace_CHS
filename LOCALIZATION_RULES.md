@@ -549,6 +549,6 @@ We finally received a response.
 
 配置编辑器固定使用 .NET Framework 4.7.2 WinForms，依赖 Windows 已安装的 .NET Framework，不打包 WebView、Chromium 或独立运行时。编辑器直接读写同目录的 `DeepSpaceChinese.ini`，提供常规开关、界面排布、快捷键、七种角色颜色和字体来源设置；保存时校验配置，并保留未知行及原注释。
 
-编译兼容规则：`[Compatibility] CompilerCaseInsensitive = true` 默认开启，使玩家输入的 `VAR` 能匹配词典中的 `var`。运行时仍保持原版“最长词条优先”的拆词规则；完整的精确大小写匹配优先，若词典中存在仅大小写不同的多个候选且输入无法唯一判断，则继续按未找到词条处理。该设置可按 F5 热重载。
+编译兼容规则：`[Compatibility] CompilerCaseInsensitive = true` 默认开启，使玩家输入的 `VAR` 能匹配词典中的 `var`；`CompilerPunctuationInsensitive = true` 也默认开启，使 `,↔，`、`.↔。`、`;↔；`、`()↔（）`、`[]↔【】` 在提交答案时等价。运行时仍保持原版“最长词条优先”的拆词规则；完整精确拼写优先，若规范化后存在多个候选且输入无法唯一判断，则继续按未找到词条处理。词典新增和编辑时的重名检查也使用相同的大小写及标点规范化，避免保存等价重复词名。两项设置均可按 F5 热重载。
 
 字体固定使用 Fusion Pixel Font 官方 Release 2026.07.20 的 12px 非等宽简体中文 OTF，随包附带 SIL OFL 1.1 原始许可证。BepInEx 使用 5.4.23.5，并附带 LGPL 许可证。最终 ZIP 必须以游戏根目录为压缩包根，用户直接解压即可安装。

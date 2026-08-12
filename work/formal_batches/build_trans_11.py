@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -490,7 +491,7 @@ TRANSLATIONS = [
     "{SPEAKER_BAUTISTA}{PART_000}我很兴奋。{PART_001}只是……{PART_002}得专心。{PART_003}我有件事必须做，{PART_004}而且{PART_005}马上、{PART_006}立刻、{PART_007}就得做。",
     "{SPEAKER_COLLINS}{PART_000}那我就不打扰你了。{PART_001}我们等着听你的进展。",
     "点",
-    "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔，{PART_001}$animC2说说你对“点”的观点？{PART_002}……{PART_003}拜托，我还以为你们三个会喜欢这个押韵呢！",
+    "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔，{PART_001}$animC2你对“点”有什么观点？{PART_002}……{PART_003}拜托，“点”和“观点”！我还以为你们三个会喜欢这个梗呢！",
     "{SPEAKER_AKERS}{PART_000}抱歉，{PART_001}没心情，{PART_002}柯林斯。",
     "{SPEAKER_BAUTISTA}{PART_000}呃……{PART_001}$animC0（巴蒂斯塔博士太专注了，没有回答）{PART_002}（但我们原谅他）",
     "像素",
@@ -580,6 +581,26 @@ TRANSLATIONS = [
     "{SPEAKER_AKERS}{PART_000}太阳离我们 9200 万英里。{PART_001}开玩笑，{PART_002}其实是 9300 万英里。{PART_003}我差了 100 万英里，但你大概不会觉得这两者差很多。",
     "{SPEAKER_BAUTISTA}{PART_000}有道理。",
 ]
+
+
+def scale_journal_parts(text: str, percent: int) -> str:
+    """Scale every visible PART independently so typewriter paging keeps valid TMP tags."""
+    return re.sub(
+        r"(\{PART_\d{3}\})(.*?)(?=\{PART_\d{3}\}|$)",
+        lambda match: (
+            match.group(1)
+            + f"<size={percent}%>"
+            + match.group(2)
+            + "</size>"
+        ),
+        text,
+    )
+
+
+# Collins's journal body uses a 72 px source font; this entry exceeds its
+# measured 100% capacity.
+TRANSLATIONS[72] = scale_journal_parts(TRANSLATIONS[72], 85)
+TRANSLATIONS[135] = scale_journal_parts(TRANSLATIONS[135], 90)
 
 
 def main() -> None:

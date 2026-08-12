@@ -204,6 +204,7 @@ def main() -> int:
                     "listener_path_ids": [],
                     "dialogue_chunk_ids": [],
                     "other_conditions": [],
+                    "listener_variants": [],
                 },
             )
             record["listener_path_ids"].append(listener["listener_path_id"])
@@ -216,6 +217,17 @@ def main() -> int:
                     for value in listener["conditions"]
                     if value is not condition
                 ]
+            )
+            record["listener_variants"].append(
+                {
+                    "listener_path_id": listener["listener_path_id"],
+                    "dialogue_chunk_ids": list(listener["dialogue_chunk_ids"]),
+                    "other_conditions": [
+                        value
+                        for value in listener["conditions"]
+                        if value is not condition
+                    ],
+                }
             )
 
     records = []
@@ -240,6 +252,43 @@ def main() -> int:
         )
     )
     uncovered = [value for value in records if not value["covered_by_hypothesis_alias"]]
+    covered = [value for value in records if value["covered_by_hypothesis_alias"]]
+
+    combination_listeners = []
+    for listener in listeners:
+        dictionary_conditions = listener["dictionary_conditions"]
+        if len(dictionary_conditions) < 2:
+            continue
+        conditions = []
+        for condition in dictionary_conditions:
+            channel = int(condition["listenChannel"])
+            term_id = None if channel in (14, 15) else int(condition.get("value", 0))
+            trigger = str(condition.get("strValue", ""))
+            conditions.append(
+                {
+                    "term_id": term_id,
+                    "channel": channel,
+                    "channel_name": CHANNEL_NAMES[channel],
+                    "match_mode": "contains" if channel == 20 else "exact",
+                    "english_trigger": trigger,
+                    "hypotheses": hypotheses_by_term.get(term_id, [])
+                    if term_id is not None
+                    else [],
+                }
+            )
+        combination_listeners.append(
+            {
+                "listener_path_id": listener["listener_path_id"],
+                "conditions": conditions,
+                "dialogue_chunk_ids": listener["dialogue_chunk_ids"],
+                "dialogues": [
+                    chunks[chunk_id]
+                    for chunk_id in listener["dialogue_chunk_ids"]
+                    if chunk_id in chunks
+                ],
+            }
+        )
+    combination_listeners.sort(key=lambda value: value["listener_path_id"])
 
     audit_path = output_dir / "source.json"
     audit_path.write_text(
@@ -250,6 +299,8 @@ def main() -> int:
                 "total_conditions": len(records),
                 "uncovered_conditions": len(uncovered),
                 "entries": uncovered,
+                "covered_entries": covered,
+                "combination_listeners": combination_listeners,
             },
             ensure_ascii=False,
             indent=2,

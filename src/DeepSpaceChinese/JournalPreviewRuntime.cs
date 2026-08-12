@@ -194,6 +194,7 @@ internal sealed class JournalPreviewRuntime
         body.text = text;
         body.maxVisibleCharacters = int.MaxValue;
         title.text = _plugin.PrepareGenericTypedText(title, titleSource);
+        _plugin.ApplyProgressLogSpeakerColor(title, pair.Original.speaker);
         title.maxVisibleCharacters = int.MaxValue;
         _input = stableKey;
         _promptOpen = false;
@@ -224,18 +225,20 @@ internal sealed class JournalPreviewRuntime
         ClearJournalLabels(_progressLog);
         hypotheses.Close();
         hypotheses.group.SetActive(true);
-        hypotheses.haveUnlockedLabel.text = _plugin.PrepareGenericTypedText(
-            hypotheses.haveUnlockedLabel, hypotheses.haveUnlocked_s);
         hypotheses.haveUnlockedLabel.richText = true;
         hypotheses.haveUnlockedLabel.textWrappingMode = TextWrappingModes.Normal;
         hypotheses.haveUnlockedLabel.overflowMode = TextOverflowModes.Overflow;
+        hypotheses.haveUnlockedLabel.maxVisibleLines = int.MaxValue;
         hypotheses.haveUnlockedLabel.maxVisibleCharacters = int.MaxValue;
-        hypotheses.viewInDictLabel.text = _plugin.PrepareGenericTypedText(
-            hypotheses.viewInDictLabel, hypotheses.viewInDict_s);
         hypotheses.viewInDictLabel.richText = true;
         hypotheses.viewInDictLabel.textWrappingMode = TextWrappingModes.Normal;
         hypotheses.viewInDictLabel.overflowMode = TextOverflowModes.Overflow;
+        hypotheses.viewInDictLabel.maxVisibleLines = int.MaxValue;
         hypotheses.viewInDictLabel.maxVisibleCharacters = int.MaxValue;
+        hypotheses.haveUnlockedLabel.text = _plugin.PrepareGenericTypedText(
+            hypotheses.haveUnlockedLabel, hypotheses.haveUnlocked_s);
+        hypotheses.viewInDictLabel.text = _plugin.PrepareGenericTypedText(
+            hypotheses.viewInDictLabel, hypotheses.viewInDict_s);
         if (!TrySelectHypothesesCluster(hypotheses.dictionaryHypotheses, stableKey,
                 out DictionaryHypotheses.TermCluster cluster, out int clusterIndex))
         {

@@ -9,9 +9,9 @@
     <Deterministic>true</Deterministic>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
-    <Version>0.1.80</Version>
-    <AssemblyVersion>0.1.80.0</AssemblyVersion>
-    <FileVersion>0.1.80.0</FileVersion>
+    <Version>0.1.87</Version>
+    <AssemblyVersion>0.1.87.0</AssemblyVersion>
+    <FileVersion>0.1.87.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

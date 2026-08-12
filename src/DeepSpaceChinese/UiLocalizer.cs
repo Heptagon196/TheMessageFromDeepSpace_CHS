@@ -80,25 +80,6 @@ internal sealed class UiLocalizer
         return original != null;
     }
 
-    public bool TryResolveHypothesisTranslation(int hypothesisIndex, string guessField,
-        string expectedOriginal, out string translated)
-    {
-        translated = null;
-        RuntimeTranslationEntry entry = _store.FindUnambiguousHypothesis(
-            $"hypos[{hypothesisIndex}].{guessField}", expectedOriginal);
-        if (entry == null)
-            return false;
-        string original = TokenCodec.RestoreForEntry(
-            entry.GameString("original_text", entry.SourceText), entry,
-            _dialogue.PlayerFullName(DisplayMode.OriginalOnly));
-        if (!string.Equals(original, expectedOriginal, StringComparison.OrdinalIgnoreCase))
-            return false;
-        translated = TokenCodec.RestoreForEntry(entry.TranslatedText, entry,
-            _dialogue.PlayerFullName(DisplayMode.TranslationOnly));
-        return !string.IsNullOrWhiteSpace(translated) &&
-               !string.Equals(translated, original, StringComparison.OrdinalIgnoreCase);
-    }
-
     private static Dictionary<string, List<RuntimeTranslationEntry>> BuildSystemIndex(
         TranslationStore store) =>
         store.Entries.Where(entry =>
@@ -110,6 +91,9 @@ internal sealed class UiLocalizer
     {
         if (_applying || !_config.Enabled || !_config.TranslateUI || component == null || proposed == null)
             return proposed;
+        if (PeriodicTableElementCompatibility.TryResolveSymbolText(
+                component, proposed, out string periodicTableSymbol))
+            return RememberDisplay(component, proposed, periodicTableSymbol);
         string localized;
         if (CompilerErrorRuntime.IsCompilerError(proposed))
         {
@@ -175,6 +159,9 @@ internal sealed class UiLocalizer
     {
         if (!_config.TranslateUI)
             return original;
+        if (PeriodicTableElementCompatibility.TryResolveSymbolText(
+                component, original, out string periodicTableSymbol))
+            return periodicTableSymbol;
         if (CompilerErrorRuntime.IsCompilerError(original))
             return CompilerErrorRuntime.Format(original, _config.DisplayMode);
         if (ShouldPreservePlayerText(component))
@@ -305,6 +292,8 @@ internal sealed class UiLocalizer
     {
         if (component == null)
             return false;
+        if (PeriodicTableElementCompatibility.ShouldTranslateDisplayValues(component))
+            return true;
         return _store.TryGet(BuildUiStableKey(component), out RuntimeTranslationEntry entry) &&
                entry.Kind == "ui_text" && entry.GameBool("translate_display_values");
     }
@@ -387,6 +376,7 @@ internal sealed class UiLocalizer
 
     internal string ApplyDisplayValues(string text)
     {
+        text = ChineseYearQuantityFormatter.Translate(text);
         foreach (KeyValuePair<string, RuntimeTranslationEntry> pair in _store.DisplayValues
                      .OrderByDescending(value => value.Key.Length))
         {

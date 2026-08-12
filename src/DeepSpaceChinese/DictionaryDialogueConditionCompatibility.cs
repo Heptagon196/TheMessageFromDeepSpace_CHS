@@ -1,6 +1,5 @@
 using System;
 using HarmonyLib;
-using UnityEngine;
 
 namespace DeepSpaceChinese;
 
@@ -38,35 +37,8 @@ internal static class DictionaryDialogueConditionCompatibility
                 condition.strValue, candidate))
             return true;
 
-        // Hypothesis component fields may already contain Chinese after UI localization.
-        // Use only their term ID/index here and resolve the original/translation pair from
-        // the translation store, so aliases remain exact and F5-reloadable.
-        foreach (DictionaryHypotheses hypotheses in
-                 Resources.FindObjectsOfTypeAll<DictionaryHypotheses>())
-        {
-            if (hypotheses?.hypos == null)
-                continue;
-            for (int index = 0; index < hypotheses.hypos.Length; index++)
-            {
-                if (hypotheses.hypos[index].termID != termId)
-                    continue;
-                if (MatchesTranslatedGuess(ui, index, "aGuess", condition.strValue,
-                        candidate, contains) ||
-                    MatchesTranslatedGuess(ui, index, "bGuess", condition.strValue,
-                        candidate, contains) ||
-                    MatchesTranslatedGuess(ui, index, "cGuess", condition.strValue,
-                        candidate, contains))
-                    return true;
-            }
-        }
         return false;
     }
-
-    private static bool MatchesTranslatedGuess(UiLocalizer ui, int index,
-        string guessField, string expectedEnglish, string candidate, bool contains) =>
-        ui.TryResolveHypothesisTranslation(index, guessField, expectedEnglish,
-            out string translated) &&
-        DictionaryDialogueConditionMatcher.Matches(translated, candidate, contains);
 
     private static bool TryGetCandidate(ListenerCondition condition, out int termId,
         out string candidate, out bool contains)

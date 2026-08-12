@@ -47,10 +47,39 @@ internal static class Program
             Assert(config.DisplayMode == DisplayMode.TranslationOnly, "启动显示模式必须固定为仅译文");
             Assert(config.CompilerCaseInsensitive,
                 "编译时忽略英文字母大小写必须默认开启");
+            Assert(config.CompilerPunctuationInsensitive,
+                "编译及词典冲突检查时忽略中英文标点差异必须默认开启");
             Assert(config.PuzzleFixesEnabled,
                 "题面修正功能必须默认开启");
             Assert(config.MoveNewWordPromptToLowerRight,
                 "新单词命名浮窗移动到右下角必须默认开启");
+            Assert(PeriodicTableElementCompatibility.ResolveSymbol(
+                       "Radium", "Ra", "Radium") == "Ra",
+                "镭的资源字段写反时，周期表必须显示化学符号 Ra，而不是把 Radium 拆成 RA/DI/UM");
+            Assert(PeriodicTableElementCompatibility.ResolveSymbol(
+                       "Radon", "Radon", "Rn") == "Rn",
+                "周期表兼容修正不得影响字段正常的其他元素");
+            Assert(PeriodicTableElementCompatibility.ShouldTranslateDisplayValues(
+                       isPeriodicTable: true, isSymbol: false) &&
+                   !PeriodicTableElementCompatibility.ShouldTranslateDisplayValues(
+                       isPeriodicTable: true, isSymbol: true) &&
+                   !PeriodicTableElementCompatibility.ShouldTranslateDisplayValues(
+                       isPeriodicTable: false, isSymbol: false),
+                "整个元素周期表的组合文本都必须翻译显示值，但化学符号必须保持拉丁字母");
+            Assert(PeriodicTableElementCompatibility.ShouldTranslateDisplayValues(
+                       isPeriodicTable: false, isSymbol: false, isRegisteredPreview: true),
+                "周期表层级之外的底部悬浮提示也必须翻译动态元素名");
+            Assert(ChineseYearQuantityFormatter.Translate("4.400000 billion years") ==
+                       "44亿年" &&
+                   ChineseYearQuantityFormatter.Translate("700.000000 million years") ==
+                       "7亿年" &&
+                   ChineseYearQuantityFormatter.Translate("1.250000 million years") ==
+                       "125万年" &&
+                   ChineseYearQuantityFormatter.Translate("12.200000 years") ==
+                       "12.2年" &&
+                   ChineseYearQuantityFormatter.Translate("12 thousand years") ==
+                       "1.2万年",
+                "周期表年代必须换算为中文常用的亿年、万年或年，不能直译成小数十亿年、百万年");
             Assert(DictionaryDialogueConditionMatcher.Matches("VAR", "var", false) &&
                    DictionaryDialogueConditionMatcher.Matches("frequency", "FREQUENCY", false) &&
                    DictionaryDialogueConditionMatcher.Matches("频率", "信号频率", true) &&
@@ -82,8 +111,36 @@ internal static class Program
             string triggerAliasPath = Path.Combine(projectRoot, "patch", "Translations",
                 "dictionary_trigger_aliases.json");
             Assert(DictionaryTriggerAliasStore.TryLoad(triggerAliasPath, log,
-                       out DictionaryTriggerAliasStore triggerAliases) &&
-                   triggerAliases.Count == 154 &&
+                       out DictionaryTriggerAliasStore triggerAliases), "触发别名表必须载入");
+            Assert(triggerAliases.Count == 277,
+                "触发别名表必须覆盖全部人工规则和固化假说别名");
+            Assert(triggerAliases.Matches(-40, "EditEntryIDToName",
+                       "TO", "到") &&
+                   triggerAliases.Matches(-41, "EditEntryIDToName",
+                       "TO", "到"),
+                "对白 158 修正后，FROM 词条和 TO 词条各自的“到”命名都必须触发对应对白");
+            const string validDialogueFix =
+                "{\"dialogue_chunk_id\":158,\"channel\":\"EditEntryIDToName\"," +
+                "\"english\":\"TO\",\"original_term_id\":-41," +
+                "\"replacement_term_id\":-40}";
+            Assert(DictionaryDialogueFixRule.TryParse(validDialogueFix, "158.json",
+                       out DictionaryDialogueFixRule dialogueFix, out string dialogueFixError) &&
+                   dialogueFix.DialogueChunkId == 158 &&
+                   dialogueFix.ParsedChannel == ListenChannel.EditEntryIDToName &&
+                   dialogueFix.OriginalTermId == -41 && dialogueFix.ReplacementTermId == -40,
+                "词典对白 158 的条件修正规则必须可严格解析：" + dialogueFixError);
+            Assert(!DictionaryDialogueFixRule.TryParse(validDialogueFix, "165.json",
+                       out _, out _),
+                "词典对白修正文件名必须与 DialogueChunk ID 一致");
+            Assert(triggerAliases.Matches(0, "EditEntryToName",
+                       "IDK", "我也不知道"), "IDK 中文触发");
+            Assert(triggerAliases.Matches(0, "EditEntryToName",
+                       "IDFK", "我他妈真的不知道"), "IDFK 中文触发");
+            Assert(!triggerAliases.Matches(0, "EditEntryToName",
+                       "IDK", "我他妈真的不知道"), "IDK 不得抢占 IDFK");
+            Assert(!triggerAliases.Matches(0, "EditEntryToName",
+                       "IDFK", "不知道"), "IDFK 不得放宽成 IDK");
+            Assert(
                    triggerAliases.Matches(0, "EditEntryToName",
                        "IDK", "我也不知道") &&
                    triggerAliases.Matches(0, "EditEntryToName",
@@ -110,8 +167,10 @@ internal static class Program
                        "THEN", "则") &&
                    !triggerAliases.Matches(-36, "EditEntryIDToName",
                        "THEN", "所以") &&
-                   triggerAliases.Matches(-36, "EditEntryIDToName",
+                   !triggerAliases.Matches(-36, "EditEntryIDToName",
                        "THEREFORE", "所以") &&
+                   triggerAliases.Matches(-36, "EditEntryIDToName",
+                       "SO", "所以") &&
                    triggerAliases.Matches(-36, "EditEntryIDToName",
                        "THEREFORE", "则") &&
                    !triggerAliases.Matches(-31, "EditEntryIDToName",
@@ -128,7 +187,21 @@ internal static class Program
                        "NUETRON", "种子") &&
                    !triggerAliases.Matches(-60, "EditEntryIDToName",
                        "NUETRON", "种子"),
-                "维护表必须完整载入，跨通道选择最长中文命中，并在最长结果并列时拒绝歧义触发");
+                "维护表必须完整载入，且构建消歧结果必须落入对应源条件");
+            Assert(
+                   triggerAliases.Matches(-16, "DictEntryIs",
+                       "POINT", "点") &&
+                   triggerAliases.Matches(-17, "DictEntryIs",
+                       "LINE", "线") &&
+                   triggerAliases.Matches(-18, "EditEntryIDToName",
+                       "SHAPE", "多边形") &&
+                   triggerAliases.Matches(-62, "DictEntryIs",
+                       "ELECTRON", "电子") &&
+                   triggerAliases.Matches(-61, "DictEntryIs",
+                       "NEUTRON", "中子") &&
+                   triggerAliases.Matches(-60, "EditEntryIDToName",
+                       "PROTON", "质子"),
+                "几何与亚原子粒子的组合对白必须使用固化中文别名，不能依赖场景中的假说组件");
             string longestAliasPath = Path.Combine(testRoot, "longest-trigger-aliases.json");
             File.WriteAllText(longestAliasPath,
                 @"{""entries"":[" +
@@ -139,10 +212,10 @@ internal static class Program
             Assert(DictionaryTriggerAliasStore.TryLoad(longestAliasPath, log,
                        out DictionaryTriggerAliasStore longestAliases) &&
                    longestAliases.Matches(-1, "EditEntryIDToName", "LONG", "氦秒") &&
-                   !longestAliases.Matches(-1, "EditEntryIDContains", "SHORT", "氦秒") &&
-                   !longestAliases.Matches(-2, "EditEntryIDToName", "TIE_A", "人类") &&
-                   !longestAliases.Matches(-2, "EditEntryIDToName", "TIE_B", "人类"),
-                "中文附加触发必须选择唯一最长命中，并在相同长度并列时全部拒绝");
+                   longestAliases.Matches(-1, "EditEntryIDContains", "SHORT", "氦秒") &&
+                   longestAliases.Matches(-2, "EditEntryIDToName", "TIE_A", "人类") &&
+                   longestAliases.Matches(-2, "EditEntryIDToName", "TIE_B", "人类"),
+                "运行时不得以最长命中或并列检查掩盖构建配置冲突");
             Vector3 promptLast = TermLoggerLayoutEngine.TargetViewportPoint(
                 new Vector3(0.82f, 0.71f, 12f), 2, 3, 0.045f);
             Vector3 promptFirst = TermLoggerLayoutEngine.TargetViewportPoint(
@@ -290,6 +363,39 @@ internal static class Program
                    CompilerCaseCompatibility.TryResolve("VAR", compilerEntries, out int varSignal) &&
                    varSignal == -11,
                 "编译兼容必须把唯一的大小写无关词条恢复为词典中的实际拼写");
+            var punctuationCompilerEntries = new[]
+            {
+                new System.Collections.Generic.KeyValuePair<string, int>("左【右】；完。", -201),
+                new System.Collections.Generic.KeyValuePair<string, int>("甲，乙", -202),
+            };
+            Assert(CompilerCaseCompatibility.TryResolve("左[右];完.", punctuationCompilerEntries,
+                       false, true, out int punctuationSignal) && punctuationSignal == -201 &&
+                   CompilerCaseCompatibility.TryResolve("甲,乙", punctuationCompilerEntries,
+                       false, true, out int commaSignal) && commaSignal == -202,
+                "编译兼容必须把中英文逗号、句号、分号、圆括号和方括号视为等价标点");
+            Assert(CompilerCaseCompatibility.NormalizeForReformatter(
+                       "左[右];完.", punctuationCompilerEntries.Select(pair => pair.Key),
+                       false, true) == "左【右】；完。" &&
+                   !CompilerCaseCompatibility.TryResolve("甲,a", new[]
+                       {
+                           new System.Collections.Generic.KeyValuePair<string, int>("甲，A", -202),
+                           new System.Collections.Generic.KeyValuePair<string, int>("甲,A", -203),
+                       }, true, true, out _),
+                "重格式化器必须恢复词典实际标点；标点规范化后有多个候选时不得误选");
+            var dictionaryNames = new[]
+            {
+                new System.Collections.Generic.KeyValuePair<string, int>("甲（乙）", -1),
+                new System.Collections.Generic.KeyValuePair<string, int>("VAR", -2),
+            };
+            Assert(DictionaryNameConflictCompatibility.HasConflict("甲(乙)", dictionaryNames,
+                       null, true, true) &&
+                   !DictionaryNameConflictCompatibility.HasConflict("甲(乙)", dictionaryNames,
+                       -1, true, true) &&
+                   DictionaryNameConflictCompatibility.HasConflict("var", dictionaryNames,
+                       null, true, true) &&
+                   !DictionaryNameConflictCompatibility.HasConflict("甲(乙)", dictionaryNames,
+                       null, true, false),
+                "词典新增和编辑的冲突校验必须同时遵守大小写及标点兼容开关");
             Assert(CompilerCaseCompatibility.NormalizeForReformatter(
                        "varIABLE", new[] { "var", "variable" }) == "variable",
                 "重格式化器兼容必须保持原版的最长词条优先规则");
@@ -419,13 +525,14 @@ internal static class Program
 
             File.WriteAllText(iniPath,
                 "[Localization]\nToggleModeHotkey=F8\n" +
-                "[Compatibility]\nCompilerCaseInsensitive=false\n" +
+                "[Compatibility]\nCompilerCaseInsensitive=false\nCompilerPunctuationInsensitive=false\n" +
                 "[Layout]\nNewWordPromptLowerRight=false\n" +
                 "[PuzzleFixes]\nEnabled=false\n" +
                 "[Font]\nFontSource=File\nFontFile=CustomChinese.otf\n" +
                 "SystemFontCandidates=Test Sans;Test Hei\n");
             config.ReloadCompatibilitySettings(iniPath, log);
-            Assert(!config.CompilerCaseInsensitive && !config.PuzzleFixesEnabled,
+            Assert(!config.CompilerCaseInsensitive && !config.CompilerPunctuationInsensitive &&
+                   !config.PuzzleFixesEnabled,
                 "兼容项和题面修正开关必须能从 INI 热重载");
             config.ReloadLayoutSettings(iniPath, log);
             Assert(!config.MoveNewWordPromptToLowerRight,
@@ -716,6 +823,10 @@ internal static class Program
                 "\"source_sha256\": \"" + TokenCodec.Sha256("Hydrogen") + "\", " +
                 "\"source_text\": \"Hydrogen\", \"translated_text\": \"氢\", " +
                 "\"game\": { \"original_text\": \"Hydrogen\" } },\n" +
+                "    { \"stable_key\": \"display:years\", \"kind\": \"display_value\", " +
+                "\"source_sha256\": \"" + TokenCodec.Sha256("years") + "\", " +
+                "\"source_text\": \"years\", \"translated_text\": \"年\", " +
+                "\"game\": { \"original_text\": \"years\" } },\n" +
                 "    { \"stable_key\": \"display:shapes\", \"kind\": \"display_value\", " +
                 "\"source_sha256\": \"" + TokenCodec.Sha256("Shapes") + "\", " +
                 "\"source_text\": \"Shapes\", \"translated_text\": \"形状\", " +
@@ -731,7 +842,7 @@ internal static class Program
                 "  ]\n}";
             File.WriteAllText(Path.Combine(translations, "display.json"), displayJson);
             TranslationStore store = TranslationStore.Load(translations, log);
-            Assert(store.Count == 7 && store.TryGet("ui:test", out RuntimeTranslationEntry entry) &&
+            Assert(store.Count == 8 && store.TryGet("ui:test", out RuntimeTranslationEntry entry) &&
                    entry.TranslatedText == "开始", "运行时 JSON 加载失败");
             Assert(store.UiTemplates.Count() == 1 &&
                    store.FindUnambiguousAchievement("Hello World!")?.TranslatedText == "你好，世界！",
@@ -745,6 +856,11 @@ internal static class Program
                        "已完成的谜题组：\n1. SHAPES", translateDisplayValues: true) ==
                    "已完成的谜题组：\n1. 形状",
                 "总结界面的复合文本必须翻译大小写不同的谜题组标题");
+            Assert(displayLocalizer.TranslateCompositeValues(
+                       "3 HYDROGEN-3 / 12.200000 YEARS",
+                       translateDisplayValues: true) ==
+                   "3 氢-3 / 12.2年",
+                "周期表必须翻译元素同位素名称和半衰期单位，不能残留 HYDROGEN-3 或 YEARS");
             var safeTemplate = new RuntimeTranslationEntry
             {
                 StableKey = "ui-template:save-path",
@@ -971,12 +1087,16 @@ internal static class Program
         Control[] controls = Descendants(form).ToArray();
         CheckBox compilerOption = controls.OfType<CheckBox>().Single(control =>
             control.Text.Contains("忽略英文字母大小写"));
+        CheckBox punctuationOption = controls.OfType<CheckBox>().Single(control =>
+            control.Text.Contains("忽略中英文标点差异"));
         CheckBox puzzleOption = controls.OfType<CheckBox>().Single(control =>
             control.Text.Contains("题目及答案的修正规则"));
         CheckBox layoutOption = controls.OfType<CheckBox>().Single(control =>
             control.Text.Contains("新单词命名") && control.Text.Contains("右下角"));
         Label compilerHint = controls.OfType<Label>().Single(control =>
             control.Text.Contains("VAR 可匹配词典中的 var"));
+        Label punctuationHint = controls.OfType<Label>().Single(control =>
+            control.Text.Contains("标点兼容范围"));
         Label layoutHint = controls.OfType<Label>().Single(control =>
             control.Text.Contains("保持列表原有顺序和行距"));
         Label puzzleHint = controls.OfType<Label>().Single(control =>
@@ -992,8 +1112,13 @@ internal static class Program
         Assert(compilerHint.Parent == compilerOption.Parent &&
                compilerHint.Top >= compilerOption.Bottom &&
                compilerHint.Top - compilerOption.Bottom <= 12 &&
-               compilerHint.Bottom <= layoutOption.Top,
+               compilerHint.Bottom <= punctuationOption.Top,
             "大小写兼容说明必须紧跟在对应复选框下方");
+        Assert(punctuationHint.Parent == punctuationOption.Parent &&
+               punctuationHint.Top >= punctuationOption.Bottom &&
+               punctuationHint.Top - punctuationOption.Bottom <= 12 &&
+               punctuationHint.Bottom <= layoutOption.Top,
+            "标点兼容说明必须紧跟在对应复选框下方");
         Assert(layoutHint.Parent == layoutOption.Parent &&
                layoutHint.Top >= layoutOption.Bottom &&
                layoutHint.Top - layoutOption.Bottom <= 12 &&
@@ -1128,10 +1253,27 @@ internal static class Program
                journalPreviewSource.Contains("viewInDictLabel.richText = true") &&
                journalPreviewSource.Contains("viewInDictLabel.overflowMode = TextOverflowModes.Overflow"),
             "F6 假说页预览必须先开启两个说明标签的 TMP 富文本，不能把 size/font 标签显示出来");
+        int previewRichTextIndex = journalPreviewSource.IndexOf(
+            "hypotheses.viewInDictLabel.richText = true", StringComparison.Ordinal);
+        int previewTextIndex = journalPreviewSource.IndexOf(
+            "hypotheses.viewInDictLabel.text =", StringComparison.Ordinal);
+        Assert(previewRichTextIndex >= 0 && previewTextIndex >= 0 &&
+               previewRichTextIndex < previewTextIndex &&
+               journalPreviewSource.Contains(
+                   "hypotheses.viewInDictLabel.maxVisibleLines = int.MaxValue"),
+            "F6 假说页必须在写入带标签的译文前开启富文本，并解除可见行数限制，不能显示 size 标签或吞掉第二行");
         string pluginSource = File.ReadAllText(Path.Combine(projectRoot,
             "src", "DeepSpaceChinese", "DeepSpaceChinesePlugin.cs"));
+        Assert(pluginSource.Contains(
+                   "ApplyProgressLogSpeakerColor(textBox, frame.speaker)") &&
+               journalPreviewSource.Contains(
+                   "_plugin.ApplyProgressLogSpeakerColor(title, pair.Original.speaker)"),
+            "角色手记正文开始逐字显示及 F6 预览时，最上方标题必须同步使用该角色颜色，不能一直保留预制体白色");
         Assert(pluginSource.Contains("ApplyHypothesesTextLayout(component)") &&
-               pluginSource.Contains("component.overflowMode = TextOverflowModes.Overflow"),
+               pluginSource.Contains("component.overflowMode = TextOverflowModes.Overflow") &&
+               pluginSource.Contains("component.maxVisibleLines = int.MaxValue") &&
+               pluginSource.Contains("DictionaryHypothesesLogRoutinePatch") &&
+               pluginSource.Contains("ApplyHypothesesTextLayout(__instance)"),
             "正常假说页与 F6 预览都必须允许底部说明换行溢出，不能把第二行截成省略号");
         Assert(JournalPreviewPromptInput.Resolve(true, KeyCode.Return) ==
                    JournalPreviewPromptAction.Submit &&

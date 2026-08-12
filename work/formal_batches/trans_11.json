@@ -289,7 +289,7 @@
   },
   {
     "text_index": 1246868534,
-    "translated_text": "{SPEAKER_COLLINS}{PART_000}亲爱的日记：{PART_001}这周结束时，{PART_002}多普勒感谢我们“赋予意义”——{PART_003}这个用词很有意思，{PART_004}也很贴切。{PART_005}赋予意义既是说者的责任，也是听者的责任，{PART_006}甚至后者更重要。{PART_007}我们都在创造意义。{PART_008}语言是符号的交换——{PART_009}而我们有幸把这些符号转化成全人类都能理解的意义。"
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}<size=85%>亲爱的日记：</size>{PART_001}<size=85%>这周结束时，</size>{PART_002}<size=85%>多普勒感谢我们“赋予意义”——</size>{PART_003}<size=85%>这个用词很有意思，</size>{PART_004}<size=85%>也很贴切。</size>{PART_005}<size=85%>赋予意义既是说者的责任，也是听者的责任，</size>{PART_006}<size=85%>甚至后者更重要。</size>{PART_007}<size=85%>我们都在创造意义。</size>{PART_008}<size=85%>语言是符号的交换——</size>{PART_009}<size=85%>而我们有幸把这些符号转化成全人类都能理解的意义。</size>"
   },
   {
     "text_index": 1307605426,
@@ -541,7 +541,7 @@
   },
   {
     "text_index": 721814160,
-    "translated_text": "{SPEAKER_AKERS}{PART_000}状态：{PART_001}我不是{SIG_N129}，{PART_002}只不过是个拿着我们那些显然很不中用的望远镜的{SIG_N130}。{PART_003}该死的昏暗小{SIG_N141}……{PART_004}但我依然能理解他们对{SIG_N214}的感受。{PART_005}我站{SIG_N212}这边。"
+    "translated_text": "{SPEAKER_AKERS}{PART_000}<size=90%>状态：</size>{PART_001}<size=90%>我不是{SIG_N129}，</size>{PART_002}<size=90%>只不过是个拿着我们那些显然很不中用的望远镜的{SIG_N130}。</size>{PART_003}<size=90%>该死的昏暗小{SIG_N141}……</size>{PART_004}<size=90%>但我依然能理解他们对{SIG_N214}的感受。</size>{PART_005}<size=90%>我站{SIG_N212}这边。</size>"
   },
   {
     "text_index": 1371869028,
@@ -1917,7 +1917,7 @@
   },
   {
     "text_index": 471049324,
-    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔，{PART_001}$animC2说说你对“点”的观点？{PART_002}……{PART_003}拜托，我还以为你们三个会喜欢这个押韵呢！"
+    "translated_text": "{SPEAKER_COLLINS}{PART_000}巴蒂斯塔，{PART_001}$animC2你对“点”有什么观点？{PART_002}……{PART_003}拜托，“点”和“观点”！我还以为你们三个会喜欢这个梗呢！"
   },
   {
     "text_index": 788441896,

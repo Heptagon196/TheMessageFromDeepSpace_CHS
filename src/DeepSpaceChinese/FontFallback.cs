@@ -162,6 +162,17 @@ internal sealed class FontFallback
         return ColorUtility.ToHtmlStringRGBA(compensated);
     }
 
+    public Color MatchRenderedColor(TMP_Text source, TMP_Text target)
+    {
+        EnsureLoaded();
+        if (source == null || target == null)
+            return target == null ? Color.white : target.color;
+        Color sourceFaceColor = ReadFaceColor(source.fontSharedMaterial);
+        Color targetFaceColor = ReadFaceColor(target.fontSharedMaterial);
+        return DialoguePunctuationColor.Compensate(source.color,
+            sourceFaceColor, targetFaceColor);
+    }
+
     public void RefreshDirectBindings()
     {
         foreach (KeyValuePair<int, DirectBinding> item in

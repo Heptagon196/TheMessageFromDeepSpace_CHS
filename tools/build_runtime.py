@@ -8,6 +8,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
+from dictionary_trigger_conflicts import validate_no_conflicts
 from translation_text_checks import (
     validate_chinese_quotes,
     validate_dialogue_ellipsis,
@@ -32,6 +33,11 @@ TOKEN_PATTERNS = {
     "tmp_tag": re.compile(r"</?[A-Za-z][^>]*>"),
 }
 TMP_SIZE_OPEN = re.compile(r"<size=(?:\d+(?:\.\d+)?%?)>", re.IGNORECASE)
+TMP_SIZE_WRAPPER = re.compile(
+    r"^<size=(\d+(?:\.\d+)?)%>(.*)</size>$", re.IGNORECASE | re.DOTALL
+)
+JOURNAL_STRUCTURE_TOKEN = re.compile(r"\{(?:SPEAKER_[^}]+|PART_\d{3})\}")
+JOURNAL_SIGNAL_TOKEN = re.compile(r"\{SIG_(?:N)?\d{3}\}")
 SOURCE_CELSIUS = re.compile(r"\bcelsius\b", re.IGNORECASE)
 SOURCE_FAHRENHEIT = re.compile(r"\bfahrenheit\b", re.IGNORECASE)
 SOURCE_DEGREES = re.compile(r"\bdegrees?\b", re.IGNORECASE)
@@ -124,6 +130,67 @@ def validate_temperature_units(item: dict[str, Any]) -> list[str]:
     return errors
 
 
+def journal_visible_weight(text: str) -> float:
+    """Estimate CJK journal occupancy while ignoring structural/TMP markup."""
+    text = TOKEN_PATTERNS["tmp_tag"].sub("", text)
+    text = JOURNAL_STRUCTURE_TOKEN.sub("", text)
+    # Runtime values are longer than their structural tokens; budget a
+    # conservative four Han-character cells for both signals and player name.
+    text = JOURNAL_SIGNAL_TOKEN.sub("词语词语", text)
+    text = TOKEN_PATTERNS["player"].sub("玩家名字", text)
+    return sum(
+        1.0 if ord(char) > 127 else (0.35 if char.isspace() else 0.58)
+        for char in text
+    )
+
+
+def recommended_journal_scale(item: dict[str, Any]) -> int:
+    """Return the largest safe size tier for a ProgressLog journal body."""
+    game = item.get("extra", {}).get("game", {})
+    if not str(game.get("chunk_name", "")).startswith("Journal Entries #"):
+        return 100
+    weight = journal_visible_weight(item.get("translated_text") or "")
+    speaker = str(game.get("speaker", ""))
+    if speaker == "AKERS":  # the source component is 84 px
+        tiers = ((120, 75), (100, 80), (84, 85), (75, 90))
+    elif speaker == "COLLINS":  # 72 px, but Collins has the longest prose
+        tiers = ((160, 75), (135, 80), (105, 85), (90, 90))
+    else:  # Bautista and Doppler are 72 px
+        tiers = ((150, 75), (130, 80), (120, 85), (90, 90))
+    return next((scale for limit, scale in tiers if weight > limit), 100)
+
+
+def applied_journal_scale(translated: str) -> int:
+    """Return 100 unless every non-empty PART is fully protected by a size tag."""
+    parts = TOKEN_PATTERNS["part"].split(
+        TOKEN_PATTERNS["speaker"].sub("", translated, count=1)
+    )
+    scales: list[float] = []
+    for part in parts:
+        if not part.strip():
+            continue
+        match = TMP_SIZE_WRAPPER.fullmatch(part)
+        if match is None:
+            return 100
+        scales.append(float(match.group(1)))
+    return int(max(scales)) if scales else 100
+
+
+def validate_journal_layout(item: dict[str, Any]) -> list[str]:
+    recommended = recommended_journal_scale(item)
+    if recommended == 100:
+        return []
+    applied = applied_journal_scale(item.get("translated_text") or "")
+    if applied <= recommended:
+        return []
+    game = item.get("extra", {}).get("game", {})
+    return [
+        "角色手记超过版面容量："
+        f"{game.get('speaker', 'UNKNOWN')} 需缩放至 {recommended}% 或更小，"
+        f"当前为 {applied}%"
+    ]
+
+
 def validate_item(item: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     source = item.get("source_text") or ""
@@ -136,6 +203,7 @@ def validate_item(item: dict[str, Any]) -> list[str]:
     errors.extend(validate_temperature_units(item))
     errors.extend(validate_chinese_quotes(translated))
     errors.extend(validate_duplicate_punctuation(translated))
+    errors.extend(validate_journal_layout(item))
     for name, pattern in TOKEN_PATTERNS.items():
         source_tokens = pattern.findall(source)
         translated_tokens = pattern.findall(translated)
@@ -330,6 +398,9 @@ def main() -> int:
         for rule in entry.get("rules", []):
             if rule.get("type") not in allowed_rule_types or not isinstance(rule.get("values"), list):
                 raise ValueError(f"词典中文触发规则第 {index + 1} 条包含无效匹配器。")
+            if "exclude_any" in rule and not isinstance(rule.get("exclude_any"), list):
+                raise ValueError(f"词典中文触发规则第 {index + 1} 条包含无效排除项。")
+    validate_no_conflicts(alias_entries)
     alias_path = args.output / "dictionary_trigger_aliases.json"
     alias_path.write_bytes(alias_source.read_bytes())
     alias_data = alias_path.read_bytes()

@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
@@ -40,8 +41,8 @@ T = {
 31: '{SPEAKER_COLLINS}{PART_000}一切都和 {SIG_N055}、{SIG_N056} 有关，{PART_001}这些名称是{PLAYER_NAME}取的。',
 32: '{SPEAKER_DOPPLER}{PART_000}$animD22{PLAYER_NAME}，{PART_001}你对这些释义有多大把握？{PART_002}进展顺利吗？',
 33: '{SPEAKER_COLLINS}{PART_000}有一段传输把这些词和原子丰度联系起来，{PART_001}而且和参考页签里的数据完全吻合。',
-34: '{SPEAKER_BAUTISTA}{PART_000}我们正一层层垒起一座由释义搭成的危塔。',
-35: '{SPEAKER_COLLINS}{PART_000}所以，用现实数据检验我们的理解才会让人这么满足。{PART_001}每当找到这样的联系，{PART_002}就能确定翻译工作确实在推进。',
+34: '{SPEAKER_BAUTISTA}{PART_000}我们正把一个个释义层层垒起，可这座塔并不牢靠。',
+35: '{SPEAKER_COLLINS}{PART_000}所以，能用现实数据验证我们的理解，才格外令人振奋。{PART_001}每找到一处这样的对应，{PART_002}就说明我们的翻译又向前迈了一步。',
 36: '{SPEAKER_DOPPLER}{PART_000}$animD21那就好。{PART_001}$animD24现在回家休息吧。{PART_002}下周肯定还会有许多新发现。',
 37: '{SPEAKER_COLLINS}{PART_000}那就下周见，多普勒。',
 38: '{SPEAKER_AKERS}{PART_000}晚安。',
@@ -454,7 +455,7 @@ T = {
 445: '{SPEAKER_COLLINS}{PART_000}亲爱的日记：{PART_001}上周的传输那么高潮迭起，这周却出奇地平淡。{PART_002}也许我漏掉了最新传输中的某些言外之意，{PART_003}又或许它只是在酝酿下一个高峰。',
 446: '{SPEAKER_DOPPLER}{PART_000}我始终没弄清那些“彩纸”到底是怎么回事。{PART_001}听着就像有人在捣鬼。',
 447: '手记 #14',
-448: '{SPEAKER_AKERS}{PART_000}状态：轻松！{PART_001}今天提前下班，巴蒂斯塔留下来处理彩色显示器。{PART_002}等到明早，那些东西肯定很酷，{PART_003}不过能早点回家真舒服。{PART_004}有时我都没意识到自己工作得有多拼，{PART_005}意外的休息就像迎面吹来一阵凉风。',
+448: '{SPEAKER_AKERS}{PART_000}<size=85%>状态：轻松！</size>{PART_001}<size=85%>今天提前下班，巴蒂斯塔留下来处理彩色显示器。</size>{PART_002}<size=85%>等到明早，那些东西肯定很酷，</size>{PART_003}<size=85%>不过能早点回家真舒服。</size>{PART_004}<size=85%>有时我都没意识到自己工作得有多拼，</size>{PART_005}<size=85%>意外的休息就像迎面吹来一阵凉风。</size>',
 449: '{SPEAKER_BAUTISTA}{PART_000}彩色显示器。{PART_001}难以置信。',
 450: '{SPEAKER_COLLINS}{PART_000}亲爱的日记：{PART_001}我本想留下来陪巴蒂斯塔，{PART_002}看他制作彩色图像。{PART_003}但仔细想想，我可能只会碍事。{PART_004}他一旦进入状态就停不下来，而且这次似乎必须尽快做完。',
 451: '{SPEAKER_DOPPLER}{PART_000}我很对不起巴蒂斯塔博士。{PART_001}唉，是我辜负他了。',
@@ -588,6 +589,37 @@ T = {
 579: '{SPEAKER_BAUTISTA}{PART_000}我不知道。',
 580: '{SPEAKER_AKERS}{PART_000}这样啊。看来谁都不知道。',
 }
+
+
+def scale_journal_parts(text: str, percent: int) -> str:
+    """Scale every visible PART independently so typewriter paging keeps valid TMP tags."""
+    return re.sub(
+        r"(\{PART_\d{3}\})(.*?)(?=\{PART_\d{3}\}|$)",
+        lambda match: (
+            match.group(1)
+            + f"<size={percent}%>"
+            + match.group(2)
+            + "</size>"
+        ),
+        text,
+    )
+
+
+# ProgressLog uses 84 px for Akers and 72 px for the other three characters.
+# These entries exceed the measured per-role journal capacity at 100% size.
+JOURNAL_LAYOUT_SCALES = {
+    392: 85,
+    393: 90,
+    427: 90,
+    437: 90,
+    457: 90,
+    471: 90,
+    484: 90,
+    522: 90,
+    530: 90,
+}
+for journal_index, journal_scale in JOURNAL_LAYOUT_SCALES.items():
+    T[journal_index] = scale_journal_parts(T[journal_index], journal_scale)
 
 def main():
     source = json.loads(SOURCE.read_text(encoding="utf-8"))

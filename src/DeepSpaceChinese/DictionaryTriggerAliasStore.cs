@@ -62,72 +62,20 @@ internal sealed class DictionaryTriggerAliasStore
         if (string.IsNullOrEmpty(english) || candidate == null)
             return false;
 
-        int longest = 0;
-        Entry winner = null;
-        bool tied = false;
         foreach (Entry entry in _entries)
         {
-            if (!ChannelsCompete(entry.Channel, channelName) ||
+            if (!string.Equals(entry.Channel, channelName,
+                    StringComparison.OrdinalIgnoreCase) ||
+                !string.Equals(entry.English, english,
+                    StringComparison.OrdinalIgnoreCase) ||
                 (entry.TermId.HasValue && entry.TermId.Value != termId))
                 continue;
-
-            int matchedLength = 0;
             foreach (Rule rule in entry.Rules)
-                matchedLength = Math.Max(matchedLength,
-                    RuleMatchLength(rule, candidate));
-            if (matchedLength <= 0)
-                continue;
-
-            if (matchedLength > longest)
-            {
-                longest = matchedLength;
-                winner = entry;
-                tied = false;
-            }
-            else if (matchedLength == longest &&
-                     !SameCondition(winner, entry))
-                tied = true;
+                if (RuleMatches(rule, candidate))
+                    return true;
         }
-
-        return longest > 0 && !tied && winner != null &&
-               string.Equals(winner.Channel, channelName,
-                   StringComparison.OrdinalIgnoreCase) &&
-               string.Equals(winner.English, english,
-                   StringComparison.OrdinalIgnoreCase);
+        return false;
     }
-
-    private static bool ChannelsCompete(string first, string second)
-    {
-        int firstGroup = ChannelGroup(first);
-        return firstGroup >= 0 && firstGroup == ChannelGroup(second);
-    }
-
-    private static int ChannelGroup(string channelName)
-    {
-        if (string.Equals(channelName, "EditEntryFromName",
-                StringComparison.OrdinalIgnoreCase) ||
-            string.Equals(channelName, "EditEntryIDFromName",
-                StringComparison.OrdinalIgnoreCase))
-            return 0;
-        if (string.Equals(channelName, "EditEntryToName",
-                StringComparison.OrdinalIgnoreCase) ||
-            string.Equals(channelName, "EditEntryIDToName",
-                StringComparison.OrdinalIgnoreCase) ||
-            string.Equals(channelName, "EditEntryIDContains",
-                StringComparison.OrdinalIgnoreCase))
-            return 1;
-        if (string.Equals(channelName, "DictEntryIs",
-                StringComparison.OrdinalIgnoreCase))
-            return 2;
-        return -1;
-    }
-
-    private static bool SameCondition(Entry first, Entry second) =>
-        first != null && second != null && first.TermId == second.TermId &&
-        string.Equals(first.Channel, second.Channel,
-            StringComparison.OrdinalIgnoreCase) &&
-        string.Equals(first.English, second.English,
-            StringComparison.OrdinalIgnoreCase);
 
     internal static bool RuleMatches(Rule rule, string candidate) =>
         RuleMatchLength(rule, candidate) > 0;
@@ -136,6 +84,12 @@ internal sealed class DictionaryTriggerAliasStore
     {
         if (rule?.Values == null || rule.Values.Count == 0 || candidate == null)
             return 0;
+        if (rule.ExcludeAny != null)
+            foreach (string excluded in rule.ExcludeAny)
+                if (!string.IsNullOrEmpty(excluded) &&
+                    candidate.IndexOf(excluded,
+                        StringComparison.OrdinalIgnoreCase) >= 0)
+                    return 0;
         string type = rule.Type?.Trim() ?? string.Empty;
         if (string.Equals(type, "contains_all", StringComparison.OrdinalIgnoreCase))
         {
@@ -197,5 +151,8 @@ internal sealed class DictionaryTriggerAliasStore
 
         [JsonProperty("values")]
         public List<string> Values { get; set; }
+
+        [JsonProperty("exclude_any")]
+        public List<string> ExcludeAny { get; set; }
     }
 }

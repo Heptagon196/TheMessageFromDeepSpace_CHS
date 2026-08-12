@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "description": "词典命名对白的中文附加触发规则；原版英文触发始终保留。",
-  "matching": "同一条目的 rules 按 OR 组合，contains_all 内部按 AND 组合；同一编辑候选跨规则取最长中文命中，并列最长时不触发中文别名。",
+  "matching": "同一条件的人工维护词与假说译名按 OR 合并；exclude_any 为明确配置的排除子串。构建时拒绝一次输入可同时命中多个条件的配置，运行时不做跨条件判优先级或消歧。",
   "entries": [
     {
       "term_id": -192,
@@ -222,8 +222,7 @@
         {
           "type": "exact",
           "values": [
-            "史前",
-            "远古"
+            "史前"
           ]
         }
       ],
@@ -1263,8 +1262,7 @@
         {
           "type": "exact",
           "values": [
-            "或者",
-            "或"
+            "或者"
           ]
         }
       ],
@@ -1911,7 +1909,6 @@
         }
       ],
       "dialogue_ids": [
-        158,
         165
       ],
       "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
@@ -2016,7 +2013,6 @@
         {
           "type": "exact",
           "values": [
-            "所以",
             "因此",
             "则"
           ]
@@ -2524,7 +2520,6 @@
         {
           "type": "exact",
           "values": [
-            "加一",
             "加上1",
             "加上 1",
             "递增一",
@@ -2665,6 +2660,11 @@
           "type": "contains",
           "values": [
             "不知道"
+          ],
+          "exclude_any": [
+            "妈",
+            "md不知道",
+            "tm不知道"
           ]
         }
       ],
@@ -2673,6 +2673,2021 @@
         88
       ],
       "note": "全局彩蛋；中文条件为附加触发，原英文缩写仍有效。"
+    },
+    {
+      "term_id": -197,
+      "channel": "EditEntryIDToName",
+      "english": "SCIENCE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "科学"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        983
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -195,
+      "channel": "EditEntryIDToName",
+      "english": "LANGUAGE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "语言"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        981
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -193,
+      "channel": "EditEntryIDToName",
+      "english": "BRAIN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "脑",
+            "大脑"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        980
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -178,
+      "channel": "EditEntryIDToName",
+      "english": "EVOLUTION",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "演化"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        973
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -169,
+      "channel": "EditEntryIDToName",
+      "english": "IN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "在内"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        966
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -168,
+      "channel": "EditEntryIDToName",
+      "english": "ANCIENT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "远古"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        965
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -159,
+      "channel": "EditEntryIDToName",
+      "english": "WHOLE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "整体"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        960
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -157,
+      "channel": "EditEntryIDToName",
+      "english": "SAD",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "悲伤"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        958
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -156,
+      "channel": "EditEntryIDToName",
+      "english": "HAPPY",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "快乐"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        957
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -155,
+      "channel": "EditEntryIDToName",
+      "english": "BAD",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "坏"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        956
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -154,
+      "channel": "EditEntryIDToName",
+      "english": "GOOD",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "好"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        955
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -153,
+      "channel": "EditEntryIDToName",
+      "english": "LOVE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "爱"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        953
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -139,
+      "channel": "EditEntryIDToName",
+      "english": "EARTH",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "地球"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        937
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -139,
+      "channel": "EditEntryIDToName",
+      "english": "HOME",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "家园"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        938
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -126,
+      "channel": "EditEntryIDToName",
+      "english": "INFINITY",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "无穷"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        241
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -125,
+      "channel": "EditEntryIDToName",
+      "english": "EVERYTHING",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "万物"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        249
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -125,
+      "channel": "EditEntryIDToName",
+      "english": "UNIVERSE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "宇宙"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        250,
+        201
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -123,
+      "channel": "EditEntryIDToName",
+      "english": "KNOWN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "已知"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        924
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -121,
+      "channel": "EditEntryIDToName",
+      "english": "WHEN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "何时"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        921
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -120,
+      "channel": "EditEntryIDToName",
+      "english": "AFTER",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "之后"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        235
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -120,
+      "channel": "EditEntryIDToName",
+      "english": "FUTURE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "未来"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        236
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -119,
+      "channel": "EditEntryIDToName",
+      "english": "CURRENT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "当前"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        239
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -119,
+      "channel": "EditEntryIDToName",
+      "english": "PRESENT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "现在"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        240
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -118,
+      "channel": "EditEntryIDToName",
+      "english": "PAST",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "过去"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        247
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -118,
+      "channel": "EditEntryIDToName",
+      "english": "PREVIOUS",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "之前"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        248
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -117,
+      "channel": "EditEntryIDToName",
+      "english": "SIMILAR",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "相似"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        920
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -114,
+      "channel": "EditEntryIDToName",
+      "english": "MEDIAN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "中位数"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        914
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -111,
+      "channel": "EditEntryIDToName",
+      "english": "NONE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "无"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        245
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -111,
+      "channel": "EditEntryIDToName",
+      "english": "NOTHING",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "什么都没有"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        246
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -110,
+      "channel": "EditEntryIDToName",
+      "english": "ALL",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "全部"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        237
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -110,
+      "channel": "EditEntryIDToName",
+      "english": "TOTAL",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "总计"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        238
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -109,
+      "channel": "EditEntryIDToName",
+      "english": "SMALL",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "小"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        907
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -108,
+      "channel": "EditEntryIDToName",
+      "english": "BIG",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "大"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        906
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -107,
+      "channel": "EditEntryIDToName",
+      "english": "VERY",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "非常"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        905
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -105,
+      "channel": "EditEntryIDToName",
+      "english": "CONCRETE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "具体"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        253
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -104,
+      "channel": "EditEntryIDToName",
+      "english": "ABSTRACT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "抽象"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        251
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -102,
+      "channel": "EditEntryIDToName",
+      "english": "ORGANIC",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "有机"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        259
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -101,
+      "channel": "EditEntryIDToName",
+      "english": "LIFE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "生命"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        903
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -100,
+      "channel": "EditEntryIDToName",
+      "english": "IS",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "是"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        242
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -99,
+      "channel": "EditEntryIDToName",
+      "english": "HYPONYM",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "下义词"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        256
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -99,
+      "channel": "EditEntryIDToName",
+      "english": "MEMBER",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "成员"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        257
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -98,
+      "channel": "EditEntryIDToName",
+      "english": "GALAXY",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "星系"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        1002,
+        200
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -97,
+      "channel": "EditEntryIDToName",
+      "english": "BLACKHOLE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "黑洞"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        1000,
+        999
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -96,
+      "channel": "EditEntryIDToName",
+      "english": "NEUTRONSTAR",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "中子星"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        1004,
+        203
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -94,
+      "channel": "EditEntryIDToName",
+      "english": "MOON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "卫星"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        1003,
+        202
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -93,
+      "channel": "EditEntryIDToName",
+      "english": "PLANET",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "行星"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        1006,
+        205
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -90,
+      "channel": "EditEntryIDToName",
+      "english": "STAR",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "恒星"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        1007,
+        206
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -87,
+      "channel": "EditEntryIDToName",
+      "english": "OPPOSITE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "相反"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        215
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -87,
+      "channel": "EditEntryIDToName",
+      "english": "REVERSE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "反向"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        216
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -84,
+      "channel": "EditEntryIDToName",
+      "english": "OBJECT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "宾语"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        898
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -83,
+      "channel": "EditEntryIDToName",
+      "english": "SUBJECT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "主语"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        897
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -81,
+      "channel": "EditEntryIDToName",
+      "english": "ADJECTIVE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "形容词"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        208
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -80,
+      "channel": "EditEntryIDToName",
+      "english": "VERB",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "动词"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        217
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -79,
+      "channel": "EditEntryIDToName",
+      "english": "NOUN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "名词"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        214
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -77,
+      "channel": "EditEntryIDToName",
+      "english": "OR",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "或"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        211
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -74,
+      "channel": "EditEntryIDToName",
+      "english": "MASS",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "质量"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        226
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -68,
+      "channel": "EditEntryIDToName",
+      "english": "MEASUREMENT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "测量"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        233
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -67,
+      "channel": "EditEntryIDToName",
+      "english": "SPEEDOFLIGHT",
+      "rules": [],
+      "dialogue_ids": [
+        225
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -66,
+      "channel": "EditEntryIDToName",
+      "english": "RATE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "速率"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        230
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -66,
+      "channel": "EditEntryIDToName",
+      "english": "SPEED",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "速度"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        231
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -63,
+      "channel": "EditEntryIDToName",
+      "english": "ISOTOPE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "同位素"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        895
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -63,
+      "channel": "EditEntryIDToName",
+      "english": "NUCLIDE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "核素"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        896
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -62,
+      "channel": "EditEntryIDToName",
+      "english": "ELECTRON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "电子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        194,
+        188
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -62,
+      "channel": "DictEntryIs",
+      "english": "ELECTRON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "电子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        194
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -61,
+      "channel": "DictEntryIs",
+      "english": "NEUTRON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "中子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        194
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -61,
+      "channel": "EditEntryIDToName",
+      "english": "NEUTRON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "中子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        191,
+        194
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -60,
+      "channel": "DictEntryIs",
+      "english": "PROTON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "质子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        194
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -60,
+      "channel": "EditEntryIDToName",
+      "english": "PROTON",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "质子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        193,
+        194
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -57,
+      "channel": "EditEntryIDToName",
+      "english": "CHEMICAL",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "化学物质"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        185
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -57,
+      "channel": "EditEntryIDToName",
+      "english": "COMPOUND",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "化合物"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        186
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -57,
+      "channel": "EditEntryIDToName",
+      "english": "MOLECULE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "分子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        187
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -56,
+      "channel": "EditEntryIDToName",
+      "english": "ATOM",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "原子"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        181
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -55,
+      "channel": "EditEntryIDToName",
+      "english": "ELEMENT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "元素"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        190
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -48,
+      "channel": "EditEntryIDToName",
+      "english": "CIRCLE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "圆"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        930
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -48,
+      "channel": "EditEntryIDToName",
+      "english": "SPHERE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "球体"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        929
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -47,
+      "channel": "EditEntryIDToName",
+      "english": "CIRCLE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "圆"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        196
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -44,
+      "channel": "EditEntryIDToName",
+      "english": "METEORITE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "陨石"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        174
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -43,
+      "channel": "EditEntryIDToName",
+      "english": "TRANSMISSION",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "传输"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        173
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -42,
+      "channel": "EditEntryIDFromName",
+      "english": "FREQ",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "频率缩写",
+            "频率简称",
+            "频率"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        177
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -42,
+      "channel": "EditEntryIDToName",
+      "english": "FREQ",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "频率缩写",
+            "频率简称"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        178
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -42,
+      "channel": "EditEntryIDToName",
+      "english": "FREQUENCY",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "频率"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        179
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -40,
+      "channel": "EditEntryIDToName",
+      "english": "SOURCE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "源"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        155
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -40,
+      "channel": "EditEntryIDFromName",
+      "english": "SOURCE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "源"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        156
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -39,
+      "channel": "EditEntryIDToName",
+      "english": "MOVE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "移动"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        162
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -39,
+      "channel": "EditEntryIDToName",
+      "english": "TRANSLATE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "平移"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        163
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -38,
+      "channel": "EditEntryIDToName",
+      "english": "WITHIN",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "在...内"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        160
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -37,
+      "channel": "EditEntryIDToName",
+      "english": "IF",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "如果"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        151
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -36,
+      "channel": "EditEntryIDToName",
+      "english": "SO",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "所以"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        152
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -33,
+      "channel": "EditEntryIDToName",
+      "english": "<",
+      "rules": [],
+      "dialogue_ids": [
+        148
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -32,
+      "channel": "EditEntryIDToName",
+      "english": ">",
+      "rules": [],
+      "dialogue_ids": [
+        145
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -32,
+      "channel": "EditEntryIDToName",
+      "english": "NOTEQUAL",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "不等于",
+            "不相等"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        147
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -31,
+      "channel": "EditEntryIDToName",
+      "english": "OR",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "或"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        141
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -30,
+      "channel": "EditEntryIDToName",
+      "english": "&",
+      "rules": [],
+      "dialogue_ids": [
+        136
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -30,
+      "channel": "EditEntryIDToName",
+      "english": "AND",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "且",
+            "并且"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        137
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -30,
+      "channel": "EditEntryIDToName",
+      "english": "BOTHTRUE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "两者都为真"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        138
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -28,
+      "channel": "EditEntryIDToName",
+      "english": "FALSE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "假",
+            "错"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        130
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -27,
+      "channel": "EditEntryIDToName",
+      "english": "TRUE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "真"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        135
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -25,
+      "channel": "EditEntryIDToName",
+      "english": "...",
+      "rules": [],
+      "dialogue_ids": [
+        118
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -25,
+      "channel": "EditEntryIDToName",
+      "english": "CONTINUED",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "延续"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        122
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -23,
+      "channel": "EditEntryIDToName",
+      "english": "#",
+      "rules": [],
+      "dialogue_ids": [
+        123
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -20,
+      "channel": "EditEntryIDToName",
+      "english": "DISTANCE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "距离"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        884
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -20,
+      "channel": "EditEntryIDToName",
+      "english": "LENGTH",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "长度"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        885
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -19,
+      "channel": "EditEntryIDToName",
+      "english": "GEOMETRY",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "几何图形"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        125
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -18,
+      "channel": "EditEntryIDToName",
+      "english": "SHAPE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "形状",
+            "多边形"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        119
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -18,
+      "channel": "DictEntryIs",
+      "english": "SHAPE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "形状",
+            "多边形"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        119
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -17,
+      "channel": "DictEntryIs",
+      "english": "LINE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "线",
+            "直线"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        119
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -17,
+      "channel": "EditEntryIDToName",
+      "english": "LINE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "线",
+            "直线"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        119
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -16,
+      "channel": "DictEntryIs",
+      "english": "POINT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "点"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        119
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -16,
+      "channel": "EditEntryIDToName",
+      "english": "POINT",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "点"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        119
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -15,
+      "channel": "EditEntryIDToName",
+      "english": ")",
+      "rules": [],
+      "dialogue_ids": [
+        121
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -15,
+      "channel": "EditEntryIDToName",
+      "english": "ENDHAS",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "包含结束"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        124
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -14,
+      "channel": "EditEntryIDToName",
+      "english": "(",
+      "rules": [],
+      "dialogue_ids": [
+        128
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -14,
+      "channel": "EditEntryIDToName",
+      "english": "HAS",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "包含"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        127
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -10,
+      "channel": "EditEntryIDToName",
+      "english": ".",
+      "rules": [],
+      "dialogue_ids": [
+        103
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -9,
+      "channel": "EditEntryIDToName",
+      "english": "POWER",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "幂"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        109
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -9,
+      "channel": "EditEntryIDToName",
+      "english": "^",
+      "rules": [],
+      "dialogue_ids": [
+        89
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -6,
+      "channel": "EditEntryIDToName",
+      "english": "*",
+      "rules": [],
+      "dialogue_ids": [
+        95
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -5,
+      "channel": "EditEntryIDToName",
+      "english": "+",
+      "rules": [],
+      "dialogue_ids": [
+        104
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -5,
+      "channel": "EditEntryIDToName",
+      "english": "ADDPREV",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "加上前一项"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        92
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -4,
+      "channel": "EditEntryIDToName",
+      "english": "=",
+      "rules": [],
+      "dialogue_ids": [
+        98
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -3,
+      "channel": "EditEntryIDToName",
+      "english": ",",
+      "rules": [],
+      "dialogue_ids": [
+        883
+      ],
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
+    },
+    {
+      "term_id": -2,
+      "channel": "EditEntryIDToName",
+      "english": "ADDONE",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "加一"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        91
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+    },
+    {
+      "term_id": -40,
+      "channel": "EditEntryIDToName",
+      "english": "TO",
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "到",
+            "至"
+          ]
+        }
+      ],
+      "dialogue_ids": [
+        158
+      ],
+      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。 对白 158 的原版词条 ID 错误已由 Fix 规则修正。"
     }
   ]
 }

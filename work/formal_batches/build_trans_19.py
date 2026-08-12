@@ -87,7 +87,7 @@ TRANSLATIONS = {
     "Dr. ": "Dr. ",
     "* * * New Log Ready * * *": "* * * 新日志已就绪 * * *",
     "{SPEAKER_AUTO_LOG}{PART_000}AUTO-LOG ENDED{PART_001}SAVED TO LOG":
-        "{SPEAKER_AUTO_LOG}{PART_000}自动日志已结束{PART_001}已保存至日志",
+        "{SPEAKER_AUTO_LOG}{PART_000}自动记录已结束{PART_001}内容已存入日志",
     "{SPEAKER_AUTO_LOG}{PART_000}AUTO-LOG TRANSCRIPT{PART_001}BOOTING ON...{PART_002}[@ @] to skip{PART_003}...":
         "{SPEAKER_AUTO_LOG}{PART_000}自动日志记录{PART_001}正在启动...{PART_002}按 [@ @] 跳过{PART_003}...",
     "{SPEAKER_AUTO_LOG}{PART_000}ENDING AUTO-LOG DUE TO INACTIVITY{PART_001}[Right-Click] OR [Tab] TO ADVANCE DIALOGUES":

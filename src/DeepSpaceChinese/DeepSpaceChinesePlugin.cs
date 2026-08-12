@@ -14,12 +14,14 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.80";
+    public const string PluginVersion = "0.1.88";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
     internal bool CompilerCaseInsensitiveEnabled =>
         _patchConfig?.Enabled == true && _patchConfig.CompilerCaseInsensitive;
+    internal bool CompilerPunctuationInsensitiveEnabled =>
+        _patchConfig?.Enabled == true && _patchConfig.CompilerPunctuationInsensitive;
     internal bool MoveNewWordPromptToLowerRightEnabled =>
         _patchConfig?.Enabled == true && _patchConfig.MoveNewWordPromptToLowerRight;
     internal bool TryMatchDictionaryDialogueCondition(ListenerCondition condition) =>
@@ -42,6 +44,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     private PuzzleFixRuntime _puzzleFixes;
     private JournalPreviewRuntime _journalPreview;
     private DictionaryTriggerAliasStore _dictionaryTriggerAliases;
+    private DictionaryDialogueFixRuntime _dictionaryDialogueFixes;
     private Harmony _harmony;
     private string _translationDirectory;
     private string _dictionaryTriggerAliasPath;
@@ -73,11 +76,16 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
         _playerName = new PlayerNameRuntime(_patchConfig, Logger);
         _puzzleFixes = new PuzzleFixRuntime(_patchConfig, fixDirectory, Logger);
+        _dictionaryDialogueFixes = new DictionaryDialogueFixRuntime(
+            System.IO.Path.Combine(fixDirectory, "DictionaryDialogue"), Logger);
         _journalPreview = new JournalPreviewRuntime(this, _frameCatalog);
         _puzzleFixes.ReloadRules();
+        _dictionaryDialogueFixes.ReloadRules();
 
         _harmony = new Harmony(PluginGuid);
         _harmony.PatchAll(typeof(DeepSpaceChinesePlugin).Assembly);
+        if (_patchConfig.Enabled)
+            _dictionaryDialogueFixes.ApplyAll();
         SceneManager.sceneLoaded += OnSceneLoaded;
         RegisterCharacterFonts();
 
@@ -161,6 +169,8 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         else
             TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes.ReloadRules();
+        _dictionaryDialogueFixes.ReloadRules();
+        _dictionaryDialogueFixes.ApplyAll();
         if (DictionaryTriggerAliasStore.TryLoad(_dictionaryTriggerAliasPath, Logger,
                 out DictionaryTriggerAliasStore replacementAliases))
             _dictionaryTriggerAliases = replacementAliases;
@@ -218,6 +228,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
+        _dictionaryDialogueFixes.ApplyAll();
         ApplyPuzzleFixes(PuzzleManager.Instance);
         StartCoroutine(StabilizeMainMenuLayout());
     }
@@ -241,6 +252,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _referencePageLayout?.RestoreAll();
         TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes?.RestoreAll();
+        _dictionaryDialogueFixes?.RestoreAll();
         _journalPreview?.Dispose();
         _harmony?.UnpatchSelf();
         if (ReferenceEquals(Instance, this))
@@ -270,6 +282,12 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         {
             Logger.LogError($"应用题目及答案修正规则失败，游戏将继续使用当前数据：\n{ex}");
         }
+    }
+
+    internal void ApplyDictionaryDialogueFix(AdvancedListener listener)
+    {
+        if (_patchConfig?.Enabled == true)
+            _dictionaryDialogueFixes?.Apply(listener);
     }
 
     internal void ApplyDialogueBank(DialogueBank bank)
@@ -334,6 +352,25 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         component.richText = true;
         component.textWrappingMode = TextWrappingModes.Normal;
         component.overflowMode = TextOverflowModes.Overflow;
+        component.maxVisibleLines = int.MaxValue;
+    }
+
+    internal static void ApplyHypothesesTextLayout(DictionaryHypothesesLog log)
+    {
+        if (log == null)
+            return;
+        ApplyHypothesesLabelLayout(log.haveUnlockedLabel);
+        ApplyHypothesesLabelLayout(log.viewInDictLabel);
+    }
+
+    private static void ApplyHypothesesLabelLayout(TMP_Text component)
+    {
+        if (component == null)
+            return;
+        component.richText = true;
+        component.textWrappingMode = TextWrappingModes.Normal;
+        component.overflowMode = TextOverflowModes.Overflow;
+        component.maxVisibleLines = int.MaxValue;
     }
 
     internal string PrepareAnalogBannerText(string source) =>
@@ -454,6 +491,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         DialogueFrame frame)
     {
         _characterFonts?.Register(textBox?.font);
+        ApplyProgressLogSpeakerColor(textBox, frame.speaker);
         if (_frameCatalog != null && _frameCatalog.TryGet(frame, out DialogueFramePair pair))
         {
             _liveDialogueText?.TrackCharacter(textBox, pair.Original, pair.Translated);
@@ -466,7 +504,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 
     internal string PrepareGenericTypedText(TMP_Text label, string proposed)
     {
-        ApplyProgressLogTitleFont(label);
+        ApplyProgressLogTitlePresentation(label);
         if (_ui != null && _ui.TryResolveSystemLiteralPair(proposed,
                 out string original, out string translated))
         {
@@ -491,11 +529,11 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         {
             if (progressLog == null)
                 continue;
-            count += ApplyProgressLogTitleFont(progressLog.aLogTitle) ? 1 : 0;
-            count += ApplyProgressLogTitleFont(progressLog.bLogTitle) ? 1 : 0;
-            count += ApplyProgressLogTitleFont(progressLog.cLogTitle) ? 1 : 0;
-            count += ApplyProgressLogTitleFont(progressLog.dLogTitle) ? 1 : 0;
-            count += ApplyProgressLogTitleFont(progressLog.tLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitlePresentation(progressLog.aLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitlePresentation(progressLog.bLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitlePresentation(progressLog.cLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitlePresentation(progressLog.dLogTitle) ? 1 : 0;
+            count += ApplyProgressLogTitlePresentation(progressLog.tLogTitle) ? 1 : 0;
         }
         if (count > 0)
             Logger.LogInfo($"个人日志标题字体已应用：{count} 项，模式 {_patchConfig.DisplayMode}。");
@@ -515,6 +553,79 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             return false;
         return _font.ApplyDirect(label,
             _patchConfig.DisplayMode == DisplayMode.TranslationOnly);
+    }
+
+    private bool ApplyProgressLogTitlePresentation(TMP_Text label)
+    {
+        bool applied = ApplyProgressLogTitleFont(label);
+        ApplyProgressLogTitleColor(label);
+        return applied;
+    }
+
+    internal void ApplyProgressLogSpeakerColor(TMP_Text component, Speaker speaker)
+    {
+        if (component == null || _font == null)
+            return;
+        foreach (ProgressLog progressLog in Resources.FindObjectsOfTypeAll<ProgressLog>())
+        {
+            if (progressLog == null ||
+                !TryGetProgressLogPair(progressLog, speaker, out TMP_Text title,
+                    out TMP_Text body) ||
+                (!ReferenceEquals(component, title) && !ReferenceEquals(component, body)))
+                continue;
+            title.color = _font.MatchRenderedColor(body, title);
+            return;
+        }
+    }
+
+    private void ApplyProgressLogTitleColor(TMP_Text title)
+    {
+        if (title == null || _font == null)
+            return;
+        foreach (ProgressLog progressLog in Resources.FindObjectsOfTypeAll<ProgressLog>())
+        {
+            if (progressLog == null)
+                continue;
+            foreach (Speaker speaker in new[]
+                     {
+                         Speaker.Alan, Speaker.BScientist, Speaker.Carrie, Speaker.Doppler,
+                     })
+            {
+                if (!TryGetProgressLogPair(progressLog, speaker,
+                        out TMP_Text candidate, out TMP_Text body) ||
+                    !ReferenceEquals(title, candidate))
+                    continue;
+                title.color = _font.MatchRenderedColor(body, title);
+                return;
+            }
+        }
+    }
+
+    private static bool TryGetProgressLogPair(ProgressLog progressLog, Speaker speaker,
+        out TMP_Text title, out TMP_Text body)
+    {
+        title = null;
+        body = null;
+        switch (speaker)
+        {
+            case Speaker.Alan:
+                title = progressLog.aLogTitle;
+                body = progressLog.aLog;
+                break;
+            case Speaker.BScientist:
+                title = progressLog.bLogTitle;
+                body = progressLog.bLog;
+                break;
+            case Speaker.Carrie:
+                title = progressLog.cLogTitle;
+                body = progressLog.cLog;
+                break;
+            case Speaker.Doppler:
+                title = progressLog.dLogTitle;
+                body = progressLog.dLog;
+                break;
+        }
+        return title != null && body != null;
     }
 
     private static bool IsProgressLogTitle(TMP_Text label)
@@ -685,6 +796,25 @@ internal static class DialogueManagerGenericTimedTypePatch
         {
             DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
                 $"跟踪定时逐字标题语言切换失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(DictionaryHypothesesLog),
+    nameof(DictionaryHypothesesLog.DictionaryHypothesesRoutine))]
+internal static class DictionaryHypothesesLogRoutinePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(DictionaryHypothesesLog __instance)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.ApplyHypothesesTextLayout(__instance);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"初始化假说说明页文本布局失败：\n{ex}");
         }
     }
 }

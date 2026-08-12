@@ -30,6 +30,7 @@ internal sealed class PatchConfig
     public bool TranslateUI { get; private set; } = true;
     public bool TranslateSystem { get; private set; } = true;
     public bool CompilerCaseInsensitive { get; private set; } = true;
+    public bool CompilerPunctuationInsensitive { get; private set; } = true;
     public bool MoveNewWordPromptToLowerRight { get; private set; } = true;
     public bool PuzzleFixesEnabled { get; private set; } = true;
     public KeyboardShortcut ToggleModeHotkey { get; private set; } = KeyboardShortcut.Deserialize("F8");
@@ -61,6 +62,8 @@ internal sealed class PatchConfig
             TranslateSystem = GetBool(values, "Localization.TranslateSystem", true),
             CompilerCaseInsensitive = GetBool(values,
                 "Compatibility.CompilerCaseInsensitive", true),
+            CompilerPunctuationInsensitive = GetBool(values,
+                "Compatibility.CompilerPunctuationInsensitive", true),
             MoveNewWordPromptToLowerRight = GetBool(values,
                 "Layout.NewWordPromptLowerRight", true),
             PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true),
@@ -121,6 +124,8 @@ internal sealed class PatchConfig
         var values = ReadIni(path, log);
         CompilerCaseInsensitive = GetBool(values,
             "Compatibility.CompilerCaseInsensitive", true);
+        CompilerPunctuationInsensitive = GetBool(values,
+            "Compatibility.CompilerPunctuationInsensitive", true);
         PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true);
     }
 

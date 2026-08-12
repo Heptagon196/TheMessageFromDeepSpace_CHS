@@ -41,6 +41,9 @@ function Assert-NoLiteralSystemDriveArtifact {
 
 Assert-NoLiteralSystemDriveArtifact
 
+python (Join-Path $PSScriptRoot "build_dictionary_trigger_aliases.py")
+if ($LASTEXITCODE -ne 0) { throw "词典中文触发规则生成或冲突校验失败。" }
+
 $toolEnvironment = Join-Path $projectRoot "build\tool-environment"
 if (-not $env:USERPROFILE -or $env:USERPROFILE.Contains('%') -or
     -not [IO.Path]::IsPathRooted($env:USERPROFILE)) {
@@ -124,8 +127,11 @@ Copy-Item -LiteralPath (Join-Path $projectRoot "patch\DeepSpaceChinese.ini") -De
 Copy-Item -LiteralPath (Join-Path $projectRoot "patch\README_简体中文.txt") -Destination $contentRoot -Force
 $fixSource = Join-Path $projectRoot "patch\Fix"
 $fixOutput = Join-Path $contentRoot "Fix"
-foreach ($fixFile in Get-ChildItem -LiteralPath $fixSource -File) {
-    Copy-Item -LiteralPath $fixFile.FullName -Destination $fixOutput -Force
+foreach ($fixFile in Get-ChildItem -LiteralPath $fixSource -File -Recurse) {
+    $relativePath = $fixFile.FullName.Substring($fixSource.Length).TrimStart('\')
+    $destination = Join-Path $fixOutput $relativePath
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $destination) | Out-Null
+    Copy-Item -LiteralPath $fixFile.FullName -Destination $destination -Force
 }
 Copy-Item -LiteralPath (Join-Path $projectRoot "src\DeepSpaceChinese\bin\$Configuration\net472\DeepSpaceChinese.dll") `
     -Destination (Join-Path $packageRoot "BepInEx\plugins") -Force

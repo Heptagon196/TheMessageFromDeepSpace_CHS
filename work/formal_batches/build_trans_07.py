@@ -38,7 +38,7 @@ translations = [
     '艾伦',
     '{SPEAKER_AKERS}{PART_000}唉。{PART_001}本科四年，{PART_002}研究生五年，{PART_003}在航天局也快十年了……',
     '{SPEAKER_COLLINS}{PART_000}埃克斯博士？',
-    '{SPEAKER_AKERS}{PART_000}……可我还是几乎跟不上。',
+    '{SPEAKER_AKERS}{PART_000}……可眼前这些东西，我还是看得一头雾水。',
     '又一位老朋友',
     '{SPEAKER_AKERS}{PART_000}快看，{PART_001}是{SIG_N043}！',
     '{SPEAKER_BAUTISTA}{PART_000}又一位老朋友。',

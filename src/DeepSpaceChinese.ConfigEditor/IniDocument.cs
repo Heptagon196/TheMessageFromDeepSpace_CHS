@@ -151,6 +151,10 @@ TranslateSystem = true
 # 编译词典词名时是否忽略英文字母大小写。
 CompilerCaseInsensitive = true
 
+# 是否忽略对应的中英文标点差异，并用于词典命名冲突检查。
+# 等价标点：,↔，  .↔。  ;↔；  ( )↔（ ）  [ ]↔【 】。
+CompilerPunctuationInsensitive = true
+
 [Layout]
 # 是否把“新单词命名”浮窗列表移到右下角。默认开启。
 # 保持列表原有顺序和行距，并从右下角向上排列。

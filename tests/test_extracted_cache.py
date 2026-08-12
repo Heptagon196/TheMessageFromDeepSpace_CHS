@@ -86,6 +86,35 @@ assert display_paths == {
     "isotopes[4].unit": 1,
 }
 
+element_items = [
+    item
+    for item in display_items
+    if item["extra"]["game"]["field_path"] == "elementName"
+]
+assert len(element_items) == 92
+assert all(item["translated_text"].strip() for item in element_items), (
+    "元素周期表的 92 个元素名称必须全部有译文"
+)
+isotope_unit_items = [
+    item
+    for item in display_items
+    if ".unit" in item["extra"]["game"]["field_path"]
+]
+assert isotope_unit_items and all(
+    item["translated_text"].strip() for item in isotope_unit_items
+), "全部同位素半衰期单位必须有译文"
+assert {item["source_text"] for item in isotope_unit_items} == {
+    "ms",
+    "seconds",
+    "minutes",
+    "hours",
+    "days",
+    "years",
+    "thousand years",
+    "million years",
+    "billion years",
+}
+
 template_ids = {
     item["extra"]["game"]["template_id"]
     for item in items

@@ -100,6 +100,39 @@ assert any("重复中文标点" in error for error in errors), (
     "所有运行时译文都必须经过重复标点校验"
 )
 
+journal_items = [
+    item
+    for item in build_runtime.iter_items(cache)
+    if str(item.get("extra", {}).get("game", {}).get("chunk_name", "")).startswith(
+        "Journal Entries #"
+    )
+    and item.get("translation_status") in (1, 2)
+]
+assert len(journal_items) == 265, "应完整审计全部 265 条已翻译角色手记"
+assert not [
+    (
+        item.get("extra", {}).get("game", {}).get("stable_key"),
+        build_runtime.validate_journal_layout(item),
+    )
+    for item in journal_items
+    if build_runtime.validate_journal_layout(item)
+], "所有超容量角色手记都必须按角色字号显式缩放"
+
+akers_journal = next(
+    item
+    for item in journal_items
+    if item.get("extra", {}).get("game", {}).get("stable_key")
+    == "dialogue:57/frame:0"
+)
+unscaled_akers_journal = deepcopy(akers_journal)
+unscaled_akers_journal["translated_text"] = re.sub(
+    r"</?size=[^>]+>|</size>", "", unscaled_akers_journal["translated_text"]
+)
+errors = build_runtime.validate_journal_layout(unscaled_akers_journal)
+assert any("角色手记超过版面容量" in error for error in errors), (
+    "埃克斯的 84 px 手记必须使用独立容量阈值，不能按其他角色的 72 px 漏放"
+)
+
 legacy_system_ellipsis = [
     item
     for item in build_runtime.iter_items(cache)
