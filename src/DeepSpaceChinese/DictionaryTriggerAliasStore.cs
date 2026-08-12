@@ -61,38 +61,95 @@ internal sealed class DictionaryTriggerAliasStore
     {
         if (string.IsNullOrEmpty(english) || candidate == null)
             return false;
+
+        int longest = 0;
+        Entry winner = null;
+        bool tied = false;
         foreach (Entry entry in _entries)
         {
-            if (!string.Equals(entry.Channel, channelName,
-                    StringComparison.OrdinalIgnoreCase) ||
-                !string.Equals(entry.English, english,
-                    StringComparison.OrdinalIgnoreCase) ||
+            if (!ChannelsCompete(entry.Channel, channelName) ||
                 (entry.TermId.HasValue && entry.TermId.Value != termId))
                 continue;
+
+            int matchedLength = 0;
             foreach (Rule rule in entry.Rules)
+                matchedLength = Math.Max(matchedLength,
+                    RuleMatchLength(rule, candidate));
+            if (matchedLength <= 0)
+                continue;
+
+            if (matchedLength > longest)
             {
-                if (RuleMatches(rule, candidate))
-                    return true;
+                longest = matchedLength;
+                winner = entry;
+                tied = false;
             }
+            else if (matchedLength == longest &&
+                     !SameCondition(winner, entry))
+                tied = true;
         }
-        return false;
+
+        return longest > 0 && !tied && winner != null &&
+               string.Equals(winner.Channel, channelName,
+                   StringComparison.OrdinalIgnoreCase) &&
+               string.Equals(winner.English, english,
+                   StringComparison.OrdinalIgnoreCase);
     }
 
-    internal static bool RuleMatches(Rule rule, string candidate)
+    private static bool ChannelsCompete(string first, string second)
+    {
+        int firstGroup = ChannelGroup(first);
+        return firstGroup >= 0 && firstGroup == ChannelGroup(second);
+    }
+
+    private static int ChannelGroup(string channelName)
+    {
+        if (string.Equals(channelName, "EditEntryFromName",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channelName, "EditEntryIDFromName",
+                StringComparison.OrdinalIgnoreCase))
+            return 0;
+        if (string.Equals(channelName, "EditEntryToName",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channelName, "EditEntryIDToName",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channelName, "EditEntryIDContains",
+                StringComparison.OrdinalIgnoreCase))
+            return 1;
+        if (string.Equals(channelName, "DictEntryIs",
+                StringComparison.OrdinalIgnoreCase))
+            return 2;
+        return -1;
+    }
+
+    private static bool SameCondition(Entry first, Entry second) =>
+        first != null && second != null && first.TermId == second.TermId &&
+        string.Equals(first.Channel, second.Channel,
+            StringComparison.OrdinalIgnoreCase) &&
+        string.Equals(first.English, second.English,
+            StringComparison.OrdinalIgnoreCase);
+
+    internal static bool RuleMatches(Rule rule, string candidate) =>
+        RuleMatchLength(rule, candidate) > 0;
+
+    internal static int RuleMatchLength(Rule rule, string candidate)
     {
         if (rule?.Values == null || rule.Values.Count == 0 || candidate == null)
-            return false;
+            return 0;
         string type = rule.Type?.Trim() ?? string.Empty;
         if (string.Equals(type, "contains_all", StringComparison.OrdinalIgnoreCase))
         {
+            int totalLength = 0;
             foreach (string value in rule.Values)
             {
                 if (string.IsNullOrEmpty(value) ||
                     candidate.IndexOf(value, StringComparison.OrdinalIgnoreCase) < 0)
-                    return false;
+                    return 0;
+                totalLength += value.Length;
             }
-            return true;
+            return totalLength;
         }
+        int longest = 0;
         foreach (string value in rule.Values)
         {
             if (string.IsNullOrEmpty(value))
@@ -100,16 +157,16 @@ internal sealed class DictionaryTriggerAliasStore
             if (string.Equals(type, "contains", StringComparison.OrdinalIgnoreCase))
             {
                 if (candidate.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0)
-                    return true;
+                    longest = Math.Max(longest, value.Length);
             }
             else if (string.Equals(type, "exact", StringComparison.OrdinalIgnoreCase) &&
                      string.Equals(candidate.Trim(), value.Trim(),
                          StringComparison.OrdinalIgnoreCase))
             {
-                return true;
+                longest = Math.Max(longest, value.Trim().Length);
             }
         }
-        return false;
+        return longest;
     }
 
     internal sealed class Root

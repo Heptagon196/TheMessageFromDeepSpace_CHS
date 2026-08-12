@@ -89,12 +89,60 @@ internal static class Program
                    triggerAliases.Matches(0, "EditEntryToName",
                        "IDFK", "我他妈真的不知道") &&
                    !triggerAliases.Matches(0, "EditEntryToName",
+                       "IDK", "我他妈真的不知道") &&
+                   !triggerAliases.Matches(0, "EditEntryToName",
                        "IDFK", "不知道") &&
+                   triggerAliases.Matches(-69, "EditEntryIDToName",
+                       "HELISEC", "氦秒") &&
+                   !triggerAliases.Matches(-69, "EditEntryIDContains",
+                       "HELIUM", "氦秒") &&
+                   !triggerAliases.Matches(-46, "EditEntryIDToName",
+                       "HUMANITY", "人类") &&
+                   triggerAliases.Matches(-46, "EditEntryIDToName",
+                       "HUMANS", "人类") &&
+                   !triggerAliases.Matches(-188, "EditEntryIDToName",
+                       "POSITIVE", "正") &&
+                   triggerAliases.Matches(-140, "EditEntryIDToName",
+                       "SHEEN", "光泽") &&
+                   !triggerAliases.Matches(-140, "EditEntryIDToName",
+                       "SHEEN", "希恩") &&
+                   !triggerAliases.Matches(-36, "EditEntryIDToName",
+                       "THEN", "则") &&
+                   !triggerAliases.Matches(-36, "EditEntryIDToName",
+                       "THEN", "所以") &&
+                   triggerAliases.Matches(-36, "EditEntryIDToName",
+                       "THEREFORE", "所以") &&
+                   triggerAliases.Matches(-36, "EditEntryIDToName",
+                       "THEREFORE", "则") &&
+                   !triggerAliases.Matches(-31, "EditEntryIDToName",
+                       "|", "或") &&
+                   !triggerAliases.Matches(-31, "EditEntryIDToName",
+                       "|", "｜") &&
+                   triggerAliases.Matches(-2, "EditEntryIDToName",
+                       "PLUSONE", "递增") &&
+                   triggerAliases.Matches(-2, "EditEntryIDToName",
+                       "PLUSONE", "自增") &&
+                   !triggerAliases.Matches(-122, "EditEntryIDToName",
+                       "THEN", "则") &&
                    triggerAliases.Matches(-61, "EditEntryIDToName",
                        "NUETRON", "种子") &&
                    !triggerAliases.Matches(-60, "EditEntryIDToName",
                        "NUETRON", "种子"),
-                "维护表必须完整载入，并按英文定位键、词条 ID 和复合中文规则精确匹配");
+                "维护表必须完整载入，跨通道选择最长中文命中，并在最长结果并列时拒绝歧义触发");
+            string longestAliasPath = Path.Combine(testRoot, "longest-trigger-aliases.json");
+            File.WriteAllText(longestAliasPath,
+                @"{""entries"":[" +
+                @"{""term_id"":-1,""channel"":""EditEntryIDToName"",""english"":""LONG"",""rules"":[{""type"":""exact"",""values"":[""氦秒""]}]}," +
+                @"{""term_id"":-1,""channel"":""EditEntryIDContains"",""english"":""SHORT"",""rules"":[{""type"":""contains"",""values"":[""氦""]}]}," +
+                @"{""term_id"":-2,""channel"":""EditEntryIDToName"",""english"":""TIE_A"",""rules"":[{""type"":""exact"",""values"":[""人类""]}]}," +
+                @"{""term_id"":-2,""channel"":""EditEntryIDToName"",""english"":""TIE_B"",""rules"":[{""type"":""exact"",""values"":[""人类""]}]}]}");
+            Assert(DictionaryTriggerAliasStore.TryLoad(longestAliasPath, log,
+                       out DictionaryTriggerAliasStore longestAliases) &&
+                   longestAliases.Matches(-1, "EditEntryIDToName", "LONG", "氦秒") &&
+                   !longestAliases.Matches(-1, "EditEntryIDContains", "SHORT", "氦秒") &&
+                   !longestAliases.Matches(-2, "EditEntryIDToName", "TIE_A", "人类") &&
+                   !longestAliases.Matches(-2, "EditEntryIDToName", "TIE_B", "人类"),
+                "中文附加触发必须选择唯一最长命中，并在相同长度并列时全部拒绝");
             Vector3 promptLast = TermLoggerLayoutEngine.TargetViewportPoint(
                 new Vector3(0.82f, 0.71f, 12f), 2, 3, 0.045f);
             Vector3 promptFirst = TermLoggerLayoutEngine.TargetViewportPoint(
@@ -598,6 +646,26 @@ internal static class Program
             Assert(insertedName.Text == "林" && insertedName.Caret == 1 &&
                    limitedName.Text == "一二三四五六七八九十甲乙丙" && limitedName.Caret == 13,
                 "中文输入必须按选区写入，且字符上限不能截断代理项对");
+            const string sixteenChineseCharacters = "一二三四五六七八九十甲乙丙丁戊己";
+            Assert(DictionaryTermNameInputPolicy.IsTermNameInput(
+                       "Input Text Dummy - Term Names", null) &&
+                   DictionaryTermNameInputPolicy.IsTermNameInput(
+                       null, "TermNameInputValidator") &&
+                   !DictionaryTermNameInputPolicy.IsTermNameInput(
+                       "Input Text Dummy - Puzzle Input", null) &&
+                   DictionaryTermNameInputPolicy.IsLegal(sixteenChineseCharacters) &&
+                   !DictionaryTermNameInputPolicy.IsLegal(sixteenChineseCharacters + "庚") &&
+                   !DictionaryTermNameInputPolicy.IsLegal("变量1") &&
+                   !DictionaryTermNameInputPolicy.IsLegal("变量１") &&
+                   !DictionaryTermNameInputPolicy.IsLegal("变量 名") &&
+                   !DictionaryTermNameInputPolicy.IsLegal("变量　名") &&
+                   DictionaryTermNameInputPolicy.ValidateCharacter("变量", 2, '中') == '中' &&
+                   DictionaryTermNameInputPolicy.ValidateCharacter("变量", 2, 'a') == 'A' &&
+                   DictionaryTermNameInputPolicy.ValidateCharacter("变量", 2, '1') == '\0' &&
+                   DictionaryTermNameInputPolicy.ValidateCharacter("变量", 2, ' ') == '\0' &&
+                   DictionaryTermNameInputPolicy.NormalizeForSubmit("中文name") == "中文NAME" &&
+                   DictionaryTermNameInputPolicy.NormalizeForSubmit("中文 name") == string.Empty,
+                "词典条目和 NAME SIGNAL 必须共用 16 字限制，禁止数字/空白并自动大写英文字母");
             Assert(UnicodeInputCoverage.IsSupported("NameTranslator", "nameEntryInput") &&
                    UnicodeInputCoverage.IsSupported("ProgressLog", "translatorInput") &&
                    UnicodeInputCoverage.IsSupported("InputTextDummy", "inputField") &&

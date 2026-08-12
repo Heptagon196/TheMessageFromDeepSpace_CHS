@@ -1,0 +1,618 @@
+[
+  {
+    "text_index": 1,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"喙\",\"鸟嘴\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 2,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 3,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"负\",\"负数\",\"负值\",\"阴性\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 4,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"相互\",\"互相\",\"双向\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 5,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"旱鸭子\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 6,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"泰拉\",\"大地\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 7,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"冷面\",\"寒冷面\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 8,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"夜面\",\"背阳面\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 9,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"昼面\",\"向阳面\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 10,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"热面\",\"炎热面\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 11,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"海洋\",\"大海\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 12,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"侧\",\"面\",\"一边\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 13,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"史前\",\"远古\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 14,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"温度\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 15,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"感觉\",\"感受\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 16,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"观察\",\"观测\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 17,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"部分\",\"部件\",\"一部分\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 18,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"情绪\",\"情感\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 19,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"年老\",\"年长\",\"老年\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 20,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"中年\",\"中年期\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 21,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"年轻\",\"幼年\",\"幼体\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 22,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"脑\",\"大脑\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 23,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"核心\",\"中枢\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 24,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"手臂\",\"胳膊\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 25,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"腿\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 26,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"肢体\",\"四肢\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 27,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"性\",\"性行为\",\"交配\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 28,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"开普勒\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 29,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"太阳\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 30,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"埃里德\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 31,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"光泽\",\"亮泽\",\"光彩\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 32,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"我\",\"自己\"]}],\"note\":\"人名或人物关系的中文附加触发。\"}"
+  },
+  {
+    "text_index": 33,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"艾伦\",\"埃克斯\",\"艾伦·埃克斯\"]}],\"note\":\"人名或人物关系的中文附加触发。\"}"
+  },
+  {
+    "text_index": 34,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"巴蒂斯塔\",\"布莱恩\",\"布莱恩·巴蒂斯塔\"]}],\"note\":\"人名或人物关系的中文附加触发。\"}"
+  },
+  {
+    "text_index": 35,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"柯林斯\",\"凯莉\",\"凯莉·柯林斯\"]}],\"note\":\"人名或人物关系的中文附加触发。\"}"
+  },
+  {
+    "text_index": 36,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"丈夫\",\"老公\"]}],\"note\":\"人名或人物关系的中文附加触发。\"}"
+  },
+  {
+    "text_index": 37,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"妻子\",\"老婆\",\"太太\"]}],\"note\":\"人名或人物关系的中文附加触发。\"}"
+  },
+  {
+    "text_index": 38,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"愿望\",\"渴望\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 39,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"目标\",\"目的\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 40,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"希望\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 41,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"想要\",\"想\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 42,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"然后\",\"接着\",\"下一步\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 43,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"时间\",\"时刻\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 44,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"几乎\",\"差不多\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 45,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"接近\",\"相近\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 46,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"少部分\",\"一小部分\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 47,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"大多数\",\"大头\",\"绝大部分\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 48,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"中心\",\"中央\",\"中间\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 49,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"平均\",\"均值\",\"平均数\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 50,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最大\",\"最大的\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 51,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最多\",\"最\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 52,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最少\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 53,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最小\",\"最小的\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 54,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"零\",\"〇\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 55,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 56,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"毕业评选\",\"班级之最\",\"之最\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 57,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"海氢\",\"海氢行星\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 58,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"存在\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 59,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"同群\",\"同组\",\"同一组\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 60,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"子集\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 61,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"种子星\"]}],\"note\":\"故意拼错彩蛋：用同音输入错误“种子”保留原对白的纠错笑点。\"}"
+  },
+  {
+    "text_index": 62,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"白矮星\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 63,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"旋转\",\"转动\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 64,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"分解\",\"拆解\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 65,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"摧毁\",\"破坏\",\"毁掉\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 66,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 67,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"到\",\"向\",\"朝\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 68,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"动作\",\"行动\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 69,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"连词\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 70,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"介词\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 71,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"或者\",\"或\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 72,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"选项\",\"选择\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 73,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"重量\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 74,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"距离单位\",\"长度单位\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 75,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"距离单位\",\"长度单位\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 76,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"米\",\"公尺\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 77,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"氦秒\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 78,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"氦\",\"氦气\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 79,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"秒\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 80,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"时间单位\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 81,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"单位\",\"计量单位\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 82,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"光速\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 83,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"时间\",\"时刻\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 84,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"种子\"]}],\"note\":\"故意拼错彩蛋：用同音输入错误“种子”保留原对白的纠错笑点。\"}"
+  },
+  {
+    "text_index": 85,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 86,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"反应\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 87,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"元素\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 88,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"原子\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 89,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 90,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"球\",\"球体\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 91,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"点\",\"圆点\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 92,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"像素\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 93,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"视觉\",\"视觉单位\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 94,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 95,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 96,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 97,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 98,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"地球\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 99,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"人类文明\",\"全人类\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 100,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"人类\",\"人\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 101,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"外星人\",\"异星人\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 102,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"电脑\",\"计算机\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 103,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"流星\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 104,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"流星\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 105,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"按摩\"]}],\"note\":\"message/massage 彩蛋；中文用“按摩”承接“媒介即按摩”的对白。\"}"
+  },
+  {
+    "text_index": 106,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"讯息\",\"消息\",\"信息\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 107,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 108,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 109,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"信号\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 110,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"从\",\"来自\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 111,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"到\",\"至\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 112,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"从\",\"来自\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 113,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"从\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 114,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"坐标相加\",\"加坐标\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 115,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"使\",\"让\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 116,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"那么\",\"然后\",\"接着\",\"于是\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 117,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"所以\",\"因此\",\"则\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 118,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"小于\",\"较小\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 119,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"不等于\",\"不相等\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 120,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"大于\",\"较大\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 121,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 122,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"反转\",\"翻转\",\"位翻转\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 123,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"非\",\"逻辑非\",\"不是\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 124,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"错误\",\"不正确\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 125,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"真\",\"正确\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 126,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"正确\",\"对\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 127,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"假\",\"错误\",\"错\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 128,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"命题\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 129,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"（\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 130,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"七\",\"7\",\"柒\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 131,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"七\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 132,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"值\",\"数值\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 133,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 134,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"十进制\",\"小数点\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 135,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"浮点\",\"浮点数\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 136,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"八进制\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 137,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"乘\",\"乘法\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 138,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"×\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 139,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"加\",\"相加\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 140,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"加上\",\"加号\",\"正号\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 141,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"等于\",\"相等\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 142,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"且\",\"并且\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 143,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"一起\",\"一同\",\"伴随\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 144,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"苹果\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 145,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"数字结束\",\"数终\",\"结束数字\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 146,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"加一\",\"加上1\",\"加上 1\",\"递增一\",\"递增\",\"自增\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 147,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"跳过\",\"略过\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 148,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"空间\",\"空格\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 149,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"＿\",\"下划线\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 150,
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"？\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+  },
+  {
+    "text_index": 151,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 152,
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
+  },
+  {
+    "text_index": 153,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"md不知道\",\"tm不知道\"]},{\"type\":\"contains_all\",\"values\":[\"妈\",\"不知道\"]}],\"note\":\"全局彩蛋；中文条件为附加触发，原英文缩写仍有效。\"}"
+  },
+  {
+    "text_index": 154,
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"不知道\"]}],\"note\":\"全局彩蛋；中文条件为附加触发，原英文缩写仍有效。\"}"
+  }
+]

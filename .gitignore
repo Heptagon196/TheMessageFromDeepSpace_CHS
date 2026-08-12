@@ -13,6 +13,7 @@
 # Python caches
 **/__pycache__/
 *.py[cod]
+/work/dictionary_trigger_aliases/cache.json
 
 # Never commit compiled or packaged binaries
 *.dll

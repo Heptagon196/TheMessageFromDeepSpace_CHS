@@ -97,7 +97,11 @@ internal sealed class PlayerNameRuntime
         TMP_InputField input = dummy?.InputField;
         if (input == null)
             return;
+        bool isTermNameInput = DictionaryTermNameInputPolicy.IsTermNameInput(
+            dummy.gameObject?.name, input.inputValidator?.name);
         ConfigureUnicodeInput(input);
+        if (isTermNameInput)
+            ConfigureDictionaryTermNameInput(input);
         SharedInputReturnCompatibility.Track(input);
         TrackInput(input);
     }
@@ -166,6 +170,12 @@ internal sealed class PlayerNameRuntime
         input.characterValidation = TMP_InputField.CharacterValidation.None;
         input.onValidateInput = null;
         input.readOnly = false;
+    }
+
+    private static void ConfigureDictionaryTermNameInput(TMP_InputField input)
+    {
+        input.characterLimit = DictionaryTermNameInputPolicy.CharacterLimit;
+        input.onValidateInput = DictionaryTermNameInputPolicy.ValidateCharacter;
     }
 
     private void ApplyLabelLayout(NameTranslator namer, TMP_Text label, TMP_InputField input,
@@ -334,6 +344,33 @@ internal sealed class PlayerNameRuntime
         }
     }
 
+}
+
+internal static class DictionaryTermNameSubmitGuard
+{
+    public static void NormalizeSharedInput()
+    {
+        InputTextDummy dummy = TextDummyManager.Instance_TermName;
+        if (dummy == null)
+            return;
+        string normalized = DictionaryTermNameInputPolicy.NormalizeForSubmit(dummy.currText);
+        if (!string.Equals(dummy.currText, normalized, StringComparison.Ordinal))
+            dummy.SetText(normalized);
+    }
+}
+
+[HarmonyPatch(typeof(DictionaryEntry), "SaveName")]
+internal static class DictionaryEntrySaveNamePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix() => DictionaryTermNameSubmitGuard.NormalizeSharedInput();
+}
+
+[HarmonyPatch(typeof(TermLogger), "TryAddToUserDictionary")]
+internal static class TermLoggerAddNamePatch
+{
+    [HarmonyPrefix]
+    private static void Prefix() => DictionaryTermNameSubmitGuard.NormalizeSharedInput();
 }
 
 [HarmonyPatch(typeof(NameTranslator), "NameEntry")]

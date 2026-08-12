@@ -12,11 +12,13 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 # These are additional Chinese inputs. The stock English condition is never
 # removed and is deliberately not duplicated in this table.
 ALIASES: dict[str, list[str]] = {
-    "POSITIVE": ["正", "正数", "正值", "阳性"],
+    # The stock POSITIVE condition points at the unrelated Landlubber dialogue.
+    # Keep that original English behavior intact, but do not extend it to Chinese.
+    "POSITIVE": [],
     "NEGATIVE": ["负", "负数", "负值", "阴性"],
     "MUTUAL": ["相互", "互相", "双向"],
-    "LANDLUBBER": ["旱鸭子", "陆地佬"],
-    "TERR": ["陆", "地"],
+    "LANDLUBBER": ["旱鸭子"],
+    "TERR": ["泰拉", "大地"],
     "ROST": ["喙", "鸟嘴"],
     "COLDSIDE": ["冷面", "寒冷面"],
     "NIGHTSIDE": ["夜面", "背阳面"],
@@ -30,8 +32,8 @@ ALIASES: dict[str, list[str]] = {
     "OBSERVE": ["观察", "观测"],
     "PART": ["部分", "部件", "一部分"],
     "EMOTION": ["情绪", "情感"],
-    "OLD": ["老", "年长", "老年"],
-    "MIDDLEAGE": ["中年", "成年"],
+    "OLD": ["年老", "年长", "老年"],
+    "MIDDLEAGE": ["中年", "中年期"],
     "YOUNG": ["年轻", "幼年", "幼体"],
     "BRAIN": ["脑", "大脑"],
     "CORE": ["核心", "中枢"],
@@ -42,13 +44,13 @@ ALIASES: dict[str, list[str]] = {
     "KEPLER": ["开普勒"],
     "SUN": ["太阳"],
     "ERID": ["埃里德"],
-    "SHEEN": ["希恩"],
+    "SHEEN": ["光泽", "亮泽", "光彩"],
     "ME": ["我", "自己"],
     "ALAN": ["艾伦", "埃克斯", "艾伦·埃克斯"],
     "BAUTISTA": ["巴蒂斯塔", "布莱恩", "布莱恩·巴蒂斯塔"],
     "COLLINS": ["柯林斯", "凯莉", "凯莉·柯林斯"],
-    "HUSBAND": ["丈夫", "老公", "先生", "配偶"],
-    "WIFE": ["妻子", "老婆", "太太", "配偶"],
+    "HUSBAND": ["丈夫", "老公"],
+    "WIFE": ["妻子", "老婆", "太太"],
     "DESIRE": ["愿望", "渴望"],
     "GOAL": ["目标", "目的"],
     "HOPE": ["希望"],
@@ -62,114 +64,134 @@ ALIASES: dict[str, list[str]] = {
     "CENTER": ["中心", "中央", "中间"],
     "MEAN": ["平均", "均值", "平均数"],
     "BIGGEST": ["最大", "最大的"],
-    "MOST": ["最多", "最", "最大"],
-    "LEAST": ["最少", "最低"],
+    "MOST": ["最多", "最"],
+    "LEAST": ["最少"],
     "SMALLEST": ["最小", "最小的"],
-    "ZERO": ["零", "没有", "空"],
-    "SUPERLATIVE": ["最高级", "最"],
+    "ZERO": ["零", "〇"],
+    "SUPERLATIVE": ["毕业评选", "班级之最", "之最"],
     "HYCEAN": ["海氢", "海氢行星"],
-    "BE": ["是", "为"],
-    "INGROUP": ["组内", "集合内"],
+    "BE": ["存在"],
+    "INGROUP": ["同群", "同组", "同一组"],
     "SUBSET": ["子集"],
     "NUETRONSTAR": ["种子星"],
     "WHITEDWARF": ["白矮星"],
     "ROTATE": ["旋转", "转动"],
     "DECOMPOSE": ["分解", "拆解"],
     "DESTROY": ["摧毁", "破坏", "毁掉"],
-    "PREP": ["介词"],
+    "PREP": [],
     "TO": ["到", "向", "朝"],
     "ACTION": ["动作", "行动"],
     "CONJUNCTION": ["连词"],
     "PREPOSITION": ["介词"],
-    "ALTERNATIVE": ["或者", "另一种", "备选"],
+    "ALTERNATIVE": ["或者", "或"],
     "OPTION": ["选项", "选择"],
     "WEIGHT": ["重量"],
     "DISTANCEUNIT": ["距离单位", "长度单位"],
     "METER": ["米", "公尺"],
-    "HELISEC": ["氦秒", "埃克斯秒", "外星秒"],
-    "HELIUM": ["氦"],
+    "HELISEC": ["氦秒"],
+    "HELIUM": ["氦", "氦气"],
     "SECOND": ["秒"],
     "TIMEUNIT": ["时间单位"],
     "UNIT": ["单位", "计量单位"],
     "LIGHTSPEED": ["光速"],
     "NUETRON": ["种子"],
-    "CHEMREACT": ["化学反应"],
+    "CHEMREACT": [],
     "REACT": ["反应"],
     "ELEMENT": ["元素"],
     "ATOM": ["原子"],
-    "VIZ": ["图", "图像", "可视化"],
+    "VIZ": [],
     "BALL": ["球", "球体"],
     "DOT": ["点", "圆点"],
     "PIXEL": ["像素"],
-    "VISUAL": ["图像", "视觉对象", "可视对象"],
-    "VOBJ": ["可视对象"],
+    "VISUAL": ["视觉", "视觉单位"],
+    "VOBJ": [],
     "EARTH": ["地球"],
-    "HUMANITY": ["人类"],
+    "HUMANITY": ["人类文明", "全人类"],
     "HUMANS": ["人类", "人"],
     "ALIENS": ["外星人", "异星人"],
     "COMPUTER": ["电脑", "计算机"],
-    "METEOR": ["陨石", "流星"],
+    "METEOR": ["流星"],
     "MASSAGE": ["按摩"],
     "MESSAGE": ["讯息", "消息", "信息"],
-    "MSG": ["讯息", "消息", "信息"],
+    "MSG": [],
     "SIGNAL": ["信号"],
-    "ADDCOORDS": ["平移", "移动", "偏移"],
-    "MAKE": ["制造", "制作", "生成", "构造"],
-    "THEREFORE": ["所以", "因此"],
+    "ADDCOORDS": ["坐标相加", "加坐标"],
+    "MAKE": ["使", "让"],
+    "THEREFORE": ["所以", "因此", "则"],
     "LESSER": ["小于", "较小"],
     "NOTEQUAL": ["不等于", "不相等"],
     "GREATER": ["大于", "较大"],
-    "FLIP": ["反转", "翻转", "取反"],
-    "NOT": ["非", "不是", "取反"],
+    "FLIP": ["反转", "翻转", "位翻转"],
+    "NOT": ["非", "逻辑非", "不是"],
     "INCORRECT": ["错误", "不正确"],
     "TRUE": ["真", "正确"],
     "CORRECT": ["正确", "对"],
     "FALSE": ["假", "错误", "错"],
     "PROPOSITION": ["命题"],
     "VALUE": ["值", "数值"],
-    "VAR": ["变量"],
-    "DECIMAL": ["小数", "十进制"],
-    "FLOAT": ["浮点", "浮点数", "小数"],
+    "VAR": [],
+    "DECIMAL": ["十进制", "小数点"],
+    "FLOAT": ["浮点", "浮点数"],
     "OCTAL": ["八进制"],
     "MULTIPLY": ["乘", "乘法"],
-    "ADD": ["加", "加法"],
-    "PLUS": ["加", "加号", "加法"],
+    "ADD": ["加", "相加"],
+    "PLUS": ["加上", "加号", "正号"],
     "EQUALS": ["等于", "相等"],
-    "AND": ["和", "与", "并且"],
-    "WITH": ["和", "与", "一起"],
+    "AND": ["且", "并且"],
+    "WITH": ["一起", "一同", "伴随"],
     "APPLE": ["苹果"],
-    "ENDNUM": ["末数", "末尾数字"],
-    "PLUSONE": ["加一", "加上一个"],
-    "SKIP": ["跳过", "间隔"],
-    "SPACE": ["空格", "间隔"],
-    "ANS": ["答案", "回答"],
+    "ENDNUM": ["数字结束", "数终", "结束数字"],
+    "PLUSONE": ["加一", "加上1", "加上 1", "递增一", "递增", "自增"],
+    "SKIP": ["跳过", "略过"],
+    "SPACE": ["空间", "空格"],
+    "ANS": [],
 }
 
 
 # Same English word can mean something different for a specific term.
 OVERRIDES: dict[tuple[int | None, str], list[str]] = {
-    (-121, "TIME"): ["时间", "时刻", "在……时"],
-    (-106, "MOST"): ["最", "最高级", "最最"],
-    (-65, "TIME"): ["时间", "变化参数"],
-    (-51, "Z"): ["高度", "垂直坐标", "Z 坐标"],
-    (-50, "Y"): ["深度", "纵坐标", "Y 坐标"],
-    (-49, "X"): ["宽度", "横坐标", "X 坐标"],
-    (-42, "F"): ["频率"],
+    (-121, "TIME"): ["时间", "时刻"],
+    (-106, "MOST"): ["最"],
+    (-65, "TIME"): ["时间", "时刻"],
+    (-51, "Z"): [],
+    (-50, "Y"): [],
+    (-49, "X"): [],
+    (-42, "F"): [],
     (-41, "FROM"): ["从", "来自"],
-    (-41, "TO"): ["到", "至", "终点"],
-    (-40, "FROM"): ["从", "来自", "起点"],
-    (-36, "THEN"): ["所以", "那么", "于是"],
-    (-31, "|"): ["或", "或者", "｜"],
+    (-41, "TO"): ["到", "至"],
+    (-40, "FROM"): ["从", "来自"],
+    (-36, "THEN"): ["那么", "然后", "接着", "于是"],
+    (-31, "|"): [],
     (-15, "("): ["（"],
-    (-12, "SEVEN"): ["七", "填空", "回答"],
+    (-12, "SEVEN"): ["七", "7", "柒"],
     (-11, "SEVEN"): ["七"],
-    (-6, "X"): ["乘", "乘号", "×"],
+    (-6, "X"): ["×"],
     (-2, "_"): ["＿", "下划线"],
     (None, "?"): ["？"],
 }
 
 
-def make_rules(term_id: int | None, english: str, mode: str) -> list[dict[str, Any]]:
+# A source condition can use substring matching while its Chinese aliases must
+# remain exact to avoid short Chinese words swallowing longer dictionary names.
+EXACT_ENTRY_KEYS: set[tuple[int | None, str]] = {
+    (-184, "TERR"),
+    (-151, "OLD"),
+    (-150, "MIDDLEAGE"),
+    (-147, "BRAIN"),
+    (-99, "INGROUP"),
+    (-69, "HELIUM"),
+}
+
+
+# A small number of conditions with the same term/English pair need distinct
+# aliases depending on whether the old or new name is being inspected.
+ENTRY_VALUE_OVERRIDES: dict[tuple[int | None, str, str], list[str]] = {
+    (-40, "EditEntryIDFromName", "FROM"): ["从"],
+}
+
+
+def make_rules(term_id: int | None, channel: str, english: str,
+    mode: str) -> list[dict[str, Any]]:
     if term_id is None and english == "IDK":
         return [{"type": "contains", "values": ["不知道"]}]
     if term_id is None and english == "IDFK":
@@ -178,16 +200,24 @@ def make_rules(term_id: int | None, english: str, mode: str) -> list[dict[str, A
             {"type": "contains_all", "values": ["妈", "不知道"]},
         ]
     if term_id is None and english == "ASDF":
-        return [{"type": "exact", "values": ["乱打的", "随便打的", "键盘乱敲"]}]
-    values = OVERRIDES.get((term_id, english), ALIASES.get(english, []))
+        return []
+    values = ENTRY_VALUE_OVERRIDES.get(
+        (term_id, channel, english),
+        OVERRIDES.get((term_id, english), ALIASES.get(english, [])),
+    )
     if not values:
         # Language-neutral symbols and one-letter identifiers keep working via
         # the stock English condition; there is no fabricated Chinese alias.
         return []
-    return [{"type": "contains" if mode == "contains" else "exact", "values": values}]
+    rule_type = "exact" if (term_id, english) in EXACT_ENTRY_KEYS else (
+        "contains" if mode == "contains" else "exact"
+    )
+    return [{"type": rule_type, "values": values}]
 
 
 def note_for(term_id: int | None, english: str, rules: list[dict[str, Any]]) -> str:
+    if not rules:
+        return "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
     if term_id is None and english in {"IDK", "IDFK", "ASDF"}:
         return "全局彩蛋；中文条件为附加触发，原英文缩写仍有效。"
     if english in {"NUETRON", "NUETRONSTAR"}:
@@ -196,8 +226,6 @@ def note_for(term_id: int | None, english: str, rules: list[dict[str, Any]]) -> 
         return "message/massage 彩蛋；中文用“按摩”承接“媒介即按摩”的对白。"
     if english in {"ALAN", "BAUTISTA", "COLLINS", "HUSBAND", "WIFE", "ME"}:
         return "人名或人物关系的中文附加触发。"
-    if not rules:
-        return "语言无关的符号或标识；仅保留原版触发。"
     return "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
 
 
@@ -226,7 +254,7 @@ def main() -> int:
         term_id = item["term_id"]
         english = item["english_trigger"]
         mode = item["match_mode"]
-        rules = make_rules(term_id, english, mode)
+        rules = make_rules(term_id, item["channel_name"], english, mode)
         note = note_for(term_id, english, rules)
         entry = {
             "term_id": term_id,
@@ -248,7 +276,7 @@ def main() -> int:
     payload = {
         "format_version": 1,
         "description": "词典命名对白的中文附加触发规则；原版英文触发始终保留。",
-        "matching": "同一条目的 rules 按 OR 组合；contains_all 内部按 AND 组合。",
+        "matching": "同一条目的 rules 按 OR 组合，contains_all 内部按 AND 组合；同一编辑候选跨规则取最长中文命中，并列最长时不触发中文别名。",
         "entries": entries,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

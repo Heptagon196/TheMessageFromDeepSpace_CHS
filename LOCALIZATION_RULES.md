@@ -380,6 +380,7 @@ system.messages
 - 场景内输入框聚焦时，候选窗位置必须跟随真实 TMP 文本光标：先从 `TMP_TextInfo.characterInfo` 取得插入点在文本 RectTransform 中的局部位置，再转换为世界坐标，最后把 Unity 左下原点转换为 Windows 左上原点后写入 `Input.compositionCursorPos`。`TextMeshProUGUI` 继续使用 TMP 自带逻辑；`InputTextDummy` 临时绑定的 3D `TextMeshPro` 由内部摄像机渲染到 RenderTexture，必须按完整显示链路换算：源摄像机世界坐标 → RenderTexture viewport/UV → 承载该纹理的物理监视器网格 → 主摄像机屏幕坐标。`WorldSpaceClicker.CursorXBounds/CursorYBounds` 只能作为找不到显示网格时的回退，不能当作最终游戏窗口边界。空输入框以文本视口左下方作为光标世界位置；不得使用固定坐标或鼠标点击点近似。
 - 场景共用输入框使用 `MultiLineNewline`。Input System 会在 TMP 的键盘更新前发送导航 Submit，因此普通 Enter 的早期 `TMP_InputField.OnSubmit` 必须对已聚焦的共用多行输入框予以拦截，随后仍由 TMP 正常插入换行。游戏另把 Ctrl+Enter 绑定为提交答案；该组合键必须在 `OnUpdateSelected` 前跳过本帧 TMP 文本更新，避免先在光标处插入 LF 再提交。这个跳过条件必须同时要求“已跟踪、已聚焦、多行、Enter 本帧按下、Ctrl 按住”，不得影响纯 Enter、粘贴换行或其他输入框。清除自定义输入验证器时必须先清 `inputValidator`，再把 `characterValidation` 设为 `None`，避免 TMP setter 把验证模式反向改回 `CustomValidator`。
 - 当前游戏程序集只有三个底层 `TMP_InputField`：`NameTranslator.nameEntryInput`（起名）、`ProgressLog.translatorInput`（翻译员想法）和复用的 `InputTextDummy.inputField`（词典命名、单行/多行文本及谜题输入）。构建前运行 `tools/audit_unicode_inputs.ps1`；以后游戏版本新增或移除输入框时必须显式更新覆盖逻辑，禁止静默漏过。
+- 词典条目编辑和右侧悬浮 `NAME SIGNAL` 命名框都复用 `Input Text Dummy - Term Names`。中文兼容不得把它变成无约束输入：输入时与提交时都必须拒绝任何 Unicode 数字和空白字符、限制为 16 个 UTF-16 字符（常用汉字各计 1 个），并继续把英文字母自动转为大写。提交保护只作用于 `DictionaryEntry.SaveName()` 和 `TermLogger.TryAddToUserDictionary()`，不得阻止游戏内部生成带编号的非法占位名，也不得影响复用 `InputTextDummy.inputField` 的其他文本或谜题输入模式。
 - 谜题输入转回信号时不按空格分词：`C_Reformatter.CompileStringToSignal()` 先删除普通空格，再把 `UserDictionary.keys` 按字符串长度降序扫描；较长词条命中后先占用对应区段并在两侧插入 LF，最后由 `SignalCompiler` 以 LF（`TOKEN_DELIMITER = 10`）分隔并逐项精确查词典。这套逻辑本身已是语言无关的“最长词条优先”，中文输入不得另加逐字切分或重复分词。原生多行输入必须把 Windows CRLF 规范成单个 LF 并保留，不能像姓名输入一样删除换行。
 - `NameEntry()` 会先激活起名对象，再清空文本并启动输入协程。补丁必须在该方法完成后通过 Postfix 应用一次布局；场景扫描时跳过未激活的起名对象。禁止在输入框首次聚焦时再次强制刷新 Canvas、LayoutRebuilder 或整套 RectTransform，否则提示、输入行和确认文字可能被二次重排到同一位置。
 - 中文起名界面必须把“姓名已占用”提示、两行姓名提示、输入框与“博士”、确认提示作为一个整体布局。以姓名提示原中心为基准，按各文本的 TMP 首选高度和至少 16 像素间距从上到下排列；三块提示文本统一扩展到原“Dr. + 输入框”的总宽度。所有边界只按各根 RectTransform 的四角计算，禁止把文本视口、Placeholder、Caret 等子节点纳入根节点中心计算。
@@ -395,7 +396,7 @@ system.messages
 - 普通系统字段 `component_string` 所用的旧 TMP 字体资产会把 `U+2026` 显示为 `à`，因此这类字段中的省略号固定写成 ASCII `...`；使用另一套字体且已确认显示正常的 `dialogue_frame` / `component_dialogue_frame` 继续使用中文省略号 `……`。同一条系统提示若另有静态 `ui_text` 副本，两份译文必须统一使用 `...`。
 - 构建期必须对全部运行时译文检查意外重复的中文句号、逗号、顿号、分号和冒号。检查前须剥离 `{SPEAKER_*}`、`{PART_nnn}`、`$anim*` 与 TMP 富文本标签，因为这些控制标记在画面上不可见；例如 `没错。$animD19。` 实际会显示为 `没错。。`。规范的 `……`、`——` 以及角色有意使用的连续问号、叹号不属于此类错误。
 - 外星信号本体、玩家输入、玩家给词典条目起的名字和运行时信号解析结果保持动态，不做静态替换。
-- 词典命名对白的 6 类条件（改名前、改名后、指定词条改名前/后、词条等于、词条包含）统一忽略英文字母大小写。若条件英文与同一词条某条假说的英文完全相同，则该条假说的中文译文也作为额外触发别名；必须按“词条 ID + 假说字段位置 + 原始英文”精确定位，禁止把同一英文在全局的所有译文都当作别名。原版条件先行、中文别名仅作失败后的兼容匹配，且不得改写玩家词典或原始监听条件；“包含”条件仍按包含语义，其余条件仍按完整相等语义。F5 重载翻译后，触发别名必须立即使用新译文。
+- 词典命名对白的 6 类条件（改名前、改名后、指定词条改名前/后、词条等于、词条包含）统一忽略英文字母大小写。若条件英文与同一词条某条假说的英文完全相同，则该条假说的中文译文也作为额外触发别名；必须按“词条 ID + 假说字段位置 + 原始英文”精确定位，禁止把同一英文在全局的所有译文都当作别名。原版条件先行、中文别名仅作失败后的兼容匹配，且不得改写玩家词典或原始监听条件；“包含”条件仍按包含语义，其余条件仍按完整相等语义。同一次编辑可命中多个中文别名时，跨改名后/指定词条改名后/词条包含条件比较实际命中的中文片段长度，只允许唯一最长者触发；`contains_all` 的长度为全部必含片段长度之和，并列最长视为歧义且中文别名全部不触发。改名前条件只与改名前条件竞争，`DictEntryIs` 只在自身条件组内竞争。F5 重载翻译后，触发别名必须立即使用新译文。
 
 ### 7.4 字体
 
