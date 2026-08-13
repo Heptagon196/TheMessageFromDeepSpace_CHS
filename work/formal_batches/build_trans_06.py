@@ -539,7 +539,7 @@ translations = [
     "{SPEAKER_BAUTISTA}{PART_000}结婚 15 年了。",
     "{SPEAKER_AKERS}{PART_000}那真为你高兴，巴蒂斯塔。{PART_001}看来我这种人也还有希望。",
     "{SPEAKER_BAUTISTA}{PART_000}不，{PART_001}没有。",
-    "{SPEAKER_AKERS}{PART_000}[听不清]",
+    "{SPEAKER_AKERS}{PART_000}[含混的嘟囔]",
     "艾伦 4",
     "{SPEAKER_COLLINS}{PART_000}埃克斯博士，{PART_001}什么是射电天文学？{PART_002}你谈到研究生课题时提过。",
     "{SPEAKER_AKERS}{PART_000}对了！{PART_001}宇宙中充满电磁辐射，{PART_002}也就是光波。{PART_003}但大多数波的频率都超出了可见光谱。{PART_004}所以我们的眼睛看不到宇宙中的大部分信息。",

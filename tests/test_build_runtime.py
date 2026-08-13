@@ -28,6 +28,43 @@ dialogue = next(
 
 valid = deepcopy(dialogue)
 assert build_runtime.validate_item(valid) == [], "合法译文不应被拒绝"
+
+override_cache = {
+    "files": {
+        "dialogue": {
+            "items": [
+                {
+                    "text_index": 1,
+                    "translation_status": 1,
+                    "translated_text": "旧译文",
+                    "extra": {"game": {"source_sha256": "source-hash"}},
+                }
+            ]
+        }
+    }
+}
+override_file = PROJECT / "tests" / "manual-override-test.json"
+override_file.write_text(
+    json.dumps(
+        {
+            "format_version": 1,
+            "entries": [
+                {
+                    "text_index": 1,
+                    "source_sha256": "source-hash",
+                    "translated_text": "新译文",
+                }
+            ],
+        },
+        ensure_ascii=False,
+    ),
+    encoding="utf-8",
+)
+try:
+    assert build_runtime.apply_manual_overrides(override_cache, override_file) == 1
+    assert override_cache["files"]["dialogue"]["items"][0]["translated_text"] == "新译文"
+finally:
+    override_file.unlink()
 assert build_runtime.category_for("dialogue_frame") == "dialogue"
 
 assert build_runtime.should_translate_display_values(

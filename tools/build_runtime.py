@@ -18,6 +18,7 @@ from extraction_rules import DISPLAY_VALUE_UI_PATHS, UI_TEMPLATES
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
+DEFAULT_MANUAL_OVERRIDES = PROJECT_DIR / "work" / "manual_translation_overrides.json"
 FORMAT_VERSION = 1
 GAME_VERSION = "0.10"
 TOKEN_PATTERNS = {
@@ -91,6 +92,49 @@ def write_json(path: Path, value: Any) -> None:
 def iter_items(cache: dict[str, Any]) -> Iterable[dict[str, Any]]:
     for file_data in cache.get("files", {}).values():
         yield from file_data.get("items", [])
+
+
+def apply_manual_overrides(cache: dict[str, Any], path: Path) -> int:
+    """Overlay small, reviewable manual corrections onto an extracted cache."""
+    if not path.is_file():
+        return 0
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError(f"人工译文修订文件格式无效：{path}")
+    entries = payload.get("entries")
+    if payload.get("format_version") != 1 or not isinstance(entries, list):
+        raise ValueError(f"人工译文修订文件格式无效：{path}")
+
+    cache_by_index: dict[int, dict[str, Any]] = {}
+    for item in iter_items(cache):
+        text_index = item.get("text_index")
+        if text_index in cache_by_index:
+            raise ValueError(f"缓存包含重复 text_index：{text_index}")
+        cache_by_index[text_index] = item
+
+    seen: set[int] = set()
+    for position, override in enumerate(entries, start=1):
+        if not isinstance(override, dict):
+            raise ValueError(f"人工译文修订第 {position} 条不是对象。")
+        text_index = override.get("text_index")
+        if not isinstance(text_index, int) or text_index in seen:
+            raise ValueError(f"人工译文修订第 {position} 条 text_index 无效或重复。")
+        seen.add(text_index)
+        item = cache_by_index.get(text_index)
+        if item is None:
+            raise ValueError(f"人工译文修订引用了不存在的 text_index：{text_index}")
+        game = item.get("extra", {}).get("game", {})
+        expected_hash = game.get("source_sha256", "")
+        if override.get("source_sha256") != expected_hash:
+            raise ValueError(
+                f"人工译文修订 {text_index} 的原文哈希已变化；请重新审阅后更新。"
+            )
+        translated = override.get("translated_text")
+        if not isinstance(translated, str):
+            raise ValueError(f"人工译文修订 {text_index} 缺少 translated_text。")
+        item["translated_text"] = translated
+        item["translation_status"] = 1
+    return len(entries)
 
 
 def validate_temperature_units(item: dict[str, Any]) -> list[str]:
@@ -286,10 +330,17 @@ def main() -> int:
     parser.add_argument(
         "--report", type=Path, default=PROJECT_DIR / "build" / "validation-report.json"
     )
+    parser.add_argument(
+        "--overrides",
+        type=Path,
+        default=DEFAULT_MANUAL_OVERRIDES,
+        help="人工译文修订源；构建前按 text_index 和原文哈希覆盖缓存。",
+    )
     parser.add_argument("--strict", action="store_true", help="有无效译文时返回非零退出码")
     args = parser.parse_args()
 
     cache = json.loads(args.cache.read_text(encoding="utf-8"))
+    applied_overrides = apply_manual_overrides(cache, args.overrides)
     output: dict[str, list[dict[str, Any]]] = {
         "dialogue": [],
         "titles": [],
@@ -426,6 +477,7 @@ def main() -> int:
         "output": str(args.output),
         "status_counts": {str(key): value for key, value in sorted(translated_status.items())},
         "valid_runtime_entries": total_entries,
+        "manual_overrides": applied_overrides,
         "invalid_entries": len(issues),
         "issues": issues,
         "files": manifest_files,
