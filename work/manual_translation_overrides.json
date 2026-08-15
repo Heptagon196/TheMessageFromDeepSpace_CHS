@@ -2,6 +2,11 @@
   "format_version": 1,
   "entries": [
     {
+      "text_index": 22883420,
+      "source_sha256": "92329465e9c90bacc088bdeb5dc2f0b0e45b9013692908c20fa18f8bcc6359a1",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不是！{PART_001}$animA2我是说——{PART_002}$animA5哎呀，你真气人！{PART_003}$animB0我是说，{SIG_N136} 怎么没定义一个专门的 {SIG_N042} 来表示 {SIG_N046} {SIG_N090}？{PART_004}$animA4{SIG_N141} 是专名，{SIG_N046} {SIG_N090} 却只能用两个词拼出来。{PART_005}这也太偏心了！"
+    },
+    {
       "text_index": 1552153359,
       "source_sha256": "c26e8c6b52fc7af4a517afc7b150f3d40fdf1508af552cda73d4c86236b04275",
       "translated_text": "{SPEAKER_AKERS}{PART_000}[含混的嘟囔]"
