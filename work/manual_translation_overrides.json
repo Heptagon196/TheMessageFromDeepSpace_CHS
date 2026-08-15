@@ -7,9 +7,29 @@
       "translated_text": "{SPEAKER_AKERS}{PART_000}不是！{PART_001}$animA2我是说——{PART_002}$animA5哎呀，你真气人！{PART_003}$animB0我是说，{SIG_N136} 怎么没定义一个专门的 {SIG_N042} 来表示 {SIG_N046} {SIG_N090}？{PART_004}$animA4{SIG_N141} 是专名，{SIG_N046} {SIG_N090} 却只能用两个词拼出来。{PART_005}这也太偏心了！"
     },
     {
+      "text_index": 138019240,
+      "source_sha256": "13f08413f5302df44958d6c526c422c194cc4f7fabbe71c5cd3d5d4dcbdd05cc",
+      "translated_text": "“永远”的表达"
+    },
+    {
+      "text_index": 254193281,
+      "source_sha256": "f611f19620337f49e2f0d6cb398d3abfe17e1581b5ce556f12de12f83cf02245",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}凯莉，{PART_001}$animA5你帮我判断一下，我这么想正常吗？"
+    },
+    {
+      "text_index": 486681540,
+      "source_sha256": "aff8a83f70455b0f5aab98cbedcd685ef748eac58a5bb0cab39ef6aa729dfb35",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}去你的。{PART_001}我怎么也比你正常。"
+    },
+    {
       "text_index": 1552153359,
       "source_sha256": "c26e8c6b52fc7af4a517afc7b150f3d40fdf1508af552cda73d4c86236b04275",
       "translated_text": "{SPEAKER_AKERS}{PART_000}[含混的嘟囔]"
+    },
+    {
+      "text_index": 1909872559,
+      "source_sha256": "13e39ee53618f7498216b56da1dad292134e69daa2ca2a26a444fb9fb354e593",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}判断结果出来了。{PART_001}你不会喜欢的。"
     }
   ]
 }
