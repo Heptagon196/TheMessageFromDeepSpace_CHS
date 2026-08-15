@@ -14,6 +14,7 @@ from dictionary_dialogue_fixes import (
     validate_against_source,
 )
 from dictionary_trigger_conflicts import find_conflicts, validate_no_conflicts
+from build_dictionary_trigger_aliases import ALIASES
 
 
 def entry(term_id: int | None, english: str, value: str,
@@ -27,6 +28,12 @@ def entry(term_id: int | None, english: str, value: str,
 
 
 class DictionaryTriggerConflictTests(unittest.TestCase):
+    def test_planet_side_display_names_trigger_the_directional_dialogues(self):
+        self.assertIn("阳面", ALIASES["DAYSIDE"])
+        self.assertNotIn("阳面", ALIASES["HOTSIDE"])
+        self.assertIn("阴面", ALIASES["NIGHTSIDE"])
+        self.assertNotIn("阴面", ALIASES["COLDSIDE"])
+
     def test_dialogue_158_fix_moves_only_that_dialogue_to_term_minus_40(self):
         fix = DictionaryDialogueFix(
             158, "EditEntryIDToName", "TO", -41, -40, "test"
