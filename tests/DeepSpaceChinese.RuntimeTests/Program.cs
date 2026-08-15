@@ -319,12 +319,38 @@ internal static class Program
                    PuzzleFixRule.AnswerSetsEqual(puzzle649Plan.ReplacementAnswers,
                        new[]
                        {
-                           new[] { -57, 0 },
-                           new[] { -57, 0, -14, 2, -56, 7, -15 },
+                           new[] { -57, 1 },
+                           new[] { -57, 1, -14, 2, -56, 7, -15 },
                            new[] { 2, -56, 7 },
                            new[] { -57, -14, 2, -56, 7, -15 },
                        }),
-                "第 649 题必须保留三个原答案，并额外接受‘化合物（2 原子 7）’");
+                "第 649 题必须把错误的化合物 0 改为化合物 1，并接受完整组成写法");
+            int[] puzzle650Original =
+            {
+                -168, -172, -100, -115, -57, 3, -30,
+                -119, -172, -100, -115, -57, 0, -36, -172, -12, -85,
+            };
+            int[] puzzle650Replacement =
+            {
+                -168, -172, -100, -115, -57, 3, -30,
+                -119, -172, -100, -115, -57, 1, -36, -172, -12, -85,
+            };
+            string puzzle650FixPath = Path.Combine(projectRoot, "patch", "Fix", "650.json");
+            string puzzle650FixJson = File.ReadAllText(puzzle650FixPath);
+            Assert(PuzzleFixRule.TryParse(puzzle650FixJson, "650.json",
+                       out PuzzleFixRule puzzle650Rule, out string puzzle650ParseError) &&
+                   puzzle650ParseError == null &&
+                   puzzle650Rule.HasQuestionReplacement &&
+                   !puzzle650Rule.HasAnswerReplacement &&
+                   puzzle650Rule.Matches(puzzle650Original) &&
+                   puzzle650Rule.TryCreatePlan(puzzle650Original,
+                       new[] { new[] { -174 } },
+                       out PuzzleFixPlan puzzle650Plan, out string puzzle650PlanError) &&
+                   puzzle650PlanError == null &&
+                   PuzzleFixRule.SignalsEqual(puzzle650Plan.ReplacementSignals,
+                       puzzle650Replacement) &&
+                   puzzle650Plan.ReplacementAnswers == null,
+                "第 650 题必须把现在大气层的化合物 0 改为化合物 1，并保持答案不变");
             Assert(!answerFixRule.TryCreatePlan(
                        new[] { -11, 1, -2, 6 },
                        new[] { new[] { -11, 2 }, new[] { -11, 99 } },
