@@ -300,6 +300,31 @@ internal static class Program
                        out PuzzleFixPlan legacyPlan, out string legacyPlanError) &&
                    legacyPlanError == null && legacyPlan.ReplacementAnswers == null,
                 "未填写答案字段的旧规则必须只替换题面，不检查或改写答案集");
+            string puzzle649FixPath = Path.Combine(projectRoot, "patch", "Fix", "649.json");
+            string puzzle649FixJson = File.ReadAllText(puzzle649FixPath);
+            Assert(PuzzleFixRule.TryParse(puzzle649FixJson, "649.json",
+                       out PuzzleFixRule puzzle649Rule, out string puzzle649ParseError) &&
+                   puzzle649ParseError == null &&
+                   !puzzle649Rule.HasQuestionReplacement &&
+                   puzzle649Rule.TryCreatePlan(new[] { 999 },
+                       new[]
+                       {
+                           new[] { -57, 0 },
+                           new[] { -57, 0, -14, 2, -56, 7, -15 },
+                           new[] { 2, -56, 7 },
+                       },
+                       out PuzzleFixPlan puzzle649Plan, out string puzzle649PlanError) &&
+                   puzzle649PlanError == null &&
+                   puzzle649Plan.ReplacementSignals == null &&
+                   PuzzleFixRule.AnswerSetsEqual(puzzle649Plan.ReplacementAnswers,
+                       new[]
+                       {
+                           new[] { -57, 0 },
+                           new[] { -57, 0, -14, 2, -56, 7, -15 },
+                           new[] { 2, -56, 7 },
+                           new[] { -57, -14, 2, -56, 7, -15 },
+                       }),
+                "第 649 题必须保留三个原答案，并额外接受‘化合物（2 原子 7）’");
             Assert(!answerFixRule.TryCreatePlan(
                        new[] { -11, 1, -2, 6 },
                        new[] { new[] { -11, 2 }, new[] { -11, 99 } },
