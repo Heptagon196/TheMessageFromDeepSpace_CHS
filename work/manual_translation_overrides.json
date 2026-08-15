@@ -7,6 +7,11 @@
       "translated_text": "{SPEAKER_AKERS}{PART_000}不是！{PART_001}$animA2我是说——{PART_002}$animA5哎呀，你真气人！{PART_003}$animB0我是说，{SIG_N136} 怎么没定义一个专门的 {SIG_N042} 来表示 {SIG_N046} {SIG_N090}？{PART_004}$animA4{SIG_N141} 是专名，{SIG_N046} {SIG_N090} 却只能用两个词拼出来。{PART_005}这也太偏心了！"
     },
     {
+      "text_index": 67361855,
+      "source_sha256": "fd0cd8c46fcec5a657fd12f2103f90b082a720601ae02237da68796f06717dd4",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}等一下，{PLAYER_NAME}，{PART_001}你这个思路可能是对的！"
+    },
+    {
       "text_index": 138019240,
       "source_sha256": "13f08413f5302df44958d6c526c422c194cc4f7fabbe71c5cd3d5d4dcbdd05cc",
       "translated_text": "“永远”的表达"
