@@ -351,6 +351,36 @@ internal static class Program
                        puzzle650Replacement) &&
                    puzzle650Plan.ReplacementAnswers == null,
                 "第 650 题必须把现在大气层的化合物 0 改为化合物 1，并保持答案不变");
+            int[] puzzle681Original =
+            {
+                -109, -174, -100, -109, -174, -2, -2,
+                -109, -174, -2, -109, -174, -5, -108, -174, -2, -2,
+                -109, -174, -2, -109, -174, -2, -109, -174, -2,
+                -109, -174, -2, -25, -5, -100, -12,
+            };
+            int[] puzzle681Replacement =
+            {
+                -109, -174, -100, -109, -174, -2, -2,
+                -109, -174, -2, -109, -174, -5, -100, -108, -174, -2, -2,
+                -109, -174, -2, -109, -174, -2, -109, -174, -2,
+                -109, -174, -2, -25, -5, -100, -12,
+            };
+            string puzzle681FixPath = Path.Combine(projectRoot, "patch", "Fix", "681.json");
+            string puzzle681FixJson = File.ReadAllText(puzzle681FixPath);
+            Assert(PuzzleFixRule.TryParse(puzzle681FixJson, "681.json",
+                       out PuzzleFixRule puzzle681Rule, out string puzzle681ParseError) &&
+                   puzzle681ParseError == null &&
+                   puzzle681Rule.HasQuestionReplacement &&
+                   !puzzle681Rule.HasAnswerReplacement &&
+                   puzzle681Rule.Matches(puzzle681Original) &&
+                   puzzle681Rule.TryCreatePlan(puzzle681Original,
+                       new[] { new[] { -107, -108, -174 }, new[] { -108, -174 } },
+                       out PuzzleFixPlan puzzle681Plan, out string puzzle681PlanError) &&
+                   puzzle681PlanError == null &&
+                   PuzzleFixRule.SignalsEqual(puzzle681Plan.ReplacementSignals,
+                       puzzle681Replacement) &&
+                   puzzle681Plan.ReplacementAnswers == null,
+                "第 681 题必须在第二个类加法表达式的加号后补入‘是’，并保持答案不变");
             Assert(!answerFixRule.TryCreatePlan(
                        new[] { -11, 1, -2, 6 },
                        new[] { new[] { -11, 2 }, new[] { -11, 99 } },
