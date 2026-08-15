@@ -27,6 +27,11 @@
       "translated_text": "{SPEAKER_AKERS}{PART_000}去你的。{PART_001}我怎么也比你正常。"
     },
     {
+      "text_index": 1287217226,
+      "source_sha256": "918dc6579fff26327908e973576c2afb5808d9a8ba69d5bb1420ea80ae64ccaf",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}对了，多普，{PART_001}我们还有个{PART_002}新发现。{PART_003}你知道地球有 {SIG_N176} 和 {SIG_N177} 吧？"
+    },
+    {
       "text_index": 1552153359,
       "source_sha256": "c26e8c6b52fc7af4a517afc7b150f3d40fdf1508af552cda73d4c86236b04275",
       "translated_text": "{SPEAKER_AKERS}{PART_000}[含混的嘟囔]"
