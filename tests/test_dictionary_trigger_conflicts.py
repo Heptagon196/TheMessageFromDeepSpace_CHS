@@ -34,6 +34,9 @@ class DictionaryTriggerConflictTests(unittest.TestCase):
         self.assertIn("阴面", ALIASES["NIGHTSIDE"])
         self.assertNotIn("阴面", ALIASES["COLDSIDE"])
 
+    def test_evolution_accepts_common_chinese_names(self):
+        self.assertEqual(["演化", "进化"], ALIASES["EVOLUTION"])
+
     def test_dialogue_158_fix_moves_only_that_dialogue_to_term_minus_40(self):
         fix = DictionaryDialogueFix(
             158, "EditEntryIDToName", "TO", -41, -40, "test"

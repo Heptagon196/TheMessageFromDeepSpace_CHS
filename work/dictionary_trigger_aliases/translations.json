@@ -629,7 +629,7 @@
   },
   {
     "text_index": 158,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"演化\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"演化\",\"进化\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 159,

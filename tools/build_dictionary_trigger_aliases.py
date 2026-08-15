@@ -40,6 +40,7 @@ ALIASES: dict[str, list[str]] = {
     "OCEAN": ["海洋", "大海"],
     "SIDE": ["侧", "面", "一边"],
     "PREHISTORIC": ["史前", "远古"],
+    "EVOLUTION": ["演化", "进化"],
     "TEMPERATURE": ["温度"],
     "FEEL": ["感觉", "感受"],
     "OBSERVE": ["观察", "观测"],
