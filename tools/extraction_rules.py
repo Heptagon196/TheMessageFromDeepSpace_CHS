@@ -72,6 +72,7 @@ UI_TEMPLATES: list[dict[str, Any]] = [
     {
         "template_id": "universal-abundance",
         "source_text": "Universal Abundance: {DYN_0}",
+        "translate_display_values": True,
     },
     {
         "template_id": "missing-visual",

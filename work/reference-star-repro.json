@@ -1,0 +1,3209 @@
+{
+  "asset": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Message from Deep Space\\The Message From Deep Space_Data\\level0",
+  "reference_transform_path_id": 7138,
+  "page_count": 3,
+  "component_types": {
+    "Unknown": 49,
+    "MonoBehaviour": 18
+  },
+  "parse_failures": [
+    {
+      "path_id": 22432,
+      "type": "MonoBehaviour",
+      "error": "ValueError('Expected to read 472 bytes, but only read 380 bytes')"
+    },
+    {
+      "path_id": 23192,
+      "type": "MonoBehaviour",
+      "error": "ValueError('Expected to read 380 bytes, but only read 236 bytes')"
+    },
+    {
+      "path_id": 23218,
+      "type": "MonoBehaviour",
+      "error": "EOFError('read_str out of bounds')"
+    },
+    {
+      "path_id": 23256,
+      "type": "MonoBehaviour",
+      "error": "ValueError('Expected to read 1652 bytes, but only read 1456 bytes')"
+    },
+    {
+      "path_id": 25438,
+      "type": "MonoBehaviour",
+      "error": "ValueError('Expected to read 688 bytes, but only read 88 bytes')"
+    }
+  ],
+  "summaries": {
+    "NEUTRON STAR PAGE": {
+      "area_count": 1,
+      "direct_area_child_count": 9,
+      "direct_area_children": [
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/Neutron Star[0]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/astronomer's note (4)[7]",
+          "texts": [
+            "(Astronomer's Note: Discovered by Jocelyn Bell just 5 years ago. Very very recent by astronomical standards)"
+          ],
+          "max_logical_lines": 1,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/arrowhead[2]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/astronomer's note (3)[8]",
+          "texts": [
+            "(Astronomer's Note: Hundreds of rotations per second. Very very fast by anyone's standards)"
+          ],
+          "max_logical_lines": 1,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/arrowhead (1)[4]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/Spin![1]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/Spin! (1)[3]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/ABOVE STUFF (1)[5]",
+          "texts": [
+            "Neutron Star - A recently discovered celestial body that is the collapsed core of a massive star, condensed to a small body.\n\n\n\n\n\n\n\n\n\n\n\nNeutron Stars no longer undergo fusion, but still release latent HEAT AND LIGHT, much like a white dwarf star.\n\nNeutron Stars potentially consist of mostly neutrons, as the immense pressure combines protons and electrons into neutrons. \n\nNeutron Stars rotate at high speeds, conserving their angular momentum at a smaller volume."
+          ],
+          "max_logical_lines": 17,
+          "has_copy_button": false
+        },
+        {
+          "path": "NEUTRON STAR PAGE[37]/Area[0]/astronomer's note (2)[6]",
+          "texts": [
+            "(Astronomer's Note: ~10km in diameter. Very very small by astronomical standards)"
+          ],
+          "max_logical_lines": 1,
+          "has_copy_button": false
+        }
+      ]
+    },
+    "STAR PAGE": {
+      "area_count": 1,
+      "direct_area_child_count": 20,
+      "direct_area_children": [
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (11)[11]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (5)[5]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (7)[7]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/astronomer's note (1)[18]",
+          "texts": [
+            "(Astronomer's Note: Astronomers refer to all elements heavier than Hydrogen and Helium as metals. Eat it, chemists.)"
+          ],
+          "max_logical_lines": 1,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (8)[8]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (13)[13]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (10)[10]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/ABOVE STUFF[19]",
+          "texts": [
+            "Star - a massive sphere of plasma held together by its own gravity, which radiates light and heat from nuclear fusion in its core. \n\n\n\n\n\n\nStars fuse atoms to create almost all elements larger than Lithium (atomic number 3). \n\n\nMetallicity - The proportion of metallic elements to nonmetallic elements. Younger stars will have a higher metallicity, since they are formed from the fused remnants of older stars. \n\n\n\n"
+          ],
+          "max_logical_lines": 15,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/astronomer's note[17]",
+          "texts": [
+            "(Astronomer's Note: a.k.a. Stellar nucleosynthesis)"
+          ],
+          "max_logical_lines": 1,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (3)[3]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (9)[9]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (4)[4]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (15)[15]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (6)[6]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (16)[16]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (14)[14]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (2)[2]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (1)[1]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star (12)[12]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        },
+        {
+          "path": "STAR PAGE[33]/Area[0]/Star[0]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        }
+      ]
+    },
+    "WHITEDWARF STAR PAGE": {
+      "area_count": 1,
+      "direct_area_child_count": 3,
+      "direct_area_children": [
+        {
+          "path": "WHITEDWARF STAR PAGE[38]/Area[0]/STUFF[1]",
+          "texts": [
+            "White Dwarf Star - A stellar remnant that no longer conducts nuclear fusion. \n\n\n\n\n\n\nThe vast majority of stars eventually become white dwarf stars because they do not have enough mass to condense into a neutron star or blackhole.  "
+          ],
+          "max_logical_lines": 8,
+          "has_copy_button": false
+        },
+        {
+          "path": "WHITEDWARF STAR PAGE[38]/Area[0]/astronomer's note (5)[0]",
+          "texts": [
+            "(Astronomer's Note: They still are bright and hot from residual heat)"
+          ],
+          "max_logical_lines": 1,
+          "has_copy_button": false
+        },
+        {
+          "path": "WHITEDWARF STAR PAGE[38]/Area[0]/Sphere[2]",
+          "texts": [],
+          "max_logical_lines": 0,
+          "has_copy_button": false
+        }
+      ]
+    }
+  },
+  "pages": {
+    "NEUTRON STAR PAGE": [
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/Neutron Star[0]",
+        "game_object_path_id": 103,
+        "active": true,
+        "transform_path_id": 18489,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.014999999664723873,
+            "y": -0.25200000405311584
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18196,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/astronomer's note (4)[7]",
+        "game_object_path_id": 237,
+        "active": true,
+        "transform_path_id": 18535,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152960419655,
+            "y": -0.5559999942779541
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 9533,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 20492,
+            "type": "MonoBehaviour",
+            "m_text": "(Astronomer's Note: Discovered by Jocelyn Bell just 5 years ago. Very very recent by astronomical standards)",
+            "m_fontSize": 0.6000000238418579,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/arrowhead[2]",
+        "game_object_path_id": 245,
+        "active": true,
+        "transform_path_id": 18540,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.02800062485039234,
+            "y": -0.27899980545043945
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18200,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]",
+        "game_object_path_id": 801,
+        "active": false,
+        "transform_path_id": 6169,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": []
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]",
+        "game_object_path_id": 869,
+        "active": true,
+        "transform_path_id": 6209,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 23120,
+            "type": "MonoBehaviour",
+            "keys": [
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "manualRootY",
+              "manualSetRootY",
+              "movingPart"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/astronomer's note (3)[8]",
+        "game_object_path_id": 1525,
+        "active": true,
+        "transform_path_id": 19060,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152960419655,
+            "y": -2.137773036956787
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 10578,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 20954,
+            "type": "MonoBehaviour",
+            "m_text": "(Astronomer's Note: Hundreds of rotations per second. Very very fast by anyone's standards)",
+            "m_fontSize": 0.6000000238418579,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/arrowhead (1)[4]",
+        "game_object_path_id": 1776,
+        "active": true,
+        "transform_path_id": 19163,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.014999999664723873,
+            "y": -0.22199979424476624
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18258,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/Spin![1]",
+        "game_object_path_id": 1806,
+        "active": true,
+        "transform_path_id": 19180,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.02800000086426735,
+            "y": -0.27899980545043945
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18260,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/Spin! (1)[3]",
+        "game_object_path_id": 2004,
+        "active": true,
+        "transform_path_id": 19251,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.0149993896484375,
+            "y": -0.2219996452331543
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18265,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/ABOVE STUFF (1)[5]",
+        "game_object_path_id": 2619,
+        "active": true,
+        "transform_path_id": 19503,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152587890625,
+            "y": 0.5750002861022949
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 11436,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 21341,
+            "type": "MonoBehaviour",
+            "m_text": "Neutron Star - A recently discovered celestial body that is the collapsed core of a massive star, condensed to a small body.\n\n\n\n\n\n\n\n\n\n\n\nNeutron Stars no longer undergo fusion, but still release latent HEAT AND LIGHT, much like a white dwarf star.\n\nNeutron Stars potentially consist of mostly neutrons, as the immense pressure combines protons and electrons into neutrons. \n\nNeutron Stars rotate at high speeds, conserving their angular momentum at a smaller volume.",
+            "m_fontSize": 0.800000011920929,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Area[0]/astronomer's note (2)[6]",
+        "game_object_path_id": 3179,
+        "active": true,
+        "transform_path_id": 19730,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152960419655,
+            "y": 0.1720000058412552
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 11888,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 21542,
+            "type": "MonoBehaviour",
+            "m_text": "(Astronomer's Note: ~10km in diameter. Very very small by astronomical standards)",
+            "m_fontSize": 0.6000000238418579,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Scroll Bar[1]",
+        "game_object_path_id": 4417,
+        "active": true,
+        "transform_path_id": 8433,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.9540195465087891,
+            "y": -0.07965993881225586,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 0.09994000196456909,
+            "y": 1.3661460876464844,
+            "z": 0.009999999776482582
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 16615,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 13179,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 3,
+            "path_id": 27474,
+            "type": "MonoBehaviour",
+            "keys": [
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "nonStretchElements"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Scroll Bar[1]/Scroll Handle[0]",
+        "game_object_path_id": 4799,
+        "active": true,
+        "transform_path_id": 8947,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.37828338146209717,
+            "z": -0.05000084638595581
+          },
+          "m_LocalScale": {
+            "x": 0.6003602147102356,
+            "y": 0.21501290798187256,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18109,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 27182,
+            "type": "MonoBehaviour",
+            "keys": [
+              "OnUseButton",
+              "canTakeScrollInput",
+              "col",
+              "continuous",
+              "defaultScrollPos",
+              "discreteDivisions",
+              "halfHeightYPadding",
+              "hoverColor",
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "meshRenderer",
+              "pressedColor",
+              "regularColor",
+              "scrollArea",
+              "visuals"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "NEUTRON STAR PAGE[37]/Scroll Bar[1]/Scroll Handle[0]/Scroll Visuals[0]",
+        "game_object_path_id": 5647,
+        "active": true,
+        "transform_path_id": 9249,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 16484,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 12907,
+            "type": "Unknown"
+          }
+        ]
+      }
+    ],
+    "STAR PAGE": [
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (11)[11]",
+        "game_object_path_id": 682,
+        "active": true,
+        "transform_path_id": 18706,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.01399993896484375,
+            "y": -0.10599999874830246
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18215,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (5)[5]",
+        "game_object_path_id": 725,
+        "active": true,
+        "transform_path_id": 18724,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500007629394531,
+            "y": -0.07499980926513672
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18216,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (7)[7]",
+        "game_object_path_id": 923,
+        "active": true,
+        "transform_path_id": 18798,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500007629394531,
+            "y": -0.07499980926513672
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18223,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/astronomer's note (1)[18]",
+        "game_object_path_id": 1097,
+        "active": true,
+        "transform_path_id": 18875,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152960419655,
+            "y": -1.4859999418258667
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 10226,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 20791,
+            "type": "MonoBehaviour",
+            "m_text": "(Astronomer's Note: Astronomers refer to all elements heavier than Hydrogen and Helium as metals. Eat it, chemists.)",
+            "m_fontSize": 0.6000000238418579,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (8)[8]",
+        "game_object_path_id": 1406,
+        "active": true,
+        "transform_path_id": 19003,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500007629394531,
+            "y": -0.07499980926513672
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18244,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (13)[13]",
+        "game_object_path_id": 1435,
+        "active": true,
+        "transform_path_id": 19018,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.07500000298023224,
+            "y": -0.10600042343139648
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18245,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]",
+        "game_object_path_id": 1641,
+        "active": true,
+        "transform_path_id": 6651,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 23951,
+            "type": "MonoBehaviour",
+            "keys": [
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "manualRootY",
+              "manualSetRootY",
+              "movingPart"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (10)[10]",
+        "game_object_path_id": 1836,
+        "active": true,
+        "transform_path_id": 19190,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.01399993896484375,
+            "y": -0.04500007629394531
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18261,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]",
+        "game_object_path_id": 1913,
+        "active": false,
+        "transform_path_id": 6811,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": []
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/ABOVE STUFF[19]",
+        "game_object_path_id": 2383,
+        "active": true,
+        "transform_path_id": 19417,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152587890625,
+            "y": 0.5750002861022949
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 11251,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 21270,
+            "type": "MonoBehaviour",
+            "m_text": "Star - a massive sphere of plasma held together by its own gravity, which radiates light and heat from nuclear fusion in its core. \n\n\n\n\n\n\nStars fuse atoms to create almost all elements larger than Lithium (atomic number 3). \n\n\nMetallicity - The proportion of metallic elements to nonmetallic elements. Younger stars will have a higher metallicity, since they are formed from the fused remnants of older stars. \n\n\n\n",
+            "m_fontSize": 0.800000011920929,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/astronomer's note[17]",
+        "game_object_path_id": 2427,
+        "active": true,
+        "transform_path_id": 19433,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152960419655,
+            "y": -0.6870001554489136
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 11282,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 21283,
+            "type": "MonoBehaviour",
+            "m_text": "(Astronomer's Note: a.k.a. Stellar nucleosynthesis)",
+            "m_fontSize": 0.6000000238418579,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (3)[3]",
+        "game_object_path_id": 2907,
+        "active": true,
+        "transform_path_id": 19609,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500007629394531,
+            "y": -0.07499980926513672
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18283,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (9)[9]",
+        "game_object_path_id": 3037,
+        "active": true,
+        "transform_path_id": 19664,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.014000000432133675,
+            "y": -0.04500000178813934
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18288,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (4)[4]",
+        "game_object_path_id": 3058,
+        "active": true,
+        "transform_path_id": 19672,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500007629394531,
+            "y": -0.07499980926513672
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18290,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (15)[15]",
+        "game_object_path_id": 3100,
+        "active": true,
+        "transform_path_id": 19692,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.07500457763671875,
+            "y": -0.04499959945678711
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18292,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (6)[6]",
+        "game_object_path_id": 3220,
+        "active": true,
+        "transform_path_id": 19746,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500007629394531,
+            "y": -0.07499980926513672
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18296,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (16)[16]",
+        "game_object_path_id": 3236,
+        "active": true,
+        "transform_path_id": 19754,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.07500457763671875,
+            "y": -0.04499959945678711
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18298,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (14)[14]",
+        "game_object_path_id": 3468,
+        "active": true,
+        "transform_path_id": 19843,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.07500076293945312,
+            "y": -0.10600042343139648
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18309,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (2)[2]",
+        "game_object_path_id": 3595,
+        "active": true,
+        "transform_path_id": 19902,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500000178813934,
+            "y": -0.07500000298023224
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18313,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (1)[1]",
+        "game_object_path_id": 3640,
+        "active": true,
+        "transform_path_id": 19924,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500000178813934,
+            "y": -0.07500000298023224
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18316,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star (12)[12]",
+        "game_object_path_id": 3658,
+        "active": true,
+        "transform_path_id": 19935,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.01399993896484375,
+            "y": -0.10599994659423828
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.4899999797344208,
+            "y": 0.4899999797344208,
+            "z": 0.4899999797344208
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18317,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Area[0]/Star[0]",
+        "game_object_path_id": 3702,
+        "active": true,
+        "transform_path_id": 19960,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": -0.04500000178813934,
+            "y": -0.07500000298023224
+          },
+          "m_SizeDelta": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0124472975730896
+          },
+          "m_LocalScale": {
+            "x": 0.699999988079071,
+            "y": 0.699999988079071,
+            "z": 0.699999988079071
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18321,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Scroll Bar[1]",
+        "game_object_path_id": 4431,
+        "active": true,
+        "transform_path_id": 8441,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.9540195465087891,
+            "y": -0.07965993881225586,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 0.09994000196456909,
+            "y": 1.3661460876464844,
+            "z": 0.009999999776482582
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 16594,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 13197,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 3,
+            "path_id": 27456,
+            "type": "MonoBehaviour",
+            "keys": [
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "nonStretchElements"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Scroll Bar[1]/Scroll Handle[0]",
+        "game_object_path_id": 4787,
+        "active": true,
+        "transform_path_id": 8928,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.37828338146209717,
+            "z": -0.05000084638595581
+          },
+          "m_LocalScale": {
+            "x": 0.6003602147102356,
+            "y": 0.21501290798187256,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18130,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 27173,
+            "type": "MonoBehaviour",
+            "keys": [
+              "OnUseButton",
+              "canTakeScrollInput",
+              "col",
+              "continuous",
+              "defaultScrollPos",
+              "discreteDivisions",
+              "halfHeightYPadding",
+              "hoverColor",
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "meshRenderer",
+              "pressedColor",
+              "regularColor",
+              "scrollArea",
+              "visuals"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "STAR PAGE[33]/Scroll Bar[1]/Scroll Handle[0]/Scroll Visuals[0]",
+        "game_object_path_id": 5633,
+        "active": true,
+        "transform_path_id": 9233,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 16473,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 12929,
+            "type": "Unknown"
+          }
+        ]
+      }
+    ],
+    "WHITEDWARF STAR PAGE": [
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Area[0]",
+        "game_object_path_id": 2298,
+        "active": true,
+        "transform_path_id": 7039,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 24649,
+            "type": "MonoBehaviour",
+            "keys": [
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "manualRootY",
+              "manualSetRootY",
+              "movingPart"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Area[0]/STUFF[1]",
+        "game_object_path_id": 2738,
+        "active": true,
+        "transform_path_id": 19545,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152587890625,
+            "y": 0.5750002861022949
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 11533,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 21378,
+            "type": "MonoBehaviour",
+            "m_text": "White Dwarf Star - A stellar remnant that no longer conducts nuclear fusion. \n\n\n\n\n\n\nThe vast majority of stars eventually become white dwarf stars because they do not have enough mass to condense into a neutron star or blackhole.  ",
+            "m_fontSize": 0.800000011920929,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Area[0]/astronomer's note (5)[0]",
+        "game_object_path_id": 2752,
+        "active": true,
+        "transform_path_id": 19549,
+        "transform_type": "RectTransform",
+        "rect": {
+          "m_AnchorMin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchorMax": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "m_AnchoredPosition": {
+            "x": 0.02500152960419655,
+            "y": 0.28200000524520874
+          },
+          "m_SizeDelta": {
+            "x": 1.7999999523162842,
+            "y": 0.699999988079071
+          },
+          "m_Pivot": {
+            "x": 0.5,
+            "y": 1.0
+          },
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0062236487865448
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 11544,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 21382,
+            "type": "MonoBehaviour",
+            "m_text": "(Astronomer's Note: They still are bright and hot from residual heat)",
+            "m_fontSize": 0.6000000238418579,
+            "m_fontSizeMin": 18.0,
+            "m_fontSizeMax": 72.0,
+            "m_enableAutoSizing": 0,
+            "m_lineSpacing": 0.0,
+            "m_paragraphSpacing": 0.0,
+            "m_margin": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_textAlignment": 65535,
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "keys": [
+              "_SortingLayer",
+              "_SortingLayerID",
+              "_SortingOrder",
+              "checkPaddingRequired",
+              "m_ActiveFontFeatures",
+              "m_Color",
+              "m_EmojiFallbackSupport",
+              "m_Enabled",
+              "m_GameObject",
+              "m_HorizontalAlignment",
+              "m_IsTextObjectScaleStatic",
+              "m_Maskable",
+              "m_Material",
+              "m_Name",
+              "m_OnCullStateChanged",
+              "m_RaycastPadding",
+              "m_RaycastTarget",
+              "m_Script",
+              "m_StyleSheet",
+              "m_TextStyleHashCode",
+              "m_TextWrappingMode",
+              "m_VertexBufferAutoSizeReduction",
+              "m_VerticalAlignment",
+              "m_charWidthMaxAdj",
+              "m_characterHorizontalScale",
+              "m_characterSpacing",
+              "m_colorMode",
+              "m_enableAutoSizing",
+              "m_enableExtraPadding",
+              "m_enableKerning",
+              "m_enableVertexGradient",
+              "m_faceColor",
+              "m_fontAsset",
+              "m_fontColor",
+              "m_fontColor32",
+              "m_fontColorGradient",
+              "m_fontColorGradientPreset",
+              "m_fontMaterial",
+              "m_fontMaterials",
+              "m_fontSharedMaterials",
+              "m_fontSize",
+              "m_fontSizeBase",
+              "m_fontSizeMax",
+              "m_fontSizeMin",
+              "m_fontStyle",
+              "m_fontWeight",
+              "m_geometrySortingOrder",
+              "m_hasFontAssetChanged",
+              "m_horizontalMapping",
+              "m_isCullingEnabled",
+              "m_isOrthographic",
+              "m_isRichText",
+              "m_isRightToLeft",
+              "m_isUsingLegacyAnimationComponent",
+              "m_isVolumetricText",
+              "m_lineSpacing",
+              "m_lineSpacingMax",
+              "m_linkedTextComponent",
+              "m_margin",
+              "m_maskType",
+              "m_overflowMode",
+              "m_overrideHtmlColors",
+              "m_pageToDisplay",
+              "m_paragraphSpacing",
+              "m_parseCtrlCharacters",
+              "m_renderer",
+              "m_sharedMaterial",
+              "m_spriteAsset",
+              "m_text",
+              "m_textAlignment",
+              "m_tintAllSprites",
+              "m_useMaxVisibleDescender",
+              "m_uvLineOffset",
+              "m_verticalMapping",
+              "m_wordSpacing",
+              "m_wordWrappingRatios",
+              "parentLinkedComponent"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]",
+        "game_object_path_id": 3665,
+        "active": false,
+        "transform_path_id": 7844,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": []
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Area[0]/Sphere[2]",
+        "game_object_path_id": 4037,
+        "active": true,
+        "transform_path_id": 8064,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": -0.06199999898672104,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 0.35653001070022583,
+            "y": 0.35653001070022583,
+            "z": 0.35653001070022583
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 15678,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 12574,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 3,
+            "path_id": 18352,
+            "type": "Unknown"
+          }
+        ]
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Scroll Bar[1]",
+        "game_object_path_id": 4456,
+        "active": true,
+        "transform_path_id": 8416,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.9540195465087891,
+            "y": -0.07965993881225586,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 0.09994000196456909,
+            "y": 1.3661460876464844,
+            "z": 0.009999999776482582
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 16573,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 13160,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 3,
+            "path_id": 27434,
+            "type": "MonoBehaviour",
+            "keys": [
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "nonStretchElements"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Scroll Bar[1]/Scroll Handle[0]",
+        "game_object_path_id": 4810,
+        "active": true,
+        "transform_path_id": 8963,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.37828338146209717,
+            "z": -0.05000084638595581
+          },
+          "m_LocalScale": {
+            "x": 0.6003602147102356,
+            "y": 0.21501290798187256,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 18091,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 27199,
+            "type": "MonoBehaviour",
+            "keys": [
+              "OnUseButton",
+              "canTakeScrollInput",
+              "col",
+              "continuous",
+              "defaultScrollPos",
+              "discreteDivisions",
+              "halfHeightYPadding",
+              "hoverColor",
+              "m_Enabled",
+              "m_GameObject",
+              "m_Name",
+              "m_Script",
+              "meshRenderer",
+              "pressedColor",
+              "regularColor",
+              "scrollArea",
+              "visuals"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "WHITEDWARF STAR PAGE[38]/Scroll Bar[1]/Scroll Handle[0]/Scroll Visuals[0]",
+        "game_object_path_id": 5606,
+        "active": true,
+        "transform_path_id": 9267,
+        "transform_type": "Transform",
+        "rect": {
+          "m_LocalPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LocalScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "components": [
+          {
+            "component_index": 1,
+            "path_id": 16446,
+            "type": "Unknown"
+          },
+          {
+            "component_index": 2,
+            "path_id": 12890,
+            "type": "Unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

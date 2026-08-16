@@ -40,6 +40,15 @@ internal sealed class DialogueFrameCatalog
             _stablePairs[stableKey] = pair;
     }
 
+    public void RegisterTranslationAlias(DialogueFrame original,
+        DialogueFrame translated, string stableKey = null)
+    {
+        var pair = new DialogueFramePair(original, translated);
+        RegisterKey(FrameKey(translated), pair);
+        if (!string.IsNullOrWhiteSpace(stableKey))
+            _stablePairs[stableKey] = pair;
+    }
+
     public bool TryGet(DialogueFrame current, out DialogueFramePair pair) =>
         _pairs.TryGetValue(FrameKey(current), out pair);
 

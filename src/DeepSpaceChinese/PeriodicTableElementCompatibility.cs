@@ -51,6 +51,23 @@ internal static class PeriodicTableElementCompatibility
         bool isSymbol, bool isRegisteredPreview = false) =>
         (isPeriodicTable && !isSymbol) || isRegisteredPreview;
 
+    internal static string ResolvePreviewNameLookup(string proposed,
+        bool isRegisteredPreview)
+    {
+        // Radium's shipped fields are reversed, so its preview receives "Radium"
+        // while the extracted element-name translation is keyed by "Ra". Only
+        // normalize the registered preview label; the grid's symbol still needs
+        // the separate Radium -> Ra correction above.
+        return isRegisteredPreview &&
+               string.Equals(proposed, "Radium", StringComparison.OrdinalIgnoreCase)
+            ? "Ra"
+            : proposed;
+    }
+
+    internal static string ResolvePreviewNameLookup(TMP_Text component, string proposed) =>
+        ResolvePreviewNameLookup(proposed,
+            component != null && RegisteredPreviewLabels.Contains(component.GetInstanceID()));
+
     internal static bool ShouldTranslateDisplayValues(TMP_Text component)
     {
         if (component == null)
@@ -82,4 +99,22 @@ internal static class PeriodicTablePreviewElementLocalizationPatch
     [HarmonyPrefix]
     private static void Prefix(PeriodicTableDisplay __instance) =>
         PeriodicTableElementCompatibility.RegisterPreviewLabel(__instance);
+}
+
+[HarmonyPatch(typeof(PeriodicTableDisplay), nameof(PeriodicTableDisplay.DisplayElementData))]
+internal static class PeriodicTableDisplayElementLocalizationPatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(PeriodicTableDisplay __instance)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.PeriodicTableElementDisplayed(__instance);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"周期表详情刷新汉化失败：\n{ex}");
+        }
+    }
 }

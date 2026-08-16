@@ -33,6 +33,7 @@ internal sealed class PatchConfig
     public bool CompilerPunctuationInsensitive { get; private set; } = true;
     public bool MoveNewWordPromptToLowerRight { get; private set; } = true;
     public bool PuzzleFixesEnabled { get; private set; } = true;
+    public bool KonamiAnswerAutofillEnabled { get; private set; } = true;
     public KeyboardShortcut ToggleModeHotkey { get; private set; } = KeyboardShortcut.Deserialize("F8");
     public KeyboardShortcut ReloadTranslationsHotkey { get; private set; } = KeyboardShortcut.Deserialize("F5");
     public string FontSource { get; private set; } = "Auto";
@@ -67,6 +68,8 @@ internal sealed class PatchConfig
             MoveNewWordPromptToLowerRight = GetBool(values,
                 "Layout.NewWordPromptLowerRight", true),
             PuzzleFixesEnabled = GetBool(values, "PuzzleFixes.Enabled", true),
+            KonamiAnswerAutofillEnabled = GetBool(values,
+                "Cheats.KonamiAnswerAutofill", true),
             FontSource = Get(values, "Font.FontSource", "Auto"),
             BundledFont = Get(values, "Font.BundledFont", @"Fonts\fusion-pixel-12px-proportional-zh_hans.otf"),
             FontFile = Get(values, "Font.FontFile", string.Empty),
@@ -134,6 +137,13 @@ internal sealed class PatchConfig
         var values = ReadIni(path, log);
         MoveNewWordPromptToLowerRight = GetBool(values,
             "Layout.NewWordPromptLowerRight", true);
+    }
+
+    public void ReloadCheatSettings(string path, ManualLogSource log)
+    {
+        var values = ReadIni(path, log);
+        KonamiAnswerAutofillEnabled = GetBool(values,
+            "Cheats.KonamiAnswerAutofill", true);
     }
 
     public string SpeakerColor(Speaker speaker) => speaker switch

@@ -14,8 +14,8 @@
 | Douglass Doppler / Doppler | 道格拉斯·多普勒 / 多普勒 | 材料科学部门负责人、团队领导者；原文 `Douglass` 拼作双 s |
 | Dopp | 多普 | Doppler 的昵称 |
 | Doug | 道格 | Douglass Doppler 只让朋友使用的昵称；必须与“多普”区分 |
-| Nozomi | 诺佐米 | Carrie 的日本童年好友；无汉字写法，纯音译 |
-| Na’zomi / Na'zomi | 纳佐米 | Akers 的错误读法，故意与“诺佐米”区分 |
+| Nozomi | 希美 | Carrie 的日本童年好友；本地化统一采用可读作 Nozomi 的汉字写法，发音讨论中保留罗马字 `Nozomi` |
+| Na’zomi / Na'zomi | 谜美 | Akers 的错误发音；本地化为故意不正确的名字，随后纠正为“希美” |
 | John | 约翰 | 至少两位同名者：Carrie 的丈夫、Bryan 的哥哥；不要混为一人 |
 | Chloe | 克洛伊 | Carrie 的孩子 |
 | Carter | 卡特 | Carrie 的孩子 |
@@ -57,7 +57,7 @@
 | transmission | 传输 / 传输内容 | 指无线电传输及其内容，不提前揭示外星词含义 |
 | message | 讯息 | 与游戏中文名保持一致 |
 | response | 回应 | UI 动词 `Respond` 译作“回应” |
-| Translator | 翻译员 | 只用于静态 UI；对白称呼必须导出为 `{PLAYER_NAME}` 并在运行时显示玩家姓名 |
+| Translator | 翻译员 | 只用于表示岗位的静态 UI；`Translator's Notes` 固定为“译者注”；对白称呼必须导出为 `{PLAYER_NAME}` 并在运行时显示玩家姓名 |
 | translation team | 翻译小组 | 固定组织称谓 |
 | dictionary / dictionary entry | 词典 / 词典条目 | 玩家填写的外星词内容永远不静态翻译 |
 | hypothesis | 假说 | UI 复数仍用“假说”，不写“假设们” |

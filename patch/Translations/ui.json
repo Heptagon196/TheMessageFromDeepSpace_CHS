@@ -947,7 +947,7 @@
       "kind": "achievement_description",
       "source_sha256": "c1f8a1e09ea69191aee8d13dde588dd9a58a11ed852dec053a7314eae5e0cd6a",
       "source_text": "Win the employee of the week trophy",
-      "translated_text": "赢得本周最佳员工奖杯",
+      "translated_text": "赢得每周最佳员工奖杯",
       "game": {
         "kind": "achievement_description",
         "achievement_index": 6,
@@ -961,7 +961,7 @@
       "kind": "achievement_name",
       "source_sha256": "552f6d85be4825895cb97bb2aa20b526a54b2734dd32aa893bad0f1abcbc6726",
       "source_text": "Employee of the Week",
-      "translated_text": "本周最佳员工",
+      "translated_text": "每周最佳员工",
       "game": {
         "kind": "achievement_name",
         "achievement_index": 6,
@@ -2347,7 +2347,7 @@
       "kind": "display_value",
       "source_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
       "source_text": "Hello World!",
-      "translated_text": "Hello World!",
+      "translated_text": "Hello World",
       "game": {
         "kind": "display_value",
         "field_path": "puzzleGroupName",
@@ -5245,7 +5245,7 @@
       "kind": "display_value",
       "source_sha256": "a2b75e6619b426b5c0d9bc079531075365cafefbf9b7d86b0f67a8f63aa53c08",
       "source_text": "ALTERNATIVE",
-      "translated_text": "备选说法",
+      "translated_text": "可选项",
       "game": {
         "kind": "display_value",
         "field_path": "title",
@@ -10523,7 +10523,7 @@
       "kind": "display_value",
       "source_sha256": "dbed70adc58876baab42f687027d39643e4148dac9b9a373505e7d08a7eff33a",
       "source_text": "Electricity Organ",
-      "translated_text": "发电器官",
+      "translated_text": "电磁器官",
       "game": {
         "kind": "display_value",
         "field_path": "puzzleGroupName",
@@ -19270,7 +19270,8 @@
         "kind": "ui_template",
         "template_id": "universal-abundance",
         "original_text": "Universal Abundance: {DYN_0}",
-        "protect_player_name": false
+        "protect_player_name": false,
+        "translate_display_values": true
       }
     },
     {
@@ -20482,7 +20483,7 @@
       "kind": "ui_text",
       "source_sha256": "f830874df1623386d4b9befd4775e779a6a6650d8d3134a320387cf6eed509b7",
       "source_text": "TRANSLATOR's NOTES:",
-      "translated_text": "翻译员注：",
+      "translated_text": "译者注：",
       "game": {
         "kind": "ui_text",
         "scope": "ControlRoom",
@@ -21575,7 +21576,7 @@
       "kind": "ui_text",
       "source_sha256": "acda94d37b5a6fc116fdaf8e1536f476ec4882c444a97ada5ca2046115461481",
       "source_text": "GROUP 103 - Electricity Organ",
-      "translated_text": "第 103 组 - 发电器官",
+      "translated_text": "第 103 组 - 电磁器官",
       "game": {
         "kind": "ui_text",
         "scope": "ControlRoom",
@@ -22009,7 +22010,7 @@
       "kind": "ui_text",
       "source_sha256": "3eecf759d61c96eda6568cad7b6f4a7b2b59c474f4c4807bb2bdf5431aa6379e",
       "source_text": "GROUP 131 - Views on Connection",
-      "translated_text": "第 131 组 - 联系观",
+      "translated_text": "第 131 组 - 社交观",
       "game": {
         "kind": "ui_text",
         "scope": "ControlRoom",
@@ -28323,7 +28324,7 @@
       "kind": "ui_text",
       "source_sha256": "05edcee211a6179ea894af2c627a947cd1e110f231d7c1be19236dad3bd9f0a7",
       "source_text": "\n\n\n\n\nGame by Applesinmypants\n\n\n\n\n\n\n3D Art - Jim Henderson\n\nBautista Polaroid - Miguel San Juan\n\nOutreach - Ricky Hart\n\n\n\n\nSpecial Thank You to: \nChristine\nMom & Dad\nAria & James\nJaeger & Stormy\nOzzie\nOmar\n\nPlaytesting and Support  :)\n\nTesseract\nPoorOrpheus\nClay\nTy\nDonny \nCody\nElian\nOmar\nJunior Moxley\nKuba Banasilk\nAlex\nJJ Gibson\nNytohan\nlinegend\nGrammar Sheriff\nAmerican Gamer\nPenguinnit\nJakali\nHunterSpace46\nWhiteShadow\nVal\nEric Niu\nAlwinfy\nfizzuya\nMetamourtyline\nKanadian Kitsune\nDamnTM\nLuce7\nkonstans\nkindigo\nTerrorpaw\nspacemans\ngood bird\nLOST\nGuardian\nThomasTheCentipede\nUsedAtomicBomb\ntatatatatatapooooo\nSszz127\nIris\nMichaelwestborn\nclownenthusiast\nZero\nHarry S\nfriedlyDDW\nKet\ndigowigo\nJohn Wright\nWhompratt\nCotawa11\nChikku\nTrophy\nMibik\nArgenia Arumtula\ngeneralrelativityisanidiot\nTurtleCat\ncara\nBirby\nMasonator\nComputerCake\nqlje\nGauss\nFinn\nS4TURNZ3RO\nT_rannosaurus\nNinja04\nwizardlizard\nAlyxDrums\nLaika\nRussian Mike\nmanumaker08\nSuprSBG\nDr. TightPants\nESK\nLonicera\nlpinfinity\nBluettecuddler\nLord Kaki Pipi Skeleton Man Eater\nZane\nDancingtree444\nCamberCYM\nlightningstudios\nTheRoyalGuard001\nHarrietJumpJet\nleroy\nMarius\nKeriel\nCrossheir\nlethargy\nAttikitty\nDharlome\nXrax\nPengü\ntheoccupied\nLidix\nTonicDolphin5\nThe Bread Man\n[object Object]\nSubmerged Mango\nVermilisix\nDer_Body\nwizard_conkh\nnmendio\nRefineries\nKiiyoko\nLexi\nRiptide3\nGenerous\n01123581321345589144233377610987\nhad and\nMaid thing\n\n\n\n\nThis was… \n\n\nThe Message from Deep Space\n",
-      "translated_text": "\n\n\n\n\nApplesinmypants 制作\n\n\n\n\n\n\n3D 美术 - Jim Henderson\n\n巴蒂斯塔拍立得照片 - Miguel San Juan\n\n宣传联络 - Ricky Hart\n\n\n\n\n特别感谢：\nChristine\n妈妈和爸爸\nAria & James\nJaeger & Stormy\nOzzie\nOmar\n\n测试与支持  :)\n\nTesseract\nPoorOrpheus\nClay\nTy\nDonny \nCody\nElian\nOmar\nJunior Moxley\nKuba Banasilk\nAlex\nJJ Gibson\nNytohan\nlinegend\nGrammar Sheriff\nAmerican Gamer\nPenguinnit\nJakali\nHunterSpace46\nWhiteShadow\nVal\nEric Niu\nAlwinfy\nfizzuya\nMetamourtyline\nKanadian Kitsune\nDamnTM\nLuce7\nkonstans\nkindigo\nTerrorpaw\nspacemans\ngood bird\nLOST\nGuardian\nThomasTheCentipede\nUsedAtomicBomb\ntatatatatatapooooo\nSszz127\nIris\nMichaelwestborn\nclownenthusiast\nZero\nHarry S\nfriedlyDDW\nKet\ndigowigo\nJohn Wright\nWhompratt\nCotawa11\nChikku\nTrophy\nMibik\nArgenia Arumtula\ngeneralrelativityisanidiot\nTurtleCat\ncara\nBirby\nMasonator\nComputerCake\nqlje\nGauss\nFinn\nS4TURNZ3RO\nT_rannosaurus\nNinja04\nwizardlizard\nAlyxDrums\nLaika\nRussian Mike\nmanumaker08\nSuprSBG\nDr. TightPants\nESK\nLonicera\nlpinfinity\nBluettecuddler\nLord Kaki Pipi Skeleton Man Eater\nZane\nDancingtree444\nCamberCYM\nlightningstudios\nTheRoyalGuard001\nHarrietJumpJet\nleroy\nMarius\nKeriel\nCrossheir\nlethargy\nAttikitty\nDharlome\nXrax\nPengü\ntheoccupied\nLidix\nTonicDolphin5\nThe Bread Man\n[object Object]\nSubmerged Mango\nVermilisix\nDer_Body\nwizard_conkh\nnmendio\nRefineries\nKiiyoko\nLexi\nRiptide3\nGenerous\n01123581321345589144233377610987\nhad and\nMaid thing\n\n\n\n\n这就是……\n\n\n来自深空的讯息\n",
+      "translated_text": "\n\n\n\n\nApplesinmypants 制作\n\n\n\n\n\n\n3D 美术 - Jim Henderson\n\n巴蒂斯塔拍立得 - Miguel San Juan\n\n宣传联络 - Ricky Hart\n\n\n\n\n特别感谢：\nChristine\n妈妈和爸爸\nAria & James\nJaeger & Stormy\nOzzie\nOmar\n\n测试与支持  :)\n\nTesseract\nPoorOrpheus\nClay\nTy\nDonny \nCody\nElian\nOmar\nJunior Moxley\nKuba Banasilk\nAlex\nJJ Gibson\nNytohan\nlinegend\nGrammar Sheriff\nAmerican Gamer\nPenguinnit\nJakali\nHunterSpace46\nWhiteShadow\nVal\nEric Niu\nAlwinfy\nfizzuya\nMetamourtyline\nKanadian Kitsune\nDamnTM\nLuce7\nkonstans\nkindigo\nTerrorpaw\nspacemans\ngood bird\nLOST\nGuardian\nThomasTheCentipede\nUsedAtomicBomb\ntatatatatatapooooo\nSszz127\nIris\nMichaelwestborn\nclownenthusiast\nZero\nHarry S\nfriedlyDDW\nKet\ndigowigo\nJohn Wright\nWhompratt\nCotawa11\nChikku\nTrophy\nMibik\nArgenia Arumtula\ngeneralrelativityisanidiot\nTurtleCat\ncara\nBirby\nMasonator\nComputerCake\nqlje\nGauss\nFinn\nS4TURNZ3RO\nT_rannosaurus\nNinja04\nwizardlizard\nAlyxDrums\nLaika\nRussian Mike\nmanumaker08\nSuprSBG\nDr. TightPants\nESK\nLonicera\nlpinfinity\nBluettecuddler\nLord Kaki Pipi Skeleton Man Eater\nZane\nDancingtree444\nCamberCYM\nlightningstudios\nTheRoyalGuard001\nHarrietJumpJet\nleroy\nMarius\nKeriel\nCrossheir\nlethargy\nAttikitty\nDharlome\nXrax\nPengü\ntheoccupied\nLidix\nTonicDolphin5\nThe Bread Man\n[object Object]\nSubmerged Mango\nVermilisix\nDer_Body\nwizard_conkh\nnmendio\nRefineries\nKiiyoko\nLexi\nRiptide3\nGenerous\n01123581321345589144233377610987\nhad and\nMaid thing\n\n\n\n\n\n\n这就是……\n\n\n来自深空的讯息\n",
       "game": {
         "kind": "ui_text",
         "scope": "SpaceshipRoom",

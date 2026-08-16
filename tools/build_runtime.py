@@ -13,6 +13,10 @@ from translation_text_checks import (
     validate_chinese_quotes,
     validate_dialogue_ellipsis,
     validate_duplicate_punctuation,
+    validate_natural_chinese_punctuation,
+    validate_dictionary_slogan,
+    validate_garbled_subtitle,
+    validate_locked_glossary_terms,
 )
 from extraction_rules import DISPLAY_VALUE_UI_PATHS, UI_TEMPLATES
 
@@ -33,6 +37,8 @@ TOKEN_PATTERNS = {
     "format": re.compile(r"\{\d+\}|%(?:\d+\$)?[sdif]"),
     "tmp_tag": re.compile(r"</?[A-Za-z][^>]*>"),
 }
+RUNTIME_TOKEN_LIKE = re.compile(r"\{[A-Za-z][A-Za-z0-9_]*\}")
+RUNTIME_TOKEN_NAMES = ("speaker", "part", "signal", "player", "dynamic")
 TMP_SIZE_OPEN = re.compile(r"<size=(?:\d+(?:\.\d+)?%?)>", re.IGNORECASE)
 TMP_SIZE_WRAPPER = re.compile(
     r"^<size=(\d+(?:\.\d+)?)%>(.*)</size>$", re.IGNORECASE | re.DOTALL
@@ -132,8 +138,15 @@ def apply_manual_overrides(cache: dict[str, Any], path: Path) -> int:
         translated = override.get("translated_text")
         if not isinstance(translated, str):
             raise ValueError(f"人工译文修订 {text_index} 缺少 translated_text。")
+        allow_added_player_name = override.get("allow_added_player_name", False)
+        if not isinstance(allow_added_player_name, bool):
+            raise ValueError(
+                f"人工译文修订 {text_index} 的 allow_added_player_name 必须是布尔值。"
+            )
         item["translated_text"] = translated
         item["translation_status"] = 1
+        if allow_added_player_name:
+            item["_manual_allow_added_player_name"] = True
     return len(entries)
 
 
@@ -247,10 +260,27 @@ def validate_item(item: dict[str, Any]) -> list[str]:
     errors.extend(validate_temperature_units(item))
     errors.extend(validate_chinese_quotes(translated))
     errors.extend(validate_duplicate_punctuation(translated))
+    errors.extend(validate_natural_chinese_punctuation(translated))
+    errors.extend(validate_dictionary_slogan(source, translated))
+    errors.extend(validate_locked_glossary_terms(source, translated))
+    errors.extend(validate_garbled_subtitle(translated))
     errors.extend(validate_journal_layout(item))
+    unknown_runtime_tokens = sorted({
+        token
+        for token in RUNTIME_TOKEN_LIKE.findall(translated)
+        if not any(
+            TOKEN_PATTERNS[name].fullmatch(token)
+            for name in RUNTIME_TOKEN_NAMES
+        )
+    })
+    if unknown_runtime_tokens:
+        errors.append(f"未知运行时占位符: {unknown_runtime_tokens!r}")
     for name, pattern in TOKEN_PATTERNS.items():
         source_tokens = pattern.findall(source)
         translated_tokens = pattern.findall(translated)
+        if (name == "player" and item.get("_manual_allow_added_player_name") is True and
+                not source_tokens and translated_tokens == ["{PLAYER_NAME}"]):
+            continue
         if name == "tmp_tag" and source_tokens != translated_tokens and not any(
             token.lower().startswith("<size") or token.lower() == "</size>"
             for token in source_tokens
@@ -317,6 +347,66 @@ def build_file(category: str, entries: list[dict[str, Any]]) -> dict[str, Any]:
         "category": category,
         "entries": sorted(entries, key=lambda entry: entry["stable_key"]),
     }
+
+
+def validate_dictionary_trigger_payload(payload: dict[str, Any]) -> tuple[
+    list[dict[str, Any]], list[dict[str, Any]]
+]:
+    version = payload.get("format_version")
+    entries = payload.get("entries")
+    if version not in {1, 2} or not isinstance(entries, list):
+        raise ValueError("词典中文触发规则格式无效")
+    allowed_rule_types = {"exact", "contains", "contains_all"}
+
+    def validate_rules(rules: Any, label: str, require_non_empty: bool = False) -> None:
+        if not isinstance(rules, list) or (require_non_empty and not rules):
+            raise ValueError(f"{label} 缺少有效匹配器数组")
+        for rule in rules:
+            if (not isinstance(rule, dict) or
+                    rule.get("type") not in allowed_rule_types or
+                    not isinstance(rule.get("values"), list)):
+                raise ValueError(f"{label} 包含无效匹配器")
+            if "exclude_any" in rule and not isinstance(rule.get("exclude_any"), list):
+                raise ValueError(f"{label} 包含无效排除项")
+
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict) or not entry.get("channel") or not entry.get("english"):
+            raise ValueError(f"词典中文触发规则第 {index + 1} 条缺少定位键")
+        validate_rules(entry.get("rules", []), f"词典中文触发规则第 {index + 1} 条")
+
+    variants = payload.get("dialogue_variants", [])
+    if version == 1 and variants:
+        raise ValueError("版本 1 的词典触发表不能包含独立对白变体")
+    if not isinstance(variants, list):
+        raise ValueError("词典独立对白变体必须是数组")
+    synthetic_ids: set[int] = set()
+    for index, variant in enumerate(variants):
+        label = f"词典独立对白变体第 {index + 1} 条"
+        if (not isinstance(variant, dict) or not variant.get("channel") or
+                not variant.get("english") or
+                not isinstance(variant.get("dialogue_id"), int) or
+                int(variant.get("dialogue_id", 0)) <= 0 or
+                not isinstance(variant.get("synthetic_dialogue_id"), int) or
+                int(variant.get("synthetic_dialogue_id", 0)) <= 0 or
+                not str(variant.get("translated_title", "")).strip() or
+                not isinstance(variant.get("frames"), list) or
+                not variant.get("frames")):
+            raise ValueError(f"{label} 字段不完整")
+        synthetic_id = int(variant["synthetic_dialogue_id"])
+        if synthetic_id in synthetic_ids:
+            raise ValueError(f"{label} 的合成对白 ID {synthetic_id} 重复")
+        synthetic_ids.add(synthetic_id)
+        validate_rules(variant.get("rules"), label, require_non_empty=True)
+        frame_indices: set[int] = set()
+        for frame in variant["frames"]:
+            if (not isinstance(frame, dict) or
+                    not isinstance(frame.get("frame_index"), int) or
+                    int(frame["frame_index"]) < 0 or
+                    not str(frame.get("translated_text", "")).strip() or
+                    int(frame["frame_index"]) in frame_indices):
+                raise ValueError(f"{label} 含有无效或重复 frame")
+            frame_indices.add(int(frame["frame_index"]))
+    return entries, variants
 
 
 def main() -> int:
@@ -439,18 +529,10 @@ def main() -> int:
 
     alias_source = PROJECT_DIR / "patch" / "Translations" / "dictionary_trigger_aliases.json"
     alias_payload = json.loads(alias_source.read_text(encoding="utf-8"))
-    alias_entries = alias_payload.get("entries")
-    if alias_payload.get("format_version") != 1 or not isinstance(alias_entries, list):
-        raise ValueError(f"词典中文触发规则格式无效：{alias_source}")
-    allowed_rule_types = {"exact", "contains", "contains_all"}
-    for index, entry in enumerate(alias_entries):
-        if not isinstance(entry, dict) or not entry.get("channel") or not entry.get("english"):
-            raise ValueError(f"词典中文触发规则第 {index + 1} 条缺少定位键。")
-        for rule in entry.get("rules", []):
-            if rule.get("type") not in allowed_rule_types or not isinstance(rule.get("values"), list):
-                raise ValueError(f"词典中文触发规则第 {index + 1} 条包含无效匹配器。")
-            if "exclude_any" in rule and not isinstance(rule.get("exclude_any"), list):
-                raise ValueError(f"词典中文触发规则第 {index + 1} 条包含无效排除项。")
+    try:
+        alias_entries, alias_variants = validate_dictionary_trigger_payload(alias_payload)
+    except ValueError as error:
+        raise ValueError(f"词典中文触发规则格式无效：{alias_source}：{error}") from error
     validate_no_conflicts(alias_entries)
     alias_path = args.output / "dictionary_trigger_aliases.json"
     alias_path.write_bytes(alias_source.read_bytes())
@@ -460,6 +542,7 @@ def main() -> int:
             "path": alias_path.name,
             "category": "dictionary_trigger_aliases",
             "entries": len(alias_entries),
+            "dialogue_variants": len(alias_variants),
             "sha256": sha256_bytes(alias_data),
         }
     )

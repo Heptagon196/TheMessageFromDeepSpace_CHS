@@ -1,0 +1,84 @@
+{
+  "format_version": 1,
+  "description": "中文别名需要不同措辞时使用的独立对白变体；角色、动画、分段和时序继承 dialogue_id 指向的原对白。",
+  "variants": [
+    {
+      "term_id": -107,
+      "channel": "EditEntryIDToName",
+      "english": "VERY",
+      "dialogue_id": 905,
+      "synthetic_dialogue_id": 1905001,
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "很"
+          ]
+        }
+      ],
+      "translated_title": "很",
+      "frames": [
+        {
+          "frame_index": 0,
+          "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4很好，{PART_001}{PLAYER_NAME}！"
+        },
+        {
+          "frame_index": 1,
+          "translated_text": "{SPEAKER_AKERS}{PART_000}哦，我明白了！{PART_001}很好，很好！"
+        }
+      ]
+    },
+    {
+      "term_id": -192,
+      "channel": "EditEntryIDContains",
+      "english": "ROST",
+      "dialogue_id": 979,
+      "synthetic_dialogue_id": 1909791,
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "吻部器官"
+          ]
+        }
+      ],
+      "translated_title": "吻部器官",
+      "frames": [
+        {
+          "frame_index": 0,
+          "translated_text": "{SPEAKER_COLLINS}{PART_000}“吻部器官”——{PART_001}就是位于吻部的器官吗，{PART_002}{PLAYER_NAME}？{PART_003}这个名称听起来倒很贴切。"
+        },
+        {
+          "frame_index": 1,
+          "translated_text": "{SPEAKER_BAUTISTA}{PART_000}至少这一次，{PLAYER_NAME}起的名字从词义上看得通。{PART_001}嗯。"
+        }
+      ]
+    },
+    {
+      "term_id": -192,
+      "channel": "EditEntryIDContains",
+      "english": "ROST",
+      "dialogue_id": 979,
+      "synthetic_dialogue_id": 1909792,
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "吻端器官"
+          ]
+        }
+      ],
+      "translated_title": "吻端器官",
+      "frames": [
+        {
+          "frame_index": 0,
+          "translated_text": "{SPEAKER_COLLINS}{PART_000}“吻端器官”——{PART_001}就是位于吻端的器官吗，{PART_002}{PLAYER_NAME}？{PART_003}这个名称听起来倒很贴切。"
+        },
+        {
+          "frame_index": 1,
+          "translated_text": "{SPEAKER_BAUTISTA}{PART_000}至少这一次，{PLAYER_NAME}起的名字从词义上看得通。{PART_001}嗯。"
+        }
+      ]
+    }
+  ]
+}

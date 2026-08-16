@@ -6,6 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $projectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
+. (Join-Path $PSScriptRoot 'initialize_tool_environment.ps1') -ProjectRoot $projectRoot
 . (Join-Path $PSScriptRoot 'resolve_game_root.ps1')
 $gameRootPath = Resolve-GameRootPath -GameRoot $GameRoot -ProjectRoot $projectRoot
 $gameManagedDir = Resolve-GameManagedDirectory -GameRoot $gameRootPath

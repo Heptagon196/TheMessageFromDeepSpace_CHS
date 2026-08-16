@@ -92,14 +92,25 @@ internal sealed class PlayerNameRuntime
         TrackInput(progressLog.translatorInput);
     }
 
-    public void ApplySharedInput(InputTextDummy dummy)
+    public void ApplySharedInput(InputTextDummy dummy) => ApplySharedInput(dummy, null);
+
+    public void ApplySharedInput(InputTextDummy dummy, TMP_Text targetText)
     {
         TMP_InputField input = dummy?.InputField;
         if (input == null)
             return;
+        // Dictionary term names and translator notes reuse the same InputTextDummy.
+        // The target TMP_Text passed to BecomeDummy is the reliable discriminator;
+        // the recipient is commonly the surrounding DictionaryEntry for both modes.
+        string targetPath = BuildObjectPath(targetText);
+        if (string.IsNullOrEmpty(targetPath))
+            targetPath = BuildObjectPath(dummy.InputRecipient as Component);
+        bool isTranslatorNotes = DictionaryTermNameInputPolicy.IsTranslatorNotes(targetPath);
         bool isTermNameInput = DictionaryTermNameInputPolicy.IsTermNameInput(
-            dummy.gameObject?.name, input.inputValidator?.name);
+            dummy.gameObject?.name, input.inputValidator?.name, targetPath);
         ConfigureUnicodeInput(input);
+        input.characterLimit = DictionaryTermNameInputPolicy.ResolveCharacterLimit(
+            isTranslatorNotes, input.characterLimit);
         if (isTermNameInput)
             ConfigureDictionaryTermNameInput(input);
         SharedInputReturnCompatibility.Track(input);
@@ -141,7 +152,34 @@ internal sealed class PlayerNameRuntime
             return string.IsNullOrWhiteSpace(originalFullName) ? "Translator" : originalFullName;
         if (string.IsNullOrWhiteSpace(rawName))
             return "翻译员";
-        return rawName.EndsWith("博士", StringComparison.Ordinal) ? rawName : rawName + "博士";
+
+        string name = NormalizeTranslatedName(rawName);
+        if (name.Length == 0)
+            return "翻译员";
+        return ContainsCjk(name) ? name + "博士" : name + " 博士";
+    }
+
+    private static string NormalizeTranslatedName(string rawName)
+    {
+        string name = (rawName ?? string.Empty).Trim();
+        if (name.StartsWith("Dr.", StringComparison.OrdinalIgnoreCase))
+            name = name.Substring(3).TrimStart();
+        else if (name.StartsWith("Dr ", StringComparison.OrdinalIgnoreCase))
+            name = name.Substring(3).TrimStart();
+        if (name.EndsWith("博士", StringComparison.Ordinal))
+            name = name.Substring(0, name.Length - 2).TrimEnd();
+        return name;
+    }
+
+    private static bool ContainsCjk(string value)
+    {
+        foreach (char character in value ?? string.Empty)
+        {
+            if (character is >= '\u3400' and <= '\u4DBF' or >= '\u4E00' and <= '\u9FFF' or
+                >= '\uF900' and <= '\uFAFF')
+                return true;
+        }
+        return false;
     }
 
     private static void ConfigureNameInput(TMP_InputField input)
@@ -176,6 +214,17 @@ internal sealed class PlayerNameRuntime
     {
         input.characterLimit = DictionaryTermNameInputPolicy.CharacterLimit;
         input.onValidateInput = DictionaryTermNameInputPolicy.ValidateCharacter;
+    }
+
+    private static string BuildObjectPath(Component component)
+    {
+        if (component == null)
+            return string.Empty;
+        var names = new List<string>();
+        for (Transform current = component.transform; current != null; current = current.parent)
+            names.Add(current.name);
+        names.Reverse();
+        return string.Join("/", names);
     }
 
     private void ApplyLabelLayout(NameTranslator namer, TMP_Text label, TMP_InputField input,
@@ -397,8 +446,8 @@ internal static class ProgressLogTextInputPatch
 internal static class SharedTextInputPatch
 {
     [HarmonyPostfix]
-    private static void Postfix(InputTextDummy __instance)
+    private static void Postfix(InputTextDummy __instance, TMP_Text __0)
     {
-        DeepSpaceChinesePlugin.Instance?.ApplySharedInput(__instance);
+        DeepSpaceChinesePlugin.Instance?.ApplySharedInput(__instance, __0);
     }
 }

@@ -73,8 +73,10 @@ python .\tools\extract.py
 & .\TranslationProject\tools\inspect_puzzle.ps1 100
 ```
 
-首次运行会把固定版本的 UnityPy 和 TypeTreeGeneratorAPI 下载到被 Git 忽略的
-`build/` 目录。若要指定另一份词典，可追加
+所有 Unity 资产分析工具共用 `tools/python_runtime.py`。首次运行会把固定版本的
+UnityPy 和 TypeTreeGeneratorAPI 下载到被 Git 忽略、按 Python ABI 与依赖版本隔离的
+`build/python-runtime/` 目录；运行前还会验证目录可读性、包版本以及 Unity 6 类型树
+接口，依赖缺失或损坏时自动修复。若要指定另一份词典，可追加
 `-Dictionary "完整的 DICTIONARY-*.save 路径"`。
 
 ## 测试
@@ -85,9 +87,10 @@ python .\tools\extract.py
 
 该入口会执行完整补丁构建、Python 测试与语法检查、.NET 运行时自测和翻译产物审计。
 
-## 第三方组件
+## 开源项目与第三方组件
 
 - [BepInEx 5.4.23.5](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.5)，LGPL-2.1；
-- [Fusion Pixel Font 2026.07.20](https://github.com/TakWolf/fusion-pixel-font/releases/tag/2026.07.20)，SIL Open Font License 1.1。
+- [Fusion Pixel Font 2026.07.20](https://github.com/TakWolf/fusion-pixel-font/releases/tag/2026.07.20)，SIL Open Font License 1.1；
+- [ainiee-translate-skill](https://github.com/xuanji86/ainiee-translate-skill)，用于本项目的术语管理、分批翻译、润色与译文校验流程。
 
-二进制文件和字体由构建脚本从上游下载，不存放在本仓库中。
+BepInEx 二进制文件和 Fusion Pixel Font 字体由构建脚本从上游下载，不存放在本仓库中。

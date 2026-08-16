@@ -14,7 +14,7 @@ from dictionary_dialogue_fixes import (
     validate_against_source,
 )
 from dictionary_trigger_conflicts import find_conflicts, validate_no_conflicts
-from build_dictionary_trigger_aliases import ALIASES
+from build_dictionary_trigger_aliases import ALIASES, make_rules
 
 
 def entry(term_id: int | None, english: str, value: str,
@@ -36,6 +36,10 @@ class DictionaryTriggerConflictTests(unittest.TestCase):
 
     def test_evolution_accepts_common_chinese_names(self):
         self.assertEqual(["演化", "进化"], ALIASES["EVOLUTION"])
+
+    def test_rostral_organ_has_no_broad_base_aliases(self):
+        rules = make_rules(-192, "EditEntryIDContains", "ROST", "contains")
+        self.assertEqual([], rules)
 
     def test_dialogue_158_fix_moves_only_that_dialogue_to_term_minus_40(self):
         fix = DictionaryDialogueFix(

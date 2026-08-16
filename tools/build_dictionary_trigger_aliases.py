@@ -2,8 +2,11 @@ from __future__ import annotations
 
 import argparse
 import json
+from itertools import permutations
 from pathlib import Path
 from typing import Any
+
+from build_runtime import sha256_text, validate_item
 
 from dictionary_dialogue_fixes import (
     apply_to_alias_entries,
@@ -12,6 +15,7 @@ from dictionary_dialogue_fixes import (
 )
 from dictionary_trigger_conflicts import (
     condition_key,
+    entry_match_length,
     find_conflicts,
     format_conflict,
     normalize,
@@ -32,7 +36,9 @@ ALIASES: dict[str, list[str]] = {
     "MUTUAL": ["相互", "互相", "双向"],
     "LANDLUBBER": ["旱鸭子"],
     "TERR": ["泰拉", "大地"],
-    "ROST": ["喙", "鸟嘴"],
+    # Chinese names for the rostral organ use dedicated dialogue variants below;
+    # broad anatomical/electrical fragments must not trigger the ROST exchange.
+    "ROST": [],
     "COLDSIDE": ["冷面", "寒冷面"],
     "NIGHTSIDE": ["夜面", "背阳面", "阴面"],
     "DAYSIDE": ["昼面", "向阳面", "阳面"],
@@ -41,19 +47,19 @@ ALIASES: dict[str, list[str]] = {
     "SIDE": ["侧", "面", "一边"],
     "PREHISTORIC": ["史前", "远古"],
     "EVOLUTION": ["演化", "进化"],
-    "TEMPERATURE": ["温度"],
-    "FEEL": ["感觉", "感受"],
+    "TEMPERATURE": ["温度", "热量", "热度"],
+    "FEEL": ["感觉", "感受", "感知"],
     "OBSERVE": ["观察", "观测"],
     "PART": ["部分", "部件", "一部分"],
     "EMOTION": ["情绪", "情感"],
     "OLD": ["年老", "年长", "老年"],
     "MIDDLEAGE": ["中年", "中年期"],
     "YOUNG": ["年轻", "幼年", "幼体"],
-    "BRAIN": ["脑", "大脑"],
+    "BRAIN": ["脑"],
     "CORE": ["核心", "中枢"],
-    "ARM": ["手臂", "胳膊"],
+    "ARM": ["手", "臂", "胳膊"],
     "LEG": ["腿"],
-    "LIMB": ["肢体", "四肢"],
+    "LIMB": ["肢"],
     "SEX": ["性", "性行为", "交配"],
     "KEPLER": ["开普勒"],
     "SUN": ["太阳"],
@@ -77,13 +83,18 @@ ALIASES: dict[str, list[str]] = {
     "LIONSHARE": ["大多数", "大头", "绝大部分"],
     "CENTER": ["中心", "中央", "中间"],
     "MEAN": ["平均", "均值", "平均数"],
-    "BIGGEST": ["最大", "最大的"],
+    "BIGGEST": ["最大", "最大的", "最大值"],
     "MOST": ["最多", "最"],
     "LEAST": ["最少"],
-    "SMALLEST": ["最小", "最小的"],
+    "SMALLEST": ["最小", "最小的", "最小值"],
     "ZERO": ["零", "〇"],
     "SUPERLATIVE": ["毕业评选", "班级之最", "之最"],
     "HYCEAN": ["海氢", "海氢行星"],
+    "LANGUAGE": ["文字"],
+    "LIFE": ["生物"],
+    "ALL": ["所有"],
+    "NOTHING": ["空"],
+    "INFINITY": ["无限", "无限大", "无穷大"],
     "BE": ["存在"],
     "INGROUP": ["同群", "同组", "同一组"],
     "SUBSET": ["子集"],
@@ -115,6 +126,7 @@ ALIASES: dict[str, list[str]] = {
     "ATOM": ["原子"],
     "VIZ": [],
     "BALL": ["球", "球体"],
+    "SPHERE": ["球体", "球"],
     "DOT": ["点", "圆点"],
     "PIXEL": ["像素"],
     "VISUAL": ["视觉", "视觉单位"],
@@ -150,9 +162,10 @@ ALIASES: dict[str, list[str]] = {
     "PROPOSITION": ["命题"],
     "VALUE": ["值", "数值"],
     "VAR": [],
-    "DECIMAL": ["十进制", "小数点"],
+    "DECIMAL": ["小数点"],
     "FLOAT": ["浮点", "浮点数"],
     "OCTAL": ["八进制"],
+    "CONTINUED": ["延续", "等等"],
     "MULTIPLY": ["乘", "乘法"],
     "ADD": ["加", "相加"],
     "PLUS": ["加上", "加号", "正号"],
@@ -168,6 +181,12 @@ ALIASES: dict[str, list[str]] = {
     "SPACE": ["空间", "空格"],
     "ANS": [],
 }
+
+
+# Additional aliases that require every fragment to be present. These remain
+# separate from ordinary substring aliases so broad fragments such as “电” do
+# not trigger a dialogue on their own.
+CONTAINS_ALL_ALIASES: dict[tuple[int | None, str], list[list[str]]] = {}
 
 
 # Same English word can mean something different for a specific term.
@@ -199,7 +218,6 @@ EXACT_ENTRY_KEYS: set[tuple[int | None, str]] = {
     (-184, "TERR"),
     (-151, "OLD"),
     (-150, "MIDDLEAGE"),
-    (-147, "BRAIN"),
     (-99, "INGROUP"),
     (-69, "HELIUM"),
 }
@@ -330,14 +348,21 @@ def make_rules(term_id: int | None, channel: str, english: str,
         (term_id, channel, english),
         OVERRIDES.get((term_id, english), ALIASES.get(english, [])),
     ))
-    if not values:
-        # Language-neutral symbols and one-letter identifiers keep working via
-        # the stock English condition; there is no fabricated Chinese alias.
-        return []
-    rule_type = "exact" if (term_id, english) in EXACT_ENTRY_KEYS else (
-        "contains" if mode == "contains" else "exact"
-    )
-    return [{"type": rule_type, "values": values, "_origin": "maintained"}]
+    rules: list[dict[str, Any]] = []
+    if values:
+        rule_type = "exact" if (term_id, english) in EXACT_ENTRY_KEYS else (
+            "contains" if mode == "contains" else "exact"
+        )
+        rules.append({"type": rule_type, "values": values, "_origin": "maintained"})
+    for fragments in CONTAINS_ALL_ALIASES.get((term_id, english), []):
+        rules.append({
+            "type": "contains_all",
+            "values": list(fragments),
+            "_origin": "maintained",
+        })
+    # Language-neutral symbols and one-letter identifiers keep working via the
+    # stock English condition when no localized rule is maintained.
+    return rules
 
 
 def note_for(term_id: int | None, english: str, rules: list[dict[str, Any]]) -> str:
@@ -352,6 +377,229 @@ def note_for(term_id: int | None, english: str, rules: list[dict[str, Any]]) -> 
     if english in {"ALAN", "BAUTISTA", "COLLINS", "HUSBAND", "WIFE", "ME"}:
         return "人名或人物关系的中文附加触发。"
     return "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+
+
+def load_dialogue_variants(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    variants = payload.get("variants")
+    if not isinstance(variants, list):
+        raise ValueError(f"词典对白变体文件缺少 variants 数组：{path}")
+    return variants
+
+
+def _dialogues_by_id(source: dict[str, Any]) -> dict[int, dict[str, Any]]:
+    result: dict[int, dict[str, Any]] = {}
+    source_entries = list(source.get("entries", [])) + list(
+        source.get("covered_entries", [])
+    )
+    for entry in source_entries:
+        for dialogue in entry.get("dialogues", []):
+            dialogue_id = int(dialogue["chunk_id"])
+            existing = result.get(dialogue_id)
+            if existing is not None and existing.get("frames") != dialogue.get("frames"):
+                raise ValueError(f"对白 {dialogue_id} 在提取源中出现不一致的重复定义")
+            result[dialogue_id] = dialogue
+    return result
+
+
+def _validate_variant_rules(variant: dict[str, Any], label: str) -> list[dict[str, Any]]:
+    rules = variant.get("rules")
+    if not isinstance(rules, list) or not rules:
+        raise ValueError(f"{label} 缺少非空 rules 数组")
+    result: list[dict[str, Any]] = []
+    for index, rule in enumerate(rules):
+        if not isinstance(rule, dict):
+            raise ValueError(f"{label} rules[{index}] 不是对象")
+        rule_type = str(rule.get("type", "")).strip().casefold()
+        if rule_type not in {"exact", "contains", "contains_all"}:
+            raise ValueError(f"{label} rules[{index}] 使用未知类型 {rule_type!r}")
+        values = [
+            str(value).strip()
+            for value in rule.get("values", [])
+            if str(value).strip()
+        ]
+        if not values:
+            raise ValueError(f"{label} rules[{index}] 缺少有效 values")
+        normalized_values = {normalize(value) for value in values}
+        if len(normalized_values) != len(values):
+            raise ValueError(f"{label} rules[{index}] 含有重复 values")
+        output_rule: dict[str, Any] = {
+            "type": rule_type,
+            "values": values,
+            "_origin": "dialogue_variant",
+        }
+        exclude_any = [
+            str(value).strip()
+            for value in rule.get("exclude_any", [])
+            if str(value).strip()
+        ]
+        if exclude_any:
+            output_rule["exclude_any"] = exclude_any
+        result.append(output_rule)
+    return result
+
+
+def _validate_variant_frames(variant: dict[str, Any], dialogue: dict[str, Any],
+    label: str) -> list[dict[str, Any]]:
+    source_frames = {
+        int(frame["frame_index"]): frame
+        for frame in dialogue.get("frames", [])
+    }
+    frames = variant.get("frames")
+    if not isinstance(frames, list) or not frames:
+        raise ValueError(f"{label} 缺少非空 frames 数组")
+    frame_indices = [int(frame.get("frame_index", -1)) for frame in frames]
+    if len(set(frame_indices)) != len(frame_indices):
+        raise ValueError(f"{label} 含有重复 frame_index")
+    if set(frame_indices) != set(source_frames):
+        raise ValueError(
+            f"{label} 必须完整覆盖原对白 frame："
+            f"{sorted(frame_indices)!r} != {sorted(source_frames)!r}"
+        )
+
+    validated: list[dict[str, Any]] = []
+    for frame in sorted(frames, key=lambda item: int(item["frame_index"])):
+        frame_index = int(frame["frame_index"])
+        source_text = str(source_frames[frame_index].get("source", ""))
+        translated_text = str(frame.get("translated_text", ""))
+        check_item = {
+            "source_text": source_text,
+            "translated_text": translated_text,
+            "extra": {
+                "game": {
+                    "kind": "dialogue_frame",
+                    "stable_key": f"dictionary-dialogue-variant:"
+                                  f"{variant['dialogue_id']}/frame:{frame_index}",
+                    "source_sha256": sha256_text(source_text),
+                    "part_count": source_text.count("{PART_"),
+                }
+            },
+        }
+        errors = validate_item(check_item)
+        if errors:
+            raise ValueError(
+                f"{label} frame {frame_index} 译文校验失败：" + "；".join(errors)
+            )
+        validated.append({
+            "frame_index": frame_index,
+            "translated_text": translated_text,
+        })
+    return validated
+
+
+def apply_dialogue_variants(entries: list[dict[str, Any]], source: dict[str, Any],
+    variants: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    dialogues = _dialogues_by_id(source)
+    runtime_variants: list[dict[str, Any]] = []
+    source_dialogue_ids = set(dialogues)
+    synthetic_dialogue_ids: set[int] = set()
+
+    for variant in variants:
+        if not isinstance(variant, dict):
+            raise ValueError("词典对白变体必须是对象")
+        term_id = variant.get("term_id")
+        term_id = int(term_id) if term_id is not None else None
+        channel = str(variant.get("channel", "")).strip()
+        english = str(variant.get("english", "")).strip()
+        dialogue_id = int(variant.get("dialogue_id", 0))
+        synthetic_dialogue_id = int(variant.get("synthetic_dialogue_id", 0))
+        label = (
+            f"词典对白变体 term_id={term_id}, channel={channel}, "
+            f"english={english}, dialogue_id={dialogue_id}"
+        )
+        key = (term_id, channel.casefold(), english.casefold(), dialogue_id)
+        if synthetic_dialogue_id <= 0:
+            raise ValueError(f"{label} 的 synthetic_dialogue_id 必须为正整数")
+        if synthetic_dialogue_id in source_dialogue_ids:
+            raise ValueError(
+                f"{label} 的 synthetic_dialogue_id={synthetic_dialogue_id} "
+                "与原版对白 ID 冲突"
+            )
+        if synthetic_dialogue_id in synthetic_dialogue_ids:
+            raise ValueError(
+                f"{label} 的 synthetic_dialogue_id={synthetic_dialogue_id} 重复"
+            )
+        synthetic_dialogue_ids.add(synthetic_dialogue_id)
+
+        target = next((entry for entry in entries if
+            entry.get("term_id") == term_id and
+            str(entry.get("channel", "")).casefold() == channel.casefold() and
+            str(entry.get("english", "")).casefold() == english.casefold() and
+            dialogue_id in entry.get("dialogue_ids", [])), None)
+        if target is None:
+            raise ValueError(f"{label} 找不到包含对白 {dialogue_id} 的有效触发条件")
+        dialogue = dialogues.get(dialogue_id)
+        if dialogue is None:
+            raise ValueError(f"{label} 在提取源中找不到对白 {dialogue_id}")
+
+        rules = _validate_variant_rules(variant, label)
+        frames = _validate_variant_frames(variant, dialogue, label)
+        translated_title = str(variant.get("translated_title", "")).strip()
+        if not translated_title:
+            raise ValueError(f"{label} 缺少 translated_title")
+
+        runtime_rules = []
+        for rule in rules:
+            runtime_rule = {key: value for key, value in rule.items()
+                            if key != "_origin"}
+            runtime_rules.append(runtime_rule)
+        runtime_variants.append({
+            "term_id": term_id,
+            "channel": channel,
+            "english": english,
+            "dialogue_id": dialogue_id,
+            "synthetic_dialogue_id": synthetic_dialogue_id,
+            "rules": runtime_rules,
+            "translated_title": translated_title,
+            "frames": frames,
+        })
+
+    for index, left in enumerate(runtime_variants):
+        left_key = (
+            left.get("term_id"),
+            str(left.get("channel", "")).casefold(),
+            str(left.get("english", "")).casefold(),
+            int(left.get("dialogue_id", 0)),
+        )
+        for right in runtime_variants[index + 1:]:
+            right_key = (
+                right.get("term_id"),
+                str(right.get("channel", "")).casefold(),
+                str(right.get("english", "")).casefold(),
+                int(right.get("dialogue_id", 0)),
+            )
+            if left_key != right_key:
+                continue
+            candidates: set[str] = set()
+            for item in (left, right):
+                for rule in item.get("rules", []):
+                    values = [str(value) for value in rule.get("values", [])]
+                    candidates.update(values)
+                    if str(rule.get("type", "")).casefold() == "contains_all":
+                        candidates.update("".join(order) for order in permutations(values))
+            for candidate in candidates:
+                if (entry_match_length(left, candidate) > 0 and
+                        entry_match_length(right, candidate) > 0):
+                    raise ValueError(
+                        "同一源对白的两个独立变体会被同一次输入同时命中："
+                        f"dialogue_id={left_key[3]}, input={candidate!r}, "
+                        f"synthetic={left['synthetic_dialogue_id']}/"
+                        f"{right['synthetic_dialogue_id']}"
+                    )
+
+    variant_trigger_entries = [
+        {
+            "term_id": variant.get("term_id"),
+            "channel": variant.get("channel"),
+            "english": f"__DIALOGUE_VARIANT_{variant['synthetic_dialogue_id']}",
+            "rules": variant.get("rules", []),
+        }
+        for variant in runtime_variants
+    ]
+    validate_no_conflicts([*entries, *variant_trigger_entries])
+    return runtime_variants
 
 
 def main() -> int:
@@ -376,9 +624,16 @@ def main() -> int:
         type=Path,
         default=PROJECT_DIR / "patch" / "Fix" / "DictionaryDialogue",
     )
+    parser.add_argument(
+        "--dialogue-variants",
+        type=Path,
+        default=PROJECT_DIR / "work" / "dictionary_trigger_aliases" /
+                "dialogue_variants.json",
+    )
     args = parser.parse_args()
     source = json.loads(args.source.read_text(encoding="utf-8"))
     fixes = load_fixes(args.fix_directory)
+    dialogue_variants = load_dialogue_variants(args.dialogue_variants)
     validate_against_source(fixes, source)
     entries: list[dict[str, Any]] = []
     ainiee: list[dict[str, Any]] = []
@@ -418,6 +673,7 @@ def main() -> int:
         )
     apply_to_alias_entries(entries, fixes)
     apply_conflict_owners(entries)
+    runtime_variants = apply_dialogue_variants(entries, source, dialogue_variants)
     for entry in entries:
         for rule in entry["rules"]:
             rule.pop("_origin", None)
@@ -436,16 +692,21 @@ def main() -> int:
         for index, entry in enumerate(entries, start=1)
     ]
     payload = {
-        "format_version": 1,
-        "description": "词典命名对白的中文附加触发规则；原版英文触发始终保留。",
+        "format_version": 2,
+        "description": "词典命名对白的中文附加触发规则及独立中文对白变体；原版英文触发始终保留。",
         "matching": "同一条件的人工维护词与假说译名按 OR 合并；exclude_any 为明确配置的排除子串。构建时拒绝一次输入可同时命中多个条件的配置，运行时不做跨条件判优先级或消歧。",
         "entries": entries,
+        "dialogue_variants": runtime_variants,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     args.ainiee_output.parent.mkdir(parents=True, exist_ok=True)
     args.ainiee_output.write_text(json.dumps(ainiee, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"output": str(args.output), "entries": len(entries)}, ensure_ascii=False))
+    print(json.dumps({
+        "output": str(args.output),
+        "entries": len(entries),
+        "dialogue_variants": len(runtime_variants),
+    }, ensure_ascii=False))
     return 0
 
 

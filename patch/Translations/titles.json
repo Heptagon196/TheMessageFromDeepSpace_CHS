@@ -1713,7 +1713,7 @@
       "kind": "dialogue_title",
       "source_sha256": "ef04de3072c5e4dd77f177121f2e778151b9966268dc61cc2b2299fc818bcb28",
       "source_text": "Nozomi",
-      "translated_text": "诺佐米",
+      "translated_text": "希美",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 1129,
@@ -1737,7 +1737,7 @@
       "kind": "dialogue_title",
       "source_sha256": "b58360867c6fa957f11a97ce6b0501833819d604688b21288f188d00772eeca1",
       "source_text": "Nozomi Communication",
-      "translated_text": "与诺佐米交流",
+      "translated_text": "与希美交流",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 1130,
@@ -1797,7 +1797,7 @@
       "kind": "dialogue_title",
       "source_sha256": "1d85fb58c615bea2c48f0c8a882b08b7abe490bda948399862973dd2d089dfc9",
       "source_text": "Carrie and Nozomi",
-      "translated_text": "凯莉与诺佐米",
+      "translated_text": "凯莉与希美",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 1135,
@@ -2685,7 +2685,7 @@
       "kind": "dialogue_title",
       "source_sha256": "15e19bbeb38f473e2744eca02316abba93e329ad4027fd571b5c1cc14a3ef68d",
       "source_text": "Happiest Dictionary",
-      "translated_text": "最快乐的词典",
+      "translated_text": "最幸福的词典",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 1203,
@@ -3933,7 +3933,7 @@
       "kind": "dialogue_title",
       "source_sha256": "065cbbc46228fe39be3d20015261fde9904e95068176c3ecef0992b728d25e0c",
       "source_text": "Nuetron",
-      "translated_text": "Nuetron（中子拼错）",
+      "translated_text": "种子",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 192,
@@ -4089,7 +4089,7 @@
       "kind": "dialogue_title",
       "source_sha256": "5bb213bb0ecdbaf447b86b5184bfe051544d690b619b7848848dd45cafc8879f",
       "source_text": "Nuetronstar",
-      "translated_text": "Nuetronstar（中子星拼错）",
+      "translated_text": "种子星",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 204,
@@ -4641,7 +4641,7 @@
       "kind": "dialogue_title",
       "source_sha256": "67e1bca0889ba21ce995cb2e05f0a0f19aad003a39ddcd8a336eaadb9c8a1b4f",
       "source_text": "Nothing",
-      "translated_text": "什么也没有",
+      "translated_text": "空",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 246,
@@ -5229,7 +5229,7 @@
       "kind": "dialogue_title",
       "source_sha256": "617a104888e96161b713643b223eae73db7f48eb42698e6868c52693ead72bdc",
       "source_text": "Happy Dictionary, Happy Life",
-      "translated_text": "词典幸福，人生幸福",
+      "translated_text": "幸福词典，幸福人生",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 292,
@@ -5769,7 +5769,7 @@
       "kind": "dialogue_title",
       "source_sha256": "a709edd17741f264625ece2107cbfaacfd25444257b03a2f5d145143d4d06c15",
       "source_text": "Unhappy Dictionary",
-      "translated_text": "不幸福的词典",
+      "translated_text": "不幸词典",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 333,
@@ -8589,7 +8589,7 @@
       "kind": "dialogue_title",
       "source_sha256": "a709edd17741f264625ece2107cbfaacfd25444257b03a2f5d145143d4d06c15",
       "source_text": "Unhappy Dictionary",
-      "translated_text": "不开心的词典",
+      "translated_text": "不幸词典",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 549,
@@ -12357,7 +12357,7 @@
       "kind": "dialogue_title",
       "source_sha256": "ede8aa60f484d8f5daff39a2e3eaacb9444d4b6fcf921e4db6400216c891f69d",
       "source_text": "Blue Herring",
-      "translated_text": "蓝鲱鱼",
+      "translated_text": "障耳法",
       "game": {
         "kind": "dialogue_title",
         "chunk_id": 843,

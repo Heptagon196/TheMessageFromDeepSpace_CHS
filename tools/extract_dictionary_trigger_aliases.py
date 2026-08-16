@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import sys
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -13,6 +12,7 @@ from typing import Any
 TOOLS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS_DIR))
 from project_config import DATA_DIR, GAME_ROOT, PROJECT_DIR
+from python_runtime import load_unitypy
 CHANNEL_NAMES = {
     14: "EditEntryFromName",
     15: "EditEntryToName",
@@ -21,20 +21,6 @@ CHANNEL_NAMES = {
     19: "DictEntryIs",
     20: "EditEntryIDContains",
 }
-
-
-def load_unitypy():
-    dependency_dir = os.environ.get("TMFDS_PYTHON_PACKAGES")
-    if not dependency_dir:
-        bundled = PROJECT_DIR / "build" / "puzzle-inspector-python"
-        dependency_dir = str(
-            bundled if bundled.exists() else PROJECT_DIR / "tools" / "python-packages"
-        )
-    sys.path.insert(0, dependency_dir)
-    import UnityPy
-    from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
-
-    return UnityPy, TypeTreeGenerator
 
 
 def cache_items(cache: dict[str, Any]):

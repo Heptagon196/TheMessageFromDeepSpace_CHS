@@ -2,9 +2,44 @@
   "format_version": 1,
   "entries": [
     {
+      "text_index": 5399690,
+      "source_sha256": "417ee5cf1ddf7f128a35c50350dd8b148a89a7594a60c3dd64ccf0e113bff057",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}夏天的雨季一到，{PART_001}希美就开始邀请我去她家。{PART_002}学校放假时，{PART_003}我们真的会聊上一整天。{PART_004}那时，{PART_005}我的日语已经足够和她讨论学校、{PART_006}男孩、{PART_007}父母、{PART_008}衣服、{PART_009}美国的生活、{PART_010}日本的生活，{PART_011}还有我们的未来。{PART_012}……"
+    },
+    {
+      "text_index": 12443552,
+      "source_sha256": "5e30ce733703dc785ff48378dd443f0c204045fa0397b18b583795d840a3c7bd",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}哈哈哈，{PART_001}到时我一定先叫上你们四个！"
+    },
+    {
+      "text_index": 20498615,
+      "source_sha256": "d65797cfcadbbb6ab4ee7b23fa274edab002f3f49a9e369e58ed2c4adbb38af7",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}哦，对！{PART_001}幸福词典？"
+    },
+    {
       "text_index": 22883420,
       "source_sha256": "92329465e9c90bacc088bdeb5dc2f0b0e45b9013692908c20fa18f8bcc6359a1",
       "translated_text": "{SPEAKER_AKERS}{PART_000}不是！{PART_001}$animA2我是说——{PART_002}$animA5哎呀，你真气人！{PART_003}$animB0我是说，{SIG_N136} 怎么没定义一个专门的 {SIG_N042} 来表示 {SIG_N046} {SIG_N090}？{PART_004}$animA4{SIG_N141} 是专名，{SIG_N046} {SIG_N090} 却只能用两个词拼出来。{PART_005}这也太偏心了！"
+    },
+    {
+      "text_index": 43257779,
+      "source_sha256": "505604f83794aab51f5a65d02e5c6c96d264407c8b39328104faa85bd2e12d50",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+    },
+    {
+      "text_index": 45575608,
+      "source_sha256": "70911fa546f86bf4cd1431ccebab4955a032f6dfd62e78b626ddb791304c7d95",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我的枕头在呼唤我了！{PART_001}隔着这么远我都听见了！"
+    },
+    {
+      "text_index": 56249382,
+      "source_sha256": "9a853b4d38685a2f950679aca385ef3aa13959cb0cbb2267a2fe4a6cb553ec8c",
+      "translated_text": "--- 本次任务的翻译员 ---\n你叫什么名字？"
+    },
+    {
+      "text_index": 57717111,
+      "source_sha256": "791c9f48078c3c710bd75ca84b5a7c7e5f5e0a562d7bddc6c4a905c4831357b1",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animA0这说明，他们是在做区分：{PART_001}{SIG_N045}与我们最近学会的那些词并不相同。{PART_002}{SIG_N045}这个概念在这里不适用，{PART_003}但原因我还是想不明白。"
     },
     {
       "text_index": 67361855,
@@ -12,9 +47,119 @@
       "translated_text": "{SPEAKER_AKERS}{PART_000}等一下，{PLAYER_NAME}，{PART_001}你这个思路可能是对的！"
     },
     {
+      "text_index": 76540542,
+      "source_sha256": "88ed7b8b08c62f7010edc7d89c0a29d198a13e11fb7ac6c61b8c0358ec832a12",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}你把“中子”拼绰了。"
+    },
+    {
+      "text_index": 80888716,
+      "source_sha256": "b48cbbc3c5de2b84a84ac05cf69488df691f50e5ee850e1396780ccca10d50da",
+      "translated_text": "电磁器官"
+    },
+    {
+      "text_index": 111498862,
+      "source_sha256": "225bc6148b53c87a737f73e617d0fbb03eb6e49447984c9147eb4ef224499730",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD06谢谢各位过来。{PART_001}我这边的调查，{PART_002}主要针对陨石本体。{PART_003}已经有了一些进展。{PART_004}很快就能告诉你们更多。{PART_005}$animD21先不说这个，{PART_006}简单汇报一下吧。"
+    },
+    {
+      "text_index": 115966163,
+      "source_sha256": "78e0306dc97cea3e3e48a12ea34378bfc52d55461e2ee696180ed49b4acee02c",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}说回希美，{PART_001}后来怎么样了？"
+    },
+    {
+      "text_index": 120497880,
+      "source_sha256": "02d93893a9e7af8fd14ede74e4037cbf715272a7f9ad028e131c3745937cb150",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animD21也许，{PART_001}称作“争议点”更合适？"
+    },
+    {
+      "text_index": 121733991,
+      "source_sha256": "0378ef8a75f18bf7580ca43c1107cac1ababffbd16b7de9f9f4d38d26db28010",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}它表示的是先后顺序，不是条件关系。"
+    },
+    {
+      "text_index": 130885606,
+      "source_sha256": "505604f83794aab51f5a65d02e5c6c96d264407c8b39328104faa85bd2e12d50",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯。"
+    },
+    {
+      "text_index": 137200166,
+      "source_sha256": "e90d3e7435f3748a378c6d27acb5979000fd0a9c9f2f0a359565226670e41775",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}学生负责栽树，{PART_001}导师负责摘桃子。"
+    },
+    {
       "text_index": 138019240,
       "source_sha256": "13f08413f5302df44958d6c526c422c194cc4f7fabbe71c5cd3d5d4dcbdd05cc",
       "translated_text": "“永远”的表达"
+    },
+    {
+      "text_index": 138227957,
+      "source_sha256": "f0754f530c963d50fa3c36b63fbe629f863fb7913667f8aee6e74080e6cc09de",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}哦，我敢说，对面的驾驶员也正憋着几句牢骚呢。"
+    },
+    {
+      "text_index": 143093361,
+      "source_sha256": "6542b1442048dd0448f826b025756bd132e4c0c73ef9f45a649599095be226d3",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}{PLAYER_NAME}，{PART_001}过去这一年证明，{PART_002}我们对你的信任完全没有错。{PART_003}谢谢你带领大家攻坚。{PART_004}现在都回家吧。{PART_005}如果这周只是在打基础，{PART_006}那真不知道下周还会有什么新发现。"
+    },
+    {
+      "text_index": 151120155,
+      "source_sha256": "ca512521fabbfc4fb2c88ae01bf7665cd26297b5fc53cadc46abd6fa8522db7e",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}可他们的减速性能同样惊人。{PART_001}看，他们正在匹配对接速度。"
+    },
+    {
+      "text_index": 161014905,
+      "source_sha256": "67e1bca0889ba21ce995cb2e05f0a0f19aad003a39ddcd8a336eaadb9c8a1b4f",
+      "translated_text": "空"
+    },
+    {
+      "text_index": 169654256,
+      "source_sha256": "3ce5fa8a423233a915c0c29963d5646b14606bb8cb4fdfb5caada7235c5237be",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB3我们已经尽力去理解这则讯息。{PART_001}宇宙是一个完整的系统；{PART_002}我们每个人都是其中一部分。{PART_003}所以……{PART_004}$animB4去{SIG_N154}吧。{PART_005}去沟通，{PART_006}去分享，{PART_007}活在当下。{PART_008}或者，去找一些能让你做到这些的人。{PART_009}就像这个团队一样。{PART_010}你们四位……{PART_011}$animB5能与你们共事，是我的荣幸。{PART_012}埃克斯博士、{PART_013}柯林斯博士、{PART_014}{PLAYER_NAME}、{PART_015}多普勒博士——{PART_016}希望以后还能再和各位共事。{PART_017}……"
+    },
+    {
+      "text_index": 181819642,
+      "source_sha256": "bd8bf364ee4c42d4af47a018e0c41ee028c5d4ba195fb6fc07b1418bf878a94d",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}那这说明你当时是怎么看人的？"
+    },
+    {
+      "text_index": 191374359,
+      "source_sha256": "edac5169643333eac5f175be86db0c80bd55a9a19b1a719f81b11032fbcca43a",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}上面的污染物已经清除干净了。{PART_001}$animD19拿回家吧，{PART_002}埃克斯。{PART_003}恭喜，{PART_004}你是每周最佳员工。"
+    },
+    {
+      "text_index": 192717642,
+      "source_sha256": "f830874df1623386d4b9befd4775e779a6a6650d8d3134a320387cf6eed509b7",
+      "translated_text": "译者注："
+    },
+    {
+      "text_index": 199867755,
+      "source_sha256": "e0a434dc5722db13a10b52d9d99c997fb7f4d4e1a23f822959b1052507d81c11",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}指挥官，猜猜它会持续多久？{PART_001}……{PART_002}驾驶员？"
+    },
+    {
+      "text_index": 205619382,
+      "source_sha256": "ba608df4b6f45c03ce306fba5499bcdf282fb7bd8733a26a984da2278567d470",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}这得由 {PLAYER_NAME} 来翻译，{PART_001}长官。"
+    },
+    {
+      "text_index": 220020419,
+      "source_sha256": "aa1bf8c32d8a466dcabfa5cda9a3f45fd05fee4f7539f5ab5dabb40d811d47a1",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}为什么非得和希美永远道别？"
+    },
+    {
+      "text_index": 221014454,
+      "source_sha256": "1aebc70fa018c684163b095c45bbd1097b2643f83a74fa7b7c7b43d288de7d06",
+      "translated_text": "262 年前..."
+    },
+    {
+      "text_index": 228824779,
+      "source_sha256": "a0069cba8c4116c23290ef46c09442e9168fd342bd5f0a17944563ec6cb02f69",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}为了误导你。{PART_001}不过只是个障耳法。"
+    },
+    {
+      "text_index": 232931332,
+      "source_sha256": "c29195e8d4366daba67499c0a397a48d2ac8e5903c93dcfbdb4c4c019202dd10",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}每周最佳员工评选就到此为止。{PART_001}我已经没有奖杯可送了。"
     },
     {
       "text_index": 254193281,
@@ -22,9 +167,689 @@
       "translated_text": "{SPEAKER_AKERS}{PART_000}凯莉，{PART_001}$animA5你帮我判断一下，我这么想正常吗？"
     },
     {
+      "text_index": 261181984,
+      "source_sha256": "2c5975ccf6fdf360c361fb25501ae0bb0117f771d1b0babd532d21a1ecb4de5b",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}完全不会！"
+    },
+    {
+      "text_index": 263924458,
+      "source_sha256": "b6746fbe022c70c3337f11d53d67a5e7937265f5c6c4d60c96a0991a04ac95e9",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}行。{PART_001}两种都有可能，{PART_002}鼻涕虫。"
+    },
+    {
+      "text_index": 301917467,
+      "source_sha256": "16f418196a73dae98ef0303f83e287eda5042f651b7ab19f2fe24fdfe94a6c29",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD22我知道你们会的。{PART_001}$animD24祝一切顺利。"
+    },
+    {
+      "text_index": 313942705,
+      "source_sha256": "8b7f387eda2111cd761185c9dbef6efb010bf7bf65692e2577dc43d15bc3b43f",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不是。{PART_001}那是我导师的项目。{PART_002}是他的研究。{PART_003}他的论文。{PART_004}我只是第三作者。{PART_005}最后，{PART_006}他们把我写得像个打杂的。{PART_007}没人问我是怎么做到的。{PART_008}没人问那些灵光一现是怎么来的。{PART_009}没人问我的方法。{PART_010}我的导师却很乐意回答这些问题。{PART_011}研究不是我设计的，点子也不是我的，{PART_012}但时间是我花的。{PART_013}规律是我发现的。{PART_014}趋势是我追出来的。{PART_015}为什么我只比脚注高一级？"
+    },
+    {
+      "text_index": 321467173,
+      "source_sha256": "282120b98279805df0fd3ba7c00bae945c807bf3e1b7271cadca395e3f5cc35b",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}所以，凯莉，{PART_001}你就是……{PART_002}怎么说来着，{PART_003}靠耳濡目染学会日语的？{PART_004}$animA3在那里待着待着，自然而然就会了？"
+    },
+    {
+      "text_index": 339251824,
+      "source_sha256": "fe820d20e5f886c941e3a38ba83e43512482669656b30211b1b0be75b7b2129e",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD16这是每周最佳员工奖杯！{PART_001}你们四个都非常努力，{PART_002}$animD09不过我想，奖励格外出色的表现，{PART_003}应该能鼓舞士气。{PART_004}$animD23而这周，{PART_005}你们中有一位表现尤其出色。"
+    },
+    {
+      "text_index": 345148590,
+      "source_sha256": "905ab8b51eb3b3316025fbbce978d695a6d98ff0c1cc715b32a4b8ca8f069666",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}啊……{PART_001}是啊。"
+    },
+    {
+      "text_index": 353334039,
+      "source_sha256": "7de468b4255e2a4a33a9fe41aae7306d7a3979b03555ecd76c1b44d5c32cd953",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA3要回答的问题是：{PART_001}谁的温度最高？{PART_002}$animA2当然，得先把最火辣的我排除在外。{PART_003}$animA5……{PART_004}对吧？"
+    },
+    {
+      "text_index": 355855705,
+      "source_sha256": "af51567d861a18781f905d6d323186ca24f3287f8b6e12379c6eaa521d0a1cb2",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}没错！{PART_001}这让我觉得，上一次传输是在测试我们。{PART_002}通过之后才会进入新概念！"
+    },
+    {
+      "text_index": 369529103,
+      "source_sha256": "c6d84b6bcc2c46912c4df108da7c81f376b0f0e1b8d808ef75ec30bce39f67c4",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}“是”，{PART_001}也就是用来表示赋值关系的动词。{PART_002}柯林斯博士“是”女性，{PART_003}巴蒂斯塔博士“是”程序员——"
+    },
+    {
+      "text_index": 372859951,
+      "source_sha256": "dfa63edf3d5a30ead39d3b4a17eab9c1608e00a69ff875cc98ff5ccb86972ab8",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}对，{PART_001}我之前就是因为这个，才停办了每周最佳员工表彰活动。{PART_002}我办这个活动，是想用一种简单、有地球味的方式表达感谢，{PART_003}更接地气一点$animD11。"
+    },
+    {
+      "text_index": 373512697,
+      "source_sha256": "b92a6fd4e4c2fa5e4455b6934265a6805b3826f6b80a8f602828ffdb30e485dc",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}是啊。{PART_001}$animA5就这样了。{PART_002}……"
+    },
+    {
+      "text_index": 373856929,
+      "source_sha256": "8f20ca8e23e3c105a247379ccaa14da0ece58df93e2375d5cfc81b8e2130ee02",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}凯莉，{PART_001}假设我正在学英语。{PART_002}你问我，那种毛茸茸、四条腿、养在家里的小动物叫什么。"
+    },
+    {
+      "text_index": 388686018,
+      "source_sha256": "0acb2ab0ad8c671d6aa38c92d180972b2e99cfd776d7242a4fdb9a22e1a80519",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}观察再一次彻底推翻了这种观念。{PART_001}我们不再规定宇宙必须遵循我们能理解的法则。{PART_002}不再强求它满足我们对完美意义的追求。{PART_003}也不再到处寻找象征。{PART_004}不再认为万事万物都另有寓意。{PART_005}相反，{PART_006}我们谦逊地接受了自己的位置，{PART_007}也欣然享受由此获得的强大能力。{PART_008}我们不再执着于“世界必须为我们而完美”。{PART_009}接受这一点，{PART_010}我们才能珍视随之而来的知识。{PART_011}我们承认自己的渺小，{PART_012}却获得了预测未见行星的能力。{PART_013}这是主动做出的选择，{PART_014}柯林斯博士。{PART_015}少数伟大的思想家赋予它形体，{PART_016}此后数十亿求真者将这份意志贯彻至今。{PART_017}这就是科学的过程。{PART_018}我们最伟大的成就，是接受自己并非宇宙的立法者，{PART_019}而只是宇宙的观察者。"
+    },
+    {
+      "text_index": 392047646,
+      "source_sha256": "4342cd4e564877981a2f412742ea959bab4e712dde24887b5af77d5cc31cbfe3",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}已目视确认对方飞船。{PART_001}副驾驶员，对方速度如何？"
+    },
+    {
+      "text_index": 399341430,
+      "source_sha256": "73edd951f002c9a002e58a254ccd0387076f136ea8a09fb11258ef21d7f1bf4e",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}我们虽然改进过{SIG_N242}，{PART_001}但过去这 18 万年里，他们的技术肯定也没停在原地。"
+    },
+    {
+      "text_index": 400677985,
+      "source_sha256": "3e15bc6db3eb1c3a28bd35a1f1de3241ce14f93c94028ca5c4b39446ab59c099",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}好凶！{PART_001}$animD19总之，{SIG_N136} 给我们算了一笔账。{PART_002}用 288 个 {SIG_N070} 的 {SIG_N135} 除以 32 个 {SIG_N070}，{PART_003}等于 9。"
+    },
+    {
+      "text_index": 409604467,
+      "source_sha256": "8b048ab939d7533111232438c818c019dcc3a45dc1cefb946b33278f5c41af0d",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD19对，{PART_001}氢谱线。{PART_002}$animD20还加入了词典等实用工具。{PART_003}你的工作不可或缺。{PART_004}你就是每周最佳员工！"
+    },
+    {
+      "text_index": 414442212,
+      "source_sha256": "c60c7fcb8b32a96e2fce0cb003ee61c90dbd654defc0c0335aa5ac1acf6e2057",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animA0我们必须填入{SIG_N012}，{PART_001}$animC3我猜应该是这样：{PART_002}从三个{SIG_N011}中选一个。"
+    },
+    {
+      "text_index": 423765997,
+      "source_sha256": "2320bd881a52caa2a6f7074c2bb55a324ffbb681348701fba0df3d3e67680bc0",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}真庆幸这趟路有 99% 是他们赶过来的。"
+    },
+    {
+      "text_index": 424244946,
+      "source_sha256": "2408e71004f0158bb97a7512088ae1e96132cc5138d6f34c8f8717ceab71d27a",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}还有那个“幸福词典”的说法。"
+    },
+    {
+      "text_index": 435293537,
+      "source_sha256": "adfe5358fb6214e1c3b99c8ad173de36bfa17de5ae00efafb3878e13ab8dd188",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}能和大家共事，我很开心。"
+    },
+    {
+      "text_index": 440453692,
+      "source_sha256": "03e5ba573bc43ed3bc6ab3c84f8a6f8579b8363d6ac8fc14ca047006496ba071",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}遗憾的是，这话还真有一点道理。{PART_001}阿波罗计划倒是很愿意利用我的天文学专长。{PART_002}我不是工程师，{PART_003}不是航空航天科学家，{PART_004}甚至不是材料科学家。{PART_005}不过我帮他们确认了一点：{PART_006}太空的空旷几乎不会影响火箭轨迹。{PART_007}越过轨道后基本什么都没有，{PART_008}每立方米只有几个原子，{PART_009}直到抵达月球。{PART_010}在太阳系内，星系际宇宙射线几乎不是问题。"
+    },
+    {
+      "text_index": 447922947,
+      "source_sha256": "22b0a262bbd4326202b5bd1b71dc0cc7dd2183189119c5349545710ebf4fc49e",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}到码头找希美聊天，是我每天最期待的事。{PART_001}在学校里一整天，{PART_002}我都会翻找日语词典和通俗小说，{PART_003}只为学点新词汇和语法，好让她刮目相看。{PART_004}学习日语，反而让我比单学英语语法时学会了更多英语语法。"
+    },
+    {
+      "text_index": 448836110,
+      "source_sha256": "bbb4e22b97b11602ab46ed9b857dfd2ca5371d12a3ff0599ffa0b78479564eea",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}<size=90%>每周最佳员工表彰活动很好地完成了使命。</size>{PART_001}<size=90%>最初办这个活动，是为了鼓舞士气，</size>{PART_002}<size=90%>也用一种更简单、</size>{PART_003}<size=90%>哈哈、</size>{PART_004}<size=90%>更接地气的方式奖励翻译小组。</size>{PART_005}<size=90%>这只是一种轻松表彰突出贡献的方式。</size>{PART_006}<size=90%>如今也是时候结束这项传统了。</size>{PART_007}<size=90%>而且，</size>{PART_008}<size=90%>孩子们的奖杯已经被我借光了！</size>"
+    },
+    {
+      "text_index": 451724598,
+      "source_sha256": "279e2b7d01c36ac9c164a012607777c289d6bee6fe05835b22f054884a969dcb",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}这有什么好争论的？{PART_001}$animD16{SIG_N133} 很可怕。{PART_002}我想，任何经由演化产生的生物，应该都有同样的求生本能。"
+    },
+    {
+      "text_index": 459826640,
+      "source_sha256": "3730ea656e0072f815693c9cffa33989b95fac628836c2e62ca849ae999e8cb6",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}双元音。{PART_001}你把元音念滑了。{PART_002}“希美”读 Nozomi，不是 Nazomi。{PART_003}Nozomi 里的 o 和英语的 o 不一样；{PART_004}英语的 o 会从“oh”滑向“oo”。"
+    },
+    {
+      "text_index": 469084203,
+      "source_sha256": "a97fc88aec03f8ed5ff977f2ceca7e9534436adccafd46ea89dd13f5c0206a6a",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}哈哈，{PART_001}差不多吧！{PART_002}$animC3不过你可能想不到，光是待在那里，其实学不到多少东西。{PART_003}$animA0待在基地里，{PART_004}跟待在美国没什么两样。{PART_005}不过就像我说的，{PART_006}$animC5那里的海很美。{PART_007}所以放学后，我常走到港口，{PART_008}看夕阳洒在海浪上。{PART_009}$animC5周末的时候，{PART_010}我会一大早去看渔民在翻涌的海雾中出海。{PART_011}我会听他们说话；{PART_012}和我习惯的美式英语相比，他们的元音更短促、更平直。{PART_013}那一切都那么宁静。{PART_014}后来，我还在那里交了个朋友，{PART_015}一个叫希美的可爱女孩。"
+    },
+    {
+      "text_index": 477162335,
+      "source_sha256": "9b4ead7a9e5e8f51f1fcefc9d0cbcf502003254dc31bb087efe17ce57e57d568",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}收到。"
+    },
+    {
+      "text_index": 485163327,
+      "source_sha256": "69cf79523c3a997abfc12ab8cedae5dc822b5ccbf180f4f84d3b5410d381f821",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}收到信号了。{PART_001}只有一个频率。"
+    },
+    {
       "text_index": 486681540,
       "source_sha256": "aff8a83f70455b0f5aab98cbedcd685ef748eac58a5bb0cab39ef6aa729dfb35",
       "translated_text": "{SPEAKER_AKERS}{PART_000}去你的。{PART_001}我怎么也比你正常。"
+    },
+    {
+      "text_index": 490272702,
+      "source_sha256": "445ad50443d3be72bc476623c47a514d85ba2a3c86357afef20d809f456611e5",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}孩子们的奖杯已经被我借光了，{PART_001}所以我结束了每周最佳员工表彰活动。{PART_002}不过，我想还能临时拼出最后一件表达谢意的纪念品。"
+    },
+    {
+      "text_index": 508193298,
+      "source_sha256": "b58360867c6fa957f11a97ce6b0501833819d604688b21288f188d00772eeca1",
+      "translated_text": "与希美交流"
+    },
+    {
+      "text_index": 510669298,
+      "source_sha256": "583302152959c37f7ba7db11fdf96a8a3121c64deb9f7b93e69dbaead08ee095",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我的研究是绘制银河系地图。{PART_001}早在 20 世纪 60 年代初以前，我们就知道它的大致形状和大小，{PART_002}但我的导师，{PART_003}也就是我所在课题组的负责人，{PART_004}想尽可能详细地绘制一切。{PART_005}我们详细测绘了银河系的各条旋臂、{PART_006}它们的密度、{PART_007}运动速度、{PART_008}各自略微独立起伏的方式，{PART_009}还有最让我兴奋的部分，{PART_010}它们的元素组成！"
+    },
+    {
+      "text_index": 531121081,
+      "source_sha256": "af32a356f28572bacfbfbcc26bdbbb6b50c7d64bdb10b0caa6fdc22c4c6de0b8",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不是。{PART_001}那是我导师的项目。{PART_002}是他的研究，{PART_003}他的论文。{PART_004}我是第三作者，{PART_005}这也不算差。{PART_006}不过，{PART_007}呃……{PART_008}你也知道科研是怎么回事……"
+    },
+    {
+      "text_index": 533965425,
+      "source_sha256": "4dcc0122bbcd201de4063311782fe02add8cedaf79129a5a7cf635d007658a47",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}不。{PART_001}我们的旅程才刚开始。{PART_002}指挥官。{PART_003}……{PART_004}我准备了几句话。{PART_005}会很简短。"
+    },
+    {
+      "text_index": 556232845,
+      "source_sha256": "14d91bdea8448958e28fc040b3fd46787c6e48a220f7476dee3bd61657bc04f5",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}怎么会？"
+    },
+    {
+      "text_index": 563178098,
+      "source_sha256": "438fde558c6bcfdbb6ba44af336a9f86138d115b65d8fede1b8718b033379576",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4有趣的就在这里！{PART_001}$animC5我们在码头注意到了彼此，{PART_002}当时两个人都百无聊赖。{PART_003}$animA5于是我们朝彼此走过去，{PART_004}对上了眼，然后……{PART_005}就试着聊了起来！{PART_006}当然，根本没聊出什么结果。{PART_007}可你知道吗，{PART_008}那是我人生中最美好的一次初遇。"
+    },
+    {
+      "text_index": 564751070,
+      "source_sha256": "acda94d37b5a6fc116fdaf8e1536f476ec4882c444a97ada5ca2046115461481",
+      "translated_text": "第 103 组 - 电磁器官"
+    },
+    {
+      "text_index": 576631772,
+      "source_sha256": "826fff8094ed1d10e39b4b57edb48f8c16d723572c9aba919b7183faac19c96e",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}这些都说得通。{PART_001}$animD03谢谢你这次肯发表意见——{PART_002}$animD05算了。"
+    },
+    {
+      "text_index": 578042241,
+      "source_sha256": "4421f1a5a3e6398990568cb86aec72d3aa61d3c46b95142bf3342d9defbd5f40",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}这下都译完了。"
+    },
+    {
+      "text_index": 598213623,
+      "source_sha256": "18b3b662d4c0f87df4caa4265e50d7083328acbffcf736d53abe2b404165d714",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}你也把“拼错”拼错了。"
+    },
+    {
+      "text_index": 622380533,
+      "source_sha256": "9642b6aba18d64cb5cff7bd724e293fa3dcfa4ee82697476628d79836f158107",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}幸福词典，{PART_001}幸福人生？"
+    },
+    {
+      "text_index": 633397583,
+      "source_sha256": "74bb0bfd804b6bdd61d9ae3ed1b23908541c7ff6c00a4cc08d7554c4ddb8517d",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}算是吧，也不全是。{PART_001}大家顶多觉得我还算过得去。{PART_002}参加阿波罗计划时，{PART_003}我也想尽量帮上忙，{PART_004}可他们已经有一大帮天文学家负责确认登月航线了。"
+    },
+    {
+      "text_index": 634125441,
+      "source_sha256": "9b63acb4a1bb0c77a65193ae689a2998339af9779f8472aa0df8e2d84125eb9f",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}<size=90%>亲爱的日记：</size>{PART_001}<size=90%>多普勒把每周最佳员工奖杯颁给了我。</size>{PART_002}<size=90%>好吧，</size>{PART_003}<size=90%>其实那座“个人学术科学奖”奖杯属于莱拉·多普勒，</size>{PART_004}<size=90%>是她在 1961 年奥克福尔斯脑力大战中获得的，</size>{PART_005}<size=90%>我猜那大概是某种知识竞赛。</size>{PART_006}<size=90%>看来多普勒有个聪明的女儿！</size>"
+    },
+    {
+      "text_index": 659806497,
+      "source_sha256": "765874a9140dad9f6f14264ef662801cc5c280f3c16d750d68dcebe0c4e4b03a",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}又是每周最佳员工表彰活动吗？{PART_001}我想大家都没这个心情，{PART_002}多普勒。"
+    },
+    {
+      "text_index": 662531305,
+      "source_sha256": "208d21a933e6c112f2d68fb1e3e4685da656bfe800ee85e22aeb1ea842e11da1",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD00草图先看到这里。{PART_001}不过我还有一座奖杯要颁！{PART_002}$animM5{PART_003}$animD17猜猜谁是每周最佳员工？"
+    },
+    {
+      "text_index": 681285526,
+      "source_sha256": "ae83aa43d61006556e9ff99ed819e7d60f447ef0798cb30442ece345da00234d",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD22继续努力。{PART_001}翻译工作已经取得很大进展。{PART_002}保持下去。{PART_003}$animD02虽然没你们的成果那么振奋人心，{PART_004}$animD04不过今晚，{PART_005}$animM2我又带来了一座每周最佳员工奖杯！"
+    },
+    {
+      "text_index": 716705736,
+      "source_sha256": "26a45ee3a501b24fb61e312c622e09a4ad4f9a655d02efb0ac3b62d5ea11ae16",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不过你知道那句话怎么说：{PART_001}幸福词典——"
+    },
+    {
+      "text_index": 718498270,
+      "source_sha256": "a709edd17741f264625ece2107cbfaacfd25444257b03a2f5d145143d4d06c15",
+      "translated_text": "不幸词典"
+    },
+    {
+      "text_index": 720423133,
+      "source_sha256": "1f735ab14071d9f722c89017f99f660675301cbb818fe5654cc871535e3a28bf",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}我也一样。{PART_001}$animB1致所有看到这段录像的人类：{PART_002}希望各位看得愉快。{PART_003}不过，埃克斯博士的胡闹，还请见谅。"
+    },
+    {
+      "text_index": 724484821,
+      "source_sha256": "3eecf759d61c96eda6568cad7b6f4a7b2b59c474f4c4807bb2bdf5431aa6379e",
+      "translated_text": "第 131 组 - 社交观"
+    },
+    {
+      "text_index": 728748826,
+      "source_sha256": "b32ae33da8136ee5d2fa24f708a2d8b4e8b230694ba74a02eb0796c2ac348127",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}明白了。{PART_001}$animD00我一时不知该说什么。{PART_002}我承认，上周听到 {SIG_N133} 时，{PART_003}$animD02它一直压在我心头。"
+    },
+    {
+      "text_index": 758031369,
+      "source_sha256": "dbed70adc58876baab42f687027d39643e4148dac9b9a373505e7d08a7eff33a",
+      "translated_text": "电磁器官"
+    },
+    {
+      "text_index": 758224158,
+      "source_sha256": "6ab8318549ad900ad92e04fa1084fff7d61042e94600a7a078c1d0315b030b2f",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}……{PART_001}她有名字吗？"
+    },
+    {
+      "text_index": 768233537,
+      "source_sha256": "f5c2c6386c24e2fc064bbc729fc995f3e494b475c617fa272ba9de8d41c515f6",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}每周最佳员工奖杯。{PART_001}你应得的。"
+    },
+    {
+      "text_index": 768426431,
+      "source_sha256": "c1e820ddcedc010568a435eb4c5f68c13681b7467d5828dab5579801c89b2bd0",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}<size=85%>亲爱的日记：</size>{PART_001}<size=85%>外星人为什么如此执着于八进制数？</size>{PART_002}<size=85%>他们的注意力会分裂成 8 个部分吗？</size>{PART_003}<size=85%>8 只是工程上方便的解决方案，</size>{PART_004}<size=85%>与他们的文化无关吗？</size>{PART_005}<size=85%>还是 8 根植于他们的生理结构？</size>{PART_006}<size=85%>不知道团队其他人如何思考这个难题。</size>{PART_007}<size=85%>也不知道多普勒博士琢磨这些问题时，</size>{PART_008}<size=85%>该有多痛苦……</size>"
+    },
+    {
+      "text_index": 776656293,
+      "source_sha256": "a79bb8db7cba64481ea4ab4df207b9d75bc93d81e7a2e48a6c341812e0c6331c",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}各位，{PART_001}$animD01我们知道他们的家园在哪里了吗？"
+    },
+    {
+      "text_index": 796295468,
+      "source_sha256": "e194915f1ca961c75e83a93b4901b7b952f2cd76123e92d2669d60e8a0eb45a0",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}状态：恼火。{PART_001}现在还没拿到那座愚蠢的每周最佳员工奖杯的，只剩我和{PLAYER_NAME}。{PART_002}谁在乎。"
+    },
+    {
+      "text_index": 797445649,
+      "source_sha256": "26f36f48463a0b98c03842c9f28d4121f611b262617d7ec143dc1b1f9767ffd0",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}那你和谜美聊得怎么样？"
+    },
+    {
+      "text_index": 805480461,
+      "source_sha256": "de2ffb82caa0d309387e0c5702b6195c449d2bab12a83c0fef0cdae69dca4084",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}状态：不爽！！{PART_001}没评上每周最佳员工，真让人难受。{PART_002}看来只能等下周了……"
+    },
+    {
+      "text_index": 805566616,
+      "source_sha256": "1e8f4a329b2e4828d4a290b0095bc112dd3d93b581ea01fb54bb65e1e4813a30",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}这么多年，我只是在别人需要的地方出现，{PART_001}再竭尽所能地为他们做事。{PART_002}组建这个团队时，{PART_003}你的简历落到我桌上，{PART_004}我当场就作出了决定。{PART_005}从你的档案里，我看到一个肯做一切必要之事的人。{PART_006}一个在伯克利洛伊施纳天文台工作了 4500 小时的人，{PART_007}一个把全部心血倾注在导师课题上的人——{PART_008}那还是别人的研究。{PART_009}后来，{PART_010}阿波罗计划有了需要，你又挺身而出，{PART_011}热切地尽己所能去帮忙、{PART_012}去学习、{PART_013}去探索、{PART_014}去苦干。{PART_015}一切都是为了别人。{PART_016}别妄自菲薄——{PART_017}你是个好天文学家。{PART_018}你很懂自己的领域。{PART_019}但这个团队不需要又一个天才。{PART_020}它需要一个每天都会到场、全力以赴的人。{PART_021}它需要你。"
+    },
+    {
+      "text_index": 808654492,
+      "source_sha256": "69ae358daac90d9f5f3c7f19de4e24323d49842a19a1d09ab4b822f4b51b2dac",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}艾伦，{PART_001}你会让身边的每个人都变得更好。{PART_002}你的生活态度会感染别人。{PART_003}你对一切都满怀热忱，让所有人也想全力以赴。{PART_004}时时刻刻都是。{PART_005}我已经很久没见过哪个学者能像你一样，离开舒适区也泰然自若，{PART_006}只要值得一试，就不怕犯错。{PART_007}当然，{PART_008}整个翻译小组都很优秀；{PART_009}你们都是好人。{PART_010}就像我说的，{PART_011}不然也不会选你们四个。{PART_012}但你恐怕没意识到，自己给身边的人带来了多大影响。{PART_013}无论走进哪个房间，你都会鼓舞里面的人。{PART_014}你从他们身上看到的优点，{PART_015}有一部分也是你的功劳。"
+    },
+    {
+      "text_index": 811651856,
+      "source_sha256": "4f5981d6241919a124133b7dd4e5aa85cb05d2cae9a436a3b6b4c0ea7628f236",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4想得美。"
+    },
+    {
+      "text_index": 814606731,
+      "source_sha256": "902f7a9cf3ac0978775e1895028975027ac3809c4c5e80b830dc0df6b9957c9e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}希美？"
+    },
+    {
+      "text_index": 815085820,
+      "source_sha256": "56c8ecdc3db888024e8ee2a273fc135392f36417de6b40b4092c96c305b38746",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}整条讯息都译出来了。"
+    },
+    {
+      "text_index": 820300513,
+      "source_sha256": "36e0ffe88c9badd240376c715470abf1ea4d48b13a63a080a718feae09a0c297",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}其实，多普，{PART_001}我们还知道了一件事。{PART_002}$animD19{SIG_N129} 只需短短 32 个 {SIG_N070} 就会成熟，快得吓人。{PART_003}我说的成熟，{PART_004}就是……{PART_005}{SIG_N144}，{PART_006}你懂的，{PART_007}繁衍后代那回事——"
+    },
+    {
+      "text_index": 821518469,
+      "source_sha256": "bd769ee3327cb2706e1f0d68b8ad2808e57c78f1d880666a12ffa8d14eaabd23",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}288 / 32 等于 9……$animD06{PART_001}那就意味着——{PART_002}你是说，9 代{PART_003}$animD17同时活着。"
+    },
+    {
+      "text_index": 829377194,
+      "source_sha256": "61d0a29d4362d3d81690e689a3afd3dd3772140dc32d37e9ee7d0ef8d42674ad",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}很好。{PART_001}继续无动力飞行。"
+    },
+    {
+      "text_index": 833898327,
+      "source_sha256": "57941593fd3aaedc8edb025be4f7628a522a961fb4000eb5cdbd20201bb8039b",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}和希美？{PART_001}听说你要离开，她是什么反应？"
+    },
+    {
+      "text_index": 838029456,
+      "source_sha256": "82fa6a32d978346f1d4c7be5034f4d870e936fa62774113dda40da76ab420b15",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}还不清楚，{PART_001}但有了 {PLAYER_NAME} 那本收录了 197 个词的幸福词典，{PART_002}我们已经有能力讨论各种各样的话题。{PART_003}可以讨论 {SIG_N197}、{SIG_N191}、{SIG_N164} 和 {SIG_N093}。{PART_004}可以讨论他们的 {SIG_N176} 和 {SIG_N177}。{PART_005}可以讨论 {SIG_N181}、{SIG_N182} 和 {SIG_N178}。{PART_006}可以讨论 {SIG_N195}、{SIG_N156}、{SIG_N157}、{SIG_N153}，{PART_007}以及所有让我们产生感受的事物。{PART_008}而你用一句话概括得最好：{PART_009}“他们是社会性的 {SIG_N131}。”"
+    },
+    {
+      "text_index": 856507259,
+      "source_sha256": "65181223a319db06c317a6a575a54490929c4ac00b6d34ae7c8394ad07a21488",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}我们终会走到那一步的。"
+    },
+    {
+      "text_index": 867161792,
+      "source_sha256": "7592c7cdc6daafc598def8878747ad64f92b3b688364b92fc6b2be2f2251bc80",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}这周我们继续讨论了道德问题，{PART_001}并由此{PART_002}引出了两个新的难题：{PART_003}{SIG_N231} 和 {SIG_N214}。"
+    },
+    {
+      "text_index": 872762533,
+      "source_sha256": "53e9d2a1feb5976dc40ec3e8e624ff9e37c4adf4cf8481d5e9a474b88e88fc16",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD20政府暂时还不肯{PART_001}公开这项任务。{PART_002}我想这也可以理解。{PART_003}牵涉的东西太多了，{PART_004}尤其现在还有水门事件。{PART_005}$animD02民众对尼克松政府的信任跌到谷底，{PART_006}或许还是等一等，再向全世界公布外星人的存在比较好。{PART_007}$animD08好了，翻译小组这周有什么发现？"
+    },
+    {
+      "text_index": 894701800,
+      "source_sha256": "55b2a0cd7c2d4e8de4c8d4174ff9a8d88fb792aa9bef271e9a8771b917612e8e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}这个词也能表示条件关系，{PART_001}对吧？{PART_002}比如“如果……那么……”之类的！"
+    },
+    {
+      "text_index": 910460281,
+      "source_sha256": "05edcee211a6179ea894af2c627a947cd1e110f231d7c1be19236dad3bd9f0a7",
+      "translated_text": "\n\n\n\n\nApplesinmypants 制作\n\n\n\n\n\n\n3D 美术 - Jim Henderson\n\n巴蒂斯塔拍立得 - Miguel San Juan\n\n宣传联络 - Ricky Hart\n\n\n\n\n特别感谢：\nChristine\n妈妈和爸爸\nAria & James\nJaeger & Stormy\nOzzie\nOmar\n\n测试与支持  :)\n\nTesseract\nPoorOrpheus\nClay\nTy\nDonny \nCody\nElian\nOmar\nJunior Moxley\nKuba Banasilk\nAlex\nJJ Gibson\nNytohan\nlinegend\nGrammar Sheriff\nAmerican Gamer\nPenguinnit\nJakali\nHunterSpace46\nWhiteShadow\nVal\nEric Niu\nAlwinfy\nfizzuya\nMetamourtyline\nKanadian Kitsune\nDamnTM\nLuce7\nkonstans\nkindigo\nTerrorpaw\nspacemans\ngood bird\nLOST\nGuardian\nThomasTheCentipede\nUsedAtomicBomb\ntatatatatatapooooo\nSszz127\nIris\nMichaelwestborn\nclownenthusiast\nZero\nHarry S\nfriedlyDDW\nKet\ndigowigo\nJohn Wright\nWhompratt\nCotawa11\nChikku\nTrophy\nMibik\nArgenia Arumtula\ngeneralrelativityisanidiot\nTurtleCat\ncara\nBirby\nMasonator\nComputerCake\nqlje\nGauss\nFinn\nS4TURNZ3RO\nT_rannosaurus\nNinja04\nwizardlizard\nAlyxDrums\nLaika\nRussian Mike\nmanumaker08\nSuprSBG\nDr. TightPants\nESK\nLonicera\nlpinfinity\nBluettecuddler\nLord Kaki Pipi Skeleton Man Eater\nZane\nDancingtree444\nCamberCYM\nlightningstudios\nTheRoyalGuard001\nHarrietJumpJet\nleroy\nMarius\nKeriel\nCrossheir\nlethargy\nAttikitty\nDharlome\nXrax\nPengü\ntheoccupied\nLidix\nTonicDolphin5\nThe Bread Man\n[object Object]\nSubmerged Mango\nVermilisix\nDer_Body\nwizard_conkh\nnmendio\nRefineries\nKiiyoko\nLexi\nRiptide3\nGenerous\n01123581321345589144233377610987\nhad and\nMaid thing\n\n\n\n\n\n\n这就是……\n\n\n来自深空的讯息\n"
+    },
+    {
+      "text_index": 920865383,
+      "source_sha256": "c7d42cc9dc5c77894a861c47111547cd898150f3ceeaec453fcab3cded118b02",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}已经幸福到顶了。"
+    },
+    {
+      "text_index": 923271459,
+      "source_sha256": "01055650d12c970d5aa93218227379bee876d33a59f150ccbb23242784f9772c",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}那么，结束了。{PART_001}977。"
+    },
+    {
+      "text_index": 923677892,
+      "source_sha256": "dda180362c051dc92d497f31ad797b54e07f20e447857d8df734c9c949b62715",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC3她开始请我去她家，教我玩纸牌。{PART_001}可她放学比我晚一个小时，{PART_002}$animC2所以我会和她母亲坐在一起等她。{PART_003}她母亲总是默默把一杯茶放到我面前。{PART_004}我会尽自己所能，礼貌地说“谢谢”，{PART_005}她也会轻声回答，{PART_006}同时带着微笑。{PART_007}后来希美告诉我，她母亲觉得我努力说日语的样子很可爱。{PART_008}为了表达感激，{PART_009}我的用语正式过头了。{PART_010}$animC5不过我想，她觉得那很讨人喜欢。"
+    },
+    {
+      "text_index": 923781908,
+      "source_sha256": "e6db8362e8fb8cba128bb312103b8c4b819075a2c6ad0769b0bbc3ffe422d7f1",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}幸福词典，{PART_001}幸福人生。"
+    },
+    {
+      "text_index": 932103960,
+      "source_sha256": "292d5a6fe863d06ee06139044c5b082b0e61aa3625c0524d4601fb57a3f5be14",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}那就是 {SIG_N196}：{PART_001}{SIG_N234} 个体之间的交换。"
+    },
+    {
+      "text_index": 939536459,
+      "source_sha256": "92ff262264468e009dac3f5188697bdb57427349144b83640f3ba0b1d1cddad3",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}那你和希美后来还见过吗？"
+    },
+    {
+      "text_index": 941859788,
+      "source_sha256": "ef04de3072c5e4dd77f177121f2e778151b9966268dc61cc2b2299fc818bcb28",
+      "translated_text": "希美"
+    },
+    {
+      "text_index": 965804111,
+      "source_sha256": "4f913d09639d30690488cfb7bd2e67b78e3ca95231a4fae4ae0ecab41cba241d",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4这意味着我们已经没有别的话可说了。{PART_001}$animC3再没有一句话，能换来新的传输。"
+    },
+    {
+      "text_index": 970136998,
+      "source_sha256": "a417560564ad3f8d8d1c014b1658d0fccc507813d14f28ca32d22e01477ad84b",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD18好吧。{PART_001}还有工作没做完。"
+    },
+    {
+      "text_index": 976639345,
+      "source_sha256": "dce71e6fdda58b553c428d16215f09caa75a90aeafc8075852f3b3624680694e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA5我也幸福到顶了 :)"
+    },
+    {
+      "text_index": 987912698,
+      "source_sha256": "508f1ed7c7192d3ebe6531bfa2aceb86704bfe5390026ebcd97179c36014e40e",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}不，{PART_001}哈哈，我不是在说别人不好。{PART_002}我从来没有厌恶过人类。{PART_003}$animC3也许对父亲或空军有过一些不满，{PART_004}但从来没有对全人类失望过。{PART_005}我只是想说，她很友善。{PART_006}我虽然听不懂她说了什么，{PART_007}却能明白她的善意。{PART_008}$animC5那时我才惊讶地发现，话语和意图原来并没有那么紧密地联系在一起。"
+    },
+    {
+      "text_index": 990188202,
+      "source_sha256": "49ba0d6e816a4ab9d6918f1ecf3ce4d054a031ea6f2e0ea9d8c0f693c0d08e12",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}那么，{PART_001}$animD24大家就回去睡个觉吧。"
+    },
+    {
+      "text_index": 996553428,
+      "source_sha256": "78317c29b8835ed23516cc6d57c983e1d3c9c58ee4151907b1391425af2086f0",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}幸福词典，{PART_001}幸福人生！"
+    },
+    {
+      "text_index": 1001020414,
+      "source_sha256": "c1f8a1e09ea69191aee8d13dde588dd9a58a11ed852dec053a7314eae5e0cd6a",
+      "translated_text": "赢得每周最佳员工奖杯"
+    },
+    {
+      "text_index": 1009490757,
+      "source_sha256": "0d899861a8263608c639d8c2afc096c25fc104054832aeafb046fbfd2b05f173",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB2还要有幸福词典。"
+    },
+    {
+      "text_index": 1012988348,
+      "source_sha256": "291c0c9bf3b086700df67f896687277d5928b3332e4546359749d0d97fbfa1af",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD17这事我得睡一觉再想。{PART_001}大家也该睡了。{PART_002}$animD07那就去睡吧。{PART_003}让我们睡觉 {SIG_N085}。{PART_004}$animD19我说对了吗？"
+    },
+    {
+      "text_index": 1018254083,
+      "source_sha256": "89e8cfca37b133faa9da48e7bece9def9a47faf362658cb305be6591d1935d20",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}Nozomi。"
+    },
+    {
+      "text_index": 1025574069,
+      "source_sha256": "d1aa7ac8a9358477e1ccd11cf40fa6e41e27d9b32f05c9014527d9028131387c",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}哦，对。阿波罗 11 号任务期间，我终于也分到了一块真正的研究。{PART_001}我分析了尼尔·阿姆斯特朗、{PART_002}巴兹·奥尔德林{PART_003}和迈克尔·柯林斯带回来的月岩样本。{PART_004}我重新做起射电光谱学，{PART_005}仿佛又回到了绘制宇宙图的日子。{PART_006}至少这次，我不用再受导师摆布。{PART_007}我在这里做的一切都会被整个国家铭记。{PART_008}我知道它会有意义。"
+    },
+    {
+      "text_index": 1027208254,
+      "source_sha256": "dc4b391d5a0abc99c66569c883c0bb6e54eff0a06251714f76b7f597dfdcf0f1",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}嗯，{PART_001}按说该是这样。"
+    },
+    {
+      "text_index": 1029950886,
+      "source_sha256": "f36109be189048b2a69a8e66ce5595c24a69d8298fcc19d2b8091c02d0509ca4",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}他们只用了不到 1 个{SIG_N070}就动身了——那时才刚收到{SIG_N044} 1。{PART_001}而且一路接近光速。"
+    },
+    {
+      "text_index": 1039486689,
+      "source_sha256": "25cc24efc043a41f7670366f8a09b85a6ce940db50142cc9163dadfa0c1117cb",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}感觉刚才说跑题了，{PART_001}凯莉。{PART_002}$animA5你和希美都聊些什么？"
+    },
+    {
+      "text_index": 1040181294,
+      "source_sha256": "ac2c4c692be839a93ee59ce25286cebe3fb6f6c0a0740a9b39d44aae036412da",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不幸词典。"
+    },
+    {
+      "text_index": 1042379108,
+      "source_sha256": "a709edd17741f264625ece2107cbfaacfd25444257b03a2f5d145143d4d06c15",
+      "translated_text": "不幸词典"
+    },
+    {
+      "text_index": 1044164948,
+      "source_sha256": "e6db8362e8fb8cba128bb312103b8c4b819075a2c6ad0769b0bbc3ffe422d7f1",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}幸福词典，{PART_001}幸福人生。"
+    },
+    {
+      "text_index": 1044370454,
+      "source_sha256": "e31469aa5df0816c1cb2b2ad7d0bae6c049788bdb750f3fa6ad0d71ab555fff2",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD21这种 {SIG_N169} 的 {SIG_N233}，对他们来说似乎并不明智。"
+    },
+    {
+      "text_index": 1046982815,
+      "source_sha256": "5b7b7531b0d9987cd07cd16d90c5d601eac6705b4862df8a9c4d0afee602ff8f",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animD19他们描述了自己的 {SIG_N090} 和 {SIG_N093}，还给了我们一系列可以帮助识别它们的信息。"
+    },
+    {
+      "text_index": 1047562920,
+      "source_sha256": "e1cdd02015e915c261b9c501fe58ce5a92a5ff13b9280e95f48ca6e4981b26a4",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5是关于外星人的八进制数字系统——{PART_001}几年前，{PART_002}研究者是心理学家乔治·米勒。{PART_003}$animC3他研究过人类的认知容量——{PART_004}也就是我们能同时在脑子里处理多少个对象。{PART_005}他找到了一个神奇数字。"
+    },
+    {
+      "text_index": 1047963116,
+      "source_sha256": "0dcab167d2aa86f41789a7d1f153271891e8beda8e3255363ce551b2ab409c13",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}够了！{PART_001}太快了，你这个[含混的嘟囔]！"
+    },
+    {
+      "text_index": 1063241479,
+      "source_sha256": "25db36cb3d8e856c9a2b8a9ddf9a11bf161e3219c4fd2720522329044521e543",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5而且我们的词典现在就是最幸福的词典了。"
+    },
+    {
+      "text_index": 1064104267,
+      "source_sha256": "683479d629f21c2c7e1a33cfaefbff7eb5841b8ca9855ec3584cb508ba5540c3",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}人总有说再见的时候，{PART_001}$animC3对吧？{PART_002}我们能做的，就是趁彼此还在身边时，尽力走近对方，{PART_003}$animC1一起走下去。{PART_004}而且，说了再见也不代表永远不见。"
+    },
+    {
+      "text_index": 1069233746,
+      "source_sha256": "957727c01984469fa0ef4816653cec5b132712af6cd7030349e8cf287d8b35c2",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}那是你还没见识过{PART_001}我买咖啡的本事！"
+    },
+    {
+      "text_index": 1089200343,
+      "source_sha256": "99802723a924914bd733a0a6b85ce15134f76f5b5f27b87abeb74147f4f1c869",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}艾伦，{PART_001}你让身边的每个人都变得更好。{PART_002}你的生活态度会感染别人。{PART_003}你凡事都那么有热情，也带得大家愿意全力以赴。{PART_004}而且一向如此。{PART_005}整个翻译小组都很出色；{PART_006}你们都是好人。{PART_007}就像我说的，{PART_008}否则也不会选你们四个。{PART_009}但你恐怕没有意识到，自己给身边的人带来了多大改变。{PART_010}你在他们身上看到的那些优点，{PART_011}有一部分也要归功于你。"
+    },
+    {
+      "text_index": 1092031780,
+      "source_sha256": "64225af01e2986a23102a757ee087c43143f8c2cad751c2d071dfdb811b024db",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}确实不理性，{PART_001}$animD19但我敢说这点他们自己也清楚。{PART_002}只是他们所知与所感之间存在一道鸿沟。{PART_003}……"
+    },
+    {
+      "text_index": 1094911337,
+      "source_sha256": "7b5a3c0d863ae74781a5845f90465e6cc3ae5209de1d39924451e4b8dad779a6",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我也一样。"
+    },
+    {
+      "text_index": 1098024554,
+      "source_sha256": "f129566f62e883336bc1116bb9ea4d8f5b716a6f97aab8440063d03ddaa6c0c1",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}好了。{PART_001}……{PART_002}既然该说的都说完了，{PART_003}我想，也该结束这段录——"
+    },
+    {
+      "text_index": 1110806058,
+      "source_sha256": "15e19bbeb38f473e2744eca02316abba93e329ad4027fd571b5c1cc14a3ef68d",
+      "translated_text": "最幸福的词典"
+    },
+    {
+      "text_index": 1121817823,
+      "source_sha256": "c8ac6d3aedfbbe46809123c34d0f63147b3b5d71473c2b961c293a97c495807f",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}编译失败。{PART_001}再试一次，指挥官。{PART_002}别忘了查查{PLAYER_NAME}的词典。"
+    },
+    {
+      "text_index": 1122513107,
+      "source_sha256": "b4b19ca324e659b9417e2ee499413a839feb1061b46883d0269d2b88a3541204",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}当然。"
+    },
+    {
+      "text_index": 1131423572,
+      "source_sha256": "43e39d99a245cfe6979e28251166d2f389ca9b28400203de60ade724ba08a0a5",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我才是荣幸之至！"
+    },
+    {
+      "text_index": 1134359018,
+      "source_sha256": "6e797962fefeadbe21dec379cc703ebe258e90e3a3f5e55162259aed95148598",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}希美听起来是个很温柔的人。{PART_001}而且{PART_002}很聪明。"
+    },
+    {
+      "text_index": 1138399273,
+      "source_sha256": "877198a1819108ce1449e77b8f9bcd670a1e3947d02af3a244b700467fc9c3b6",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}那么！{PART_001}$animD04恭喜巴蒂斯塔，{PART_002}成为每周最佳员工！"
+    },
+    {
+      "text_index": 1140946581,
+      "source_sha256": "ede8aa60f484d8f5daff39a2e3eaacb9444d4b6fcf921e4db6400216c891f69d",
+      "translated_text": "障耳法"
+    },
+    {
+      "text_index": 1151560856,
+      "source_sha256": "e70278e5a58e2a96ebdbfc13dce1f23403e0eabe00b953d80c96c005043c5b6d",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}指挥官，想好要说些什么了吗？{PART_001}……"
+    },
+    {
+      "text_index": 1162884868,
+      "source_sha256": "96e506a79ba2a4a67bfbac18ad07b3e45de7146150ee3fe271bbd0862e86efce",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}比如{SIG_N101}的{SIG_N158}。{PART_001}也就是{SIG_N160}。"
+    },
+    {
+      "text_index": 1163502015,
+      "source_sha256": "b00cd6d21ab4b4095a0556c0ec66ec1da9cae62cfddde908848f4af3eecb588e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}对，{PART_001}你说得没错。{PART_002}各家期刊都很喜欢，{PART_003}引用次数也很高。{PART_004}可人们不在意这些。{PART_005}他们想见我的导师，{PART_006}那个成就一切的“唯一”人物。{PART_007}不管问什么，他都有答案。{PART_008}问题就在这里：{PART_009}人们只想找一张面孔，{PART_010}一个领头人物，{PART_011}把所有功劳都归给他。{PART_012}再找个人享尽风光。"
+    },
+    {
+      "text_index": 1181708804,
+      "source_sha256": "d2db92708b0331f2686bd2299f560fbae9d85f5bd26f9a1650b114d7e875df92",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD02你还好吧？"
+    },
+    {
+      "text_index": 1183616381,
+      "source_sha256": "61a45090c54b51ac9d482c6b4bf20d7415d500e59beda041f2442fb9abb6541e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0问问又不亏……"
+    },
+    {
+      "text_index": 1195279095,
+      "source_sha256": "359eded8530717089157c92fda3df839a79a993458c66ba54d385b4ef776a985",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA4他们口中的“太阳”。{PART_001}$animA5或者说，是他们交流时的对应表达。{PART_002}反正我完全搞不懂外星人。"
+    },
+    {
+      "text_index": 1210403813,
+      "source_sha256": "2234744ffb862d187b90576036526fe4955fb52181f984044f2a337439ab80b2",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB2你还是做好本职工作吧。"
+    },
+    {
+      "text_index": 1224428862,
+      "source_sha256": "20e58f018538222107b9d488fdb9bf2f580bda01f4093f98e14703905ede673d",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB1没有{SIG_N012}了。"
+    },
+    {
+      "text_index": 1231487845,
+      "source_sha256": "abed2f6703a035301d200661f3a401b5dedf605a25b4d5f6fb93b303913f53b4",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}对方已匹配对接速度。{PART_001}误差不到每秒 0.001 米。"
+    },
+    {
+      "text_index": 1233087956,
+      "source_sha256": "9c27c83e1347719114ad48916e74381bb1373f60c5cc6ce97e7e87484dcd96dd",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}幸福词典，{PART_001}幸福人生！"
+    },
+    {
+      "text_index": 1242582970,
+      "source_sha256": "848df44a1a1f95ecd89f36a1cf8c04f814363cfead1eae86e682ba22ac6f0997",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}不知不觉间，{PART_001}希美和我已经形影不离。{PART_002}简直像绑在一起。{PART_003}$animC4其实有一次，我们还真绑在了一起！{PART_004}我把自己的右腿和她的左腿绑住，{PART_005}$animC2两个人三条腿，走了整个下午。"
+    },
+    {
+      "text_index": 1248130853,
+      "source_sha256": "b685c1244bf9233d221b9be8287f865d9c3ab211860ad171aa434a07acc4b5df",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}对于他们有关 {SIG_N231} 的 {SIG_N201}，我们的感受也差不多。{PART_001}$animD21其深层含义源于他们的生物构造。{PART_002}不过核心思想围绕的是个体临终时的看法。"
+    },
+    {
+      "text_index": 1251381947,
+      "source_sha256": "ec81623b2bde051896fb08c228ddd02794bebba9529d0b33ce40a0e67000e025",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}所以这段传输的重点很明确：{PART_001}它在比较质量！"
+    },
+    {
+      "text_index": 1252172169,
+      "source_sha256": "cca5d88f7d2d2390baa78cc58ca4ea166ed7d9fe4279d5698f71ea4d218a5852",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}那是你还没见识过{PART_001}我买咖啡的本事。"
+    },
+    {
+      "text_index": 1258054545,
+      "source_sha256": "81019b6d1616e2d4e4f9813d459ba51782bae8912c6c3b6689ce48cc82249e68",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}如果以后再遇到这种千载难逢、会发射无线电信号的陨石，{PART_001}$animC5记得叫上我，{PART_002}好吗？"
+    },
+    {
+      "text_index": 1269094120,
+      "source_sha256": "5bb213bb0ecdbaf447b86b5184bfe051544d690b619b7848848dd45cafc8879f",
+      "translated_text": "种子星"
+    },
+    {
+      "text_index": 1273204579,
+      "source_sha256": "6c3b691b6ba17c323b8122294c349f0c4d741e1f9115e5e9a6fe9ebd40f2bb7c",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}是希美，{PART_001}不过没错。{PART_002}后来我们都零零碎碎学会了几句对方的话。{PART_003}我们会指指东西、拿起实物比划，{PART_004}但有很长一阵子，做得最多的还是一起笑。{PART_005}我们基本只能交流这么多。"
+    },
+    {
+      "text_index": 1275303186,
+      "source_sha256": "533f5272ddd57019ea6f3fa08b699bc010c1fb5a52a08a469728bd68e4aec1a2",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}不，{PART_001}呃，{PART_002}恰恰相反。{PART_003}你把“希美”念成“谜美”了。"
+    },
+    {
+      "text_index": 1276744152,
+      "source_sha256": "2f78cd9828717bb5d1393a8c30a1917399253212e910a0c6b444731b4742dffa",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5我跟你说，艾伦，{PART_001}她真的是个很温柔的人。{PART_002}和她道别，是我这辈子最难开口的一次。"
     },
     {
       "text_index": 1287217226,
@@ -32,14 +857,527 @@
       "translated_text": "{SPEAKER_AKERS}{PART_000}对了，多普，{PART_001}我们还有个{PART_002}新发现。{PART_003}你知道地球有 {SIG_N176} 和 {SIG_N177} 吧？"
     },
     {
+      "text_index": 1308445790,
+      "source_sha256": "8e37d76b1e74478abe4ad2a272edfd11d7673a0627dfb4b1172dea94d02366b5",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}收到。"
+    },
+    {
+      "text_index": 1316074577,
+      "source_sha256": "e9440f3b2adc31da0cc8472b9714920bc9f085d5304dc661347c143448a0753e",
+      "translated_text": "{PLAYER_NAME}说...",
+      "allow_added_player_name": true
+    },
+    {
+      "text_index": 1331506087,
+      "source_sha256": "3c885874829a046b83ab95d0c496e10d3a1d62a6eeaf77932085fcd976e579ca",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我的研究是绘制银河系地图。{PART_001}早在 20 世纪 60 年代初以前，我们就知道它的大致形状和大小，{PART_002}但我的导师想把它详细绘制出来。{PART_003}我们测绘了银河系的各条旋臂、{PART_004}它们的密度、{PART_005}旋转速度、{PART_006}各自独立起伏的方式，{PART_007}还有最让我兴奋的部分，{PART_008}它们的元素组成！"
+    },
+    {
+      "text_index": 1334013287,
+      "source_sha256": "b41143fabc54ae09ebbb2caec44aaed9c298fde4576c7935ef0a5158018f223e",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC1我查了参考页签。{PART_001}{SIG_N044}的体积是 4053 立方米。{PART_002}$animC3可要怎么换算成立方{SIG_N073}？"
+    },
+    {
+      "text_index": 1334810887,
+      "source_sha256": "3eb60e9d04eff8f0b03ab489c215034cb303de83be3c1234ee6f684145c09e70",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}总之，{PART_001}$animD22{PLAYER_NAME}，就由你先来吧。"
+    },
+    {
+      "text_index": 1348626613,
+      "source_sha256": "dd5d6cf604c3b3bb9c4b197eb7254d0f303817feb2f19b938a27b539ede1e078",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}够了，艾伦。{PART_001}上次那个关于“大”的双关，{PART_002}我忍了。{PART_003}这次的双关已经尬过头了。"
+    },
+    {
+      "text_index": 1352836422,
+      "source_sha256": "ac2c4c692be839a93ee59ce25286cebe3fb6f6c0a0740a9b39d44aae036412da",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不幸词典。"
+    },
+    {
+      "text_index": 1353825686,
+      "source_sha256": "19c1afae5029d3379319833bd47e678e210d5c69846588e2e8b64b9be5cb7000",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animD08嗯。{PART_001}是的。{PART_002}不过他们还定义了负责这种感知的{SIG_N160}。{PART_003}很有意思。{PART_004}他们不能想当然地认为人类有{SIG_N162}，{PART_005}也不能预设人类的{SIG_N162}能有多精确。{PART_006}相比之下，假定任何接收者都掌握无线电传输技术更稳妥。{PART_007}因此，确认外星人也有{SIG_N162}……{PART_008}挺酷的。"
+    },
+    {
+      "text_index": 1355673080,
+      "source_sha256": "92d102b5752a1760bad58688ee59578059cf9c2ff07afe1ad0a6fe8cf9c25634",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA4这也太快了，你个[含混的嘟囔]！"
+    },
+    {
+      "text_index": 1358945109,
+      "source_sha256": "fd12aa2edb22c3470738c17a8bf33dea229ab336643b03eb88e3c61ead80233e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不幸人生。"
+    },
+    {
+      "text_index": 1359587062,
+      "source_sha256": "6ee2a0cd691a23bffceeb0e4533b9a2885c2a1aaa18ba0b7a7c66fc226534bfd",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}希美为什么总在码头？{PART_001}她也和你一样，是个到处乱逛的怪人？"
+    },
+    {
+      "text_index": 1371452755,
+      "source_sha256": "f2e3b44793d21d2136b96aef6d18572dc3fa9db96019714f576d288ee47ad307",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}我们知道因数总是出现在{SIG_N006}之前，{PART_001}所以我猜，两个因数应该是这样的。{PART_002}{SIG_N016} 0 {SIG_N011} 1 是第一个因数，{PART_003}{SIG_N016} 1 {SIG_N011} 0 是第二个。"
+    },
+    {
+      "text_index": 1380467227,
+      "source_sha256": "33d033c99725164c309f9f6bc678ce0db6d08363d940682c555d7fc03279882c",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}你上次和希美说话是什么时候？"
+    },
+    {
+      "text_index": 1382110784,
+      "source_sha256": "cb19a6319631d7bb3822172e485fafd6a56ac3055d1545f90bfbf1122c722de1",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}换得相当彻底。{PART_001}坦白说，这一周的情况就是这样：{PART_002}我们没发现什么特别能帮助理解{SIG_N045}的内容。"
+    },
+    {
+      "text_index": 1384306422,
+      "source_sha256": "065cbbc46228fe39be3d20015261fde9904e95068176c3ecef0992b728d25e0c",
+      "translated_text": "种子"
+    },
+    {
+      "text_index": 1384618831,
+      "source_sha256": "5287579ac89fb73cc497127c176e5a929c3567b85c115a6f97575673e2b1585e",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}那就是你理解错了。"
+    },
+    {
+      "text_index": 1404982375,
+      "source_sha256": "617a104888e96161b713643b223eae73db7f48eb42698e6868c52693ead72bdc",
+      "translated_text": "幸福词典，幸福人生"
+    },
+    {
+      "text_index": 1409783583,
+      "source_sha256": "7c6185bf35d1105339750e35b35b0423e681bf5396eb752e8a9812511697f9ea",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}那不是威胁，{PART_001}多普勒，{PART_002}而是对 {SIG_N101} 的肯定。"
+    },
+    {
+      "text_index": 1443364113,
+      "source_sha256": "9c0695933fe7c2c78f04775e9cd6a9ecbf00b525c4a491f10aba9431616b3525",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}准备好了就去吧，指挥官。"
+    },
+    {
+      "text_index": 1445375044,
+      "source_sha256": "1d85fb58c615bea2c48f0c8a882b08b7abe490bda948399862973dd2d089dfc9",
+      "translated_text": "凯莉与希美"
+    },
+    {
+      "text_index": 1454750071,
+      "source_sha256": "e5c30afa67155e5fab8da7a37271ced5bc1640adfb5133726416ef386756ea33",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}后来我才知道，那句话的意思是“早上好”，{PART_001}可我对希美说的时候是晚上。{PART_002}你可以想象她当时的表情。"
+    },
+    {
+      "text_index": 1457767993,
+      "source_sha256": "cbbfbad3cb03f7ae9e852a81e271141ccbe11fe3e28b61673778ba8fd328c5dd",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4不管什么派对，幸福词典都很重要，{PART_001}我是这么觉得的！"
+    },
+    {
+      "text_index": 1457906521,
+      "source_sha256": "3a12b909ef1d9537f430fd72b620d200b523c173d10763de52e8a6a7c5c048ca",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}是每周最佳员工？"
+    },
+    {
+      "text_index": 1459087799,
+      "source_sha256": "65e6920f8c65eefdd5f93dd4cf23ba568939511054c85556bfaf0074cd4409ff",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}嗯哼。{PART_001}他甚至成了第三席打击乐手。{PART_002}所以第一次随团演出时，他请全家都去看了。{PART_003}首席打击乐手站在小军鼓旁边，{PART_004}其中还有一面三角铁。{PART_005}旁边还摆着各式各样的乐器。{PART_006}$animB5我哥哥隔着两个座位坐着。{PART_007}整场演出大部分时间，他都坐在那里。{PART_008}……{PART_009}我回想起来。{PART_010}8 岁时，{PART_011}他已经能用钢琴弹贝多芬的曲子。{PART_012}上了高中，{PART_013}他是校乐队的首席打击乐手。{PART_014}每次从大学回来，{PART_015}他都会给我看一种新学会的乐器。{PART_016}而现在，{PART_017}他成了整支交响乐团的第三席。{PART_018}却只是坐在那里。{PART_019}……{PART_020}快 10 分钟过去了，他几乎一个音符都没奏。{PART_021}那天晚上，他几乎没演奏过。"
+    },
+    {
+      "text_index": 1462475497,
+      "source_sha256": "4f14e69f5b852c8f0c96f954e078590f53a83b3c0e130077575aed042442ac77",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不该说障眼法吗？{PART_001}为什么说障耳法？"
+    },
+    {
+      "text_index": 1468216440,
+      "source_sha256": "14dcf3fffb6edbfab67420a3e85285696011b286806ab323541509190fa69a5c",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animB5那么，翻译工作到此完成。{PART_001}50 周，{PART_002}977 段传输。{PART_003}$animC5你们四位不仅破译了每一段传输，{PART_004}还从中读出了深远的含义。{PART_005}一本收录 245 个频率和 8 个数字的词典。{PART_006}正是借助这些词，我们学会了像他们那样思考，{PART_007}学会了如何认识他们，{PART_008}学会了如何谈论我们共同身处的这个宇宙，{PART_009}知道了他们把哪里称作家园，{PART_010}学会了拥抱他们的语言，{PART_011}知道了他们尚不知晓我们的存在，{PART_012}却盼望有朝一日能与我们相识。{PART_013}正是通过这些词，我们了解了他们究竟是什么，{PART_014}他们是谁，{PART_015}又是如何走到今天的。{PART_016}我们了解了他们如何看待生命、{PART_017}死亡，{PART_018}以及生死之间的岁月。{PART_019}哪怕除此之外再无所获，{PART_020}他们也已经把一份礼物托付给我们，{PART_021}一份足以彻底改变人类文明的礼物。{PART_022}……{PART_023}毫无疑问，这是我们一生中最不可思议的发现。{PART_024}我很高兴自己参与了这一切。{PART_025}可说实话，{PART_026}此刻的我，只有感激。{PART_027}我庆幸自己找到了你们四位，{PART_028}也感谢你们始终没有放弃，终于读懂了这一切。{PART_029}我知道，这一路绝不轻松。{PART_030}谢谢你们。{PART_031}……"
+    },
+    {
+      "text_index": 1483377994,
+      "source_sha256": "d8d5644b0c44a970ddd65fc04f43f6534550b25b2b3e5bc1b5424038b1cfaaba",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}那你们俩到底是怎么……{PART_001}$animA2聊天的？"
+    },
+    {
+      "text_index": 1489226762,
+      "source_sha256": "c3f6d15ac8b017b355b9b4feebffef9c80488f0ad7790da5622a9dada4d4398f",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}我们认识了一个人。{PART_001}她是 {SIG_N150}，{PART_002}是那些 {SIG_N044} {SIG_N043} 的制造者，{PART_003}也是不惜费尽周折也要传达这句话的人：{PART_004}{SIG_N046} {SIG_N131} {SIG_N134} {SIG_N085} {SIG_N120} {SIG_N121} {SIG_N127} {SIG_N085}。"
+    },
+    {
+      "text_index": 1490165008,
+      "source_sha256": "d2881fdf2c8b49119b7df44924a5279bf81d570af974549976fe0551b1532758",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD03这给了我们更多实际造句的工具。{PART_001}有意思。{PART_002}没想到陨石接下来会讲这个。{PART_003}我还是更想知道他们的家园在哪里。"
+    },
+    {
+      "text_index": 1495185120,
+      "source_sha256": "53e9d2a1feb5976dc40ec3e8e624ff9e37c4adf4cf8481d5e9a474b88e88fc16",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD20政府暂时还不肯{PART_001}公开这项任务。{PART_002}我想也可以理解。{PART_003}牵涉太大了，{PART_004}尤其又有水门事件。{PART_005}$animD02民众对尼克松政府的信任已经跌到谷底，{PART_006}或许先别告诉全世界外星人真的存在，反倒更好。{PART_007}$animD08好了，翻译小组这周给我带来了什么？"
+    },
+    {
+      "text_index": 1508746632,
+      "source_sha256": "15a7dc1a5706f742c9f7ff5c7eb11cdf92683e5adb6372b116d17c700127f099",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}{SIG_N158}和{SIG_N159}，{PART_001}长官。{PART_002}这两个概念都相当{SIG_N104}，{PART_003}但能用于不同语境。"
+    },
+    {
+      "text_index": 1515386841,
+      "source_sha256": "4fa0d426e759e1a1d3356b65a9faa4a5415796cedee95f9e4be10fd1f431184c",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}来买咖啡。"
+    },
+    {
+      "text_index": 1521016612,
+      "source_sha256": "3066521f1b6a0d0e99153f6c2aa8f1d67d71ac42ae16763903817d7d425e00a9",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}空。{PART_001}什么都没有。"
+    },
+    {
+      "text_index": 1525018326,
+      "source_sha256": "cb50c5ba1031795792236a62923819e5120bd256bd7ebd673b23c06b537cbbd9",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}开始对接。{PART_001}……{PART_002}让我们为你骄傲吧，指挥官。"
+    },
+    {
+      "text_index": 1541935961,
+      "source_sha256": "4e93b18c68129c5593f4e2dd58835faca4c151bd25ed5fba62158faa8f07fec2",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0不知道，{PART_001}就是觉得这么说挺有诗意。{PART_002}$animA4没准我该去当诗人。"
+    },
+    {
+      "text_index": 1550162742,
+      "source_sha256": "bf7c249703a72f893ec75d24bc373a167813f189243715c380420315ad50896c",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}这当然是个挑战。{PART_001}但我可是伟大的艾伦·埃克斯博士。{PART_002}从来不会在挑战面前退缩。"
+    },
+    {
+      "text_index": 1550695493,
+      "source_sha256": "04c61935581c36e17008623cdd57628bcba789da6dd6cdbd11300ee4b452478e",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}这下结束了。{PART_001}我们的旅程走完了。"
+    },
+    {
       "text_index": 1552153359,
       "source_sha256": "c26e8c6b52fc7af4a517afc7b150f3d40fdf1508af552cda73d4c86236b04275",
       "translated_text": "{SPEAKER_AKERS}{PART_000}[含混的嘟囔]"
     },
     {
+      "text_index": 1565546839,
+      "source_sha256": "0e29ab0bd22ed3994a2c1bf9eda2a3e218899d90d6dfa89a2495eb79d9c49ef8",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA0我这不就在做吗……"
+    },
+    {
+      "text_index": 1566464237,
+      "source_sha256": "0743f2cdc04b08f9aef4b2f51557b24159693bece96f5cef87160f96be41565f",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}{SIG_N162}这个词很有意思。{PART_001}{SIG_N162} {SIG_N086} {SIG_N161} {SIG_N163} {SIG_N085}。{PART_002}这也解释了{SIG_N054}，{PART_003}也就是{SIG_N052}的第 5 个参数。"
+    },
+    {
+      "text_index": 1568678267,
+      "source_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+      "translated_text": "Hello World"
+    },
+    {
+      "text_index": 1575375282,
+      "source_sha256": "d62c948e5707ab307f27f1d48b68825176b393a55a262398a8e904ad069c06a1",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}传输完成。"
+    },
+    {
+      "text_index": 1609208810,
+      "source_sha256": "95a4af67bdef9c6d761de5b02e0d4720d72465b8c3e57d122e3f17ef39999c05",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}嗯，{PART_001}$animA0按说该是这样。"
+    },
+    {
+      "text_index": 1627073832,
+      "source_sha256": "84ec3e2ef817ebca6a965b4255fcc844d3f0cfb5dee1631400b57527ff000588",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}对，{PART_001}我有。"
+    },
+    {
+      "text_index": 1635091283,
+      "source_sha256": "6289bd97193d5c6aac9e7d8b2d55ff5fedecc76a8b89128c7144de114ece9dd4",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animD21对 {SIG_N212} 来说，{PART_001}{SIG_N110} {SIG_N156} {SIG_N100} {SIG_N214} {SIG_N085}。{PART_002}在他们看来，这正是赋予 {SIG_N101} 意义的东西。{PART_003}而 {SIG_N211} 认为这只是更宏大图景中的一部分，{PART_004}并不存在唯一答案。"
+    },
+    {
+      "text_index": 1648106600,
+      "source_sha256": "bcf475949a5ce6287c0a5db4cc7f06496c10d23c503cc7eaf0d88f7395838483",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}$animA1词典里又添了一个{PART_001}很不错的“小”词条，{PART_002}{PLAYER_NAME}！"
+    },
+    {
+      "text_index": 1653883538,
+      "source_sha256": "b0ba833489e58c64e6f28f367872d83f3f8ef4f677c297ea5e1c821498eb9b1d",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD17每周，{PART_001}陨石都会抛出一个新话题……{PART_002}目的不一定马上看得出来，{PART_003}但最后自然会明白。{PART_004}$animD16总之，{PART_005}猜猜谁是每周最佳员工？{PART_006}$animM3"
+    },
+    {
+      "text_index": 1669653478,
+      "source_sha256": "430c62711910a6a15956bad68b84a754f11063506036ca48a363ae5389dc2b22",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}我，{PART_001}呃……{PART_002}$animC2能有这样的机会，我真的欣喜若狂。{PART_003}单看这件事本身，{PART_004}谁都不难明白它为何意义非凡。{PART_005}$animC4这可是人类第一次接触外星生命！{PART_006}$animC3当然令人惊叹！{PART_007}$animC5可这段经历还让我明白了另一件事。{PART_008}$animC1真正让这段旅程充满温暖的，{PART_009}是我们日复一日、{PART_010}周复一周，{PART_011}一起做过的每一件事。{PART_012}$animC5也正是这些点滴，让它充满了爱。{PART_013}能有你们这样的同事和朋友，我真的很庆幸。{PART_014}我也得承认，想到这一切已经结束，心里难免有些难过。{PART_015}不过我想，大家心里都一样。"
+    },
+    {
+      "text_index": 1687633424,
+      "source_sha256": "66e6d1d7ee903cc90f3c5fc4a453faae0eae1ed150b8b7fddb5ae2b68e64fbe4",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}$animB4幸福电脑，{PART_001}幸福人生。"
+    },
+    {
+      "text_index": 1691008918,
+      "source_sha256": "dd199335be53db9c11f1f339a34d15d616e14f06a044c7f9bf244c0a47981abb",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}还是得靠 {PLAYER_NAME}。{PART_001}我们的银河笔友叫 {SIG_N136}。"
+    },
+    {
+      "text_index": 1705071305,
+      "source_sha256": "02df6934da1eb4e3eefa90f4ab15b1792afc5b65198e9d08d78bb2f6528e0c5b",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}连你也是，{PART_001}巴蒂斯塔。{PART_002}你们看起来都有些……{PART_003}$animD16惆怅？{PART_004}不，不太对。{PART_005}像是惆怅，{PART_006}却又更开心些。{PART_007}$animD06这周发生什么了？{PART_008}怎么一个个都一副若有所悟的样子？"
+    },
+    {
+      "text_index": 1705097162,
+      "source_sha256": "b248b6f6f714c48ec504ebe9120b11ea5a30841d4e2deeec7bc322dd48df6c2e",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}两艘飞船已经连上了。"
+    },
+    {
+      "text_index": 1715661969,
+      "source_sha256": "6645a4c14da1d875bcc6ddece281841182abac7ab80c60f62a6d6c3622bef976",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD22继续保持每周的出色表现，{PART_001}$animD04再收下这块陨石碎片作为奖杯。{PART_002}$animM06{PART_003}你是每周最佳员工。{PART_004}$animD22这是你应得的。{PART_005}$animM"
+    },
+    {
+      "text_index": 1720015414,
+      "source_sha256": "b2c0580932387beca2aff10edd63f26aa7505a54c37ed9b7d6908c3ccde3a313",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}——幸福人生！"
+    },
+    {
+      "text_index": 1721493268,
+      "source_sha256": "1d7716b2158e26f1b6c29396c79d88aac0e331adea0bf9611b0884e723779851",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}是什么意思？{PART_001}到底什么意思？？"
+    },
+    {
+      "text_index": 1721957187,
+      "source_sha256": "468ee2c61253f0362cb65cb324c95591e6b60ad500acf5b0620a13124df1e2fb",
+      "allow_added_player_name": true,
+      "translated_text": "{SPEAKER_AKERS}{PART_000}你觉得{PLAYER_NAME}从没用过我的假说？{PART_001}$animA2那 {SIG_N095} 呢？"
+    },
+    {
+      "text_index": 1731876390,
+      "source_sha256": "c61fe83a424c527829134a4caafd915b121a8c68c5ae58ce779e4ae61c5e743e",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}这意味着什么？"
+    },
+    {
+      "text_index": 1740790114,
+      "source_sha256": "f4ceea605bb3163203a9a71f67118795bdff327430582de76a4467099f2da1bd",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我知道，{PART_001}我知道。{PART_002}$animD19你们会想我的。{PART_003}不过别担心，{PART_004}我很快就会回来！{PART_005}我们已经给数千颗恒星建了档案。{PART_006}肯定能找到他们那一颗。{PART_007}好了，不说这些，{PART_008}免得你们哭得太厉害。{PART_009}没有我也要继续翻译。{PART_010}不过嘛，少了我这个世界级天文学家，你们肯定会很辛苦。"
+    },
+    {
+      "text_index": 1743147248,
+      "source_sha256": "edce9a6a0b2b7cd754e7a8a7f93ca8fb072ed781b79a6c130480537b8eb21890",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}也就是说……{PART_001}$animA0呼，{PART_002}说错了别见怪。{PART_003}我们有幸福词典，{PART_004}还有幸福人生？"
+    },
+    {
+      "text_index": 1743592515,
+      "source_sha256": "427d7ee201da39ca97bf8a4e9a699fa9194d2bbe53c3d0dcb2999affcdc2c996",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD06那些{SIG_N044}球体亮起来时，我们不是就已经知道这点了吗？{PART_001}当时他们已经证明了自己能感知电磁辐射。"
+    },
+    {
+      "text_index": 1764252382,
+      "source_sha256": "d38f5c94885d166ec0ce5ac5a716b419d838d7c1ef8ef4862f5b714c376fa6cc",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}地球上曾生活过 1700 亿人。{PART_001}也有数百亿个{SIG_N129}生活在{SIG_N140}上。{PART_002}此刻，我们代表着各自的物种，也代表着各自的星球。{PART_003}为了向多普勒博士、埃克斯博士、柯林斯博士、巴蒂斯塔博士、{PART_004}{PLAYER_NAME}，以及{SIG_N136}致敬，{PART_005}我相信你会向他们伸出友善之手。{PART_006}我们这个物种千百年来感受过的全部爱，{PART_007}以及我们愿意给予的全部善意，都将由你传达。{PART_008}请把我们的温暖带给他们。{PART_009}这是翻译小组的心愿。{PART_010}也是{SIG_N136}的心愿。{PART_011}……"
+    },
+    {
+      "text_index": 1765713626,
+      "source_sha256": "2be9affffefcea438201d14187a1da4178c82fc1dd435043e9adccac2815612d",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD03那我支持埃克斯。{PART_001}我现在最喜欢的词{PART_002}也是 {SIG_N090}。{PART_003}在弄清他们的家园在哪里之前，它会一直是我的最爱。{PART_004}$animD04不过现在，{PART_005}先去休息吧。{PART_006}我想大家都该睡一觉了$animD24。"
+    },
+    {
+      "text_index": 1768025739,
+      "source_sha256": "02e6980335595f033b8de55860bac0adf29db443436e50aec8dd1be3ec90997e",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}祝大家{PART_001}做个好梦。"
+    },
+    {
+      "text_index": 1772516030,
+      "source_sha256": "65fedde6c1ed98c82ede2bc39a2e83bb0f43aac017e3f056a03f5cb88e498b30",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}平均数（mean）？{PART_001}这是怎么回事？{PART_002}$animA4外星人是不是在故意刁难我们（being mean）？"
+    },
+    {
+      "text_index": 1783610364,
+      "source_sha256": "6834ffef849dbc5bd1551d08a5bc49bfa757d2d549f069a7c9725c356886ef47",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC5想得美。"
+    },
+    {
+      "text_index": 1783874608,
+      "source_sha256": "c4dd2d19588f11d791145930e417066e5e31c40051f409fb8486e8eaa4af1772",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}{SIG_N211}：{PART_001}这和他们涌现出的能力有关。{PART_002}{SIG_N101} 对现代 {SIG_N147} 而言，{PART_003}若没有那 8 个 {SIG_N146}，便无从谈起；{PART_004}反过来也一样。{PART_005}{SIG_N169} {SIG_N233} {SIG_N085} 这件事，{PART_006}对 {SIG_N137} 而言，{PART_007}其实忽视了他们存在中至关重要的一面。"
+    },
+    {
+      "text_index": 1798277994,
+      "source_sha256": "dbc83f3ed4d71df6ecc95f0e2ecc6f84c7032dff28c4c4b8973f7b3d0c0b0fce",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}……{PART_001}$animD21这一周大家依然干得很出色。{PART_002}$animD19我们提出的所有问题，以及更多尚未想到的问题，{PART_003}$animD20终于都在逐渐得到解答。{PART_004}$animD22回家吧，{PART_005}至少是回到你们在阿拉斯加的临时住处，{PART_006}好好休息，{PART_007}恢复精神，{PART_008}$animD24准备像过去 47 周那样继续赋予意义。"
+    },
+    {
+      "text_index": 1810802285,
+      "source_sha256": "2bdd5b1102585ade4dff7b067c8a1c2a61a1f664f7b3c9c1429287df5b253516",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}你知道我们会的，{PART_001}多普。"
+    },
+    {
+      "text_index": 1815126884,
+      "source_sha256": "0196c731dcec0c527b00c3ca68a312e4b7e47de38d2858b257ab7f824bbcbef3",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}她确实是。{PART_001}可这只让最后道别时更难受。{PART_002}后来大学几年像旋风一样过去。{PART_003}我全心投入语言学，拿出了当初和希美交谈时同样的热情。{PART_004}那没有从前那么有趣，也没有那么温暖，{PART_005}但我珍视那份相互理解、{PART_006}发现新事物的兴奋、{PART_007}通往另一个世界的机会，{PART_008}以及随之而来的自省。{PART_009}就像学习日语让我学会英语语法一样，{PART_010}研究其他语言和语言本身，{PART_011}让我更加了解自己的世界。{PART_012}对我和希美来说，{PART_013}语言障碍反而成了连接彼此的桥梁。{PART_014}那是我们第一个共同的话题：{PART_015}我们什么别的话都说不了。{PART_016}而从那以后，{PART_017}我学到了太多。{PART_018}真有意思。"
+    },
+    {
+      "text_index": 1821491771,
+      "source_sha256": "57720d24b4534c46ca9c8339a9595cafc6f2f642adbfc12fbed0a065709b5fd6",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}分解，{PART_001}也就是组合的逆过程。"
+    },
+    {
+      "text_index": 1823710327,
+      "source_sha256": "6ec4d1d7891513df08d78769938bdc349e4f8cbee79ada971dbb015671d81538",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD04现在我明白了。{PART_001}$animD19再看看你们的神情——{PART_002}$animD20那间屋里正在发生一件了不起的事。{PART_003}$animD21继续把你们的发现告诉我。{PART_004}$animD22等到时机成熟，{PART_005}全世界都会想听到这些。{PART_006}说句私心话，{PART_007}我也得仰仗你们四位，{PART_008}帮我理解一件对我无比珍贵的事。{PART_009}$animD23我们收到了一份礼物。{PART_010}我们也有责任把它传递给全世界。{PART_011}我想，世人也会从中获得一份安宁。{PART_012}$animD17也许到那一天，我们每个人也都会有所领悟。"
+    },
+    {
+      "text_index": 1831852667,
+      "source_sha256": "8d61476883e5c1c60876e086fd0fbeb2bb4850a152f5cf50a16d56a39e582d6e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}拜托，凯莉。{PART_001}幸福词典，{PART_002}幸福人生。"
+    },
+    {
+      "text_index": 1832328532,
+      "source_sha256": "ebe0031a872de52250a2bbd1f979557dde023df09543d43e3a9ae5fe790d5e53",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}别说了。"
+    },
+    {
+      "text_index": 1865228059,
+      "source_sha256": "3a33692475f7d26a866d711df53f09c2d9492f27627335cb2ab38aaae326fe74",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}2 个 {SIG_N131} 组成 1 个 {SIG_N129}。{PART_001}{SIG_N146} 先死亡：{PART_002}{SIG_N231}。{PART_003}{SIG_N147} 先死亡——"
+    },
+    {
+      "text_index": 1882706276,
+      "source_sha256": "aa4e615e45d0a550c3fc26f81e284a26e04f37c60b273bc2ee3a0eddf571b79b",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}……{PART_001}我很感激。{PART_002}当然，我感激他们，也感激 {SIG_N136}，{PART_003}可这不必多说。{PART_004}我也感激你，{PART_005}凯莉，{PART_006}还有 {PLAYER_NAME}、{PART_007}埃克斯博士、{PART_008}巴蒂斯塔博士——{PART_009}我很感激，恰好是你们四个在帮我们读懂这一切。{PART_010}{SIG_N153}，{PART_011}是吗？{PART_012}……{PART_013}我不禁想象，接下来的翻译工作中，还有怎样的发现在等着我们。{PART_014}下周见，{PART_015}翻译小组。{PART_016}我会热切期待，{PART_017}一如既往。"
+    },
+    {
+      "text_index": 1891912312,
+      "source_sha256": "2ed85e40a32a9b5ca7c08330774abf62e9f12111cc1267db623afb16aefbf4ff",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}好吧。{PART_001}$animD21柯林斯？"
+    },
+    {
+      "text_index": 1901140609,
+      "source_sha256": "95cd2b340fee8ba5d8648f253900d6972ebbee11bf3b4d80af220346e2354442",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}不是。{PART_001}{PLAYER_NAME}的意思是（meant）……{PART_002}算了。"
+    },
+    {
+      "text_index": 1905160565,
+      "source_sha256": "a1a3d1e029f2bdf685f655f8e94f0a07b4f06b5b6cc625dbbd149e042ace8d9f",
+      "translated_text": "{SPEAKER_BAUTISTA}{PART_000}——不幸人生。"
+    },
+    {
+      "text_index": 1907279397,
+      "source_sha256": "ca6620575a1b09f460d6762fb3f852d7ca582400d71896c8baeb8339ff2cfa02",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}$animD09那你们四个算是交到朋友了。{PART_001}我们很快再谈。{PART_002}继续翻译。{PART_003}也谢谢你们一直在帮我们读懂这一切。"
+    },
+    {
       "text_index": 1909872559,
       "source_sha256": "13e39ee53618f7498216b56da1dad292134e69daa2ca2a26a444fb9fb354e593",
       "translated_text": "{SPEAKER_BAUTISTA}{PART_000}判断结果出来了。{PART_001}你不会喜欢的。"
+    },
+    {
+      "text_index": 1910182374,
+      "source_sha256": "fa482f1e9ffc289626cdb44eddd18fe7774eef9bf312117777491db08bbda04a",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}我和希美交换姓名后，{PART_001}她夸了我的名字。{PART_002}我看得出来，{PART_003}从她的表情、{PART_004}还有声音的高低就能看出来。{PART_005}我一个词都不懂，却能明白整句话。{PART_006}很奇怪。{PART_007}我说自己听不懂，{PART_008}可其实我懂。{PART_009}当然，我拆不出其中每个词，{PART_010}这没错，{PART_011}但我能告诉你整句话的意思。{PART_012}这和听懂又有什么区别？"
+    },
+    {
+      "text_index": 1912542673,
+      "source_sha256": "6b368c567a6fb78d5bd72bd72bf090028980bd3a2ed978293376165fc05610aa",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}我和希美同岁，{PART_001}都出生在战争期间，{PART_002}但年纪太小，记不得多少。{PART_003}那或许是个相当幸运的出生时机，{PART_004}刚好在大萧条结束后，{PART_005}而世上最惨烈的冲突对我们两个来说还无法理解。{PART_006}我们从战争另一头走了出来，{PART_007}虽然两国不久前还彼此敌对，{PART_008}这却成了我们能分享的一种奇特经历。"
+    },
+    {
+      "text_index": 1955042030,
+      "source_sha256": "418bc5d3065f5784f4db62988fdc3ec982380d67f0b4360fd94e4ce23b17d2b2",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}艾伦，{PART_001}能坐在这间屋里的都不是等闲之辈——{PART_002}巴蒂斯塔、{PART_003}{PLAYER_NAME}、{PART_004}我，还有你。{PART_005}你能来到这里，绝不是碰巧。{PART_006}大家都认可你的能力，{PART_007}也知道你有{PART_008}别人替代不了的长处。"
+    },
+    {
+      "text_index": 1956479090,
+      "source_sha256": "c2d9d95c82b11c925894feed30bf7fdf781b8a08a1f69b110ad9f8c9b1930572",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我们可聪明了！{PART_001}总之，{PART_002}你还在想希美？"
+    },
+    {
+      "text_index": 1983510749,
+      "source_sha256": "782ff8eba33730c81adbd5d81f60faea0908dfee107cef88832cacb5f50b2bba",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}所以说真的，{PART_001}凯莉，{PART_002}$animA3你们俩到底聊些什么？{PART_003}你和谜美……？"
+    },
+    {
+      "text_index": 1987813718,
+      "source_sha256": "fd12aa2edb22c3470738c17a8bf33dea229ab336643b03eb88e3c61ead80233e",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不幸人生。"
+    },
+    {
+      "text_index": 2018263908,
+      "source_sha256": "c857932dd94a51b74a6ce6e7d4e180a3be9f0b8c75ae4b79032529f677fc87db",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不幸词典——"
+    },
+    {
+      "text_index": 2022070945,
+      "source_sha256": "8cc693573c2674f84e4cedd133d8eb07ff0f88372003b321c2462c6d18978ee6",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}对了$animD08。{PART_001}我还有一件事要宣布。{PART_002}我从家里带来的奖杯已经发完了——"
+    },
+    {
+      "text_index": 2039921581,
+      "source_sha256": "73073ba25fd3d89ec64b0865800b7d4fdd351c697e5793bf5f4d9c42a3399f6c",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}没错。{PART_001}指挥官，发射器已经按您的要求准备好了。{PART_002}对接前只能发送一次——准备好就发吧。"
+    },
+    {
+      "text_index": 2040299865,
+      "source_sha256": "144c93ac00b3d7858526f059712ff5e1bba6a1408a98a9e1f471069f40c87da2",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}对接顺利。"
+    },
+    {
+      "text_index": 2041849662,
+      "source_sha256": "552f6d85be4825895cb97bb2aa20b526a54b2734dd32aa893bad0f1abcbc6726",
+      "translated_text": "每周最佳员工"
+    },
+    {
+      "text_index": 2063258376,
+      "source_sha256": "72eabda7459c9927463c89abc3c2659ecbfac21a22a7f8c3936354e4d63e3b97",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}拜托，认真回答我。{PART_001}我还算过得去，{PART_002}但和那些巨擘比起来什么都不是。{PART_003}我承认，每天坐在柯林斯博士、{PART_004}巴蒂斯塔博士、{PART_005}{PLAYER_NAME}旁边时，{PART_006}这一点再明显不过。{PART_007}我可不像他们三个那样是各自领域的泰斗。"
+    },
+    {
+      "text_index": 2070070838,
+      "source_sha256": "31e99fb9e7fa5e0862f48abbef2c6f9e3f2b1a2f7afcbbbf36672c5abe645712",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}客人还等着呢。"
+    },
+    {
+      "text_index": 2075867498,
+      "source_sha256": "9539c9b964ef13cf4aae01bde5bfbc4d54c2d6755d329a8a713c020b6bef5a1c",
+      "translated_text": "{SPEAKER_CO_PILOT}{PART_000}{SIG_N045}的回应接进来了。{PART_001}指挥官，{PART_002}等您结束通讯，{PART_003}我们就关闭发射器，开始对接。{PART_004}听您指令。{PART_005}……"
+    },
+    {
+      "text_index": 2082869338,
+      "source_sha256": "a2b75e6619b426b5c0d9bc079531075365cafefbf9b7d86b0f67a8f63aa53c08",
+      "translated_text": "可选项"
+    },
+    {
+      "text_index": 2083615160,
+      "source_sha256": "0746da949eefdfde8669208d138dc44bcc6e050739202f29e8e57e4c45e3c2eb",
+      "translated_text": "电磁器官"
+    },
+    {
+      "text_index": 2084147077,
+      "source_sha256": "8612fbbf529fafb062aba7cfa1bb5affb6e8a1c7410f340f979d38d9de53b71c",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}如今我们已经知道，{PART_001}在遥远的太空某处，存在着一个聪慧、{PART_002}感情丰富、{PART_003}社会性极强的物种。{PART_004}他们充满好奇，珍爱自身以外的生命，{PART_005}也迫切渴望找到其他生命。{PART_006}……{PART_007}不过仔细想想，我们其实早就知道，这样的物种确实存在。"
+    },
+    {
+      "text_index": 2089705655,
+      "source_sha256": "f6d7aca57eb5f170183e1cb29ebe65b7530ce23bf1d5dab5d98fec361625fa68",
+      "allow_added_player_name": true,
+      "translated_text": "{SPEAKER_AKERS}{PART_000}不对，{PART_001}$animA4才不是！{PART_002}{PLAYER_NAME}偶尔也用过我们的假说，{PART_003}不是吗？"
+    },
+    {
+      "text_index": 2089943969,
+      "source_sha256": "3bbb53006601deec5f09618475f7ab446e67e30b69832b013de456009e01aefb",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}多普，{PART_001}$animA3其实应该由我来谢你。{PART_002}$animA4谢谢你让我加入。{PART_003}这对我的意义，呃，{PART_004}$animA5哈哈……{PART_005}比你想的还要大。{PART_006}不过，{PART_007}$animA2我想你其实都明白。"
+    },
+    {
+      "text_index": 2090871721,
+      "source_sha256": "f91e3c77e333bb70b0f14c906b905388fd809c520d0688d23b7c8b7778a0e9e1",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}我是认真的，{PART_001}多普。{PART_002}$animD19对我这样的硬汉天文学家来说，这份心意比你想象的更重要。"
+    },
+    {
+      "text_index": 2093353421,
+      "source_sha256": "231d063994ae84c5a116eb7b804d9d5cbe8374408e4ca75f4ac0f76b48684d9a",
+      "translated_text": "{SPEAKER_COLLINS}{PART_000}正是。{PART_001}上周，{PART_002}他们探讨了这两种 {SIG_N210} 在何处发生冲突，{PART_003}具体来说，就是如何理解 {SIG_N227} 与 {SIG_N229} 在单个 {SIG_N129} 内的性质。"
+    },
+    {
+      "text_index": 2098792549,
+      "source_sha256": "69a42ee2d1e43df2abefd433ca7e22ac0d6d27f2cf07892a85ef1466905259b8",
+      "translated_text": "{SPEAKER_AKERS}{PART_000}能参与这一切……{PART_001}$animA5我真的很幸运。{PART_002}大家，{PART_003}谢谢你们一直陪着我。{PART_004}我不可能遇到比你们更好的一群人了。{PART_005}我很幸运。"
+    },
+    {
+      "text_index": 2121798557,
+      "source_sha256": "21cb0be8437684ce0851165b5cda79fb90822e9a75b73c0b3187d68903d57b3e",
+      "translated_text": "{SPEAKER_DOPPLER}{PART_000}翻译小组，{PART_001}我们接着——{PART_002}$animD15你们看起来有些不一样了。"
+    },
+    {
+      "text_index": 2139157137,
+      "source_sha256": "8d7a0a235aaf13a5f40411471faacc7feaa66dc5cf6bd921f8305bde50750d82",
+      "translated_text": "{SPEAKER_PILOT}{PART_000}氢谱线。"
     }
   ]
 }

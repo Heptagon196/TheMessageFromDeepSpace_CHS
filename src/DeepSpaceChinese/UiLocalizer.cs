@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using BepInEx.Logging;
@@ -18,6 +19,12 @@ internal sealed class UiLocalizer
     private static readonly Regex LocalizedUnknownSignalPlaceholderRegex = new(
         @"信号(-?\d+)(?![A-Za-z0-9_])",
         RegexOptions.CultureInvariant);
+    private static readonly FieldInfo DictionaryWordLabelOverrideField =
+        typeof(DictionaryWordLabel).GetField("overrideWithText",
+            BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly MethodInfo DictionaryWordLabelUpdateMethod =
+        typeof(DictionaryWordLabel).GetMethod("UpdateTermText",
+            BindingFlags.Instance | BindingFlags.NonPublic);
     [ThreadStatic] private static bool _applying;
 
     private TranslationStore _store;
@@ -49,6 +56,32 @@ internal sealed class UiLocalizer
         _reportedMismatches.Clear();
     }
 
+    internal string OriginalTextForLayout(TMP_Text component)
+    {
+        if (component == null)
+            return string.Empty;
+        int id = component.GetInstanceID();
+        _originalTexts.TryGetValue(id, out string saved);
+        _lastLocalizedTexts.TryGetValue(id, out string lastLocalized);
+        if (TryGetStableStaticReferenceOriginal(component, out string stableOriginal))
+            return SelectStableReferenceSourceForTests(stableOriginal, saved,
+                component.text, lastLocalized);
+        if (saved != null)
+            return saved;
+        string key = BuildUiStableKey(component);
+        if (_store.TryGet(key, out RuntimeTranslationEntry entry) && entry.Kind == "ui_text")
+            return entry.GameString("original_text", entry.SourceText) ?? string.Empty;
+        return component.text ?? string.Empty;
+    }
+
+    internal bool HasStableOriginalForLayout(TMP_Text component)
+    {
+        if (component == null)
+            return false;
+        return _store.TryGet(BuildUiStableKey(component), out RuntimeTranslationEntry entry) &&
+               entry.Kind == "ui_text";
+    }
+
     public bool TryResolveSystemLiteralPair(string current, out string original,
         out string translated)
     {
@@ -61,7 +94,7 @@ internal sealed class UiLocalizer
                 entry.GameString("original_text", entry.SourceText), entry,
                 _dialogue.PlayerFullName(DisplayMode.OriginalOnly));
             string candidateTranslated = TokenCodec.RestoreForEntry(entry.TranslatedText, entry,
-                _dialogue.PlayerFullName(DisplayMode.TranslationOnly));
+                _dialogue.PlayerFullName(DisplayMode.TranslationOnly), true);
             if (current != candidateOriginal && current != candidateTranslated)
                 continue;
             if (original == null)
@@ -80,6 +113,22 @@ internal sealed class UiLocalizer
         return original != null;
     }
 
+    internal string LocalizeDialogueSpeakerName(string current, DisplayMode target)
+    {
+        if (string.IsNullOrEmpty(current))
+            return current;
+        string lookup = string.Equals(current, "Co-Pilot",
+            StringComparison.OrdinalIgnoreCase) ? "Copilot" : current;
+        if (!TryResolveSystemLiteralPair(lookup, out string original,
+                out string translated))
+            return current;
+        if (target == DisplayMode.TranslationOnly)
+            return translated;
+        return string.Equals(original, "Copilot", StringComparison.OrdinalIgnoreCase)
+            ? "Co-Pilot"
+            : original;
+    }
+
     private static Dictionary<string, List<RuntimeTranslationEntry>> BuildSystemIndex(
         TranslationStore store) =>
         store.Entries.Where(entry =>
@@ -95,6 +144,9 @@ internal sealed class UiLocalizer
                 component, proposed, out string periodicTableSymbol))
             return RememberDisplay(component, proposed, periodicTableSymbol);
         string localized;
+        if (CompilerErrorRuntime.TryResolvePreparedSource(proposed,
+                out string preparedOriginal, out string preparedTranslation))
+            return RememberDisplay(component, preparedOriginal, preparedTranslation);
         if (CompilerErrorRuntime.IsCompilerError(proposed))
         {
             localized = CompilerErrorRuntime.Format(proposed, _config.DisplayMode);
@@ -124,19 +176,37 @@ internal sealed class UiLocalizer
     {
         if (!_config.Enabled)
             return;
+        ReapplyTexts(Resources.FindObjectsOfTypeAll<TMP_Text>(), applySystemStrings: true);
+    }
+
+    internal void ReapplyUnder(Transform root)
+    {
+        if (!_config.Enabled || root == null)
+            return;
+        ReapplyTexts(root.GetComponentsInChildren<TMP_Text>(true), applySystemStrings: false);
+    }
+
+    private void ReapplyTexts(IEnumerable<TMP_Text> texts, bool applySystemStrings)
+    {
+        TMP_Text[] textList = texts.Where(text => text != null).ToArray();
         bool wasApplying = _applying;
         _applying = true;
         try
         {
             int uiCount = 0;
-            foreach (TMP_Text text in Resources.FindObjectsOfTypeAll<TMP_Text>())
+            foreach (TMP_Text text in textList)
             {
                 if (text == null)
                     continue;
                 int id = text.GetInstanceID();
                 _originalTexts.TryGetValue(id, out string saved);
                 _lastLocalizedTexts.TryGetValue(id, out string lastLocalized);
-                string original = SelectRefreshSourceForTests(saved, text.text, lastLocalized);
+                string original;
+                if (TryGetStableStaticReferenceOriginal(text, out string stableOriginal))
+                    original = SelectStableReferenceSourceForTests(stableOriginal, saved,
+                        text.text, lastLocalized);
+                else
+                    original = SelectRefreshSourceForTests(saved, text.text, lastLocalized);
                 string localized = TranslateIncomingWithoutGuard(text, original);
                 _originalTexts[id] = original;
                 _lastLocalizedTexts[id] = localized;
@@ -146,8 +216,12 @@ internal sealed class UiLocalizer
                     uiCount++;
                 }
             }
-            int systemCount = ApplySystemStrings();
-            _log.LogInfo($"UI 本地化已应用：{uiCount} 个 TMP 文本，{systemCount} 个运行时字符串模板。");
+            int systemCount = applySystemStrings ? ApplySystemStrings() : 0;
+            int dynamicLabelCount = RefreshDictionaryWordLabels(textList);
+            if (uiCount + systemCount + dynamicLabelCount > 0)
+                _log.LogInfo($"UI 本地化已应用：{uiCount} 个 TMP 文本，" +
+                             $"{systemCount} 个运行时字符串模板，" +
+                             $"{dynamicLabelCount} 个动态词典标签。");
         }
         finally
         {
@@ -191,6 +265,10 @@ internal sealed class UiLocalizer
 
     private string TranslateDynamic(TMP_Text component, string original)
     {
+        string shortcut = ShortcutDisplayFormatter.Translate(original, _config.DisplayMode);
+        if (shortcut != original)
+            return shortcut;
+
         foreach (RuntimeTranslationEntry template in _store.UiTemplates)
         {
             if (TokenCodec.Sha256(template.SourceText ?? string.Empty) != template.SourceSha256)
@@ -212,10 +290,13 @@ internal sealed class UiLocalizer
                 return localized;
         }
 
-        RuntimeTranslationEntry displayValue = _store.FindUnambiguousDisplayValue(original);
+        string displayValueLookup =
+            PeriodicTableElementCompatibility.ResolvePreviewNameLookup(component, original);
+        RuntimeTranslationEntry displayValue =
+            _store.FindUnambiguousDisplayValue(displayValueLookup);
         if (displayValue != null)
         {
-            string localized = TranslateExactEntry(displayValue, original);
+            string localized = TranslateExactEntry(displayValue, displayValueLookup);
             if (localized != null)
                 return localized;
         }
@@ -229,6 +310,21 @@ internal sealed class UiLocalizer
 
     internal string TranslateDynamicLiteral(string original) =>
         TranslateDynamic(null, original);
+
+    internal string TranslateDisplayValueLiteral(string original)
+    {
+        if (original == null || !_config.Enabled || !_config.TranslateUI)
+            return original;
+        RuntimeTranslationEntry entry = _store.FindUnambiguousDisplayValue(original);
+        if (entry != null)
+            return TranslateExactEntry(entry, original) ?? original;
+
+        // ProgressLog passes PuzzleList.name (for example "HELLO WORLD") while
+        // the serialized field contains "Hello World!".  Use the same guarded,
+        // longest-match alias path as composite UI text instead of falling through
+        // to the shorter "Hello" title.
+        return ApplyDisplayValues(original);
+    }
 
     internal void ApplyKnownDynamicText(TMP_Text component, string original)
     {
@@ -377,11 +473,13 @@ internal sealed class UiLocalizer
     internal string ApplyDisplayValues(string text)
     {
         text = ChineseYearQuantityFormatter.Translate(text);
-        foreach (KeyValuePair<string, RuntimeTranslationEntry> pair in _store.DisplayValues
-                     .OrderByDescending(value => value.Key.Length))
+        List<KeyValuePair<string, RuntimeTranslationEntry>> values = _store.DisplayValues
+            .OrderByDescending(value => value.Key.Length)
+            .ToList();
+        var validValues = new List<(string Source, RuntimeTranslationEntry Entry)>(values.Count);
+        foreach (KeyValuePair<string, RuntimeTranslationEntry> pair in values)
         {
-            if (string.IsNullOrEmpty(pair.Key) ||
-                text.IndexOf(pair.Key, StringComparison.OrdinalIgnoreCase) < 0)
+            if (string.IsNullOrEmpty(pair.Key))
                 continue;
             RuntimeTranslationEntry entry = pair.Value;
             if (TokenCodec.Sha256(TokenCodec.ProtectForEntry(pair.Key, entry)) !=
@@ -390,9 +488,60 @@ internal sealed class UiLocalizer
                 ReportMismatch(entry.StableKey);
                 continue;
             }
-            text = ReplaceOrdinalIgnoreCase(text, pair.Key, entry.TranslatedText);
+            validValues.Add((pair.Key, entry));
+
+            // Some summary screens use the Unity object's name instead of the
+            // serialized display field.  In the shipped data that turns
+            // "Hello World!" into "HELLO WORLD".  Accept the object name only
+            // when it is exactly the same value with terminal punctuation
+            // removed; this avoids turning arbitrary object names into aliases.
+            string objectName = entry.GameString("object_name", string.Empty);
+            if (IsTerminalPunctuationAlias(pair.Key, objectName))
+                validValues.Add((objectName, entry));
         }
-        return text;
+
+        validValues = validValues
+            .OrderByDescending(value => value.Source.Length)
+            .ToList();
+
+        // Replace against the original rendered value in one pass. Re-running shorter
+        // display keys over an already translated longer key caused names such as
+        // "Hello World!" to become the mixed-language "你好 World!" because "Hello"
+        // was processed again after the complete group name had matched.
+        var matches = new List<(int Start, int Length, string Replacement)>();
+        foreach ((string source, RuntimeTranslationEntry entry) in validValues)
+        {
+            int search = 0;
+            int match = text.IndexOf(source, search, StringComparison.OrdinalIgnoreCase);
+            while (match >= 0)
+            {
+                int after = match + source.Length;
+                bool validStart = !IsAsciiIdentifier(source[0]) || match == 0 ||
+                                  !IsAsciiIdentifier(text[match - 1]);
+                bool validEnd = !IsAsciiIdentifier(source[source.Length - 1]) ||
+                                after == text.Length || !IsAsciiIdentifier(text[after]);
+                bool overlapsLongerMatch = matches.Any(existing =>
+                    match < existing.Start + existing.Length && after > existing.Start);
+                if (validStart && validEnd && !overlapsLongerMatch)
+                    matches.Add((match, source.Length, entry.TranslatedText));
+                search = match + Math.Max(1, source.Length);
+                match = text.IndexOf(source, search, StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
+        if (matches.Count == 0)
+            return text;
+        matches.Sort((left, right) => left.Start.CompareTo(right.Start));
+        var result = new StringBuilder(text.Length);
+        int offset = 0;
+        foreach ((int start, int length, string replacement) in matches)
+        {
+            result.Append(text, offset, start - offset);
+            result.Append(replacement);
+            offset = start + length;
+        }
+        result.Append(text, offset, text.Length - offset);
+        return result.ToString();
     }
 
     private static string ReplaceOrdinalIgnoreCase(string text, string source,
@@ -436,6 +585,15 @@ internal sealed class UiLocalizer
     private static bool IsAsciiIdentifier(char value) =>
         value is >= 'A' and <= 'Z' or >= 'a' and <= 'z' or >= '0' and <= '9' or '_';
 
+    private static bool IsTerminalPunctuationAlias(string source, string alias)
+    {
+        if (string.IsNullOrWhiteSpace(source) || string.IsNullOrWhiteSpace(alias))
+            return false;
+        string trimmed = source.TrimEnd('!', '?', '.', '。', '！', '？');
+        return trimmed.Length < source.Length &&
+               string.Equals(trimmed, alias, StringComparison.OrdinalIgnoreCase);
+    }
+
     internal static string SelectRefreshSourceForTests(string savedOriginal,
         string currentDisplay, string lastLocalizedDisplay)
     {
@@ -445,6 +603,51 @@ internal sealed class UiLocalizer
             ? savedOriginal
             : currentDisplay;
     }
+
+    internal static string SelectStableReferenceSourceForTests(string stableOriginal,
+        string savedOriginal, string currentDisplay, string lastLocalizedDisplay)
+    {
+        if (stableOriginal == null)
+            return SelectRefreshSourceForTests(savedOriginal, currentDisplay,
+                lastLocalizedDisplay);
+        string stablePrefix = stableOriginal.TrimEnd();
+        bool isGeneratedPrefix = stablePrefix.EndsWith("=", StringComparison.Ordinal);
+        if (!isGeneratedPrefix)
+            return stableOriginal;
+
+        if (!string.IsNullOrEmpty(savedOriginal) &&
+            savedOriginal.StartsWith(stableOriginal, StringComparison.OrdinalIgnoreCase) &&
+            savedOriginal.Length > stableOriginal.Length)
+            return lastLocalizedDisplay != null && currentDisplay == lastLocalizedDisplay
+                ? savedOriginal
+                : currentDisplay;
+        if (!string.IsNullOrEmpty(currentDisplay) &&
+            currentDisplay.StartsWith(stableOriginal, StringComparison.OrdinalIgnoreCase) &&
+            currentDisplay.Length > stableOriginal.Length)
+            return currentDisplay;
+        return stableOriginal;
+    }
+
+    private bool TryGetStableStaticReferenceOriginal(TMP_Text component,
+        out string original)
+    {
+        original = null;
+        if (component == null)
+            return false;
+        string path = BuildObjectPath(component.transform);
+        if (!IsStaticReferencePathForTests(path) ||
+            !_store.TryGet(BuildUiStableKey(component), out RuntimeTranslationEntry entry) ||
+            entry.Kind != "ui_text")
+            return false;
+        original = entry.GameString("original_text", entry.SourceText);
+        return original != null;
+    }
+
+    internal static bool IsStaticReferencePathForTests(string path) =>
+        !string.IsNullOrEmpty(path) &&
+        path.StartsWith("Reference Window/", StringComparison.Ordinal) &&
+        path.IndexOf("/ELEMENT DISPLAY", StringComparison.OrdinalIgnoreCase) < 0 &&
+        path.IndexOf("/PERIODIC TABLE PAGE", StringComparison.OrdinalIgnoreCase) < 0;
 
     private string RememberDisplay(TMP_Text component, string original, string localized)
     {
@@ -479,6 +682,38 @@ internal sealed class UiLocalizer
             foreach (RuntimeTranslationEntry entry in entries)
                 if (ApplySystemEntry(component, entry))
                     count++;
+        }
+        return count;
+    }
+
+    private static int RefreshDictionaryWordLabels(IEnumerable<TMP_Text> texts)
+    {
+        if (DictionaryWordLabelUpdateMethod == null)
+            return 0;
+        var visited = new HashSet<int>();
+        int count = 0;
+        foreach (TMP_Text text in texts)
+        {
+            DictionaryWordLabel wordLabel = text?.GetComponent<DictionaryWordLabel>();
+            if (wordLabel == null || !wordLabel.gameObject.scene.IsValid() ||
+                !visited.Add(wordLabel.GetInstanceID()))
+                continue;
+            if (DictionaryWordLabelOverrideField?.GetValue(wordLabel) is true)
+                continue;
+            try
+            {
+                // The game composes these labels from prefix + dictionary word + suffix.
+                // Re-run that composition only after component-string localization has
+                // updated prefix/suffix; otherwise F5/F8 can leave the prefab prefix
+                // (for example "1 Helisec = ") and discard its generated value.
+                DictionaryWordLabelUpdateMethod.Invoke(wordLabel, null);
+                count++;
+            }
+            catch
+            {
+                // Some inactive startup objects run before UserDictionary exists. Their
+                // owning page is refreshed again when it is actually opened.
+            }
         }
         return count;
     }

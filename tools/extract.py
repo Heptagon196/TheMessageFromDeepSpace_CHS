@@ -14,11 +14,9 @@ from typing import Any, Iterable
 TOOLS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS_DIR))
 from project_config import DATA_DIR, GAME_ROOT, PROJECT_DIR
-LOCAL_PACKAGES = PROJECT_DIR / "tools" / "python-packages"
-sys.path.insert(0, str(LOCAL_PACKAGES))
+from python_runtime import load_unitypy
 
-import UnityPy  # noqa: E402
-from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator  # noqa: E402
+UnityPy, TypeTreeGenerator = load_unitypy()
 from extraction_rules import (  # noqa: E402
     EXPLICIT_COMPONENT_STRING_FIELDS,
     UI_FRAGMENTS,
@@ -156,6 +154,7 @@ def build_component_dialogue_source(frame: dict[str, Any]) -> tuple[str, list[di
         parts_meta.append(
             {
                 "part_index": part_index,
+                "clear_previous": bool(part.get("clearPrev", 0)),
                 "leading_whitespace": leading,
                 "trailing_whitespace": trailing,
                 "original_text": original,
@@ -371,6 +370,7 @@ def extract_dialogue(
                 parts_meta.append(
                     {
                         "part_index": part_index,
+                        "clear_previous": bool(part.get("clearPrev", 0)),
                         "leading_whitespace": leading,
                         "trailing_whitespace": trailing,
                         "original_text": original,

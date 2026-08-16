@@ -56,4 +56,12 @@ replaced = update_translation.upsert_override(updated, dialogue, "changed")
 assert len(replaced["entries"]) == 1
 assert replaced["entries"][0]["translated_text"] == "changed"
 
+with_player_name = update_translation.upsert_override(
+    updated,
+    dialogue,
+    "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}说……",
+    allow_added_player_name=True,
+)
+assert with_player_name["entries"][0]["allow_added_player_name"] is True
+
 print("Single-command translation update tests passed.")

@@ -794,7 +794,8 @@
     "context": {
       "kind": "ui_template",
       "stable_key": "ui-template:universal-abundance",
-      "template_id": "universal-abundance"
+      "template_id": "universal-abundance",
+      "translate_display_values": true
     }
   },
   {

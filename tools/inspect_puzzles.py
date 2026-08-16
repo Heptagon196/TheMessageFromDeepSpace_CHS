@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import re
 import sys
 from pathlib import Path
@@ -12,6 +11,7 @@ from typing import Any
 TOOLS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS_DIR))
 from project_config import DATA_DIR, GAME_ROOT, PROJECT_DIR
+from python_runtime import load_unitypy
 SAVE_DIR = (
     Path.home()
     / "AppData"
@@ -84,22 +84,6 @@ def decoded_signal(signals: list[int], dictionary: dict[int, str]) -> dict[str, 
         "tokens": tokens,
         "text": render_tokens(tokens),
     }
-
-
-def load_unitypy() -> tuple[Any, Any]:
-    dependency_dir = os.environ.get("TMFDS_PYTHON_PACKAGES")
-    if dependency_dir:
-        sys.path.insert(0, dependency_dir)
-    else:
-        sys.path.insert(0, str(PROJECT_DIR / "tools" / "python-packages"))
-    try:
-        import UnityPy
-        from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator
-    except ImportError as exc:
-        raise RuntimeError(
-            "缺少 UnityPy。请通过 inspect_puzzle.ps1 运行，包装脚本会自动下载依赖。"
-        ) from exc
-    return UnityPy, TypeTreeGenerator
 
 
 def extract(display_id: int, dictionary: dict[int, str]) -> dict[str, Any]:

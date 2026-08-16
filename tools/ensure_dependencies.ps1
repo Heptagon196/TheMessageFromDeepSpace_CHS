@@ -5,6 +5,7 @@ param(
 $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $projectRoot = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot "initialize_tool_environment.ps1") -ProjectRoot $projectRoot
 if ([string]::IsNullOrWhiteSpace($VendorRoot)) {
     $VendorRoot = Join-Path $projectRoot "vendor"
 }

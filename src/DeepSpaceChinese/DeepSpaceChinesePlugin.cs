@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -14,7 +16,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "0.1.88";
+    public const string PluginVersion = "1.0.0";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -24,6 +26,13 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _patchConfig?.Enabled == true && _patchConfig.CompilerPunctuationInsensitive;
     internal bool MoveNewWordPromptToLowerRightEnabled =>
         _patchConfig?.Enabled == true && _patchConfig.MoveNewWordPromptToLowerRight;
+    internal string OriginalTextForLayout(TMP_Text component) =>
+        _ui?.OriginalTextForLayout(component) ?? component?.text ?? string.Empty;
+    internal void LocalizeCredits(CreditsSequence credits)
+    {
+        if (_patchConfig?.Enabled == true && credits != null)
+            _ui?.ReapplyUnder(credits.transform);
+    }
     internal bool TryMatchDictionaryDialogueCondition(ListenerCondition condition) =>
         _patchConfig?.Enabled == true && _ui != null &&
         DictionaryDialogueConditionCompatibility.TryMatch(condition, _ui,
@@ -43,12 +52,16 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     private PlayerNameRuntime _playerName;
     private PuzzleFixRuntime _puzzleFixes;
     private JournalPreviewRuntime _journalPreview;
+    private ReferenceCaptureRuntime _referenceCapture;
     private DictionaryTriggerAliasStore _dictionaryTriggerAliases;
+    private DictionaryAliasDialogueRuntime _dictionaryAliasDialogues;
     private DictionaryDialogueFixRuntime _dictionaryDialogueFixes;
+    private KonamiAnswerCheatRuntime _answerCheat;
     private Harmony _harmony;
     private string _translationDirectory;
     private string _dictionaryTriggerAliasPath;
     private string _configPath;
+    private Coroutine _mainMenuActivationLayoutRoutine;
 
     private void Awake()
     {
@@ -66,19 +79,24 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             out _dictionaryTriggerAliases);
         _frameCatalog = new DialogueFrameCatalog();
         _dialogue = new DialogueLocalizer(store, _patchConfig, _frameCatalog, Logger);
+        _dictionaryAliasDialogues = new DictionaryAliasDialogueRuntime(_patchConfig,
+            _dialogue, _frameCatalog, _dictionaryTriggerAliases, Logger);
         _font = new FontFallback(_patchConfig, contentRoot, Logger);
         _characterFonts = new CharacterFontRegistry();
         _logTitles = new LogTitleRuntime(_dialogue, _font, _patchConfig, Logger);
         _ui = new UiLocalizer(store, _patchConfig, _dialogue, _frameCatalog, Logger);
         _mainMenuLayout = new MainMenuLayoutRuntime(_patchConfig, Logger);
-        _referencePageLayout = new ReferencePageLayoutRuntime(_patchConfig, Logger);
+        _referencePageLayout = new ReferencePageLayoutRuntime(_patchConfig, Logger, _font, _ui);
         _liveDialogueText = new DialogueLiveTextRuntime(_patchConfig, Logger);
         _dialogueLayout = new DialogueLayoutRuntime(_patchConfig, Logger);
         _playerName = new PlayerNameRuntime(_patchConfig, Logger);
         _puzzleFixes = new PuzzleFixRuntime(_patchConfig, fixDirectory, Logger);
         _dictionaryDialogueFixes = new DictionaryDialogueFixRuntime(
             System.IO.Path.Combine(fixDirectory, "DictionaryDialogue"), Logger);
-        _journalPreview = new JournalPreviewRuntime(this, _frameCatalog);
+        _answerCheat = new KonamiAnswerCheatRuntime(_patchConfig, Logger);
+        _journalPreview = new JournalPreviewRuntime(this, _frameCatalog, _dialogue);
+        _referenceCapture = ReferenceCaptureRuntime.TryCreate(this, Logger,
+            _referencePageLayout);
         _puzzleFixes.ReloadRules();
         _dictionaryDialogueFixes.ReloadRules();
 
@@ -93,6 +111,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         {
             _font.EnsureLoaded();
             StartCoroutine(ReapplyNextFrame());
+            _referenceCapture?.Start();
         }
         Logger.LogInfo($"汉化补丁 {PluginVersion} 已加载；显示模式 {_patchConfig.DisplayMode}；" +
                        $"切换键 {_patchConfig.ToggleModeHotkey}；重载键 {_patchConfig.ReloadTranslationsHotkey}。");
@@ -112,6 +131,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
                 ReloadTranslations();
             if (Input.GetKeyDown(KeyCode.F6))
                 _journalPreview?.Toggle();
+            _answerCheat?.Update();
         }
         catch (Exception ex)
         {
@@ -140,21 +160,61 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 
     private void ToggleDisplayMode()
     {
-        _patchConfig.DisplayMode = _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+        DisplayMode target = _patchConfig.DisplayMode == DisplayMode.TranslationOnly
             ? DisplayMode.OriginalOnly
             : DisplayMode.TranslationOnly;
+        SetDisplayMode(target, announce: true);
+    }
+
+    internal DisplayMode CurrentDisplayMode => _patchConfig.DisplayMode;
+
+    internal string PrepareCompilerErrorForTyping(string text)
+    {
+        if (_patchConfig?.Enabled != true || !_patchConfig.TranslateUI)
+            return text;
+        return CompilerErrorRuntime.PrepareForTyping(text, _patchConfig.DisplayMode);
+    }
+
+    internal void SetDisplayModeForReferenceCapture(DisplayMode target)
+    {
+        if (_patchConfig.DisplayMode != target)
+        {
+            SetDisplayMode(target, announce: false);
+            return;
+        }
+
+        // Opening some reference pages rewrites their TMP body after the mode was set.
+        // Capture mode must therefore be idempotent but not a no-op: force the currently
+        // selected language back onto the freshly opened page.
+        _referencePageLayout.CaptureAll();
+        _ui.ReapplyAll();
+        _referencePageLayout.ApplyAll();
+    }
+
+    private void SetDisplayMode(DisplayMode target, bool announce)
+    {
+        if (_patchConfig.DisplayMode == target)
+            return;
+        _patchConfig.DisplayMode = target;
         _font.EnsureLoaded();
         RegisterCharacterFonts();
         ApplyProgressLogTitleFonts();
+        _referencePageLayout.CaptureAll();
         _dialogue.ReapplyAll();
+        _dictionaryAliasDialogues?.ReapplyAll();
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
         _referencePageLayout.ApplyAll();
         _liveDialogueText.RefreshAll();
         _logTitles.RefreshAll();
         _playerName.ApplyAll();
-        string displayName = _patchConfig.DisplayMode == DisplayMode.TranslationOnly ? "仅译文" : "仅原文";
-        Logger.LogMessage($"汉化显示模式已切换为：{displayName}");
+        if (announce)
+        {
+            string displayName = _patchConfig.DisplayMode == DisplayMode.TranslationOnly
+                ? "仅译文"
+                : "仅原文";
+            Logger.LogMessage($"汉化显示模式已切换为：{displayName}");
+        }
     }
 
     private void ReloadTranslations()
@@ -164,6 +224,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _patchConfig.ReloadDialogueColorSettings(_configPath, Logger);
         _patchConfig.ReloadCompatibilitySettings(_configPath, Logger);
         _patchConfig.ReloadLayoutSettings(_configPath, Logger);
+        _patchConfig.ReloadCheatSettings(_configPath, Logger);
         if (_patchConfig.MoveNewWordPromptToLowerRight)
             TermLoggerLayoutRuntime.ApplyCurrentLists();
         else
@@ -173,7 +234,10 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _dictionaryDialogueFixes.ApplyAll();
         if (DictionaryTriggerAliasStore.TryLoad(_dictionaryTriggerAliasPath, Logger,
                 out DictionaryTriggerAliasStore replacementAliases))
+        {
             _dictionaryTriggerAliases = replacementAliases;
+            _dictionaryAliasDialogues?.ReplaceStore(replacementAliases);
+        }
         _dialogueLayout.ReapplySpeakerColors();
         bool fontReady = _font.ReloadIfChanged(out bool fontReloaded);
         ApplyProgressLogTitleFonts();
@@ -190,7 +254,9 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             _dialogue.ReplaceStore(replacement);
             _ui.ReplaceStore(replacement);
         }
+        _referencePageLayout.CaptureAll();
         _dialogue.ReapplyAll();
+        _dictionaryAliasDialogues?.ReapplyAll();
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
         _referencePageLayout.ApplyAll();
@@ -221,6 +287,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _font.EnsureLoaded();
         RegisterCharacterFonts();
         ApplyProgressLogTitleFonts();
+        _referencePageLayout.CaptureAll();
         _dialogue.ReapplyAll();
         _ui.ReapplyAll();
         _mainMenuLayout.ApplyAll();
@@ -245,11 +312,82 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         }
     }
 
+    internal void MainMenuTabActivated()
+    {
+        if (_patchConfig?.Enabled != true)
+            return;
+        if (_mainMenuActivationLayoutRoutine != null)
+            StopCoroutine(_mainMenuActivationLayoutRoutine);
+        _mainMenuActivationLayoutRoutine = StartCoroutine(
+            ReapplyMainMenuAfterTabActivation());
+    }
+
+    private IEnumerator ReapplyMainMenuAfterTabActivation()
+    {
+        // TabAdder activates newly unlocked buttons after the scene's bounded startup
+        // stabilization has finished. Wait one frame for TMP/mesh activation, then only
+        // reflow when the active tab set actually changed.
+        yield return null;
+        _mainMenuLayout?.ApplyIfActiveTabsChanged();
+        _mainMenuActivationLayoutRoutine = null;
+    }
+
+    internal void ReferencePageOpened(ReferenceSubWindow subWindow)
+    {
+        if (_patchConfig?.Enabled == true && subWindow != null)
+            StartCoroutine(ReapplyReferencePageAfterOpen(subWindow));
+    }
+
+    internal void PeriodicTableElementDisplayed(PeriodicTableDisplay display)
+    {
+        if (_patchConfig?.Enabled == true && display != null)
+            StartCoroutine(ReapplyPeriodicTableAfterDisplay(display));
+    }
+
+    private IEnumerator ReapplyPeriodicTableAfterDisplay(PeriodicTableDisplay display)
+    {
+        // The game writes the detail strings and recalculates them over several frames.
+        // Wait for those writes to finish, then touch only the owning reference page.
+        for (int pass = 0; pass < 3; pass++)
+        {
+            yield return null;
+            if (display == null)
+                yield break;
+        }
+        Transform pageRoot = _referencePageLayout.PageRootFor(display.transform);
+        _ui.ReapplyUnder(pageRoot ?? display.transform);
+        _referencePageLayout.ApplyContaining(display.transform);
+    }
+
+    private IEnumerator ReapplyReferencePageAfterOpen(ReferenceSubWindow subWindow)
+    {
+        // Inactive pages and their custom graphics settle over more than one frame.
+        // Wait for initialization, then reflow only the page that was opened. F5/F8 retain
+        // the global pass because their explicit purpose is to refresh every page.
+        for (int pass = 0; pass < 3; pass++)
+        {
+            yield return null;
+            if (subWindow == null)
+                yield break;
+        }
+        ScrollArea area = typeof(ReferenceSubWindow)
+            .GetField("scrollArea", BindingFlags.Instance | BindingFlags.NonPublic)?
+            .GetValue(subWindow) as ScrollArea;
+        Transform pageRoot = area?.transform;
+        if (pageRoot != null)
+            _ui.ReapplyUnder(pageRoot);
+        _referencePageLayout.ApplyFor(subWindow);
+    }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         _mainMenuLayout?.RestoreAll();
-        _referencePageLayout?.RestoreAll();
+        // Unity destroys child ScrollBar3D/ScrollArea components before the BepInEx
+        // plugin on game shutdown. Restoring reference-page heights here calls back into
+        // those already-torn-down components and produces a spurious NullReferenceException.
+        // Reference-page state is scene-owned and is about to be discarded, so no restore
+        // is needed during plugin destruction.
         TermLoggerLayoutRuntime.RestoreCurrentLists();
         _puzzleFixes?.RestoreAll();
         _dictionaryDialogueFixes?.RestoreAll();
@@ -295,9 +433,24 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         if (_patchConfig?.Enabled == true)
         {
             _dialogue.RegisterAndApply(bank);
+            _dictionaryAliasDialogues?.ApplyBank(bank);
             _logTitles.RefreshAll();
         }
     }
+
+    internal void PrepareDialogueBank(DialogueBank bank)
+    {
+        if (_patchConfig?.Enabled == true)
+            _dictionaryAliasDialogues?.PrepareBank(bank);
+    }
+
+    internal void BeginDictionaryRename(int termId, string fromName, string toName) =>
+        _dictionaryAliasDialogues?.BeginRename(termId, fromName, toName);
+
+    internal void CompleteDictionaryRename(DialogueManager manager) =>
+        _dictionaryAliasDialogues?.CompleteRename(manager);
+
+    internal void CancelDictionaryRename() => _dictionaryAliasDialogues?.CancelRename();
 
     internal void ApplyLogEntryTitle(DialogueLogEntry entry, DialogueChunk chunk, LogWindow window)
     {
@@ -319,12 +472,14 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     internal string TranslateTmpText(TMP_Text component, string proposed)
     {
         string translated;
-        bool isTrackedDialogue = false;
+        bool isTrackedDialogue = _liveDialogueText?.IsTracked(component) == true;
+        bool isLogReplayBody = _logTitles?.IsReplayBody(component) == true;
         if (_liveDialogueText != null &&
             _liveDialogueText.TryTranslate(component, proposed, out translated))
         {
-            isTrackedDialogue = true;
             translated = _ui?.TranslateRuntimeSentinels(translated) ?? translated;
+            translated = NormalizeDialogueTypography(translated, isTrackedDialogue,
+                isLogReplayBody);
             bool usesCharacterFont = _characterFonts?.Contains(component?.font) == true;
             ApplyInterfaceFont(component, translated);
             ApplyHypothesesTextLayout(component);
@@ -333,12 +488,22 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         }
         translated = _ui == null ? proposed : _ui.TranslateIncoming(component, proposed);
         translated = _ui?.TranslateRuntimeSentinels(translated) ?? translated;
+        translated = NormalizeDialogueTypography(translated, isTrackedDialogue,
+            isLogReplayBody);
         bool usesRoleFont = _characterFonts?.Contains(component?.font) == true;
         ApplyInterfaceFont(component, translated);
         ApplyHypothesesTextLayout(component);
         return ApplyCharacterPunctuation(component, translated, isTrackedDialogue,
             usesRoleFont);
     }
+
+    private string NormalizeDialogueTypography(string text, bool isTrackedDialogue,
+        bool isLogReplayBody) =>
+        DialogueChineseTypography.ShouldNormalize(
+            _patchConfig?.DisplayMode ?? DisplayMode.TranslationOnly,
+            isTrackedDialogue, isLogReplayBody)
+            ? DialogueChineseTypography.Normalize(text)
+            : text;
 
     private static void ApplyHypothesesTextLayout(TMP_Text component)
     {
@@ -409,6 +574,11 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         _liveDialogueText?.AdjustMaxVisibleCharacters(component, ref value);
     }
 
+    internal string LocalizeDialogueSpeakerName(string proposed,
+        DisplayMode? target = null) =>
+        _ui?.LocalizeDialogueSpeakerName(proposed,
+            target ?? _patchConfig.DisplayMode) ?? proposed;
+
     internal void ApplyPlayerNameUi(NameTranslator namer)
     {
         if (_patchConfig?.Enabled == true)
@@ -427,11 +597,21 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
             _playerName?.ApplySharedInput(dummy);
     }
 
+    internal void ApplySharedInput(InputTextDummy dummy, TMP_Text targetText)
+    {
+        if (_patchConfig?.Enabled == true)
+            _playerName?.ApplySharedInput(dummy, targetText);
+    }
+
     internal void ApplyTermLoggerPrompt(TMP_Text label, int signal)
     {
         if (_patchConfig?.Enabled == true && _patchConfig.TranslateUI)
             _ui?.ApplyKnownDynamicText(label, $"NAME SIGNAL{signal}");
     }
+
+    internal string LocalizeCompletedPuzzleGroups(string source,
+        IReadOnlyList<string> groupNames) =>
+        ProgressLogPuzzleGroupLocalization.Localize(_ui, source, groupNames);
 
     internal void UpdateImeCursorPosition(TMP_InputField input)
     {
@@ -476,7 +656,13 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         {
             DialogueFrame original = _dialogueLayout.FitNonLog(manager, pair.Original);
             DialogueFrame translated = _dialogueLayout.FitNonLog(manager, pair.Translated);
+            string currentSpeaker = DialogueManager.GetSpeakerNameDr(pair.Original.speaker);
+            string originalPrefix = LocalizeDialogueSpeakerName(currentSpeaker,
+                DisplayMode.OriginalOnly) + ": ";
+            string translatedPrefix = LocalizeDialogueSpeakerName(currentSpeaker,
+                DisplayMode.TranslationOnly) + ": ";
             _liveDialogueText?.TrackNonLog(manager, pair.Original, original, translated,
+                originalPrefix, translatedPrefix,
                 updated => new DialogueFramePair(
                     _dialogueLayout.FitNonLog(manager, updated.Original),
                     _dialogueLayout.FitNonLog(manager, updated.Translated)));
@@ -644,9 +830,78 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
     }
 }
 
+[HarmonyPatch(typeof(ReferenceSubWindow), nameof(ReferenceSubWindow.Open))]
+internal static class ReferenceSubWindowOpenPatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(ReferenceSubWindow __instance)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.ReferencePageOpened(__instance);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"参考页首次打开重排失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(TabsWindow), nameof(TabsWindow.ActivateMenu))]
+internal static class TabsWindowActivateMenuLayoutPatch
+{
+    [HarmonyPostfix]
+    private static void Postfix()
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.MainMenuTabActivated();
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"新增菜单项中文图标重排失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(CreditsSequence), nameof(CreditsSequence.PlayCredits))]
+internal static class CreditsSequencePlayCreditsPatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(CreditsSequence __instance)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.LocalizeCredits(__instance);
+            CreditsScrollRuntime.Prepare(__instance);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"调整结局滚动字幕终点失败，将使用原始终点：\n{ex}");
+        }
+    }
+}
+
 [HarmonyPatch(typeof(DialogueBank), "SetDataFromLoad")]
 internal static class DialogueBankSetDataPatch
 {
+    [HarmonyPrefix]
+    private static void Prefix(DialogueBank __instance)
+    {
+        try
+        {
+            DeepSpaceChinesePlugin.Instance?.PrepareDialogueBank(__instance);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"注册词典独立对白失败：\n{ex}");
+        }
+    }
+
     [HarmonyPostfix]
     private static void Postfix(DialogueBank __instance)
     {
@@ -665,8 +920,10 @@ internal static class DialogueBankSetDataPatch
 internal static class TmpTextSetterPatch
 {
     [HarmonyPrefix]
-    private static void Prefix(TMP_Text __instance, ref string value)
+    private static void Prefix(TMP_Text __instance, ref string value, out bool __state)
     {
+        string previousText = __instance?.text;
+        __state = false;
         try
         {
             DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
@@ -676,6 +933,46 @@ internal static class TmpTextSetterPatch
         catch (Exception ex)
         {
             DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"应用 UI 翻译失败：\n{ex}");
+        }
+        __state = TmpUnderlineMeshCleanup.RequiresImmediateEmptyMesh(previousText, value);
+    }
+
+    [HarmonyPostfix]
+    private static void Postfix(TMP_Text __instance, bool __state)
+    {
+        if (!__state || __instance == null)
+            return;
+        try
+        {
+            // TMP normally rebuilds the mesh at the end of the frame. Dialogue cleanup
+            // immediately hands the screen to the weekly report, so the old underline
+            // vertices can survive until the next underlined dictionary term is shown.
+            // Rebuild while the component is still reachable, including when its parent
+            // is about to become inactive.
+            __instance.ForceMeshUpdate(ignoreActiveState: true, forceTextReparsing: true);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"清除 TMP 残留下划线失败：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(ProgressLog), nameof(ProgressLog.StartLog))]
+internal static class ProgressLogStartSubtitleCleanupPatch
+{
+    [HarmonyPrefix]
+    private static void Prefix(ProgressLog __instance)
+    {
+        try
+        {
+            WeeklyReportSubtitleCleanup.Clear(__instance?.dialogueManager);
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"周结算开始时清除对白残留网格失败：\n{ex}");
         }
     }
 }
@@ -718,6 +1015,47 @@ internal static class DialogueManagerWriteFramePatch
     }
 }
 
+[HarmonyPatch(typeof(DialogueManager), nameof(DialogueManager.ReplaceSignalEmbeds))]
+internal static class DialogueManagerReplaceSignalEmbedsPatch
+{
+    [HarmonyPrefix]
+    private static bool Prefix(string inputStr, ref string __result)
+    {
+        if (!SignalEmbedRuntime.RequiresSafePath(inputStr))
+            return true;
+        __result = SignalEmbedRuntime.Replace(inputStr, signal =>
+        {
+            UserDictionary dictionary = UserDictionary.Instance;
+            return dictionary != null && dictionary.terms.TryGetValue(signal, out string term)
+                ? term
+                : null;
+        });
+        return false;
+    }
+
+    [HarmonyPostfix]
+    private static void Postfix(ref string __result)
+    {
+        __result = SignalEmbedRuntime.NormalizeOutput(__result);
+    }
+}
+
+[HarmonyPatch(typeof(DialogueBank), "LogDialogueEntryData")]
+internal static class DialogueBankReplayStartPatch
+{
+    [HarmonyPrefix]
+    private static bool Prefix(DialoguePlayInfo __0) =>
+        !DialogueReplayRuntime.IsReplay(__0.dc);
+}
+
+[HarmonyPatch(typeof(DialogueBank), "SendToLog")]
+internal static class DialogueBankReplayCompletePatch
+{
+    [HarmonyPrefix]
+    private static bool Prefix(DialoguePlayInfo __0) =>
+        !DialogueReplayRuntime.IsReplay(__0.dc);
+}
+
 [HarmonyPatch(typeof(NonLogDialogueManager), "WriteFrameRoutine")]
 internal static class NonLogDialogueManagerWriteFramePatch
 {
@@ -733,6 +1071,25 @@ internal static class NonLogDialogueManagerWriteFramePatch
         catch (Exception ex)
         {
             DeepSpaceChinesePlugin.Instance?.PluginLog.LogError($"调整场景对白显示失败，将使用原始排版：\n{ex}");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(DialogueManager), nameof(DialogueManager.GetSpeakerNameDr))]
+internal static class DialogueManagerGetSpeakerNameDrPatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(ref string __result)
+    {
+        try
+        {
+            __result = DeepSpaceChinesePlugin.Instance?
+                .LocalizeDialogueSpeakerName(__result) ?? __result;
+        }
+        catch (Exception ex)
+        {
+            DeepSpaceChinesePlugin.Instance?.PluginLog.LogError(
+                $"翻译场景对白角色名失败：\n{ex}");
         }
     }
 }

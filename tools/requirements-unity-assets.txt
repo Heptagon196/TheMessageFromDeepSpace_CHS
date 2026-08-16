@@ -1,0 +1,3 @@
+# Unity 6 资产读取工具的固定版本。实际安装由 python_runtime.py 管理。
+UnityPy==1.25.3
+TypeTreeGeneratorAPI==0.0.10

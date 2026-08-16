@@ -126,7 +126,7 @@ internal sealed class IniDocument
     }
 
     private const string DefaultIniText = @"# 《The Message from Deep Space》简体中文补丁配置
-# 翻译、字体、对白颜色、兼容设置、界面排布和题目及答案修正规则可按 F5 热重载。
+# 翻译、字体、对白颜色、兼容设置、界面排布、作弊功能和题目及答案修正规则可按 F5 热重载。
 # “显示模式”也可在游戏运行时用快捷键切换。
 
 [Localization]
@@ -136,7 +136,7 @@ Enabled = true
 # 运行时切换“仅译文 / 仅原文”的快捷键。默认 F8；写 None 可禁用。
 ToggleModeHotkey = F8
 
-# 运行时重新读取翻译、字体、对白颜色、兼容设置、界面排布和题目及答案修正规则的快捷键。
+# 运行时重新读取翻译、字体、对白颜色、兼容设置、界面排布、作弊功能和题目及答案修正规则的快捷键。
 ReloadTranslationsHotkey = F5
 
 # 缺少译文或译文校验失败时是否显示英文原文。
@@ -148,9 +148,6 @@ TranslateUI = true
 TranslateSystem = true
 
 [Compatibility]
-# 编译词典词名时是否忽略英文字母大小写。
-CompilerCaseInsensitive = true
-
 # 是否忽略对应的中英文标点差异，并用于词典命名冲突检查。
 # 等价标点：,↔，  .↔。  ;↔；  ( )↔（ ）  [ ]↔【 】。
 CompilerPunctuationInsensitive = true
@@ -164,6 +161,11 @@ NewWordPromptLowerRight = true
 # 是否应用 DeepSpaceChinese\Fix 中的题目及答案修正规则。默认开启。
 # 题面和答案集可单独修正；两者都提供时，原题面和原始答案集必须都匹配才会替换。
 Enabled = true
+
+[Cheats]
+# 在回复框中依次输入 ↑ ↑ ↓ ↓ ← → ← → B A 后，填入当前题目的正确答案。
+# 只填入，不会自动提交。默认开启。
+KonamiAnswerAutofill = true
 
 [DialogueColors]
 Enabled = true

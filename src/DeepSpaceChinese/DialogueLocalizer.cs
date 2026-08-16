@@ -75,6 +75,36 @@ internal sealed class DialogueLocalizer
             mode);
     }
 
+    internal bool TryGetOriginalChunk(DialogueChunk chunk, out DialogueFrame[] frames,
+        out string logName, out string processedRaw)
+    {
+        frames = null;
+        logName = chunk?.LogName;
+        processedRaw = chunk?.processedRaw;
+        if (chunk == null || !_originals.TryGetValue(chunk.UniqueID,
+                out OriginalChunk original))
+            return false;
+        frames = CloneFrames(original.Frames);
+        logName = original.LogName;
+        processedRaw = original.ProcessedRaw;
+        return true;
+    }
+
+    internal bool TryGetChunk(int uniqueId, out DialogueChunk chunk)
+    {
+        chunk = null;
+        _banks.RemoveAll(bank => bank == null);
+        for (int bankIndex = _banks.Count - 1; bankIndex >= 0; bankIndex--)
+        {
+            var chunks = (DialogueChunk[])AllDialoguesField?.GetValue(_banks[bankIndex]);
+            chunk = chunks?.FirstOrDefault(value => value != null &&
+                value.UniqueID == uniqueId);
+            if (chunk != null)
+                return true;
+        }
+        return false;
+    }
+
     internal string ResolveLogTitle(DialogueChunk chunk)
     {
         if (chunk == null)
@@ -84,7 +114,7 @@ internal sealed class DialogueLocalizer
             : chunk.LogName;
         string titleKey = $"dialogue:{chunk.UniqueID}/title";
         if (!_store.TryGet(titleKey, out RuntimeTranslationEntry entry))
-            return originalTitle;
+            return chunk.LogName ?? originalTitle;
         string source = TokenCodec.ProtectRuntimeTokens(originalTitle);
         if (!SourceMatches(entry, source))
             return originalTitle;
@@ -213,7 +243,7 @@ internal sealed class DialogueLocalizer
             _log.LogError($"跳过译文 {key}：{reason}");
     }
 
-    private static DialogueFrame[] CloneFrames(DialogueFrame[] source)
+    internal static DialogueFrame[] CloneFrames(DialogueFrame[] source)
     {
         if (source == null)
             return Array.Empty<DialogueFrame>();
@@ -244,7 +274,7 @@ internal sealed class DialogueLocalizer
         frames[frameIndex] = frame;
     }
 
-    private static string BuildProcessedRaw(DialogueFrame[] frames, DisplayMode mode)
+    internal static string BuildProcessedRaw(DialogueFrame[] frames, DisplayMode mode)
     {
         var output = new StringBuilder();
         for (int frameIndex = 0; frameIndex < frames.Length; frameIndex++)

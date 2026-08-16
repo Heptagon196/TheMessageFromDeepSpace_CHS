@@ -67,6 +67,60 @@ finally:
     override_file.unlink()
 assert build_runtime.category_for("dialogue_frame") == "dialogue"
 
+added_player_name = {
+    "source_text": "{SPEAKER_AKERS}{PART_000}They used it.",
+    "translated_text": "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}用过。",
+    "extra": {"game": {
+        "kind": "dialogue_frame",
+        "part_count": 1,
+        "source_sha256": build_runtime.sha256_text(
+            "{SPEAKER_AKERS}{PART_000}They used it."
+        ),
+    }},
+}
+assert any("player" in error for error in build_runtime.validate_item(added_player_name))
+added_player_name["_manual_allow_added_player_name"] = True
+assert build_runtime.validate_item(added_player_name) == []
+added_player_name["translated_text"] = (
+    "{SPEAKER_AKERS}{PART_000}{PLAYER_NAME}{PLAYER_NAME}用过。"
+)
+assert any("player" in error for error in build_runtime.validate_item(added_player_name))
+
+noncanonical_player_name = deepcopy(valid)
+noncanonical_player_name["translated_text"] = (
+    "{SPEAKER_AKERS}{PART_000}{PlayerName}说……"
+)
+errors = build_runtime.validate_item(noncanonical_player_name)
+assert any("未知运行时占位符" in error for error in errors), (
+    "大小写错误的玩家名占位符必须在构建期被拒绝"
+)
+
+alias_entries, alias_variants = build_runtime.validate_dictionary_trigger_payload({
+    "format_version": 2,
+    "entries": [{
+        "term_id": -107,
+        "channel": "EditEntryIDToName",
+        "english": "VERY",
+        "rules": [{"type": "exact", "values": ["非常", "很"]}],
+    }],
+    "dialogue_variants": [{
+        "term_id": -107,
+        "channel": "EditEntryIDToName",
+        "english": "VERY",
+        "dialogue_id": 905,
+        "synthetic_dialogue_id": 1905001,
+        "rules": [{"type": "exact", "values": ["很"]}],
+        "translated_title": "很",
+        "frames": [{
+            "frame_index": 0,
+            "translated_text": "{SPEAKER_COLLINS}{PART_000}很好！",
+        }],
+    }],
+})
+assert len(alias_entries) == 1 and len(alias_variants) == 1, (
+    "运行时构建必须接受含独立对白变体的触发表版本 2"
+)
+
 assert build_runtime.should_translate_display_values(
     {"kind": "ui_template", "template_id": "puzzle-group"}
 )
@@ -131,10 +185,31 @@ assert build_runtime.validate_item(paired_dialogue_ellipsis) == [], (
 )
 
 duplicate_punctuation = deepcopy(valid)
-duplicate_punctuation["translated_text"] += "。。"
+duplicate_punctuation["translated_text"] += "，。"
 errors = build_runtime.validate_item(duplicate_punctuation)
-assert any("重复中文标点" in error for error in errors), (
+assert any("异常连续标点" in error for error in errors), (
     "所有运行时译文都必须经过重复标点校验"
+)
+
+locked_glossary_term = deepcopy(valid)
+locked_glossary_term["source_text"] = (
+    "{SPEAKER_DOPPLER}{PART_000}The employee-of-the-week celebration is over."
+)
+locked_glossary_term["extra"]["game"]["source_sha256"] = build_runtime.sha256_text(
+    locked_glossary_term["source_text"]
+)
+locked_glossary_term["translated_text"] = (
+    "{SPEAKER_DOPPLER}{PART_000}本周最佳员工庆祝活动结束了。"
+)
+errors = build_runtime.validate_item(locked_glossary_term)
+assert any("锁定术语" in error for error in errors), (
+    "所有运行时译文都必须经过锁定术语校验"
+)
+locked_glossary_term["translated_text"] = (
+    "{SPEAKER_DOPPLER}{PART_000}每周最佳员工表彰活动结束了。"
+)
+assert build_runtime.validate_item(locked_glossary_term) == [], (
+    "符合词汇表的每周最佳员工表彰活动应通过运行时校验"
 )
 
 journal_items = [

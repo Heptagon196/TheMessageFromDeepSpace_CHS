@@ -26,6 +26,27 @@ internal readonly struct MainMenuButtonLayout
 
 internal static class MainMenuButtonLayoutEngine
 {
+    public static bool ActiveTabSetChanged(IEnumerable<int> previous,
+        IEnumerable<int> current)
+    {
+        var previousSet = new HashSet<int>(previous ?? Enumerable.Empty<int>());
+        return !previousSet.SetEquals(current ?? Enumerable.Empty<int>());
+    }
+
+    public static bool BelongsToReferenceColumn(float originalPositionX,
+        float referencePositionX)
+    {
+        // The post-game Flight Tab shares a row with Menu Tab, but is authored in
+        // a separate column on the right. Moving every "* Tab" to the reference X
+        // makes both colliders overlap once GameEnd activates Flight Tab on revisit.
+        // Keep buttons on the opposite side of the list in their authored column.
+        const float epsilon = 0.00001f;
+        if (Math.Abs(originalPositionX) < epsilon ||
+            Math.Abs(referencePositionX) < epsilon)
+            return true;
+        return Math.Sign(originalPositionX) == Math.Sign(referencePositionX);
+    }
+
     public static MainMenuButtonLayout Calculate(float originalParentScaleX,
         float originalChildScaleX, float referencePositionX, float referenceScaleX,
         float labelRightX, float visualGapX, float iconHalfWidthX)
@@ -48,6 +69,7 @@ internal sealed class MainMenuLayoutRuntime
     private readonly PatchConfig _config;
     private readonly ManualLogSource _log;
     private readonly Dictionary<int, SavedTabLayout> _saved = new();
+    private int[] _activeTabIds = Array.Empty<int>();
 
     public MainMenuLayoutRuntime(PatchConfig config, ManualLogSource log)
     {
@@ -61,6 +83,8 @@ internal sealed class MainMenuLayoutRuntime
         if (tabs.Count == 0)
             return;
 
+        _activeTabIds = ActiveTabIds(tabs);
+
         Restore(tabs);
         if (!_config.TranslateUI || _config.DisplayMode != DisplayMode.TranslationOnly)
             return;
@@ -73,17 +97,33 @@ internal sealed class MainMenuLayoutRuntime
             return;
         }
 
+        List<SavedTabLayout> primaryColumn = tabs.Where(tab =>
+            MainMenuButtonLayoutEngine.BelongsToReferenceColumn(
+                tab.RootPosition.x, reference.RootPosition.x)).ToList();
+
         Transform list = reference.Root.parent;
-        foreach (SavedTabLayout tab in tabs)
+        foreach (SavedTabLayout tab in primaryColumn)
             NormalizeButton(tab, reference);
 
         float visualGap = MeasureChineseGlyphWidth(reference.Text, list) * ChineseGapEm;
         if (!(visualGap > 0f) || float.IsInfinity(visualGap) || float.IsNaN(visualGap))
             visualGap = 0.025f;
-        foreach (SavedTabLayout tab in tabs)
+        foreach (SavedTabLayout tab in primaryColumn)
             PlaceIconAfterText(tab, list, visualGap);
 
-        _log.LogInfo($"中文主菜单布局已应用：{tabs.Count} 个按钮与“传输”等宽，图标间距 {visualGap:F4}。");
+        _log.LogInfo($"中文主菜单布局已应用：{primaryColumn.Count} 个主列按钮与“传输”等宽，" +
+                     $"保留 {tabs.Count - primaryColumn.Count} 个侧列按钮的原始位置，" +
+                     $"图标间距 {visualGap:F4}。");
+    }
+
+    public bool ApplyIfActiveTabsChanged()
+    {
+        List<SavedTabLayout> tabs = FindTabs();
+        int[] current = ActiveTabIds(tabs);
+        if (!MainMenuButtonLayoutEngine.ActiveTabSetChanged(_activeTabIds, current))
+            return false;
+        ApplyAll();
+        return true;
     }
 
     public void RestoreAll()
@@ -119,6 +159,12 @@ internal sealed class MainMenuLayoutRuntime
         }
         return result;
     }
+
+    private static int[] ActiveTabIds(IEnumerable<SavedTabLayout> tabs) => tabs
+        .Where(tab => tab.Root.gameObject.activeSelf)
+        .Select(tab => tab.Root.GetInstanceID())
+        .OrderBy(id => id)
+        .ToArray();
 
     private static void NormalizeButton(SavedTabLayout tab, SavedTabLayout reference)
     {

@@ -8,6 +8,14 @@ namespace DeepSpaceChinese.ConfigEditor;
 
 internal sealed class ConfigEditorForm : Form
 {
+    private static readonly string[] FontSourceKeys = { "Auto", "Bundled", "File", "System" };
+    private static readonly string[] FontSourceLabels =
+    {
+        "自动选择（推荐）",
+        "补丁内置字体",
+        "自定义字体文件",
+        "系统字体",
+    };
     private static readonly KeyValuePair<string, string>[] SpeakerNames =
     {
         new("Akers", "埃克斯"), new("Bautista", "巴蒂斯塔"), new("Collins", "柯林斯"),
@@ -25,10 +33,9 @@ internal sealed class ConfigEditorForm : Form
     private readonly CheckBox _logs = new() { Text = "日志", AutoSize = true };
     private readonly CheckBox _ui = new() { Text = "界面", AutoSize = true };
     private readonly CheckBox _system = new() { Text = "系统文本", AutoSize = true };
-    private readonly CheckBox _compilerCaseInsensitive = new()
-    {
-        Text = "编译词典词名时忽略英文字母大小写（推荐）", AutoSize = true,
-    };
+    // Compatibility-only setting: preserve the INI value when saving, but do
+    // not present the localization bug workaround as a user-facing feature.
+    private bool _compilerCaseInsensitive = true;
     private readonly CheckBox _compilerPunctuationInsensitive = new()
     {
         Text = "编译及词典冲突检查时忽略中英文标点差异（推荐）", AutoSize = true,
@@ -41,11 +48,15 @@ internal sealed class ConfigEditorForm : Form
     {
         Text = "把“新单词命名”浮窗列表移到右下角（推荐）", AutoSize = true,
     };
+    private readonly CheckBox _konamiAnswerAutofill = new()
+    {
+        Text = "输入 ↑ ↑ ↓ ↓ ← → ← → B A 时填入当前题目的正确答案", AutoSize = true,
+    };
     private readonly CheckBox _colorsEnabled = new() { Text = "按说话者给对白着色", AutoSize = true };
     private readonly Dictionary<string, TextBox> _colorBoxes = new(StringComparer.OrdinalIgnoreCase);
     private readonly Dictionary<string, Button> _colorButtons = new(StringComparer.OrdinalIgnoreCase);
     private readonly ComboBox _fontSource = new() { DropDownStyle = ComboBoxStyle.DropDownList };
-    private readonly TextBox _bundledFont = new();
+    private string _bundledFontPath = @"Fonts\fusion-pixel-12px-proportional-zh_hans.otf";
     private readonly TextBox _fontFile = new();
     private readonly TextBox _systemFonts = new() { Multiline = true, Height = 58, ScrollBars = ScrollBars.Vertical };
     private readonly Label _status = new() { AutoEllipsis = true, Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft };
@@ -53,7 +64,7 @@ internal sealed class ConfigEditorForm : Form
     public ConfigEditorForm(string iniPath)
     {
         _iniPath = iniPath;
-        Text = "《来自深空的讯息》汉化配置工具 v0.1.87";
+        Text = "《来自深空的讯息》汉化配置工具 v1.0";
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(650, 540);
         ClientSize = new Size(720, 590);
@@ -89,7 +100,7 @@ internal sealed class ConfigEditorForm : Form
         Controls.Add(root);
         AcceptButton = buttons.Controls[1] as Button;
 
-        _fontSource.Items.AddRange(new object[] { "Auto", "Bundled", "File", "System" });
+        _fontSource.Items.AddRange(FontSourceLabels);
         _fontSource.SelectedIndexChanged += (_, __) => UpdateFontControls();
         _colorsEnabled.CheckedChanged += (_, __) => UpdateColorControls();
         FormClosing += (_, __) => { };
@@ -111,22 +122,22 @@ internal sealed class ConfigEditorForm : Form
         types.Controls.AddRange(new Control[] { _dialogue, _logs, _ui, _system });
         table.Controls.Add(types, 1, 4);
         table.SetColumnSpan(types, 2);
-        table.Controls.Add(_compilerCaseInsensitive, 0, 5);
-        table.SetColumnSpan(_compilerCaseInsensitive, 3);
-        AddFullWidthHint(table, 6,
-            "启用后，VAR 可匹配词典中的 var；精确拼写仍优先，存在歧义时不会误选。");
-        table.Controls.Add(_compilerPunctuationInsensitive, 0, 7);
+        table.Controls.Add(_compilerPunctuationInsensitive, 0, 5);
         table.SetColumnSpan(_compilerPunctuationInsensitive, 3);
-        AddFullWidthHint(table, 8,
+        AddFullWidthHint(table, 6,
             "标点兼容范围：,↔，  .↔。  ;↔；  ( )↔（ ）  [ ]↔【 】。精确拼写仍优先，存在歧义时不会误选。");
-        table.Controls.Add(_newWordPromptLowerRight, 0, 9);
+        table.Controls.Add(_newWordPromptLowerRight, 0, 7);
         table.SetColumnSpan(_newWordPromptLowerRight, 3);
-        AddFullWidthHint(table, 10,
+        AddFullWidthHint(table, 8,
             "保持列表原有顺序和行距，从右下角向上排列，避免遮挡右上方控制台输出。");
-        table.Controls.Add(_puzzleFixes, 0, 11);
+        table.Controls.Add(_puzzleFixes, 0, 9);
         table.SetColumnSpan(_puzzleFixes, 3);
-        AddFullWidthHint(table, 12,
+        AddFullWidthHint(table, 10,
             "题面和答案集可单独修正；两者都填写时，原题面和原始答案集必须同时匹配才会替换。");
+        table.Controls.Add(_konamiAnswerAutofill, 0, 11);
+        table.SetColumnSpan(_konamiAnswerAutofill, 3);
+        AddFullWidthHint(table, 12,
+            "仅在回复框获得输入焦点时识别；触发后只填入答案，不会自动提交。", false);
         AddFullWidthHint(table, 13,
             "以上兼容项、界面排布和题目及答案修正规则保存后，可在游戏中按 F5 重载。", false);
         page.Controls.Add(table);
@@ -168,20 +179,19 @@ internal sealed class ConfigEditorForm : Form
     {
         var page = NewPage("字体");
         var table = NewTable();
-        table.Controls.Add(new Label { Text = "字体来源", AutoSize = true, Anchor = AnchorStyles.Left }, 0, 0);
+        table.Controls.Add(new Label { Text = "字体选择", AutoSize = true, Anchor = AnchorStyles.Left }, 0, 0);
         table.Controls.Add(_fontSource, 1, 0);
         table.SetColumnSpan(_fontSource, 2);
-        AddBrowseRow(table, 1, "随包字体", _bundledFont, (_, __) => BrowseFont(_bundledFont, true));
-        AddBrowseRow(table, 2, "自定义字体", _fontFile, (_, __) => BrowseFont(_fontFile, false));
-        table.Controls.Add(new Label { Text = "系统字体候选", AutoSize = true, Anchor = AnchorStyles.Left }, 0, 3);
-        table.Controls.Add(_systemFonts, 1, 3);
+        AddBrowseRow(table, 1, "自定义字体", _fontFile, (_, __) => BrowseFont(_fontFile));
+        table.Controls.Add(new Label { Text = "系统字体候选", AutoSize = true, Anchor = AnchorStyles.Left }, 0, 2);
+        table.Controls.Add(_systemFonts, 1, 2);
         table.SetColumnSpan(_systemFonts, 2);
         table.Controls.Add(new Label
         {
-            Text = "Auto：随包字体 → 自定义文件 → 系统字体。系统字体名称以分号分隔。\n字体设置保存后可在游戏中按 F5 热重载。",
+            Text = "自动选择时依次尝试：补丁内置字体 → 自定义文件 → 系统字体。\n系统字体名称以分号分隔；保存后可在游戏中按 F5 热重载。",
             AutoSize = true, ForeColor = Color.DimGray, Margin = new Padding(3, 16, 3, 3),
-        }, 0, 4);
-        table.SetColumnSpan(table.GetControlFromPosition(0, 4), 3);
+        }, 0, 3);
+        table.SetColumnSpan(table.GetControlFromPosition(0, 3), 3);
         page.Controls.Add(table);
         return page;
     }
@@ -214,7 +224,7 @@ internal sealed class ConfigEditorForm : Form
             }
             settings.ApplyTo(_document);
             _document.SaveAtomic(_iniPath);
-            SetStatus("已保存。翻译、字体、角色颜色、兼容项、界面排布和题目及答案修正规则可在游戏中按 F5 应用。", true);
+            SetStatus("已保存。翻译、字体、角色颜色、兼容项、界面排布、作弊功能和题目及答案修正规则可在游戏中按 F5 应用。", true);
             if (close)
                 Close();
         }
@@ -252,13 +262,14 @@ internal sealed class ConfigEditorForm : Form
             TranslateLogs = _logs.Checked,
             TranslateUI = _ui.Checked,
             TranslateSystem = _system.Checked,
-            CompilerCaseInsensitive = _compilerCaseInsensitive.Checked,
+            CompilerCaseInsensitive = _compilerCaseInsensitive,
             CompilerPunctuationInsensitive = _compilerPunctuationInsensitive.Checked,
             MoveNewWordPromptToLowerRight = _newWordPromptLowerRight.Checked,
             PuzzleFixesEnabled = _puzzleFixes.Checked,
+            KonamiAnswerAutofillEnabled = _konamiAnswerAutofill.Checked,
             DialogueColorsEnabled = _colorsEnabled.Checked,
-            FontSource = Convert.ToString(_fontSource.SelectedItem) ?? "Auto",
-            BundledFont = _bundledFont.Text,
+            FontSource = SelectedFontSource(),
+            BundledFont = _bundledFontPath,
             FontFile = _fontFile.Text,
             SystemFontCandidates = _systemFonts.Text,
         };
@@ -277,16 +288,18 @@ internal sealed class ConfigEditorForm : Form
         _logs.Checked = settings.TranslateLogs;
         _ui.Checked = settings.TranslateUI;
         _system.Checked = settings.TranslateSystem;
-        _compilerCaseInsensitive.Checked = settings.CompilerCaseInsensitive;
+        _compilerCaseInsensitive = settings.CompilerCaseInsensitive;
         _compilerPunctuationInsensitive.Checked = settings.CompilerPunctuationInsensitive;
         _newWordPromptLowerRight.Checked = settings.MoveNewWordPromptToLowerRight;
         _puzzleFixes.Checked = settings.PuzzleFixesEnabled;
+        _konamiAnswerAutofill.Checked = settings.KonamiAnswerAutofillEnabled;
         _colorsEnabled.Checked = settings.DialogueColorsEnabled;
         foreach (KeyValuePair<string, TextBox> pair in _colorBoxes)
             pair.Value.Text = settings.Colors[pair.Key];
-        int sourceIndex = _fontSource.FindStringExact(settings.FontSource);
+        int sourceIndex = Array.FindIndex(FontSourceKeys,
+            value => string.Equals(value, settings.FontSource, StringComparison.OrdinalIgnoreCase));
         _fontSource.SelectedIndex = sourceIndex >= 0 ? sourceIndex : 0;
-        _bundledFont.Text = settings.BundledFont;
+        _bundledFontPath = settings.BundledFont;
         _fontFile.Text = settings.FontFile;
         _systemFonts.Text = settings.SystemFontCandidates;
         UpdateFontControls();
@@ -324,7 +337,7 @@ internal sealed class ConfigEditorForm : Form
             button.Enabled = _colorsEnabled.Checked;
     }
 
-    private void BrowseFont(TextBox target, bool bundled)
+    private void BrowseFont(TextBox target)
     {
         using var dialog = new OpenFileDialog
         {
@@ -334,16 +347,20 @@ internal sealed class ConfigEditorForm : Form
         if (dialog.ShowDialog(this) != DialogResult.OK)
             return;
         string gameRoot = Path.GetDirectoryName(_iniPath) ?? AppDomain.CurrentDomain.BaseDirectory;
-        string basePath = bundled ? Path.Combine(gameRoot, "DeepSpaceChinese") : gameRoot;
-        target.Text = MakeRelativeIfInside(basePath, dialog.FileName);
+        target.Text = MakeRelativeIfInside(gameRoot, dialog.FileName);
     }
 
     private void UpdateFontControls()
     {
-        string source = Convert.ToString(_fontSource.SelectedItem) ?? "Auto";
-        _bundledFont.Enabled = source is "Auto" or "Bundled";
+        string source = SelectedFontSource();
         _fontFile.Enabled = source is "Auto" or "File";
         _systemFonts.Enabled = source is "Auto" or "System";
+    }
+
+    private string SelectedFontSource()
+    {
+        int index = _fontSource.SelectedIndex;
+        return index >= 0 && index < FontSourceKeys.Length ? FontSourceKeys[index] : "Auto";
     }
 
     private void SetStatus(string text, bool success)

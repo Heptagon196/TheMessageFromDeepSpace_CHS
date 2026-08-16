@@ -18,6 +18,7 @@ internal sealed class EditorSettings
     public bool CompilerPunctuationInsensitive = true;
     public bool MoveNewWordPromptToLowerRight = true;
     public bool PuzzleFixesEnabled = true;
+    public bool KonamiAnswerAutofillEnabled = true;
     public bool DialogueColorsEnabled = true;
     public readonly Dictionary<string, string> Colors = new(StringComparer.OrdinalIgnoreCase)
     {
@@ -53,6 +54,8 @@ internal sealed class EditorSettings
             MoveNewWordPromptToLowerRight = Bool(ini.Get("Layout",
                 "NewWordPromptLowerRight", "true"), true),
             PuzzleFixesEnabled = Bool(ini.Get("PuzzleFixes", "Enabled", "true"), true),
+            KonamiAnswerAutofillEnabled = Bool(ini.Get("Cheats",
+                "KonamiAnswerAutofill", "true"), true),
             DialogueColorsEnabled = Bool(ini.Get("DialogueColors", "Enabled", "true"), true),
             FontSource = ini.Get("Font", "FontSource", "Auto"),
             BundledFont = ini.Get("Font", "BundledFont", @"Fonts\fusion-pixel-12px-proportional-zh_hans.otf"),
@@ -75,13 +78,16 @@ internal sealed class EditorSettings
         ini.Set("Localization", "TranslateLogs", TranslateLogs.ToString().ToLowerInvariant());
         ini.Set("Localization", "TranslateUI", TranslateUI.ToString().ToLowerInvariant());
         ini.Set("Localization", "TranslateSystem", TranslateSystem.ToString().ToLowerInvariant());
-        ini.Set("Compatibility", "CompilerCaseInsensitive",
-            CompilerCaseInsensitive.ToString().ToLowerInvariant());
+        // CompilerCaseInsensitive is a hidden backward-compatibility key.
+        // Preserve it when an old INI already contains it, but never add it to
+        // newly generated or editor-saved configuration files.
         ini.Set("Compatibility", "CompilerPunctuationInsensitive",
             CompilerPunctuationInsensitive.ToString().ToLowerInvariant());
         ini.Set("Layout", "NewWordPromptLowerRight",
             MoveNewWordPromptToLowerRight.ToString().ToLowerInvariant());
         ini.Set("PuzzleFixes", "Enabled", PuzzleFixesEnabled.ToString().ToLowerInvariant());
+        ini.Set("Cheats", "KonamiAnswerAutofill",
+            KonamiAnswerAutofillEnabled.ToString().ToLowerInvariant());
         ini.Set("DialogueColors", "Enabled", DialogueColorsEnabled.ToString().ToLowerInvariant());
         foreach (KeyValuePair<string, string> pair in Colors)
             ini.Set("DialogueColors", pair.Key, pair.Value.ToUpperInvariant());

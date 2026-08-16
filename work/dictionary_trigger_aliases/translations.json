@@ -1,7 +1,7 @@
 [
   {
     "text_index": 1,
-    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"喙\",\"鸟嘴\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[],\"note\":\"未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。\"}"
   },
   {
     "text_index": 2,
@@ -53,11 +53,11 @@
   },
   {
     "text_index": 14,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"温度\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"温度\",\"热量\",\"热度\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 15,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"感觉\",\"感受\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"感觉\",\"感受\",\"感知\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 16,
@@ -85,7 +85,7 @@
   },
   {
     "text_index": 22,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"脑\",\"大脑\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"脑\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 23,
@@ -93,7 +93,7 @@
   },
   {
     "text_index": 24,
-    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"手臂\",\"胳膊\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"手\",\"臂\",\"胳膊\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 25,
@@ -101,7 +101,7 @@
   },
   {
     "text_index": 26,
-    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"肢体\",\"四肢\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"contains\",\"values\":[\"肢\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 27,
@@ -197,7 +197,7 @@
   },
   {
     "text_index": 50,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最大\",\"最大的\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最大\",\"最大的\",\"最大值\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 51,
@@ -209,7 +209,7 @@
   },
   {
     "text_index": 53,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最小\",\"最小的\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"最小\",\"最小的\",\"最小值\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 54,
@@ -533,7 +533,7 @@
   },
   {
     "text_index": 134,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"十进制\",\"小数点\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"小数点\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 135,
@@ -621,7 +621,7 @@
   },
   {
     "text_index": 156,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"语言\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"文字\",\"语言\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 157,
@@ -673,7 +673,7 @@
   },
   {
     "text_index": 169,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"无穷\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"无限\",\"无限大\",\"无穷大\",\"无穷\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 170,
@@ -729,11 +729,11 @@
   },
   {
     "text_index": 183,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"什么都没有\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"空\",\"什么都没有\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 184,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"全部\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"所有\",\"全部\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 185,
@@ -765,7 +765,7 @@
   },
   {
     "text_index": 192,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"生命\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"生物\",\"生命\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 193,
@@ -913,7 +913,7 @@
   },
   {
     "text_index": 229,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"球体\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"球体\",\"球\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 230,
@@ -1009,7 +1009,7 @@
   },
   {
     "text_index": 253,
-    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"延续\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
+    "translated_text": "{\"rules\":[{\"type\":\"exact\",\"values\":[\"延续\",\"等等\"]}],\"note\":\"中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。\"}"
   },
   {
     "text_index": 254,

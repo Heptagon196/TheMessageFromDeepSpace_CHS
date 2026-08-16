@@ -14,6 +14,12 @@
 **/__pycache__/
 *.py[cod]
 /work/dictionary_trigger_aliases/cache.json
+/work/asset-probe.json
+/work/reference-layouts.json
+/work/reference-captures/
+/work/.dotnet/
+/work/decompiled-current/
+/work/tmfds-translation-*/
 
 # Never commit compiled or packaged binaries
 *.dll

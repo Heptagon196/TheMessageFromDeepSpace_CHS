@@ -58,20 +58,33 @@ internal static class DictionaryDialogueDuplicateDiagnostics
 internal static class DictionaryRenameDiagnosticScopePatch
 {
     [HarmonyPrefix]
-    private static void Prefix(int id, string fromWord, string toWord) =>
+    private static void Prefix(int id, string fromWord, string toWord)
+    {
         DictionaryDialogueDuplicateDiagnostics.Begin(id, fromWord, toWord);
+        DeepSpaceChinesePlugin.Instance?.BeginDictionaryRename(id, fromWord, toWord);
+    }
 
     [HarmonyPostfix]
-    private static void Postfix() => DictionaryDialogueDuplicateDiagnostics.End();
+    private static void Postfix(AdvancedObserver __instance)
+    {
+        DeepSpaceChinesePlugin.Instance?.CompleteDictionaryRename(__instance?.dialogueManager);
+        DictionaryDialogueDuplicateDiagnostics.End();
+    }
 
     [HarmonyFinalizer]
-    private static void Finalizer() => DictionaryDialogueDuplicateDiagnostics.End();
+    private static void Finalizer()
+    {
+        DeepSpaceChinesePlugin.Instance?.CancelDictionaryRename();
+        DictionaryDialogueDuplicateDiagnostics.End();
+    }
 }
 
 [HarmonyPatch(typeof(DialogueManager), nameof(DialogueManager.PlayDialogueChunk))]
 internal static class DictionaryDialogueTriggerDiagnosticPatch
 {
     [HarmonyPrefix]
-    private static void Prefix(DialogueChunk dc) =>
+    private static void Prefix(DialogueChunk dc)
+    {
         DictionaryDialogueDuplicateDiagnostics.Record(dc);
+    }
 }

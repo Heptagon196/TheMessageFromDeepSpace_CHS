@@ -6956,7 +6956,7 @@
       "kind": "component_string",
       "source_sha256": "0746da949eefdfde8669208d138dc44bcc6e050739202f29e8e57e4c45e3c2eb",
       "source_text": "ELECTRICORGAN",
-      "translated_text": "发电器官",
+      "translated_text": "电磁器官",
       "game": {
         "kind": "component_string",
         "scope": "ControlRoom",
@@ -6972,7 +6972,7 @@
       "kind": "component_string",
       "source_sha256": "b48cbbc3c5de2b84a84ac05cf69488df691f50e5ee850e1396780ccca10d50da",
       "source_text": "ELECTRIC_ORGAN",
-      "translated_text": "发电器官",
+      "translated_text": "电磁器官",
       "game": {
         "kind": "component_string",
         "scope": "ControlRoom",
@@ -13360,7 +13360,7 @@
       "kind": "component_string",
       "source_sha256": "9a853b4d38685a2f950679aca385ef3aa13959cb0cbb2267a2fe4a6cb553ec8c",
       "source_text": "--- Mission Translator ---\nWhat is your name?",
-      "translated_text": "--- 任务翻译员 ---\n你叫什么名字？",
+      "translated_text": "--- 本次任务的翻译员 ---\n你叫什么名字？",
       "game": {
         "kind": "component_string",
         "scope": "ControlRoom",
@@ -14880,7 +14880,7 @@
       "kind": "component_string",
       "source_sha256": "e9440f3b2adc31da0cc8472b9714920bc9f085d5304dc661347c143448a0753e",
       "source_text": "Translator said...",
-      "translated_text": "翻译员说...",
+      "translated_text": "{PLAYER_NAME}说...",
       "game": {
         "kind": "component_string",
         "scope": "SpaceshipRoom",

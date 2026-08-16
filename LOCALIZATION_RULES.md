@@ -81,7 +81,7 @@ Puzzle.altResponses
 
 ### 2.3 需要上下文判断
 
-- `SIGNALS`、`TRANSMISSIONS`、`TRANSLATOR` 等静态界面标签是 UI，应翻译；其中 `TRANSLATOR` 固定译为“翻译员”。
+- `SIGNALS`、`TRANSMISSIONS`、`TRANSLATOR` 等静态界面标签是 UI，应翻译；其中单独表示玩家岗位的 `TRANSLATOR` 固定译为“翻译员”，`TRANSLATOR's NOTES` 作为文档栏目名固定译为“译者注”。
 - `SIGNAL_17` 是游戏内未知词：数字 ID 必须原样保留，不得把它翻成谜底；仅在最终画面把 `SIGNAL_` 前缀本地化为“信号”。F8 切回原文时必须恢复完整的 `SIGNAL_17`。
 - 人物对白中谈论“signal”“transmission”等普通单词时可以翻译。
 - 人名、地名、机构名和科学术语必须先进入锁定词汇表，再统一决定保留、音译或意译。
@@ -122,6 +122,7 @@ Puzzle.altResponses
 - 翻译模型不得翻译、删除、复制或改写占位符。
 - 注入器负责把 `{PLAYER_NAME}` 替换为玩家名称，把 `{SIG_017}` 交回游戏词典解析。
 - `{PART_nnn}` 是对白分段边界。它可以随中文语序移动到更自然的位置，但相对顺序不得改变。
+- 只有下一个 part 的 `clearPrev = true` 时，PART 才会在画面上清屏分页；这种边界必须放在中文标点处，禁止把词组或句法成分从中间截开。`clearPrev = false` 的 PART 仅保留打字时序，不强制断句。
 - TMP 富文本样式不得跨越 `{PART_nnn}` 边界；每个 part 会被游戏独立逐字写入，因此 `<size>`、`<font>` 等标签必须在同一个 part 内成对闭合。
 - `{DYN_n}` 是运行时动态值或代码拼接片段。译文可围绕它调整中文语序，但编号、数量和相对顺序不得改变；同一编号在原文中重复出现时，译文也必须保留相同次数。
 
@@ -132,7 +133,7 @@ Puzzle.altResponses
 - 提取时从可翻译正文中剥离前导和尾随空白。
 - 将原空白分别记录到 `CacheItem.extra.game.leading_whitespace` 和 `trailing_whitespace`。
 - 回注时由桥接工具恢复，不要求翻译模型维护边界空格。
-- 译文回注后，如果相邻 `{PART_nnn}` 边界两侧都是汉字或中文标点，必须删除从英文原文继承的横向空格；例如“我这边{PART_001}对陨石本体”显示为“我这边对陨石本体”。中英文、英文与数字之间的必要空格仍保留，原文模式不做此规范化。
+- 译文回注后，如果相邻 `{PART_nnn}` 边界两侧都是汉字或中文标点，必须删除从英文原文继承的横向空格；例如“我这边{PART_001}对陨石本体”显示为“我这边对陨石本体”。实时信号替换为带下划线的中文词条时，必须逐侧检查标签外的可见语境：该侧相邻的是汉字或中文标点时删除空格，相邻的是英文或数字时保留或补成恰好一个空格；替换为英文词条时仍沿用英文单词边界。原文模式不做此规范化。
 - 文本内部空格和换行仍属于正文；校验器必须检查换行数量。
 - 中文一级引用统一使用“ ”，‘ ’只允许作为“ ”内部的二级引用；半角直引号不得用于中文引用。构建与正式批次审计必须同时检查引号层级、开闭顺序和成对情况。
 
@@ -354,6 +355,13 @@ system.messages
 - `ProgressLog` 的个人日志正文通过 `CharacterDialogueTypeRoutine` 按值持有 `ProgressLogData.aDF/bDF/cDF/dDF`，标题则通过两个 `GenericTypeRoutine` 重载独立逐字显示。F8 必须在这些通用入口登记由 `dialogue.json` / `system.json` 提供的中英文文本对，并将当前可见进度从“协程生产文本长度”先还原、再换算到目标语言；禁止把某个角色标题硬编码进补丁，也禁止直接沿用中文标题的 `maxVisibleCharacters`，否则 `Alan's Journal:` 等较长原文会被截成 `Alan's`。
 - `ProgressLog` 的五个个人日志标题使用独立的手写 TMP 字体和材质；仅把 Fusion Pixel 注册为全局 fallback 不能保证中文字形实际可见。译文模式必须给 `aLogTitle/bLogTitle/cLogTitle/dLogTitle/tLogTitle` 直接绑定中文字体及其材质，并把溢出模式设为 `Overflow`，避免原标题框裁掉中文；切回原文时恢复每个组件原有的字体、材质和溢出模式。标题内容仍只能从翻译 JSON 解析，不得在补丁代码中写死。
 - 不修改 `SignalMessage`、`Puzzle` 或 `UserDictionary`。
+- 词典中文别名若无法复用原对白措辞，必须在
+  `work/dictionary_trigger_aliases/dialogue_variants.json` 中声明独立对白变体。变体继承源
+  `DialogueChunk` 的角色、动画、分段、时序和类型，但使用不与原版冲突的正整数合成 ID，
+  并在 `DialogueBank.SetDataFromLoad()` 前加入 `allDialogues`，使播放状态、日志和存档均与
+  源对白相互独立。构建器必须验证完整 frame 覆盖和全部控制标记，并拒绝变体规则与
+  普通触发或其他变体重叠；运行时在词典重命名事件完成后单独播放命中的合成对白，不消耗
+  原版监听器的单次计数器。
 
 ### 7.2 日志
 
@@ -372,7 +380,7 @@ system.messages
 - `TermLogger.Configure()` 会把不带尾随空格的 `NAME SIGNAL` 与负数信号编号直接拼接成 `NAME SIGNAL-42`。必须用无空格模板 `NAME SIGNAL{DYN_0}` 翻译为“为信号 {DYN_0} 命名”，并用负数编号做回归测试。由于该方法会在运行时重新覆盖标签，补丁必须在 `Configure(signal)` 完成后用实际 `signal` 重建、翻译并登记该文本，保证 F8 也能恢复原文；不能只测试模板渲染器或依赖预制体字段的静态译文。
 - “新单词命名”浮窗可能同时生成多条。`[Layout] NewWordPromptLowerRight = true` 时必须把同一父节点下的整组 `TermLogger` 作为列表移动到右下角：按原纵坐标保持顺序，保留原行距，并从右下角向上增长；禁止把每条都写入同一坐标。弹窗实际由右侧显示器的 RenderTexture 摄像机渲染，移动时必须在该源摄像机的 viewport 内换算，禁止使用 `Camera.main`，否则对象会被移出显示器而彻底消失。找不到源摄像机时保留原位置。该开关默认开启并支持 F5 热重载，关闭后恢复已记录的原始位置。
 - 上述浮窗移到右下角后，右侧输出的 `ScrollBar3D` 相对内容高度和对应 `ScrollArea` 世界高度都必须额外增加 `3 × lineHeight`；只移动文本或只扩大其中一个范围会造成末尾内容仍被遮挡或滚动条比例失真。该余量跟随 `NewWordPromptLowerRight` 开关启停。
-- 参考页的 `ClipboardCopyButton` 与正文 TMP 是同一 `Area` 下的独立兄弟对象，原坐标按英文行宽写死。译文模式必须用 `TMP_TextInfo.lineInfo` 的实际排版右边界，把匹配复制值（科学记数法无法直接匹配时按字段名兜底）的按钮换算到共同父坐标系并紧贴行末；F5、F8 和场景加载后都重新计算，原文模式恢复预制体坐标。参考页正文中连续空行还承担给独立图片和注释预留空间的排版作用；若中文段落比英文少占视觉行，必须补偿相同数量的显式空行，并用完整稳定键回归测试，禁止仅按文本字数猜测位置。
+- 参考页不是普通流式文档：正文、不同字号的公式/上标、图片、注释和 `ClipboardCopyButton` 大量使用同一 `Area` 下的独立绝对坐标。译文模式先给参考窗口内全部 TMP 直接应用同一中文字体资产，避免主字体与回退字体的行高/基线不同；再把每个长文本块分别作为独立文本流，用原文 `TMP_TextInfo.lineInfo` 将其他兄弟对象按二维最近位置绑定到对应文本流的“逻辑行 + 自动换行序号”，翻译后按对应实际基线重算纵坐标并扩展 `ReferenceSubWindow.fullInfoHeight`。二维/三维形状、算术等多区块页面必须让每个栏目保持自身坐标，禁止选最长块把其他栏目拖成一列。复制按钮按匹配行（科学记数法无法直接匹配时按字段名兜底）的实际右边界和基线同时重算 X/Y。F5、F8 和场景加载后重新计算，原文模式完整恢复字体、坐标和滚动高度；禁止按中文字数、固定偏移或单张截图硬编码。
 - 左侧主菜单的按钮碰撞/点击宽度统一沿用“传输”按钮，但每个图标必须分别紧贴在自身中文文字右侧，不得排成统一的末尾列。ControlRoom 启动动画会在 `sceneLoaded` 后继续改写按钮 Transform，因此首次应用后要做有限次延后重排；不得依赖玩家先用 F8 往返一次来纠正布局。
 - 左上角歌曲标题由 `AnalogTextBanner` 保存完整源串，再逐帧删除首字符形成滚动效果。必须在 `SoundtrackTitleView.DisplayTitle()` 把完整字符串交给滚动器之前翻译歌名；禁止仅在 `TMP_Text.set_text` 的逐帧结果上匹配，否则完整中文滚过后，失去开头的英文残片（如 `ING SOMEWHERE`）会重新显示。
 - 取名界面由运行时补丁把前置 `Dr.` 标签移到输入框右侧并显示为“博士”，形成“{输入框}博士”；输入框本身只保存玩家输入的姓名。中文布局复用原版“前缀 + 输入框”的总宽度：输入框占用左侧释放出的空间，右侧按当前字体的实际首选宽度为“博士”预留位置；标签高度与输入框对齐，并强制单行、溢出可见。F5、F8、场景重载前都先恢复原始 RectTransform，禁止重复应用导致布局漂移。纯原文模式完整恢复 `Dr. + 姓名` 及原始 TMP 设置。
@@ -381,6 +389,7 @@ system.messages
 - 场景共用输入框使用 `MultiLineNewline`。Input System 会在 TMP 的键盘更新前发送导航 Submit，因此普通 Enter 的早期 `TMP_InputField.OnSubmit` 必须对已聚焦的共用多行输入框予以拦截，随后仍由 TMP 正常插入换行。游戏另把 Ctrl+Enter 绑定为提交答案；该组合键必须在 `OnUpdateSelected` 前跳过本帧 TMP 文本更新，避免先在光标处插入 LF 再提交。这个跳过条件必须同时要求“已跟踪、已聚焦、多行、Enter 本帧按下、Ctrl 按住”，不得影响纯 Enter、粘贴换行或其他输入框。清除自定义输入验证器时必须先清 `inputValidator`，再把 `characterValidation` 设为 `None`，避免 TMP setter 把验证模式反向改回 `CustomValidator`。
 - 当前游戏程序集只有三个底层 `TMP_InputField`：`NameTranslator.nameEntryInput`（起名）、`ProgressLog.translatorInput`（翻译员想法）和复用的 `InputTextDummy.inputField`（词典命名、单行/多行文本及谜题输入）。构建前运行 `tools/audit_unicode_inputs.ps1`；以后游戏版本新增或移除输入框时必须显式更新覆盖逻辑，禁止静默漏过。
 - 词典条目编辑和右侧悬浮 `NAME SIGNAL` 命名框都复用 `Input Text Dummy - Term Names`。中文兼容不得把它变成无约束输入：输入时与提交时都必须拒绝任何 Unicode 数字和空白字符、限制为 16 个 UTF-16 字符（常用汉字各计 1 个），并继续把英文字母自动转为大写。提交保护只作用于 `DictionaryEntry.SaveName()` 和 `TermLogger.TryAddToUserDictionary()`，不得阻止游戏内部生成带编号的非法占位名，也不得影响复用 `InputTextDummy.inputField` 的其他文本或谜题输入模式。
+- 词典的“译者注”正文也会复用同一个 `Input Text Dummy - Term Names`，但它是自由文本，不是词条命名：必须以 `InputTextDummy.BecomeDummy()` 实际传入的目标 TMP 路径 `DictionaryNotes/Notes Content` 区分，清除词条验证器与残留的 16 字上限，允许数字、空格、标点和换行。禁止只凭共享输入框对象名或验证器名判断用途。
 - 谜题输入转回信号时不按空格分词：`C_Reformatter.CompileStringToSignal()` 先删除普通空格，再把 `UserDictionary.keys` 按字符串长度降序扫描；较长词条命中后先占用对应区段并在两侧插入 LF，最后由 `SignalCompiler` 以 LF（`TOKEN_DELIMITER = 10`）分隔并逐项精确查词典。这套逻辑本身已是语言无关的“最长词条优先”，中文输入不得另加逐字切分或重复分词。原生多行输入必须把 Windows CRLF 规范成单个 LF 并保留，不能像姓名输入一样删除换行。
 - `NameEntry()` 会先激活起名对象，再清空文本并启动输入协程。补丁必须在该方法完成后通过 Postfix 应用一次布局；场景扫描时跳过未激活的起名对象。禁止在输入框首次聚焦时再次强制刷新 Canvas、LayoutRebuilder 或整套 RectTransform，否则提示、输入行和确认文字可能被二次重排到同一位置。
 - 中文起名界面必须把“姓名已占用”提示、两行姓名提示、输入框与“博士”、确认提示作为一个整体布局。以姓名提示原中心为基准，按各文本的 TMP 首选高度和至少 16 像素间距从上到下排列；三块提示文本统一扩展到原“Dr. + 输入框”的总宽度。所有边界只按各根 RectTransform 的四角计算，禁止把文本视口、Placeholder、Caret 等子节点纳入根节点中心计算。
@@ -450,7 +459,7 @@ CoPilot = #FFB07C
 
 F5 还必须重建当前正在逐字显示的对白、个人日志正文和标题映射。重建后要保留“旧译文状态 → 新译文状态”的临时别名，直到原逐字协程结束；否则协程下一帧仍会提交旧字符串，造成热加载不生效或文字重叠。
 
-开发测试可按 `F6` 输入 `dialogue:<chunk id>/frame:<frame id>` 稳定键，在真实 `ProgressLog` 组件中直接预览指定个人日志；例如 `dialogue:55/frame:3`。再次按 `F6` 关闭预览。该入口只用于排版与热加载验证，不修改日志存档或章节进度。
+开发测试可按 `F6` 输入 `dialogue:<chunk id>/frame:<frame id>` 稳定键，在真实 `ProgressLog` 组件中直接预览指定个人日志；例如 `dialogue:55/frame:3`。输入 `play:<chunk id>/frame:<frame id>` 会通过游戏原生底部对白框重播指定帧，例如 `play:1145/frame:5`；省略 `/frame:<frame id>` 则重播整个 chunk。输入 `contact` 会进入结局场景并直接打开最后一次发送信号的原生输入界面；它不会改写存档。真实对白重播使用游戏自身的测试入口，不受“已经播放”状态和对白难度选项影响，也不应写入存档或重复加入日志。再次按 `F6` 可关闭预览或中止重播。
 
 ### 8.1 纯译文模式
 
@@ -488,9 +497,11 @@ We finally received a response.
 
 - 总宽度不超过文本框上限：保持原字号、原分段。
 - 超出上限但不超过上限的 1.5 倍：保持一页，启用 TMP 自动字号，最小字号为原字号的 66.7%。逐字显示过程中不临时拆字。
-- 超过上限的 1.5 倍：按标点或空格优先分页；找不到自然断点时才按字符边界拆分。续页前注入 `clearPrev = true`。
+- 超过上限的 1.5 倍：按标点或空格优先分页；找不到自然断点时才按字符边界拆分。续页前注入 `clearPrev = true`。分页还必须遵守中文行首禁则：`，。！？；：、…）】》”’` 等闭合标点必须与前一个可见字符留在同页，允许为避免标点独占下一页而略微超出测量容量。
 - 自动分页必须保留 `$anim...`、TMP 富文本、实时信号、每个原 part 的 `charDelay` 和最终 `msgDelay`；富文本跨页时重新闭合并打开样式标签。
 - 构建期长度扫描只是发现异常长译文的回归护栏，不能替代运行时测量；字体、玩家姓名、信号释义和当前显示模式都会改变最终宽度。
+
+日志详情的滚动高度也必须在中文字体 fallback 和自动换行稳定后，依据 TMP 实际 `lineCount` 重新计算。不能沿用首次打开时按原文字体估算的高度，否则超长日志尾部虽然已写入文本组件，却无法滚动到。
 
 ## 9. 游戏更新与可恢复性
 
@@ -530,7 +541,7 @@ We finally received a response.
 ```text
 游戏根目录/
 ├─ DeepSpaceChinese.ini              # 唯一直接暴露给用户的配置文件
-├─ DeepSpaceChinese.ConfigEditor.exe # 26 KiB、无第三方依赖的 WinForms 配置编辑器
+├─ 汉化补丁配置.exe                  # 无第三方依赖的 WinForms 配置编辑器
 ├─ winhttp.dll
 ├─ doorstop_config.ini
 ├─ BepInEx/

@@ -10,10 +10,10 @@ param(
 
 $ErrorActionPreference = "Stop"
 $projectRoot = (Resolve-Path -LiteralPath (Split-Path -Parent $PSScriptRoot)).Path
+. (Join-Path $PSScriptRoot "initialize_tool_environment.ps1") -ProjectRoot $projectRoot
 . (Join-Path $PSScriptRoot "resolve_game_root.ps1")
 $gameRootPath = Resolve-GameRootPath -GameRoot $GameRoot -ProjectRoot $projectRoot
 $null = Resolve-GameManagedDirectory -GameRoot $gameRootPath
-$dependencyDir = Join-Path $projectRoot "build\puzzle-inspector-python"
 $scriptPath = Join-Path $PSScriptRoot "inspect_puzzles.py"
 
 & py -3.12 -c "import sys; print(sys.version)" *> $null
@@ -21,25 +21,8 @@ if ($LASTEXITCODE -ne 0) {
     throw "需要 Python 3.12。请先安装 Python 3.12，再重新运行。"
 }
 
-$unityPyMarker = Join-Path $dependencyDir "UnityPy\__init__.py"
-$typeTreeMarker = Join-Path $dependencyDir "TypeTreeGeneratorAPI\__init__.py"
-if (
-    -not (Test-Path -LiteralPath $unityPyMarker -PathType Leaf) -or
-    -not (Test-Path -LiteralPath $typeTreeMarker -PathType Leaf)
-) {
-    New-Item -ItemType Directory -Path $dependencyDir -Force | Out-Null
-    Write-Host "首次使用：正在下载题目提取依赖……"
-    & py -3.12 -m pip install --disable-pip-version-check --upgrade --target $dependencyDir `
-        "UnityPy==1.25.3" "TypeTreeGeneratorAPI==0.0.10"
-    if ($LASTEXITCODE -ne 0) {
-        throw "UnityPy 下载失败。"
-    }
-}
-
-$previousPackages = $env:TMFDS_PYTHON_PACKAGES
 $previousGameRoot = $env:TMFDS_GAME_ROOT
 try {
-    $env:TMFDS_PYTHON_PACKAGES = $dependencyDir
     $env:TMFDS_GAME_ROOT = $gameRootPath
     $arguments = @($scriptPath, $DisplayId)
     if (-not [string]::IsNullOrWhiteSpace($Dictionary)) {
@@ -51,6 +34,5 @@ try {
     }
 }
 finally {
-    $env:TMFDS_PYTHON_PACKAGES = $previousPackages
     $env:TMFDS_GAME_ROOT = $previousGameRoot
 }

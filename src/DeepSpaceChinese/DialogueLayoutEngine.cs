@@ -200,6 +200,11 @@ internal static class DialogueLayoutEngine
             if (pageEnd <= pageStart)
                 pageEnd = Math.Min(tokens.Count, pageStart + 1);
 
+            // Chinese closing punctuation must never start a new page. A signal marker is an
+            // atomic token and a preferred break point, so without this kinsoku pass a phrase
+            // such as "|-90。" can otherwise leave the full stop alone on the following page.
+            pageEnd = IncludeLeadingClosingPunctuation(tokens, pageEnd);
+
             pages.Add(new PageRange(pageStart, pageEnd));
             pageStart = pageEnd;
         }
@@ -407,6 +412,38 @@ internal static class DialogueLayoutEngine
             return false;
         char value = raw[raw.Length - 1];
         return char.IsWhiteSpace(value) || "，。！？；：、,.!?;:)]}）】》”’—-".IndexOf(value) >= 0;
+    }
+
+    private static int IncludeLeadingClosingPunctuation(IReadOnlyList<Token> tokens, int pageEnd)
+    {
+        int scan = pageEnd;
+        int punctuationEnd = -1;
+        while (scan < tokens.Count)
+        {
+            Token token = tokens[scan];
+            if (token.Kind == TokenKind.RichTag)
+            {
+                scan++;
+                continue;
+            }
+            if (token.Kind != TokenKind.Text || !IsClosingPunctuation(token.Raw))
+                break;
+            punctuationEnd = ++scan;
+        }
+        if (punctuationEnd < 0)
+            return pageEnd;
+        while (punctuationEnd < tokens.Count &&
+               tokens[punctuationEnd].Kind == TokenKind.RichTag)
+            punctuationEnd++;
+        return punctuationEnd;
+    }
+
+    private static bool IsClosingPunctuation(string raw)
+    {
+        if (string.IsNullOrEmpty(raw))
+            return false;
+        char value = raw[raw.Length - 1];
+        return "，。！？；：、,.!?;:)]}）】》”’…—～".IndexOf(value) >= 0;
     }
 
     private static float SafeMeasure(Func<string, float> measure, string value)

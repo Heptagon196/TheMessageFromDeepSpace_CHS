@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using BepInEx.Logging;
@@ -21,12 +22,15 @@ internal sealed class LogTitleRuntime
         AccessTools.Field(typeof(LogWindow), "logTitleLabel");
     private static readonly FieldInfo DialogueViewField =
         AccessTools.Field(typeof(LogWindow), "dialogueView");
+    private static readonly FieldInfo DialogueTextDumpField =
+        AccessTools.Field(typeof(LogWindow), "dialogueTextDump");
 
     private readonly DialogueLocalizer _dialogue;
     private readonly FontFallback _font;
     private readonly PatchConfig _config;
     private readonly ManualLogSource _log;
     private readonly Dictionary<LogWindow, DialogueChunk> _openDetails = new();
+    private readonly Dictionary<int, TMP_Text> _openReplayBodies = new();
 
     public LogTitleRuntime(DialogueLocalizer dialogue, FontFallback font, PatchConfig config,
         ManualLogSource log)
@@ -69,12 +73,54 @@ internal sealed class LogTitleRuntime
                 InterfaceFontPolicy.ShouldUseDirectLogTitleFont(title, _config.DisplayMode));
             label.text = title;
         }
+        var body = DialogueTextDumpField?.GetValue(window) as TMP_Text;
+        if (body != null)
+        {
+            _openReplayBodies[body.GetInstanceID()] = body;
+            string normalized = NormalizeReplayBodyForDisplay(body.text, _config.DisplayMode);
+            if (!string.Equals(normalized, body.text, StringComparison.Ordinal))
+                body.text = normalized;
+        }
+        ApplyOpenBodyLayout(window);
+    }
+
+    public bool IsReplayBody(TMP_Text component)
+    {
+        if (component == null ||
+            !_openReplayBodies.TryGetValue(component.GetInstanceID(), out TMP_Text tracked))
+            return false;
+        if (tracked != null && ReferenceEquals(tracked, component))
+            return true;
+        _openReplayBodies.Remove(component.GetInstanceID());
+        return false;
+    }
+
+    internal static string NormalizeReplayBodyForDisplay(string text, DisplayMode mode) =>
+        DialogueChineseTypography.ShouldNormalize(mode, false, true)
+            ? DialogueChineseTypography.Normalize(text)
+            : text;
+
+    private static void ApplyOpenBodyLayout(LogWindow window)
+    {
+        var body = DialogueTextDumpField?.GetValue(window) as TMP_Text;
+        if (body == null)
+            return;
+        body.richText = true;
+        body.textWrappingMode = TextWrappingModes.Normal;
+        body.overflowMode = TextOverflowModes.Overflow;
+        body.maxVisibleLines = int.MaxValue;
+        body.maxVisibleCharacters = int.MaxValue;
+        body.maxVisibleWords = int.MaxValue;
     }
 
     public void ForgetOpen(LogWindow window)
     {
-        if (window != null)
-            _openDetails.Remove(window);
+        if (window == null)
+            return;
+        var body = DialogueTextDumpField?.GetValue(window) as TMP_Text;
+        if (body != null)
+            _openReplayBodies.Remove(body.GetInstanceID());
+        _openDetails.Remove(window);
     }
 
     public void RefreshAll()
@@ -99,13 +145,15 @@ internal sealed class LogTitleRuntime
             DialogueChunk chunk = pair.Value;
             if (window == null || chunk == null)
             {
+                if (window != null)
+                    ForgetOpen(window);
                 _openDetails.Remove(window);
                 continue;
             }
             var dialogueView = DialogueViewField?.GetValue(window) as GameObject;
             if (dialogueView == null || !dialogueView.activeSelf)
             {
-                _openDetails.Remove(window);
+                ForgetOpen(window);
                 continue;
             }
             window.OpenDialogue(chunk);
@@ -124,6 +172,112 @@ internal sealed class LogTitleRuntime
         if (limit < 0 || title.Length < limit)
             return title;
         return title.Substring(0, limit) + overflow;
+    }
+}
+
+internal static class LogWindowBodyLayoutRuntime
+{
+    private static readonly FieldInfo DialogueTextDumpField =
+        AccessTools.Field(typeof(LogWindow), "dialogueTextDump");
+    private static readonly FieldInfo DisplayScrollField =
+        AccessTools.Field(typeof(LogWindow), "displayScroll");
+    private static readonly FieldInfo DisplayAreaField =
+        AccessTools.Field(typeof(LogWindow), "displayArea");
+    private static readonly FieldInfo LinesPerDisplayPageField =
+        AccessTools.Field(typeof(LogWindow), "linesPerDisplayPage");
+    private static readonly FieldInfo BonusLinesPaddingField =
+        AccessTools.Field(typeof(LogWindow), "bonusLinesPadding");
+    private static readonly FieldInfo SingleLineHeightField =
+        AccessTools.Field(typeof(LogWindow), "singleLineHeight");
+
+    internal static IEnumerator ReconfigureAfterTextLayout(LogWindow window, IEnumerator original)
+    {
+        while (original != null && original.MoveNext())
+            yield return original.Current;
+
+        // OpenDialogue's original coroutine measures one frame after assigning text.
+        // Font fallback and localized wrapping may settle on that same frame, so wait
+        // once more and rebuild the mesh before deriving the scrollable height.
+        yield return null;
+        if (window == null)
+            yield break;
+
+        var body = DialogueTextDumpField?.GetValue(window) as TMP_Text;
+        var scroll = DisplayScrollField?.GetValue(window) as ScrollBar3D;
+        var area = DisplayAreaField?.GetValue(window) as ScrollArea;
+        if (body == null || scroll == null || area == null)
+            yield break;
+
+        body.richText = true;
+        body.textWrappingMode = TextWrappingModes.Normal;
+        body.overflowMode = TextOverflowModes.Overflow;
+        body.maxVisibleLines = int.MaxValue;
+        body.maxVisibleCharacters = int.MaxValue;
+        body.maxVisibleWords = int.MaxValue;
+        body.ForceMeshUpdate(ignoreActiveState: true, forceTextReparsing: true);
+
+        int lineCount = Math.Max(1, body.textInfo?.lineCount ?? 1) + 2;
+        int padding = Math.Max(0, (int)(BonusLinesPaddingField?.GetValue(window) ?? 5));
+        int pageLines = Math.Max(1, (int)(LinesPerDisplayPageField?.GetValue(window) ?? 1));
+        float lineHeight = (float)(SingleLineHeightField?.GetValue(window) ?? 0f);
+        if (lineHeight <= 0f)
+        {
+            var rect = body.GetComponent<RectTransform>();
+            lineHeight = body.transform.lossyScale.y * (rect?.sizeDelta.y ?? 0f) + 0.0013f;
+        }
+        if (lineHeight <= 0f)
+            yield break;
+
+        float preferredBodyWorldHeight =
+            Math.Max(0f, body.preferredHeight) * Math.Abs(body.transform.lossyScale.y) +
+            2f * lineHeight;
+        LogWindowScrollMetrics metrics = CalculateForTests(
+            lineCount, padding, pageLines, lineHeight, preferredBodyWorldHeight);
+        area.Configure(scroll, metrics.WorldHeight, metrics.ScreenHeight);
+        scroll.ConfigureHeight(metrics.RelativeHeight);
+    }
+
+    internal static LogWindowScrollMetrics CalculateForTests(int lineCount, int padding,
+        int pageLines, float lineHeight, float preferredBodyWorldHeight = 0f)
+    {
+        int bodyLines = Math.Max(1, lineCount);
+        int paddingLines = Math.Max(0, padding);
+        int visibleLines = Math.Max(1, pageLines);
+        float safeLineHeight = Math.Max(0f, lineHeight);
+        float paddingWorldHeight = paddingLines * safeLineHeight;
+        float estimatedBodyWorldHeight = bodyLines * safeLineHeight;
+        float worldHeight = Math.Max(
+            estimatedBodyWorldHeight,
+            Math.Max(0f, preferredBodyWorldHeight)) + paddingWorldHeight;
+        float screenHeight = visibleLines * safeLineHeight;
+        float relativeHeight = screenHeight > 0f
+            ? worldHeight / screenHeight
+            : (bodyLines + paddingLines) / (float)visibleLines;
+        return new LogWindowScrollMetrics(worldHeight, screenHeight, relativeHeight);
+    }
+}
+
+internal readonly struct LogWindowScrollMetrics
+{
+    internal LogWindowScrollMetrics(float worldHeight, float screenHeight, float relativeHeight)
+    {
+        WorldHeight = worldHeight;
+        ScreenHeight = screenHeight;
+        RelativeHeight = relativeHeight;
+    }
+
+    internal float WorldHeight { get; }
+    internal float ScreenHeight { get; }
+    internal float RelativeHeight { get; }
+}
+
+[HarmonyPatch(typeof(LogWindow), "DisplayScrollConfigureRoutine")]
+internal static class LogWindowDisplayScrollConfigureRoutinePatch
+{
+    [HarmonyPostfix]
+    private static void Postfix(LogWindow __instance, ref IEnumerator __result)
+    {
+        __result = LogWindowBodyLayoutRuntime.ReconfigureAfterTextLayout(__instance, __result);
     }
 }
 

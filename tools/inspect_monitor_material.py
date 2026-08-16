@@ -8,10 +8,9 @@ from pathlib import Path
 TOOLS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS_DIR))
 from project_config import DATA_DIR, GAME_ROOT, PROJECT_DIR
-sys.path.insert(0, str(PROJECT_DIR / "tools" / "python-packages"))
+from python_runtime import load_unitypy  # noqa: E402
 
-import UnityPy  # noqa: E402
-from UnityPy.helpers.TypeTreeGenerator import TypeTreeGenerator  # noqa: E402
+UnityPy, TypeTreeGenerator = load_unitypy()
 
 
 def pptr_info(ptr) -> dict[str, object] | None:

@@ -39,6 +39,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools/test_project.ps1
 ```
 
 - 构建分发包使用 `tools/build_patch.ps1`；第三方依赖和构建二进制不得提交 Git。
+- 这个受控终端可能缺少 Windows 标准环境变量。不要直接运行裸 `dotnet restore/build`；
+  临时调用 .NET CLI 时使用 `tools/dotnet.ps1 -DotNetArguments @(...)`，正式构建仍使用上述两个入口。
 - 提交前检查 `git diff --check`、`git status --short`，并确认没有 DLL、EXE、字体或压缩包。
 
 ## 文件职责
@@ -46,6 +48,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools/test_project.ps1
 - `work/cache.json`：游戏文本提取缓存，不是单条人工修订的首选编辑点。
 - `work/formal_batches/`：正式翻译批次及可重建脚本。
 - `work/manual_translation_overrides.json`：经原文哈希保护的小规模人工修订源。
+- `work/dictionary_trigger_aliases/dialogue_variants.json`：中文别名需要独立措辞时的新增对白源；构建器负责合并触发词、校验控制标记并生成独立合成 ID。
 - `patch/`：最终补丁的源码与数据模板；其中运行时翻译 JSON 由工具生成。
 - `src/`：BepInEx 插件和配置编辑器源码。
 - `tests/`：构建期、翻译数据和运行时回归测试。
+
+查询词典命名触发时使用 `tools/inspect_dictionary_trigger.ps1 -TermId <负数 ID>`；不要只筛选
+`work/dictionary_trigger_aliases/source.json` 的 `entries`，因为有效触发还可能位于
+`covered_entries` 或 `combination_listeners`。

@@ -17,6 +17,7 @@ internal static class TokenCodec
     private static readonly Regex PartMarker = new(@"\{PART_(\d{3})\}", RegexOptions.Compiled);
     private static readonly Regex Animation = new(@"\$anim(?:[A-Za-z]\d{0,2}|\d{1,2})", RegexOptions.Compiled);
     private static readonly Regex RichTextTag = new(@"<[^>]+>", RegexOptions.Compiled);
+    private const string PlayerPlaceholder = "{PLAYER_NAME}";
 
     public static string ProtectRuntimeTokens(string text)
     {
@@ -32,6 +33,12 @@ internal static class TokenCodec
 
     public static string RestoreRuntimeTokens(string text, string playerFullName)
     {
+        return RestoreRuntimeTokens(text, playerFullName, false);
+    }
+
+    private static string RestoreRuntimeTokens(string text, string playerFullName,
+        bool translatedTypography)
+    {
         if (text == null)
             return string.Empty;
         text = SignalPlaceholder.Replace(text, match =>
@@ -41,7 +48,7 @@ internal static class TokenCodec
                 value = -value;
             return "|" + value;
         });
-        return text.Replace("{PLAYER_NAME}", playerFullName ?? "Translator");
+        return ReplacePlayerPlaceholder(text, playerFullName ?? "Translator", translatedTypography);
     }
 
     public static string ProtectForEntry(string text, RuntimeTranslationEntry entry)
@@ -65,7 +72,7 @@ internal static class TokenCodec
     }
 
     public static string RestoreForEntry(string text, RuntimeTranslationEntry entry,
-        string playerFullName)
+        string playerFullName, bool translatedTypography = false)
     {
         if (text == null)
             return string.Empty;
@@ -79,13 +86,13 @@ internal static class TokenCodec
         foreach (KeyValuePair<string, string> token in entry.RuntimeTokens()
                      .OrderByDescending(value => value.Value.Length))
             text = text.Replace(token.Value, token.Key);
-        return text.Replace("{PLAYER_NAME}", playerFullName ?? "Translator");
+        return ReplacePlayerPlaceholder(text, playerFullName ?? "Translator", translatedTypography);
     }
 
     public static string FormatDisplayForEntry(string translated, string original,
         RuntimeTranslationEntry entry, PatchConfig config, string playerFullName)
     {
-        translated = RestoreForEntry(translated ?? string.Empty, entry, playerFullName);
+        translated = RestoreForEntry(translated ?? string.Empty, entry, playerFullName, true);
         original = RestoreForEntry(ProtectForEntry(original ?? string.Empty, entry), entry,
             playerFullName);
         return FormatDisplayLiteral(translated, original, config);
@@ -129,7 +136,8 @@ internal static class TokenCodec
                 return false;
             int start = matches[index].Index + matches[index].Length;
             int end = index + 1 < matches.Count ? matches[index + 1].Index : body.Length;
-            result[index] = RestoreRuntimeTokens(body.Substring(start, end - start), playerFullName);
+            result[index] = RestoreRuntimeTokens(body.Substring(start, end - start), playerFullName,
+                true);
         }
         translatedParts = result;
         return true;
@@ -138,7 +146,7 @@ internal static class TokenCodec
     public static string FormatDisplay(string translated, string original, PatchConfig config,
         string playerFullName)
     {
-        translated = RestoreRuntimeTokens(translated ?? string.Empty, playerFullName);
+        translated = RestoreRuntimeTokens(translated ?? string.Empty, playerFullName, true);
         original = RestoreRuntimeTokens(ProtectRuntimeTokens(original ?? string.Empty), playerFullName);
         if (config.DisplayMode == DisplayMode.TranslationOnly)
             return translated;
@@ -212,6 +220,66 @@ internal static class TokenCodec
 
     private static string VisibleText(string value) =>
         RichTextTag.Replace(RemoveAnimations(value), string.Empty);
+
+    private static string ReplacePlayerPlaceholder(string text, string playerFullName,
+        bool translatedTypography)
+    {
+        if (!translatedTypography || string.IsNullOrEmpty(text) ||
+            text.IndexOf(PlayerPlaceholder, StringComparison.Ordinal) < 0)
+            return text?.Replace(PlayerPlaceholder, playerFullName) ?? string.Empty;
+
+        string[] segments = text.Split(new[] { PlayerPlaceholder }, StringSplitOptions.None);
+        var result = new StringBuilder(text.Length + playerFullName.Length * (segments.Length - 1));
+        result.Append(segments[0]);
+        bool compact = PlayerNameContainsCjk(playerFullName);
+
+        for (int index = 1; index < segments.Length; index++)
+        {
+            string right = segments[index];
+            if (compact)
+            {
+                int leftEnd = HorizontalWhitespaceStart(result.ToString());
+                string compactLeftVisible = VisibleText(result.ToString(0, leftEnd));
+                bool followsEnglishLetter = compactLeftVisible.Length > 0 &&
+                    IsEnglishLetter(compactLeftVisible[compactLeftVisible.Length - 1]);
+                result.Length = leftEnd;
+                if (followsEnglishLetter)
+                    result.Append(' ');
+                int rightStart = HorizontalWhitespaceEnd(right);
+                result.Append(playerFullName);
+                result.Append(right, rightStart, right.Length - rightStart);
+                continue;
+            }
+
+            string leftVisible = VisibleText(result.ToString());
+            if (result.Length > 0 && result[result.Length - 1] is not (' ' or '\t' or '\r' or '\n') &&
+                leftVisible.Length > 0 && NeedsPlayerBoundarySpace(leftVisible[leftVisible.Length - 1]))
+                result.Append(' ');
+            result.Append(playerFullName);
+            string rightVisible = VisibleText(right);
+            if (right.Length > 0 && right[0] is not (' ' or '\t' or '\r' or '\n') &&
+                rightVisible.Length > 0 && NeedsPlayerBoundarySpace(rightVisible[0]))
+                result.Append(' ');
+            result.Append(right);
+        }
+        return result.ToString();
+    }
+
+    private static bool PlayerNameContainsCjk(string fullName)
+    {
+        string personalName = (fullName ?? string.Empty).Trim();
+        if (personalName.EndsWith("博士", StringComparison.Ordinal))
+            personalName = personalName.Substring(0, personalName.Length - 2).TrimEnd();
+        return personalName.Any(character =>
+            character is >= '\u3400' and <= '\u4DBF' or >= '\u4E00' and <= '\u9FFF' or
+                >= '\uF900' and <= '\uFAFF');
+    }
+
+    private static bool NeedsPlayerBoundarySpace(char value) =>
+        !char.IsWhiteSpace(value) && !char.IsPunctuation(value);
+
+    private static bool IsEnglishLetter(char value) =>
+        value is >= 'A' and <= 'Z' or >= 'a' and <= 'z';
 
     private static bool IsChineseTypographyCharacter(char value) =>
         value is >= '\u3400' and <= '\u4DBF' or >= '\u4E00' and <= '\u9FFF' or

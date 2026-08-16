@@ -5,59 +5,13 @@ param(
 
 $ErrorActionPreference = "Stop"
 $projectRoot = (Resolve-Path -LiteralPath (Split-Path -Parent $PSScriptRoot)).Path
+. (Join-Path $PSScriptRoot "initialize_tool_environment.ps1") -ProjectRoot $projectRoot
 . (Join-Path $PSScriptRoot "resolve_game_root.ps1")
 $gameRoot = Resolve-GameRootPath -GameRoot $GameRoot -ProjectRoot $projectRoot
 $gameManagedDir = Resolve-GameManagedDirectory -GameRoot $gameRoot
 
-# 某些受控终端会清空这些标准环境变量。若 SystemDrive 缺失，Windows 的
-# %SystemDrive%\ProgramData 已知文件夹可能被误当成相对路径并写入当前目录。
-$driveRoot = [IO.Path]::GetPathRoot([Environment]::SystemDirectory).TrimEnd('\')
-if ($driveRoot -notmatch '^[A-Za-z]:$') {
-    $driveRoot = [IO.Path]::GetPathRoot($projectRoot).TrimEnd('\')
-}
-if ($driveRoot -notmatch '^[A-Za-z]:$') {
-    throw "无法确定 Windows 系统盘。"
-}
-$env:SystemDrive = $driveRoot
-if (-not $env:ProgramData -or $env:ProgramData.Contains('%')) {
-    $env:ProgramData = Join-Path $env:SystemDrive "ProgramData"
-}
-if (-not $env:ALLUSERSPROFILE -or $env:ALLUSERSPROFILE.Contains('%')) {
-    $env:ALLUSERSPROFILE = $env:ProgramData
-}
-if (-not $env:ProgramFiles -or $env:ProgramFiles.Contains('%')) {
-    $env:ProgramFiles = Join-Path $env:SystemDrive "Program Files"
-}
-if (-not ${env:ProgramFiles(x86)} -or ${env:ProgramFiles(x86)}.Contains('%')) {
-    ${env:ProgramFiles(x86)} = Join-Path $env:SystemDrive "Program Files (x86)"
-}
-
-function Assert-NoLiteralSystemDriveArtifact {
-    $invalidPath = Join-Path $projectRoot "%SystemDrive%"
-    if (Test-Path -LiteralPath $invalidPath) {
-        throw "检测到未展开的 %SystemDrive% 目录：$invalidPath。请删除该历史构建残留后重试。"
-    }
-}
-
-Assert-NoLiteralSystemDriveArtifact
-
 python (Join-Path $PSScriptRoot "build_dictionary_trigger_aliases.py")
 if ($LASTEXITCODE -ne 0) { throw "词典中文触发规则生成或冲突校验失败。" }
-
-$toolEnvironment = Join-Path $projectRoot "build\tool-environment"
-if (-not $env:USERPROFILE -or $env:USERPROFILE.Contains('%') -or
-    -not [IO.Path]::IsPathRooted($env:USERPROFILE)) {
-    $env:USERPROFILE = Join-Path $toolEnvironment "UserProfile"
-}
-if (-not $env:LOCALAPPDATA -or $env:LOCALAPPDATA.Contains('%') -or
-    -not [IO.Path]::IsPathRooted($env:LOCALAPPDATA)) {
-    $env:LOCALAPPDATA = Join-Path $toolEnvironment "LocalAppData"
-}
-if (-not $env:APPDATA -or $env:APPDATA.Contains('%') -or
-    -not [IO.Path]::IsPathRooted($env:APPDATA)) {
-    $env:APPDATA = Join-Path $toolEnvironment "AppData"
-}
-New-Item -ItemType Directory -Force -Path $env:USERPROFILE, $env:LOCALAPPDATA, $env:APPDATA | Out-Null
 
 $packageRoot = Join-Path $projectRoot "build\package"
 $contentRoot = Join-Path $packageRoot "DeepSpaceChinese"
@@ -72,6 +26,7 @@ $requiredGameAssemblies = @(
     "UnityEngine.InputLegacyModule.dll",
     "UnityEngine.IMGUIModule.dll",
     "UnityEngine.ParticleSystemModule.dll",
+    "UnityEngine.ScreenCaptureModule.dll",
     "UnityEngine.UI.dll",
     "UnityEngine.UIModule.dll",
     "Unity.TextMeshPro.dll",
@@ -135,7 +90,7 @@ foreach ($fixFile in Get-ChildItem -LiteralPath $fixSource -File -Recurse) {
 }
 Copy-Item -LiteralPath (Join-Path $projectRoot "src\DeepSpaceChinese\bin\$Configuration\net472\DeepSpaceChinese.dll") `
     -Destination (Join-Path $packageRoot "BepInEx\plugins") -Force
-Copy-Item -LiteralPath (Join-Path $projectRoot "src\DeepSpaceChinese.ConfigEditor\bin\$Configuration\net472\DeepSpaceChinese.ConfigEditor.exe") `
+Copy-Item -LiteralPath (Join-Path $projectRoot "src\DeepSpaceChinese.ConfigEditor\bin\$Configuration\net472\汉化补丁配置.exe") `
     -Destination $packageRoot -Force
 
 $legacyBundledFont = Join-Path $contentRoot "Fonts\fusion-pixel-12px-monospaced-zh_hans.otf"

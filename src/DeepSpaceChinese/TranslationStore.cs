@@ -172,8 +172,17 @@ internal sealed class TranslationStore
         return entries.All(entry => entry.TranslatedText == first) ? entries[0] : null;
     }
 
-    public RuntimeTranslationEntry FindUnambiguousDisplayValue(string original) =>
-        FindUnambiguous(_displayByOriginal, original);
+    public RuntimeTranslationEntry FindUnambiguousDisplayValue(string original)
+    {
+        if (!_displayByOriginal.TryGetValue(original,
+                out List<RuntimeTranslationEntry> entries) || entries.Count == 0)
+            return null;
+        List<RuntimeTranslationEntry> exact = entries.Where(entry =>
+                string.Equals(entry.GameString("original_text", entry.SourceText), original,
+                    StringComparison.Ordinal))
+            .ToList();
+        return FindUnambiguousEntries(exact.Count > 0 ? exact : entries);
+    }
 
     public IEnumerable<KeyValuePair<string, RuntimeTranslationEntry>> DisplayValues =>
         _displayByOriginal.Select(pair =>
@@ -200,6 +209,14 @@ internal sealed class TranslationStore
     {
         if (!index.TryGetValue(original, out List<RuntimeTranslationEntry> entries) ||
             entries.Count == 0)
+            return null;
+        return FindUnambiguousEntries(entries);
+    }
+
+    private static RuntimeTranslationEntry FindUnambiguousEntries(
+        IReadOnlyList<RuntimeTranslationEntry> entries)
+    {
+        if (entries == null || entries.Count == 0)
             return null;
         string first = entries[0].TranslatedText;
         return entries.All(entry => entry.TranslatedText == first) ? entries[0] : null;

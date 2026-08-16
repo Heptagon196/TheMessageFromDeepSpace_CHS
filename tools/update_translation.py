@@ -57,7 +57,8 @@ def compose_translation(item: dict[str, Any], visible_or_raw: str) -> str:
 
 
 def upsert_override(
-    payload: dict[str, Any], item: dict[str, Any], translated_text: str
+    payload: dict[str, Any], item: dict[str, Any], translated_text: str,
+    *, allow_added_player_name: bool = False,
 ) -> dict[str, Any]:
     entries = payload.setdefault("entries", [])
     if payload.get("format_version") != 1 or not isinstance(entries, list):
@@ -69,6 +70,8 @@ def upsert_override(
         "source_sha256": game.get("source_sha256", ""),
         "translated_text": translated_text,
     }
+    if allow_added_player_name:
+        replacement["allow_added_player_name"] = True
     found = False
     output: list[dict[str, Any]] = []
     for entry in entries:
@@ -107,19 +110,38 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     cache = load_json(args.cache)
     item = find_item(cache, args.text_index)
     translated_text = compose_translation(item, args.text)
-    candidate = dict(item)
-    candidate["translation_status"] = 1
-    candidate["translated_text"] = translated_text
-    issues = build_runtime.validate_item(candidate)
-    if issues:
-        raise ValueError("译文结构校验失败：" + "；".join(issues))
-
     override_payload = (
         load_json(args.overrides)
         if args.overrides.is_file()
         else {"format_version": 1, "entries": []}
     )
-    updated_overrides = upsert_override(override_payload, item, translated_text)
+    existing_override = next(
+        (
+            entry
+            for entry in override_payload.get("entries", [])
+            if entry.get("text_index") == args.text_index
+        ),
+        {},
+    )
+    allow_added_player_name = bool(
+        args.allow_added_player_name
+        or existing_override.get("allow_added_player_name") is True
+    )
+    candidate = dict(item)
+    candidate["translation_status"] = 1
+    candidate["translated_text"] = translated_text
+    if allow_added_player_name:
+        candidate["_manual_allow_added_player_name"] = True
+    issues = build_runtime.validate_item(candidate)
+    if issues:
+        raise ValueError("译文结构校验失败：" + "；".join(issues))
+
+    updated_overrides = upsert_override(
+        override_payload,
+        item,
+        translated_text,
+        allow_added_player_name=allow_added_player_name,
+    )
 
     # Keep staging under the ignored build directory. Python's TemporaryDirectory
     # can inherit unusable ACLs under Program Files on Windows; this stable path
@@ -195,6 +217,11 @@ def main() -> int:
     parser.add_argument("--cache", type=Path, default=DEFAULT_CACHE)
     parser.add_argument("--overrides", type=Path, default=DEFAULT_OVERRIDES)
     parser.add_argument("--game-root", type=Path, help="覆盖项目配置中的游戏目录")
+    parser.add_argument(
+        "--allow-added-player-name",
+        action="store_true",
+        help="允许译文相较原文新增一个 {PLAYER_NAME} 运行时占位符",
+    )
     parser.add_argument("--no-install", action="store_true", help="只更新项目，不覆盖游戏")
     args = parser.parse_args()
     try:

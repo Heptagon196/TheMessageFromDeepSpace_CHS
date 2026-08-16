@@ -9,16 +9,21 @@ namespace DeepSpaceChinese;
 internal sealed class DictionaryTriggerAliasStore
 {
     private readonly List<Entry> _entries;
+    private readonly List<DialogueVariant> _dialogueVariants;
 
-    private DictionaryTriggerAliasStore(List<Entry> entries)
+    private DictionaryTriggerAliasStore(List<Entry> entries,
+        List<DialogueVariant> dialogueVariants)
     {
         _entries = entries ?? new List<Entry>();
+        _dialogueVariants = dialogueVariants ?? new List<DialogueVariant>();
     }
 
     public int Count => _entries.Count;
+    public int VariantCount => _dialogueVariants.Count;
+    internal IReadOnlyList<DialogueVariant> DialogueVariants => _dialogueVariants;
 
     public static DictionaryTriggerAliasStore Empty { get; } =
-        new DictionaryTriggerAliasStore(new List<Entry>());
+        new DictionaryTriggerAliasStore(new List<Entry>(), new List<DialogueVariant>());
 
     public static bool TryLoad(string path, ManualLogSource log,
         out DictionaryTriggerAliasStore store)
@@ -42,8 +47,20 @@ internal sealed class DictionaryTriggerAliasStore
                     continue;
                 valid.Add(entry);
             }
-            store = new DictionaryTriggerAliasStore(valid);
-            log?.LogInfo($"已载入词典中文附加触发规则：{valid.Count} 条。");
+            var variants = new List<DialogueVariant>();
+            var syntheticIds = new HashSet<int>();
+            foreach (DialogueVariant variant in root.DialogueVariants ??
+                     new List<DialogueVariant>())
+            {
+                ValidateVariant(variant);
+                if (!syntheticIds.Add(variant.SyntheticDialogueId))
+                    throw new InvalidDataException(
+                        $"词典独立对白 ID {variant.SyntheticDialogueId} 重复。");
+                variants.Add(variant);
+            }
+            store = new DictionaryTriggerAliasStore(valid, variants);
+            log?.LogInfo($"已载入词典中文附加触发规则：{valid.Count} 条，" +
+                         $"独立对白变体 {variants.Count} 条。");
             return true;
         }
         catch (Exception ex)
@@ -75,6 +92,91 @@ internal sealed class DictionaryTriggerAliasStore
                     return true;
         }
         return false;
+    }
+
+    internal bool TryGetDialogueVariant(int termId, string fromName, string toName,
+        int dialogueId, out DialogueVariant variant)
+    {
+        return TryGetDialogueVariant(termId, fromName, toName,
+            candidate => candidate.DialogueId == dialogueId, out variant);
+    }
+
+    internal bool TryGetDialogueVariant(int termId, string fromName, string toName,
+        out DialogueVariant variant)
+    {
+        return TryGetDialogueVariant(termId, fromName, toName,
+            _ => true, out variant);
+    }
+
+    private bool TryGetDialogueVariant(int termId, string fromName, string toName,
+        Func<DialogueVariant, bool> filter, out DialogueVariant variant)
+    {
+        variant = null;
+        foreach (DialogueVariant candidate in _dialogueVariants)
+        {
+            if (!filter(candidate) ||
+                (candidate.TermId.HasValue && candidate.TermId.Value != termId))
+                continue;
+            string value = CandidateForChannel(candidate.Channel, fromName, toName);
+            if (value == null)
+                continue;
+            foreach (Rule rule in candidate.Rules)
+            {
+                if (!RuleMatches(rule, value))
+                    continue;
+                variant = candidate;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static string CandidateForChannel(string channel, string fromName,
+        string toName)
+    {
+        if (string.Equals(channel, "EditEntryFromName",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channel, "EditEntryIDFromName",
+                StringComparison.OrdinalIgnoreCase))
+            return fromName;
+        if (string.Equals(channel, "EditEntryToName",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channel, "EditEntryIDToName",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channel, "EditEntryIDContains",
+                StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(channel, "DictEntryIs",
+                StringComparison.OrdinalIgnoreCase))
+            return toName;
+        return null;
+    }
+
+    private static void ValidateVariant(DialogueVariant variant)
+    {
+        if (variant == null || variant.DialogueId <= 0 ||
+            variant.SyntheticDialogueId <= 0 ||
+            string.IsNullOrWhiteSpace(variant.Channel) ||
+            string.IsNullOrWhiteSpace(variant.English) ||
+            string.IsNullOrWhiteSpace(variant.TranslatedTitle) ||
+            variant.Rules == null || variant.Rules.Count == 0 ||
+            variant.Frames == null || variant.Frames.Count == 0)
+            throw new InvalidDataException("词典独立对白变体字段不完整。");
+        foreach (Rule rule in variant.Rules)
+        {
+            if (rule == null || rule.Values == null || rule.Values.Count == 0 ||
+                string.IsNullOrWhiteSpace(rule.Type))
+                throw new InvalidDataException(
+                    $"词典独立对白 {variant.SyntheticDialogueId} 的触发规则无效。");
+        }
+        var frameIndices = new HashSet<int>();
+        foreach (DialogueVariantFrame frame in variant.Frames)
+        {
+            if (frame == null || frame.FrameIndex < 0 ||
+                string.IsNullOrWhiteSpace(frame.TranslatedText) ||
+                !frameIndices.Add(frame.FrameIndex))
+                throw new InvalidDataException(
+                    $"词典独立对白 {variant.SyntheticDialogueId} 的 frame 无效或重复。");
+        }
     }
 
     internal static bool RuleMatches(Rule rule, string candidate) =>
@@ -127,6 +229,9 @@ internal sealed class DictionaryTriggerAliasStore
     {
         [JsonProperty("entries")]
         public List<Entry> Entries { get; set; }
+
+        [JsonProperty("dialogue_variants")]
+        public List<DialogueVariant> DialogueVariants { get; set; }
     }
 
     internal sealed class Entry
@@ -154,5 +259,41 @@ internal sealed class DictionaryTriggerAliasStore
 
         [JsonProperty("exclude_any")]
         public List<string> ExcludeAny { get; set; }
+    }
+
+    internal sealed class DialogueVariant
+    {
+        [JsonProperty("term_id")]
+        public int? TermId { get; set; }
+
+        [JsonProperty("channel")]
+        public string Channel { get; set; }
+
+        [JsonProperty("english")]
+        public string English { get; set; }
+
+        [JsonProperty("dialogue_id")]
+        public int DialogueId { get; set; }
+
+        [JsonProperty("synthetic_dialogue_id")]
+        public int SyntheticDialogueId { get; set; }
+
+        [JsonProperty("rules")]
+        public List<Rule> Rules { get; set; }
+
+        [JsonProperty("translated_title")]
+        public string TranslatedTitle { get; set; }
+
+        [JsonProperty("frames")]
+        public List<DialogueVariantFrame> Frames { get; set; }
+    }
+
+    internal sealed class DialogueVariantFrame
+    {
+        [JsonProperty("frame_index")]
+        public int FrameIndex { get; set; }
+
+        [JsonProperty("translated_text")]
+        public string TranslatedText { get; set; }
     }
 }

@@ -1,25 +1,17 @@
 {
-  "format_version": 1,
-  "description": "词典命名对白的中文附加触发规则；原版英文触发始终保留。",
+  "format_version": 2,
+  "description": "词典命名对白的中文附加触发规则及独立中文对白变体；原版英文触发始终保留。",
   "matching": "同一条件的人工维护词与假说译名按 OR 合并；exclude_any 为明确配置的排除子串。构建时拒绝一次输入可同时命中多个条件的配置，运行时不做跨条件判优先级或消歧。",
   "entries": [
     {
       "term_id": -192,
       "channel": "EditEntryIDContains",
       "english": "ROST",
-      "rules": [
-        {
-          "type": "contains",
-          "values": [
-            "喙",
-            "鸟嘴"
-          ]
-        }
-      ],
+      "rules": [],
       "dialogue_ids": [
         979
       ],
-      "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。"
+      "note": "未提供中文附加触发；仅保留原版英文或符号条件，避免破坏对白语义或缩写笑点。"
     },
     {
       "term_id": -188,
@@ -241,7 +233,9 @@
         {
           "type": "exact",
           "values": [
-            "温度"
+            "温度",
+            "热量",
+            "热度"
           ]
         }
       ],
@@ -259,7 +253,8 @@
           "type": "exact",
           "values": [
             "感觉",
-            "感受"
+            "感受",
+            "感知"
           ]
         }
       ],
@@ -385,10 +380,9 @@
       "english": "BRAIN",
       "rules": [
         {
-          "type": "exact",
+          "type": "contains",
           "values": [
-            "脑",
-            "大脑"
+            "脑"
           ]
         }
       ],
@@ -423,7 +417,8 @@
         {
           "type": "contains",
           "values": [
-            "手臂",
+            "手",
+            "臂",
             "胳膊"
           ]
         }
@@ -458,8 +453,7 @@
         {
           "type": "contains",
           "values": [
-            "肢体",
-            "四肢"
+            "肢"
           ]
         }
       ],
@@ -897,7 +891,8 @@
           "type": "exact",
           "values": [
             "最大",
-            "最大的"
+            "最大的",
+            "最大值"
           ]
         }
       ],
@@ -950,7 +945,8 @@
           "type": "exact",
           "values": [
             "最小",
-            "最小的"
+            "最小的",
+            "最小值"
           ]
         }
       ],
@@ -2306,7 +2302,6 @@
         {
           "type": "exact",
           "values": [
-            "十进制",
             "小数点"
           ]
         }
@@ -2701,6 +2696,7 @@
         {
           "type": "exact",
           "values": [
+            "文字",
             "语言"
           ]
         }
@@ -2924,6 +2920,9 @@
         {
           "type": "exact",
           "values": [
+            "无限",
+            "无限大",
+            "无穷大",
             "无穷"
           ]
         }
@@ -3163,6 +3162,7 @@
         {
           "type": "exact",
           "values": [
+            "空",
             "什么都没有"
           ]
         }
@@ -3180,6 +3180,7 @@
         {
           "type": "exact",
           "values": [
+            "所有",
             "全部"
           ]
         }
@@ -3316,6 +3317,7 @@
         {
           "type": "exact",
           "values": [
+            "生物",
             "生命"
           ]
         }
@@ -3947,7 +3949,8 @@
         {
           "type": "exact",
           "values": [
-            "球体"
+            "球体",
+            "球"
           ]
         }
       ],
@@ -4333,7 +4336,8 @@
         {
           "type": "exact",
           "values": [
-            "延续"
+            "延续",
+            "等等"
           ]
         }
       ],
@@ -4691,6 +4695,86 @@
         158
       ],
       "note": "中文同义词附加触发；原英文条件仍由原版及不区分大小写兼容逻辑处理。 对白 158 的原版词条 ID 错误已由 Fix 规则修正。"
+    }
+  ],
+  "dialogue_variants": [
+    {
+      "term_id": -107,
+      "channel": "EditEntryIDToName",
+      "english": "VERY",
+      "dialogue_id": 905,
+      "synthetic_dialogue_id": 1905001,
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "很"
+          ]
+        }
+      ],
+      "translated_title": "很",
+      "frames": [
+        {
+          "frame_index": 0,
+          "translated_text": "{SPEAKER_COLLINS}{PART_000}$animC4很好，{PART_001}{PLAYER_NAME}！"
+        },
+        {
+          "frame_index": 1,
+          "translated_text": "{SPEAKER_AKERS}{PART_000}哦，我明白了！{PART_001}很好，很好！"
+        }
+      ]
+    },
+    {
+      "term_id": -192,
+      "channel": "EditEntryIDContains",
+      "english": "ROST",
+      "dialogue_id": 979,
+      "synthetic_dialogue_id": 1909791,
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "吻部器官"
+          ]
+        }
+      ],
+      "translated_title": "吻部器官",
+      "frames": [
+        {
+          "frame_index": 0,
+          "translated_text": "{SPEAKER_COLLINS}{PART_000}“吻部器官”——{PART_001}就是位于吻部的器官吗，{PART_002}{PLAYER_NAME}？{PART_003}这个名称听起来倒很贴切。"
+        },
+        {
+          "frame_index": 1,
+          "translated_text": "{SPEAKER_BAUTISTA}{PART_000}至少这一次，{PLAYER_NAME}起的名字从词义上看得通。{PART_001}嗯。"
+        }
+      ]
+    },
+    {
+      "term_id": -192,
+      "channel": "EditEntryIDContains",
+      "english": "ROST",
+      "dialogue_id": 979,
+      "synthetic_dialogue_id": 1909792,
+      "rules": [
+        {
+          "type": "exact",
+          "values": [
+            "吻端器官"
+          ]
+        }
+      ],
+      "translated_title": "吻端器官",
+      "frames": [
+        {
+          "frame_index": 0,
+          "translated_text": "{SPEAKER_COLLINS}{PART_000}“吻端器官”——{PART_001}就是位于吻端的器官吗，{PART_002}{PLAYER_NAME}？{PART_003}这个名称听起来倒很贴切。"
+        },
+        {
+          "frame_index": 1,
+          "translated_text": "{SPEAKER_BAUTISTA}{PART_000}至少这一次，{PLAYER_NAME}起的名字从词义上看得通。{PART_001}嗯。"
+        }
+      ]
     }
   ]
 }
