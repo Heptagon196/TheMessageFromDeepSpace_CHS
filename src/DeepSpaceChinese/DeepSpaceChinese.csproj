@@ -7,9 +7,9 @@
     <RootNamespace>DeepSpaceChinese</RootNamespace>
     <Deterministic>true</Deterministic>
     <DebugType>portable</DebugType>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <GameManagedDir Condition="'$(GameManagedDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\The Message From Deep Space_Data\Managed</GameManagedDir>
   </PropertyGroup>
 

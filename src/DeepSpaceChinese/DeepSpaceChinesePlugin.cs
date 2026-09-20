@@ -16,10 +16,11 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "1.0.1";
+    public const string PluginVersion = "1.0.2";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
+    internal bool CompilerWordBoundariesEnabled => _patchConfig?.Enabled == true;
     internal bool CompilerCaseInsensitiveEnabled =>
         _patchConfig?.Enabled == true && _patchConfig.CompilerCaseInsensitive;
     internal bool CompilerPunctuationInsensitiveEnabled =>

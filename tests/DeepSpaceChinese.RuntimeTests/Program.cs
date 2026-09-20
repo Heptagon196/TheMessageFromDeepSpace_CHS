@@ -32,6 +32,7 @@ internal static class Program
 
     private static int Run()
     {
+        ReformatterBoundaryTests.Run();
         try
         {
             string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,

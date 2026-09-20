@@ -7,6 +7,14 @@ namespace DeepSpaceChinese;
 
 internal static class CompilerCaseCompatibility
 {
+    internal static string PrepareForReformatter(string input, IEnumerable<string> dictionaryKeys,
+        bool ignoreCase, bool ignorePunctuation) =>
+        // The game removes spaces before its longest-name search: STAR TO can
+        // become START + O. LF is its native token delimiter, so preserve the
+        // player's explicit boundaries before both normalization and parsing.
+        NormalizeForReformatter(input?.Replace(' ', '\n'), dictionaryKeys,
+            ignoreCase, ignorePunctuation);
+
     public static bool TryResolve(string input, IEnumerable<KeyValuePair<string, int>> entries,
         out int signal) => TryResolve(input, entries, true, false, out signal);
 
@@ -153,12 +161,12 @@ internal static class ReformatterCaseCompatibilityPatch
     private static void Prefix(ref string input)
     {
         DeepSpaceChinesePlugin plugin = DeepSpaceChinesePlugin.Instance;
+        if (plugin?.CompilerWordBoundariesEnabled != true)
+            return;
         bool ignoreCase = plugin?.CompilerCaseInsensitiveEnabled == true;
         bool ignorePunctuation = plugin?.CompilerPunctuationInsensitiveEnabled == true;
-        if ((!ignoreCase && !ignorePunctuation) || UserDictionary.Instance?.keys == null)
-            return;
-        input = CompilerCaseCompatibility.NormalizeForReformatter(input,
-            UserDictionary.Instance.keys.Keys, ignoreCase, ignorePunctuation);
+        input = CompilerCaseCompatibility.PrepareForReformatter(input,
+            UserDictionary.Instance?.keys?.Keys, ignoreCase, ignorePunctuation);
     }
 }
 
