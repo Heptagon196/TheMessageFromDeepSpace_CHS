@@ -23,6 +23,10 @@
 
 ### 一键修改译文
 
+元素详情滚动回归：`& tools/capture_reference_pages.ps1 -PageName 'Element:Helium'`。
+`Element:` 后填写原始元素资源名；工具直接生成该元素详情，截图中英文顶部与底部，
+并检查末行距画面底部至少 8 像素。可用 `Element:Hydrogen`、`Element:Uranium` 检查其他长度。
+
 ```powershell
 python tools/update_translation.py <text_index> "<新译文>"
 ```

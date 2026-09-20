@@ -80,6 +80,7 @@ Copy-Item -LiteralPath (Join-Path $bepInExRoot "winhttp.dll") -Destination $pack
 Copy-Item -LiteralPath (Join-Path $bepInExRoot "doorstop_config.ini") -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot "patch\DeepSpaceChinese.ini") -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot "patch\README_简体中文.txt") -Destination $contentRoot -Force
+Copy-Item -LiteralPath (Join-Path $projectRoot "LICENSE") -Destination (Join-Path $contentRoot "Licenses\DeepSpaceChinese-MIT.txt") -Force
 $fixSource = Join-Path $projectRoot "patch\Fix"
 $fixOutput = Join-Path $contentRoot "Fix"
 foreach ($fixFile in Get-ChildItem -LiteralPath $fixSource -File -Recurse) {

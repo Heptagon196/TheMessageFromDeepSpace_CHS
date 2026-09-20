@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
 using TMPro;
+using UnityEngine;
 
 namespace DeepSpaceChinese;
 
@@ -13,6 +14,54 @@ internal static class PeriodicTableElementCompatibility
     private static readonly FieldInfo PeriodicTableSymbolField =
         AccessTools.Field(typeof(PeriodicTableDisplay), "symbol_label");
     private static readonly HashSet<int> RegisteredPreviewLabels = new();
+    private static readonly FieldInfo WindowHeightField =
+        AccessTools.Field(typeof(ReferenceSubWindow), "windowHeight");
+    private static readonly FieldInfo ScrollbarField =
+        AccessTools.Field(typeof(ReferenceSubWindow), "scrollbar");
+
+    internal static float FullHeightForRenderedBounds(float top, float bottom,
+        float windowHeight, float padding) =>
+        // ReferenceSubWindow divides FullInfoHeight by windowHeight before passing
+        // it to ScrollArea, which expects a world-space height.
+        Math.Max(windowHeight, top - bottom + padding) * windowHeight;
+
+    internal static bool UpdateScrollHeight(ReferenceSubWindow window)
+    {
+        if (window == null || !window.gameObject.scene.IsValid())
+            return false;
+        foreach (PeriodicTableDisplay display in Resources.FindObjectsOfTypeAll<PeriodicTableDisplay>())
+        {
+            if (display == null || display.elementDisplay != window ||
+                display.isotopeData_label == null || display.name_label == null ||
+                !display.isotopeData_label.gameObject.activeInHierarchy)
+                continue;
+            float windowHeight = WindowHeightField?.GetValue(window) is float height ? height : 0f;
+            if (windowHeight <= 0f)
+                return false;
+            var corners = new Vector3[4];
+            display.name_label.rectTransform.GetWorldCorners(corners);
+            float top = Math.Max(corners[1].y, corners[2].y);
+            TMP_Text text = display.isotopeData_label;
+            text.ForceMeshUpdate(ignoreActiveState: true, forceTextReparsing: true);
+            float bottom = float.PositiveInfinity;
+            for (int index = 0; index < text.textInfo.characterCount; index++)
+            {
+                TMP_CharacterInfo character = text.textInfo.characterInfo[index];
+                if (!character.isVisible)
+                    continue;
+                bottom = Math.Min(bottom, text.transform.TransformPoint(character.bottomLeft).y);
+                bottom = Math.Min(bottom, text.transform.TransformPoint(character.bottomRight).y);
+            }
+            if (float.IsPositiveInfinity(bottom))
+                return false;
+            ScrollBar3D scrollbar = ScrollbarField?.GetValue(window) as ScrollBar3D;
+            float scroll = scrollbar != null ? scrollbar.NormalizedScroll : 1f;
+            window.FullInfoHeight = FullHeightForRenderedBounds(top, bottom, windowHeight, 0.10f);
+            scrollbar?.ForceScrollTo(scroll);
+            return true;
+        }
+        return false;
+    }
 
     internal static string ResolveSymbol(string objectName, string elementName,
         string elementSymbol)

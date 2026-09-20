@@ -39,6 +39,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools/test_project.ps1
 ```
 
 - 构建分发包使用 `tools/build_patch.ps1`；第三方依赖和构建二进制不得提交 Git。
+- 元素详情滚动回归使用 `tools/capture_reference_pages.ps1 -PageName 'Element:Helium'`，自动校验中英文末行可见。
 - 这个受控终端可能缺少 Windows 标准环境变量。不要直接运行裸 `dotnet restore/build`；
   临时调用 .NET CLI 时使用 `tools/dotnet.ps1 -DotNetArguments @(...)`，正式构建仍使用上述两个入口。
 - 提交前检查 `git diff --check`、`git status --short`，并确认没有 DLL、EXE、字体或压缩包。

@@ -38,6 +38,19 @@ internal static class Program
                 "..", "..", "..", "..", ".."));
             string testRoot = Path.Combine(projectRoot, "build", "runtime-selftest");
             Directory.CreateDirectory(testRoot);
+            Assert(Math.Abs(PeriodicTableElementCompatibility.FullHeightForRenderedBounds(
+                       0.575f, -2.7f, 1.15f, 0.1f) / 1.15f - 3.375f) < 0.0001f,
+                "元素描述实际高度须转换为 ReferenceSubWindow 的高度单位");
+            Assert(Math.Abs(PeriodicTableElementCompatibility.FullHeightForRenderedBounds(
+                       8.575f, 5.3f, 1.15f, 0.1f) -
+                   PeriodicTableElementCompatibility.FullHeightForRenderedBounds(
+                       0.575f, -2.7f, 1.15f, 0.1f)) < 0.0001f,
+                "已滚动内容的平移不能累计增加元素详情高度");
+            Assert(PeriodicTableElementCompatibility.FullHeightForRenderedBounds(
+                       0.575f, -0.2f, 1.15f, 0.1f) <
+                   PeriodicTableElementCompatibility.FullHeightForRenderedBounds(
+                       0.575f, -2.7f, 1.15f, 0.1f),
+                "从长元素切换到短元素必须收缩滚动高度");
 
             string iniPath = Path.Combine(testRoot, "DeepSpaceChinese.ini");
             File.WriteAllText(iniPath,

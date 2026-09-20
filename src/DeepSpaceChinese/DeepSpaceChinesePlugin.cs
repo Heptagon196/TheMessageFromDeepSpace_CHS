@@ -16,7 +16,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "hepta.deepspace.chinese";
     public const string PluginName = "The Message from Deep Space Chinese Patch";
-    public const string PluginVersion = "1.0.0";
+    public const string PluginVersion = "1.0.1";
 
     internal static DeepSpaceChinesePlugin Instance { get; private set; }
     internal ManualLogSource PluginLog => Logger;
@@ -357,6 +357,7 @@ public sealed class DeepSpaceChinesePlugin : BaseUnityPlugin
         Transform pageRoot = _referencePageLayout.PageRootFor(display.transform);
         _ui.ReapplyUnder(pageRoot ?? display.transform);
         _referencePageLayout.ApplyContaining(display.transform);
+        PeriodicTableElementCompatibility.UpdateScrollHeight(display.elementDisplay);
     }
 
     private IEnumerator ReapplyReferencePageAfterOpen(ReferenceSubWindow subWindow)

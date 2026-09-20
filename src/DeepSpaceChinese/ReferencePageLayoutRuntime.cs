@@ -643,6 +643,7 @@ internal sealed class ReferencePageLayoutRuntime
         if (_config?.Enabled != true || _config.DisplayMode != DisplayMode.TranslationOnly)
         {
             RestoreLayoutBaseline(saved);
+            PeriodicTableElementCompatibility.UpdateScrollHeight(saved.SubWindow);
             return;
         }
 
@@ -845,6 +846,8 @@ internal sealed class ReferencePageLayoutRuntime
     internal void RestoreAll()
     {
         RestoreLayoutBaseline();
+        foreach (SavedAreaLayout area in _areas.Values)
+            PeriodicTableElementCompatibility.UpdateScrollHeight(area.SubWindow);
         foreach (SavedActiveState saved in _formulaParts.Values)
         {
             if (saved.GameObject != null)
@@ -1479,6 +1482,11 @@ internal sealed class ReferencePageLayoutRuntime
 
     private static void UpdateScrollHeight(SavedAreaLayout saved)
     {
+        // Element details are generated after the initial static-page snapshot.
+        // Neither that snapshot nor the game's fixed line-height estimate describes
+        // their current text, so measure the final glyphs on every refresh.
+        if (PeriodicTableElementCompatibility.UpdateScrollHeight(saved?.SubWindow))
+            return;
         if (saved?.SubWindow == null || saved.Area == null ||
             saved.OriginalFullInfoHeight <= 0f ||
             (saved.Flows.Count == 0 && saved.Blocks.Count == 0))

@@ -174,6 +174,20 @@ function Get-ReferenceContentPixelCount {
 
 $manifestPath = Join-Path $outputPath "manifest.json"
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+if ($PageName.StartsWith('Element:', [StringComparison]::OrdinalIgnoreCase)) {
+    foreach ($language in @('zh', 'en')) {
+        $last = @($manifest.pages[0].captures | Where-Object language -eq $language)[-1]
+        $description = @($last.elements | Where-Object name -eq 'Isotope Data')
+        if ($description.Count -ne 1 -or $last.actual_scroll -gt 0.01) {
+            throw "元素详情回归失败：$language 未取得完整描述的滚动末端。"
+        }
+        $bottom = $last.root_screen_point.y + $description[0].screen_rect.bottom
+        if ($bottom -lt 8) {
+            throw "元素详情回归失败：$language 最后一行底边为 $bottom 像素，仍被视口截断。"
+        }
+        Write-Host "元素详情回归通过：$language 最后一行距画面底部 $bottom 像素。"
+    }
+}
 if (-not $Batch -and -not $FullScroll) {
     if ($manifest.pages.Count -ne 1 -or
         $manifest.pages[0].captures.Count -notin @(2, 4)) {

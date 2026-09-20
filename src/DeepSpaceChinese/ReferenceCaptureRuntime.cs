@@ -74,6 +74,8 @@ internal sealed class ReferenceCaptureRuntime
     // to overlap the projected glyph boxes. Lock the first pixel-verified camera for the
     // whole run and only verify that it still contains the requested page afterwards.
     private Camera _lockedCaptureCamera;
+    private PeriodicTableDisplay _elementDisplay;
+    private ElementData _elementData;
 
     private ReferenceCaptureRuntime(DeepSpaceChinesePlugin host, ManualLogSource log,
         ReferencePageLayoutRuntime layout, string outputDirectory, bool quitWhenComplete,
@@ -363,6 +365,15 @@ internal sealed class ReferenceCaptureRuntime
         else
         {
             string requested = string.IsNullOrWhiteSpace(_pageName) ? "Blackhole" : _pageName;
+            if (requested.StartsWith("Element:", StringComparison.OrdinalIgnoreCase))
+            {
+                string elementName = requested.Substring("Element:".Length);
+                _elementDisplay = FindSceneObjects<PeriodicTableDisplay>().First(display =>
+                    allPages.Contains(display.elementDisplay));
+                _elementData = Resources.FindObjectsOfTypeAll<ElementData>().First(data =>
+                    string.Equals(data.name, elementName, StringComparison.OrdinalIgnoreCase));
+                requested = HierarchyPath(_elementDisplay.elementDisplay.transform);
+            }
             // ReferenceSubWindow declares its own name field; on some pages that logical
             // name does not match the actual hierarchy object (for example Neutron versus
             // Neutron Star). Prefer the stable hierarchy identity before the logical label.
@@ -406,7 +417,7 @@ internal sealed class ReferenceCaptureRuntime
                 continue;
 
             var stopwatch = Stopwatch.StartNew();
-            page.Open();
+            OpenCapturePage(page);
             // 至少等待一秒，并要求文本、字号和坐标连续稳定；不再按固定 5 帧抢拍。
             yield return WaitForPageStable(page, 1f, 5f);
             stopwatch.Stop();
@@ -487,7 +498,7 @@ internal sealed class ReferenceCaptureRuntime
                 // before every language so paired captures use the same display and viewport.
                 infoDisplay.OpenReference();
                 yield return null;
-                page.Open();
+                OpenCapturePage(page);
                 yield return null;
                 _host.SetDisplayModeForReferenceCapture(mode);
                 yield return WaitForPageStable(page, 1f, 5f);
@@ -531,7 +542,7 @@ internal sealed class ReferenceCaptureRuntime
                     reopenCount++;
                     infoDisplay.OpenReference();
                     yield return null;
-                    page.Open();
+                    OpenCapturePage(page);
                     yield return null;
                     _host.SetDisplayModeForReferenceCapture(mode);
                 }
@@ -575,7 +586,7 @@ internal sealed class ReferenceCaptureRuntime
                 }
             }
             _host.SetDisplayModeForReferenceCapture(DisplayMode.TranslationOnly);
-            page.Open();
+            OpenCapturePage(page);
             yield return WaitForPageStable(page, 0.5f, 3f);
             page.Close();
             WriteJson(Path.Combine(_outputDirectory, "manifest.partial.json"), run);
@@ -594,6 +605,14 @@ internal sealed class ReferenceCaptureRuntime
         _log?.LogMessage($"参考页自动截图完成：{run.Pages.Count} 页，" +
                          $"{run.Pages.Sum(page => page.Captures.Count)} 张。");
         QuitIfRequested(0);
+    }
+
+    private void OpenCapturePage(ReferenceSubWindow page)
+    {
+        if (_elementDisplay != null && page == _elementDisplay.elementDisplay)
+            _elementDisplay.DisplayElementData(_elementData);
+        else
+            page.Open();
     }
 
     private CaptureFrame CaptureLayout(ReferenceSubWindow page, string language,
